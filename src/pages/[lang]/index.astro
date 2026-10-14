@@ -10,7 +10,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import { SITE } from 'astrowind:config';
-import { getLocalizedProducts } from '~/utils/product-i18n';
+import { getProducts } from '~/utils/products';
 import { localizeProductData } from '~/lib/product-l10n';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import { languages as langMap, defaultLang } from '~/i18n/config';
@@ -38,9 +38,7 @@ const steps = page.steps ?? {};
 const faqs = page.faqs ?? {};
 const cta = page.cta ?? {};
 
-const poolProducts = getLocalizedProducts(lang || defaultLang)
-  .slice(0, 3)
-  .map((p) => localizeProductData(p, lang || defaultLang));
+const poolProducts = (await getProducts({ limit: 3 })).map((p) => localizeProductData(p, lang || defaultLang));
 
 const customerItems = (customerTypes.items ?? []).map(
   (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
@@ -143,9 +141,5 @@ const metadata = {
 
   <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
 
-  {
-    cta.title ? (
-      <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} />
-    ) : null
-  }
+  {cta.title ? <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} /> : null}
 </Layout>

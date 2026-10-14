@@ -12,9 +12,7 @@ const headerData = {
   })) ?? [
     {
       text: 'Products',
-      links: [
-        { text: 'All Inflatable Swimming Pools', href: getPermalink(PRODUCT_LIST) },
-      ],
+      links: [{ text: 'All Inflatable Swimming Pools', href: getPermalink(PRODUCT_LIST) }],
     },
   ],
   actions: navData?.header?.actions ?? [
@@ -28,9 +26,7 @@ export const footerData = {
   links: navData?.footer?.links ?? [
     {
       title: 'Products',
-      links: [
-        { text: 'All Inflatable Swimming Pools', href: getPermalink(PRODUCT_LIST) },
-      ],
+      links: [{ text: 'All Inflatable Swimming Pools', href: getPermalink(PRODUCT_LIST) }],
     },
   ],
   secondaryLinks: navData?.footer?.secondaryLinks ?? [

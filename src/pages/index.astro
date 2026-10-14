@@ -10,7 +10,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import { SITE } from 'astrowind:config';
-import { products as poolProductsRaw } from '~/data/products';
+import { getProducts } from '~/utils/products';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/home.ts';
 import { getUiForLang } from '~/i18n/generated/ui-all';
@@ -32,7 +32,7 @@ const steps = page.steps ?? {};
 const faqs = page.faqs ?? {};
 const cta = page.cta ?? {};
 
-const poolProducts = poolProductsRaw.slice(0, 3);
+const poolProducts = await getProducts({ limit: 3 });
 
 const customerItems = (customerTypes.items ?? []).map(
   (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
@@ -135,7 +135,5 @@ const metadata = {
 
   <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
 
-  {
-    cta.title ? <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} /> : null
-  }
+  {cta.title ? <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} /> : null}
 </Layout>

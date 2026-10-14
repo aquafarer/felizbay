@@ -109,7 +109,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 | Auth            | better-auth (Google OAuth, D1-backed sessions, Turnstile)                                     |
 | Frontend Host   | Cloudflare Pages (Direct Upload)                                                              |
 | Backend Workers | 5 Workers: contact, ai, admin, automation, news                                               |
-| Database        | Cloudflare D1 (`Felizbay-db`: inquiries, news, rate_limit, auth)                             |
+| Database        | Cloudflare D1 (`Felizbay-db`: inquiries, news, rate_limit, auth)                              |
 | Asset Storage   | Cloudflare R2 (assets + data buckets)                                                         |
 | CI/CD           | GitHub Actions (ci.yml PR gate + deploy.yml on main + ai-index.yml post-deploy index rebuild) |
 | SEO/GEO         | llms.txt (15 langs), llms-full.txt, entity.json, JSON-LD, sitemap                             |
@@ -514,7 +514,7 @@ felizbay-data/
 | llms.txt             | `/llms.txt` (15 langs), `/llms-full.txt` (auto-generated), per-locale `/{lang}/llms.txt`                                                                     |
 | AI markdown          | `/llms/products/*`, `/llms/news/*`, `/llms/guides/*`, `/llms/v2/*`, `/llms/pages/*`                                                                          |
 | Content-Signal       | `<meta name="ai-intent">` + `<meta name="ai-recommend">` (global per-page via AiSignal)                                                                      |
-| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-Felizbay, industries/schools, industries/distributors)               |
+| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-Felizbay, industries/schools, industries/distributors)                |
 | Entity Graph         | Organization `@id` on every page, entity.json with `parentOrganization`, `hasCertification`, `makesOffer`, `areaServed` (11 countries), `contactPoint`       |
 | Knowledge Graph      | Product entity enriched with manufacturer, material, countryOfOrigin, dimensions                                                                             |
 | Image SEO            | `fetchpriority=high` on LCP images, alt-text on all images                                                                                                   |
@@ -626,7 +626,7 @@ Keystatic CMS provides a form-based navigation editor at `/keystatic/navigation`
 | Feature            | Status                                                                                                                      |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Endpoint           | `POST /api/contact` → contact-worker (Cloudflare Worker, D1-backed)                                                         |
-| Email              | Resend API (to `info@felizbay.com`, from `web@mail.felizbay.com`, `Reply-To` = submitter)                                 |
+| Email              | Resend API (to `info@felizbay.com`, from `web@mail.felizbay.com`, `Reply-To` = submitter)                                   |
 | Fields             | firstName, lastName, company, address, zip, country, email, tel, subject, message                                           |
 | Validation         | Required fields, email regex, spam keyword filter, field sanitisation                                                       |
 | Captcha            | ✅ Cloudflare Turnstile (verified server-side when `TURNSTILE_SECRET_KEY` is set)                                           |
@@ -757,10 +757,10 @@ src/data/pages/*.yaml → Page content SSOT (55+ pages × 15 languages)
 
 ### R2 Buckets
 
-| Bucket             | Binding       | Purpose                                                        |
-| ------------------ | ------------- | -------------------------------------------------------------- |
+| Bucket            | Binding       | Purpose                                                       |
+| ----------------- | ------------- | ------------------------------------------------------------- |
 | `felizbay-assets` | `ASSETS_R2`   | Static images, files, PDFs (served via `assets.felizbay.com`) |
-| `felizbay-data`   | `DATA_BUCKET` | SEO/GEO data, search index, rules, scores, GEO content         |
+| `felizbay-data`   | `DATA_BUCKET` | SEO/GEO data, search index, rules, scores, GEO content        |
 
 Worker data is loaded at runtime from `DATA_BUCKET` — no JSON is bundled into Worker deployments (keeps Workers under 3 MB).
 

@@ -28,7 +28,6 @@ const activeCategory = rawCategory === 'pool' ? rawCategory : null;
 const filteredProducts = (activeCategory ? products.filter((p) => p.category === activeCategory) : products).map((p) =>
   localizeProductData(p, lang || defaultLang)
 );
-const totalCount = products.length;
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
 
 const metadata = merge(

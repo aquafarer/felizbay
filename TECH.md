@@ -39,8 +39,8 @@
 | 包管理   | npm (package-lock.json, CI 使用 `npm ci`)                                                                      |
 | Node     | >= 22.12.0                                                                                                     |
 | 主机     | **Cloudflare Pages** (静态文件) + **Cloudflare Workers** (API)                                                 |
-| 数据库   | **Cloudflare D1** (`Felizbay-db`: inquiry, news, rate_limit, better-auth 表)                                  |
-| 存储     | **Cloudflare R2** (felizbay-assets, felizbay-data)                                                           |
+| 数据库   | **Cloudflare D1** (`Felizbay-db`: inquiry, news, rate_limit, better-auth 表)                                   |
+| 存储     | **Cloudflare R2** (felizbay-assets, felizbay-data)                                                             |
 | CMS      | Keystatic (本地 CMS, 在 `/keystatic` 路由)                                                                     |
 | 认证     | better-auth (Google OAuth + 邮箱密码, D1 会话, Turnstile)                                                      |
 | 插件     | `@astrojs/sitemap`, `@astrojs/mdx`, `astro-icon`, `astro-seo`, `@astrojs/markdown-remark`, `astro-auto-import` |
@@ -599,8 +599,8 @@ rec (本地化 ProductRecord) → 页面各 section 渲染
 
 > `seo-worker` (Felizbay-seo) 已于 2026-08-18 删除 — 其端点 (search/geo-score/page-inspect/seo/*) 均为硬编码演示响应, 无生产调用, 且 CI 不部署。
 
-| Worker     | 名称                   | 路由                                                                                   | 存储                 | 用途                                                                                                 |
-| ---------- | ---------------------- | -------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------- |
+| Worker     | 名称                  | 路由                                                                                   | 存储                 | 用途                                                                                                 |
+| ---------- | --------------------- | -------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------- |
 | Admin      | `felizbay-admin`      | `/api/admin/*`, `/api/auth/*`                                                          | D1, R2 (data)        | better-auth 认证, GitHub CRUD, D1 查询, 询盘 CSV 导出 + 附件下载                                     |
 | AI         | `felizbay-ai`         | `/api/chat*`, `/api/ask*`, `/api/search*`, `/api/embed*`, `/api/reindex*`, `/api/ai/*` | Vectorize, R2 (data) | AI 问答/搜索/嵌入 + 知识库增量重建 (cron: 每天 3AM, corpus 哈希跳过) + R2 限流/答案缓存/每日嵌入预算 |
 | Automation | `felizbay-automation` | `/api/automation/*`                                                                    | R2 (data), D1        | 定时任务 (cron: 每天 2AM, D1 清理 + IndexNow)                                                        |
@@ -742,8 +742,8 @@ const target = `/${lang}/solutions/fishing-boat-solutions`;
 
 ### 9.1 Bucket 配置
 
-| Bucket 名称        | 绑定名        | 用途                       |
-| ------------------ | ------------- | -------------------------- |
+| Bucket 名称       | 绑定名        | 用途                       |
+| ----------------- | ------------- | -------------------------- |
 | `felizbay-assets` | `ASSETS_R2`   | 静态资产 (图片, 文件)      |
 | `felizbay-data`   | `DATA_BUCKET` | 数据 (AI 索引, 自动化任务) |
 
@@ -849,7 +849,7 @@ API / 动态请求
 | **Node 版本**        | >= 22.12.0                        | 项目强制要求                    |
 | **包管理**           | npm                               | `npm ci` (CI) / `npm install`   |
 | **静态输出**         | `dist/`                           | `output: 'static'`, 无适配器    |
-| **D1 数据库**        | `Felizbay-db`                    | inquiry/news/rate_limit/auth 表 |
+| **D1 数据库**        | `Felizbay-db`                     | inquiry/news/rate_limit/auth 表 |
 
 ### 10.3 部署命令
 

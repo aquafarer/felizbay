@@ -148,8 +148,7 @@ export function generateGeoForSlug(slug: string): GeoOutput {
       {
         type: 'Definition',
         content:
-          DEFINITIONS[slug] ||
-          `${slug.replace(/-/g, ' ')} is a key topic in inflatable backyard pools and water care.`,
+          DEFINITIONS[slug] || `${slug.replace(/-/g, ' ')} is a key topic in inflatable backyard pools and water care.`,
       },
       {
         type: 'Steps',

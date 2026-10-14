@@ -5,8 +5,7 @@ import { getProducts } from '~/utils/products';
 
 const metadata = {
   title: `Product Comparison — ${SITE.name}`,
-  description:
-    'Compare Felizbay inflatable swimming pools side by side. Size, capacity, material, and more.',
+  description: 'Compare Felizbay inflatable swimming pools side by side. Size, capacity, material, and more.',
 };
 
 const products = await getProducts();
@@ -32,7 +31,9 @@ const comparisonRows = [
     key: 'price' as const,
     getter: (p: (typeof products)[number]) => {
       if (!p.price?.amount) return '-';
-      return p.price.currency === 'USD' || !p.price.currency ? `$${p.price.amount}` : `${p.price.currency} ${p.price.amount}`;
+      return p.price.currency === 'USD' || !p.price.currency
+        ? `$${p.price.amount}`
+        : `${p.price.currency} ${p.price.amount}`;
     },
   },
 ];

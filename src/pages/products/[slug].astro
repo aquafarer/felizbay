@@ -326,11 +326,7 @@ const productExtraData: Record<string, unknown> = {
                 </div>
               ) : null
             }
-            {
-              product.price?.note && (
-                <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{product.price.note}</p>
-              )
-            }
+            {product.price?.note && <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{product.price.note}</p>}
           </div>
 
           {/* Environment & Water Condition Tags */}

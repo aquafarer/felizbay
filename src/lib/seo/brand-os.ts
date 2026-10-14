@@ -114,7 +114,8 @@ export const BRAND: BrandIdentity = {
     {
       year: 2018,
       event: 'Drop-Stitch Pool Line',
-      description: 'Launched the first drop-stitch inflatable pool, bringing hard-pool rigidity to an inflatable format.',
+      description:
+        'Launched the first drop-stitch inflatable pool, bringing hard-pool rigidity to an inflatable format.',
     },
     {
       year: 2022,
