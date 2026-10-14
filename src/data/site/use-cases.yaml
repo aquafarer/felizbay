@@ -1,0 +1,43 @@
+cases:
+  - id: family-backyard
+    title: Family Backyard Swimming
+    desc: A full-size pool that sets up in minutes and stores away in fall.
+    scenario: >-
+      A family wants real swimming depth in their backyard without the cost,
+      permits, or permanence of a built-in pool.
+    solution: >-
+      The round drop stitch pool inflates in under 20 minutes on level ground,
+      holds thousands of liters, and folds into a carry bag for winter storage.
+    products:
+      - Round Drop Stitch Pool
+      - Rectangular Drop Stitch Pool
+      - Fitted Debris Cover
+    image: /images/pools/round-blue-pool-1.png
+
+  - id: lap-swimming
+    title: Lap Swimming & Fitness
+    desc: Rectangular footprint with rigid walls for real swim training.
+    scenario: >-
+      A swimmer wants daily lap training at home but only has a modest yard and
+      no room for a permanent pool.
+    solution: >-
+      The rectangular drop stitch pool provides a straight swim lane with
+      vertical, rigid walls that hold full water pressure all season.
+    products:
+      - Rectangular Drop Stitch Pool
+      - Cartridge Filter Pump
+    image: /images/pools/rectangular-pool-1.jpg
+
+  - id: retailers-wholesale
+    title: Retail & Wholesale Supply
+    desc: Factory-direct pool supply for retailers and e-commerce sellers.
+    scenario: >-
+      A pool retailer needs a reliable summer supplier with competitive
+      factory-direct pricing and OEM support for their own brand.
+    solution: >-
+      Felizbay ships pools factory-direct with custom branding, packaging, and
+      sizes available, plus wholesale pricing on bulk orders.
+    products:
+      - Full Pool Catalog
+      - OEM / ODM Services
+    image: /images/pools/round-grey-pool-1.png

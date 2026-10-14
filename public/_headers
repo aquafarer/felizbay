@@ -1,0 +1,29 @@
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  CDN-Cache-Control: public, max-age=31536000
+
+/files/*
+  Cache-Control: public, max-age=31536000, immutable
+  CDN-Cache-Control: public, max-age=31536000
+
+/favicon/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.xml
+  Cache-Control: public, max-age=3600
+
+/*.txt
+  Cache-Control: public, max-age=3600
+
+/contact/*
+  Cache-Control: public, max-age=0, s-maxage=0
+
+/search/*
+  Cache-Control: public, max-age=0, s-maxage=300
+
+/*
+  Cache-Control: public, max-age=0, s-maxage=3600
+  CDN-Cache-Control: public, max-age=3600

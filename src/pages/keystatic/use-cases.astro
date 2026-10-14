@@ -1,0 +1,343 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/use-cases.yaml', locale);
+
+interface UseCaseEntry {
+  id: string;
+  title: string;
+  desc: string;
+  scenario: string;
+  solution: string;
+  products: string[];
+  image: string;
+}
+
+const defaultCases: UseCaseEntry[] = [
+  {
+    id: 'family-backyard',
+    title: 'Family Backyard Swimming',
+    desc: 'A full-size pool that sets up in minutes and stores away in fall.',
+    scenario:
+      'A family wants real swimming depth in their backyard without the cost, permits, or permanence of a built-in pool.',
+    solution:
+      'The round drop stitch pool inflates in under 20 minutes on level ground, holds thousands of liters, and folds into a carry bag for winter storage.',
+    products: ['Round Drop Stitch Pool', 'Rectangular Drop Stitch Pool', 'Fitted Debris Cover'],
+    image: '/images/pools/round-blue-pool-1.png',
+  },
+  {
+    id: 'lap-swimming',
+    title: 'Lap Swimming & Fitness',
+    desc: 'Rectangular footprint with rigid walls for real swim training.',
+    scenario:
+      'A swimmer wants daily lap training at home but only has a modest yard and no room for a permanent pool.',
+    solution:
+      'The rectangular drop stitch pool provides a straight swim lane with vertical, rigid walls that hold full water pressure all season.',
+    products: ['Rectangular Drop Stitch Pool', 'Cartridge Filter Pump'],
+    image: '/images/pools/rectangular-pool-1.jpg',
+  },
+  {
+    id: 'retailers-wholesale',
+    title: 'Retail & Wholesale Supply',
+    desc: 'Factory-direct pool supply for retailers and e-commerce sellers.',
+    scenario:
+      'A pool retailer needs a reliable summer supplier with competitive factory-direct pricing and OEM support for their own brand.',
+    solution:
+      'Felizbay ships pools factory-direct with custom branding, packaging, and sizes available, plus wholesale pricing on bulk orders.',
+    products: ['Full Pool Catalog', 'OEM / ODM Services'],
+    image: '/images/pools/round-grey-pool-1.png',
+  },
+];
+
+let cases: UseCaseEntry[] = defaultCases.map((c) => ({ ...c, products: [...c.products] }));
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/use-cases.yaml');
+        }
+      }
+    }
+    if (f) {
+      const { load } = await import('js-yaml');
+      const parsed = load(f.content) as Record<string, any>;
+      if (parsed?.cases && Array.isArray(parsed.cases)) {
+        cases = parsed.cases.map((c: any, i: number) => ({
+          id: c.id || defaultCases[i]?.id || '',
+          title: c.title || defaultCases[i]?.title || '',
+          desc: c.desc || defaultCases[i]?.desc || '',
+          scenario: c.scenario || defaultCases[i]?.scenario || '',
+          solution: c.solution || defaultCases[i]?.solution || '',
+          products: Array.isArray(c.products) && c.products.length ? c.products : defaultCases[i]?.products || [],
+          image: c.image || defaultCases[i]?.image || '',
+        }));
+      }
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title="Use Cases" active="usecases">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <div>
+      <h1 class="text-2xl font-semibold">Use Cases</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <label class="text-xs text-gray-500">Locale:</label>
+      <select
+        id="locale-select"
+        class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+      >
+        {
+          ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+  </div>
+  <p class="mt-1 text-sm text-gray-500">
+    File: <code class="font-mono">{file}</code>
+    {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+  </p>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="usecases-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-sha={sha}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    {
+      cases.map((c, i) => (
+        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+          <h2 class="text-base font-semibold">
+            <span class="text-xs text-gray-400 font-mono mr-2">#{i + 1}</span>
+            {c.id}
+          </h2>
+          <input type="hidden" name={'c' + i + '.id'} value={c.id} />
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Title</label>
+              <input
+                type="text"
+                name={'c' + i + '.title'}
+                value={c.title}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Short Description</label>
+              <input
+                type="text"
+                name={'c' + i + '.desc'}
+                value={c.desc}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Scenario</label>
+            <textarea
+              name={'c' + i + '.scenario'}
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {c.scenario}
+            </textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Solution</label>
+            <textarea
+              name={'c' + i + '.solution'}
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {c.solution}
+            </textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              Products (comma-separated)
+            </label>
+            <input
+              type="text"
+              name={'c' + i + '.products'}
+              value={c.products.join(', ')}
+              placeholder="Round Blue Pool, Cartridge Filter Pump, Fitted Cover"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+            <input
+              type="text"
+              name={'c' + i + '.image'}
+              value={c.image}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+            {c.image && (
+              <div class="mt-2 flex items-center gap-3">
+                <img src={c.image} alt="" class="w-20 h-14 object-cover rounded-lg border border-gray-200" />
+                <span class="text-xs text-gray-400 truncate">{c.image}</span>
+              </div>
+            )}
+          </div>
+        </div>
+      ))
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('usecases-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+      });
+
+      saveBtn.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+
+        const fd = new FormData(form);
+        const cases = [];
+        for (let i = 0; i < 4; i++) {
+          const raw = String(fd.get('c' + i + '.products') || '').trim();
+          cases.push({
+            id: String(fd.get('c' + i + '.id') || '').trim(),
+            title: String(fd.get('c' + i + '.title') || '').trim(),
+            desc: String(fd.get('c' + i + '.desc') || '').trim(),
+            scenario: String(fd.get('c' + i + '.scenario') || '').trim(),
+            solution: String(fd.get('c' + i + '.solution') || '').trim(),
+            products: raw
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean),
+            image: String(fd.get('c' + i + '.image') || '').trim(),
+          });
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: { cases },
+              commitMessage: 'Draft: Update use cases',
+              branch: 'draft',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            return;
+          }
+          if (result?.content?.sha) sha = result.content.sha;
+          window.__adminToast?.('Draft saved', 'success');
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+        }
+      });
+
+      publishBtn.addEventListener('click', async () => {
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const res = await fetch('/api/admin/publish', { method: 'POST' });
+          if (!res.ok) {
+            window.__adminToast?.('Publish failed', 'error');
+            publishBtn.disabled = false;
+            publishBtn.textContent = 'Publish';
+            return;
+          }
+          window.__adminToast?.('Published, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.disabled = false;
+          publishBtn.textContent = 'Publish';
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

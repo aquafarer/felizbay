@@ -1,0 +1,302 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+const file = 'src/data/site/languages.yaml';
+
+let initialLangs: Array<{ code: string; name: string; locale: string; textDirection?: string; enabled?: boolean }> = [];
+let sha = '';
+let loadError: string | null = null;
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      f = await client.readFile(file);
+    }
+    const yamlMod = await import('js-yaml');
+    const parsed = yamlMod.load(f.content);
+    if (Array.isArray(parsed)) initialLangs = parsed as typeof initialLangs;
+    sha = f.sha;
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Load failed';
+  }
+}
+---
+
+<AdminLayout title="Language Manager" active="languages">
+  <div class="mb-6">
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      Enable or disable language versions. Only enabled languages are built and deployed. English is always enabled.
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 p-4 rounded-lg bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 text-sm">
+        {loadError}
+      </div>
+    )
+  }
+
+  <form id="lang-form" data-file={file} data-sha={sha} onsubmit="arguments[0].preventDefault()">
+    <div id="lang-list" class="space-y-2 mb-6">
+      {
+        initialLangs.map((l) => (
+          <div class="flex items-center justify-between rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-5 py-3">
+            <div class="flex items-center gap-4">
+              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-sm font-bold">
+                {l.code.toUpperCase()}
+              </span>
+              <div>
+                <div class="text-sm font-medium">{l.code === 'en' ? `${l.name} (Default)` : l.name}</div>
+                <div class="text-xs text-gray-400 font-mono">
+                  {l.locale} · {l.textDirection}
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              {l.code === 'en' ? (
+                <span class="text-xs px-2.5 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300 font-medium">
+                  Always enabled
+                </span>
+              ) : (
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="enabled"
+                    value={l.locale}
+                    checked={l.enabled !== false}
+                    class="sr-only peer"
+                  />
+                  <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
+                  <span class="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {l.enabled !== false ? 'Enabled' : 'Disabled'}
+                  </span>
+                </label>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button
+        id="save-draft-btn"
+        type="button"
+        class="px-5 py-2.5 text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        >Save Draft</button
+      >
+      <button
+        id="publish-btn"
+        type="button"
+        class="px-5 py-2.5 text-sm font-medium rounded-lg bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        >Publish</button
+      >
+      <span id="save-status" class="text-sm hidden"></span>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('lang-form');
+      if (!form || form.dataset.loaded === 'true') return;
+      var langList = document.getElementById('lang-list');
+      if (!langList) return;
+      if (langList.children.length > 0) return;
+      (async function () {
+        try {
+          var res = await fetch(
+            '/api/admin/read?path=' + encodeURIComponent('src/data/site/languages.yaml') + '&format=yaml',
+            { credentials: 'include' }
+          );
+          if (!res.ok) return;
+          var data = await res.json();
+          if (!data || !data.parsed || !Array.isArray(data.parsed)) return;
+          if (data.sha) form.dataset.sha = data.sha;
+          langList.innerHTML = '';
+          data.parsed.forEach(function (l) {
+            var d = document.createElement('div');
+            d.className =
+              'flex items-center justify-between rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-5 py-3';
+            var en = l.code === 'en';
+            var checked = l.enabled !== false;
+            d.innerHTML =
+              '<div class="flex items-center gap-4">' +
+              '<span class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-sm font-bold">' +
+              (l.code || '').toUpperCase() +
+              '</span>' +
+              '<div><div class="text-sm font-medium">' +
+              (en ? l.name + ' (Default)' : l.name) +
+              '</div>' +
+              '<div class="text-xs text-gray-400 font-mono">' +
+              (l.locale || '') +
+              ' · ' +
+              (l.textDirection || 'ltr') +
+              '</div></div></div>' +
+              '<div class="flex items-center gap-3">' +
+              (en
+                ? '<span class="text-xs px-2.5 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300 font-medium">Always enabled</span>'
+                : '<label class="relative inline-flex items-center cursor-pointer">' +
+                  '<input type="checkbox" name="enabled" value="' +
+                  (l.locale || '') +
+                  '" class="sr-only peer" ' +
+                  (checked ? 'checked' : '') +
+                  ' />' +
+                  '<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[\'\'] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>' +
+                  '<span class="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">' +
+                  (checked ? 'Enabled' : 'Disabled') +
+                  '</span></label>') +
+              '</div>';
+            langList.appendChild(d);
+          });
+          document.querySelectorAll('input[name="enabled"]').forEach(function (cb) {
+            cb.addEventListener('change', function () {
+              var label = this.closest('label').querySelector('span');
+              if (label) label.textContent = this.checked ? 'Enabled' : 'Disabled';
+            });
+          });
+          form.dataset.loaded = 'true';
+        } catch (e) {
+          console.error('Languages loader:', e);
+        }
+      })();
+    })();
+  </script>
+</AdminLayout>
+
+<script is:inline>
+  (function () {
+    const form = document.getElementById('lang-form');
+    const saveBtn = document.getElementById('save-draft-btn');
+    const publishBtn = document.getElementById('publish-btn');
+    const status = document.getElementById('save-status');
+
+    if (!form || !status) return;
+
+    function show(el) {
+      el.classList.remove('hidden');
+    }
+
+    function collectData() {
+      const checkboxes = form.querySelectorAll('input[name="enabled"]');
+      const enabledLocales = [];
+      checkboxes.forEach(function (cb) {
+        if (cb.checked) enabledLocales.push(cb.value);
+      });
+      const langDivs = document.querySelectorAll('#lang-list > div');
+      const languages = [];
+      langDivs.forEach(function (div) {
+        const codeEl = div.querySelector('.font-mono');
+        if (!codeEl) return;
+        const parts = codeEl.textContent.trim().split('\u8DEF');
+        const locale = parts[0].trim();
+        const dir = parts.length > 1 ? parts[1].trim() : 'ltr';
+        const nameEl = div.querySelector('.font-medium');
+        const name = nameEl ? nameEl.textContent.replace(/\s*\(.*?\)\s*$/, '').trim() : locale.toUpperCase();
+        const checkbox = div.querySelector('input[name="enabled"]');
+        const enabled = checkbox ? checkbox.checked : true;
+        languages.push({
+          code: locale.toUpperCase(),
+          name: name,
+          locale: locale,
+          textDirection: dir,
+          enabled: enabled,
+        });
+      });
+      return languages;
+    }
+
+    saveBtn?.addEventListener('click', async () => {
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Saving...';
+      show(status);
+      status.textContent = 'Saving...';
+      status.className = 'text-sm text-blue-600';
+      try {
+        const data = collectData();
+        const res = await fetch('/api/admin/update', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            format: 'yaml',
+            path: 'src/data/site/languages.yaml',
+            sha: form.dataset.sha || '',
+            data,
+            branch: 'draft',
+            commitMessage: 'Draft: Update language enabled status',
+          }),
+        });
+        const result = await res.json();
+        if (!res.ok || !result.success) {
+          status.textContent = result.error || 'Save failed';
+          status.className = 'text-sm text-red-600';
+          return;
+        }
+        if (result?.content?.sha) {
+          form.dataset.sha = result.content.sha;
+        }
+        status.textContent = 'Draft saved';
+        status.className = 'text-sm text-green-600';
+      } catch {
+        status.textContent = 'Network error';
+        status.className = 'text-sm text-red-600';
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Draft';
+      }
+    });
+
+    publishBtn?.addEventListener('click', async () => {
+      publishBtn.disabled = true;
+      publishBtn.textContent = 'Publishing...';
+      show(status);
+      status.textContent = 'Publishing...';
+      status.className = 'text-sm text-blue-600';
+      try {
+        const data = collectData();
+        const res = await fetch('/api/admin/publish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            format: 'yaml',
+            path: 'src/data/site/languages.yaml',
+            sha: form.dataset.sha || '',
+            data,
+            commitMessage: 'Update language enabled status',
+          }),
+        });
+        const result = await res.json();
+        if (!res.ok || !result.success) {
+          status.textContent = result.error || 'Publish failed';
+          status.className = 'text-sm text-red-600';
+          return;
+        }
+        status.textContent = 'Published! The CI/CD pipeline will rebuild only enabled languages.';
+        status.className = 'text-sm text-green-600';
+        setTimeout(function () {
+          window.location.reload();
+        }, 1500);
+      } catch {
+        status.textContent = 'Network error';
+        status.className = 'text-sm text-red-600';
+      } finally {
+        publishBtn.disabled = false;
+        publishBtn.textContent = 'Publish';
+      }
+    });
+
+    document.querySelectorAll('input[name="enabled"]').forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        const label = this.closest('label').querySelector('span');
+        if (label) label.textContent = this.checked ? 'Enabled' : 'Disabled';
+      });
+    });
+  })();
+</script>

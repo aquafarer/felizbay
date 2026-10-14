@@ -1,0 +1,44 @@
+---
+export interface Props {
+  quickAnswer: string;
+  facts?: Array<{ label: string; value: string }>;
+  entityType?: string;
+}
+const { quickAnswer, facts = [], entityType = 'Brand' } = Astro.props;
+---
+
+<section class="sr-only" data-ai-block="quick-answer" aria-hidden="true">
+  <p data-ai-field="definition">{quickAnswer}</p>
+  {
+    facts.length > 0 && (
+      <dl>
+        {facts.map((f) => (
+          <div>
+            <dt>{f.label}:</dt>
+            <dd>{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+    )
+  }
+</section>
+
+<div
+  class="bg-gradient-to-br from-sky-50 via-white to-blue-50 rounded-2xl border border-sky-100 p-6 mb-12"
+  data-ai-entity={entityType}
+>
+  <p class="text-sm font-semibold text-sky-700 tracking-wide uppercase mb-2">Quick Answer</p>
+  <p class="text-base text-gray-800 leading-relaxed">{quickAnswer}</p>
+  {
+    facts.length > 0 && (
+      <dl class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        {facts.map((f) => (
+          <div class="bg-white/70 rounded-lg p-3 border border-sky-50">
+            <dt class="text-xs font-medium text-gray-500 uppercase tracking-wider">{f.label}</dt>
+            <dd class="mt-1 font-medium text-gray-900">{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+    )
+  }
+</div>

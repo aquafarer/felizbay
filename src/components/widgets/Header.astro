@@ -1,0 +1,629 @@
+---
+import Icon from '~/components/ui/Icon.astro';
+import Logo from '~/components/Logo.astro';
+import ToggleTheme from '~/components/common/ToggleTheme.astro';
+import ToggleMenu from '~/components/common/ToggleMenu.astro';
+import Button from '~/components/ui/Button.astro';
+
+import { getHomePermalink } from '~/utils/permalinks';
+import { getAsset } from '~/utils/permalinks';
+import type { CallToAction } from '~/types';
+
+import { getLangFromUrl, removeLang, localizeUseCasePath } from '~/i18n/utils';
+import { localizeHref, entityForHref } from '~/i18n/routing';
+import langData from '~/data/site/languages.yaml';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface MenuLink extends Link {
+  links?: Array<MenuLink>;
+}
+
+export interface Props {
+  id?: string;
+  links?: Array<MenuLink>;
+  actions?: Array<CallToAction>;
+  isSticky?: boolean;
+  isDark?: boolean;
+  isFullWidth?: boolean;
+  showToggleTheme?: boolean;
+  showRssFeed?: boolean;
+  showSearch?: boolean;
+  showTopBar?: boolean;
+  topBarLinks?: Array<{ text?: string; href?: string }>;
+  position?: string;
+}
+
+const {
+  id = 'header',
+  links = [],
+  actions = [],
+  isSticky = false,
+  isDark = false,
+  isFullWidth = false,
+  showToggleTheme = false,
+  showRssFeed = false,
+  showSearch = true,
+
+  position = 'center',
+} = Astro.props;
+
+const cleanPath = removeLang(new URL(Astro.url).pathname);
+
+// Root-only routes have no localized versions — the language dialog must not
+// offer (dead) per-locale links for them. Keep in sync with Layout.astro.
+import { isRootOnlyRoute as isRootOnlyRouteFn } from '~/i18n/root-only';
+const isRootOnlyRoute = isRootOnlyRouteFn(cleanPath);
+
+const navTextMap: Record<string, string> = {
+  Products: 'nav.products',
+  Company: 'nav.company',
+  FAQ: 'nav.faq',
+  Contact: 'nav.contact',
+  About: 'nav.about',
+  'Get a Quote': 'cta.quote',
+  'Get a quote': 'cta.quote',
+  'Request a Quote': 'cta.requestQuote',
+  'Request a Quotation': 'nav.requestQuotation',
+  Login: 'nav.login',
+  'Sign In': 'nav.signIn',
+  Terms: 'nav.terms',
+  'Privacy Policy': 'nav.privacy',
+  'Medical Disclaimer': 'nav.disclaimer',
+};
+
+function t(text: string | undefined, locale: string): string {
+  const key = text ? navTextMap[text] : undefined;
+  if (key) {
+    const uiData = getUiForLang(locale || 'en');
+    const translated = uiData?.[key];
+    if (translated) return translated;
+  }
+  return text ?? '';
+}
+
+const langs: Array<{ code: string; name: string; locale: string; enabled?: boolean }> = (
+  Array.isArray(langData) ? langData : []
+).filter((l) => l.enabled !== false);
+
+const currentLocale = getLangFromUrl(Astro.url);
+
+const headerUi = getUiForLang(currentLocale);
+const searchPlaceholder = headerUi?.['search.placeholder'] || 'Search posts, products, pages...';
+const searchPrompt = headerUi?.['search.prompt'] || 'Type a keyword to start searching';
+const searchNoResults = headerUi?.['search.noResults'] || 'No matches found';
+const languageDialogTitle = headerUi?.['header.language'] || 'Language';
+---
+
+<header
+  class:list={[
+    { sticky: isSticky, relative: !isSticky, dark: isDark },
+    'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-transform duration-300 ease-out',
+  ]}
+  {...isSticky ? { 'data-aw-sticky-header': true, 'data-auto-hide': 'true' } : {}}
+  {...id ? { id } : {}}
+>
+  <div class="absolute inset-0 pointer-events-none"></div>
+  <div
+    class:list={[
+      'relative text-default py-3 px-3 md:px-6 mx-auto w-full',
+      {
+        'md:flex md:justify-between': position !== 'center',
+      },
+      {
+        'md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-x-8': position === 'center',
+      },
+      {
+        'max-w-7xl': !isFullWidth,
+      },
+    ]}
+  >
+    <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between items-center']}>
+      <div class="flex items-center gap-2">
+        <div class="flex items-center md:hidden">
+          <ToggleMenu />
+        </div>
+        <a class="flex items-center" href={localizeHref(getHomePermalink(), currentLocale)}>
+          <Logo />
+        </a>
+      </div>
+      <div class="flex items-center md:hidden gap-1">
+        <button
+          type="button"
+          data-search-trigger
+          aria-label="Search"
+          class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+        >
+          <Icon name="tabler:search" class="w-5 h-5" />
+        </button>
+        <button
+          type="button"
+          data-lang-button
+          data-lang-trigger
+          aria-label="Choose language"
+          class="inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        >
+          <Icon name="tabler:language" class="w-5 h-5" />
+        </button>
+      </div>
+    </div>
+    <nav
+      class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-visible md:justify-self-center"
+      aria-label="Main navigation"
+    >
+      <ul
+        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center"
+      >
+        {
+          links.map(({ text, href, links }) => (
+            <li class={links?.length ? 'dropdown' : ''}>
+              {links?.length ? (
+                <>
+                  <button
+                    type="button"
+                    class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
+                  >
+                    {t(text, currentLocale)}{' '}
+                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+                  </button>
+                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                    {links.map(({ text: text2, href: href2 }) => (
+                      <li>
+                        <a
+                          class:list={[
+                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                            { 'aw-link-active': href2 === cleanPath },
+                          ]}
+                          href={localizeHref(href2, currentLocale)}
+                          data-entity={entityForHref(href2)}
+                        >
+                          {t(text2, currentLocale)}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <a
+                  class:list={[
+                    'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
+                    { 'aw-link-active': href === cleanPath },
+                  ]}
+                  href={localizeHref(href, currentLocale)}
+                  data-entity={entityForHref(href)}
+                >
+                  {t(text, currentLocale)}
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div
+      class:list={[
+        { 'ml-auto rtl:ml-0 rtl:mr-auto': position === 'left' },
+        'hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0 md:justify-self-end',
+      ]}
+    >
+      <div class="items-center flex justify-between w-full md:w-auto gap-2">
+        <div class="flex items-center gap-1">
+          {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
+          {
+            showSearch && (
+              <button
+                type="button"
+                data-search-trigger
+                aria-label="Search"
+                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              >
+                <Icon name="tabler:search" class="w-5 h-5" />
+              </button>
+            )
+          }
+          {
+            showRssFeed && (
+              <a
+                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                aria-label="RSS Feed"
+                href={getAsset('/rss.xml')}
+              >
+                <Icon name="tabler:rss" class="w-5 h-5" />
+              </a>
+            )
+          }
+        </div>
+        <button
+          type="button"
+          data-lang-button-desktop
+          data-lang-trigger
+          aria-label="Choose language"
+          class="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        >
+          <Icon name="tabler:language" class="w-5 h-5" />
+        </button>
+        {
+          actions?.length ? (
+            <span class="ml-1 rtl:ml-0 rtl:mr-1">
+              {actions.map((btnProps) => (
+                <Button
+                  {...btnProps}
+                  text={t(btnProps.text, currentLocale)}
+                  href={localizeHref(btnProps.href || '', currentLocale)}
+                  class="ml-1 py-2 px-4 md:px-5 font-semibold shadow-none text-sm w-auto"
+                />
+              ))}
+            </span>
+          ) : (
+            ''
+          )
+        }
+      </div>
+    </div>
+  </div>
+</header>
+
+<div
+  id="search-dialog"
+  data-search-dialog
+  class="hidden fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm"
+  aria-hidden="true"
+>
+  <div class="max-w-2xl mx-auto mt-20 px-4">
+    <div
+      class="bg-white dark:bg-gray-950 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-800 overflow-hidden"
+    >
+      <div class="flex items-center gap-3 px-4 py-3 border-b border-gray-200 dark:border-gray-800">
+        <Icon name="tabler:search" class="w-5 h-5 text-gray-400 shrink-0" />
+        <input
+          type="text"
+          data-search-input
+          placeholder={searchPlaceholder}
+          class="flex-1 bg-transparent outline-none text-base text-gray-900 dark:text-gray-100 placeholder-gray-400"
+          autocomplete="off"
+        />
+        <kbd class="text-xs text-gray-400 border border-gray-300 dark:border-gray-700 rounded px-1.5 py-0.5">Esc</kbd>
+      </div>
+      <div data-search-results class="max-h-[60vh] overflow-y-auto p-2">
+        <div
+          class="px-3 py-6 text-center text-sm text-gray-500"
+          data-search-empty
+          data-empty-prompt={searchPrompt}
+          data-empty-none={searchNoResults}
+        >
+          {searchPrompt}
+        </div>
+        <ul data-search-list class="space-y-1 hidden"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="lang-dialog" data-lang-dialog class="hidden fixed inset-0 z-[70] bg-black/50" aria-hidden="true">
+  <div class="flex items-start justify-center min-h-full pt-[12vh] px-4 pb-8">
+    <div class="bg-white dark:bg-gray-950 rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden">
+      <div class="flex items-center justify-between px-5 pt-5 pb-2">
+        <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100">{languageDialogTitle}</h2>
+        <button
+          type="button"
+          data-lang-close
+          class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors -mr-2 -mt-1"
+        >
+          <Icon name="tabler:x" class="w-4 h-4" />
+        </button>
+      </div>
+      <ul class="pb-3 px-3 grid grid-cols-4 sm:grid-cols-5 gap-1 max-h-[65vh] overflow-y-auto">
+        {
+          (isRootOnlyRoute ? langs.filter((l) => l.locale === currentLocale) : langs).map((l) => (
+            <li>
+              <a
+                href={localizeUseCasePath(cleanPath, l.locale)}
+                data-locale={l.locale}
+                data-lang-code={l.code}
+                data-lang-name={l.name}
+                class:list={[
+                  'flex items-center justify-center px-2 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm font-medium text-center',
+                  l.locale === currentLocale
+                    ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
+                    : 'text-gray-700 dark:text-gray-300',
+                ]}
+              >
+                <span>{l.name}</span>
+                {l.locale === currentLocale && <Icon name="tabler:check" class="w-4 h-4 ml-1 text-blue-600 shrink-0" />}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<meta name="x-locale" content={currentLocale} />
+<script is:inline data-astro-rerun>
+  (function () {
+    const dialog = document.getElementById('lang-dialog');
+    const triggers = document.querySelectorAll('[data-lang-trigger]');
+    const closeBtn = dialog ? dialog.querySelector('[data-lang-close]') : null;
+
+    function openDialog() {
+      if (!dialog) return;
+      dialog.classList.remove('hidden');
+      dialog.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeDialog() {
+      if (!dialog) return;
+      dialog.classList.add('hidden');
+      dialog.setAttribute('aria-hidden', 'true');
+    }
+
+    if (triggers.length) {
+      triggers.forEach(function (t) {
+        t.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openDialog();
+        });
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        closeDialog();
+      });
+    }
+
+    if (dialog) {
+      dialog.addEventListener('click', function (e) {
+        if (e.target === dialog) closeDialog();
+      });
+
+      dialog.addEventListener('click', function (e) {
+        const t = e.target instanceof Element ? e.target.closest('[data-locale]') : null;
+        if (!t) return;
+        e.preventDefault();
+        const locale = t.getAttribute('data-locale') || 'en';
+        const path = window.location.pathname;
+        const host = window.location.hostname;
+
+        try {
+          localStorage.setItem('locale', locale);
+        } catch {
+          // noop
+        }
+        document.cookie = 'x-user-locale=' + locale + '; path=/; max-age=31536000; SameSite=Lax';
+
+        // Path-based routing for all environments (no subdomain dependency)
+        const langMatch = path.match(/^\/[a-z]{2}(\/|$)/);
+        const newPath = langMatch
+          ? path.replace(/^\/[a-z]{2}(\/|$)/, '/' + locale + '$1')
+          : '/' + locale + (path === '/' ? '' : path);
+        window.location.href = window.location.protocol + '//' + host + newPath;
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && dialog && !dialog.classList.contains('hidden')) {
+        closeDialog();
+      }
+    });
+  })();
+
+  (function () {
+    const header = document.querySelector('[data-auto-hide="true"]');
+    if (!header) return;
+    let lastY = window.scrollY;
+    let ticking = false;
+    const THRESHOLD = 8;
+    function update() {
+      const y = window.scrollY;
+      if (y < 80) {
+        header.classList.remove('header-hidden');
+      } else if (y > lastY + THRESHOLD) {
+        header.classList.add('header-hidden');
+      } else if (y < lastY - THRESHOLD) {
+        header.classList.remove('header-hidden');
+      }
+      lastY = y;
+      ticking = false;
+    }
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('mousemove', function (e) {
+      if (e.clientY < 80) header.classList.remove('header-hidden');
+    });
+  })();
+
+  (function () {
+    const triggers = document.querySelectorAll('[data-search-trigger]');
+    const dialog = document.getElementById('search-dialog');
+    const input = dialog ? dialog.querySelector('[data-search-input]') : null;
+    const empty = dialog ? dialog.querySelector('[data-search-empty]') : null;
+    const list = dialog ? dialog.querySelector('[data-search-list]') : null;
+    const emptyPrompt = empty ? empty.getAttribute('data-empty-prompt') || 'Type a keyword to start searching' : '';
+    const emptyNone = empty ? empty.getAttribute('data-empty-none') || 'No matches found' : '';
+    if (triggers.length === 0 || !dialog || !input || !list) return;
+
+    let index = null;
+    let indexLoading = null;
+
+    async function loadIndex() {
+      if (index) return index;
+      if (indexLoading) return indexLoading;
+      indexLoading = Promise.all([
+        fetch('/search-index.json').then(function (r) {
+          return r.ok ? r.json() : [];
+        }),
+        fetch('/news/search-index.json').then(function (r) {
+          return r.ok ? r.json() : [];
+        }),
+      ])
+        .then(function (parts) {
+          index = (parts[0] || []).concat(parts[1] || []);
+          return index;
+        })
+        .catch(function () {
+          index = [];
+          return index;
+        })
+        .finally(function () {
+          indexLoading = null;
+        });
+      return indexLoading;
+    }
+
+    function open() {
+      dialog.classList.remove('hidden');
+      dialog.setAttribute('aria-hidden', 'false');
+      setTimeout(function () {
+        input.focus();
+        input.select();
+      }, 30);
+      loadIndex();
+    }
+    function close() {
+      dialog.classList.add('hidden');
+      dialog.setAttribute('aria-hidden', 'true');
+      input.value = '';
+      render('');
+    }
+    function typeBadge(type) {
+      const colors = {
+        product: 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300',
+        article: 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300',
+        guide: 'bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300',
+        page: 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400',
+      };
+      const c = colors[type] || colors.page;
+      return (
+        '<span class="text-[9px] font-medium uppercase tracking-wider px-1.5 py-0.5 rounded-full ' +
+        c +
+        '">' +
+        escapeHtml(type) +
+        '</span>'
+      );
+    }
+
+    function render(q) {
+      q = (q || '').trim().toLowerCase();
+      if (!q) {
+        list.classList.add('hidden');
+        if (empty) {
+          empty.textContent = emptyPrompt;
+          empty.classList.remove('hidden');
+        }
+        return;
+      }
+      const data = index || [];
+      const matches = data
+        .filter(function (it) {
+          return (
+            (it.title || '').toLowerCase().includes(q) ||
+            (it.excerpt || '').toLowerCase().includes(q) ||
+            (it.tags || []).some(function (t) {
+              return String(t).toLowerCase().includes(q);
+            })
+          );
+        })
+        .slice(0, 20);
+      if (matches.length === 0) {
+        list.classList.add('hidden');
+        if (empty) {
+          empty.textContent = emptyNone;
+          empty.classList.remove('hidden');
+        }
+        return;
+      }
+      if (empty) empty.classList.add('hidden');
+      list.classList.remove('hidden');
+      list.innerHTML = matches
+        .map(function (m) {
+          const img = m.image
+            ? '<div class="shrink-0 w-8 h-8 rounded overflow-hidden bg-gray-100 dark:bg-gray-700"><img src="' +
+              escapeAttr(m.image) +
+              '" alt="" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display=\'none\'"></div>'
+            : '';
+          return (
+            '<li><a href="' +
+            escapeAttr((document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en') + m.url) +
+            '" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">' +
+            img +
+            '<div class="flex items-center gap-1.5 min-w-0 flex-1">' +
+            typeBadge(m.type) +
+            '<span class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate">' +
+            escapeHtml(m.title) +
+            '</span></div>' +
+            '</a></li>'
+          );
+        })
+        .join('');
+    }
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+    function escapeAttr(s) {
+      return escapeHtml(s);
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', open);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (
+        e.key === '/' &&
+        document.activeElement &&
+        document.activeElement.tagName !== 'INPUT' &&
+        document.activeElement.tagName !== 'TEXTAREA'
+      ) {
+        e.preventDefault();
+        open();
+      }
+      if (e.key === 'Escape' && !dialog.classList.contains('hidden')) close();
+    });
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog) close();
+    });
+    input.addEventListener('input', function () {
+      render(input.value);
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const q = input.value.trim();
+        if (q) {
+          close();
+          const loc = document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en';
+          window.location.href = '/' + loc + '/search?q=' + encodeURIComponent(q);
+        }
+      }
+    });
+    list.addEventListener('click', function (e) {
+      const a = e.target instanceof Element ? e.target.closest('a') : null;
+      if (a) {
+        close();
+      }
+    });
+  })();
+</script>
+
+<style is:global>
+  [data-auto-hide='true'].header-hidden {
+    transform: translateY(-110%);
+  }
+  [data-auto-hide='true'] {
+    will-change: transform;
+  }
+</style>

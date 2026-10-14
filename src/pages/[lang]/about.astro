@@ -1,0 +1,307 @@
+---
+export const prerender = true;
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import { pageContentData } from '~/i18n/generated/site-data';
+import __pageData from '~/i18n/generated/pages/about.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'about');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const wwb = page.features3_what_we_build ?? {};
+const more = page.features3_more ?? {};
+const values = page.steps2_values ?? {};
+const milestones = page.steps2_milestones ?? {};
+const locations = page.features2_locations ?? {};
+
+const brandTagline = page.brand_hub_tagline ?? 'Brand';
+const brandTitle = page.brand_hub_title ?? 'Explore Our Brand';
+const brandSubtitle = page.brand_hub_subtitle ?? '';
+const brandCards = page.brand_hub_cards ?? [];
+
+const about = pageContentData[`${lang}/site-about`] || pageContentData['en/site-about'] || {};
+const origin = about.origin || {};
+const philosophy = about.philosophy || {};
+const design = about.design || {};
+
+const production = page.production_section ?? {};
+const productionCards = production.cards ?? [];
+const globalOps = page.global_ops_section ?? {};
+const globalOpsStats = globalOps.stats ?? [];
+
+const productionIconPaths: string[] = [
+  'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
+  'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z',
+  'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+  'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
+];
+
+const metadata = {
+  title: localizePageTitle(page, `About ${SITE.name} — Inflatable Swimming Pool Manufacturer`),
+  description: localizePageDescription(
+    page,
+    `${SITE.name} was founded with a simple belief: a backyard pool should be sturdy, safe, and effortless to store. Learn our story, philosophy, and design principles.`
+  ),
+  openGraph: {
+    type: 'website',
+    ...(hero?.image?.src ? { images: [{ url: hero.image.src, width: 1200, height: 630 }] } : {}),
+  },
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'About' }];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Who is Felizbay?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Felizbay LLC (New Mexico, USA) designs and supplies premium drop stitch inflatable swimming pools for families, retailers, and OEM partners worldwide.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does Felizbay make?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Drop stitch inflatable swimming pools — rectangular and round models with rigid, rock-solid walls that set up in minutes and fold away for winter storage.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where are Felizbay pools sold?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Worldwide through our online store, retail partners, and OEM supply chains. Contact info@felizbay.com for wholesale and OEM inquiries.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
+
+  <Stats title={stats.title} stats={stats.stats} />
+
+  <!-- Brand Origin Story -->
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{origin.tagline || 'Our Origin'}</span>
+        <h2
+          class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900 dark:text-slate-100 leading-tight"
+          set:html={origin.heading || 'Built on the water,<br /><span class="text-sky-600">driven by purpose</span>'}
+        />
+        <div class="mt-8 space-y-5 text-gray-600 dark:text-slate-400 leading-relaxed">
+          {(origin.paragraphs || []).map((p: string) => <p set:html={p} />)}
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 aspect-[4/3]">
+        <img
+          src={origin.image || 'https://assets.felizbay.com/images/Felizbay/hero/tech-meeting-small.webp'}
+          alt={origin.image_alt || 'Felizbay coastal workshop'}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Ocean Philosophy -->
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{philosophy.tagline || 'Our Philosophy'}</span
+        >
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900 dark:text-slate-100">
+          {philosophy.heading || 'Rooted in the ocean'}
+        </h2>
+        <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{philosophy.description || ''}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {
+          (philosophy.cards || []).map((card: any) => (
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+              <div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-2xl">
+                {card.emoji || ''}
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-gray-900 dark:text-slate-100">{card.title || ''}</h3>
+              <p class="mt-3 text-gray-500 dark:text-slate-400 text-sm leading-relaxed">{card.description || ''}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Production Line Advantages -->
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">{production.tagline}</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900 dark:text-slate-100">{production.title}</h2>
+        <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{production.description}</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        {
+          productionCards.map((card: any, ci: number) => (
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
+              <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900/30 rounded-xl flex items-center justify-center mb-5">
+                <svg
+                  class="w-7 h-7 text-sky-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d={productionIconPaths[ci] || productionIconPaths[0]}
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold mb-3 text-gray-900 dark:text-slate-100">{card.title}</h3>
+              <ul class="space-y-2 text-sm text-gray-500 dark:text-slate-400">
+                {(card.items || []).map((item: string) => (
+                  <li class="flex gap-2">
+                    <span class="text-[#06b6d4] mt-0.5">&#10003;</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Operation Architecture -->
+  <section class="bg-sky-600 text-white py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-medium text-white/80 tracking-wide uppercase">{globalOps.tagline}</span>
+      <h2 class="mt-4 text-3xl md:text-4xl font-semibold leading-tight" set:html={globalOps.title_html} />
+      <p class="mt-6 max-w-4xl mx-auto text-lg text-white/80 leading-relaxed" set:html={globalOps.description_html} />
+      <div class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {
+          globalOpsStats.map((s: any) => (
+            <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+              <div class="text-3xl font-bold">{s.value}</div>
+              <div class="text-sm text-white/70 mt-1">{s.label}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Philosophy -->
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 aspect-[4/3] order-last md:order-first">
+        <img
+          src={design.image || 'https://assets.felizbay.com/images/Felizbay/hero/Felizbay-hero-design-concept.webp'}
+          alt={design.image_alt || 'Felizbay design and engineering'}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{design.tagline || 'Design Philosophy'}</span
+        >
+        <h2
+          class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900 dark:text-slate-100 leading-tight"
+          set:html={design.heading || 'Engineered for the edge<br /><span class="text-sky-600">of conditions</span>'}
+        />
+        <div class="mt-8 space-y-5 text-gray-600 dark:text-slate-400 leading-relaxed">
+          {(design.paragraphs || []).map((p: string) => <p set:html={p} />)}
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-4">
+          {
+            (design.stats || []).map((s: any) => (
+              <div class="text-center p-4 bg-gray-50 dark:bg-slate-800 rounded-xl">
+                <div class="text-2xl font-bold text-sky-600">{s.value || ''}</div>
+                <div class="text-xs text-gray-500 dark:text-slate-400 mt-1" set:html={s.label || ''} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBadges
+    title={t('about.trustBadgesTitle') || 'Built to standards that matter'}
+    subtitle={t('about.trustBadgesSubtitle') ||
+      'Every pool is factory-tested to EN 16582 and ASTM F2666 safety standards, backed by a warranty that means something.'}
+  />
+
+  <Features3
+    title={wwb.title}
+    subtitle={wwb.subtitle}
+    columns={wwb.columns}
+    isBeforeContent={wwb.isBeforeContent}
+    items={wwb.items}
+  />
+
+  <Features3 columns={more.columns} isAfterContent={more.isAfterContent} items={more.items} image={more.image} />
+
+  <Steps2 title={values.title} subtitle={values.subtitle} items={values.items} />
+
+  <Steps2
+    title={milestones.title}
+    subtitle={milestones.subtitle}
+    isReversed={milestones.isReversed}
+    items={milestones.items}
+  />
+
+  <Features2 title={locations.title} tagline={locations.tagline} columns={locations.columns} items={locations.items} />
+
+  <!-- Brand Hub -->
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900 rounded-2xl">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{brandTagline}</p>
+      <h2 class="mt-2 text-3xl font-bold">{brandTitle}</h2>
+      <p class="mt-3 text-muted max-w-2xl mx-auto">{brandSubtitle}</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      {
+        brandCards.map((card: any) => (
+          <a
+            href={`/${lang}${card.link}`}
+            class="p-6 rounded-xl bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 hover:shadow-md transition-shadow"
+          >
+            <h3 class="text-lg font-bold">{card.title}</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">{card.desc}</p>
+            <span class="mt-3 inline-block text-sm font-semibold text-primary">{card.link_label}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

@@ -1,0 +1,720 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/content-v2.yaml', locale);
+const categoryLabels: Record<string, string> = {
+  problem: 'Problem',
+  guide: 'Guide',
+  comparison: 'Comparison',
+  product: 'Product',
+  authority: 'Authority',
+};
+const difficultyLabels: Record<string, string> = {
+  beginner: 'Beginner',
+  intermediate: 'Intermediate',
+  advanced: 'Advanced',
+};
+
+let records: any[] = [];
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/content-v2.yaml');
+        }
+      }
+    }
+    if (f) {
+      const { load } = await import('js-yaml');
+      const parsed = load(f.content) as Record<string, any>;
+      if (parsed && typeof parsed === 'object') records = Array.isArray(parsed) ? parsed : [];
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title="Content v2" active="content-v2">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="text-2xl font-semibold">Content v2</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      SEO content records: problem pages, guides, comparisons, products, authority. File: <code class="font-mono"
+        >{file}</code
+      >
+      {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+    </p>
+    <button
+      type="button"
+      id="add-record-btn"
+      class="mt-3 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
+    >
+      + New Record
+    </button>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Load failed: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="content-form"
+    class="space-y-4 pb-40"
+    data-file={file}
+    data-sha={sha}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    <div id="records-container" class="space-y-3">
+      {
+        records.map((r, i) => (
+          <div
+            data-record-idx={i}
+            class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+          >
+            <div
+              class="record-header flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 select-none"
+              data-toggle
+            >
+              <span class="text-xs font-mono text-gray-400 w-8 shrink-0">#{i + 1}</span>
+              <span class="text-sm font-medium truncate flex-1">{r.title}</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
+                {categoryLabels[r.category] || r.category}
+              </span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+                {r.difficulty}
+              </span>
+              <span class="text-xs font-mono text-gray-400 hidden sm:inline">{r.slug}</span>
+              <svg
+                class="w-4 h-4 text-gray-400 transition-transform"
+                data-chevron
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="record-body border-t border-gray-200 dark:border-gray-800 p-5 space-y-4" style="display:none">
+              <input type="hidden" name={'idx.' + i + '.slug'} value={r.slug} />
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Slug</label>
+                  <input
+                    type="text"
+                    name={'idx.' + i + '.slug'}
+                    value={r.slug}
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Category</label>
+                  <select
+                    name={'idx.' + i + '.category'}
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  >
+                    {Object.entries(categoryLabels).map(([v, l]) => (
+                      <option value={v} selected={r.category === v}>
+                        {l}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Difficulty</label>
+                  <select
+                    name={'idx.' + i + '.difficulty'}
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  >
+                    {Object.entries(difficultyLabels).map(([v, l]) => (
+                      <option value={v} selected={r.difficulty === v}>
+                        {l}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Title</label>
+                <input
+                  type="text"
+                  name={'idx.' + i + '.title'}
+                  value={r.title}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Type</label>
+                <input
+                  type="text"
+                  name={'idx.' + i + '.type'}
+                  value={r.type}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
+              </div>
+              {['description', 'definition', 'tldr', 'problem', 'explanation', 'solution', 'recommendation'].map(
+                (field) => (
+                  <div>
+                    <label class="block text-xs font-medium text-gray-500 mb-1 capitalize">{field}</label>
+                    <textarea
+                      name={'idx.' + i + '.' + field}
+                      rows="3"
+                      class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                    >
+                      {r[field] || ''}
+                    </textarea>
+                  </div>
+                )
+              )}
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <label class="text-xs font-medium text-gray-500">FAQ</label>
+                  <button
+                    type="button"
+                    data-add-faq
+                    data-idx={i}
+                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    + Add FAQ
+                  </button>
+                </div>
+                <div data-faq-list data-idx={i} class="space-y-2">
+                  {(r.faq || []).map((f: any, fi: number) => (
+                    <div data-faq-row class="flex gap-2 items-start">
+                      <div class="flex-1 space-y-1">
+                        <input
+                          type="text"
+                          name={'idx.' + i + '.faq.' + fi + '.q'}
+                          value={f.q}
+                          placeholder="Question"
+                          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                        />
+                        <textarea
+                          name={'idx.' + i + '.faq.' + fi + '.a'}
+                          rows="2"
+                          placeholder="Answer"
+                          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                        >
+                          {f.a}
+                        </textarea>
+                      </div>
+                      <button
+                        type="button"
+                        data-remove-faq
+                        class="text-xs text-red-600 dark:text-red-400 hover:underline mt-2 shrink-0"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  ))}
+                </div>
+                <template data-faq-template>
+                  <div data-faq-row class="flex gap-2 items-start">
+                    <div class="flex-1 space-y-1">
+                      <input
+                        type="text"
+                        placeholder="Question"
+                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                      />
+                      <textarea
+                        rows="2"
+                        placeholder="Answer"
+                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      data-remove-faq
+                      class="text-xs text-red-600 dark:text-red-400 hover:underline mt-2 shrink-0"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </template>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Related Guides</label>
+                  <input
+                    type="text"
+                    name={'idx.' + i + '.relatedGuides'}
+                    value={(r.relatedGuides || []).join(', ')}
+                    placeholder="slug1, slug2, slug3"
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Related Products</label>
+                  <input
+                    type="text"
+                    name={'idx.' + i + '.relatedProducts'}
+                    value={(r.relatedProducts || []).join(', ')}
+                    placeholder="slug1, slug2, slug3"
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                  />
+                </div>
+              </div>
+              <div class="flex justify-end pt-2 border-t border-gray-100 dark:border-gray-800">
+                <button
+                  type="button"
+                  data-delete-record
+                  data-idx={i}
+                  class="px-3 py-1.5 text-xs text-red-600 dark:text-red-400 hover:underline"
+                >
+                  Delete this record
+                </button>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <template id="new-record-template">
+      <div
+        data-record-idx="new"
+        class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+      >
+        <div
+          class="record-header flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 select-none"
+          data-toggle
+        >
+          <span class="text-xs font-mono text-gray-400 w-8 shrink-0">#N</span>
+          <span class="text-sm font-medium truncate flex-1 text-gray-400 italic">New Record</span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500">new</span>
+          <svg class="w-4 h-4 text-gray-400 transition-transform" data-chevron viewBox="0 0 20 20" fill="currentColor"
+            ><path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="record-body border-t border-gray-200 dark:border-gray-800 p-5 space-y-4" style="display:none">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Slug</label>
+              <input
+                type="text"
+                name="new.slug"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Category</label>
+              <select
+                name="new.category"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              >
+                {Object.entries(categoryLabels).map(([v, l]) => <option value={v}>{l}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Difficulty</label>
+              <select
+                name="new.difficulty"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              >
+                {Object.entries(difficultyLabels).map(([v, l]) => <option value={v}>{l}</option>)}
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-500 mb-1">Title</label>
+            <input
+              type="text"
+              name="new.title"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-500 mb-1">Type</label>
+            <input
+              type="text"
+              name="new.type"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+          </div>
+          {
+            ['description', 'definition', 'tldr', 'problem', 'explanation', 'solution', 'recommendation'].map(
+              (field) => (
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1 capitalize">{field}</label>
+                  <textarea
+                    name={'new.' + field}
+                    rows="3"
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                </div>
+              )
+            )
+          }
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label class="text-xs font-medium text-gray-500">FAQ</label>
+              <button
+                type="button"
+                data-add-faq
+                data-idx="new"
+                class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add FAQ</button
+              >
+            </div>
+            <div data-faq-list data-idx="new" class="space-y-2"></div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Related Guides</label>
+              <input
+                type="text"
+                name="new.relatedGuides"
+                placeholder="slug1, slug2"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Related Products</label>
+              <input
+                type="text"
+                name="new.relatedProducts"
+                placeholder="slug1, slug2"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">
+          File: <code class="font-mono">{file}</code> &middot; <span id="record-count">{records.length}</span> records
+        </div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('content-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const container = document.getElementById('records-container');
+      const addBtn = document.getElementById('add-record-btn');
+      const template = document.getElementById('new-record-template');
+      let nextNewIdx = 0;
+      let sha = form.dataset.sha;
+
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+      });
+
+      function reindexRecords() {
+        const rows = container.querySelectorAll('[data-record-idx]');
+        rows.forEach((row, idx) => {
+          const isNew = row.dataset.recordIdx === 'new' || row.dataset.recordIdx.startsWith('new-');
+          const prefix = isNew ? 'new-' + (row.dataset.newIdx || nextNewIdx) : 'idx.' + idx;
+          if (isNew && !row.dataset.newIdx) row.dataset.newIdx = nextNewIdx++;
+          row.dataset.recordIdx = isNew ? prefix : 'idx.' + idx;
+          const inputs = row.querySelectorAll('input, textarea, select');
+          inputs.forEach((el) => {
+            if (el.name) {
+              const parts = el.name.split('.');
+              if (parts[0] === 'new' || parts[0] === 'idx') {
+                parts[0] = prefix;
+                el.name = parts.join('.');
+              }
+            }
+          });
+          const numEl = row.querySelector('[data-record-idx] .record-header > .text-xs.font-mono:first-child');
+          if (numEl) numEl.textContent = '#' + (isNew ? 'N' : idx + 1);
+          const faqLists = row.querySelectorAll('[data-faq-list]');
+          faqLists.forEach((fl) => {
+            const faqIdx = isNew ? prefix : 'idx.' + idx;
+            fl.dataset.idx = faqIdx;
+            const faqRows = fl.querySelectorAll('[data-faq-row]');
+            faqRows.forEach((fr, fi) => {
+              const inputs2 = fr.querySelectorAll('input, textarea');
+              inputs2.forEach((el) => {
+                if (el.name) {
+                  const parts = el.name.split('.');
+                  el.name = faqIdx + '.faq.' + fi + '.' + parts[parts.length - 1];
+                }
+              });
+            });
+          });
+        });
+        const countEl = document.getElementById('record-count');
+        if (countEl) countEl.textContent = String(rows.length);
+      }
+
+      // toggle record expand/collapse
+      container.addEventListener('click', (e) => {
+        const toggle = e.target.closest('[data-toggle]');
+        if (!toggle) return;
+        const row = toggle.closest('[data-record-idx]');
+        if (!row) return;
+        const body = row.querySelector('.record-body');
+        const chevron = toggle.querySelector('[data-chevron]');
+        if (!body) return;
+        const isOpen = body.style.display !== 'none';
+        body.style.display = isOpen ? 'none' : '';
+        if (chevron) chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+      });
+
+      // add new record
+      addBtn?.addEventListener('click', () => {
+        if (!container || !template) return;
+        const clone = template.content.cloneNode(true);
+        container.appendChild(clone);
+        const newRow = container.lastElementChild;
+        newRow.dataset.recordIdx = 'new';
+        newRow.dataset.newIdx = String(nextNewIdx++);
+        const body = newRow.querySelector('.record-body');
+        if (body) body.style.display = '';
+        const chevron = newRow.querySelector('[data-chevron]');
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+        newRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        reindexRecords();
+      });
+
+      // delete record
+      container.addEventListener('click', (e) => {
+        const delBtn = e.target.closest('[data-delete-record]');
+        if (!delBtn) return;
+        if (!confirm('Delete this record? This cannot be undone.')) return;
+        const row = delBtn.closest('[data-record-idx]');
+        if (row) row.remove();
+        reindexRecords();
+      });
+
+      // add faq
+      container.addEventListener('click', (e) => {
+        const addFaq = e.target.closest('[data-add-faq]');
+        if (!addFaq) return;
+        const idx = addFaq.dataset.idx;
+        const parentRow = addFaq.closest('[data-record-idx]');
+        if (!parentRow) return;
+        const faqList = parentRow.querySelector('[data-faq-list]');
+        if (!faqList) return;
+        const templateEl = parentRow.querySelector('template[data-faq-template]');
+        if (!templateEl) return;
+        const clone = templateEl.content.cloneNode(true);
+        faqList.appendChild(clone);
+        const newRow = faqList.lastElementChild;
+        const fi = faqList.querySelectorAll('[data-faq-row]').length - 1;
+        const inputs = newRow.querySelectorAll('input, textarea');
+        inputs.forEach((el) => {
+          const name = idx + '.faq.' + fi + '.' + (el.placeholder === 'Question' ? 'q' : 'a');
+          el.name = name;
+        });
+      });
+
+      // remove faq
+      container.addEventListener('click', (e) => {
+        const rmBtn = e.target.closest('[data-remove-faq]');
+        if (!rmBtn) return;
+        const row = rmBtn.closest('[data-faq-row]');
+        if (!row) return;
+        row.remove();
+        // reindex faq rows within this record
+        const faqList = row.closest('[data-faq-list]');
+        if (!faqList) return;
+        const idx = faqList.dataset.idx;
+        const rows = faqList.querySelectorAll('[data-faq-row]');
+        rows.forEach((r, fi) => {
+          const inputs = r.querySelectorAll('input, textarea');
+          inputs.forEach((el) => {
+            const parts = el.name.split('.');
+            el.name = idx + '.faq.' + fi + '.' + parts[parts.length - 1];
+          });
+        });
+      });
+
+      function collectRecords() {
+        const records = [];
+        const rows = container.querySelectorAll('[data-record-idx]');
+        rows.forEach((row) => {
+          const r = {};
+          const inputs = row.querySelectorAll('input, textarea, select');
+          inputs.forEach((el) => {
+            if (!el.name) return;
+            const parts = el.name.split('.');
+            // parts[0] is the prefix (idx.0 or new-0)
+            // parts[1] is the field name
+            if (parts[1] === 'slug') r.slug = el.value;
+            else if (parts[1] === 'category') r.category = el.value;
+            else if (parts[1] === 'difficulty') r.difficulty = el.value;
+            else if (parts[1] === 'title') r.title = el.value;
+            else if (parts[1] === 'type') r.type = el.value;
+            else if (
+              ['description', 'definition', 'tldr', 'problem', 'explanation', 'solution', 'recommendation'].includes(
+                parts[1]
+              )
+            ) {
+              r[parts[1]] = el.value;
+            } else if (parts[1] === 'faq') {
+              if (!r.faq) r.faq = [];
+              const fi = parseInt(parts[2]);
+              if (!r.faq[fi]) r.faq[fi] = {};
+              r.faq[fi][parts[3]] = el.value;
+            } else if (parts[1] === 'relatedGuides') {
+              r.relatedGuides = el.value
+                .split(',')
+                .map((s) => s.trim())
+                .filter(Boolean);
+            } else if (parts[1] === 'relatedProducts') {
+              r.relatedProducts = el.value
+                .split(',')
+                .map((s) => s.trim())
+                .filter(Boolean);
+            }
+          });
+          if (r.slug) records.push(r);
+        });
+        return records;
+      }
+
+      saveBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        publishBtn.disabled = true;
+        const file = form.dataset.file;
+        const records = collectRecords();
+        if (records.length === 0) {
+          window.__adminToast?.('No valid records to save (slug required)', 'error');
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+          publishBtn.disabled = false;
+          return;
+        }
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              branch: 'draft',
+              data: records,
+              commitMessage: 'Draft: Update content-v2 records',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || res.status >= 400) {
+            window.__adminToast?.(result?.error || result?.message || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            publishBtn.disabled = false;
+            return;
+          }
+          if (result?.content?.sha) {
+            sha = result.content.sha;
+            form.dataset.sha = sha;
+          }
+          window.__adminToast?.('Draft saved (not deployed)', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        }
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Draft';
+        publishBtn.disabled = false;
+      });
+
+      publishBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result?.error || 'Publish failed', 'error');
+            publishBtn.textContent = 'Publish';
+            saveBtn.disabled = false;
+            publishBtn.disabled = false;
+            return;
+          }
+          window.__adminToast?.('Published! Deploying to production...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.textContent = 'Publish';
+          saveBtn.disabled = false;
+          publishBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

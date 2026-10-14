@@ -1,0 +1,98 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+  downloadLabel: string;
+  subject: string;
+  emailTo?: string;
+  submitLabel?: string;
+}
+
+const {
+  title,
+  description,
+  downloadLabel,
+  subject,
+  emailTo = 'partners@felizbay.com',
+  submitLabel = 'Get Your Free Guide',
+} = Astro.props;
+---
+
+<div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-10 border border-blue-100">
+  <div class="flex flex-col md:flex-row gap-8 items-start">
+    <div class="flex-1">
+      <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          ></path>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-2">{title}</h3>
+      <p class="text-gray-600 leading-relaxed">{description}</p>
+      <span class="mt-4 inline-flex items-center text-sm text-blue-600 font-medium">
+        <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          ></path></svg
+        >
+        {downloadLabel}
+      </span>
+    </div>
+    <div class="w-full md:w-80 bg-white rounded-xl p-6 shadow-sm">
+      <form
+        method="POST"
+        action="/api/contact"
+        data-contact-form
+        data-success-message="Your guide is on its way! Check your email."
+        data-error-message="Something went wrong. Please try again."
+      >
+        <input type="hidden" name="email_to" value={emailTo} />
+        <input type="hidden" name="subject" value={subject} />
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Your Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="your@email.com"
+              class="w-full py-2 px-3 text-sm rounded-lg border border-gray-200 bg-white"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Company Name</label>
+            <input
+              type="text"
+              name="company"
+              placeholder="Your company"
+              class="w-full py-2 px-3 text-sm rounded-lg border border-gray-200 bg-white"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Country</label>
+            <input
+              type="text"
+              name="country"
+              placeholder="Your country"
+              class="w-full py-2 px-3 text-sm rounded-lg border border-gray-200 bg-white"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full py-3 px-4 bg-blue-600 text-white rounded-lg font-medium text-sm hover:bg-blue-700 transition-colors"
+          >
+            {submitLabel}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

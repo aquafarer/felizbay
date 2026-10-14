@@ -1,0 +1,116 @@
+name: AI Index (Vectorize)
+
+# Post-deploy knowledge index maintenance: after every successful production
+# deploy (and on demand), make sure the Vectorize index exists, rebuild it from
+# the freshly published corpus via ai-worker's /api/reindex, then smoke-test
+# /api/ask. REINDEX_TOKEN (GitHub secret) gates the rebuild endpoint; without
+# it the rebuild step is skipped with a notice and only the smoke test runs.
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Build & Deploy"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  reindex:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for credentials
+        id: guard
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          REINDEX_TOKEN: ${{ secrets.REINDEX_TOKEN }}
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID not set — skipping AI Index steps."
+          fi
+          if [ -n "$REINDEX_TOKEN" ]; then
+            echo "reindex=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "reindex=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::REINDEX_TOKEN not set — /api/reindex stays disabled (404). Generate one (e.g. openssl rand -hex 32), add it as the REINDEX_TOKEN repo secret, then re-run this workflow."
+          fi
+
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ensure Vectorize index exists
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          set +e
+          npx wrangler vectorize create ai-index-v2 --dimensions=1024 --metric=cosine > /tmp/vectorize-create.log 2>&1
+          status=$?
+          set -e
+          if [ $status -ne 0 ] && ! grep -qiE "already exist|duplicate_name|code: 3002" /tmp/vectorize-create.log; then
+            cat /tmp/vectorize-create.log
+            exit 1
+          fi
+          cat /tmp/vectorize-create.log
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Rebuild knowledge index
+        if: steps.guard.outputs.reindex == 'true'
+        run: |
+          done="false"
+          for i in $(seq 1 60); do
+            code=$(curl -sS -o /tmp/reindex.json -w '%{http_code}' -X POST "https://felizbay.com/api/reindex" \
+              -H "Authorization: Bearer $REINDEX_TOKEN" \
+              -H "Content-Type: application/json" -d '{}')
+            echo "[reindex $i] HTTP $code $(cat /tmp/reindex.json)"
+            if [ "$code" = "401" ] || [ "$code" = "403" ] || [ "$code" = "404" ]; then
+              echo "::error::Rebuild rejected (HTTP $code) — check the REINDEX_TOKEN secret and the deployed worker."
+              exit 1
+            fi
+            if [ "$code" = "503" ]; then
+              paused=$(jq -r '.paused // empty' /tmp/reindex.json)
+              if [ "$paused" = "budget" ]; then
+                echo "::notice::Rebuild paused by the daily embed budget — the 03:00 UTC cron resumes it automatically."
+                exit 0
+              fi
+              sleep 5
+              continue
+            fi
+            if [ "$code" = "200" ]; then
+              done=$(jq -r '.done // false' /tmp/reindex.json)
+              if [ "$done" = "true" ]; then
+                break
+              fi
+            fi
+            sleep 2
+          done
+          if [ "$done" != "true" ]; then
+            echo "::error::Rebuild did not finish within 60 calls — check ai/reindex-log.json in the felizbay-data bucket."
+            exit 1
+          fi
+        env:
+          REINDEX_TOKEN: ${{ secrets.REINDEX_TOKEN }}
+
+      - name: Smoke test /api/ask
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          code=$(curl -sS -o /tmp/ask.json -w '%{http_code}' -X POST "https://felizbay.com/api/ask" \
+            -H "Content-Type: application/json" \
+            -d '{"question":"What boats does Felizbay manufacture?"}')
+          echo "[ask] HTTP $code: $(head -c 500 /tmp/ask.json)"
+          answer=$(jq -r '.answer // empty' /tmp/ask.json)
+          if [ "$code" != "200" ] || [ -z "$answer" ]; then
+            echo "::error::/api/ask smoke test failed"
+            exit 1
+          fi

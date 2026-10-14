@@ -1,0 +1,31 @@
+dist
+node_modules
+.github
+.changeset
+src/pages/search.astro
+src/components/ui/icon-svgs.ts
+src/components/ui/icon-valid-names.ts
+
+# drizzle-kit generated snapshots (re-emitted by migrations apply)
+migrations/meta
+# generated / lock files not meant for prettier
+package-lock.json
+public/ai
+.cache
+# content data (translated YAML pages) — kept as-is
+src/data
+src/config.*.yaml
+# transient audit/tooling work output
+tools/_work
+# tools/l10n generated JSON — machine-generated, not hand-edited
+tools/l10n
+# workers — separate build pipeline
+workers
+# vendor code
+vendor
+# build-generated files
+public/.well-known/entity.json
+public/llms-full.txt
+public/llms.txt
+public/*sitemap*.xml
+public/*/llms.txt

@@ -1,0 +1,240 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="Users" active="users">
+  <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+    <div>
+      <h1 class="text-xl font-bold">Users</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        Authenticated accounts (better-auth). Admins = ADMIN_EMAILS env on the worker.
+      </p>
+    </div>
+  </div>
+
+  <div class="mb-4 flex flex-wrap items-center gap-3">
+    <input
+      id="search-q"
+      type="search"
+      placeholder="Search by name or email…"
+      class="px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 w-72"
+    />
+    <select
+      id="sort-by"
+      class="px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+    >
+      <option value="createdAt">Sort: created</option>
+      <option value="name">Sort: name</option>
+      <option value="email">Sort: email</option>
+    </select>
+    <button
+      id="sort-dir"
+      class="px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+    >
+      desc ↓
+    </button>
+    <span id="total-label" class="text-sm text-gray-500 dark:text-gray-400"></span>
+  </div>
+
+  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+      <thead class="bg-gray-50 dark:bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">User</th>
+          <th class="px-4 py-3 text-left font-medium">Role</th>
+          <th class="px-4 py-3 text-left font-medium">Created</th>
+          <th class="px-4 py-3 text-left font-medium">Status</th>
+          <th class="px-4 py-3"></th>
+        </tr>
+      </thead>
+      <tbody id="user-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+        <tr>
+          <td colspan="5" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-4 flex items-center gap-3 text-sm">
+    <button id="prev-page" class="px-3 py-1.5 rounded-md border disabled:opacity-40">← Prev</button>
+    <span id="page-label" class="text-gray-500 dark:text-gray-400">Page 1</span>
+    <button id="next-page" class="px-3 py-1.5 rounded-md border disabled:opacity-40">Next →</button>
+  </div>
+
+  <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <script is:inline>
+    (function () {
+      let page = 0;
+      const pageSize = 20;
+      let q = '';
+      let sortBy = 'createdAt';
+      let sortDir = 'desc';
+
+      function toast(msg, type) {
+        const el = document.createElement('div');
+        const bg = type === 'error' ? 'bg-red-600 text-white' : 'bg-green-600 text-white';
+        el.className = `${bg} px-4 py-2 rounded-md shadow-lg text-sm pointer-events-auto`;
+        el.textContent = msg;
+        const container = document.getElementById('toast-container');
+        container.appendChild(el);
+        setTimeout(() => {
+          el.style.opacity = '0';
+          setTimeout(() => el.remove(), 300);
+        }, 3000);
+      }
+
+      async function load() {
+        const tbody = document.getElementById('user-rows');
+        tbody.innerHTML = '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-400">Loading…</td></tr>';
+        const params = new URLSearchParams({
+          page: String(page),
+          pageSize: String(pageSize),
+          sortBy,
+          sortDir,
+        });
+        if (q) params.set('q', q);
+        try {
+          const res = await fetch(`/api/admin/users?${params}`, { credentials: 'same-origin' });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          if (!res.ok) throw new Error(await res.text());
+          const data = await res.json();
+          const rows = data.rows || [];
+          document.getElementById('total-label').textContent = `${data.total} users`;
+          document.getElementById('page-label').textContent = `Page ${page + 1}`;
+          document.getElementById('prev-page').disabled = page === 0;
+          document.getElementById('next-page').disabled = (page + 1) * pageSize >= data.total;
+
+          if (rows.length === 0) {
+            tbody.innerHTML =
+              '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-400">No users found.</td></tr>';
+            return;
+          }
+
+          tbody.innerHTML = rows
+            .map((r) => {
+              const date = new Date(r.createdAt);
+              const statusBadge = r.banned
+                ? '<span class="px-2 py-0.5 rounded bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 text-xs">Banned</span>'
+                : '<span class="px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs">Active</span>';
+              const avatar = r.image
+                ? `<img src="${escapeHtml(r.image)}" class="w-8 h-8 rounded-full object-cover" alt="" />`
+                : `<div class="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-xs font-bold">${escapeHtml(
+                    (r.name || '?')[0].toUpperCase()
+                  )}</div>`;
+              return `<tr>
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-3">
+                    ${avatar}
+                    <div>
+                      <div class="font-medium">${escapeHtml(r.name)}</div>
+                      <div class="text-xs text-gray-500">${escapeHtml(r.email)}</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-4 py-3">${escapeHtml(r.role || 'user')}</td>
+                <td class="px-4 py-3 whitespace-nowrap text-gray-500 dark:text-gray-400">${date.toLocaleDateString()}</td>
+                <td class="px-4 py-3">${statusBadge}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap">
+                  <button class="imp-btn text-xs text-blue-600 dark:text-blue-400 hover:underline mr-3" data-id="${r.id}">Impersonate</button>
+                  <button class="ban-btn text-xs ${r.banned ? 'text-green-600 dark:text-green-400 hover:underline' : 'text-red-600 dark:text-red-400 hover:underline'}" data-id="${r.id}" data-banned="${r.banned ? 'true' : 'false'}">${r.banned ? 'Unban' : 'Ban'}</button>
+                </td>
+              </tr>`;
+            })
+            .join('');
+
+          tbody.querySelectorAll('.imp-btn').forEach((btn) => {
+            btn.addEventListener('click', async () => {
+              try {
+                const res = await fetch('/api/auth/admin/impersonate-user', {
+                  method: 'POST',
+                  credentials: 'same-origin',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId: btn.dataset.id }),
+                });
+                if (res.ok) {
+                  toast('Impersonating — stopping');
+                  load();
+                } else {
+                  toast('Impersonation not allowed', 'error');
+                }
+              } catch {
+                toast('Network error', 'error');
+              }
+            });
+          });
+
+          tbody.querySelectorAll('.ban-btn').forEach((btn) => {
+            btn.addEventListener('click', async () => {
+              const banned = btn.dataset.banned === 'true';
+              try {
+                const res = await fetch('/api/auth/admin/' + (banned ? 'unban-user' : 'ban-user'), {
+                  method: 'POST',
+                  credentials: 'same-origin',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId: btn.dataset.id }),
+                });
+                if (res.status === 401 || res.status === 403) {
+                  toast('Not allowed (admin only)', 'error');
+                  return;
+                }
+                if (!res.ok) {
+                  toast('Failed to update', 'error');
+                  return;
+                }
+                toast(banned ? 'User unbanned' : 'User banned');
+                load();
+              } catch {
+                toast('Network error', 'error');
+              }
+            });
+          });
+        } catch (err) {
+          tbody.innerHTML = `<tr><td colspan="5" class="px-4 py-8 text-center text-red-500">Failed to load: ${escapeHtml(String(err))}</td></tr>`;
+        }
+      }
+
+      function escapeHtml(s) {
+        return String(s ?? '').replace(/[&<>"']/g, (c) => {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      let inputTimer;
+      document.getElementById('search-q').addEventListener('input', (e) => {
+        clearTimeout(inputTimer);
+        inputTimer = setTimeout(() => {
+          q = e.target.value.trim();
+          page = 0;
+          load();
+        }, 300);
+      });
+      document.getElementById('sort-by').addEventListener('change', (e) => {
+        sortBy = e.target.value;
+        page = 0;
+        load();
+      });
+      document.getElementById('sort-dir').addEventListener('click', () => {
+        sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+        document.getElementById('sort-dir').textContent = sortDir === 'asc' ? 'asc ↑' : 'desc ↓';
+        load();
+      });
+      document.getElementById('prev-page').addEventListener('click', () => {
+        if (page > 0) {
+          page -= 1;
+          load();
+        }
+      });
+      document.getElementById('next-page').addEventListener('click', () => {
+        page += 1;
+        load();
+      });
+
+      load();
+    })();
+  </script>
+</AdminLayout>

@@ -1,0 +1,78 @@
+---
+const { lang = 'fr' } = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+  <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">
+    Avis de non-responsabilité médical
+  </h1>
+  <div
+    class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+  >
+    <p><em>Dernière mise à jour : June 18, 2026</em></p>
+    <h2 id="general-information-only">Informations générales uniquement</h2>
+    <p>
+      Le contenu de ce site web, y compris les textes, graphiques, images et autres éléments, est fourni <strong
+        >uniquement à des fins d'information et d'éducation</strong
+      >. Il n'est pas destiné à remplacer un avis, un diagnostic ou un traitement médical professionnel.
+    </p>
+    <h2 id="no-doctor-patient-relationship">Absence de relation médecin-patient</h2>
+    <p>
+      L'utilisation de ce site web, y compris l'accès aux descriptions de produits, aux articles de blog ou à la
+      documentation technique, ne crée aucune relation médecin-patient, clinicien-patient ou autre relation de
+      prestataire de soins de santé entre vous et Felizbay ou l'un de ses affiliés.
+    </p>
+    <h2 id="not-for-clinical-use">Non destiné à un usage clinique</h2>
+    <p>
+      Nos produits sont conçus <strong>uniquement à des fins de recherche, d'information et de bien-être</strong>. Ils <strong
+        >ne sont ni homologués ni approuvés par la FDA, l'EMA ou tout autre organisme de réglementation</strong
+      > pour une utilisation dans le diagnostic clinique, la prévention des maladies ou les décisions de traitement.
+    </p>
+    <p>
+      Vous ne devez <strong>pas</strong> prendre de décision médicale ou liée à la santé sur la base des données, des rapports
+      ou des informations fournis par nos produits ou notre site web sans consulter un professionnel de santé qualifié.
+    </p>
+    <h2 id="no-warranties">Absence de garanties</h2>
+    <p>
+      Felizbay ne fait aucune déclaration ni garantie, expresse ou implicite, concernant l'exactitude, l'exhaustivité
+      ou la fiabilité des informations fournies sur ce site web ou via ses produits. Tous les contenus et produits sont
+      fournis <strong>"en l'état"</strong> sans garantie d'aucune sorte.
+    </p>
+    <h2 id="limitation-of-liability">Limitation de responsabilité</h2>
+    <p>
+      Dans toute la mesure permise par la loi applicable, Felizbay ne saurait être tenue responsable de tout dommage
+      direct, indirect, accessoire, spécial ou consécutif découlant de l'utilisation ou de l'incapacité d'utiliser ce
+      site web, ses produits ou tout contenu qui s'y trouve.
+    </p>
+    <h2 id="data-privacy-genetic-information">Confidentialité des données et informations génétiques</h2>
+    <p>
+      Toute donnée génétique ou liée à la santé que vous soumettez ou générez via nos services est traitée conformément
+      à notre <a href={`/${lang}/privacy`}>Politique de confidentialité</a>. Nous mettons en œuvre des contrôles d'accès
+      et un chiffrement conformes aux normes du secteur. Toutefois, aucune transmission de données sur Internet ne peut
+      être garantie comme étant sécurisée à 100 %.
+    </p>
+    <h2 id="external-links">Liens externes</h2>
+    <p>
+      Ce site web peut contenir des liens vers des sites web tiers. Felizbay n'approuve pas, ne contrôle pas et ne
+      assume aucune responsabilité quant au contenu, aux politiques de confidentialité ou aux pratiques des sites tiers.
+    </p>
+    <h2 id="changes-to-this-disclaimer">Modifications de cet avis</h2>
+    <p>
+      Nous nous réservons le droit de mettre à jour cet avis de non-responsabilité médical à tout moment. Les
+      modifications seront publiées sur cette page avec une date de révision mise à jour.
+    </p>
+    <h2 id="contact">Contact</h2>
+    <p>Si vous avez des questions concernant cet avis, veuillez nous contacter :</p>
+    <ul>
+      <li><strong>E-mail</strong> : info@felizbay.com</li>
+      <li><strong>Adresse</strong> : New Mexico, USA</li>
+    </ul>
+    <hr />
+    <p>
+      <strong
+        >En utilisant ce site web et ses produits, vous reconnaissez avoir lu, compris et accepté d'être lié par cet
+        avis de non-responsabilité médical.</strong
+      >
+    </p>
+  </div>
+</section>

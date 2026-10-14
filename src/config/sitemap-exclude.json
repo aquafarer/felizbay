@@ -1,0 +1,18 @@
+{
+  "_comment": "sitemap 构建时跳过这些路径。与 seo-suppress.json 的渲染层 noindex 口径保持一致，避免配置漂移。",
+  "regex": [
+    "^/(?:[a-z]{2}/)?internal/",
+    "^/(?:[a-z]{2}/)?(?:login|register)/?$",
+    "^/(?:[a-z]{2}/)?keystatic/",
+    "^/(?:[a-z]{2}/)?admin/?$",
+    "^/(?:[a-z]{2}/)?v2/",
+    "^/(?:[a-z]{2}/)?ai-context/?$",
+    "^/(?:[a-z]{2}/)?search/?$",
+    "^/(?:[a-z]{2}/)?internal/seo/",
+    "^/(?:bg|et|he|hr|hu|id|ko|lt|lv|ms|ro|sk|sl|sr|th|tl|tr|zh)(?:/|$)",
+    "^/en/"
+  ],
+  "paths": [
+    "/terms"
+  ]
+}

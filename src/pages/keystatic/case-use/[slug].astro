@@ -1,0 +1,317 @@
+---
+import { getAdminSlugs } from '~/lib/admin-paths';
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import CaseUseForm from '~/components/admin/CaseUseForm.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { parseMarkdown } from '~/lib/markdown';
+import type { CollectionFormData } from '~/components/admin/types';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, contentFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+export async function getStaticPaths() {
+  return getAdminSlugs('src/data/case-use').map(({ slug, ext }) => ({ params: { slug }, props: { ext } }));
+}
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const filename = Astro.params.slug;
+const ext = Astro.props.ext || '.md';
+
+let initial: CollectionFormData = { frontmatter: {}, body: '' };
+let sha = '';
+let filePath = filename ? `src/data/case-use/${filename}${ext}` : '';
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const baseFilePath = filePath;
+if (!isDefault && filePath) {
+  filePath = contentFileForLocale(filePath, locale);
+}
+
+if (filePath) {
+  if (token) {
+    try {
+      const client = new GitHubClient(token);
+      let file: { sha: string; content: string; downloadUrl: string } | undefined;
+      try {
+        file = await client.readFile(filePath);
+      } catch {
+        if (!isDefault) {
+          file = await client.readFile(baseFilePath);
+        }
+      }
+      if (file) {
+        const parsed = parseMarkdown(file.content);
+        sha = file.sha;
+        initial = {
+          frontmatter: parsed.frontmatter,
+          body: parsed.body,
+        };
+      }
+    } catch (err) {}
+  }
+}
+---
+
+<AdminLayout title={`Edit: ${initial.frontmatter.title ?? filename}`} active="case-use">
+  <div class="mb-6">
+    <a href="/keystatic/case-use" class="text-sm text-gray-500 hover:underline"> ?Back to Case Use list</a>
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="mt-2 text-2xl font-semibold">Edit: {initial.frontmatter.title ?? filename}</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500 font-mono">
+      {filePath}{!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+    </p>
+  </div>
+  <CaseUseForm mode="edit" initial={initial} filename={filename} sha={sha} path={filePath} locale={locale} />
+
+  <div class="flex items-center gap-3 mt-6 pb-8">
+    <button
+      id="save-draft-btn"
+      type="button"
+      class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+    >
+    <button
+      id="publish-btn"
+      type="button"
+      class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+    >
+    <button
+      id="delete-btn"
+      type="button"
+      class="px-5 py-2 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-md text-red-600 dark:text-red-400 ml-auto"
+      >Delete</button
+    >
+  </div>
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('entry-form');
+      if (!form) return;
+      var saveBtn = document.getElementById('save-draft-btn');
+      var publishBtn = document.getElementById('publish-btn');
+      var deleteBtn = document.getElementById('delete-btn');
+      var file = form.dataset.file || '';
+      var localeSelect = document.getElementById('locale-select');
+      if (localeSelect) {
+        localeSelect.addEventListener('change', function () {
+          var loc = localeSelect.value;
+          var base = window.location.pathname;
+          window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+        });
+      }
+
+      function serializeFrontmatter(fm) {
+        var yaml = '---\n';
+        Object.keys(fm).forEach(function (k) {
+          var v = fm[k];
+          if (v === undefined || v === null) return;
+          if (Array.isArray(v)) {
+            if (v.length === 0) return;
+            yaml += k + ':\n';
+            v.forEach(function (item) {
+              yaml += '  - "' + String(item).replace(/"/g, '\\"') + '"\n';
+            });
+          } else if (typeof v === 'object') {
+            var keys = Object.keys(v).filter(function (sk) {
+              return v[sk] !== undefined && v[sk] !== null;
+            });
+            if (keys.length === 0) return;
+            yaml += k + ':\n';
+            keys.forEach(function (sk) {
+              var sv = v[sk];
+              if (typeof sv === 'boolean' || typeof sv === 'number') yaml += '  ' + sk + ': ' + sv + '\n';
+              else yaml += '  ' + sk + ': "' + String(sv).replace(/"/g, '\\"') + '"\n';
+            });
+          } else if (typeof v === 'boolean') {
+            yaml += k + ': ' + v + '\n';
+          } else if (typeof v === 'number') {
+            yaml += k + ': ' + v + '\n';
+          } else {
+            yaml += k + ': "' + String(v).replace(/"/g, '\\"') + '"\n';
+          }
+        });
+        yaml += '---\n';
+        return yaml;
+      }
+
+      function collectFrontmatter(data) {
+        var tags = data
+          .getAll('tags')
+          .map(function (v) {
+            return v.toString().trim();
+          })
+          .filter(Boolean);
+        var products = data
+          .getAll('products')
+          .map(function (v) {
+            return v.toString().trim();
+          })
+          .filter(Boolean);
+        var fm = {
+          title: (data.get('title') || '').toString().trim(),
+          publishDate: data.get('publishDate')?.toString() || undefined,
+          draft: data.get('draft') === 'true',
+        };
+        var summary = data.get('summary')?.toString().trim();
+        if (summary) fm.summary = summary;
+        var description = data.get('description')?.toString().trim();
+        if (description) fm.description = description;
+        var category = data.get('category')?.toString().trim();
+        if (category) fm.category = category;
+        var environment = data.get('environment')?.toString().trim();
+        if (environment) fm.environment = environment;
+        var skill = data.get('skill')?.toString().trim();
+        if (skill) fm.skill = skill;
+        if (products.length) fm.products = products;
+        if (tags.length) fm.tags = tags;
+
+        var metadata = {};
+        var seoTitle = data.get('seoTitle')?.toString().trim();
+        var seoDescription = data.get('seoDescription')?.toString().trim();
+        var seoCanonical = data.get('seoCanonical')?.toString().trim();
+        if (seoTitle) metadata.title = seoTitle;
+        if (seoDescription) metadata.description = seoDescription;
+        if (seoCanonical) metadata.canonical = seoCanonical;
+        if (data.get('seoIgnoreTitleTemplate') === 'true') metadata.ignoreTitleTemplate = true;
+        var robots = {};
+        if (data.get('seoRobotIndex') !== 'true') robots.index = false;
+        if (data.get('seoRobotFollow') !== 'true') robots.follow = false;
+        if (Object.keys(robots).length) metadata.robots = robots;
+        var og = {};
+        if (data.get('seoOgUrl')) og.url = data.get('seoOgUrl');
+        if (data.get('seoOgSiteName')) og.siteName = data.get('seoOgSiteName');
+        if (data.get('seoOgLocale')) og.locale = data.get('seoOgLocale');
+        if (data.get('seoOgType')) og.type = data.get('seoOgType');
+        if (Object.keys(og).length) metadata.openGraph = og;
+        var tw = {};
+        if (data.get('seoTwitterHandle')) tw.handle = data.get('seoTwitterHandle');
+        if (data.get('seoTwitterSite')) tw.site = data.get('seoTwitterSite');
+        if (data.get('seoTwitterCardType')) tw.cardType = data.get('seoTwitterCardType');
+        if (Object.keys(tw).length) metadata.twitter = tw;
+        if (Object.keys(metadata).length) fm.metadata = metadata;
+        return fm;
+      }
+
+      async function save(branch) {
+        var data = new FormData(form);
+        var title = (data.get('title') || '').toString().trim();
+        if (!title) {
+          window.__adminToast?.('Title is required', 'error');
+          return;
+        }
+        var sha = data.get('_sha')?.toString() || form.dataset.sha || '';
+        var fm = collectFrontmatter(data);
+        var body = data.get('body')?.toString() || '';
+        var content = serializeFrontmatter(fm) + '\n' + body;
+        var path = data.get('_path')?.toString() || file;
+
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        try {
+          var res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              path: path,
+              content: content,
+              sha: sha,
+              message: 'Draft: Update case-use: ' + title,
+              branch: branch || 'draft',
+            }),
+          });
+          var result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            return;
+          }
+          if (result?.content?.sha) {
+            form.dataset.sha = result.content.sha;
+          }
+          window.__adminToast?.('Draft saved', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        }
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Draft';
+      }
+
+      saveBtn.addEventListener('click', function () {
+        save('draft');
+      });
+      publishBtn.addEventListener('click', async function () {
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          var res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+          });
+          var result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Publish failed', 'error');
+            publishBtn.textContent = 'Publish';
+            publishBtn.disabled = false;
+            return;
+          }
+          window.__adminToast?.('Published!', 'success');
+          setTimeout(function () {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.textContent = 'Publish';
+          publishBtn.disabled = false;
+        }
+      });
+      deleteBtn.addEventListener('click', async function () {
+        if (!confirm('Delete this case-use entry permanently?')) return;
+        var sha = form.dataset.sha || '';
+        if (!sha) {
+          window.__adminToast?.('No SHA — cannot delete', 'error');
+          return;
+        }
+        deleteBtn.disabled = true;
+        try {
+          var res = await fetch('/api/admin/delete', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ path: file, sha: sha, message: 'Delete case-use' }),
+          });
+          var result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Delete failed', 'error');
+            deleteBtn.disabled = false;
+            return;
+          }
+          window.__adminToast?.('Deleted', 'success');
+          setTimeout(function () {
+            window.location.href = '/keystatic/case-use';
+          }, 600);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          deleteBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

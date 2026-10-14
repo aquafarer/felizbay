@@ -1,0 +1,42 @@
+origin:
+  tagline: 'Our Origin'
+  heading: "Built for summer,<br />\n<span class=\"text-sky-600\">engineered to last</span>"
+  paragraphs:
+    - 'Felizbay started with a simple frustration: inflatable pools that sagged, leaked, and lasted a single season. We believed a pool could be better — rigid enough to swim laps in, tough enough to survive year after year, and still small enough to store in a closet in winter.'
+    - 'Drop stitch construction — the same technology behind high-pressure inflatable stand-up paddleboards — was the answer. Thousands of internal threads lock the walls rigid under pressure, giving a fabric pool the structure of a hard-sided one.'
+    - 'Every Felizbay pool is built around that core: quality materials, tested construction, and honest engineering, at a price a family can justify.'
+    - 'We are not the biggest pool brand. But every pool that leaves our factory is pressure-tested by the same team that designed it.'
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: 'Felizbay drop stitch pool'
+
+philosophy:
+  tagline: 'Our Philosophy'
+  heading: 'Simple, durable, honest'
+  description: 'A pool is a promise: fill it on the first hot day of summer and it works. Everything we design serves that promise.'
+  cards:
+    - emoji: "\U0001F30A"
+      title: 'Rigid, Not Saggy'
+      description: 'Drop stitch walls inflate rock-hard and hold their shape at full water pressure. No leaning walls, no sagging water line, no lost depth.'
+    - emoji: "\U0001F527"
+      title: 'Built to Last, Not to Replace'
+      description: 'The most sustainable pool is the one you do not throw away. UV-resistant, puncture-resistant PVC and quality valves mean seasons of use, not one summer.'
+    - emoji: "\U0001F3C6"
+      title: 'Summer Made Simple'
+      description: 'Fifteen minutes to set up, ten to fold away. No tools, no frames, no installation crew. Swimming should be the easy part.'
+
+design:
+  tagline: 'Design Philosophy'
+  heading: "Designed from the<br />\n<span class=\"text-sky-600\">water outward</span>"
+  paragraphs:
+    - 'Every Felizbay pool starts with one question: <em>what does the water do to it?</em> Full water pressure, UV exposure, chlorine chemistry, ground debris — we design for all of it, then build above it.'
+    - 'Our drop stitch chambers are rated well above working pressure, so a hot afternoon does not over-stress a seam. Our PVC is laminated with UV stabilizers, because sunlight — not punctures — is what kills most inflatable pools.'
+    - 'We do not design to a price point. We design to a failure point — then build well past it.'
+  image: /images/pools/round-grey-pool-1.png
+  image_alt: 'Felizbay pool design'
+  stats:
+    - value: '5+'
+      label: 'seasons of<br />use'
+    - value: '1,500+'
+      label: 'UV hours<br />tested'
+    - value: '15–30'
+      label: 'minute<br />setup'

@@ -1,0 +1,267 @@
+---
+import merge from 'lodash.merge';
+import { SEO } from 'astro-seo';
+
+import type { SEOProps } from 'astro-seo';
+
+import { SITE, METADATA } from 'astrowind:config';
+import { getLangFromUrl } from '~/i18n/utils';
+import { getPageContent } from '~/i18n/page-content';
+import type { MetaData, MetaDataOpenGraph } from '~/types';
+import { getCanonical } from '~/utils/permalinks';
+
+import { adaptOpenGraphImages } from '~/utils/images';
+
+import { decideIndexing } from '~/utils/seo-suppress';
+
+export interface Props extends MetaData {
+  dontUseTitleTemplate?: boolean;
+  seoSettings?: {
+    siteUrl?: string;
+    defaultOgImage?: { src?: string; alt?: string } | null;
+    keywords?: string[];
+    robotsIndex?: boolean;
+    robotsFollow?: boolean;
+    twitterHandle?: string;
+    twitterSite?: string;
+    twitterCardType?: string;
+  };
+}
+
+const {
+  title,
+  ignoreTitleTemplate = false,
+  canonical = String(getCanonical(String(Astro.url.pathname))),
+  robots = {},
+  description,
+  openGraph = {},
+  twitter = {},
+  seoSettings = {},
+} = Astro.props;
+
+const currentLang = getLangFromUrl(Astro.url);
+
+// English [lang]/* pages should canonicalize to the root URL (avoid /en/ prefix duplicate)
+const hasEnPathPrefix = currentLang === 'en' && /\/en\//.test(new URL(canonical, Astro.site).pathname);
+const canonicalUrl = hasEnPathPrefix ? canonical.replace(/\/en\//, '/') : canonical;
+
+// Per-language config metadata (title, description, OG, twitter) loaded at build time
+const langConfig = currentLang && currentLang !== 'en' ? getPageContent(currentLang, 'site-config') : null;
+const localeMeta = langConfig || {};
+
+const mergedOg: MetaDataOpenGraph = merge(
+  {
+    url: canonicalUrl,
+    siteName: SITE?.name,
+    images: [],
+    locale: currentLang || 'en',
+    type: 'website',
+  },
+  localeMeta?.openGraph || {},
+  METADATA?.openGraph,
+  { url: canonicalUrl, ...openGraph }
+);
+
+// og:locale must match the page language. METADATA.openGraph carries the
+// site-wide default (en_US) and lodash merge lets it override the per-page
+// language above, so re-assert the correct Facebook locale here.
+const FB_LOCALES: Record<string, string> = {
+  ar: 'ar_AR',
+  bg: 'bg_BG',
+  cs: 'cs_CZ',
+  da: 'da_DK',
+  de: 'de_DE',
+  el: 'el_GR',
+  es: 'es_ES',
+  et: 'et_EE',
+  fi: 'fi_FI',
+  fr: 'fr_FR',
+  he: 'he_IL',
+  hr: 'hr_HR',
+  hu: 'hu_HU',
+  id: 'id_ID',
+  it: 'it_IT',
+  ja: 'ja_JP',
+  ko: 'ko_KR',
+  lt: 'lt_LT',
+  lv: 'lv_LV',
+  ms: 'ms_MY',
+  nl: 'nl_NL',
+  no: 'nb_NO',
+  pl: 'pl_PL',
+  pt: 'pt_PT',
+  ro: 'ro_RO',
+  ru: 'ru_RU',
+  sk: 'sk_SK',
+  sl: 'sl_SI',
+  sr: 'sr_RS',
+  sv: 'sv_SE',
+  th: 'th_TH',
+  tl: 'fil_PH',
+  tr: 'tr_TR',
+};
+if (currentLang && FB_LOCALES[currentLang]) {
+  mergedOg.locale = FB_LOCALES[currentLang];
+}
+
+const adaptedOg = await adaptOpenGraphImages(mergedOg, Astro.site);
+
+const firstImage = adaptedOg?.images?.[0];
+
+function buildOpenGraph(og: MetaDataOpenGraph): SEOProps['openGraph'] | undefined {
+  if (!og) return undefined;
+
+  const imageUrl = firstImage?.url || '';
+  if (!imageUrl) return undefined;
+
+  const ogTitle = title || localeMeta?.title?.default || METADATA?.title?.default || '';
+
+  return {
+    basic: {
+      title: ogTitle,
+      type: og.type || 'website',
+      image: imageUrl,
+      url: og.url,
+    },
+    optional: {
+      description: finalDescription,
+      locale: og.locale,
+      siteName: og.siteName,
+    },
+    image: {
+      url: imageUrl,
+      width: firstImage?.width,
+      height: firstImage?.height,
+      alt: ogTitle,
+    },
+  };
+}
+
+const mergedTwitter = merge(
+  {
+    card: (adaptedOg?.images?.length ? 'summary_large_image' : 'summary') as 'summary_large_image' | 'summary',
+  },
+  localeMeta?.twitter || METADATA?.twitter
+    ? {
+        card: (localeMeta?.twitter?.cardType || METADATA?.twitter?.cardType) as
+          'summary_large_image' | 'summary' | undefined,
+        site: localeMeta?.twitter?.site || METADATA?.twitter?.site,
+        creator: localeMeta?.twitter?.handle || METADATA?.twitter?.handle,
+      }
+    : {},
+  twitter
+    ? {
+        card: twitter.cardType as 'summary_large_image' | 'summary' | undefined,
+        site: twitter.site,
+        creator: twitter.handle,
+      }
+    : {},
+  seoSettings?.twitterCardType || seoSettings?.twitterHandle || seoSettings?.twitterSite
+    ? {
+        card: (seoSettings.twitterCardType || 'summary_large_image') as 'summary_large_image' | 'summary',
+        site: seoSettings.twitterSite,
+        creator: seoSettings.twitterHandle,
+      }
+    : {}
+);
+
+const resolveNoindex = (): boolean => {
+  if (typeof robots?.index === 'boolean') return !robots.index;
+  if (typeof (localeMeta?.robots?.index ?? METADATA?.robots?.index) === 'boolean')
+    return !(localeMeta?.robots?.index ?? METADATA?.robots?.index);
+  if (typeof seoSettings?.robotsIndex === 'boolean') return !seoSettings.robotsIndex;
+  return false;
+};
+const resolveNofollow = (): boolean => {
+  if (typeof robots?.follow === 'boolean') return !robots.follow;
+  if (typeof (localeMeta?.robots?.follow ?? METADATA?.robots?.follow) === 'boolean')
+    return !(localeMeta?.robots?.follow ?? METADATA?.robots?.follow);
+  if (typeof seoSettings?.robotsFollow === 'boolean') return !seoSettings.robotsFollow;
+  return false;
+};
+
+// Avoid double-branding: if the title already contains the site name,
+// skip the template (e.g. "OARS Pump Set — Felizbay" + "%s — Felizbay"
+// would produce "OARS Pump Set — Felizbay — Felizbay").
+const siteBrand = SITE?.name || 'Felizbay';
+const rawTitle = title || localeMeta?.title?.default || METADATA?.title?.default || '';
+const titleAlreadyBranded = rawTitle.includes(siteBrand);
+
+// Normalize meta description length centrally (audit item 13): keep it within
+// 50–190 chars on every page. Longer text is truncated at the tag level only;
+// shorter text is padded with the per-language site description.
+const siteDescription = localeMeta?.description || METADATA?.description || '';
+const rawDescription = description || siteDescription;
+const paddedDescription =
+  rawDescription && rawDescription.length < 50
+    ? `${rawDescription.trim()} — ${siteDescription || 'Felizbay'}`.trim()
+    : rawDescription;
+
+// Astro renders attribute values by escaping & " < >; measure the escaped
+// length so the emitted <meta> tag stays within the limit.
+const ESCAPED_CHAR: Record<string, string> = { '&': '&amp;', '"': '&quot;', '<': '&lt;', '>': '&gt;' };
+const escapedLen = (s: string) => [...s].reduce((n, c) => n + (ESCAPED_CHAR[c]?.length ?? 1), 0);
+const trimToEscaped = (s: string, max: number) => {
+  if (escapedLen(s) <= max) return s;
+  let len = 0;
+  for (let i = 0; i < s.length; i++) {
+    len += ESCAPED_CHAR[s[i]]?.length ?? 1;
+    if (len >= max) return `${s.slice(0, i)}…`;
+  }
+  return s;
+};
+const finalDescription = paddedDescription ? trimToEscaped(paddedDescription, 190) : undefined;
+
+// P0-3：翻译流水线把 "—" 输出成 "→"，输出层兜底清洗（只清分隔符用法，
+// 行尾 UI 箭头如 "Read guide →" 不属于本组件处理范围）。
+function cleanArrows(s?: string): string | undefined {
+  if (!s) return s;
+  return s
+    .replace(/(&larr;|←)\s*→\s*/g, '$1 ')
+    .replace(/(?<=\S)\s*→\s*(?=\S)/g, ' — ')
+    .replace(/^→\s*/, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+// P0-1/P0-6：统一的索引判定（noindex 清单 + compare 白名单 + 内部路径 + 词数兜底）
+const decision = decideIndexing(Astro.url.pathname, {
+  wordCount: undefined,
+  canonical: canonicalUrl,
+});
+
+// 统一 title 长度：模板套用后超 65 字符处理（SERP ~600px 上限）。
+// 优先整段去掉品牌尾段（" — Felizbay"），去掉后仍超长才截断 + "…"，
+// 避免长标题在结果页被截成残缺语义或半截品牌。
+const titleTemplateStr =
+  ignoreTitleTemplate || titleAlreadyBranded ? '%s' : localeMeta?.title?.template || METADATA?.title?.template || '%s';
+const baseTitle = cleanArrows(rawTitle) || '';
+const appliedTitle = titleTemplateStr === '%s' ? baseTitle : titleTemplateStr.replace('%s', baseTitle);
+const brandSuffix = titleTemplateStr === '%s' ? '' : titleTemplateStr.replace('%s', '').trim();
+let finalTitle = appliedTitle || undefined;
+if (finalTitle && escapedLen(finalTitle) > 65 && brandSuffix) {
+  const withoutBrand = appliedTitle.slice(0, -brandSuffix.length).trim();
+  if (escapedLen(withoutBrand) <= 65) finalTitle = withoutBrand;
+}
+if (finalTitle && escapedLen(finalTitle) > 65) finalTitle = trimToEscaped(finalTitle, 65);
+
+const seoProps: SEOProps = {
+  title: finalTitle,
+  titleTemplate: '%s',
+  canonical: canonicalUrl,
+  noindex: resolveNoindex() || decision.noindex,
+  nofollow: resolveNofollow(),
+  description: cleanArrows(finalDescription),
+  openGraph: buildOpenGraph(adaptedOg),
+  twitter: mergedTwitter,
+  surpressWarnings: true,
+  extend: {
+    meta: [
+      { name: 'theme-color', content: '#0f172a' },
+      { name: 'format-detection', content: 'telephone=no' },
+    ],
+  },
+};
+---
+
+<SEO {...seoProps} />

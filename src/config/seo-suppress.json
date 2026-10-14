@@ -1,0 +1,20 @@
+{
+  "_comment": "渲染层 noindex 判定配置。paths 为精确路径，regex 为路径前缀规则。渲染时输出 <meta name=robots content='noindex, follow'>。非毕业语言（bg|et|he|hr|hu|id|ko|lt|lv|ms|ro|sk|sl|sr|th|tl|tr|zh）整体 noindex，/en/ 镜像路径 noindex。",
+  "regex": [
+    "^/(?:[a-z]{2}/)?internal/",
+    "^/(?:[a-z]{2}/)?login/?$",
+    "^/(?:[a-z]{2}/)?keystatic/",
+    "^/(?:[a-z]{2}/)?ai-context/?$",
+    "^/(?:[a-z]{2}/)?search/?$",
+    "^/(?:[a-z]{2}/)?internal/seo/",
+    "^/(?:[a-z]{2}/)?register/?$",
+    "^/(?:bg|et|he|hr|hu|id|ko|lt|lv|ms|ro|sk|sl|sr|th|tl|tr|zh)(?:/|$)",
+    "^/en/"
+  ],
+  "compareAllowlist": [],
+  "compareRegex": "^\\/(?:[a-z]{2}\\/)?compare\\/([^/]+)\\/?$",
+  "minWordsToIndex": 100,
+  "paths": [
+    "/terms"
+  ]
+}

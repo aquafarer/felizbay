@@ -1,0 +1,42 @@
+site:
+  name: أكوافارر
+  site: 'https://felizbay.com'
+  base: '/'
+  trailingSlash: true
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: 'Felizbay | Inflatable Swimming Pools — Drop Stitch Backyard Pools'
+    template: '%s — أكوافارر'
+  description: 'Premium drop stitch inflatable swimming pools by Felizbay. Rigid rock-solid walls, fast setup, easy winter storage. EN 16582 & ASTM F2666 compliant.'
+  robots:
+    index: true
+    follow: true
+  keywords:
+    - Felizbay
+    - inflatable swimming pool
+    - drop stitch pool
+    - inflatable pool
+    - rectangular inflatable pool
+    - round inflatable pool
+    - backyard pool
+    - portable swimming pool
+
+apps:
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true

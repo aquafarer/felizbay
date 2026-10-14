@@ -1,0 +1,19 @@
+# Automated dependency updates: opens PRs on a weekly schedule.
+# CI (ci.yml) runs npm run check + full build on every pull request,
+# so dependabot PRs are verified before they can be merged.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies

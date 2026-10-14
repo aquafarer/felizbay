@@ -1,0 +1,35 @@
+name: CI
+
+# Quality gate for pull requests: full check + build must pass before merge,
+# catching build-breaking regressions before they reach the deployable main branch.
+on:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint + typecheck + prettier + i18n
+        run: npm run check
+
+      - name: Full production build
+        run: npm run build
+        env:
+          PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
+
+      - name: Workers compile check (dry-run bundles)
+        run: |
+          npx wrangler deploy --dry-run -c workers/admin-worker/wrangler.toml
+          npx wrangler deploy --dry-run -c workers/contact-worker/wrangler.toml
+          npx wrangler deploy --dry-run -c workers/news-worker/wrangler.toml
+          npx wrangler deploy --dry-run -c workers/automation-worker/wrangler.toml
+          npx wrangler deploy --dry-run -c workers/ai-worker/wrangler.toml

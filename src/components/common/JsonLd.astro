@@ -1,0 +1,323 @@
+---
+import { SITE, SITE_SETTINGS } from 'astrowind:config';
+
+export interface BreadcrumbItem {
+  name: string;
+  item?: string;
+  href?: string;
+}
+
+export interface FaqItem {
+  question?: string;
+  answer?: string;
+  q?: string;
+  a?: string;
+}
+
+export interface ProductLd {
+  name: string;
+  description: string;
+  sku?: string;
+  image?: string;
+  url?: string;
+  category?: string;
+  price?: { amount?: string; currency?: string };
+  inStock?: boolean;
+  brandName?: string;
+  manufacturerName?: string;
+  material?: string;
+  color?: string;
+  countryOfOrigin?: string;
+  mpn?: string;
+  weight?: string;
+  width?: string;
+  height?: string;
+  depth?: string;
+  offers?: Record<string, unknown>;
+  additionalProperty?: Array<{ '@type': string; name: string; value: string }>;
+  aggregateRating?: { ratingValue: number; reviewCount: number; bestRating?: number };
+}
+
+export interface ArticleLd {
+  headline: string;
+  description: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+  authorName?: string;
+  authorUrl?: string;
+}
+
+export interface ImageObjectLd {
+  url: string;
+  caption?: string;
+  description?: string;
+  width?: number;
+  height?: number;
+  contentUrl?: string;
+}
+
+export interface VideoObjectLd {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  contentUrl?: string;
+  embedUrl?: string;
+  uploadDate: string;
+  duration?: string;
+}
+
+export interface HowToStep {
+  name: string;
+  text: string;
+  image?: string;
+  url?: string;
+}
+
+export interface HowToLd {
+  name: string;
+  description: string;
+  steps: HowToStep[];
+  image?: string;
+  totalTime?: string;
+  estimatedCost?: string;
+}
+
+export interface PersonLd {
+  name: string;
+  jobTitle?: string;
+  description?: string;
+  url?: string;
+  sameAs?: string[];
+  knowsAbout?: string[];
+  affiliation?: Record<string, unknown>;
+  birthPlace?: Record<string, unknown>;
+  nationality?: Record<string, unknown>;
+  givenName?: string;
+  familyName?: string;
+}
+
+export interface ServiceItem {
+  name: string;
+  description?: string;
+  price?: number;
+  priceCurrency?: string;
+}
+
+export interface ServiceLd {
+  name: string;
+  description: string;
+  serviceType?: string;
+  areaServed?: string[];
+  image?: string;
+  url?: string;
+  items?: ServiceItem[];
+}
+
+// prettier-ignore
+export type LdType = 'Organization' | 'WebSite' | 'BreadcrumbList' | 'Product' | 'FAQPage' | 'Article' | 'HowTo' | 'ImageObject' | 'VideoObject' | 'Service' | 'Person';
+
+export interface Props {
+  type?: LdType;
+  data?: Record<string, unknown>;
+  breadcrumbs?: BreadcrumbItem[];
+  faqs?: FaqItem[];
+  product?: ProductLd;
+  article?: ArticleLd;
+  howto?: HowToLd;
+  image?: ImageObjectLd;
+  video?: VideoObjectLd;
+  service?: ServiceLd;
+  person?: PersonLd;
+}
+
+const { type: typeProp, data, breadcrumbs, faqs, product, article, howto, image, video, service } = Astro.props;
+const type = typeProp || (data?.['@type'] as LdType) || 'WebSite';
+const siteUrl = String(SITE.site).replace(/\/+$/, '');
+const name = SITE_SETTINGS?.siteName || SITE?.name || 'Felizbay';
+const authorName = 'Felizbay Team';
+
+let schema: Record<string, unknown> = { '@context': 'https://schema.org' };
+
+if (type === 'Organization') {
+  schema = {
+    ...schema,
+    '@type': 'Organization',
+    '@id': `${siteUrl}/#organization`,
+    name,
+    url: siteUrl,
+    ...(data || {}),
+  };
+} else if (type === 'Person') {
+  schema = { ...schema, '@type': 'Person', ...(data || {}) };
+} else if (type === 'WebSite') {
+  schema = { ...schema, '@type': 'WebSite', name, url: siteUrl, ...(data || {}) };
+} else if (type === 'BreadcrumbList' && breadcrumbs) {
+  schema = {
+    ...schema,
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((b, i) => {
+      const href = b.item || b.href;
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        name: b.name,
+        ...(href ? { item: href.startsWith('http') ? href : `${siteUrl}${href}` } : {}),
+      };
+    }),
+  };
+} else if (type === 'Product' && product) {
+  const offset = { '@type': 'Product', '@id': product.url ? `${product.url}#product` : undefined };
+  const mfg = product.manufacturerName
+    ? { manufacturer: { '@type': 'Organization', name: product.manufacturerName } }
+    : {};
+  const dims: Record<string, unknown> = {};
+  if (product.weight) dims.weight = product.weight;
+  if (product.width) dims.width = product.width;
+  if (product.height) dims.height = product.height;
+  if (product.depth) dims.depth = product.depth;
+  const specBlock =
+    product.additionalProperty && product.additionalProperty.length > 0
+      ? { additionalProperty: product.additionalProperty }
+      : {};
+  const dimBlock =
+    Object.keys(dims).length > 0
+      ? { additionalProperty: [{ '@type': 'PropertyValue', name: 'Specifications', value: dims }] }
+      : {};
+  schema = {
+    ...schema,
+    ...offset,
+    name: product.name,
+    description: product.description,
+    ...(product.sku ? { sku: product.sku } : {}),
+    ...(product.image ? { image: product.image } : {}),
+    ...(product.url ? { url: product.url } : {}),
+    ...(product.category ? { category: product.category } : {}),
+    ...(product.material ? { material: product.material } : {}),
+    ...(product.color ? { color: product.color } : {}),
+    ...(product.countryOfOrigin ? { countryOfOrigin: product.countryOfOrigin } : {}),
+    ...(product.mpn ? { mpn: product.mpn } : {}),
+    ...(product.offers ? { offers: product.offers } : {}),
+    ...specBlock,
+    ...dimBlock,
+    ...(product.aggregateRating
+      ? {
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: product.aggregateRating.ratingValue,
+            reviewCount: product.aggregateRating.reviewCount,
+            bestRating: product.aggregateRating.bestRating || 5,
+          },
+        }
+      : {}),
+    brand: { '@type': 'Brand', name: product.brandName || name },
+    ...mfg,
+  };
+} else if (type === 'FAQPage' && faqs && faqs.length > 0) {
+  schema = {
+    ...schema,
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question || f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer || f.a },
+    })),
+  };
+} else if (type === 'Article' && article) {
+  schema = {
+    ...schema,
+    '@type': 'Article',
+    headline: article.headline,
+    description: article.description,
+    ...(article.image ? { image: article.image } : {}),
+    ...(article.datePublished ? { datePublished: article.datePublished } : {}),
+    ...(article.dateModified ? { dateModified: article.dateModified } : {}),
+    author: {
+      '@type': 'Person',
+      name: article.authorName || authorName,
+      ...(article.authorUrl ? { url: article.authorUrl } : {}),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name,
+      url: siteUrl,
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': data?.['url'] || siteUrl },
+  };
+} else if (type === 'ImageObject' && image) {
+  schema = {
+    ...schema,
+    '@type': 'ImageObject',
+    url: image.url,
+    ...(image.caption ? { caption: image.caption } : {}),
+    ...(image.description ? { description: image.description } : {}),
+    ...(image.width ? { width: image.width } : {}),
+    ...(image.height ? { height: image.height } : {}),
+    ...(image.contentUrl ? { contentUrl: image.contentUrl } : {}),
+  };
+} else if (type === 'VideoObject' && video) {
+  schema = {
+    ...schema,
+    '@type': 'VideoObject',
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: video.thumbnailUrl,
+    ...(video.contentUrl ? { contentUrl: video.contentUrl } : {}),
+    ...(video.embedUrl ? { embedUrl: video.embedUrl } : {}),
+    uploadDate: video.uploadDate,
+    ...(video.duration ? { duration: video.duration } : {}),
+  };
+} else if (type === 'Service' && service) {
+  const offers = service.items?.map((item) => ({
+    '@type': 'Offer',
+    itemOffered: { '@type': 'Service', name: item.name, description: item.description },
+    ...(item.price
+      ? {
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            price: item.price,
+            priceCurrency: item.priceCurrency || 'USD',
+          },
+        }
+      : {}),
+  }));
+  schema = {
+    ...schema,
+    '@type': 'Service',
+    name: service.name,
+    description: service.description,
+    provider: { '@type': 'Organization', name, url: siteUrl },
+    ...(service.serviceType ? { serviceType: service.serviceType } : {}),
+    ...(service.areaServed?.length ? { areaServed: service.areaServed } : {}),
+    ...(service.image ? { image: service.image } : {}),
+    ...(service.url ? { url: service.url } : {}),
+    ...(offers?.length
+      ? { hasOfferCatalog: { '@type': 'OfferCatalog', name: service.name, itemListElement: offers } }
+      : {}),
+  };
+} else if (type === 'HowTo' && howto) {
+  schema = {
+    ...schema,
+    '@type': 'HowTo',
+    name: howto.name,
+    description: howto.description,
+    ...(howto.image ? { image: howto.image } : {}),
+    ...(howto.totalTime ? { totalTime: howto.totalTime } : {}),
+    ...(howto.estimatedCost ? { estimatedCost: howto.estimatedCost } : {}),
+    step: howto.steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      ...(s.image ? { image: s.image } : {}),
+      ...(s.url ? { url: s.url } : {}),
+    })),
+  };
+}
+---
+
+{
+  schema && Object.keys(schema).length > 2 && (
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )
+}

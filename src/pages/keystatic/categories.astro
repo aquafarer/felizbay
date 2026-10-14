@@ -1,0 +1,283 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/categories.yaml', locale);
+
+const defaultData: Record<string, { name: string; image: string; gradient: string }> = {
+  POOL: {
+    name: 'Inflatable Swimming Pools',
+    image: '/images/pools/round-blue-pool-1.png',
+    gradient: 'from-sky-400 to-blue-500',
+  },
+};
+
+let data: Record<string, { name: string; image: string; gradient: string }> = { ...defaultData };
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/categories.yaml');
+        }
+      }
+    }
+    if (f) {
+      const yamlMod = await import('js-yaml');
+      const parsed = yamlMod.load(f.content) as Record<string, any>;
+      if (parsed && typeof parsed === 'object') {
+        for (const key of Object.keys(defaultData)) {
+          if (parsed[key] && typeof parsed[key] === 'object') {
+            data[key] = { ...defaultData[key], ...parsed[key] };
+          }
+        }
+      }
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+
+const keys = Object.keys(defaultData);
+---
+
+<AdminLayout title="Category Cards" active="categories">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="text-2xl font-semibold">Product Category Cards</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      Images and gradients for the product category cards on the homepage. File: <code class="font-mono">{file}</code>
+      {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="categories-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-locale={locale}
+    data-sha={sha}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    {
+      keys.map((key) => {
+        const entry = data[key] || defaultData[key];
+        return (
+          <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+            <h2 class="text-base font-semibold flex items-center gap-2">
+              <span class="w-6 h-6 rounded bg-gradient-to-br {entry.gradient}" />
+              {key}
+            </h2>
+            <input type="hidden" name="{key}.key" value={key} />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Display Name</label>
+                <input
+                  type="text"
+                  name="{key}.name"
+                  value={entry.name}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Gradient Class</label>
+                <input
+                  type="text"
+                  name="{key}.gradient"
+                  value={entry.gradient}
+                  placeholder="from-sky-400 to-blue-500"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+              <input
+                type="text"
+                name="{key}.image"
+                value={entry.image}
+                placeholder="https://assets.felizbay.com/images/Felizbay/categories/..."
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+            {entry.image && (
+              <div class="flex gap-2 items-center">
+                <img
+                  src={entry.image}
+                  alt=""
+                  class="h-16 w-24 rounded object-cover border border-gray-200"
+                  loading="lazy"
+                />
+                <span class="text-xs text-gray-400">Preview</span>
+              </div>
+            )}
+          </div>
+        );
+      })
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('categories-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      let sha = form.dataset.sha;
+
+      // Locale switcher
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        const href = loc === 'en' ? base : base + '?locale=' + loc;
+        window.location.href = href;
+      });
+
+      saveBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        publishBtn.disabled = true;
+        const fd = new FormData(form);
+        const keys = ['POOL'];
+        const data = {};
+        for (const key of keys) {
+          data[key] = {
+            name: String(fd.get(key + '.name') || '').trim(),
+            image: String(fd.get(key + '.image') || '').trim(),
+            gradient: String(fd.get(key + '.gradient') || '').trim(),
+          };
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              branch: 'draft',
+              data,
+              commitMessage: 'Draft: Update category cards',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || res.status >= 400) {
+            window.__adminToast?.(result?.error || result?.message || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            publishBtn.disabled = false;
+            return;
+          }
+          if (result?.content?.sha) {
+            sha = result.content.sha;
+            form.dataset.sha = sha;
+          }
+          window.__adminToast?.('Draft saved (not deployed)', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        }
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Draft';
+        publishBtn.disabled = false;
+      });
+
+      publishBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result?.error || 'Publish failed', 'error');
+            publishBtn.textContent = 'Publish';
+            saveBtn.disabled = false;
+            publishBtn.disabled = false;
+            return;
+          }
+          window.__adminToast?.('Published! Deploying to production...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.textContent = 'Publish';
+          saveBtn.disabled = false;
+          publishBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

@@ -1,0 +1,272 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/faqs.yaml', locale);
+
+interface FaqEntry {
+  q: string;
+  a: string;
+}
+
+const defaultFaqs: FaqEntry[] = [
+  {
+    q: 'How long does setup take?',
+    a: 'Fifteen to thirty minutes for most models: unroll on level ground, inflate with the included pump, and fill with water. Takedown in fall takes about the same.',
+  },
+  {
+    q: 'How rigid is a drop stitch pool?',
+    a: 'Very. High-pressure drop stitch walls inflate rock-solid, so the pool keeps its shape like a hard-sided pool but still folds away for winter storage.',
+  },
+  {
+    q: 'How should I care for the water?',
+    a: 'Run a compatible filter pump daily, keep chlorine at 1-3 ppm and pH between 7.2 and 7.6, skim debris, and cover the pool when not in use. With this routine, water can last several weeks between changes.',
+  },
+  {
+    q: 'What materials do you use?',
+    a: 'Multi-layer, UV-resistant, puncture-resistant PVC with a high-pressure drop stitch core. Materials are tested for tensile strength, UV resistance, and air retention before production.',
+  },
+  {
+    q: 'Does Felizbay provide OEM/ODM services?',
+    a: 'Yes. Felizbay offers full OEM and ODM customization for inflatable pools — custom sizes, colors, logos, covers, and packaging. Contact info@felizbay.com with your requirements.',
+  },
+  {
+    q: 'How durable are the pools?',
+    a: 'Every pool is inflation-tested at the factory before shipment. The drop stitch chambers hold rated pressure with minimal loss over days, and the PVC shell includes UV stabilizers for seasons of outdoor use.',
+  },
+  {
+    q: 'Where can I buy Felizbay pools?',
+    a: 'We sell factory-direct worldwide. Contact info@felizbay.com for a quote on any model, wholesale pricing, or OEM inquiries.',
+  },
+];
+
+let faqs: FaqEntry[] = defaultFaqs.map((f) => ({ ...f }));
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/faqs.yaml');
+        }
+      }
+    }
+    if (f) {
+      const { load } = await import('js-yaml');
+      const parsed = load(f.content) as Record<string, any>;
+      if (parsed?.faqs && Array.isArray(parsed.faqs)) {
+        faqs = parsed.faqs.map((item: any, i: number) => ({
+          q: item.q || defaultFaqs[i]?.q || '',
+          a: item.a || defaultFaqs[i]?.a || '',
+        }));
+      }
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title="FAQs" active="faqs">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="text-2xl font-semibold">Homepage FAQs</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      File: <code class="font-mono">{file}</code>
+      {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="faqs-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-sha={sha}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    {
+      faqs.map((item, i) => (
+        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+          <h2 class="text-base font-semibold">FAQ #{i + 1}</h2>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Question</label>
+            <input
+              type="text"
+              name={'faq' + i + '.q'}
+              value={item.q}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Answer</label>
+            <textarea
+              name={'faq' + i + '.a'}
+              rows="4"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {item.a}
+            </textarea>
+          </div>
+        </div>
+      ))
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+      });
+
+      const form = document.getElementById('faqs-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      let sha = form.dataset.sha;
+
+      function collectData() {
+        const fd = new FormData(form);
+        const faqs = [];
+        for (let i = 0; i < 7; i++) {
+          faqs.push({
+            q: String(fd.get('faq' + i + '.q') || '').trim(),
+            a: String(fd.get('faq' + i + '.a') || '').trim(),
+          });
+        }
+        return { faqs };
+      }
+
+      saveBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        try {
+          const data = collectData();
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data,
+              branch: 'draft',
+              commitMessage: 'Draft: Update homepage FAQs',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            return;
+          }
+          if (result?.content?.sha) {
+            sha = result.content.sha;
+            form.dataset.sha = sha;
+          }
+          window.__adminToast?.('Draft saved', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        } finally {
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+        }
+      });
+
+      publishBtn?.addEventListener('click', async () => {
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const data = collectData();
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ format: 'yaml', path: file, sha, data, commitMessage: 'Update homepage FAQs' }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Publish failed', 'error');
+            return;
+          }
+          window.__adminToast?.('Published, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        } finally {
+          publishBtn.disabled = false;
+          publishBtn.textContent = 'Publish';
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

@@ -1,0 +1,39 @@
+---
+import Steps2 from '~/components/widgets/Steps2.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/request-quotation.ts';
+
+const lang = 'en';
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'request-quotation');
+
+const hero = page.hero_text ?? {};
+const process = page.steps2_process ?? {};
+const content = page.content_form ?? {};
+const cta = page.cta ?? {};
+const ctaActions = cta.actions?.map((a: any) => ({ ...a, href: a.href }));
+
+const metadata = {
+  title: `Request a Quotation — ${SITE.name}`,
+  description: hero.subtitle || '',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Request Quotation' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <HeroText tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+  <Steps2
+    tagline={process.tagline}
+    title={process.title}
+    subtitle={process.subtitle}
+    items={process.items}
+    image={process.image}
+  />
+  <Content tagline={content.tagline} title={content.title} subtitle={content.subtitle} content={content.content} />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={ctaActions} />
+</Layout>

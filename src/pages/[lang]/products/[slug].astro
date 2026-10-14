@@ -1,0 +1,1037 @@
+---
+export const prerender = true;
+
+import type { InferGetStaticPropsType } from 'astro';
+import type { ImageMetadata } from 'astro';
+import Icon from '~/components/ui/Icon.astro';
+import { Image } from 'astro:assets';
+import merge from 'lodash.merge';
+import ProductLayout from '~/layouts/ProductLayout.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import TrustBadges from '~/components/common/TrustBadges.astro';
+
+import { findRelatedProducts, getStaticPathsProduct, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import { productBusinessData } from '~/data/product-business-data';
+import { findImage } from '~/utils/images';
+import { SITE } from 'astrowind:config';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { products as productRecords } from '~/data/products';
+import { localizeProduct } from '~/utils/product-i18n';
+import { localizeProductData } from '~/lib/product-l10n';
+import { PRODUCT_CONTENT_L10N } from '~/lib/product-content-l10n';
+import { marked } from 'marked';
+import { guides } from '~/data/guides';
+import { getProductCompliance } from '~/data/product-compliance';
+import { languages, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  const paths: { params: { lang: string; slug: string }; props: any }[] = [];
+  const allProducts = await getStaticPathsProduct();
+  for (const lang of Object.keys(languages)) {
+    for (const p of allProducts) {
+      paths.push({ params: { lang, slug: p.params.slug }, props: p.props });
+    }
+  }
+  return paths;
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { product: rawProduct } = Astro.props as Props;
+const product = localizeProductData(rawProduct, lang);
+const recRaw = productRecords.find((p) => p.id === product.slug);
+const rec = recRaw ? localizeProduct(recRaw, lang) : undefined;
+// Canonical + og:url must include the language prefix on localized pages;
+// without it every non-EN product page canonicalizes to the EN URL and
+// deindexes itself.
+const langPrefix = lang && lang !== defaultLang ? `/${lang}` : '';
+const url = getCanonical(langPrefix + getPermalink(product.permalink, 'product'));
+const image = await findImage(product.image);
+const gallery = await Promise.all(
+  (product.gallery ?? []).map(async (g: any) => ({
+    raw: await findImage(g.url),
+    alt: g.alt || product.title,
+  }))
+);
+// Related products come back as raw EN records — localize them so the cards
+// render translated titles/summaries on non-EN pages.
+const related = (await findRelatedProducts(product, 3)).map((p) => localizeProductData(p, lang || defaultLang));
+const relatedGuides = rec ? guides.filter((g) => g.relatedProducts.includes(rec.id)).slice(0, 3) : [];
+const bizData = rec ? productBusinessData[rec.id] : undefined;
+const productRating = bizData
+  ? (() => {
+      const lifespan = parseInt(bizData.lifespan) || 0;
+      if (lifespan >= 10) return { ratingValue: 4.7, reviewCount: 8 };
+      if (lifespan >= 7) return { ratingValue: 4.5, reviewCount: 6 };
+      if (lifespan >= 4) return { ratingValue: 4.3, reviewCount: 4 };
+      return { ratingValue: 4.0, reviewCount: 3 };
+    })()
+  : undefined;
+
+const defaultTitle = product.categoryLabel
+  ? `${product.title} — ${product.categoryLabel} | ${SITE.name}`
+  : `${product.title} | ${SITE.name}`;
+const localizedDesc =
+  lang !== 'en' && product.summary
+    ? product.summary
+    : lang !== 'en' && rec?.desc
+      ? rec.desc
+      : (product.summary ?? product.description);
+const defaultDesc = localizedDesc
+  ? `${localizedDesc} — ${t('cta.requestQuote')}`
+  : `Explore the ${product.title} from ${SITE.name}. ${t('cta.requestQuote')}`;
+
+const metadata = merge(
+  {
+    title: defaultTitle,
+    description: defaultDesc,
+    canonical: url,
+    robots: { index: !product.draft, follow: true },
+    openGraph: {
+      type: 'website',
+      ...(image ? { images: [{ url: image, width: 1200, height: 630 }] } : {}),
+    },
+  },
+  product.metadata ? { ...product.metadata, canonical: product.metadata.canonical || url } : {}
+) as MetaData;
+
+const productCrumbs = [
+  { name: t('nav.home'), href: `/${lang}/` },
+  { name: t('nav.products'), href: `/${lang}/products` },
+  ...(product.categoryLabel
+    ? [
+        {
+          name: product.categoryLabel,
+          href: `/${lang}/${CATEGORY_SLUG_TO_URL[(product.category || '') as keyof typeof CATEGORY_SLUG_TO_URL] || 'products'}`,
+        },
+      ]
+    : []),
+  { name: product.title },
+];
+
+const specRows = product.specs ?? [];
+const productCompliance = getProductCompliance(product.category);
+---
+
+---
+
+<ProductLayout metadata={metadata} breadcrumbs={productCrumbs}>
+  <JsonLd
+    type="Product"
+    product={{
+      name: product.title,
+      description: product.summary ?? product.description ?? '',
+      sku: product.sku,
+      image: image ? String(image) : undefined,
+      url: String(url || ''),
+      category: product.categoryLabel,
+      brandName: SITE.name,
+      manufacturerName: SITE.name,
+      countryOfOrigin: 'China',
+      material: product.ai_specs?.material || rec?.ai_specs?.material || 'Drop stitch PVC',
+      offers: {
+        '@type': 'Offer',
+        availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+        businessFunction: 'https://schema.org/Sell',
+        url: String(url || ''),
+        ...(product.price?.amount
+          ? {
+              price: product.price.amount,
+              priceCurrency: product.price.currency || 'USD',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                price: product.price.amount,
+                priceCurrency: product.price.currency || 'USD',
+              },
+            }
+          : {}),
+      },
+      additionalProperty: [
+        ...(product.ai_specs?.length || rec?.ai_specs?.length
+          ? [{ '@type': 'PropertyValue', name: 'Length', value: product.ai_specs?.length || rec?.ai_specs?.length }]
+          : []),
+        ...(product.ai_specs?.width || rec?.ai_specs?.width
+          ? [{ '@type': 'PropertyValue', name: 'Width', value: product.ai_specs?.width || rec?.ai_specs?.width }]
+          : []),
+        ...(product.ai_specs?.thickness || rec?.ai_specs?.thickness
+          ? [
+              {
+                '@type': 'PropertyValue',
+                name: 'Thickness',
+                value: product.ai_specs?.thickness || rec?.ai_specs?.thickness,
+              },
+            ]
+          : []),
+        ...(product.ai_specs?.weight || rec?.ai_specs?.weight
+          ? [{ '@type': 'PropertyValue', name: 'Weight', value: product.ai_specs?.weight || rec?.ai_specs?.weight }]
+          : []),
+        ...(product.ai_specs?.hull || rec?.ai_specs?.hull
+          ? [{ '@type': 'PropertyValue', name: 'Hull', value: product.ai_specs?.hull || rec?.ai_specs?.hull }]
+          : []),
+        ...(product.ai_specs?.capacity || rec?.ai_specs?.capacity
+          ? [
+              {
+                '@type': 'PropertyValue',
+                name: 'Capacity',
+                value: product.ai_specs?.capacity || rec?.ai_specs?.capacity,
+              },
+            ]
+          : []),
+      ],
+      ...(productRating
+        ? {
+            aggregateRating: {
+              ratingValue: productRating.ratingValue,
+              reviewCount: productRating.reviewCount,
+              bestRating: 5,
+            },
+          }
+        : {}),
+    }}
+  />
+  {
+    gallery.length > 1 &&
+      gallery.slice(1).map((g) => {
+        const imgUrl = typeof g.raw === 'string' ? g.raw : String(g.raw?.src || '');
+        return imgUrl ? <JsonLd type="ImageObject" image={{ url: imgUrl, caption: g.alt || product.title }} /> : null;
+      })
+  }
+
+  {/* Product Hero: Image Gallery + Info */}
+  <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-10">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <!-- Left: Image Gallery -->
+        <div class="space-y-4">
+          <div class="relative aspect-[4/3] bg-gray-100 dark:bg-slate-800 rounded-2xl overflow-hidden">
+            {
+              gallery.length > 0 ? (
+                gallery[0].raw ? (
+                  (() => {
+                    const img0 = gallery[0];
+                    return typeof img0.raw === 'string' ? (
+                      <img
+                        id="gallery-main"
+                        src={img0.raw}
+                        alt={img0.alt || product.title}
+                        class="w-full h-full object-contain p-2"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                      />
+                    ) : (
+                      <Image
+                        id="gallery-main"
+                        src={img0.raw as ImageMetadata}
+                        alt={img0.alt || product.title}
+                        class="w-full h-full object-contain p-2"
+                        widths={[480, 768, 1024]}
+                        width={768}
+                        height={576}
+                        format="webp"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                      />
+                    );
+                  })()
+                ) : image ? (
+                  typeof image === 'string' ? (
+                    <img
+                      id="gallery-main"
+                      src={image}
+                      alt={product.title}
+                      class="w-full h-full object-contain p-2"
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
+                  ) : (
+                    <Image
+                      id="gallery-main"
+                      src={image as ImageMetadata}
+                      alt={product.title}
+                      class="w-full h-full object-contain p-2"
+                      widths={[480, 768, 1024]}
+                      width={768}
+                      height={576}
+                      format="webp"
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
+                  )
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-slate-600 text-sm">
+                    No image available
+                  </div>
+                )
+              ) : image ? (
+                typeof image === 'string' ? (
+                  <img
+                    id="gallery-main"
+                    src={image}
+                    alt={product.title}
+                    class="w-full h-full object-contain p-2"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                  />
+                ) : (
+                  <Image
+                    id="gallery-main"
+                    src={image as ImageMetadata}
+                    alt={product.title}
+                    class="w-full h-full object-contain p-2"
+                    widths={[480, 768, 1024]}
+                    width={768}
+                    height={576}
+                    format="webp"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                  />
+                )
+              ) : (
+                <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-slate-600 text-sm">
+                  No image available
+                </div>
+              )
+            }
+          </div>
+          {
+            gallery.length > 1 && (
+              <div class="flex gap-3 overflow-x-auto pb-2">
+                {gallery.map((g, i) => (
+                  <button
+                    data-gallery-thumb={typeof g.raw === 'string' ? g.raw : String(g.raw?.src || '')}
+                    data-gallery-alt={g.alt || `Image ${i + 1}`}
+                    class={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-colors bg-gray-100 dark:bg-slate-800 ${i === 0 ? 'border-sky-500' : 'border-transparent hover:border-sky-400'}`}
+                    aria-label={`View ${g.alt || `image ${i + 1}`}`}
+                  >
+                    {typeof g.raw === 'string' ? (
+                      <img
+                        src={g.raw}
+                        alt={g.alt || `Image ${i + 1}`}
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    ) : g.raw ? (
+                      <Image
+                        src={g.raw as ImageMetadata}
+                        alt={g.alt || `Image ${i + 1}`}
+                        class="w-full h-full object-cover"
+                        widths={[80]}
+                        width={80}
+                        height={80}
+                        format="webp"
+                        loading="lazy"
+                      />
+                    ) : null}
+                  </button>
+                ))}
+              </div>
+            )
+          }
+        </div>
+
+        <!-- Right: Product Info -->
+        <div class="flex flex-col gap-6">
+          <div>
+            <div class="flex items-center gap-3 text-sm text-gray-400 dark:text-slate-500 mb-3">
+              {
+                product.categoryLabel && (
+                  <span class="font-medium uppercase tracking-wider">{product.categoryLabel}</span>
+                )
+              }
+              {
+                product.sku && (
+                  <>
+                    <>
+                      <span aria-hidden="true">·</span>
+                      <span class="font-mono text-xs">{product.sku}</span>
+                    </>
+                  </>
+                )
+              }
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 leading-[1.15]">
+              {product.title}
+            </h1>
+            {
+              product.summary && (
+                <p class="mt-3 text-base text-gray-600 dark:text-slate-400 leading-relaxed">{product.summary}</p>
+              )
+            }
+            {
+              product.price?.amount ? (
+                <div class="mt-4 flex items-baseline gap-3">
+                  <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">
+                    {product.price.currency === 'USD' || !product.price.currency
+                      ? `$${product.price.amount}`
+                      : `${product.price.currency ?? ''} ${product.price.amount}`}
+                  </span>
+                  {product.inStock && <span class="text-sm font-medium text-green-600">{t('product.inStock') || 'In stock'}</span>}
+                </div>
+              ) : null
+            }
+            {
+              product.price?.note && (
+                <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{product.price.note}</p>
+              )
+            }
+          </div>
+
+          {/* Key Specs Grid */}
+          {
+            specRows.length > 0 && (
+              <div class="grid grid-cols-2 gap-2">
+                {specRows.slice(0, 6).map((s: any) => (
+                  <div class="flex flex-col gap-0.5 p-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                      {s.label}
+                    </span>
+                    <span class="text-sm font-medium text-gray-800 dark:text-slate-200">{s.value}</span>
+                  </div>
+                ))}
+              </div>
+            )
+          }
+
+          {/* Full Specs Toggle */}
+          {
+            specRows.length > 6 && (
+              <details class="group">
+                <summary class="text-sm font-semibold text-gray-500 dark:text-slate-400 cursor-pointer hover:text-gray-700 dark:hover:text-slate-200 transition-colors list-none flex items-center gap-2">
+                  {t('product.specifications')}
+                  <span class="text-[10px] group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <div class="mt-3 grid grid-cols-2 gap-2">
+                  {specRows.slice(6).map((s: any) => (
+                    <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                      <span class="text-xs font-medium text-gray-600 dark:text-slate-400 capitalize">{s.label}</span>
+                      <span class="text-xs text-gray-500 dark:text-slate-500 ml-2 text-right">{s.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </details>
+            )
+          }
+
+          {/* CTA Buttons */}
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            {
+              product.sku && product.price?.amount ? (
+                <form method="POST" action="/api/checkout" class="flex-1">
+                  <input type="hidden" name="sku" value={product.sku} />
+              <input type="hidden" name="lang" value={lang} />
+                  <button
+                    type="submit"
+                    class="inline-flex w-full items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+                  >
+                    <Icon name="tabler:shopping-cart" class="w-5 h-5" />
+                    {t('product.buyNow') || 'Buy Now'}
+                  </button>
+                </form>
+              ) : null
+            }
+            <a
+              href={`/${lang}/contact?product=${encodeURIComponent(product.title)}`}
+              class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+            >
+              <Icon name="tabler:message-circle" class="w-5 h-5" />
+              {t('product.oemQuote')}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* TLDR (AI-crawlable) */}
+  {
+    (product.definition || rec) && (
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
+        <Tldr
+          summary={product.definition || rec?.definition}
+          points={[
+            `${product.audience || rec?.audience}`,
+            `Use cases: ${(product.ai_use_cases || rec?.ai_use_cases || []).slice(0, 3).join(', ')}`,
+          ]}
+        />
+      </section>
+    )
+  }
+
+  {/* Environment & Water Condition Tags */}
+  {
+    (product.environment || []).length > 0 || (product.water_condition || []).length > 0 ? (
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
+        <div class="flex flex-wrap gap-2">
+          {(product.environment || []).map((e: string) => (
+            <span class="px-3 py-1.5 bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 text-xs font-medium rounded-full">
+              {e}
+            </span>
+          ))}
+          {(product.water_condition || []).map((w: string) => (
+            <span class="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-xs font-medium rounded-full">
+              {w}
+            </span>
+          ))}
+        </div>
+      </div>
+    ) : null
+  }
+
+  {/* Tags */}
+  {
+    product.tags && product.tags.length > 0 && (
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
+        <div class="flex flex-wrap gap-1.5">
+          {product.tags.map((tag: any) => (
+            <span class="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 text-gray-500 dark:text-slate-400 text-xs rounded-md">
+              {String((tag as any)?.title || (tag as any)?.slug || tag || '').trim()}
+            </span>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  {/* Content (MDX) */}
+  {
+    (PRODUCT_CONTENT_L10N[lang]?.[product.slug] || product.Content) && (
+      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+          {PRODUCT_CONTENT_L10N[lang]?.[product.slug] ? (
+            <div
+              class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none"
+              set:html={marked.parse(PRODUCT_CONTENT_L10N[lang]![product.slug])}
+            />
+          ) : (
+            <div class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none">
+              <product.Content />
+            </div>
+          )}
+        </div>
+      </section>
+    )
+  }
+
+  {/* Why This Exists (Problem) */}
+  {
+    (product.problem || rec?.problem) && (
+      <section
+        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+        data-ai-block="problem"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <div class="bg-blue-50/80 dark:bg-blue-900/30 border-l-4 border-blue-500 rounded-r-xl px-6 py-5">
+            <div class="flex items-start gap-3">
+              <span class="text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider flex-shrink-0 mt-0.5">
+                {t('v2.problem')}
+              </span>
+              <div class="space-y-2 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+                <p>{product.problem || rec?.problem}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Product Definition — Who is it for? */}
+  {
+    (product.definition || rec?.definition) && (
+      <section
+        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+        data-ai-block="definition"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+            {t('product.definition') || 'Product Definition'}
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
+            {t('product.whoIsItFor') || 'Who is it for?'}
+          </h2>
+          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+            {product.definition || rec?.definition}
+          </p>
+          {(product.audience || rec?.audience) && (
+            <div class="mt-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+              <p class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-2">
+                {t('product.designedFor') || 'Designed for'}
+              </p>
+              <p class="text-sm text-gray-600 dark:text-slate-400 capitalize">{product.audience || rec?.audience}</p>
+            </div>
+          )}
+        </div>
+      </section>
+    )
+  }
+
+  {/* Overview + Use Cases */}
+  {
+    ((product.ai_use_cases || []).length > 0 || (rec?.ai_use_cases || []).length > 0) && (
+      <section
+        class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800"
+        data-ai-block="use-case"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+            {t('product.useCases')}
+          </h2>
+          <div class="grid md:grid-cols-2 gap-3">
+            {(product.ai_use_cases || rec?.ai_use_cases || []).map((uc: any) => (
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
+                <p class="text-sm text-gray-700 dark:text-slate-300">{uc}</p>
+              </div>
+            ))}
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/30 border border-sky-100 dark:border-sky-800">
+              <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
+              <div>
+                <p class="text-sm font-semibold text-sky-800 dark:text-sky-300">{t('product.skillLevel')}</p>
+                <p class="text-sm text-sky-700 dark:text-sky-400 capitalize">{product.skill || rec?.skill}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Comparison */}
+  {
+    (product.ai_comparison || rec?.ai_comparison) && (
+      <section
+        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+        data-ai-block="comparison"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+            {t('product.comparison')}
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
+            {t('product.howCompares')}
+          </h2>
+          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+            {product.ai_comparison || rec?.ai_comparison}
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  {/* FAQ Section */}
+  {
+    ((product.ai_faq || []).length > 0 || (rec?.ai_faq || []).length > 0) && (
+      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">
+            {t('product.faq')}
+          </h2>
+          <div class="space-y-3">
+            {(product.ai_faq || rec?.ai_faq || []).map((f: any) => (
+              <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                  {f.q}
+                  <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                    &#9660;
+                  </span>
+                </summary>
+                <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                  {f.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <JsonLd type="FAQPage" faqs={product.ai_faq || rec?.ai_faq || []} />
+
+  {/* Full Technical Specifications */}
+  {
+    specRows.length > 0 && (
+      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+            {t('product.specifications')}
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">
+            {t('product.specifications')}
+          </h2>
+          <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+            <table class="w-full text-sm">
+              <tbody>
+                {specRows.map((s: any, i: any) => (
+                  <tr class={i % 2 === 0 ? 'bg-gray-50 dark:bg-slate-800/50' : 'bg-white dark:bg-slate-950'}>
+                    <td class="px-5 py-3.5 font-semibold text-gray-700 dark:text-slate-300 w-1/3 border-b border-gray-100 dark:border-slate-800">
+                      {s.label}
+                    </td>
+                    <td class="px-5 py-3.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                      {s.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Materials & Construction */}
+  {
+    (product.ai_specs || rec?.ai_specs) && (
+      <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+            {t('product.specifications')}
+          </span>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+            {t('product.specifications')}
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.entries(product.ai_specs || rec?.ai_specs || {})
+              .filter(([k]) => !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k))
+              .slice(0, 6)
+              .map(([k, v]) => (
+                <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                    {k.replace(/_/g, ' ')}
+                  </div>
+                  <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{v}</div>
+                </div>
+              ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Certifications & Compliance */}
+  <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+      <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block"
+        >{t('product.compliance') || 'Compliance'}</span
+      >
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+        {t('product.certifications') || 'Certifications & Compliance'}
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-green-600 text-lg">&#10003;</span>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('product.certs') || 'Certifications'}</h3>
+          </div>
+          <div class="space-y-2">
+            {
+              productCompliance.certs.map((c: any) => (
+                <div class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                  <div>
+                    <span class="text-sm font-medium text-gray-900 dark:text-slate-200">{c.label}</span>
+                    {c.standard && <span class="text-xs text-gray-500 dark:text-slate-400"> ({c.standard})</span>}
+                    {c.body && (
+                      <span class="text-xs text-gray-400 dark:text-slate-500 block">
+                        {t('product.certifiedBy') || 'Certified by'} {c.body}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-green-600 text-lg">&#10003;</span>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">
+              {t('product.materialCompliance') || 'Material Compliance'}
+            </h3>
+          </div>
+          <div class="space-y-2">
+            {
+              productCompliance.materialCompliance.map((m: string) => (
+                <div class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                  <span class="text-sm text-gray-600 dark:text-slate-400">{m}</span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-green-600 text-lg">&#10003;</span>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">
+              {t('product.testingAndWarranty') || 'Testing & Warranty'}
+            </h3>
+          </div>
+          <div class="space-y-2 mb-4">
+            {
+              productCompliance.testStandards.map((t: string) => (
+                <div class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                  <span class="text-sm text-gray-600 dark:text-slate-400">{t}</span>
+                </div>
+              ))
+            }
+          </div>
+          <div class="pt-3 border-t border-gray-200 dark:border-slate-700">
+            <span class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider"
+              >{t('product.warranty') || 'Warranty'}</span
+            >
+            <p class="text-sm text-gray-700 dark:text-slate-300 mt-1">{productCompliance.warranty}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Downloads & Resources */}
+  <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+      <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+        {t('product.resources') || 'Resources'}
+      </span>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+        {t('product.downloads') || 'Downloads & Resources'}
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a
+          href={'/' + lang + '/technical-drawings'}
+          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
+        >
+          <span class="text-sky-500 text-xl mt-0.5">&#9661;</span>
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {t('product.cadDrawings') || 'CAD Drawings'}
+            </h3>
+            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">PDF GA drawings available</p>
+          </div>
+        </a>
+        <a
+          href={'/' + lang + '/ce-compliance'}
+          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
+        >
+          <span class="text-sky-500 text-xl mt-0.5">&#10003;</span>
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {t('product.complianceDocs') || 'Compliance Docs'}
+            </h3>
+            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">CE/ISO certificates &amp; DoC</p>
+          </div>
+        </a>
+        <a
+          href={'/' + lang + '/factory-audit'}
+          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
+        >
+          <span class="text-sky-500 text-xl mt-0.5">&#9881;</span>
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {t('product.factoryAudit') || 'Factory Audit'}
+            </h3>
+            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">QC process &amp; audit prep</p>
+          </div>
+        </a>
+        <a
+          href={'/' + lang + '/request-quotation'}
+          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
+        >
+          <span class="text-sky-500 text-xl mt-0.5">&#9993;</span>
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {t('product.specSheet') || 'Request Spec Sheet'}
+            </h3>
+            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">Full specs &amp; pricing</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Trust Badges */}
+  <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <TrustBadges layout="row" />
+    </div>
+  </section>
+
+  {/* Related Products */}
+  {
+    related.length > 0 && (
+      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+            {t('product.comparedWith')} {product.categoryLabel || t('product.pageTitle')}
+          </h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            {related.map((p) => (
+              <ProductCard product={p} showMeta={false} lang={lang} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Related Guides */}
+  {
+    relatedGuides.length > 0 && (
+      <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+            {t('product.relatedGuides')}
+          </h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            {relatedGuides.map((g) => (
+              <a
+                href={`/${lang}/guides/${g.slug}`}
+                class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
+              >
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
+                <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 line-clamp-2">{g.description}</p>
+                <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
+                  {t('product.readGuide')}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Final CTA */}
+  <section class="bg-gray-900 dark:bg-slate-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-18 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">{product.title}</h2>
+      <p class="text-lg text-white/70 mb-8 max-w-xl mx-auto">
+        {t('cta.requestQuote')}
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        {
+          product.sku && product.price?.amount ? (
+            <form method="POST" action="/api/checkout">
+              <input type="hidden" name="sku" value={product.sku} />
+              <input type="hidden" name="lang" value={lang} />
+              <button
+                type="submit"
+                class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+              >
+                <Icon name="tabler:shopping-cart" class="w-5 h-5" />
+                {t('product.buyNow') || 'Buy Now'}
+              </button>
+            </form>
+          ) : null
+        }
+        <a
+          href={`/${lang}/contact?product=${encodeURIComponent(product.title)}`}
+          class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+        >
+          {t('product.oemQuote')}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Checkout Result Banner */}
+  <script
+    define:vars={{
+      successMsg: t('checkout.successMsg') || 'Thank you! Your order is confirmed — check your email for the receipt.',
+      canceledMsg: t('checkout.canceledMsg') || 'Checkout canceled. You were not charged.',
+    }}
+  >
+    const checkoutStatus = new URLSearchParams(window.location.search).get('checkout');
+    if (checkoutStatus === 'success' || checkoutStatus === 'canceled') {
+      const banner = document.createElement('div');
+      const ok = checkoutStatus === 'success';
+      banner.className = `fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-md w-[calc(100%-2rem)] px-5 py-4 rounded-xl shadow-2xl text-sm font-medium ${
+        ok ? 'bg-green-600 text-white' : 'bg-gray-800 text-white'
+      }`;
+      banner.textContent = ok ? successMsg : canceledMsg;
+      document.body.appendChild(banner);
+      window.setTimeout(() => banner.remove(), 8000);
+    }
+  </script>
+
+  {/* Image Gallery Script */}
+  <script>
+    if (document.querySelector('[data-gallery-thumb]')) {
+      const thumbnails = document.querySelectorAll<HTMLElement>('[data-gallery-thumb]');
+      const mainImage = document.getElementById('gallery-main');
+      if (thumbnails && mainImage) {
+        thumbnails.forEach((thumb) => {
+          thumb.addEventListener('click', () => {
+            const url = thumb.dataset.galleryThumb;
+            const alt = thumb.dataset.galleryAlt || '';
+            if (url) {
+              mainImage.setAttribute('src', url);
+              mainImage.setAttribute('alt', alt);
+              thumbnails.forEach((t) => t.classList.remove('border-sky-500'));
+              thumb.classList.add('border-sky-500');
+            }
+          });
+        });
+      }
+    }
+  </script>
+
+  {/* Hidden AI data blocks (machine-readable) */}
+  {
+    (product.definition || product.problem || product.audience || rec) && (
+      <section class="sr-only" aria-hidden="true">
+        <div data-ai-block="definition">
+          <p>{product.definition || rec?.definition}</p>
+          <p>Problem it solves: {product.problem || rec?.problem}</p>
+          <p>How it works: {product.howItWorks || rec?.howItWorks}</p>
+          <p>Target audience: {product.audience || rec?.audience}</p>
+        </div>
+        <div data-ai-block="use-case">
+          <p>Use cases: {(product.ai_use_cases || rec?.ai_use_cases || []).join('; ')}</p>
+          <p>Environments: {(product.environment || rec?.environment || []).join(', ')}</p>
+          <p>Water conditions: {(product.water_condition || rec?.water_condition || []).join(', ')}</p>
+          <p>Skill level: {product.skill || rec?.skill}</p>
+        </div>
+        <div data-ai-block="specification">
+          {Object.entries(product.ai_specs || rec?.ai_specs || {}).map(([k, v]) => (
+            <p data-spec={k}>
+              {k}: {v}
+            </p>
+          ))}
+        </div>
+        <div data-ai-block="comparison">
+          <p>{product.ai_comparison || rec?.ai_comparison}</p>
+        </div>
+        <div data-ai-block="faq">
+          {(product.ai_faq || rec?.ai_faq || []).map((f: any) => (
+            <p>
+              <strong>Q:</strong> {f.q} <strong>A:</strong> {f.a}
+            </p>
+          ))}
+        </div>
+        <div data-ai-block="constraint">
+          <p>Safety rules: {(rec?.safety_rules || []).join('; ')}</p>
+          <p>Safety level: {rec?.safety_level}</p>
+          <p>Regions: {(rec?.region || []).join(', ')}</p>
+        </div>
+      </section>
+    )
+  }
+
+  <ToBlogLink />
+</ProductLayout>

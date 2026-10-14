@@ -1,0 +1,306 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/tech-cards.yaml', locale);
+
+interface Card {
+  badge: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+const defaults: Card[] = [
+  {
+    badge: 'PVC',
+    title: 'Multi-Layer PVC Shell',
+    description:
+      'Laminated, UV-resistant, puncture-resistant PVC built for seasons of sun, water, and backyard use.',
+    image: '/images/pools/round-grey-pool-2.png',
+  },
+  {
+    badge: 'DS',
+    title: 'Drop Stitch Core',
+    description:
+      'Thousands of internal threads lock the walls rigid at rated pressure \u2014 self-supporting like a hard-sided pool.',
+    image: '/images/pools/rectangular-pool-2.png',
+  },
+  {
+    badge: 'FAST',
+    title: '15\u201330 Minute Setup',
+    description: 'Unroll, inflate with the included pump, and fill. No tools, no frame, no professional installation.',
+    image: '/images/pools/round-blue-pool-1.png',
+  },
+];
+
+let cards: Card[] = defaults.map((c) => ({ ...c }));
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/tech-cards.yaml');
+        }
+      }
+    }
+    if (f) {
+      const { load } = await import('js-yaml');
+      const parsed = load(f.content) as Record<string, any>;
+      if (parsed?.cards && Array.isArray(parsed.cards)) {
+        cards = parsed.cards.map((c: any, i: number) => ({
+          badge: c.badge || defaults[i]?.badge || '',
+          title: c.title || defaults[i]?.title || '',
+          description: c.description || defaults[i]?.description || '',
+          image: c.image || defaults[i]?.image || '',
+        }));
+      }
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title="Tech Cards" active="tech">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <div>
+      <h1 class="text-2xl font-semibold">Technology Feature Cards</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <label class="text-xs text-gray-500">Locale:</label>
+      <select
+        id="locale-select"
+        class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+      >
+        {
+          ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+  </div>
+  <p class="mt-1 text-sm text-gray-500">
+    File: <code class="font-mono">{file}</code>
+    {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+  </p>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="tech-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-sha={sha}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    {
+      cards.map((card, i) => (
+        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+          <h2 class="text-base font-semibold">Card {i + 1}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Badge Text</label>
+              <input
+                type="text"
+                name={'card' + i + '.badge'}
+                value={card.badge}
+                placeholder="PVC"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                Title (non-localized)
+              </label>
+              <input
+                type="text"
+                name={'card' + i + '.title'}
+                value={card.title}
+                placeholder="Military-Grade PVC Layer"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+              <input
+                type="text"
+                name={'card' + i + '.image'}
+                value={card.image}
+                placeholder="https://assets.felizbay.com/images/Felizbay/products/..."
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              Description (non-localized)
+            </label>
+            <textarea
+              name={'card' + i + '.description'}
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {card.description}
+            </textarea>
+          </div>
+          {card.image && (
+            <div class="flex gap-2 items-center">
+              <img
+                src={card.image}
+                alt=""
+                class="h-16 w-24 rounded object-cover border border-gray-200"
+                loading="lazy"
+              />
+              <span class="text-xs text-gray-400">Preview</span>
+            </div>
+          )}
+        </div>
+      ))
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('tech-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+      });
+
+      saveBtn.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+
+        const fd = new FormData(form);
+        const cards = [];
+        for (let i = 0; i < 3; i++) {
+          cards.push({
+            badge: String(fd.get('card' + i + '.badge') || '').trim(),
+            title: String(fd.get('card' + i + '.title') || '').trim(),
+            description: String(fd.get('card' + i + '.description') || '').trim(),
+            image: String(fd.get('card' + i + '.image') || '').trim(),
+          });
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: { cards },
+              commitMessage: 'Draft: Update tech feature cards',
+              branch: 'draft',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            return;
+          }
+          if (result?.content?.sha) {
+            form.dataset.sha = result.content.sha;
+          }
+          window.__adminToast?.('Draft saved', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+        }
+      });
+
+      publishBtn.addEventListener('click', async () => {
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              path: file,
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Publish failed', 'error');
+            publishBtn.disabled = false;
+            publishBtn.textContent = 'Publish';
+            return;
+          }
+          window.__adminToast?.('Published, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.disabled = false;
+          publishBtn.textContent = 'Publish';
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

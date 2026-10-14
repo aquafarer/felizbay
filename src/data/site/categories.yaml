@@ -1,0 +1,4 @@
+POOL:
+  name: Inflatable Swimming Pools
+  image: /images/pools/round-blue-pool-1.png
+  gradient: from-sky-400 to-blue-500

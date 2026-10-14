@@ -1,0 +1,413 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+export const prerender = true;
+---
+
+<AdminLayout title="News (D1)" active="posts">
+  <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+    <div>
+      <h1 class="text-xl font-bold">News Posts</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        Stored in Cloudflare D1 — published live by the news-worker at /news.
+      </p>
+    </div>
+    <button
+      id="new-post-btn"
+      class="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+    >
+      + New Post
+    </button>
+  </div>
+
+  <div class="mb-4 flex flex-wrap items-center gap-3">
+    <input
+      id="search-q"
+      type="search"
+      placeholder="Search title, slug, excerpt…"
+      class="px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 w-72"
+    />
+    <div class="flex gap-2" id="status-tabs">
+      <button class="status-tab px-3 py-1.5 text-sm rounded-full border" data-status="">All</button>
+      <button class="status-tab px-3 py-1.5 text-sm rounded-full border" data-status="published">Published</button>
+      <button class="status-tab px-3 py-1.5 text-sm rounded-full border" data-status="draft">Drafts</button>
+    </div>
+    <span id="total-label" class="text-sm text-gray-500 dark:text-gray-400"></span>
+  </div>
+
+  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+      <thead class="bg-gray-50 dark:bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">Title</th>
+          <th class="px-4 py-3 text-left font-medium">Category</th>
+          <th class="px-4 py-3 text-left font-medium">Date</th>
+          <th class="px-4 py-3 text-left font-medium">Status</th>
+          <th class="px-4 py-3 text-right font-medium">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="news-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+        <tr>
+          <td colspan="5" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-4 flex items-center gap-3 text-sm">
+    <button id="prev-page" class="px-3 py-1.5 rounded-md border disabled:opacity-40">← Prev</button>
+    <span id="page-label" class="text-gray-500 dark:text-gray-400">Page 1</span>
+    <button id="next-page" class="px-3 py-1.5 rounded-md border disabled:opacity-40">Next →</button>
+  </div>
+
+  <!-- Editor drawer -->
+  <div id="editor-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+  <div
+    id="editor-panel"
+    class="fixed top-0 right-0 h-full w-full max-w-2xl bg-white dark:bg-gray-950 z-50 shadow-2xl overflow-y-auto hidden"
+  >
+    <div
+      class="sticky top-0 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex items-center justify-between"
+    >
+      <h2 id="editor-title" class="text-lg font-bold">New Post</h2>
+      <button id="editor-close" class="text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 text-xl leading-none"
+        >×</button
+      >
+    </div>
+    <form id="post-form" class="px-6 py-5 space-y-4">
+      <input type="hidden" id="f-id" />
+      <div>
+        <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Title *</label>
+        <input
+          id="f-title"
+          required
+          class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+        />
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Slug</label>
+          <input
+            id="f-slug"
+            placeholder="auto from title"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 font-mono"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Category</label>
+          <input
+            id="f-category"
+            placeholder="e.g. Product News"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Tags (comma separated)</label>
+          <input
+            id="f-tags"
+            placeholder="pools, water-care, launch"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Author</label>
+          <input
+            id="f-author"
+            placeholder="Felizbay"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Publish date</label>
+          <input
+            id="f-publishDate"
+            type="datetime-local"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Image URL</label>
+          <input
+            id="f-image"
+            placeholder="https://…"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Excerpt</label>
+        <textarea
+          id="f-excerpt"
+          rows="2"
+          class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+        ></textarea>
+      </div>
+      <div>
+        <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Body (Markdown) *</label>
+        <textarea
+          id="f-body"
+          required
+          rows="14"
+          class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 font-mono"
+          placeholder="## Heading
+
+Paragraph text…"></textarea>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">SEO Title</label>
+          <input
+            id="f-metadataTitle"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">SEO Description</label>
+          <input
+            id="f-metadataDescription"
+            class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+          />
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <label class="flex items-center gap-2 text-sm">
+          <input id="f-draft" type="checkbox" class="rounded" /> Draft (hidden from /news)
+        </label>
+        <span id="live-link" class="text-xs text-gray-400"></span>
+      </div>
+      <div class="flex items-center gap-2 pt-2">
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md disabled:opacity-50"
+          id="save-btn"
+        >
+          Save
+        </button>
+        <button type="button" id="editor-cancel" class="px-4 py-2 rounded-md border text-sm font-medium">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <script is:inline>
+    (function () {
+      let page = 0;
+      let status = '';
+      let q = '';
+      const pageSize = 20;
+
+      function toast(msg, type) {
+        const el = document.createElement('div');
+        const bg = type === 'error' ? 'bg-red-600 text-white' : 'bg-green-600 text-white';
+        el.className = `${bg} px-4 py-2 rounded-md shadow-lg text-sm pointer-events-auto`;
+        el.textContent = msg;
+        document.getElementById('toast-container').appendChild(el);
+        setTimeout(() => {
+          el.style.opacity = '0';
+          setTimeout(() => el.remove(), 300);
+        }, 3000);
+      }
+
+      async function api(path, opts) {
+        const res = await fetch(path, {
+          credentials: 'same-origin',
+          headers: opts?.body ? { 'Content-Type': 'application/json' } : undefined,
+          ...opts,
+        });
+        if (res.status === 401) {
+          window.location.replace('/login');
+          throw new Error('Unauthorized');
+        }
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data.error || res.statusText);
+        return data;
+      }
+
+      async function load() {
+        const tbody = document.getElementById('news-rows');
+        tbody.innerHTML = '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-400">Loading…</td></tr>';
+        const params = new URLSearchParams({ page: String(page), pageSize: String(pageSize) });
+        if (status) params.set('status', status);
+        if (q) params.set('q', q);
+        try {
+          const data = await api(`/api/admin/news?${params}`);
+          const rows = data.rows || [];
+          document.getElementById('total-label').textContent = `${data.total} total`;
+          document.getElementById('page-label').textContent = `Page ${page + 1}`;
+          const prev = document.getElementById('prev-page');
+          const next = document.getElementById('next-page');
+          prev.disabled = page === 0;
+          next.disabled = (page + 1) * pageSize >= data.total;
+
+          if (rows.length === 0) {
+            tbody.innerHTML =
+              '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-400">No posts found.</td></tr>';
+            return;
+          }
+
+          tbody.innerHTML = rows
+            .map((r) => {
+              const date = new Date(r.publishDate);
+              const statusBadge = r.draft
+                ? '<span class="text-xs px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">Draft</span>'
+                : '<span class="text-xs text-green-600 dark:text-green-400">Published</span>';
+              return `<tr>
+                <td class="px-4 py-3 max-w-xs truncate"><a class="text-blue-600 dark:text-blue-400 hover:underline font-medium edit-row" data-id="${r.id}" href="#">${escapeHtml(r.title)}</a><div class="text-xs text-gray-400 font-mono mt-0.5">${escapeHtml(r.slug)}</div></td>
+                <td class="px-4 py-3">${r.category ? escapeHtml(r.category) : '<span class="text-gray-400">—</span>'}</td>
+                <td class="px-4 py-3 whitespace-nowrap text-gray-500 dark:text-gray-400">${date.toLocaleDateString()}</td>
+                <td class="px-4 py-3">${statusBadge}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap">
+                  <button class="edit-row text-blue-600 dark:text-blue-400 hover:underline text-xs" data-id="${r.id}">Edit</button>
+                  <a class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-xs mx-1" target="_blank" href="/news/${encodeURIComponent(r.slug)}/">View ↗</a>
+                  <button class="delete-row text-red-600 dark:text-red-400 hover:underline text-xs" data-id="${r.id}" data-title="${escapeHtml(r.title)}">Delete</button>
+                </td>
+              </tr>`;
+            })
+            .join('');
+
+          tbody.querySelectorAll('.edit-row').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+              e.preventDefault();
+              const row = rows.find((r) => r.id === btn.dataset.id);
+              if (row) openEditor(row);
+            });
+          });
+          tbody.querySelectorAll('.delete-row').forEach((btn) => {
+            btn.addEventListener('click', async () => {
+              if (!confirm(`Delete "${btn.dataset.title}"? This cannot be undone.`)) return;
+              try {
+                await api('/api/admin/news/delete', {
+                  method: 'POST',
+                  body: JSON.stringify({ id: btn.dataset.id }),
+                });
+                toast('Post deleted');
+                load();
+              } catch (err) {
+                toast(String(err.message || err), 'error');
+              }
+            });
+          });
+        } catch (err) {
+          tbody.innerHTML = `<tr><td colspan="5" class="px-4 py-8 text-center text-red-500">Failed to load: ${escapeHtml(String(err.message || err))}</td></tr>`;
+        }
+      }
+
+      function openEditor(row) {
+        document.getElementById('editor-title').textContent = row ? 'Edit Post' : 'New Post';
+        document.getElementById('f-id').value = row?.id || '';
+        document.getElementById('f-title').value = row?.title || '';
+        document.getElementById('f-slug').value = row?.slug || '';
+        document.getElementById('f-category').value = row?.category || '';
+        document.getElementById('f-tags').value = (row?.tags || []).join(', ');
+        document.getElementById('f-author').value = row?.author || '';
+        const d = row ? new Date(row.publishDate) : new Date();
+        const pad = (n) => String(n).padStart(2, '0');
+        document.getElementById('f-publishDate').value =
+          `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+        document.getElementById('f-image').value = row?.image || '';
+        document.getElementById('f-excerpt').value = row?.excerpt || '';
+        document.getElementById('f-body').value = row?.body || '';
+        document.getElementById('f-metadataTitle').value = row?.metadataTitle || '';
+        document.getElementById('f-metadataDescription').value = row?.metadataDescription || '';
+        document.getElementById('f-draft').checked = row ? !!row.draft : false;
+        document.getElementById('live-link').textContent = row ? `Live: /news/${row.slug}/` : '';
+        document.getElementById('editor-overlay').classList.remove('hidden');
+        document.getElementById('editor-panel').classList.remove('hidden');
+      }
+
+      function closeEditor() {
+        document.getElementById('editor-overlay').classList.add('hidden');
+        document.getElementById('editor-panel').classList.add('hidden');
+      }
+
+      document.getElementById('new-post-btn').addEventListener('click', () => openEditor(null));
+      document.getElementById('editor-close').addEventListener('click', closeEditor);
+      document.getElementById('editor-cancel').addEventListener('click', closeEditor);
+      document.getElementById('editor-overlay').addEventListener('click', closeEditor);
+
+      document.getElementById('post-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const id = document.getElementById('f-id').value;
+        const get = (idEl) => document.getElementById(idEl).value.trim();
+        const body = {
+          id,
+          title: get('f-title'),
+          slug: get('f-slug'),
+          category: get('f-category'),
+          tags: get('f-tags')
+            .split(',')
+            .map((t) => t.trim())
+            .filter(Boolean),
+          author: get('f-author'),
+          publishDate: document.getElementById('f-publishDate').value,
+          image: get('f-image'),
+          excerpt: get('f-excerpt'),
+          body: get('f-body'),
+          metadataTitle: get('f-metadataTitle'),
+          metadataDescription: get('f-metadataDescription'),
+          draft: document.getElementById('f-draft').checked,
+        };
+        const btn = document.getElementById('save-btn');
+        btn.disabled = true;
+        btn.textContent = 'Saving…';
+        try {
+          await api(id ? '/api/admin/news/update' : '/api/admin/news', {
+            method: 'POST',
+            body: JSON.stringify(body),
+          });
+          toast('Saved');
+          closeEditor();
+          page = 0;
+          load();
+        } catch (err) {
+          toast(String(err.message || err), 'error');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Save';
+        }
+      });
+
+      let searchTimer;
+      document.getElementById('search-q').addEventListener('input', (e) => {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => {
+          q = e.target.value.trim();
+          page = 0;
+          load();
+        }, 300);
+      });
+
+      document.querySelectorAll('.status-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          status = btn.dataset.status || '';
+          page = 0;
+          document.querySelectorAll('.status-tab').forEach((b) => {
+            b.classList.toggle('bg-blue-600', b === btn);
+            b.classList.toggle('text-white', b === btn);
+            b.classList.toggle('border-blue-600', b === btn);
+          });
+          load();
+        });
+      });
+
+      document.getElementById('prev-page').addEventListener('click', () => {
+        if (page > 0) {
+          page -= 1;
+          load();
+        }
+      });
+      document.getElementById('next-page').addEventListener('click', () => {
+        page += 1;
+        load();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeEditor();
+      });
+
+      load();
+    })();
+  </script>
+</AdminLayout>

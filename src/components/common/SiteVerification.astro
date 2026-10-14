@@ -1,0 +1,9 @@
+---
+export interface Props {
+  id?: string;
+}
+
+const { id = '' } = Astro.props;
+---
+
+{id && <meta name="google-site-verification" content={id} />}

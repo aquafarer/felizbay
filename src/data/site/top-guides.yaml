@@ -1,0 +1,9 @@
+badge: 'Pool Guides'
+heading: 'Start here before you buy'
+description: 'Practical guides for pool buyers — choosing a size, setup, water care, and storage.'
+guides:
+  - 'how-to-choose-inflatable-pool'
+  - 'inflatable-pool-setup'
+  - 'inflatable-pool-maintenance'
+browseText: 'See all pool FAQs →'
+browseHref: '/faq'

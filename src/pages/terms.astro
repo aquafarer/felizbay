@@ -1,0 +1,49 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Terms and Conditions — ${SITE.name}`,
+  description: 'Felizbay terms and conditions governing the use of our website and services.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Terms and Conditions' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+    <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">Terms and Conditions</h1>
+    <div
+      class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+    >
+      <p><em>Last updated: June 18, 2026</em></p>
+      <p>
+        By accessing or using this website, you agree to be bound by these Terms and Conditions. If you do not agree,
+        please do not use our site.
+      </p>
+      <h2 id="intellectual-property">Intellectual Property</h2>
+      <p>
+        All content, trademarks, and intellectual property on this website are owned by or licensed to Felizbay. You
+        may not reproduce, distribute, or create derivative works without our prior written consent.
+      </p>
+      <h2 id="product-availability">Product Availability</h2>
+      <p>
+        All products are subject to availability. We reserve the right to discontinue any product at any time without
+        notice. Prices and specifications may change without notice.
+      </p>
+      <h2 id="regional-distribution">Regional Distribution & Service Areas</h2>
+      <p>Felizbay LLC operates with exclusive regional distribution agreements.</p>
+      <h2 id="limitation-of-liability">Limitation of Liability</h2>
+      <p>
+        Felizbay shall not be liable for any indirect, incidental, special, or consequential damages arising from the
+        use of our products or website.
+      </p>
+      <h2 id="governing-law">Governing Law</h2>
+      <p>
+        These terms shall be governed by and construed in accordance with the laws of the State of New Mexico, United
+        States of America, without regard to its conflict of laws principles.
+      </p>
+      <h2 id="contact">Contact</h2>
+      <p>For questions about these terms, contact us at info@felizbay.com.</p>
+    </div>
+  </section>
+</Layout>

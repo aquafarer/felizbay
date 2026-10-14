@@ -1,0 +1,239 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { INQUIRY_STATUSES } from '../../../workers/shared/schema';
+export const prerender = true;
+
+const statuses = INQUIRY_STATUSES as readonly string[];
+---
+
+<AdminLayout title="Inquiries / Submissions" active="submissions">
+  <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+    <div>
+      <h1 class="text-xl font-bold">Contact Submissions</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        Stored in Cloudflare D1 — status changes are saved instantly.
+      </p>
+    </div>
+    <a
+      href="/api/admin/inquiries.csv"
+      class="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-md bg-green-600 hover:bg-green-700 text-white"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 10l5 5 5-5M12 15V3"></path></svg
+      >
+      Export CSV
+    </a>
+  </div>
+
+  <div class="mb-4 flex flex-wrap gap-2" id="status-tabs">
+    <button class="status-tab px-3 py-1.5 text-sm rounded-full border" data-status=""> All </button>
+    {
+      statuses.map((s) => (
+        <button class="status-tab px-3 py-1.5 text-sm rounded-full border capitalize" data-status={s}>
+          {s}
+        </button>
+      ))
+    }
+  </div>
+
+  <div class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+    <span id="total-label">Loading…</span>
+  </div>
+
+  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-800 text-sm">
+      <thead class="bg-gray-50 dark:bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">Received</th>
+          <th class="px-4 py-3 text-left font-medium">Name</th>
+          <th class="px-4 py-3 text-left font-medium">Email</th>
+          <th class="px-4 py-3 text-left font-medium">Country</th>
+          <th class="px-4 py-3 text-left font-medium">Subject</th>
+          <th class="px-4 py-3 text-left font-medium">Status</th>
+          <th class="px-4 py-3"></th>
+        </tr>
+      </thead>
+      <tbody id="inquiry-rows" class="divide-y divide-gray-200 dark:divide-gray-800">
+        <tr>
+          <td colspan="7" class="px-4 py-8 text-center text-gray-400">Loading…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-4 flex items-center gap-3 text-sm">
+    <button id="prev-page" class="px-3 py-1.5 rounded-md border disabled:opacity-40">← Prev</button>
+    <span id="page-label" class="text-gray-500 dark:text-gray-400">Page 1</span>
+    <button id="next-page" class="px-3 py-1.5 rounded-md border disabled:opacity-40">Next →</button>
+  </div>
+
+  <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <script is:inline>
+    (function () {
+      const STATUSES = ['new', 'contacted', 'quoted', 'closed'];
+      let page = 0;
+      let status = '';
+      const pageSize = 30;
+
+      function toast(msg, type) {
+        const el = document.createElement('div');
+        const bg = type === 'error' ? 'bg-red-600 text-white' : 'bg-green-600 text-white';
+        el.className = `${bg} px-4 py-2 rounded-md shadow-lg text-sm pointer-events-auto`;
+        el.textContent = msg;
+        document.getElementById('toast-container').appendChild(el);
+        setTimeout(() => {
+          el.style.opacity = '0';
+          setTimeout(() => el.remove(), 300);
+        }, 3000);
+      }
+
+      async function load() {
+        const tbody = document.getElementById('inquiry-rows');
+        tbody.innerHTML = '<tr><td colspan="7" class="px-4 py-8 text-center text-gray-400">Loading…</td></tr>';
+        const params = new URLSearchParams({ page: String(page), pageSize: String(pageSize) });
+        if (status) params.set('status', status);
+        try {
+          const res = await fetch(`/api/admin/inquiries?${params}`, { credentials: 'same-origin' });
+          if (res.status === 401) {
+            window.location.replace('/login');
+            return;
+          }
+          if (!res.ok) throw new Error(await res.text());
+          const data = await res.json();
+          const rows = data.rows || [];
+          document.getElementById('total-label').textContent = `${data.total} total · ${
+            data.status === 'all' ? 'all statuses' : `status: ${data.status}`
+          }`;
+          document.getElementById('page-label').textContent = `Page ${page + 1}`;
+          const prev = document.getElementById('prev-page');
+          const next = document.getElementById('next-page');
+          prev.disabled = page === 0;
+          next.disabled = (page + 1) * pageSize >= data.total;
+
+          if (rows.length === 0) {
+            tbody.innerHTML =
+              '<tr><td colspan="7" class="px-4 py-8 text-center text-gray-400">No submissions yet.</td></tr>';
+            return;
+          }
+
+          tbody.innerHTML = rows
+            .map((r) => {
+              const date = new Date(r.createdAt);
+              const name = [r.name, r.company].filter(Boolean).join(' · ') || '—';
+              const opts = STATUSES.map(
+                (s) => `<option value="${s}" ${s === r.status ? 'selected' : ''}>${s}</option>`
+              ).join('');
+              return `<tr>
+                <td class="px-4 py-3 whitespace-nowrap text-gray-500 dark:text-gray-400">${date.toLocaleString()}</td>
+                <td class="px-4 py-3 font-medium whitespace-nowrap">${escapeHtml(name)}</td>
+                <td class="px-4 py-3 whitespace-nowrap"><a class="text-blue-600 dark:text-blue-400 hover:underline" href="mailto:${encodeURIComponent(r.email)}">${escapeHtml(r.email)}</a></td>
+                <td class="px-4 py-3">${escapeHtml(r.country || '—')}</td>
+                <td class="px-4 py-3 max-w-xs truncate">${escapeHtml(r.subject || r.requirements || '—')}</td>
+                <td class="px-4 py-3"><select class="status-select text-xs rounded-md border px-2 py-1 capitalize" data-id="${r.id}">${opts}</select></td>
+                <td class="px-4 py-3"><button class="view-row text-blue-600 dark:text-blue-400 hover:underline text-xs" data-id="${r.id}">View</button></td>
+              </tr>`;
+            })
+            .join('');
+
+          tbody.querySelectorAll('.status-select').forEach((sel) => {
+            sel.addEventListener('change', async () => {
+              try {
+                const res = await fetch('/api/admin/inquiries/status', {
+                  method: 'POST',
+                  credentials: 'same-origin',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ id: sel.dataset.id, status: sel.value }),
+                });
+                if (res.status === 401) return window.location.replace('/login');
+                if (!res.ok) throw new Error();
+                toast('Status updated');
+              } catch {
+                toast('Failed to update status', 'error');
+              }
+            });
+          });
+
+          tbody.querySelectorAll('.view-row').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const row = rows.find((r) => r.id === btn.dataset.id);
+              if (!row) return;
+              const open = tbody.querySelector(`tr.detail-row[data-id="${row.id}"]`);
+              if (open) {
+                open.remove();
+                return;
+              }
+              tbody.querySelectorAll('tr.detail-row').forEach((tr) => tr.remove());
+              const fields = [
+                ['Name', row.name],
+                ['Company', row.company],
+                ['Country', row.country],
+                ['Email', row.email],
+                ['WhatsApp / TEL', row.whatsapp || row.tel],
+                ['Address', row.address],
+                ['Zip', row.zip],
+                ['Subject', row.subject],
+                ['Message', row.message || row.requirements],
+                ['IP', row.ip],
+                ['User-Agent', row.userAgent],
+                ['Locale', row.locale],
+                ['Status', row.status],
+              ];
+              const detailTr = document.createElement('tr');
+              detailTr.className = 'detail-row';
+              detailTr.dataset.id = row.id;
+              const attachment = row.logoKey
+                ? `<div><span class="font-medium text-gray-500 dark:text-gray-400">Attachment:</span> <a class="text-sky-600 dark:text-sky-400 underline break-all" href="/api/admin/inquiries/file?id=${encodeURIComponent(row.id)}" target="_blank" rel="noopener noreferrer">${escapeHtml(String(row.logoKey).split('/').pop() || 'file')}</a></div>`
+                : '';
+              detailTr.innerHTML = `<td colspan="7" class="px-4 py-3"><div class="rounded-md bg-gray-50 dark:bg-gray-900 p-4 text-xs space-y-1.5">${fields
+                .filter(([, v]) => v)
+                .map(
+                  ([k, v]) =>
+                    `<div><span class="font-medium text-gray-500 dark:text-gray-400">${escapeHtml(k)}:</span> <span class="break-words">${escapeHtml(v)}</span></div>`
+                )
+                .join('')}${attachment}</div></td>`;
+              btn.closest('tr')?.after(detailTr);
+            });
+          });
+        } catch (err) {
+          tbody.innerHTML = `<tr><td colspan="7" class="px-4 py-8 text-center text-red-500">Failed to load: ${escapeHtml(String(err))}</td></tr>`;
+        }
+      }
+
+      function escapeHtml(s) {
+        return String(s ?? '').replace(/[&<>"']/g, (c) => {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      document.querySelectorAll('.status-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          status = btn.dataset.status || '';
+          page = 0;
+          document.querySelectorAll('.status-tab').forEach((b) => {
+            b.classList.toggle('bg-blue-600', b === btn);
+            b.classList.toggle('text-white', b === btn);
+            b.classList.toggle('border-blue-600', b === btn);
+          });
+          load();
+        });
+      });
+      document.getElementById('prev-page').addEventListener('click', () => {
+        if (page > 0) {
+          page -= 1;
+          load();
+        }
+      });
+      document.getElementById('next-page').addEventListener('click', () => {
+        page += 1;
+        load();
+      });
+
+      load();
+    })();
+  </script>
+</AdminLayout>

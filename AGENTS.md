@@ -1,0 +1,210 @@
+# AstroWind Agent Instructions
+
+## Project Overview
+
+AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Felizbay** — a 15-language water-sports equipment platform (~4,650 pages), deployed to **Cloudflare Pages + 5 Workers**.
+
+**Stack:** Astro 7.2 | Tailwind CSS 4.3 (`@tailwindcss/vite`) | TypeScript 5.9 | MDX | Sharp | Vite 8
+
+## Quick Start for AI Agents (read order)
+
+Fastest way to understand the whole system: `README.md` §0 (Quick Start + file map) → `README.md` §1–9 → `TECH.md` (Chinese deep-dive) → `astro.config.ts` (routes/redirects) → `src/config.yaml` (site config). A full "where does each architecture piece live" table is in `README.md` §0 — consult it before touching unfamiliar subsystems.
+
+## Quick Reference
+
+| Command           | Purpose                             |
+| ----------------- | ----------------------------------- |
+| `npm run dev`     | Start dev server at localhost:4321  |
+| `npm run build`   | Production build to `./dist/`       |
+| `npm run preview` | Preview production build locally    |
+| `npm run check`   | Run astro check + ESLint + Prettier |
+| `npm run fix`     | Auto-fix ESLint + Prettier issues   |
+
+**Node.js requirement:** >= 22.12.0 (local dev uses Node 26)
+
+**Astro 7 / Vite 8 notes:**
+
+- `compressHTML: true` is set explicitly in `astro.config.ts` (Astro 7 defaults to `'jsx'`)
+- Rust compiler is strict: **no top-level `return` in `.astro` frontmatter** (e.g. `[category].astro` uses `Astro.redirect(...)` without `return`) and no top-level `return` in inline `<script>` (wrap in an IIFE, see `BasicScripts.astro`)
+- `output: 'static'` in `astro.config.ts` — the site is pure SSG; API/dynamic requests are handled by the 5 zone-route Workers. `scripts/patch-worker.mjs` (subdomain routing for `output: 'server'`) is a **legacy leftover** — it never executes under `static` and is not part of the pipeline.
+- **Lockfile discipline (CI `npm ci` is strict):** the lockfile must resolve every `package.json` range to its **latest available version** on the registry. When a dependency publishes a new patch/minor (e.g. `eslint`, `@typescript-eslint/*`), CI fails with `EUSAGE: lock file's X does not satisfy X` — fix by running `npm update` (plain `npm install` does NOT bump within-range versions), verify `npm ci --dry-run`, then commit `package-lock.json`.
+- `npm install` no longer needs `--legacy-peer-deps` (peer deps resolved cleanly since astro-auto-import 0.5.2); `package.json` overrides pin `"vite": "^8"` + `"yaml": ">=2.8.3"`
+- `@astrojs/markdown-remark` `unified({...})` processor is configured in `astro.config.ts`
+
+## Architecture
+
+### Directory Structure
+
+```
+src/
+  assets/styles/tailwind.css   # Tailwind v4 config (themes, utilities, plugins)
+  components/
+    common/        # Shared: Image, Metadata, Analytics, ToggleTheme, BasicScripts
+    ui/            # Primitives: Button, Headline, WidgetWrapper, ItemGrid
+    widgets/       # Page sections: Hero, Features, Pricing, Header, Footer
+    blog/          # Blog: SinglePost, List, Pagination, Tags
+    randdcenter/   # Shared EN page components (*.en.astro) used by all langs
+    CustomStyles.astro  # CSS variables for colors and fonts
+  content.config.ts    # Content Collections schema (Astro v7 location)
+  data/post/           # Blog posts (.md, .mdx)
+  layouts/             # Layout.astro, PageLayout.astro, MarkdownLayout.astro
+  pages/               # File-based routing; [lang]/ for localized pages
+  utils/               # blog.ts, images.ts, permalinks.ts, frontmatter.ts, schema-graph.ts
+  config.yaml          # Site configuration (loaded as virtual module)
+  config/facts.json    # Entity facts for the JSON-LD @graph hub
+  navigation.ts        # Navigation structure
+  i18n/                # Locale config, root-only paths, generated ui-all.ts
+  types.d.ts           # TypeScript type definitions
+vendor/integration/    # Custom Astro integration for config loading
+workers/               # 5 Cloudflare Workers: contact, ai, admin, news, automation
+migrations/            # D1 migrations (0000 init, 0002 rate_limit)
+scripts/               # Build pipeline + gates (see Build Pipeline below)
+```
+
+### Build Pipeline
+
+`npm run build` runs (see `package.json`): `geo-build.mjs` → `generate-data-json.mjs` → `generate-geo-files.ts` → `_gen-uiall.cjs` → `_gen-pages.cjs` → `gen-icon-svgs.cjs` → `generate-image-dimensions.mjs` → `astro build` (~4,650 pages) → `mirror-root-en.mjs` (mirrors root pages to `/en/`) → `generate-sitemaps.mjs` → `validate-dist.mjs` (dist gate) → `fold-untranslated-canonical.mjs` (degraded langs fold to EN canonical) → `clean-public-assets.mjs` → `generate-ai-corpus.mjs` (AI knowledge corpus → `dist/ai-corpus/*.json` + manifest, consumed by ai-worker's `/api/reindex`).
+
+### Redirects
+
+All legacy redirect pages were migrated from `Astro.redirect()` page files (0-byte shells in static mode) to the `LEGACY_REDIRECTS` table in `astro.config.ts`, expanded to all 14 non-en languages by `buildLocalizedRedirects` + the `mirror-root-en` script. Do NOT add new `Astro.redirect()` page files — add entries to `LEGACY_REDIRECTS` instead.
+
+### Path Aliases
+
+Use `~/` to import from `src/`:
+
+```typescript
+import Image from '~/components/common/Image.astro';
+import { SITE } from 'astrowind:config';
+```
+
+### Configuration System
+
+Site config lives in `src/config.yaml` and is loaded as a Vite virtual module `astrowind:config` by the custom integration in `vendor/integration/`. Exports: `SITE`, `I18N`, `METADATA`, `APP_BLOG`, `UI`, `ANALYTICS`.
+
+## Tailwind CSS v4
+
+Configuration is CSS-first in `src/assets/styles/tailwind.css`:
+
+- **Theme tokens:** `@theme { --color-primary: var(--aw-color-primary); ... }`
+- **Custom utilities:** `@utility bg-page { ... }`
+- **Dark mode:** Class-based via `@variant dark (&:where(.dark, .dark *))`
+- **Plugins:** `@plugin "@tailwindcss/typography"`
+- **Custom variant:** `@custom-variant intersect (&:not([no-intersect]))`
+
+CSS variables for colors/fonts are defined in `src/components/CustomStyles.astro` with light/dark theme variants.
+
+The Vite plugin `@tailwindcss/vite` is configured in `astro.config.ts` (not as an Astro integration) — `postcss.config.js` was removed; do not reintroduce the PostCSS route (Vite 8 / Rolldown cannot resolve the bare `@import "tailwindcss"` specifier through postcss-import).
+
+### Class Merging
+
+Components use `twMerge` from `tailwind-merge` v3 for conditional class composition.
+
+## JSON-LD Entity Hub (P1-C)
+
+实体身份已收敛为单一 `@graph` 枢纽，避免同名 Organization/Brand/ManufacturingBusiness 多份矛盾声明：
+
+- **`src/utils/schema-graph.ts`** — `buildGraph(extra?)` 输出单一 `@graph`（Organization+ManufacturingBusiness 双类型 @id 枢纽 + WebSite + Brand + Person(founder)），全部字段从 `src/config/facts.json` 渲染。
+- **`Layout.astro`** — 全局 Organization/Person/WebSite 三块用 `disableGlobalLd` prop 包裹（默认输出）。
+- **`PageLayout.astro`** — 透传 `disableGlobalLd`。
+- **首页（`src/pages/index.astro` 与 `[lang]/index.astro`）** — 传 `disableGlobalLd`，删除内联 ManufacturingBusiness/Brand/entity-graph 块，仅输出 `buildGraph()` + FAQPage/ItemList/BreadcrumbList 页面级标记。
+- 禁止新页面内联 Organization/Brand/WebSite/Person 实体声明；实体身份一律走 `buildGraph()` 或 Layout 全局块。
+
+## Content Collections
+
+Defined in `src/content.config.ts` using the Astro v7 Content Layer API with `glob()` loader. Posts are in `src/data/post/` as `.md` or `.mdx` files.
+
+Post frontmatter: `title` (required), `publishDate`, `updateDate`, `draft`, `excerpt`, `image`, `category`, `tags`, `author`, `metadata`.
+
+## Component Patterns
+
+- Props extend interfaces from `~/types`
+- Use `class:list` for conditional classes
+- Use `twMerge()` when accepting className overrides
+- Use named slots for layout composition
+- Widget components accept standardized props (see `~/types`)
+
+## Image Handling
+
+`src/components/common/Image.astro` supports:
+
+- Local images via `astro:assets` (optimized by Sharp)
+- Remote images via Unpic CDN
+- Allowed domains (for providers Unpic can't detect, processed by Sharp): `cdn.pixabay.com`
+
+Hero images use `loading="eager"` and `fetchpriority="high"`.
+
+## Link Refactor (URL / name rename across the site)
+
+When the admin renames a navigation item (e.g. `Blog` → `News`, `/blog` → `/news`), other YAML/MD/MDX files in `src/data/` can still reference the old URL or name. Two admin tools handle this:
+
+- **`/keystatic/link-refactor`** — paste `oldUrl` + `newUrl` (and optionally `oldName` + `newName`), scan the entire `src/data/` tree (excluding `contact/*.enc.json`), preview every match with a colour-coded diff, then commit per-file. URL matching uses `(?<![A-Za-z0-9_-])URL(?![A-Za-z0-9_-])` so `/blog` does not match `/blog-post`. Name matching is whole-word. Code blocks (`...`) are skipped.
+  - Library: `src/lib/link-refactor.ts`
+  - Endpoints: `POST /api/admin/refactor/scan`, `POST /api/admin/refactor/apply`
+  - URL prefill: `?oldUrl=…&newUrl=…&oldName=…&newName=…` (so other admin pages can deep-link with changes).
+- **`/keystatic/validate-links`** — read-only sweep that extracts every `href` / `url` / `linkUrl` / Markdown link / HTML anchor from data files, builds a known-URL set from `src/config.yaml` + `src/data/post/*` + `src/data/product/*` + static pages, and reports any internal URL that doesn't resolve.
+
+**Sitemap is auto-generated by `@astrojs/sitemap`** from the actual routes — renaming `Blog` to `News` only needs the routes to change; no manual sitemap edit is required. (The search index at `src/pages/search-index.json.ts` and the RSS feed at `src/pages/rss.xml.ts` are also regenerated on every build from the live collections, so they follow the renames automatically.)
+
+The navigation editor (`src/pages/keystatic/navigation.astro`) shows a static warning that points at `/keystatic/link-refactor` whenever a nav URL/name is changed. After a successful save, the page also **auto-detects** which text/href pairs were modified and shows a floating banner at the bottom of the page. Each detected change has a one-click "重命名 URL →" / "重命名 文字 →" button that opens the refactor tool with the change pre-filled via `?oldUrl=&newUrl=` or `?oldName=&newName=` query params. The banner also has a "重新加载" button (to refresh the new SHA into the form) and a "收起" button (to dismiss).
+
+## Contact Form (D1 storage + Turnstile + email)
+
+`POST /api/contact` is a **Cloudflare Worker** (`workers/contact-worker/`, SSR route) that:
+
+1. Sanitises + validates the fields (First/Last Name, Company, Address, Zip, Country, E-mail, TEL, Subject, Message) plus SPAM_KEYWORDS filtering.
+2. Rejects honeypot submissions (`email_confirm` hidden field): returns HTTP 200 with a fake UUID but writes nothing.
+3. Verifies the **Cloudflare Turnstile** token (`workers/contact-worker/index.ts` `verifyTurnstile`) when `TURNSTILE_SECRET_KEY` is configured.
+4. Enforces **5 submissions per IP per hour** via the global D1 `rate_limit` table (`migrations/0002_rate_limit.sql`) — persistent across worker isolates, not per-isolate memory. Returns HTTP 429 + `Retry-After`.
+5. Inserts the record into D1 `inquiry` (`Felizbay-db`) — no GitHub writes, no deploy churn.
+6. Sends the notification email via **Resend** with `Reply-To` set to the submitter.
+
+Admin reads submissions at `/keystatic/contact-submissions` — the page fetches `/api/admin/inquiries` (admin-worker, D1-backed, cookie-authenticated) and shows the latest 50; full data is exportable via `/api/admin/inquiries.csv`.
+
+**Daily D1 maintenance:** `felizbay-automation` (cron `0 2 * * *`) runs `src/db-cleanup.ts` — purges expired `session`/`verification` rows (better-auth) and `rate_limit` rows older than 30 days. Manual trigger: `GET /api/automation/cleanup-db?token=<CLEANUP_TOKEN>` (token check only when `CLEANUP_TOKEN` var is set).
+
+**Turnstile wiring:** the widget renders when `PUBLIC_TURNSTILE_SITE_KEY` is set (injected by CI into both `deploy.yml` and `ci.yml` builds); the secret is synced to the contact + admin workers via `wrangler secret bulk` in `deploy.yml`.
+
+**Security note:** `contact_resend_api_key` lives in the public GitHub repo (bundled into the Cloudflare Worker) — rotate the Resend key periodically.
+
+## Generated i18n Data (build-time, NOT in public/)
+
+`scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):
+
+- `page-content.json` — **full** 15-language page + site YAML payload (~6.8 MiB after excluding `content-v2*`)
+- `site-data.ts` — only `{lang}/site-{name}` keys (~2.2 MiB); imported by `[lang]/index`, `[lang]/[category]`, `about`, `contact`, `evidence/*`, `research/index`, `use-cases/index`
+- `pages/{name}.ts` — one module per page (~110 files); consumed via `setPageContentData(__pageData)` + `getPageContent(lang, page)` in `src/i18n/page-content.ts`
+- `i18n-config.json` / `ui-all.ts` / `ui/{lang}.ts` — UI strings (the only file that also ships in `public/data/` is the 1.9 MiB `i18n-config.json`)
+
+**Rules:** `content-v2*` site keys are **excluded** (loaded directly by `src/data/content-v2.ts` from YAML). Never emit large JSON into `public/` — Cloudflare Pages rejects files ≥ 25 MiB (`data/page-content.json` hit this at 27 MiB; it now lives only in `src/i18n/generated/`).
+
+### i18n Translation Scripts & Milestone (2026-08)
+
+**Status:** 14 languages × 1,721 keys fully aligned (0 missing/extra). 3,807 sameAsEn keys translated. 2,456 orphan keys cleaned. 252/252 page YAMLs translated. Remaining 808 sameAsEn = verified correct (540 technical terms + 109 cognates + 29 brand names + 124 short words).
+
+| Script                                | Purpose                                                                  | Flags                  |
+| ------------------------------------- | ------------------------------------------------------------------------ | ---------------------- |
+| `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys (Google Translate primary, MyMemory backup) | `--dry-run`, `--force` |
+| `scripts/translate-pages.mjs`         | Translate page YAML content (Google Translate primary, MyMemory backup)  | `--dry-run`, `--force` |
+| `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)        | —                      |
+| `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                   | —                      |
+| `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                        | —                      |
+
+**Do NOT translate:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Felizbay) stay as-is in all languages. Cognates matching EN are also preserved.
+
+## Iron Rule — Encoding / Garbled Text
+
+Every page modification **must** be checked for garbled text (mojibake) across **all 15 languages** before committing:
+
+- Run `rg '\uFFFD' src/` or `Get-ChildItem -Recurse src -Include *.yaml,*.yml,*.astro,*.ts,*.json | ForEach-Object { if ((Get-Content -Raw $_.FullName) -match '\uFFFD') { $_ } }` — **zero matches allowed**
+- Visually spot-check the modified page in at least one non-Latin language (ar, el, ru) and one Latin language (de, fr, es, ...) in browser
+- Verify that translation YAML files (`src/data/pages/{lang}/`) are saved as **UTF-8 without BOM** (PowerShell: `-Encoding UTF8` — NOT `-Encoding utf8` which writes BOM)
+
+## Verification Checklist
+
+After changes, always verify:
+
+1. `npm run build` succeeds (~4,650 pages)
+2. `npm run check` passes (astro check + ESLint + Prettier)
+3. Quality gates on `dist/`: no broken internal links (one known false positive: JS template string in `ar/search`), hreflang alternates 0 broken, canonical 0 broken, translation-gap scan `transGap(X): 0` (3 accepted word-form warnings), zero `noindex` leaks in sitemaps
+4. Visual check in browser: homepage, blog, dark mode, mobile menu, contact form (verify captcha + submission roundtrip end-to-end)

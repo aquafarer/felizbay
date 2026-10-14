@@ -1,0 +1,192 @@
+# Felizbay — GEO-friendly robots.txt（P0 修订版）
+#
+# 实测结论（04_verify_cloudflare_robots.py，2026-08-08）：
+#   ✅ Cloudflare 未注入 Managed robots.txt 阻断块（自有内容起始于 byte 0）
+#   ✅ 12 个 AI/搜索爬虫真实 UA 请求首页均 HTTP 200，内容与浏览器 100% 一致
+#   ✅ llms.txt (11KB) 与 llms-full.txt (494KB) 均可达
+# 2026-09-09 更新：llms.txt 重写为 llmstxt.org 规范格式（~6KB）；llms-full.txt 修复重复累积段（~204KB）
+#   ❌ 唯一问题：/internal/ 未 Disallow，"Social Engine v4.0" 内部工具页可被任意爬虫抓取
+#
+# 本版相对线上版的改动只有一处：给所有 User-agent 组补 Disallow: /internal/ 和 /login/
+# 其余部分（AI 爬虫全面 opt-in、Content-Signal、Sitemap 与 LLM-TXT 声明）保持不变。
+#
+# ⚠️ 每次改动 Cloudflare 面板后，务必重跑 04_verify_cloudflare_robots.py
+#    Managed robots.txt 若被开启，会在本文件"上方"注入阻断块，仓库里看不出来。
+
+# ---------- 共用禁止目录（每个 User-agent 组都要重复，robots.txt 不支持继承）----------
+# /keystatic/  CMS 后台
+# /api/        接口
+# /internal/   内部 SEO 工具页（P0-6）
+# /login/      登录页（P0-6）
+# /admin/
+# /search      站内搜索结果页（无限组合，浪费抓取预算）
+
+User-agent: GPTBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Google-CloudVertexBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: CCBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Bytespider
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Googlebot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: Bingbot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: BingPreview
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+
+User-agent: *
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /admin/
+Disallow: /search
+Content-Signal: search=yes,ai-input=yes,ai-train=yes,use=full
+
+# ---------- Sitemap ----------
+# 单一入口 sitemap-index.xml（generate-sitemaps.mjs 生成，汇总全部已过滤分片）
+Sitemap: https://felizbay.com/sitemap-index.xml
+# LLM training resources
+LLM-TXT: https://felizbay.com/llms.txt
+LLM-FULL: https://felizbay.com/llms-full.txt

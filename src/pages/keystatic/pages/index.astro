@@ -1,0 +1,58 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { PAGES } from '~/components/admin/page-schemas';
+export const prerender = true;
+
+const pages = PAGES;
+---
+
+<AdminLayout title="Page Content / Pages" active="pages">
+  <div class="mb-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-semibold">Page Content Manager</h1>
+        <p class="mt-1 text-sm text-gray-500">{pages.length} pages total</p>
+      </div>
+      <a
+        href="/keystatic/pages/new"
+        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">+ New Page</a
+      >
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {
+      pages.length === 0 && (
+        <div class="col-span-full text-center py-12 text-gray-500">
+          No pages yet. Click + New Page to create the first one.
+        </div>
+      )
+    }
+    {
+      pages.map((page) => (
+        <a
+          href={`/keystatic/pages/${page.slug}`}
+          class="block rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 hover:border-blue-400 transition"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-base font-semibold">{page.label}</div>
+              <div class="mt-1 text-xs text-gray-500 font-mono">{page.file}</div>
+            </div>
+            <span class="text-xs text-gray-400 font-mono">{page.path}</span>
+          </div>
+          {page.sections.length > 0 && (
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              {page.sections.map((s) => (
+                <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
+                  {s.label || s.key}:{s.type}
+                </span>
+              ))}
+            </div>
+          )}
+          <div class="mt-4 text-sm text-blue-600 dark:text-blue-400">Edit this page \u2192</div>
+        </a>
+      ))
+    }
+  </div>
+</AdminLayout>

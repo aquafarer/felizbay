@@ -1,0 +1,1250 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES } from '~/lib/i18n-admin';
+import FormDataLoader from '~/components/admin/FormDataLoader.astro';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = isDefault ? 'src/data/site/navigation.yaml' : `src/data/site/navigation.${locale}.yaml`;
+
+const localeLabels = ADMIN_LOCALES;
+const locales = ADMIN_LOCALE_CODES;
+
+let data: Record<string, any> = {};
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: Awaited<ReturnType<typeof client.readFile>> | undefined;
+    try {
+      // Read from draft branch first, fallback to main
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/navigation.yaml');
+        } else {
+          throw new Error('navigation.yaml not found');
+        }
+      }
+    }
+    const yamlMod = await import('js-yaml');
+    data = (yamlMod.load(f.content) as Record<string, any>) ?? {};
+    sha = f.sha;
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Load failed';
+  }
+}
+
+const header = data?.header ?? {};
+const topBar = header?.topBar ?? [];
+const footer = data?.footer ?? {};
+---
+
+<AdminLayout title="Navigation & Footer" active="navigation">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="text-2xl font-semibold">Navigation & Footer</h1>
+        <p class="mt-1 text-sm text-gray-500">Edit header menu, footer link groups, social icons.</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            locales.map((l) => (
+              <option value={l} selected={l === locale}>
+                {localeLabels[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-2 text-xs text-gray-500">
+      File: <code class="font-mono">{file}</code>
+      {
+        !isDefault && (
+          <span class="text-amber-600 dark:text-amber-400">
+            {' '}
+            &mdash; locale override (inherits English nav as baseline)
+          </span>
+        )
+      }
+    </p>
+    <p class="mt-2 text-xs text-amber-700 dark:text-amber-400">
+      ⚠️ If you rename a menu item or change a link, page content may still reference the old URL. Use the
+      <a class="font-medium underline" href="/keystatic/link-refactor">Link Refactor Tool</a>
+      to batch update. A banner will appear below after saving.
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Load failed: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="nav-form"
+    class="space-y-6 pb-40"
+    data-file={file}
+    data-sha={sha}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    <details
+      open
+      class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+    >
+      <summary
+        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
+      >
+        <div>
+          <div class="text-sm font-semibold">Top Bar</div>
+          <div class="text-xs text-gray-500 font-mono mt-0.5">header.topBar &mdash; thin utility bar above nav</div>
+        </div>
+      </summary>
+      <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800 space-y-4">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Top Bar Links (e.g. Find a Store | Help | Join Us | Sign In)</label
+            >
+            <button type="button" data-add-topbar-link class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >+ Add Link</button
+            >
+          </div>
+          <div data-topbar-list class="space-y-2">
+            {
+              (topBar ?? []).map((l: any) => (
+                <div data-topbar-row class="flex gap-2">
+                  <input
+                    type="text"
+                    name="topbarText"
+                    value={l.text ?? ''}
+                    placeholder="Link Text"
+                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <input
+                    type="text"
+                    name="topbarHref"
+                    value={l.href ?? ''}
+                    placeholder="/url"
+                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <button
+                    type="button"
+                    data-remove-topbar-link
+                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                  >
+                    Delete
+                  </button>
+                </div>
+              ))
+            }
+          </div>
+          <template data-topbar-template>
+            <div data-topbar-row class="flex gap-2">
+              <input
+                type="text"
+                name="topbarText"
+                placeholder="Link Text"
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <input
+                type="text"
+                name="topbarHref"
+                placeholder="/url"
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <button
+                type="button"
+                data-remove-topbar-link
+                class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete</button
+              >
+            </div>
+          </template>
+        </div>
+      </div>
+    </details>
+
+    <details
+      open
+      class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+    >
+      <summary
+        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
+      >
+        <div>
+          <div class="text-sm font-semibold">Header Navigation</div>
+          <div class="text-xs text-gray-500 font-mono mt-0.5">header.links / header.actions</div>
+        </div>
+      </summary>
+      <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800 space-y-4">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Navigation Groups (Dropdown Menus)</label
+            >
+            <button type="button" data-add-header-group class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >+ Add Group</button
+            >
+          </div>
+          <div data-header-groups class="space-y-3">
+            {
+              (header.links ?? []).map((g: any) => (
+                <div
+                  data-header-group-row
+                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
+                >
+                  <div class="flex gap-2">
+                    <input
+                      type="text"
+                      name="headerGroupText"
+                      value={g.text ?? ''}
+                      placeholder="Group Name (e.g. Products)"
+                      class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                    />
+                    <button
+                      type="button"
+                      data-remove-header-group
+                      class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                    >
+                      Delete Group
+                    </button>
+                  </div>
+                  <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                    <div class="flex items-center justify-between">
+                      <label class="text-xs text-gray-500">Sub Links</label>
+                      <button
+                        type="button"
+                        data-add-header-link
+                        class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        + Add Link
+                      </button>
+                    </div>
+                    <div data-header-links-list class="space-y-1.5">
+                      {(g.links ?? []).map((l: any) => (
+                        <div data-header-link-row class="flex gap-1">
+                          <input
+                            type="text"
+                            name="headerLinkText"
+                            value={l.text ?? ''}
+                            placeholder="Link Text"
+                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                          />
+                          <input
+                            type="text"
+                            name="headerLinkHref"
+                            value={l.href ?? ''}
+                            placeholder="/url"
+                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                          />
+                          <button
+                            type="button"
+                            data-remove-header-link
+                            class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    <template data-header-link-template>
+                      <div data-header-link-row class="flex gap-1">
+                        <input
+                          type="text"
+                          name="headerLinkText"
+                          placeholder="Link Text"
+                          class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                        />
+                        <input
+                          type="text"
+                          name="headerLinkHref"
+                          placeholder="/url"
+                          class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                        />
+                        <button
+                          type="button"
+                          data-remove-header-link
+                          class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <template data-header-group-template>
+            <div
+              data-header-group-row
+              class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
+            >
+              <div class="flex gap-2">
+                <input
+                  type="text"
+                  name="headerGroupText"
+                  placeholder="Group Name"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button
+                  type="button"
+                  data-remove-header-group
+                  class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete Group</button
+                >
+              </div>
+              <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs text-gray-500">Sub Links</label>
+                  <button
+                    type="button"
+                    data-add-header-link
+                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add Link</button
+                  >
+                </div>
+                <div data-header-links-list class="space-y-1.5"></div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Right Buttons (Actions)</label>
+            <button
+              type="button"
+              data-add-header-action
+              class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add Button</button
+            >
+          </div>
+          <div data-header-actions-list class="space-y-2">
+            {
+              (header.actions ?? []).map((a: any) => (
+                <div
+                  data-header-action-row
+                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
+                >
+                  <input
+                    type="text"
+                    name="headerActionText"
+                    value={a.text ?? ''}
+                    placeholder="Button Text"
+                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <input
+                    type="text"
+                    name="headerActionHref"
+                    value={a.href ?? ''}
+                    placeholder="/url"
+                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <select
+                    name="headerActionVariant"
+                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  >
+                    <option value="" selected={!a.variant}>
+                      Default
+                    </option>
+                    <option value="primary" selected={a.variant === 'primary'}>
+                      primary
+                    </option>
+                    <option value="secondary" selected={a.variant === 'secondary'}>
+                      secondary
+                    </option>
+                    <option value="tertiary" selected={a.variant === 'tertiary'}>
+                      tertiary
+                    </option>
+                  </select>
+                  <button
+                    type="button"
+                    data-remove-header-action
+                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                  >
+                    Delete
+                  </button>
+                </div>
+              ))
+            }
+          </div>
+          <template data-header-action-template>
+            <div
+              data-header-action-row
+              class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
+            >
+              <input
+                type="text"
+                name="headerActionText"
+                placeholder="Button Text"
+                class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <input
+                type="text"
+                name="headerActionHref"
+                placeholder="/url"
+                class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <select
+                name="headerActionVariant"
+                class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              >
+                <option value="">Default</option>
+                <option value="primary">primary</option>
+                <option value="secondary">secondary</option>
+                <option value="tertiary">tertiary</option>
+              </select>
+              <button
+                type="button"
+                data-remove-header-action
+                class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete</button
+              >
+            </div>
+          </template>
+        </div>
+      </div>
+    </details>
+
+    <details
+      open
+      class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+    >
+      <summary
+        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
+      >
+        <div>
+          <div class="text-sm font-semibold">Footer Link Groups</div>
+          <div class="text-xs text-gray-500 font-mono mt-0.5">footer.links</div>
+        </div>
+      </summary>
+      <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800 space-y-4">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Footer Categories</label>
+            <button type="button" data-add-footer-group class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >+ Add Category</button
+            >
+          </div>
+          <div data-footer-groups class="space-y-3">
+            {
+              (footer.links ?? []).map((g: any) => (
+                <div
+                  data-footer-group-row
+                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
+                >
+                  <div class="flex gap-2">
+                    <input
+                      type="text"
+                      name="footerGroupTitle"
+                      value={g.title ?? ''}
+                      placeholder="Category Title (e.g. Products)"
+                      class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                    />
+                    <button
+                      type="button"
+                      data-remove-footer-group
+                      class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                    >
+                      Delete Category
+                    </button>
+                  </div>
+                  <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                    <div class="flex items-center justify-between">
+                      <label class="text-xs text-gray-500">Links</label>
+                      <button
+                        type="button"
+                        data-add-footer-link
+                        class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        + Add Link
+                      </button>
+                    </div>
+                    <div data-footer-links-list class="space-y-1.5">
+                      {(g.links ?? []).map((l: any) => (
+                        <div data-footer-link-row class="flex gap-1">
+                          <input
+                            type="text"
+                            name="footerLinkText"
+                            value={l.text ?? ''}
+                            placeholder="Link Text"
+                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                          />
+                          <input
+                            type="text"
+                            name="footerLinkHref"
+                            value={l.href ?? ''}
+                            placeholder="/url"
+                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                          />
+                          <button
+                            type="button"
+                            data-remove-footer-link
+                            class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    <template data-footer-link-template>
+                      <div data-footer-link-row class="flex gap-1">
+                        <input
+                          type="text"
+                          name="footerLinkText"
+                          placeholder="Link Text"
+                          class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                        />
+                        <input
+                          type="text"
+                          name="footerLinkHref"
+                          placeholder="/url"
+                          class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                        />
+                        <button
+                          type="button"
+                          data-remove-footer-link
+                          class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <template data-footer-group-template>
+            <div
+              data-footer-group-row
+              class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
+            >
+              <div class="flex gap-2">
+                <input
+                  type="text"
+                  name="footerGroupTitle"
+                  placeholder="Category Title"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button
+                  type="button"
+                  data-remove-footer-group
+                  class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete Category</button
+                >
+              </div>
+              <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs text-gray-500">Links</label>
+                  <button
+                    type="button"
+                    data-add-footer-link
+                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add Link</button
+                  >
+                </div>
+                <div data-footer-links-list class="space-y-1.5"></div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </details>
+
+    <details
+      open
+      class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+    >
+      <summary
+        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
+      >
+        <div>
+          <div class="text-sm font-semibold">Footer Secondary Links + Copyright + Social</div>
+          <div class="text-xs text-gray-500 font-mono mt-0.5">footer.secondaryLinks / footNote / socialLinks</div>
+        </div>
+      </summary>
+      <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800 space-y-4">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Secondary Links (Bottom-Left, · Separated)</label
+            >
+            <button type="button" data-add-secondary class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >+ Add</button
+            >
+          </div>
+          <div data-secondary-list class="space-y-2">
+            {
+              (footer.secondaryLinks ?? []).map((l: any) => (
+                <div data-secondary-row class="flex gap-2">
+                  <input
+                    type="text"
+                    name="secondaryText"
+                    value={l.text ?? ''}
+                    placeholder="Link Text"
+                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <input
+                    type="text"
+                    name="secondaryHref"
+                    value={l.href ?? ''}
+                    placeholder="/url"
+                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <button
+                    type="button"
+                    data-remove-secondary
+                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                  >
+                    Delete
+                  </button>
+                </div>
+              ))
+            }
+          </div>
+          <template data-secondary-template>
+            <div data-secondary-row class="flex gap-2">
+              <input
+                type="text"
+                name="secondaryText"
+                placeholder="Link Text"
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <input
+                type="text"
+                name="secondaryHref"
+                placeholder="/url"
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <button type="button" data-remove-secondary class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                >Delete</button
+              >
+            </div>
+          </template>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Copyright (footNote, HTML supported)</label
+          >
+          <textarea
+            name="footNote"
+            rows="2"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            >{footer.footNote ?? ''}</textarea
+          >
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Social Media Icons</label>
+            <button type="button" data-add-social class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >+ Add</button
+            >
+          </div>
+          <div data-social-list class="space-y-2">
+            {
+              (footer.socialLinks ?? []).map((s: any) => (
+                <div
+                  data-social-row
+                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
+                >
+                  <input
+                    type="text"
+                    name="socialAria"
+                    value={s.ariaLabel ?? ''}
+                    placeholder="ariaLabel (e.g. X, Instagram)"
+                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <input
+                    type="text"
+                    name="socialIcon"
+                    value={s.icon ?? ''}
+                    placeholder="Icon (e.g. tabler:brand-x)"
+                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <input
+                    type="text"
+                    name="socialHref"
+                    value={s.href ?? ''}
+                    placeholder="URL"
+                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <button
+                    type="button"
+                    data-remove-social
+                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                  >
+                    Delete
+                  </button>
+                </div>
+              ))
+            }
+          </div>
+          <template data-social-template>
+            <div
+              data-social-row
+              class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
+            >
+              <input
+                type="text"
+                name="socialAria"
+                placeholder="ariaLabel (e.g. X, Instagram)"
+                class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <input
+                type="text"
+                name="socialIcon"
+                placeholder="Icon (e.g. tabler:brand-x)"
+                class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <input
+                type="text"
+                name="socialHref"
+                placeholder="URL"
+                class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <button type="button" data-remove-social class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                >Delete</button
+              >
+            </div>
+          </template>
+        </div>
+      </div>
+    </details>
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500" data-file-info>File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div
+    id="change-banner"
+    class="hidden fixed bottom-20 left-1/2 -translate-x-1/2 z-50 max-w-3xl w-[calc(100%-3rem)] rounded-xl border-2 border-amber-400 bg-amber-50 dark:bg-amber-950/60 dark:border-amber-600 shadow-lg p-4 text-sm"
+  >
+    <div class="flex items-start justify-between gap-3 mb-3">
+      <div class="font-semibold text-amber-900 dark:text-amber-200">
+        Detected <span data-change-count>0</span> changes
+      </div>
+      <div class="flex gap-1">
+        <button
+          type="button"
+          data-banner-reload
+          class="text-xs px-2 py-1 rounded border border-amber-400 dark:border-amber-700 hover:bg-amber-100 dark:hover:bg-amber-900/40"
+          >Reload</button
+        >
+        <button
+          type="button"
+          data-banner-dismiss
+          class="text-xs px-2 py-1 rounded border border-amber-400 dark:border-amber-700 hover:bg-amber-100 dark:hover:bg-amber-900/40"
+          >Dismiss</button
+        >
+      </div>
+    </div>
+    <p class="text-xs text-amber-800 dark:text-amber-300 mb-3">
+      Other files (home.yaml / about.yaml / posts / products, etc.) may still reference the old URL or text. Click the
+      "Rename" buttons below to pre-fill the
+      <a href="/keystatic/link-refactor" class="font-medium underline">Link Refactor Tool</a> with these changes.
+    </p>
+    <ul data-change-list class="space-y-2 max-h-80 overflow-y-auto pr-1"></ul>
+  </div>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('nav-form');
+      if (!form) return;
+      let file = form.dataset.file;
+      let sha = form.dataset.sha;
+      const locale = form.dataset.locale;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const banner = document.getElementById('change-banner');
+      const bannerList = banner?.querySelector('[data-change-list]');
+      const bannerCount = banner?.querySelector('[data-change-count]');
+      const bannerDismiss = banner?.querySelector('[data-banner-dismiss]');
+      const bannerReload = banner?.querySelector('[data-banner-reload]');
+      const localeSelect = document.getElementById('locale-select');
+      const fileInfo = form.querySelector('[data-file-info]');
+
+      // Locale switcher
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const href = loc === 'en' ? '/keystatic/navigation' : '/keystatic/navigation?locale=' + loc;
+        window.location.href = href;
+      });
+
+      function snapshotNavForm() {
+        const pairs = [];
+        form.querySelectorAll('[data-header-group-row]').forEach((row) => {
+          const g = readRow(row);
+          if (g.headerGroupText) {
+            pairs.push({ scope: 'header group', text: g.headerGroupText, href: '' });
+          }
+          row.querySelectorAll('[data-header-link-row]').forEach((lr) => {
+            const ld = readRow(lr);
+            if (ld.headerLinkText || ld.headerLinkHref) {
+              pairs.push({ scope: 'header link', text: ld.headerLinkText ?? '', href: ld.headerLinkHref ?? '' });
+            }
+          });
+        });
+        form.querySelectorAll('[data-header-action-row]').forEach((row) => {
+          const d = readRow(row);
+          if (d.headerActionText || d.headerActionHref) {
+            pairs.push({ scope: 'header action', text: d.headerActionText ?? '', href: d.headerActionHref ?? '' });
+          }
+        });
+        form.querySelectorAll('[data-footer-group-row]').forEach((row) => {
+          const g = readRow(row);
+          if (g.footerGroupTitle) {
+            pairs.push({ scope: 'footer group', text: g.footerGroupTitle, href: '' });
+          }
+          row.querySelectorAll('[data-footer-link-row]').forEach((lr) => {
+            const ld = readRow(lr);
+            if (ld.footerLinkText || ld.footerLinkHref) {
+              pairs.push({ scope: 'footer link', text: ld.footerLinkText ?? '', href: ld.footerLinkHref ?? '' });
+            }
+          });
+        });
+        form.querySelectorAll('[data-secondary-row]').forEach((row) => {
+          const d = readRow(row);
+          if (d.secondaryText || d.secondaryHref) {
+            pairs.push({ scope: 'secondary', text: d.secondaryText ?? '', href: d.secondaryHref ?? '' });
+          }
+        });
+        form.querySelectorAll('[data-topbar-row]').forEach((row) => {
+          const d = readRow(row);
+          if (d.topbarText || d.topbarHref) {
+            pairs.push({ scope: 'topbar', text: d.topbarText ?? '', href: d.topbarHref ?? '' });
+          }
+        });
+        return pairs;
+      }
+
+      const originalPairs = snapshotNavForm();
+      window.__navOriginalPairs = originalPairs;
+
+      function buildChangeBanner(currentPairs) {
+        if (!banner || !bannerList || !bannerCount) return;
+        const changes = [];
+        const max = Math.max(originalPairs.length, currentPairs.length);
+        for (let i = 0; i < max; i++) {
+          const a = originalPairs[i];
+          const b = currentPairs[i];
+          if (!a || !b) continue;
+          const textChanged = (a.text ?? '').trim() !== (b.text ?? '').trim() && a.text && b.text;
+          const hrefChanged = (a.href ?? '').trim() !== (b.href ?? '').trim() && a.href && b.href;
+          if (textChanged || hrefChanged) {
+            changes.push({
+              scope: b.scope,
+              oldText: a.text,
+              newText: b.text,
+              oldHref: a.href,
+              newHref: b.href,
+              textChanged,
+              hrefChanged,
+            });
+          }
+        }
+        if (!changes.length) {
+          banner.classList.add('hidden');
+          return;
+        }
+        bannerCount.textContent = String(changes.length);
+        bannerList.innerHTML = '';
+        changes.forEach((c) => {
+          const li = document.createElement('li');
+          li.className = 'rounded-md border border-amber-300 dark:border-amber-700 bg-white/60 dark:bg-gray-900/40 p-2';
+          const title = document.createElement('div');
+          title.className = 'text-xs text-gray-600 dark:text-gray-400 mb-1';
+          title.textContent = `${c.scope}:`;
+          li.appendChild(title);
+          if (c.hrefChanged) {
+            const urlDiv = document.createElement('div');
+            urlDiv.className = 'flex items-center gap-2 text-xs';
+            const code = document.createElement('code');
+            code.className = 'font-mono text-red-700 dark:text-red-400';
+            code.textContent = c.oldHref;
+            const arrow = document.createElement('span');
+            arrow.textContent = '\u2192';
+            arrow.className = 'text-gray-400';
+            const code2 = document.createElement('code');
+            code2.className = 'font-mono text-green-700 dark:text-green-400';
+            code2.textContent = c.newHref;
+            const btn = document.createElement('a');
+            btn.href = `/keystatic/link-refactor?${new URLSearchParams({ oldUrl: c.oldHref, newUrl: c.newHref })}`;
+            btn.target = '_blank';
+            btn.rel = 'noopener';
+            btn.className =
+              'ml-auto text-xs px-2 py-0.5 rounded bg-amber-500 hover:bg-amber-600 text-white font-medium';
+            btn.textContent = 'Rename URL \u2192';
+            urlDiv.append(code, arrow, code2, btn);
+            li.appendChild(urlDiv);
+          }
+          if (c.textChanged) {
+            const nameDiv = document.createElement('div');
+            nameDiv.className = 'flex items-center gap-2 text-xs mt-1';
+            const code = document.createElement('code');
+            code.className = 'font-mono text-red-700 dark:text-red-400';
+            code.textContent = c.oldText;
+            const arrow = document.createElement('span');
+            arrow.textContent = '\u2192';
+            arrow.className = 'text-gray-400';
+            const code2 = document.createElement('code');
+            code2.className = 'font-mono text-green-700 dark:text-green-400';
+            code2.textContent = c.newText;
+            const btn = document.createElement('a');
+            btn.href = `/keystatic/link-refactor?${new URLSearchParams({ oldName: c.oldText, newName: c.newText })}`;
+            btn.target = '_blank';
+            btn.rel = 'noopener';
+            btn.className =
+              'ml-auto text-xs px-2 py-0.5 rounded bg-amber-500 hover:bg-amber-600 text-white font-medium';
+            btn.textContent = 'Rename Text \u2192';
+            nameDiv.append(code, arrow, code2, btn);
+            li.appendChild(nameDiv);
+          }
+          bannerList.appendChild(li);
+        });
+        banner.classList.remove('hidden');
+        banner.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+
+      bannerDismiss?.addEventListener('click', () => banner?.classList.add('hidden'));
+      bannerReload?.addEventListener('click', () => window.location.reload());
+
+      function readRow(row) {
+        const out = {};
+        row.querySelectorAll('input, textarea, select').forEach((el) => {
+          if (!el.name) return;
+          out[el.name] = el.value;
+        });
+        return out;
+      }
+
+      document.addEventListener('click', (e) => {
+        const t = e.target instanceof Element ? e.target : null;
+        if (!t) return;
+
+        function findBtn(name) {
+          return t.closest(`[data-${name}]`);
+        }
+
+        const addHeaderGroup = findBtn('add-header-group');
+        if (addHeaderGroup) {
+          e.preventDefault();
+          const tpl = form.querySelector('template[data-header-group-template]');
+          const list = form.querySelector('[data-header-groups]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeHeaderGroup = findBtn('remove-header-group');
+        if (removeHeaderGroup) {
+          e.preventDefault();
+          const row = removeHeaderGroup.closest('[data-header-group-row]');
+          if (row) row.remove();
+          return;
+        }
+        const addHeaderLink = findBtn('add-header-link');
+        if (addHeaderLink) {
+          e.preventDefault();
+          const group = addHeaderLink.closest('[data-header-group-row]');
+          if (!group) return;
+          const tpl = group.querySelector('template[data-header-link-template]');
+          const list = group.querySelector('[data-header-links-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeHeaderLink = findBtn('remove-header-link');
+        if (removeHeaderLink) {
+          e.preventDefault();
+          const row = removeHeaderLink.closest('[data-header-link-row]');
+          if (row) row.remove();
+          return;
+        }
+        const addHeaderAction = findBtn('add-header-action');
+        if (addHeaderAction) {
+          e.preventDefault();
+          const tpl = form.querySelector('template[data-header-action-template]');
+          const list = form.querySelector('[data-header-actions-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeHeaderAction = findBtn('remove-header-action');
+        if (removeHeaderAction) {
+          e.preventDefault();
+          const row = removeHeaderAction.closest('[data-header-action-row]');
+          if (row) row.remove();
+          return;
+        }
+        const addFooterGroup = findBtn('add-footer-group');
+        if (addFooterGroup) {
+          e.preventDefault();
+          const tpl = form.querySelector('template[data-footer-group-template]');
+          const list = form.querySelector('[data-footer-groups]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeFooterGroup = findBtn('remove-footer-group');
+        if (removeFooterGroup) {
+          e.preventDefault();
+          const row = removeFooterGroup.closest('[data-footer-group-row]');
+          if (row) row.remove();
+          return;
+        }
+        const addFooterLink = findBtn('add-footer-link');
+        if (addFooterLink) {
+          e.preventDefault();
+          const group = addFooterLink.closest('[data-footer-group-row]');
+          if (!group) return;
+          const tpl = group.querySelector('template[data-footer-link-template]');
+          const list = group.querySelector('[data-footer-links-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeFooterLink = findBtn('remove-footer-link');
+        if (removeFooterLink) {
+          e.preventDefault();
+          const row = removeFooterLink.closest('[data-footer-link-row]');
+          if (row) row.remove();
+          return;
+        }
+        const addSecondary = findBtn('add-secondary');
+        if (addSecondary) {
+          e.preventDefault();
+          const tpl = form.querySelector('template[data-secondary-template]');
+          const list = form.querySelector('[data-secondary-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeSecondary = findBtn('remove-secondary');
+        if (removeSecondary) {
+          e.preventDefault();
+          const row = removeSecondary.closest('[data-secondary-row]');
+          if (row) row.remove();
+          return;
+        }
+        const addSocial = findBtn('add-social');
+        if (addSocial) {
+          e.preventDefault();
+          const tpl = form.querySelector('template[data-social-template]');
+          const list = form.querySelector('[data-social-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeSocial = findBtn('remove-social');
+        if (removeSocial) {
+          e.preventDefault();
+          const row = removeSocial.closest('[data-social-row]');
+          if (row) row.remove();
+          return;
+        }
+        const addTopbarLink = findBtn('add-topbar-link');
+        if (addTopbarLink) {
+          e.preventDefault();
+          const tpl = form.querySelector('template[data-topbar-template]');
+          const list = form.querySelector('[data-topbar-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+          return;
+        }
+        const removeTopbarLink = findBtn('remove-topbar-link');
+        if (removeTopbarLink) {
+          e.preventDefault();
+          const row = removeTopbarLink.closest('[data-topbar-row]');
+          if (row) row.remove();
+          return;
+        }
+      });
+
+      function getFileForLocale(loc) {
+        return loc === 'en' ? 'src/data/site/navigation.yaml' : 'src/data/site/navigation.' + loc + '.yaml';
+      }
+
+      function buildNavPayload() {
+        const headerGroups = [];
+        form.querySelectorAll('[data-header-group-row]').forEach((row) => {
+          const d = readRow(row);
+          if (!d.headerGroupText) return;
+          const group = { text: d.headerGroupText, links: [] };
+          row.querySelectorAll('[data-header-link-row]').forEach((lr) => {
+            const ld = readRow(lr);
+            if (ld.headerLinkText || ld.headerLinkHref) {
+              group.links.push({ text: ld.headerLinkText ?? '', href: ld.headerLinkHref ?? '' });
+            }
+          });
+          headerGroups.push(group);
+        });
+
+        const headerActions = [];
+        form.querySelectorAll('[data-header-action-row]').forEach((row) => {
+          const d = readRow(row);
+          const a = {};
+          if (d.headerActionText) a.text = d.headerActionText;
+          if (d.headerActionHref) a.href = d.headerActionHref;
+          if (d.headerActionVariant) a.variant = d.headerActionVariant;
+          if (Object.keys(a).length) headerActions.push(a);
+        });
+
+        const footerGroups = [];
+        form.querySelectorAll('[data-footer-group-row]').forEach((row) => {
+          const d = readRow(row);
+          if (!d.footerGroupTitle) return;
+          const group = { title: d.footerGroupTitle, links: [] };
+          row.querySelectorAll('[data-footer-link-row]').forEach((lr) => {
+            const ld = readRow(lr);
+            if (ld.footerLinkText || ld.footerLinkHref) {
+              group.links.push({ text: ld.footerLinkText ?? '', href: ld.footerLinkHref ?? '' });
+            }
+          });
+          footerGroups.push(group);
+        });
+
+        const secondaryLinks = [];
+        form.querySelectorAll('[data-secondary-row]').forEach((row) => {
+          const d = readRow(row);
+          if (d.secondaryText || d.secondaryHref) {
+            secondaryLinks.push({ text: d.secondaryText ?? '', href: d.secondaryHref ?? '' });
+          }
+        });
+
+        const socialLinks = [];
+        form.querySelectorAll('[data-social-row]').forEach((row) => {
+          const d = readRow(row);
+          const s = {};
+          if (d.socialAria) s.ariaLabel = d.socialAria;
+          if (d.socialIcon) s.icon = d.socialIcon;
+          if (d.socialHref) s.href = d.socialHref;
+          if (Object.keys(s).length) socialLinks.push(s);
+        });
+
+        const footNoteEl = form.querySelector('[name="footNote"]');
+        const footNote = footNoteEl instanceof HTMLTextAreaElement ? footNoteEl.value : '';
+
+        const topBarLinks = [];
+        form.querySelectorAll('[data-topbar-row]').forEach((row) => {
+          const d = readRow(row);
+          if (d.topbarText || d.topbarHref) {
+            topBarLinks.push({ text: d.topbarText ?? '', href: d.topbarHref ?? '' });
+          }
+        });
+
+        return {
+          header: { topBar: topBarLinks, links: headerGroups, actions: headerActions },
+          footer: { links: footerGroups, secondaryLinks, socialLinks, footNote },
+        };
+      }
+
+      // Save Draft handler
+      saveBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        publishBtn.disabled = true;
+
+        const targetFile = getFileForLocale(locale);
+        const msg = locale === 'en' ? 'Draft: site navigation and footer' : 'Draft: ' + locale + ' navigation override';
+        const payload = buildNavPayload();
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: targetFile,
+              sha,
+              data: payload,
+              branch: 'draft',
+              commitMessage: msg,
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || res.status >= 400) {
+            window.__adminToast?.(result?.error || result?.message || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            publishBtn.disabled = false;
+            return;
+          }
+          if (result?.content?.sha) {
+            sha = result.content.sha;
+            form.dataset.sha = sha;
+          }
+          file = targetFile;
+          form.dataset.file = file;
+          if (fileInfo) fileInfo.innerHTML = 'File: <code class="font-mono">' + file + '</code>';
+          window.__adminToast?.('Draft saved (not deployed)', 'success');
+          const currentPairs = snapshotNavForm();
+          buildChangeBanner(currentPairs);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        }
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Draft';
+        publishBtn.disabled = false;
+      });
+
+      // Publish handler
+      publishBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result?.error || 'Publish failed', 'error');
+            publishBtn.textContent = 'Publish';
+            saveBtn.disabled = false;
+            publishBtn.disabled = false;
+            return;
+          }
+          window.__adminToast?.('Published! Deploying to production...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.textContent = 'Publish';
+          saveBtn.disabled = false;
+          publishBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+  <FormDataLoader />
+</AdminLayout>

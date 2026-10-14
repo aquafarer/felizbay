@@ -1,0 +1,173 @@
+export interface FaqRecord {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'product' | 'shipping' | 'safety' | 'maintenance' | 'general' | 'ordering' | 'warranty';
+  relatedProducts: string[];
+  relatedGuides: string[];
+}
+
+export const faqs: FaqRecord[] = [
+  {
+    id: 'pool-setup-time',
+    question: 'How long does it take to set up an inflatable pool?',
+    answer:
+      'Most Felizbay pools set up in 15–30 minutes. Unroll the pool on flat ground, connect the included pump, and inflate the drop stitch walls to the rated pressure. Then fill with water. Rectangular pools take slightly longer than round models due to their larger footprint.',
+    category: 'product',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'drop-stitch-walls',
+    question: 'What is a drop stitch pool?',
+    answer:
+      'Drop stitch construction connects the top and bottom layers of fabric with thousands of internal threads. When inflated, these threads lock the walls rigid like a hard-sided pool, so the pool keeps its shape at full water pressure while still folding away for storage.',
+    category: 'product',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-water-capacity',
+    question: 'How much water does an inflatable pool hold?',
+    answer:
+      'It depends on the model and fill level. Our round pools typically hold 1,500–5,000 liters at 80% fill; rectangular pools hold more. Always place the pool on ground that can support the combined weight of pool plus water before filling.',
+    category: 'product',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-ground-prep',
+    question: 'What surface should I place the pool on?',
+    answer:
+      'Set the pool on firm, level ground free of stones, sticks, and sharp objects. A concrete pad, patio, or level lawn works well. We recommend a ground sheet underneath for extra protection. Never place the pool on sloped or soft ground.',
+    category: 'safety',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-filtration',
+    question: 'Do I need a filter pump?',
+    answer:
+      'A cartridge filter pump keeps water clean and greatly extends the time between water changes. Felizbay pools have standard hose fittings that accept common 32mm or 38mm filter pumps, available separately or bundled with your order.',
+    category: 'maintenance',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-water-treatment',
+    question: 'How do I keep the water clean?',
+    answer:
+      'Use standard pool chemicals: chlorine or bromine tablets in a floating dispenser, plus regular pH checks (7.2–7.6). Run the filter pump daily, skim debris, and cover the pool when not in use. With basic care, water can last several weeks before changing.',
+    category: 'maintenance',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-repair',
+    question: 'How do I repair a puncture?',
+    answer:
+      'Find the leak with soapy water, clean and dry the area, then apply a PVC patch with rounded corners from the included repair kit. Press firmly and wait 24 hours before reinflating. Small punctures are rare and typically take minutes to fix.',
+    category: 'maintenance',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-storage',
+    question: 'How do I store the pool for winter?',
+    answer:
+      'Drain the pool, clean it with mild soap, rinse thoroughly, and dry completely in the shade. Deflate, fold loosely, and store in the carry bag in a cool, dry place away from direct sunlight and freezing temperatures.',
+    category: 'maintenance',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-kids-safety',
+    question: 'Are inflatable pools safe for children?',
+    answer:
+      'Yes, with basic supervision. Always watch children near water, empty small pools after use, and secure larger pools with a cover or ladder removal. Check local fencing regulations for pools above certain depths, and never leave children unattended.',
+    category: 'safety',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-size-choice',
+    question: 'What pool size should I choose?',
+    answer:
+      'Round pools suit families and casual swimming in smaller yards. Rectangular pools fit lap swimming and larger groups. Allow at least 1 meter of clear space around the pool, and check your available ground area against the pool dimensions before ordering.',
+    category: 'product',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-with-cover',
+    question: 'Do pools come with a cover?',
+    answer:
+      'Our round grey pool ships with a fitted debris cover included. Covers for other models are available as accessories. A cover keeps out leaves and insects, reduces evaporation, and helps maintain water temperature.',
+    category: 'product',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-lifespan',
+    question: 'How long does an inflatable pool last?',
+    answer:
+      'With proper care, a Felizbay drop stitch pool lasts 5+ seasons of regular use. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
+    category: 'product',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-shipping',
+    question: 'How long does shipping take?',
+    answer:
+      'In-stock orders ship within 2–3 business days. Delivery time depends on destination and order size — contact us at info@felizbay.com with your location and quantity for an accurate delivery estimate.',
+    category: 'shipping',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-pricing',
+    question: 'How much do Felizbay pools cost?',
+    answer:
+      'Each product page shows the current price with a Buy Now button, so you can order directly online with secure Stripe checkout. Wholesale pricing is available for bulk orders — contact info@felizbay.com for details.',
+    category: 'ordering',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-oem',
+    question: 'Do you offer OEM/ODM services?',
+    answer:
+      'Yes. We offer custom sizes, colors, logos, covers, and packaging for businesses. Our factory handles everything from minor branding changes to fully custom pool designs. Minimum order quantities apply — contact us for details.',
+    category: 'ordering',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-warranty',
+    question: 'What is the Felizbay warranty?',
+    answer:
+      'Felizbay pools carry a limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers seams, valves, and fabric. Contact info@felizbay.com with your order details to start a claim.',
+    category: 'warranty',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-vs-steel',
+    question: 'Inflatable pool or steel-frame pool?',
+    answer:
+      'Inflatable drop stitch pools are faster to set up, easier to store, softer against the body, and need no tools or metal frames. Steel-frame pools can look more permanent but rust, require more assembly, and are harder to store. For most backyards, inflatable is the practical choice.',
+    category: 'general',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'company-model',
+    question: 'Is Felizbay a trading company or a manufacturer?',
+    answer:
+      'Felizbay is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
+    category: 'ordering',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+];

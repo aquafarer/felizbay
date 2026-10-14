@@ -1,0 +1,114 @@
+badge: Proof & Results
+heading: Evidence
+description: Real case studies, certifications, and test data that demonstrate our inflatable pool manufacturing capability and product quality.
+
+case_studies:
+  - id: retail-private-label-pools
+    client: European Outdoor Retailer
+    product: Private-Label Pool Line
+    industry: Retail
+    challenge: A European outdoor retailer needed a private-label line of drop stitch inflatable pools with unique print graphics, REACH-compliant PVC, and retail-ready packaging — delivered before summer season.
+    solution: Developed custom print files, sourced REACH-compliant drop stitch PVC, and compressed sampling from 3 rounds to 1 by co-locating the design team with production.
+    result: 55 days from signed PO to FOB. 2,400 units across 4 SKUs. Repeat order placed before the first container arrived.
+    image: /images/pools/rectangular-pool-1.jpg
+    tags: [OEM, Retail, Pool]
+    outcome_metrics:
+      - label: Lead Time
+        value: 55 days
+      - label: Units
+        value: '2,400'
+      - label: SKUs
+        value: '4'
+
+  - id: resort-round-pool-fleet
+    client: Caribbean Resort Group
+    product: Round Pool Fleet
+    industry: Hospitality / Tourism
+    challenge: A 5-resort group needed guest pools for villa terraces with consistent branding, UV-resistant materials for tropical sun, and easy seasonal storage.
+    solution: Designed a custom round pool package with UV-stabilized PVC, resort-branded graphics, and a phased delivery schedule with staff setup training.
+    result: 180 units delivered across 5 resorts. Repeat order for 2 new properties. 40% reduction in per-unit cost versus previous suppliers.
+    image: /images/pools/round-blue-pool-1.png
+    tags: [OEM, Pool, Hospitality]
+    outcome_metrics:
+      - label: Units Delivered
+        value: '180'
+      - label: Resorts
+        value: '5'
+      - label: Cost Reduction
+        value: 40%
+
+  - id: dtc-ecommerce-pool-line
+    client: US DTC Brand
+    product: Branded Pool + Accessory Line
+    industry: E-commerce / Retail
+    challenge: A fast-growing DTC brand needed a complete pool package (pool, pump, cover, repair kit) with premium packaging designed for parcel fulfilment without damage.
+    solution: Developed a co-branded product line with proprietary drop-stitch walls for higher rigidity, and retail-ready double-wall corrugated boxes with insert padding. Integrated QR-code warranty registration.
+    result: 3-model pool line launched in 75 days. 15,000+ units in first 12 months. 4.8-star average rating. 0.3% damage rate in transit.
+    image: /images/pools/round-grey-pool-1.png
+    tags: [OEM, Pool, DTC, E-commerce]
+    outcome_metrics:
+      - label: Models
+        value: '3'
+      - label: Units
+        value: 15,000+
+      - label: Avg Rating
+        value: 4.8 stars
+      - label: Damage Rate
+        value: 0.3%
+
+certifications:
+  - name: EN 16582-1
+    body: CEN (European Standard)
+    desc: Domestic swimming pools — safety requirements for above-ground pools, tested and documented per pool category.
+  - name: ASTM F2666
+    body: ASTM International
+    desc: Standard consumer safety specification for residential above-ground pools and related equipment.
+  - name: ISO 9001
+    body: SGS / BSI
+    desc: Quality management system certified for design, manufacturing, and distribution of inflatable products.
+  - name: BSCI
+    body: amfori
+    desc: Social compliance certification demonstrating ethical manufacturing, fair labour, and workplace safety.
+  - name: REACH
+    body: European Chemicals Agency
+    desc: All materials comply with REACH regulations for chemical safety. Documentation provided with every shipment.
+  - name: RoHS
+    body: European Union
+    desc: Restriction of hazardous substances compliance across all electronic and electrical components.
+
+test_results:
+  - metric: Units Pressure Tested
+    value: 100%
+    detail: Every pool, every chamber, every batch
+  - metric: Max Pressure Drop
+    value: '<5%'
+    detail: Over 24h at 1.25x rated pressure
+  - metric: Major Defect Threshold
+    value: AQL 2.5
+    detail: Per ISO 2859 sampling standard
+  - metric: Pressure Hold Duration
+    value: 24-48h
+    detail: Depending on product category
+  - metric: Test Pressure Margin
+    value: 1.25x
+    detail: Safety margin on every chamber
+  - metric: Safety Defect Tolerance
+    value: 0%
+    detail: Valves, seams, welds
+
+spec_sheets:
+  - name: Rectangular Pools
+    href: /products#rectangular
+  - name: Round Pools
+    href: /products#round
+
+deployment_photos:
+  - image: /images/pools/rectangular-pool-1.jpg
+    caption: Rectangular drop stitch pool set up on a backyard terrace
+    context: Residential
+  - image: /images/pools/round-blue-pool-1.png
+    caption: Round blue pool ready for a family weekend
+    context: Residential
+  - image: /images/pools/round-grey-pool-cover-1.png
+    caption: Round pool with protective cover for easy maintenance
+    context: Accessories

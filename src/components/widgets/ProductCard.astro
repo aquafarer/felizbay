@@ -1,0 +1,121 @@
+---
+import type { ImageMetadata } from 'astro';
+import Icon from '~/components/ui/Icon.astro';
+import Image from '~/components/common/Image.astro';
+import type { Product } from '~/types';
+import { findImage } from '~/utils/images';
+import { getPermalink } from '~/utils/permalinks';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export interface Props {
+  product: Product;
+  showMeta?: boolean;
+  class?: string;
+  lang?: string;
+}
+
+const { product, showMeta = true, class: className = '', lang = 'en' } = Astro.props;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+const image = (await findImage(product.image)) as ImageMetadata | string | undefined;
+const langPrefix = lang && lang !== 'en' ? `/${lang}` : '';
+const link = `${langPrefix}${getPermalink(product.permalink, 'product')}`;
+const priceAmount = product.price?.amount || '';
+const priceCurrency = product.price?.currency || 'USD';
+const priceDisplay =
+  priceAmount !== '' ? (priceCurrency === 'USD' ? `$${priceAmount}` : `${priceCurrency} ${priceAmount}`) : '';
+---
+
+<article
+  class={`card-premium group relative flex flex-col bg-white dark:bg-slate-900 overflow-hidden rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl ${className}`}
+>
+  <a href={link} class="block relative image-zoom aspect-[3/4] bg-gray-50 dark:bg-slate-800">
+    {
+      image ? (
+        <Image
+          src={image}
+          alt={product.title}
+          class="w-full h-full object-cover"
+          widths={[480, 768, 1024]}
+          width={432}
+          height={768}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          format="webp"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-slate-700">
+          <Icon name="tabler:photo" class="w-16 h-16" />
+        </div>
+      )
+    }
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+    >
+    </div>
+    <div
+      class="absolute bottom-4 left-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400"
+    >
+      <span
+        class="inline-flex items-center gap-1.5 px-4 py-2 bg-white/90 backdrop-blur-sm text-gray-900 text-sm font-medium rounded-full shadow-lg"
+      >
+        {t('product.viewDetails') || 'View details'}
+        <Icon name="tabler:arrow-right" class="w-4 h-4" />
+      </span>
+    </div>
+  </a>
+
+  <div class="p-6">
+    {
+      showMeta && product.categoryLabel && (
+        <div class="text-xs font-medium tracking-wider uppercase text-accent mb-2">{product.categoryLabel}</div>
+      )
+    }
+
+    <h3 class="text-lg font-semibold leading-snug font-heading dark:text-slate-100 mb-2">
+      <a href={link} class="hover:text-primary transition-colors">
+        {product.title}
+      </a>
+    </h3>
+
+    {product.summary && <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{product.summary}</p>}
+
+    {
+      priceDisplay && (
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-2xl font-bold text-gray-900 dark:text-slate-100">{priceDisplay}</span>
+          {product.inStock && <span class="text-xs font-medium text-green-600">{t('product.inStock') || 'In stock'}</span>}
+        </div>
+      )
+    }
+
+    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-slate-800 space-y-2">
+      {
+        product.sku && priceDisplay ? (
+          <form method="POST" action="/api/checkout">
+            <input type="hidden" name="sku" value={product.sku} />
+            <button
+              type="submit"
+              class="flex w-full items-center justify-center gap-2 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              {t('product.buyNow') || `Buy Now — ${priceDisplay}`}
+            </button>
+          </form>
+        ) : (
+          <a
+            href={link}
+            class="flex items-center justify-center gap-2 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            {t('product.viewDetails') || 'View details'}
+          </a>
+        )
+      }
+      <a
+        href={link}
+        class="flex items-center justify-center gap-2 px-4 py-2 border border-primary text-primary text-sm font-medium rounded-lg hover:bg-primary/5 transition-colors"
+      >
+        {t('product.viewDetails') || 'View details'}
+      </a>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,760 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { PAGE_BY_SLUG, type PageSpec } from '~/components/admin/page-schemas';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, pageFileForLocale } from '~/lib/i18n-admin';
+import HeroForm from '~/components/admin/sections/HeroForm.astro';
+import HeroTextForm from '~/components/admin/sections/HeroTextForm.astro';
+import HeroCarouselForm from '~/components/admin/sections/HeroCarouselForm.astro';
+import FeaturesForm from '~/components/admin/sections/FeaturesForm.astro';
+import Features2Form from '~/components/admin/sections/Features2Form.astro';
+import Features3Form from '~/components/admin/sections/Features3Form.astro';
+import ContentForm from '~/components/admin/sections/ContentForm.astro';
+import StepsForm from '~/components/admin/sections/StepsForm.astro';
+import Steps2Form from '~/components/admin/sections/Steps2Form.astro';
+import StatsForm from '~/components/admin/sections/StatsForm.astro';
+import FaqsForm from '~/components/admin/sections/FaqsForm.astro';
+import TestimonialsForm from '~/components/admin/sections/TestimonialsForm.astro';
+import PricingForm from '~/components/admin/sections/PricingForm.astro';
+import ContactFormSection from '~/components/admin/sections/ContactFormSection.astro';
+import CtaForm from '~/components/admin/sections/CtaForm.astro';
+import FeaturedProductsForm from '~/components/admin/sections/FeaturedProductsForm.astro';
+import BlogLatestForm from '~/components/admin/sections/BlogLatestForm.astro';
+import MapForm from '~/components/admin/sections/MapForm.astro';
+import FormDataLoader from '~/components/admin/FormDataLoader.astro';
+export const prerender = true;
+export async function getStaticPaths() {
+  return Object.keys(PAGE_BY_SLUG).map((slug) => ({ params: { slug } }));
+}
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const slug = Astro.params.slug || '';
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const page: PageSpec = PAGE_BY_SLUG[slug] || PAGE_BY_SLUG[Object.keys(PAGE_BY_SLUG)[0]];
+
+const localeFile = pageFileForLocale(slug, page.file, locale);
+
+let data: Record<string, any> = {};
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: Awaited<ReturnType<typeof client.readFile>> | undefined;
+    try {
+      // Read from draft branch first, fallback to main
+      f = await client.readFile(localeFile, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(localeFile);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile(page.file);
+        } else {
+          throw new Error('Page file not found');
+        }
+      }
+    }
+    const yamlMod = await import('js-yaml');
+    data = (yamlMod.load(f.content) as Record<string, any>) ?? {};
+    sha = f.sha;
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title={`Edit: ${page.label}`} active="pages">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <a href="/keystatic/pages" class="text-sm text-gray-500 hover:underline"> ?Back to Pages list</a>
+        <h1 class="mt-2 text-2xl font-semibold">Edit: {page.label}</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Language:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      File: <code class="font-mono">{localeFile}</code>
+      {
+        !isDefault && (
+          <span class="text-amber-600 dark:text-amber-400">
+            {' '}
+            &mdash; locale override (inherits English file as fallback)
+          </span>
+        )
+      }
+      · Site path: <a
+        href={page.path}
+        class="text-blue-600 dark:text-blue-400 hover:underline"
+        target="_blank"
+        rel="noopener">{page.path}</a
+      >
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="page-form"
+    class="space-y-6 pb-32"
+    data-file={localeFile}
+    data-sha={sha}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    {
+      page.sections.map((section) => {
+        const sectionData = data?.[section.key] ?? {};
+        const prefix = `s_${section.key}`;
+        return (
+          <details
+            open
+            class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+          >
+            <summary class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900">
+              <div>
+                <div class="text-sm font-semibold">{section.label}</div>
+                <div class="text-xs text-gray-500 font-mono mt-0.5">{section.key}</div>
+              </div>
+              <span class="text-xs text-gray-400">widget: {section.type}</span>
+            </summary>
+            <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800">
+              {section.type === 'hero' && <HeroForm prefix={prefix} data={sectionData} />}
+              {section.type === 'hero_text' && <HeroTextForm prefix={prefix} data={sectionData} />}
+              {section.type === 'hero_carousel' && <HeroCarouselForm prefix={prefix} data={sectionData} />}
+              {section.type === 'features' && <FeaturesForm prefix={prefix} data={sectionData} />}
+              {section.type === 'features2' && <Features2Form prefix={prefix} data={sectionData} />}
+              {section.type === 'features3' && <Features3Form prefix={prefix} data={sectionData} />}
+              {section.type === 'content' && <ContentForm prefix={prefix} data={sectionData} />}
+              {section.type === 'steps' && <StepsForm prefix={prefix} data={sectionData} />}
+              {section.type === 'steps2' && <Steps2Form prefix={prefix} data={sectionData} />}
+              {section.type === 'stats' && <StatsForm prefix={prefix} data={sectionData} />}
+              {section.type === 'faqs' && <FaqsForm prefix={prefix} data={sectionData} />}
+              {section.type === 'testimonials' && <TestimonialsForm prefix={prefix} data={sectionData} />}
+              {section.type === 'pricing' && <PricingForm prefix={prefix} data={sectionData} />}
+              {section.type === 'contact' && <ContactFormSection prefix={prefix} data={sectionData} />}
+              {section.type === 'cta' && <CtaForm prefix={prefix} data={sectionData} />}
+              {section.type === 'featured_products' && <FeaturedProductsForm prefix={prefix} data={sectionData} />}
+              {section.type === 'blog_latest' && <BlogLatestForm prefix={prefix} data={sectionData} />}
+              {section.type === 'map' && <MapForm prefix={prefix} data={sectionData} />}
+            </div>
+          </details>
+        );
+      })
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500" data-file-info>File: <code class="font-mono">{localeFile}</code></div>
+        <div class="flex gap-2">
+          <a
+            href="/keystatic/pages"
+            class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script
+    is:inline
+    define:vars={{ pageSlug: page.slug, pageLabel: page.label, pageLocale: locale, originalData: JSON.stringify(data) }}
+  >
+    (function () {
+      let original = null;
+      try {
+        original = JSON.parse(originalData);
+      } catch {}
+      const form = document.getElementById('page-form');
+      if (!form) return;
+      let file = form.dataset.file;
+      let sha = form.dataset.sha;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+
+      function setButtonsEnabled(enabled) {
+        if (saveBtn) saveBtn.disabled = !enabled;
+        if (publishBtn) publishBtn.disabled = !enabled;
+      }
+      function setSaveText(text) {
+        if (saveBtn) saveBtn.textContent = text;
+      }
+      function setPublishText(text) {
+        if (publishBtn) publishBtn.textContent = text;
+      }
+
+      // Language switcher
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const href = loc === 'en' ? `/keystatic/pages/${pageSlug}` : `/keystatic/pages/${pageSlug}?locale=${loc}`;
+        window.location.href = href;
+      });
+
+      function sectionKeyFromPrefix(prefix) {
+        return prefix.replace(/^s_/, '');
+      }
+
+      function readRow(row) {
+        const out = {};
+        row.querySelectorAll('input, textarea, select').forEach((el) => {
+          if (!el.name) return;
+          if (el.type === 'checkbox') out[el.name] = el.checked;
+          else out[el.name] = el.value;
+        });
+        return out;
+      }
+
+      function readActions(section) {
+        const actions = [];
+        section.querySelectorAll('[data-action-row]').forEach((row) => {
+          const d = readRow(row);
+          const a = {};
+          if (d.actionText) a.text = d.actionText;
+          if (d.actionHref) a.href = d.actionHref;
+          if (d.actionVariant) a.variant = d.actionVariant;
+          else a.variant = 'primary';
+          if (d.actionIcon) a.icon = d.actionIcon;
+          if (Object.keys(a).length) actions.push(a);
+        });
+        return actions;
+      }
+
+      function readItems(section, fields) {
+        const items = [];
+        section.querySelectorAll('[data-item-row]').forEach((row) => {
+          const d = readRow(row);
+          const it = {};
+          for (const f of fields)
+            if (d[f])
+              it[
+                f === 'itemTitle' ? 'title' : f === 'itemDescription' ? 'description' : f === 'itemIcon' ? 'icon' : f
+              ] = d[f];
+          if (Object.keys(it).length) items.push(it);
+        });
+        return items;
+      }
+
+      function readStats(section) {
+        const out = [];
+        section.querySelectorAll('[data-stat-row]').forEach((row) => {
+          const d = readRow(row);
+          const s = {};
+          if (d.statAmount) s.amount = d.statAmount;
+          if (d.statTitle) s.title = d.statTitle;
+          if (d.statIcon) s.icon = d.statIcon;
+          if (Object.keys(s).length) out.push(s);
+        });
+        return out;
+      }
+
+      function readInputs(section) {
+        const out = [];
+        section.querySelectorAll('[data-input-row]').forEach((row) => {
+          const d = readRow(row);
+          const i = {};
+          if (d.inputType) i.type = d.inputType;
+          if (d.inputName) i.name = d.inputName;
+          if (d.inputLabel) i.label = d.inputLabel;
+          if (Object.keys(i).length) out.push(i);
+        });
+        return out;
+      }
+      void readInputs;
+
+      function readTestimonials(section) {
+        const out = [];
+        section.querySelectorAll('[data-testimonial-row]').forEach((row) => {
+          const d = readRow(row);
+          const t = {};
+          if (d.testName) t.name = d.testName;
+          if (d.testJob) t.job = d.testJob;
+          if (d.testText) t.testimonial = d.testText;
+          if (d.testImageSrc || d.testImageAlt) {
+            t.image = {};
+            if (d.testImageSrc) t.image.src = d.testImageSrc;
+            if (d.testImageAlt) t.image.alt = d.testImageAlt;
+          }
+          if (Object.keys(t).length) out.push(t);
+        });
+        return out;
+      }
+
+      function readTiers(section) {
+        const out = [];
+        section.querySelectorAll('[data-tier-row]').forEach((row) => {
+          const d = readRow(row);
+          const t = {};
+          if (d.tierTitle) t.title = d.tierTitle;
+          if (d.tierSubtitle) t.subtitle = d.tierSubtitle;
+          if (d.tierPrice) t.price = d.tierPrice;
+          if (d.tierPeriod) t.period = d.tierPeriod;
+          if (d.tierHasRibbon) t.hasRibbon = true;
+          if (d.tierRibbonTitle) t.ribbonTitle = d.tierRibbonTitle;
+          if (d.tierCtaText || d.tierCtaHref) {
+            t.callToAction = {};
+            if (d.tierCtaText) t.callToAction.text = d.tierCtaText;
+            if (d.tierCtaHref) t.callToAction.href = d.tierCtaHref;
+          }
+          const itemRows = row.querySelectorAll('[data-tier-item-row]');
+          if (itemRows.length) {
+            t.items = [];
+            itemRows.forEach((ir) => {
+              const id = readRow(ir);
+              if (id.tierItemDesc) t.items.push({ description: id.tierItemDesc });
+            });
+          }
+          if (Object.keys(t).length) out.push(t);
+        });
+        return out;
+      }
+
+      function readSection(section) {
+        const type = section.dataset.sectionType;
+        const d = readRow(section);
+
+        function rowOf(name) {
+          const map = {
+            firstName: 1,
+            lastName: 1,
+            companyName: 2,
+            address: 3,
+            zip: 4,
+            country: 4,
+            email: 5,
+            tel: 5,
+            subject: 6,
+            message: 7,
+          };
+          return map[name] || 1;
+        }
+        const out = {};
+        if (type === 'hero_carousel') {
+          out.autoplay_interval = parseInt(d.autoplay_interval || '5000', 10) || 0;
+          const slides = [];
+          section.querySelectorAll('[data-slide-row]').forEach((row) => {
+            const sd = readRow(row);
+            const slide = {};
+            if (sd.slideImageSrc || sd.slideImageAlt) {
+              slide.image = {};
+              if (sd.slideImageSrc) slide.image.src = sd.slideImageSrc;
+              if (sd.slideImageAlt) slide.image.alt = sd.slideImageAlt;
+            }
+            if (sd.slideTagline) slide.tagline = sd.slideTagline;
+            if (sd.slideTitle) slide.title = sd.slideTitle;
+            if (sd.slideSubtitle) slide.subtitle = sd.slideSubtitle;
+            const actions = [];
+            row.querySelectorAll('[data-slide-action-row]').forEach((ar) => {
+              const ad = readRow(ar);
+              const a = {};
+              if (ad.slideActionText) a.text = ad.slideActionText;
+              if (ad.slideActionHref) a.href = ad.slideActionHref;
+              if (ad.slideActionVariant) a.variant = ad.slideActionVariant;
+              if (Object.keys(a).length) actions.push(a);
+            });
+            if (actions.length) slide.actions = actions;
+            if (Object.keys(slide).length) slides.push(slide);
+          });
+          if (slides.length) out.slides = slides;
+        } else if (type === 'hero' || type === 'cta') {
+          if (d.tagline) out.tagline = d.tagline;
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          const actions = readActions(section);
+          if (actions.length) out.actions = actions;
+          if (d.imageSrc || d.imageAlt) {
+            out.image = {};
+            if (d.imageSrc) out.image.src = d.imageSrc;
+            if (d.imageAlt) out.image.alt = d.imageAlt;
+          }
+        } else if (type === 'hero_text') {
+          if (d.tagline) out.tagline = d.tagline;
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.content) out.content = d.content;
+        } else if (type === 'features' || type === 'features2') {
+          if (d.id) out.id = d.id;
+          if (d.tagline) out.tagline = d.tagline;
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.columns) out.columns = Number(d.columns);
+          if (d.defaultIcon) out.defaultIcon = d.defaultIcon;
+          const items = readItems(section, ['itemTitle', 'itemDescription', 'itemIcon']);
+          if (items.length) out.items = items;
+        } else if (type === 'features3' || type === 'content') {
+          if (d.isReversed) out.isReversed = true;
+          if (type === 'features3') {
+            if (d.isBeforeContent) out.isBeforeContent = true;
+            if (d.isAfterContent) out.isAfterContent = true;
+          } else {
+            if (d.isAfterContent) out.isAfterContent = true;
+          }
+          if (d.columns) out.columns = Number(d.columns);
+          if (d.defaultIcon) out.defaultIcon = d.defaultIcon;
+          if (d.tagline) out.tagline = d.tagline;
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.content) out.content = d.content;
+          if (d.ctaText || d.ctaHref) {
+            out.callToAction = {};
+            if (d.ctaText) out.callToAction.text = d.ctaText;
+            if (d.ctaHref) out.callToAction.href = d.ctaHref;
+            if (d.ctaVariant) out.callToAction.variant = d.ctaVariant;
+          }
+          const items = readItems(section, ['itemTitle', 'itemDescription', 'itemIcon']);
+          if (items.length) out.items = items;
+          if (d.imageSrc || d.imageAlt) {
+            out.image = {};
+            if (d.imageSrc) out.image.src = d.imageSrc;
+            if (d.imageAlt) out.image.alt = d.imageAlt;
+          }
+        } else if (type === 'steps') {
+          if (d.tagline) out.tagline = d.tagline;
+          if (d.title) out.title = d.title;
+          if (d.isReversed) out.isReversed = true;
+          const items = readItems(section, ['itemTitle', 'itemDescription', 'itemIcon']);
+          if (items.length) out.items = items;
+          if (d.imageSrc || d.imageAlt) {
+            out.image = {};
+            if (d.imageSrc) out.image.src = d.imageSrc;
+            if (d.imageAlt) out.image.alt = d.imageAlt;
+          }
+        } else if (type === 'steps2') {
+          if (d.tagline) out.tagline = d.tagline;
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.isReversed) out.isReversed = true;
+          if (d.ctaText || d.ctaHref) {
+            out.callToAction = {};
+            if (d.ctaText) out.callToAction.text = d.ctaText;
+            if (d.ctaHref) out.callToAction.href = d.ctaHref;
+            if (d.ctaVariant) out.callToAction.variant = d.ctaVariant;
+          }
+          const items = readItems(section, ['itemTitle', 'itemDescription', 'itemIcon']);
+          if (items.length) out.items = items;
+        } else if (type === 'stats') {
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          const stats = readStats(section);
+          if (stats.length) out.stats = stats;
+        } else if (type === 'faqs') {
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.columns) out.columns = Number(d.columns);
+          const items = readItems(section, ['itemTitle', 'itemDescription', 'itemIcon']);
+          if (items.length) out.items = items;
+        } else if (type === 'testimonials') {
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          const testimonials = readTestimonials(section);
+          if (testimonials.length) out.testimonials = testimonials;
+        } else if (type === 'pricing') {
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          const tiers = readTiers(section);
+          if (tiers.length) out.prices = tiers;
+        } else if (type === 'contact') {
+          if (d.id) out.id = d.id;
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.email_to) out.email_to = d.email_to;
+          if (d.submit_button) out.submit_button = d.submit_button;
+          if (d.success_message) out.success_message = d.success_message;
+          if (d.error_message) out.error_message = d.error_message;
+          if (d.default_country_code) out.default_country_code = d.default_country_code;
+          if (d.captchaLabel) out.captcha = { label: d.captchaLabel };
+
+          const fieldNames = [
+            'firstName',
+            'lastName',
+            'companyName',
+            'address',
+            'zip',
+            'country',
+            'email',
+            'tel',
+            'subject',
+            'message',
+          ];
+          const fieldDefs = [];
+          for (const name of fieldNames) {
+            const lbl = d[`fieldLabel__${name}`];
+            if (lbl) {
+              const def = { name: name, label: lbl, row: rowOf(name) };
+              if (name === 'message') {
+                def.type = 'textarea';
+                def['rows'] = 6;
+              } else if (name === 'email') def.type = 'email';
+              else if (name === 'tel') {
+                def.type = 'tel';
+                def.withCountryCode = true;
+              }
+              fieldDefs.push(def);
+            }
+          }
+          if (fieldDefs.length) out.fields = fieldDefs;
+        } else if (type === 'featured_products') {
+          if (d.id) out.id = d.id;
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.linkText) out.linkText = d.linkText;
+          if (d.linkUrl) out.linkUrl = d.linkUrl;
+        } else if (type === 'blog_latest') {
+          if (d.title) out.title = d.title;
+          if (d.information) out.information = d.information;
+        } else if (type === 'map') {
+          if (d.title) out.title = d.title;
+          if (d.subtitle) out.subtitle = d.subtitle;
+          if (d.address) out.address = d.address;
+          if (d.embedUrl) out.embedUrl = d.embedUrl;
+          if (d.latitude) out.latitude = d.latitude;
+          if (d.longitude) out.longitude = d.longitude;
+          if (d.zoom) out.zoom = Number(d.zoom);
+        }
+        return out;
+      }
+
+      function collectPayload() {
+        const payload = {};
+        form.querySelectorAll('[data-section-type]').forEach((section) => {
+          const prefix = section.dataset.prefix;
+          if (!prefix) return;
+          const key = sectionKeyFromPrefix(prefix);
+          payload[key] = readSection(section);
+        });
+        if (original) {
+          for (const key of Object.keys(original)) {
+            if (!(key in payload)) {
+              payload[key] = original[key];
+            }
+          }
+        }
+        return payload;
+      }
+
+      document.addEventListener('click', (e) => {
+        const t = e.target instanceof Element ? e.target : null;
+        if (!t) return;
+        if (t.matches('[data-add-action]') || t.closest('[data-add-action]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-action]') ? t : t.closest('[data-add-action]');
+          const section = btn.closest('[data-section-type]');
+          if (!section) return;
+          const tpl = section.querySelector('template[data-action-template]');
+          const list = section.querySelector('[data-actions-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-action]') || t.closest('[data-remove-action]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-action]') ? t : t.closest('[data-remove-action]');
+          const row = btn.closest('[data-action-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-item]') || t.closest('[data-add-item]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-item]') ? t : t.closest('[data-add-item]');
+          const section = btn.closest('[data-section-type]');
+          if (!section) return;
+          const tpl = section.querySelector('template[data-item-template]');
+          const list = section.querySelector('[data-items-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-item]') || t.closest('[data-remove-item]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-item]') ? t : t.closest('[data-remove-item]');
+          const row = btn.closest('[data-item-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-stat]') || t.closest('[data-add-stat]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-stat]') ? t : t.closest('[data-add-stat]');
+          const section = btn.closest('[data-section-type]');
+          if (!section) return;
+          const tpl = section.querySelector('template[data-stat-template]');
+          const list = section.querySelector('[data-stats-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-stat]') || t.closest('[data-remove-stat]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-stat]') ? t : t.closest('[data-remove-stat]');
+          const row = btn.closest('[data-stat-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-input]') || t.closest('[data-add-input]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-input]') ? t : t.closest('[data-add-input]');
+          const section = btn.closest('[data-section-type]');
+          if (!section) return;
+          const tpl = section.querySelector('template[data-input-template]');
+          const list = section.querySelector('[data-inputs-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-input]') || t.closest('[data-remove-input]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-input]') ? t : t.closest('[data-remove-input]');
+          const row = btn.closest('[data-input-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-testimonial]') || t.closest('[data-add-testimonial]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-testimonial]') ? t : t.closest('[data-add-testimonial]');
+          const section = btn.closest('[data-section-type]');
+          if (!section) return;
+          const tpl = section.querySelector('template[data-testimonial-template]');
+          const list = section.querySelector('[data-testimonials-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-testimonial]') || t.closest('[data-remove-testimonial]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-testimonial]') ? t : t.closest('[data-remove-testimonial]');
+          const row = btn.closest('[data-testimonial-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-tier]') || t.closest('[data-add-tier]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-tier]') ? t : t.closest('[data-add-tier]');
+          const section = btn.closest('[data-section-type]');
+          if (!section) return;
+          const tpl = section.querySelector('template[data-tier-template]');
+          const list = section.querySelector('[data-tiers-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-tier]') || t.closest('[data-remove-tier]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-tier]') ? t : t.closest('[data-remove-tier]');
+          const row = btn.closest('[data-tier-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-tier-item]') || t.closest('[data-add-tier-item]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-tier-item]') ? t : t.closest('[data-add-tier-item]');
+          const tierRow = btn.closest('[data-tier-row]');
+          if (!tierRow) return;
+          const tpl = tierRow.querySelector('template[data-tier-item-template]');
+          const list = tierRow.querySelector('[data-tier-items-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-tier-item]') || t.closest('[data-remove-tier-item]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-tier-item]') ? t : t.closest('[data-remove-tier-item]');
+          const row = btn.closest('[data-tier-item-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-slide]') || t.closest('[data-add-slide]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-slide]') ? t : t.closest('[data-add-slide]');
+          const section = btn.closest('[data-section-type]');
+          if (!section) return;
+          const tpl = section.querySelector('template[data-slide-template]');
+          const list = section.querySelector('[data-slides-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-slide]') || t.closest('[data-remove-slide]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-slide]') ? t : t.closest('[data-remove-slide]');
+          const row = btn.closest('[data-slide-row]');
+          if (row) row.remove();
+        } else if (t.matches('[data-add-slide-action]') || t.closest('[data-add-slide-action]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-add-slide-action]') ? t : t.closest('[data-add-slide-action]');
+          const slide = btn.closest('[data-slide-row]');
+          if (!slide) return;
+          const tpl = slide.querySelector('template[data-slide-action-template]');
+          const list = slide.querySelector('[data-slide-actions-list]');
+          if (tpl && list) list.appendChild(tpl.content.cloneNode(true));
+        } else if (t.matches('[data-remove-slide-action]') || t.closest('[data-remove-slide-action]')) {
+          e.preventDefault();
+          const btn = t.matches('[data-remove-slide-action]') ? t : t.closest('[data-remove-slide-action]');
+          const row = btn.closest('[data-slide-action-row]');
+          if (row) row.remove();
+        }
+      });
+
+      // Save Draft handler
+      saveBtn?.addEventListener('click', async () => {
+        setButtonsEnabled(false);
+        setSaveText('Saving...');
+        const payload = collectPayload();
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: payload,
+              branch: 'draft',
+              commitMessage: `Draft: ${pageSlug} (${pageLabel})`,
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || res.status >= 400) {
+            window.__adminToast?.(result?.error || result?.message || 'Save failed', 'error');
+            setButtonsEnabled(true);
+            setSaveText('Save Draft');
+            return;
+          }
+          // Update sha from draft
+          if (result?.content?.sha) {
+            sha = result.content.sha;
+          }
+          window.__adminToast?.('Draft saved (not deployed)', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        }
+        setButtonsEnabled(true);
+        setSaveText('Save Draft');
+      });
+
+      // Publish handler
+      publishBtn?.addEventListener('click', async () => {
+        setButtonsEnabled(false);
+        setPublishText('Publishing...');
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result?.error || 'Publish failed', 'error');
+            setButtonsEnabled(true);
+            setPublishText('Publish');
+            return;
+          }
+          window.__adminToast?.('Published! Deploying to production...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          setButtonsEnabled(true);
+          setPublishText('Publish');
+        }
+      });
+    })();
+  </script>
+  <FormDataLoader />
+</AdminLayout>

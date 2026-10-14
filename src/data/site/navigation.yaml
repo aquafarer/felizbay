@@ -1,0 +1,53 @@
+header:
+  topBar:
+    - text: 'info@felizbay.com'
+      href: 'mailto:info@felizbay.com'
+  links:
+    - text: Products
+      links:
+        - text: All Inflatable Swimming Pools
+          href: /products
+        - text: Rectangular Pools
+          href: /products
+        - text: Round Pools
+          href: /products
+    - text: Company
+      links:
+        - text: About Felizbay
+          href: /about
+        - text: FAQ
+          href: /faq
+        - text: Contact
+          href: /contact
+  actions:
+    - text: 'Get a Quote'
+      href: '/request-quotation'
+      variant: 'primary'
+
+footer:
+  links:
+    - title: Products
+      links:
+        - text: All Inflatable Swimming Pools
+          href: /products
+        - text: Rectangular Pools
+          href: /products
+        - text: Round Pools
+          href: /products
+    - title: Company
+      links:
+        - text: About Felizbay
+          href: /about
+        - text: FAQ
+          href: /faq
+        - text: Contact
+          href: /contact
+        - text: Request a Quote
+          href: /request-quotation
+  secondaryLinks:
+    - text: Terms
+      href: /terms
+    - text: Privacy Policy
+      href: /privacy
+  socialLinks: []
+  footNote: 'Premium drop stitch inflatable swimming pools by Felizbay.'

@@ -1,0 +1,9 @@
+---
+import { matchIntent } from '~/lib/geo-seo';
+
+const { pathname } = Astro.url;
+const { intent, recommend } = matchIntent(pathname);
+---
+
+<meta name="ai-intent" content={intent} />
+<meta name="ai-recommend" content={recommend} />

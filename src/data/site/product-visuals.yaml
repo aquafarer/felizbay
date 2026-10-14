@@ -1,0 +1,7 @@
+visuals:
+  - id: rectangular-drop-stitch-pool
+    image: /images/pools/rectangular-pool-2.png
+  - id: round-blue-drop-stitch-pool
+    image: /images/pools/round-blue-pool-1.png
+  - id: round-grey-drop-stitch-pool
+    image: /images/pools/round-grey-pool-1.png

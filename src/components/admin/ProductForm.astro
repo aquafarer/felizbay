@@ -1,0 +1,1050 @@
+---
+import type { CollectionFormData } from './types';
+
+interface Props {
+  mode: 'create' | 'edit';
+  initial: CollectionFormData;
+  filename?: string;
+  sha?: string;
+  path?: string;
+  locale?: string;
+}
+
+const { mode, initial, filename, sha, path, locale } = Astro.props;
+
+const fm = initial.frontmatter;
+const seo = (fm.metadata as Record<string, unknown> | undefined) ?? {};
+const seoRobots = (seo.robots as Record<string, unknown> | undefined) ?? {};
+const seoOg = (seo.openGraph as Record<string, unknown> | undefined) ?? {};
+const seoTwitter = (seo.twitter as Record<string, unknown> | undefined) ?? {};
+
+const tags = Array.isArray(fm.tags) ? (fm.tags as string[]) : [];
+const gallery = Array.isArray(fm.gallery) ? (fm.gallery as Array<{ url: string; alt?: string }>) : [];
+const specs = Array.isArray(fm.specs) ? (fm.specs as Array<{ label: string; value: string }>) : [];
+const price = (fm.price as Record<string, unknown> | undefined) ?? {};
+const category = (fm.category as string) ?? 'pool';
+
+const environment = Array.isArray(fm.environment) ? (fm.environment as string[]) : [];
+const water_condition = Array.isArray(fm.water_condition) ? (fm.water_condition as string[]) : [];
+const ai_use_cases = Array.isArray(fm.ai_use_cases) ? (fm.ai_use_cases as string[]) : [];
+const ai_faq = Array.isArray(fm.ai_faq) ? (fm.ai_faq as Array<{ q: string; a: string }>) : [];
+const ai_specsEntries = Object.entries((fm.ai_specs as Record<string, string> | undefined) ?? {}).map(([k, v]) => ({
+  key: k,
+  value: v,
+}));
+const skill = (fm.skill as string) ?? '';
+---
+
+<form
+  id="entry-form"
+  class="space-y-6"
+  data-mode={mode}
+  data-file={path ?? ''}
+  data-sha={sha ?? ''}
+  data-format="frontmatter"
+  data-locale={locale || 'en'}
+>
+  <input type="hidden" name="_path" value={path ?? ''} />
+  <input type="hidden" name="_sha" value={sha ?? ''} />
+  <input type="hidden" name="_filename" value={filename ?? ''} />
+  <input type="hidden" name="_locale" value={locale || 'en'} />
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+    <div class="flex items-center justify-between mb-2">
+      <h2 class="text-lg font-semibold">Language</h2>
+      <select
+        id="lang-select"
+        name="_language"
+        class="px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+      >
+        <option value="en" selected>English (default)</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+        <option value="ar">العربية</option>
+        <option value="it">Italiano</option>
+        <option value="ru">Русский</option>
+        <option value="pl">Polski</option>
+        <option value="nl">Nederlands</option>
+        <option value="sv">Svenska</option>
+        <option value="no">Norsk</option>
+        <option value="el">Ελληνικά</option>
+        <option value="fi">Suomi</option>
+        <option value="da">Dansk</option>
+      </select>
+    </div>
+    <p id="lang-hint" class="text-xs text-amber-600 dark:text-amber-400 hidden">
+      Editing translation — only text fields shown. Switch to English to edit all fields.
+    </p>
+  </div>
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+    <h2 class="text-lg font-semibold">Basic Info</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium mb-1" for="title"
+          >Product Name <span class="text-red-500">*</span></label
+        >
+        <input
+          id="title"
+          name="title"
+          type="text"
+          required
+          value={(fm.title as string) ?? ''}
+          data-fm-path="name"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="sku">SKU / Product Code</label>
+        <input
+          id="sku"
+          name="sku"
+          type="text"
+          value={(fm.sku as string) ?? ''}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm"
+        />
+      </div>
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1" for="summary">One-line Summary</label>
+      <textarea
+        id="summary"
+        name="summary"
+        rows="2"
+        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        >{(fm.summary as string) ?? ''}</textarea
+      >
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1" for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+        data-fm-path="desc"
+        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        >{(fm.description as string) ?? ''}</textarea
+      >
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1" for="image">Main Image URL</label>
+      <input
+        id="image"
+        name="image"
+        type="url"
+        value={(fm.image as string) ?? ''}
+        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+      />
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm font-medium mb-1" for="product-category">Category</label>
+        <select
+          id="product-category"
+          name="category"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        >
+          <option value="pool" selected={category === 'pool'}>Inflatable Swimming Pool</option>
+          <option value="accessory" selected={category === 'accessory'}>Accessory</option>
+          <option value="service" selected={category === 'service'}>Service</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="publishDate">Publish Date</label>
+        <input
+          id="publishDate"
+          name="publishDate"
+          type="date"
+          value={(fm.publishDate as string) ?? ''}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        />
+      </div>
+      <div class="flex items-end gap-4">
+        <label class="flex items-center gap-2 text-sm">
+          <input type="checkbox" name="inStock" value="true" checked={fm.inStock !== false} class="rounded" />
+          In Stock
+        </label>
+        <label class="flex items-center gap-2 text-sm">
+          <input type="checkbox" name="featured" value="true" checked={fm.featured === true} class="rounded" />
+          Featured on Home
+        </label>
+        <label class="flex items-center gap-2 text-sm">
+          <input type="checkbox" name="draft" value="true" checked={fm.draft === true} class="rounded" />
+          Draft
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+    <h2 class="text-lg font-semibold">Gallery</h2>
+    <p class="text-sm text-gray-500">Each image: URL + Alt text</p>
+    <div id="gallery-list" class="space-y-3">
+      {
+        gallery.map((g) => (
+          <div class="flex items-center gap-2" data-gallery-row>
+            <input
+              type="url"
+              name="galleryUrl"
+              value={g.url}
+              placeholder="Image URL"
+              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-xs"
+            />
+            <input
+              type="text"
+              name="galleryAlt"
+              value={g.alt ?? ''}
+              placeholder="Alt Text"
+              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs whitespace-nowrap">
+              Delete
+            </button>
+          </div>
+        ))
+      }
+    </div>
+    <button
+      type="button"
+      data-repeater-add="gallery-list"
+      data-template="gallery"
+      class="text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Image</button
+    >
+  </div>
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+    <h2 class="text-lg font-semibold">Price</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm font-medium mb-1" for="price-amount">Amount</label>
+        <input
+          id="price-amount"
+          name="priceAmount"
+          data-fm-path="price.amount"
+          type="text"
+          value={(price.amount as string) ?? ''}
+          placeholder="1299"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="price-currency">Currency</label>
+        <input
+          id="price-currency"
+          name="priceCurrency"
+          data-fm-path="price.currency"
+          type="text"
+          value={(price.currency as string) ?? 'USD'}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="price-note">Note</label>
+        <input
+          id="price-note"
+          name="priceNote"
+          data-fm-path="price.note"
+          type="text"
+          value={(price.note as string) ?? ''}
+          placeholder="Excludes shipping"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+    <h2 class="text-lg font-semibold">Environment & Conditions</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Environment</label>
+        <div id="environment-list" class="space-y-2">
+          {
+            environment.map((e) => (
+              <div class="flex items-center gap-2" data-repeater-row>
+                <input
+                  type="text"
+                  name="environment"
+                  value={e}
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                  Delete
+                </button>
+              </div>
+            ))
+          }
+        </div>
+        <button
+          type="button"
+          data-repeater-add="environment-list"
+          data-template="environment"
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Environment</button
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Water Condition</label>
+        <div id="water_condition-list" class="space-y-2">
+          {
+            water_condition.map((w) => (
+              <div class="flex items-center gap-2" data-repeater-row>
+                <input
+                  type="text"
+                  name="water_condition"
+                  value={w}
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                  Delete
+                </button>
+              </div>
+            ))
+          }
+        </div>
+        <button
+          type="button"
+          data-repeater-add="water_condition-list"
+          data-template="water_condition"
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Water Condition</button
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+    <h2 class="text-lg font-semibold">Specifications</h2>
+    <div id="specs-list" class="space-y-3">
+      {
+        specs.map((s, _i) => (
+          <div class="flex items-center gap-2" data-specs-row>
+            <input
+              type="text"
+              name="specLabel"
+              value={s.label}
+              placeholder="Label (e.g. Length)"
+              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+            <input
+              type="text"
+              name="specValue"
+              value={s.value}
+              placeholder="Value (e.g. 3.3m)"
+              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs whitespace-nowrap">
+              Delete
+            </button>
+          </div>
+        ))
+      }
+    </div>
+    <button
+      type="button"
+      data-repeater-add="specs-list"
+      data-template="specs"
+      class="text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Spec</button
+    >
+  </div>
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+    <h2 class="text-lg font-semibold">Tags</h2>
+    <div id="tags-list" class="space-y-2">
+      {
+        tags.map((t, _i) => (
+          <div class="flex items-center gap-2" data-repeater-row>
+            <input
+              type="text"
+              name="tags"
+              value={t}
+              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+              Delete
+            </button>
+          </div>
+        ))
+      }
+    </div>
+    <button
+      type="button"
+      data-repeater-add="tags-list"
+      data-template="tag"
+      class="text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Tag</button
+    >
+  </div>
+
+  <details class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 group">
+    <summary class="text-lg font-semibold cursor-pointer list-none flex items-center justify-between">
+      <span>AI Content</span>
+      <span class="text-sm text-gray-400 group-open:hidden">Click to expand</span>
+      <span class="text-sm text-gray-400 hidden group-open:inline">Click to collapse</span>
+    </summary>
+    <div class="mt-4 space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1" for="definition">Definition</label>
+        <textarea
+          id="definition"
+          name="definition"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{(fm.definition as string) ?? ''}</textarea
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="problem">Problem (Why This Exists)</label>
+        <textarea
+          id="problem"
+          name="problem"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{(fm.problem as string) ?? ''}</textarea
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="howItWorks">How It Works</label>
+        <textarea
+          id="howItWorks"
+          name="howItWorks"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{(fm.howItWorks as string) ?? ''}</textarea
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="audience">Audience (Designed For)</label>
+        <textarea
+          id="audience"
+          name="audience"
+          rows="2"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{(fm.audience as string) ?? ''}</textarea
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="skill">Skill Level</label>
+        <select
+          id="skill"
+          name="skill"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          <option value="">-- Select --</option>
+          <option value="beginner" selected={skill === 'beginner'}>Beginner</option>
+          <option value="intermediate" selected={skill === 'intermediate'}>Intermediate</option>
+          <option value="advanced" selected={skill === 'advanced'}>Advanced</option>
+          <option value="professional" selected={skill === 'professional'}>Professional</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Use Cases</label>
+        <div id="ai_use_cases-list" class="space-y-2">
+          {
+            ai_use_cases.map((uc) => (
+              <div class="flex items-center gap-2" data-repeater-row>
+                <input
+                  type="text"
+                  name="ai_use_cases"
+                  value={uc}
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                  Delete
+                </button>
+              </div>
+            ))
+          }
+        </div>
+        <button
+          type="button"
+          data-repeater-add="ai_use_cases-list"
+          data-template="ai_use_cases"
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Use Case</button
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="ai_comparison">Comparison Text</label>
+        <textarea
+          id="ai_comparison"
+          name="ai_comparison"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{(fm.ai_comparison as string) ?? ''}</textarea
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-2">FAQ</label>
+        <div id="ai_faq-list" class="space-y-3">
+          {
+            ai_faq.map((f) => (
+              <div class="flex items-start gap-2" data-ai-faq-row>
+                <div class="flex-1 space-y-2">
+                  <input
+                    type="text"
+                    name="ai_faq_q"
+                    value={f.q}
+                    placeholder="Question"
+                    class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <input
+                    type="text"
+                    name="ai_faq_a"
+                    value={f.a}
+                    placeholder="Answer"
+                    class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                </div>
+                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs mt-2">
+                  Delete
+                </button>
+              </div>
+            ))
+          }
+        </div>
+        <button
+          type="button"
+          data-repeater-add="ai_faq-list"
+          data-template="ai_faq"
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add FAQ</button
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-2">AI Specs (Key / Value)</label>
+        <div id="ai_specs-list" class="space-y-3">
+          {
+            ai_specsEntries.map((s) => (
+              <div class="flex items-center gap-2" data-ai-specs-row>
+                <input
+                  type="text"
+                  name="ai_specs_key"
+                  value={s.key}
+                  placeholder="Key"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
+                <input
+                  type="text"
+                  name="ai_specs_value"
+                  value={s.value}
+                  placeholder="Value"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                  Delete
+                </button>
+              </div>
+            ))
+          }
+        </div>
+        <button
+          type="button"
+          data-repeater-add="ai_specs-list"
+          data-template="ai_specs"
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Spec</button
+        >
+      </div>
+    </div>
+  </details>
+
+  <details class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 group">
+    <summary class="text-lg font-semibold cursor-pointer list-none flex items-center justify-between">
+      <span>SEO / Metadata</span>
+      <span class="text-sm text-gray-400 group-open:hidden">Click to expand</span>
+      <span class="text-sm text-gray-400 hidden group-open:inline">Click to collapse</span>
+    </summary>
+    <div class="mt-4 space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1" for="seo-title">Meta Title</label>
+        <input
+          id="seo-title"
+          name="seoTitle"
+          data-fm-path="metadata.title"
+          type="text"
+          value={(seo.title as string) ?? ''}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="seo-desc">Meta Description</label>
+        <textarea
+          id="seo-desc"
+          name="seoDescription"
+          data-fm-path="metadata.description"
+          rows="2"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{(seo.description as string) ?? ''}</textarea
+        >
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="seo-canonical">Canonical URL</label>
+        <input
+          id="seo-canonical"
+          name="seoCanonical"
+          data-fm-path="metadata.canonical"
+          type="url"
+          value={(seo.canonical as string) ?? ''}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </div>
+      <div class="flex items-center gap-6 text-sm">
+        <label class="flex items-center gap-2"
+          ><input
+            type="checkbox"
+            name="seoRobotIndex"
+            data-fm-path="metadata.robots.index"
+            value="true"
+            checked={seoRobots.index !== false}
+            class="rounded"
+          /> Index</label
+        >
+        <label class="flex items-center gap-2"
+          ><input
+            type="checkbox"
+            name="seoRobotFollow"
+            data-fm-path="metadata.robots.follow"
+            value="true"
+            checked={seoRobots.follow !== false}
+            class="rounded"
+          /> Follow</label
+        >
+        <label class="flex items-center gap-2"
+          ><input
+            type="checkbox"
+            name="seoIgnoreTitleTemplate"
+            data-fm-path="metadata.ignoreTitleTemplate"
+            value="true"
+            checked={seo.ignoreTitleTemplate === true}
+            class="rounded"
+          /> Ignore Title Template</label
+        >
+      </div>
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-4">
+        <div class="text-sm font-medium mb-2">Open Graph</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <input
+            name="seoOgUrl"
+            data-fm-path="metadata.openGraph.url"
+            type="url"
+            placeholder="OG URL"
+            value={(seoOg.url as string) ?? ''}
+            class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <input
+            name="seoOgSiteName"
+            data-fm-path="metadata.openGraph.siteName"
+            type="text"
+            placeholder="OG Site Name"
+            value={(seoOg.siteName as string) ?? ''}
+            class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <input
+            name="seoOgLocale"
+            data-fm-path="metadata.openGraph.locale"
+            type="text"
+            placeholder="OG Locale"
+            value={(seoOg.locale as string) ?? ''}
+            class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <input
+            name="seoOgType"
+            data-fm-path="metadata.openGraph.type"
+            type="text"
+            placeholder="OG Type"
+            value={(seoOg.type as string) ?? ''}
+            class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+      </div>
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-4">
+        <div class="text-sm font-medium mb-2">Twitter Card</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <input
+            name="seoTwitterHandle"
+            data-fm-path="metadata.twitter.handle"
+            type="text"
+            placeholder="Handle"
+            value={(seoTwitter.handle as string) ?? ''}
+            class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <input
+            name="seoTwitterSite"
+            data-fm-path="metadata.twitter.site"
+            type="text"
+            placeholder="Site"
+            value={(seoTwitter.site as string) ?? ''}
+            class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <input
+            name="seoTwitterCardType"
+            data-fm-path="metadata.twitter.cardType"
+            type="text"
+            placeholder="Card Type"
+            value={(seoTwitter.cardType as string) ?? ''}
+            class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6">
+    <div class="flex items-center justify-between mb-2">
+      <label class="block text-sm font-medium" for="body">Product Details (Markdown, MDX supported)</label>
+      <span class="text-xs text-gray-400" id="body-stats">0 characters</span>
+    </div>
+    <textarea
+      id="body"
+      name="body"
+      rows="22"
+      required
+      class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+      >{initial.body}</textarea
+    >
+  </div>
+
+  <div
+    class="sticky bottom-0 -mx-6 px-6 py-4 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 flex items-center justify-end gap-3"
+  >
+    <a href="/keystatic/products" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+      >Cancel</a
+    >
+  </div>
+</form>
+
+<script is:inline>
+  (function () {
+    const form = document.getElementById('entry-form');
+    if (!form) return;
+    const body = document.getElementById('body');
+    const stats = document.getElementById('body-stats');
+    if (body && stats) {
+      const update = () => {
+        stats.textContent = body.value.length.toLocaleString() + ' characters';
+      };
+      body.addEventListener('input', update);
+      update();
+    }
+
+    function makeInput(name, placeholder, classes) {
+      const input = document.createElement('input');
+      input.type = name === 'galleryUrl' ? 'url' : 'text';
+      input.name = name;
+      input.placeholder = placeholder;
+      input.className = classes;
+      return input;
+    }
+
+    document.querySelectorAll('[data-repeater-add]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-repeater-add');
+        const template = btn.getAttribute('data-template');
+        const list = document.getElementById(target);
+        if (!list) return;
+        const row = document.createElement('div');
+        row.className = 'flex items-center gap-2';
+        if (template === 'tag') row.setAttribute('data-repeater-row', '');
+        if (template === 'gallery') row.setAttribute('data-gallery-row', '');
+        if (template === 'specs') row.setAttribute('data-specs-row', '');
+
+        if (
+          template === 'tag' ||
+          template === 'environment' ||
+          template === 'water_condition' ||
+          template === 'ai_use_cases'
+        ) {
+          row.appendChild(
+            makeInput(
+              template === 'environment'
+                ? 'environment'
+                : template === 'water_condition'
+                  ? 'water_condition'
+                  : template === 'ai_use_cases'
+                    ? 'ai_use_cases'
+                    : 'tags',
+              '',
+              'flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm'
+            )
+          );
+        } else if (template === 'gallery') {
+          row.appendChild(
+            makeInput(
+              'galleryUrl',
+              'Image URL',
+              'flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-xs'
+            )
+          );
+          row.appendChild(
+            makeInput(
+              'galleryAlt',
+              'Alt Text',
+              'flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm'
+            )
+          );
+        } else if (template === 'specs') {
+          row.appendChild(
+            makeInput(
+              'specLabel',
+              'Label',
+              'flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm'
+            )
+          );
+          row.appendChild(
+            makeInput(
+              'specValue',
+              'Value',
+              'flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm'
+            )
+          );
+        } else if (template === 'ai_faq') {
+          row.setAttribute('data-ai-faq-row', '');
+          const wrapper = document.createElement('div');
+          wrapper.className = 'flex-1 space-y-2';
+          wrapper.appendChild(
+            makeInput(
+              'ai_faq_q',
+              'Question',
+              'w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm'
+            )
+          );
+          wrapper.appendChild(
+            makeInput(
+              'ai_faq_a',
+              'Answer',
+              'w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm'
+            )
+          );
+          row.appendChild(wrapper);
+        } else if (template === 'ai_specs') {
+          row.setAttribute('data-ai-specs-row', '');
+          row.appendChild(
+            makeInput(
+              'ai_specs_key',
+              'Key',
+              'flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono'
+            )
+          );
+          row.appendChild(
+            makeInput(
+              'ai_specs_value',
+              'Value',
+              'flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm'
+            )
+          );
+        }
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.setAttribute('data-repeater-remove', '');
+        remove.className = 'text-red-500 hover:underline text-xs whitespace-nowrap';
+        remove.textContent = 'Delete';
+        row.appendChild(remove);
+        list.appendChild(row);
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const t = e.target instanceof Element ? e.target.closest('[data-repeater-remove]') : null;
+      if (!t) return;
+      const row = t.closest(
+        '[data-repeater-row], [data-gallery-row], [data-specs-row], [data-ai-faq-row], [data-ai-specs-row]'
+      );
+      if (row) row.remove();
+    });
+
+    const langSel = document.getElementById('lang-select');
+    const langHint = document.getElementById('lang-hint');
+    const transSections = [
+      '#gallery-list',
+      '#specs-list',
+      '#tags-list',
+      '#environment-list',
+      '#water_condition-list',
+      '#product-category',
+      '#publishDate',
+      '#inStock',
+      '#featured',
+      '#body',
+      '.seo-section',
+      '.price-section',
+      '.spec-section',
+    ]
+      .map(function (s) {
+        let el = form.querySelector(s);
+        if (!el) el = form.querySelector('[data-section="' + s.replace(/^#/, '') + '"]');
+        return el ? el.closest('.rounded-xl') || el : null;
+      })
+      .filter(Boolean);
+
+    function updateLangUI() {
+      const loc = langSel ? langSel.value : 'en';
+      const isTrans = loc !== 'en';
+      form.dataset.locale = loc;
+      const localeInput = form.querySelector('[name="_locale"]');
+      if (localeInput) localeInput.value = loc;
+      if (langHint) {
+        langHint.classList.toggle('hidden', !isTrans);
+      }
+      transSections.forEach(function (el) {
+        if (el) el.style.display = isTrans ? 'none' : '';
+      });
+    }
+
+    if (langSel) {
+      langSel.addEventListener('change', function () {
+        updateLangUI();
+        form.dataset.loaded = 'false';
+        form.dataset.sha = '';
+        const existingLoader = form.querySelector('.loader-loading, .loader-error');
+        if (existingLoader) existingLoader.remove();
+        const script = document.createElement('script');
+        script.setAttribute('data-reload-translations', '');
+        script.textContent = '(' + FormDataLoaderFn.toString() + ')();';
+        document.body.appendChild(script);
+      });
+    }
+
+    updateLangUI();
+  })();
+
+  function FormDataLoaderFn() {
+    const form = document.querySelector('form[data-file]');
+    if (!form || !form.dataset.file) return;
+    form.dataset.loaded = 'false';
+    const loc = (form.querySelector('#lang-select') || {}).value || 'en';
+    const file = form.dataset.file;
+    const slug = file.replace(/^.*[\\/]/, '').replace(/\.(md|mdx)$/, '');
+    const path = loc === 'en' ? file : 'src/data/product-texts/' + loc + '/' + slug + '.yaml';
+    const fmt = loc === 'en' ? 'frontmatter' : 'yaml';
+
+    const loading = document.createElement('div');
+    loading.className =
+      'loader-loading mb-4 rounded-md border border-blue-200 bg-blue-50 dark:bg-blue-950/40 dark:border-blue-900 p-3 text-sm text-blue-700 dark:text-blue-300';
+    loading.textContent = 'Loading ' + loc + ' translation...';
+    form.prepend(loading);
+
+    fetch('/api/admin/read?path=' + encodeURIComponent(path) + '&format=' + fmt, { credentials: 'include' })
+      .then(function (r) {
+        return r.json();
+      })
+      .then(function (data) {
+        const loadingEl = form.querySelector('.loader-loading');
+        if (loadingEl) loadingEl.remove();
+        if (!data.parsed) {
+          if (loc !== 'en') {
+            form.dataset.loaded = 'true';
+            return;
+          }
+          showError('Failed to load data');
+          return;
+        }
+        const source = data.parsed;
+        const isTrans = loc !== 'en';
+        const transFields = [
+          'name',
+          'title',
+          'summary',
+          'description',
+          'definition',
+          'problem',
+          'howItWorks',
+          'audience',
+          'ai_use_cases',
+          'ai_comparison',
+          'ai_faq_q',
+          'ai_faq_a',
+        ];
+
+        const inputs = form.querySelectorAll('[name]');
+        for (let i = 0; i < inputs.length; i++) {
+          const inp = inputs[i];
+          if (
+            inp.closest(
+              '[data-gallery-row], [data-specs-row], [data-repeater-row], [data-ai-faq-row], [data-ai-specs-row]'
+            )
+          )
+            continue;
+          if (isTrans && transFields.indexOf(inp.name) === -1) continue;
+          const p = inp.getAttribute('data-fm-path') || inp.name;
+          const parts = p.split('.');
+          let cur = source;
+          for (let j = 0; j < parts.length; j++) {
+            if (cur == null || typeof cur !== 'object') {
+              cur = undefined;
+              break;
+            }
+            cur = cur[parts[j]];
+          }
+          if (cur !== undefined && cur !== null) {
+            if (inp.type === 'checkbox') inp.checked = !!cur;
+            else inp.value = String(cur);
+          }
+        }
+
+        if (isTrans && Array.isArray(source.ai_use_cases)) {
+          const ucList = form.querySelector('#ai_use_cases-list');
+          if (ucList) {
+            ucList.querySelectorAll('[data-repeater-row]').forEach(function (el) {
+              el.remove();
+            });
+            source.ai_use_cases.forEach(function (uc) {
+              const btn = form.querySelector('[data-repeater-add="ai_use_cases-list"]');
+              if (btn) btn.click();
+              const rows = ucList.querySelectorAll('[data-repeater-row]');
+              const row = rows[rows.length - 1];
+              if (row) {
+                const inp = row.querySelector('input');
+                if (inp) inp.value = String(uc || '');
+              }
+            });
+          }
+        }
+
+        if (isTrans && Array.isArray(source.ai_faq)) {
+          const faqList = form.querySelector('#ai_faq-list');
+          if (faqList) {
+            faqList.querySelectorAll('[data-ai-faq-row]').forEach(function (el) {
+              el.remove();
+            });
+            source.ai_faq.forEach(function (item) {
+              const btn = form.querySelector('[data-repeater-add="ai_faq-list"]');
+              if (btn) btn.click();
+              const rows = faqList.querySelectorAll('[data-ai-faq-row]');
+              const row = rows[rows.length - 1];
+              if (row) {
+                const qInp = row.querySelector('[name="ai_faq_q"]');
+                const aInp = row.querySelector('[name="ai_faq_a"]');
+                if (qInp) qInp.value = String(item.q || '');
+                if (aInp) aInp.value = String(item.a || '');
+              }
+            });
+          }
+        }
+
+        if (data.sha) form.dataset.sha = data.sha;
+        if (data.body && !isTrans) {
+          const bodyEl = form.querySelector('[name="body"]');
+          if (bodyEl) bodyEl.value = data.body;
+        }
+        form.dataset.loaded = 'true';
+      })
+      .catch(function (err) {
+        const loadingEl = form.querySelector('.loader-loading');
+        if (loadingEl) loadingEl.remove();
+        if (loc !== 'en') {
+          form.dataset.loaded = 'true';
+          return;
+        }
+        const errEl = document.createElement('div');
+        errEl.className =
+          'loader-error mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300';
+        errEl.textContent = 'Failed to load: ' + err.message;
+        form.prepend(errEl);
+      });
+
+    function showError(msg) {
+      const errEl = document.createElement('div');
+      errEl.className =
+        'loader-error mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300';
+      errEl.textContent = msg;
+      form.prepend(errEl);
+    }
+  }
+</script>

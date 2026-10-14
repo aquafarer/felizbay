@@ -1,0 +1,228 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+import DisclaimerDe from '~/components/legal/disclaimer.de.astro';
+import DisclaimerEs from '~/components/legal/disclaimer.es.astro';
+import DisclaimerFr from '~/components/legal/disclaimer.fr.astro';
+import DisclaimerIt from '~/components/legal/disclaimer.it.astro';
+import DisclaimerCs from '~/components/legal/disclaimer.cs.astro';
+import DisclaimerSv from '~/components/legal/disclaimer.sv.astro';
+import DisclaimerDa from '~/components/legal/disclaimer.da.astro';
+import DisclaimerEl from '~/components/legal/disclaimer.el.astro';
+import DisclaimerNo from '~/components/legal/disclaimer.no.astro';
+import DisclaimerRu from '~/components/legal/disclaimer.ru.astro';
+import DisclaimerNl from '~/components/legal/disclaimer.nl.astro';
+import DisclaimerFi from '~/components/legal/disclaimer.fi.astro';
+import DisclaimerPl from '~/components/legal/disclaimer.pl.astro';
+import DisclaimerAr from '~/components/legal/disclaimer.ar.astro';
+import DisclaimerPt from '~/components/legal/disclaimer.pt.astro';
+import DisclaimerJa from '~/components/legal/disclaimer.ja.astro';
+const Body: any =
+  (
+    {
+      de: DisclaimerDe,
+      es: DisclaimerEs,
+      fr: DisclaimerFr,
+      it: DisclaimerIt,
+      cs: DisclaimerCs,
+      sv: DisclaimerSv,
+      da: DisclaimerDa,
+      el: DisclaimerEl,
+      no: DisclaimerNo,
+      ru: DisclaimerRu,
+      nl: DisclaimerNl,
+      fi: DisclaimerFi,
+      pl: DisclaimerPl,
+      ar: DisclaimerAr,
+      pt: DisclaimerPt,
+      ja: DisclaimerJa,
+    } as Record<string, any>
+  )[lang] || null;
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: `Medical Disclaimer — ${SITE.name}`,
+    description:
+      'Medical disclaimer for Felizbay products and services. Information for informational and educational purposes only.',
+  },
+  de: {
+    title: 'Medizinischer Haftungsausschluss — Felizbay',
+    description:
+      'Die Inhalte dieser Website, einschließlich Text, Grafiken, Bildern und anderem Material, dienen nur zu',
+  },
+  es: {
+    title: 'Aviso Médico — Felizbay',
+    description:
+      'El contenido de este sitio web, incluidos textos, gráficos, imágenes y otro material, tiene únicamente fines',
+  },
+  fr: {
+    title: 'Avis de non-responsabilité médical — Felizbay',
+    description: 'Le contenu de ce site web, y compris les textes, graphiques, images et autres éléments, est fourni',
+  },
+  it: {
+    title: 'Dichiarazione di Non Responsabilità Medica — Felizbay',
+    description: 'I contenuti di questo sito web, inclusi testi, grafiche, immagini e altro materiale, hanno',
+  },
+  cs: {
+    title: 'Lékařské upozornění — Felizbay',
+    description:
+      'Lékařské upozornění k produktům a službám Felizbay. Informace mají výhradně informativní a vzdělávací charakter.',
+  },
+  sv: {
+    title: `Medicinsk ansvarsfriskrivning — ${SITE.name}`,
+    description:
+      'Medicinsk ansvarsfriskrivning för Felizbay produkter och tjänster. Information endast för informations- och utbildningsändamål.',
+  },
+  da: {
+    title: `Medicinsk ansvarsfraskrivelse — ${SITE.name}`,
+    description:
+      'Medicinsk ansvarsfraskrivelse for Felizbay produkter og tjenester. Oplysninger kun til informations- og uddannelsesformål.',
+  },
+  el: {
+    title: `Ιατρική αποποίηση ευθύνης — ${SITE.name}`,
+    description:
+      'Ιατρική δήλωση αποποίησης ευθύνης για Felizbay προϊόντα και υπηρεσίες. Πληροφορίες μόνο για ενημερωτικούς και εκπαιδευτικούς σκοπούς.',
+  },
+  no: {
+    title: `Medisinsk ansvarsfraskrivelse – ${SITE.name}`,
+    description:
+      'Medisinsk ansvarsfraskrivelse for Felizbay produkter og tjenester. Informasjon kun for informasjons- og pedagogiske formål.',
+  },
+  ru: {
+    title: `Отказ от медицинской ответственности — ${SITE.name}`,
+    description:
+      'Медицинский отказ от ответственности за продукты и услуги Felizbay. Информация только для информационных и образовательных целей.',
+  },
+  nl: {
+    title: `Medische disclaimer — ${SITE.name}`,
+    description:
+      'Medische disclaimer voor Felizbay producten en diensten. Informatie uitsluitend voor informatieve en educatieve doeleinden.',
+  },
+  fi: {
+    title: `Lääketieteellinen vastuuvapauslauseke – ${SITE.name}`,
+    description:
+      'Lääketieteellinen vastuuvapauslauseke Felizbay -tuotteista ja -palveluista. Tiedot vain tiedotus- ja koulutustarkoituksiin.',
+  },
+  pl: {
+    title: `Zastrzeżenie medyczne — ${SITE.name}`,
+    description:
+      'Zastrzeżenie medyczne dotyczące produktów i usług Felizbay. Informacje wyłącznie w celach informacyjnych i edukacyjnych.',
+  },
+  ar: {
+    title: `إخلاء المسؤولية الطبية — ${SITE.name}`,
+    description: 'إخلاء المسؤولية الطبية عن منتجات وخدمات Felizbay. المعلومات لأغراض إعلامية وتعليمية فقط.',
+  },
+  pt: {
+    title: `Isenção de responsabilidade médica — ${SITE.name}`,
+    description:
+      'Isenção de responsabilidade médica para produtos e serviços Felizbay. Informações apenas para fins informativos e educacionais.',
+  },
+  ja: {
+    title: `医療上の免責事項 — ${SITE.name}`,
+    description: 'Felizbay 製品およびサービスに関する医療上の免責事項。情報提供および教育のみを目的とした情報。',
+  },
+};
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: meta.title,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Medical Disclaimer' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {
+    Body ? (
+      <Body lang={lang} />
+    ) : (
+      <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+        <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">Medical Disclaimer</h1>
+        <div class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+          <p>
+            <em>Last updated: June 18, 2026</em>
+          </p>
+          <h2 id="general-information-only">General Information Only</h2>
+          <p>
+            The content on this website, including text, graphics, images, and other material, is for{' '}
+            <strong>informational and educational purposes only</strong>. It is not intended to be a substitute for
+            professional medical advice, diagnosis, or treatment.
+          </p>
+          <h2 id="no-doctor-patient-relationship">No Doctor-Patient Relationship</h2>
+          <p>
+            Use of this website, including access to product descriptions, blog articles, or technical documentation,
+            does not create a physician-patient, clinician-patient, or any other healthcare provider relationship
+            between you and Felizbay or any of its affiliates.
+          </p>
+          <h2 id="not-for-clinical-use">Not for Clinical Use</h2>
+          <p>
+            Our products are designed for <strong>research, informational, and wellness purposes only</strong>. They are{' '}
+            <strong>not cleared or approved by the FDA, EMA, or any other regulatory body</strong> for use in clinical
+            diagnosis, disease prevention, or treatment decisions.
+          </p>
+          <p>
+            You should <strong>not</strong> make any medical or health-related decisions based on the data, reports, or
+            information provided through our products or website without consulting a qualified healthcare professional.
+          </p>
+          <h2 id="no-warranties">No Warranties</h2>
+          <p>
+            Felizbay makes no representation or warranty, express or implied, regarding the accuracy, completeness, or
+            reliability of the information provided on this website or through its products. All content and products
+            are provided <strong>"as is"</strong> without warranty of any kind.
+          </p>
+          <h2 id="limitation-of-liability">Limitation of Liability</h2>
+          <p>
+            To the fullest extent permitted by applicable law, Felizbay shall not be liable for any direct, indirect,
+            incidental, special, or consequential damages arising from the use of or inability to use this website, its
+            products, or any content therein.
+          </p>
+          <h2 id="data-privacy-genetic-information">Data Privacy & Genetic Information</h2>
+          <p>
+            Any genetic or health-related data you submit or generate through our services is handled in accordance with
+            our <a href={`/${lang}/privacy`}>Privacy Policy</a>. We implement industry-standard encryption and access
+            controls. However, no data transmission over the internet can be guaranteed as 100% secure.
+          </p>
+          <h2 id="external-links">External Links</h2>
+          <p>
+            This website may contain links to third-party websites. Felizbay does not endorse, control, or assume
+            responsibility for the content, privacy policies, or practices of any third-party sites.
+          </p>
+          <h2 id="changes-to-this-disclaimer">Changes to This Disclaimer</h2>
+          <p>
+            We reserve the right to update this Medical Disclaimer at any time. Changes will be posted on this page with
+            an updated revision date.
+          </p>
+          <h2 id="contact">Contact</h2>
+          <p>If you have questions about this disclaimer, please contact us at:</p>
+          <ul>
+            <li>
+              <strong>Email</strong>: info@felizbay.com
+            </li>
+            <li>
+              <strong>Address</strong>: New Mexico, USA
+            </li>
+          </ul>
+          <hr />
+          <p>
+            <strong>
+              By using this website and its products, you acknowledge that you have read, understood, and agree to be
+              bound by this Medical Disclaimer.
+            </strong>
+          </p>
+        </div>
+      </section>
+    )
+  }
+</Layout>

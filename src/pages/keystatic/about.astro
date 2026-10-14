@@ -1,0 +1,560 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/about.yaml', locale);
+
+const defaultData = {
+  origin: {
+    tagline: 'Our Origin',
+    heading: 'Built for summer,<br />\n<span class="text-sky-600">driven by purpose</span>',
+    paragraphs: [
+      'Felizbay started with a simple belief: a family swimming pool should be engineered like it matters \u2014 because it does.',
+      'Our founders saw an industry where corners were cut, materials were downgraded, and safety was treated as a checkbox. They built the first Felizbay drop stitch pool to prove that an affordable backyard pool could also be genuinely reliable.',
+      'That first pool is still in service today. That principle never changed.',
+      'We are not the biggest brand. We do not make the cheapest pools. But every pool that leaves our warehouse meets the same standard that first pool set.',
+    ],
+    image: '/images/pools/rectangular-drop-stitch-pool.jpg',
+    image_alt: 'Felizbay drop stitch inflatable pool',
+  },
+  philosophy: {
+    tagline: 'Our Philosophy',
+    heading: 'Rooted in the backyard',
+    description:
+      'Summer is short. Every design decision starts with understanding how families actually use a pool: how kids play, how water ages, and how a pool must survive season after season.',
+    cards: [
+      {
+        emoji: '\u{1F3CA}',
+        title: 'Respect the Water',
+        description:
+          'Water is unpredictable. Our pools are engineered for rowdy summer use, not gentle display. If a pool wall can handle a pool party, it will handle a quiet afternoon \u2014 and that is intentional.',
+      },
+      {
+        emoji: '\u{1F527}',
+        title: 'Built to Last, Not to Replace',
+        description:
+          'The most sustainable product is the one that does not need replacing. Drop-stitch construction and reinforced PVC are chosen for longevity. Drain it, fold it, store it, and it is ready next summer.',
+      },
+      {
+        emoji: '\u{1F3C6}',
+        title: 'Accessible by Design',
+        description:
+          'A backyard pool should not be a luxury. We engineer pools that deliver rock-solid rigid-wall performance at a price that makes sense for families \u2014 not just premium installations.',
+      },
+    ],
+  },
+  design: {
+    tagline: 'Design Philosophy',
+    heading: 'Engineered for real<br />\n<span class="text-sky-600">family summers</span>',
+    paragraphs: [
+      'Every Felizbay pool starts with one question: <em>how will a real family use this?</em> We design from the hardest weekend inward, not from the showroom outward.',
+      'Our drop-stitch walls are rated for high pressure \u2014 not because everyday use demands it, but because a rigid wall keeps its shape when three kids lean on the same side. Our reinforced seams are specified for season after season of sun, chlorine, and play.',
+      'We do not design to a price point. We design to a failure point \u2014 then build well above it.',
+    ],
+    image: '/images/pools/round-blue-drop-stitch-pool.jpg',
+    image_alt: 'Felizbay pool design and engineering',
+    stats: [
+      { value: '15+', label: 'PSI wall<br />rating' },
+      { value: '1,500+', label: 'UV hours<br />tested' },
+      { value: '5yr', label: 'pool<br />lifespan' },
+    ],
+  },
+};
+
+let data = JSON.parse(JSON.stringify(defaultData));
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/about.yaml');
+        }
+      }
+    }
+    if (f) {
+      const yamlMod = await import('js-yaml');
+      const parsed = yamlMod.load(f.content) as Record<string, any>;
+      if (parsed && typeof parsed === 'object') {
+        data = { ...data, ...parsed };
+      }
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title="About Page" active="about">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="text-2xl font-semibold">About Page Content</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      Brand story, philosophy, and design content for the /about page. File: <code class="font-mono">{file}</code>
+      {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="about-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-locale={locale}
+    data-sha={sha}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    <!-- Origin Story -->
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+      <h2 class="text-base font-semibold">Brand Origin Story</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Tagline</label>
+          <input
+            type="text"
+            name="origin.tagline"
+            value={data.origin?.tagline || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Heading (HTML allowed)</label>
+          <input
+            type="text"
+            name="origin.heading"
+            value={data.origin?.heading || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Paragraphs</label>
+        <div class="space-y-2" id="origin-paragraphs">
+          {
+            (data.origin?.paragraphs || ['']).map((p: string, i: number) => (
+              <textarea
+                name={'origin.paragraph' + i}
+                rows="3"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm paragraph-input"
+              >
+                {p || ''}
+              </textarea>
+            ))
+          }
+          <div class="flex gap-2">
+            <button
+              type="button"
+              onclick="addParagraph('origin')"
+              class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              >+ Add paragraph</button
+            >
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+          <input
+            type="text"
+            name="origin.image"
+            value={data.origin?.image || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Alt Text</label>
+          <input
+            type="text"
+            name="origin.image_alt"
+            value={data.origin?.image_alt || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+      </div>
+      {
+        data.origin?.image && (
+          <img src={data.origin.image} alt="" class="h-24 rounded-lg border border-gray-200 object-cover" />
+        )
+      }
+    </div>
+
+    <!-- Philosophy -->
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+      <h2 class="text-base font-semibold">Ocean Philosophy Section</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Tagline</label>
+          <input
+            type="text"
+            name="philosophy.tagline"
+            value={data.philosophy?.tagline || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Heading</label>
+          <input
+            type="text"
+            name="philosophy.heading"
+            value={data.philosophy?.heading || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Description</label>
+        <textarea
+          name="philosophy.description"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{data.philosophy?.description || ''}</textarea
+        >
+      </div>
+      <div class="space-y-4">
+        {
+          (data.philosophy?.cards || []).map((card: any, i: number) => (
+            <div class="border border-gray-100 dark:border-gray-700 rounded-lg p-4 space-y-3">
+              <h3 class="text-sm font-semibold text-gray-500">Card #{i + 1}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Emoji</label>
+                  <input
+                    type="text"
+                    name={'philosophy.card' + i + '.emoji'}
+                    value={card.emoji || ''}
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Title</label>
+                  <input
+                    type="text"
+                    name={'philosophy.card' + i + '.title'}
+                    value={card.title || ''}
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Description</label>
+                <textarea
+                  name={'philosophy.card' + i + '.description'}
+                  rows="3"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                >
+                  {card.description || ''}
+                </textarea>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Design Philosophy -->
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+      <h2 class="text-base font-semibold">Design Philosophy Section</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Tagline</label>
+          <input
+            type="text"
+            name="design.tagline"
+            value={data.design?.tagline || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Heading (HTML allowed)</label>
+          <input
+            type="text"
+            name="design.heading"
+            value={data.design?.heading || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Paragraphs</label>
+        <div class="space-y-2" id="design-paragraphs">
+          {
+            (data.design?.paragraphs || ['']).map((p: string, i: number) => (
+              <textarea
+                name={'design.paragraph' + i}
+                rows="3"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm paragraph-input"
+              >
+                {p || ''}
+              </textarea>
+            ))
+          }
+          <div class="flex gap-2">
+            <button
+              type="button"
+              onclick="addParagraph('design')"
+              class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              >+ Add paragraph</button
+            >
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+          <input
+            type="text"
+            name="design.image"
+            value={data.design?.image || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Alt Text</label>
+          <input
+            type="text"
+            name="design.image_alt"
+            value={data.design?.image_alt || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+      </div>
+      {
+        data.design?.image && (
+          <img src={data.design.image} alt="" class="h-24 rounded-lg border border-gray-200 object-cover" />
+        )
+      }
+      <div class="grid grid-cols-3 gap-4">
+        {
+          (data.design?.stats || []).map((s: any, i: number) => (
+            <div class="border border-gray-100 dark:border-gray-700 rounded-lg p-3 space-y-2">
+              <h3 class="text-xs font-semibold text-gray-500">Stat #{i + 1}</h3>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Value</label>
+                <input
+                  type="text"
+                  name={'design.stat' + i + '.value'}
+                  value={s.value || ''}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Label (HTML allowed)</label>
+                <input
+                  type="text"
+                  name={'design.stat' + i + '.label'}
+                  value={s.label || ''}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('about-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      let sha = form.dataset.sha;
+
+      // Locale switcher
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        const href = loc === 'en' ? base : base + '?locale=' + loc;
+        window.location.href = href;
+      });
+
+      window.addParagraph = function (prefix) {
+        const container = document.getElementById(prefix + '-paragraphs');
+        if (!container) return;
+        const textarea = document.createElement('textarea');
+        textarea.name = prefix + '.paragraph' + container.querySelectorAll('textarea.paragraph-input').length;
+        textarea.rows = 3;
+        textarea.className =
+          'w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm paragraph-input';
+        container.insertBefore(textarea, container.lastElementChild);
+      };
+
+      saveBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        publishBtn.disabled = true;
+        const fd = new FormData(form);
+
+        function collectParagraphs(prefix) {
+          const out = [];
+          for (let i = 0; i < 20; i++) {
+            const val = fd.get(prefix + '.paragraph' + i);
+            if (val !== null && String(val).trim()) out.push(String(val).trim());
+            else if (val !== null) break;
+          }
+          return out;
+        }
+
+        const data = {
+          origin: {
+            tagline: String(fd.get('origin.tagline') || '').trim(),
+            heading: String(fd.get('origin.heading') || '').trim(),
+            paragraphs: collectParagraphs('origin'),
+            image: String(fd.get('origin.image') || '').trim(),
+            image_alt: String(fd.get('origin.image_alt') || '').trim(),
+          },
+          philosophy: {
+            tagline: String(fd.get('philosophy.tagline') || '').trim(),
+            heading: String(fd.get('philosophy.heading') || '').trim(),
+            description: String(fd.get('philosophy.description') || '').trim(),
+            cards: [0, 1, 2].map((i) => ({
+              emoji: String(fd.get('philosophy.card' + i + '.emoji') || '').trim(),
+              title: String(fd.get('philosophy.card' + i + '.title') || '').trim(),
+              description: String(fd.get('philosophy.card' + i + '.description') || '').trim(),
+            })),
+          },
+          design: {
+            tagline: String(fd.get('design.tagline') || '').trim(),
+            heading: String(fd.get('design.heading') || '').trim(),
+            paragraphs: collectParagraphs('design'),
+            image: String(fd.get('design.image') || '').trim(),
+            image_alt: String(fd.get('design.image_alt') || '').trim(),
+            stats: [0, 1, 2].map((i) => ({
+              value: String(fd.get('design.stat' + i + '.value') || '').trim(),
+              label: String(fd.get('design.stat' + i + '.label') || '').trim(),
+            })),
+          },
+        };
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              branch: 'draft',
+              data,
+              commitMessage: 'Draft: Update about page content',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || res.status >= 400) {
+            window.__adminToast?.(result?.error || result?.message || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            publishBtn.disabled = false;
+            return;
+          }
+          if (result?.content?.sha) {
+            sha = result.content.sha;
+            form.dataset.sha = sha;
+          }
+          window.__adminToast?.('Draft saved (not deployed)', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        }
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Draft';
+        publishBtn.disabled = false;
+      });
+
+      publishBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result?.error || 'Publish failed', 'error');
+            publishBtn.textContent = 'Publish';
+            saveBtn.disabled = false;
+            publishBtn.disabled = false;
+            return;
+          }
+          window.__adminToast?.('Published! Deploying to production...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.textContent = 'Publish';
+          saveBtn.disabled = false;
+          publishBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

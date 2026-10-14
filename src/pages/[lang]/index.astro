@@ -1,0 +1,151 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import { SITE } from 'astrowind:config';
+import { getLocalizedProducts } from '~/utils/product-i18n';
+import { localizeProductData } from '~/lib/product-l10n';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import { languages as langMap, defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import __pageData from '~/i18n/generated/pages/home.ts';
+
+export async function getStaticPaths() {
+  return Object.keys(langMap).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+setPageContentData(__pageData);
+const page = getPageContent(lang || defaultLang, 'home');
+
+const hero = page.hero ?? {};
+const stats = page.stats ?? {};
+const customerTypes = page.content_customer_types ?? {};
+const features = page.features ?? {};
+const categories = page.content_categories ?? {};
+const workshop = page.content_workshop ?? {};
+const compliance = page.content_compliance ?? {};
+const steps = page.steps ?? {};
+const faqs = page.faqs ?? {};
+const cta = page.cta ?? {};
+
+const poolProducts = getLocalizedProducts(lang || defaultLang)
+  .slice(0, 3)
+  .map((p) => localizeProductData(p, lang || defaultLang));
+
+const customerItems = (customerTypes.items ?? []).map(
+  (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
+    title: item.title,
+    description: item.description,
+    icon: item.icon,
+    callToAction: item.cta ? { text: item.cta, href: item.cta_href, icon: 'tabler:arrow-right' } : undefined,
+  })
+);
+
+const metadata = {
+  title: `${SITE.name} — Inflatable Swimming Pools`,
+  description:
+    'Premium drop stitch inflatable swimming pools by Felizbay. Rigid walls, fast setup, easy winter storage. Wholesale and OEM/ODM available.',
+};
+---
+
+<Layout metadata={metadata}>
+  {
+    hero.image || hero.title ? (
+      <Hero tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} image={hero.image} />
+    ) : null
+  }
+
+  <!-- Product highlights -->
+  {
+    poolProducts.length > 0 && (
+      <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
+        <div class="text-center mb-8">
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+            {t('product.catalog') || 'Pool Catalog'}
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading">
+            {categories.title || 'Inflatable Swimming Pools'}
+          </h2>
+          <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
+            {categories.subtitle || ''}
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          {poolProducts.map((p) => (
+            <ProductCard product={p} lang={lang} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <Stats title={stats.title} stats={stats.stats} />
+
+  <Features2
+    tagline={customerTypes.tagline}
+    title={customerTypes.title}
+    subtitle={customerTypes.subtitle}
+    columns={2}
+    items={customerItems}
+  />
+
+  <Features2
+    id={features.id}
+    tagline={features.tagline}
+    title={features.title}
+    subtitle={features.subtitle}
+    columns={3}
+    items={features.items}
+  />
+
+  {
+    workshop.title ? (
+      <section class="px-4 py-12 sm:px-6 mx-auto max-w-7xl">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          {workshop.tagline && (
+            <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+              {workshop.tagline}
+            </p>
+          )}
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading" set:html={workshop.title} />
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {(workshop.items ?? []).map((item: { title: string; description: string }) => (
+            <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/60 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100">{item.title}</h3>
+              <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    ) : null
+  }
+
+  <Features2
+    tagline={compliance.tagline}
+    title={compliance.title}
+    subtitle={compliance.subtitle}
+    columns={4}
+    items={compliance.items}
+  />
+
+  <Steps2 title={steps.title} items={steps.items} image={steps.image} />
+
+  <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
+
+  {
+    cta.title ? (
+      <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} />
+    ) : null
+  }
+</Layout>

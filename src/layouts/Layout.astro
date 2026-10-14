@@ -1,0 +1,235 @@
+---
+import '~/assets/styles/tailwind.css';
+
+import { I18N, SITE_SETTINGS } from 'astrowind:config';
+
+import CommonMeta from '~/components/common/CommonMeta.astro';
+import Favicons from '~/components/Favicons.astro';
+import CustomStyles from '~/components/CustomStyles.astro';
+import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
+import Metadata from '~/components/common/Metadata.astro';
+import Analytics from '~/components/common/Analytics.astro';
+import BasicScripts from '~/components/common/BasicScripts.astro';
+import AIChat from '~/components/widgets/AIChat.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiSignal from '~/components/common/AiSignal.astro';
+import { getAboutSchema } from '~/lib/geo-seo/intent';
+
+// Comment the line below to disable View Transitions
+import { ClientRouter } from 'astro:transitions';
+
+import type { MetaData as MetaDataType } from '~/types';
+import { getSeoSettings } from '~/utils/seo-settings';
+import langData from '~/data/site/languages.yaml';
+import { defaultLang, setLang } from '~/i18n/config';
+import { getLangFromUrl, removeLang, localizeUseCasePath } from '~/i18n/utils';
+import { isRootOnlyRoute as isRootOnlyRouteFn } from '~/i18n/root-only';
+import facts from '~/config/facts.json';
+// P1-D：只为完整本地化并毕业的语言背书（cs 2026-09-27、sv/da/el/no/ru 2026-09-28、nl/fi/pl/ar/pt 2026-09-28、ja 2026-09-29 毕业，清单见 TECH.md §16.4），其余语言整体 noindex（见 seo-suppress.json）
+const FULLY_LOCALIZED = [
+  'en',
+  'de',
+  'fr',
+  'es',
+  'it',
+  'cs',
+  'sv',
+  'da',
+  'el',
+  'no',
+  'ru',
+  'nl',
+  'fi',
+  'pl',
+  'ar',
+  'pt',
+  'ja',
+];
+export interface Props {
+  metadata?: MetaDataType;
+  disableGlobalLd?: boolean;
+}
+
+const { metadata = {}, disableGlobalLd = false } = Astro.props;
+const { textDirection: defaultTextDir } = I18N;
+
+const seo = await getSeoSettings();
+
+const orgName = seo.organizationName || SITE_SETTINGS.organization?.name || SITE_SETTINGS.siteName;
+
+const siteUrlTrimmed = seo.siteUrl.replace(/\/+$/, '');
+
+const enabledLangs = (Array.isArray(langData) ? langData : []).filter((l: any) => l.enabled !== false);
+
+const pathname = Astro.url.pathname;
+const pathWithoutLang = removeLang(pathname);
+const currentLang = getLangFromUrl(Astro.url);
+const language = currentLang;
+// Populate the generated per-language UI strings (small per-language modules,
+// statically imported in src/i18n/generated/ui-all.ts) for all components.
+setLang(currentLang);
+const RTL_LANGS = new Set(['ar', 'he']);
+const textDirection = RTL_LANGS.has(language) ? 'rtl' : defaultTextDir || 'ltr';
+
+// Root-only routes have no localized versions. Emitting per-locale
+// `<link rel="alternate" hreflang>` for them would produce dead URLs.
+const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
+---
+
+<!doctype html>
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+  <head>
+    <CommonMeta />
+    <Favicons />
+    <CustomStyles />
+    <ApplyColorMode />
+    <Metadata {...metadata} seoSettings={seo} />
+    <Analytics id={seo.googleAnalyticsId} />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://assets.felizbay.com" crossorigin />
+
+    {
+      !isRootOnlyRoute &&
+        enabledLangs
+          .filter((l: any) => FULLY_LOCALIZED.includes(l.locale))
+          .map((l: any) => (
+            <link
+              rel="alternate"
+              hreflang={l.locale}
+              href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, l.locale)}`}
+            />
+          ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, defaultLang)}`}
+    />
+
+    {
+      !disableGlobalLd && (
+        <>
+          <JsonLd
+            type="Organization"
+            data={{
+              name: facts.brand.name,
+              alternateName: 'Felizbay Inflatable Pools',
+              url: seo.siteUrl,
+              logo: facts.logo.url,
+              image: facts.logo.url,
+              description: facts.brand.description,
+              slogan: facts.brand.slogan,
+              foundingDate: String(facts.brand.foundingYear),
+              foundingLocation: {
+                '@type': 'Place',
+                name: 'New Mexico, USA',
+                address: {
+                  '@type': 'PostalAddress',
+                  addressRegion: facts.factory.province,
+                  addressCountry: facts.factory.country,
+                },
+              },
+              parentOrganization: {
+                '@type': 'Organization',
+                name: facts.brand.legalName,
+              },
+              brand: {
+                '@type': 'Brand',
+                name: facts.brand.name,
+              },
+              knowsAbout: [
+                'Drop stitch inflatable pool manufacturing',
+                'PVC pool fabrication',
+                'Backyard pool safety (EN 16582-1, ASTM F2666)',
+                'Inflatable pool water care',
+                'Private label pool branding',
+                'Pool pressure testing and quality validation',
+                'ISO 9001:2015 certified manufacturing',
+              ],
+              industry: ['Consumer Pool & Outdoor Products', 'Inflatable Pool OEM'],
+              areaServed: facts.reach.regions,
+              email: facts.contact.email,
+              telephone: facts.contact.primaryPhone,
+              sameAs: [
+                facts.social.linkedin,
+                facts.social.youtube,
+                facts.social.x,
+                facts.social.instagram,
+                facts.social.facebook,
+              ].filter(Boolean),
+            }}
+          />
+          <JsonLd
+            type="Person"
+            data={{
+              name: facts.founder.name,
+              jobTitle: facts.founder.jobTitle,
+              description:
+                'Founder of Felizbay, supplier of premium drop stitch inflatable swimming pools for families and retailers worldwide.',
+              url: 'https://felizbay.com/about',
+              knowsAbout: [
+                'Drop Stitch Pool Manufacturing',
+                'PVC Fabrication',
+                'Inflatable Pool Design',
+                'Pool Safety Standards',
+              ],
+              affiliation: { '@type': 'Organization', name: facts.brand.name, url: 'https://felizbay.com' },
+              worksFor: { '@type': 'Organization', name: facts.brand.name },
+            }}
+          />
+          <JsonLd
+            type="WebSite"
+            data={{
+              name: SITE_SETTINGS.siteName || orgName,
+              url: seo.siteUrl,
+              description: 'Premium drop stitch inflatable swimming pools by Felizbay — rigid walls, fast setup, easy winter storage.',
+              about: getAboutSchema(pathname),
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: `${siteUrlTrimmed}/search?q={search_term_string}`,
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            }}
+          />
+        </>
+      )
+    }
+
+    <AiSignal />
+
+    <!-- Comment the line below to disable View Transitions -->
+    <ClientRouter fallback="swap" />
+  </head>
+
+  <body class="antialiased text-default bg-page tracking-tight">
+    <slot />
+
+    <BasicScripts />
+    <AIChat />
+    <script>
+      (function () {
+        if (!window.IntersectionObserver) return;
+        const e = document.querySelectorAll('.reveal');
+        if (!e.length) return;
+        const o = new IntersectionObserver(
+          function (n) {
+            n.forEach(function (n) {
+              if (n.isIntersecting) {
+                n.target.classList.add('visible');
+                o.unobserve(n.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        e.forEach(function (e) {
+          o.observe(e);
+        });
+      })();
+    </script>
+  </body>
+</html>

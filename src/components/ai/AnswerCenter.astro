@@ -1,0 +1,745 @@
+---
+export interface Props {
+  lang?: string;
+  heroTitle?: string;
+  heroSubtitle?: string;
+  placeholder?: string;
+  askButton?: string;
+  categories?: Array<{ label: string; icon: string; questions: string[] }>;
+}
+
+const {
+  lang = 'en',
+  heroTitle = 'AI Answer Center',
+  heroSubtitle = 'Ask anything about Felizbay inflatable swimming pools — setup, water care, materials, sizing, and more.',
+  placeholder = 'Ask a question...',
+  askButton = 'Ask',
+  categories = [],
+} = Astro.props;
+---
+
+<div class="answer-center" data-lang={lang}>
+  <!-- Hero -->
+  <section class="ac-hero">
+    <div class="ac-hero-inner">
+      <span class="ac-badge">AI-Powered</span>
+      <h1 class="ac-title">{heroTitle}</h1>
+      <p class="ac-subtitle">{heroSubtitle}</p>
+      <form class="ac-form" id="ac-form">
+        <input type="text" id="ac-input" class="ac-input" placeholder={placeholder} autocomplete="off" />
+        <button type="submit" id="ac-submit" class="ac-submit">{askButton}</button>
+      </form>
+      <div class="ac-powered">
+        <span>Instant answers from the Felizbay pool knowledge base</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suggested Questions -->
+  <section class="ac-categories" id="ac-categories">
+    <div class="ac-categories-inner">
+      <span class="ac-section-label">Suggested Questions</span>
+      <h2 class="ac-section-title">Explore by topic</h2>
+      <div class="ac-category-grid">
+        {
+          categories.length > 0 ? (
+            categories.map((cat) => (
+              <div class="ac-category-card">
+                <div class="ac-category-header">
+                  <span class="ac-category-icon">{cat.icon}</span>
+                  <h3 class="ac-category-label">{cat.label}</h3>
+                </div>
+                <ul class="ac-question-list">
+                  {cat.questions.map((q) => (
+                    <li>
+                      <button type="button" class="ac-question-btn" data-question={q}>
+                        {q}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          ) : (
+            <>
+              <div class="ac-category-card">
+                <div class="ac-category-header">
+                  <span class="ac-category-icon">🏊</span>
+                  <h3 class="ac-category-label">Products</h3>
+                </div>
+                <ul class="ac-question-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="Which inflatable pool is best for a small backyard?"
+                    >
+                      Best pool for a small backyard?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="Should I choose a rectangular or round inflatable pool?"
+                    >
+                      Rectangular vs round pool?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="What size inflatable pool do I need for my family?"
+                    >
+                      What pool size for my family?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="Do Felizbay pools come with a cover and pump?"
+                    >
+                      Do pools include a cover and pump?
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="ac-category-card">
+                <div class="ac-category-header">
+                  <span class="ac-category-icon">⚙️</span>
+                  <h3 class="ac-category-label">Technology & Materials</h3>
+                </div>
+                <ul class="ac-question-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="What is drop stitch technology and how does it make pool walls rigid?"
+                    >
+                      How does drop stitch work?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="How durable is the PVC material in Felizbay pools?"
+                    >
+                      How durable is the pool PVC?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="What PSI should I inflate my drop stitch pool to?"
+                    >
+                      What PSI for my pool?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="How is a drop stitch inflatable pool manufactured?"
+                    >
+                      How are inflatable pools made?
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="ac-category-card">
+                <div class="ac-category-header">
+                  <span class="ac-category-icon">🌞</span>
+                  <h3 class="ac-category-label">Setup & Care</h3>
+                </div>
+                <ul class="ac-question-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="How long does it take to set up an inflatable pool?"
+                    >
+                      How long does setup take?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="How do I keep the water in my inflatable pool clean?"
+                    >
+                      How to keep pool water clean?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="How do I store my inflatable pool for winter?"
+                    >
+                      How to winterize my pool?
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="ac-question-btn"
+                      data-question="What are the OEM and private label options for Felizbay pools?"
+                    >
+                      OEM/private label options?
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Answer Display -->
+  <section class="ac-answer-section hidden" id="ac-answer-section">
+    <div class="ac-answer-inner">
+      <div class="ac-answer-question" id="ac-answer-question"></div>
+      <div class="ac-answer-content" id="ac-answer-content">
+        <div class="ac-answer-loading hidden" id="ac-answer-loading">
+          <div class="ac-spinner"></div>
+          <span>Searching knowledge base...</span>
+        </div>
+      </div>
+      <div class="ac-answer-sources hidden" id="ac-answer-sources">
+        <h3 class="ac-sources-title">Sources</h3>
+        <ul id="ac-sources-list"></ul>
+      </div>
+      <div class="ac-answer-actions hidden" id="ac-answer-actions">
+        <button type="button" class="ac-ask-another" id="ac-ask-another">Ask another question</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Resources -->
+  <section class="ac-resources">
+    <div class="ac-resources-inner">
+      <span class="ac-section-label">Explore More</span>
+      <h2 class="ac-section-title">Related resources</h2>
+      <div class="ac-resource-grid">
+        <a href={lang === 'en' ? '/faq' : `/${lang}/faq`} class="ac-resource-card">
+          <div class="ac-resource-icon">❓</div>
+          <h3>FAQ</h3>
+          <p>Answers to common pool setup, water care, and ordering questions</p>
+        </a>
+        <a href={lang === 'en' ? '/products' : `/${lang}/products`} class="ac-resource-card">
+          <div class="ac-resource-icon">📦</div>
+          <h3>Product Catalog</h3>
+          <p>Browse all inflatable pools with specifications and photos</p>
+        </a>
+        <a href={lang === 'en' ? '/products/compare' : `/${lang}/products/compare`} class="ac-resource-card">
+          <div class="ac-resource-icon">⚖️</div>
+          <h3>Comparisons</h3>
+          <p>Side-by-side pool size, capacity, and material comparisons</p>
+        </a>
+        <a href={lang === 'en' ? '/contact' : `/${lang}/contact`} class="ac-resource-card">
+          <div class="ac-resource-icon">📊</div>
+          <h3>Contact & Quotations</h3>
+          <p>Get pricing, specs, and OEM/private-label information</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script is:inline>
+  (function () {
+    const form = document.getElementById('ac-form');
+    const input = document.getElementById('ac-input');
+    const submitBtn = document.getElementById('ac-submit');
+    const answerSection = document.getElementById('ac-answer-section');
+    const answerContent = document.getElementById('ac-answer-content');
+    const answerQuestion = document.getElementById('ac-answer-question');
+    const answerLoading = document.getElementById('ac-answer-loading');
+    const sourcesSection = document.getElementById('ac-answer-sources');
+    const sourcesList = document.getElementById('ac-sources-list');
+    const answerActions = document.getElementById('ac-answer-actions');
+    const askAnother = document.getElementById('ac-ask-another');
+    const categories = document.getElementById('ac-categories');
+
+    function addAnswer(text) {
+      const existing = document.querySelector('.ac-answer-text');
+      if (existing) existing.remove();
+      const div = document.createElement('div');
+      div.className = 'ac-answer-text';
+      div.textContent = text;
+      answerContent.appendChild(div);
+    }
+
+    function showError(msg) {
+      const existing = document.querySelector('.ac-answer-text');
+      if (existing) existing.remove();
+      const div = document.createElement('div');
+      div.className = 'ac-answer-text ac-error';
+      div.textContent = msg || 'Sorry, I could not process that request. Please try again.';
+      answerContent.appendChild(div);
+    }
+
+    function ask(question) {
+      if (!question || !question.trim()) return;
+      input.value = question;
+      answerLoading.classList.remove('hidden');
+      answerSection.classList.remove('hidden');
+      categories.classList.add('hidden');
+      answerQuestion.textContent = question;
+      sourcesSection.classList.add('hidden');
+      sourcesList.innerHTML = '';
+      answerActions.classList.add('hidden');
+      submitBtn.disabled = true;
+
+      fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: question }),
+      })
+        .then(function (r) {
+          return r.json();
+        })
+        .then(function (data) {
+          answerLoading.classList.add('hidden');
+          if (data.answer) {
+            addAnswer(data.answer);
+            if (data.sources && data.sources.length > 0) {
+              sourcesSection.classList.remove('hidden');
+              data.sources.forEach(function (s) {
+                const li = document.createElement('li');
+                if (s.url) {
+                  const a = document.createElement('a');
+                  a.href = s.url;
+                  a.textContent = s.title || s.url;
+                  a.target = '_blank';
+                  a.rel = 'noopener';
+                  li.appendChild(a);
+                } else {
+                  li.textContent = s.title || s;
+                }
+                sourcesList.appendChild(li);
+              });
+            }
+          } else {
+            showError(data.error || 'No response received.');
+          }
+        })
+        .catch(function () {
+          answerLoading.classList.add('hidden');
+          showError('Network error. Please check your connection and try again.');
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          answerActions.classList.remove('hidden');
+          answerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (q) ask(q);
+    });
+
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('.ac-question-btn');
+      if (btn) {
+        const q = btn.getAttribute('data-question');
+        if (q) ask(q);
+      }
+    });
+
+    if (askAnother) {
+      askAnother.addEventListener('click', function () {
+        answerSection.classList.add('hidden');
+        categories.classList.remove('hidden');
+        input.value = '';
+        input.focus();
+        answerContent.querySelector('.ac-answer-text')?.remove();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (input) {
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          form.dispatchEvent(new Event('submit'));
+        }
+      });
+    }
+  })();
+</script>
+
+<style is:global>
+  /* Hero */
+  .ac-hero {
+    background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0284c7 100%);
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+    border-radius: 16px;
+    margin-bottom: 2.5rem;
+  }
+  .ac-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .ac-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .ac-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+  }
+  .ac-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.5rem;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ac-form {
+    display: flex;
+    gap: 8px;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+  }
+  .ac-input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    background: white;
+    color: #0f172a;
+    outline: none;
+  }
+  .ac-input:focus {
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5);
+  }
+  .ac-submit {
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: none;
+    background: #facc15;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition:
+      background 0.15s,
+      transform 0.1s;
+    white-space: nowrap;
+  }
+  .ac-submit:hover {
+    background: #eab308;
+  }
+  .ac-submit:active {
+    transform: scale(0.97);
+  }
+  .ac-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ac-powered {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.75rem;
+  }
+
+  /* Categories */
+  .ac-categories-inner,
+  .ac-answer-inner,
+  .ac-resources-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .ac-section-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #0284c7;
+    text-align: center;
+  }
+  .ac-section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .dark .ac-section-title {
+    color: #f1f5f9;
+  }
+
+  .ac-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .ac-category-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.25rem;
+  }
+  .dark .ac-category-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  .ac-category-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+  }
+  .ac-category-icon {
+    font-size: 1.3rem;
+  }
+  .ac-category-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .dark .ac-category-label {
+    color: #f1f5f9;
+  }
+  .ac-question-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ac-question-list li {
+    margin: 0;
+  }
+  .ac-question-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #0284c7;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.12s;
+    line-height: 1.4;
+  }
+  .ac-question-btn:hover {
+    background: #f0f9ff;
+  }
+  .dark .ac-question-btn {
+    color: #38bdf8;
+  }
+  .dark .ac-question-btn:hover {
+    background: #0c4a6e33;
+  }
+
+  /* Answer Section */
+  .ac-answer-section {
+    background: #f8fafc;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+  }
+  .dark .ac-answer-section {
+    background: #0f172a;
+  }
+  .ac-answer-section.hidden {
+    display: none;
+  }
+  .ac-answer-question {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 0 0 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 1rem;
+  }
+  .dark .ac-answer-question {
+    color: #f1f5f9;
+    border-color: #334155;
+  }
+  .ac-answer-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #334155;
+  }
+  .dark .ac-answer-text {
+    color: #cbd5e1;
+  }
+  .ac-answer-text.ac-error {
+    color: #dc2626;
+  }
+  .dark .ac-answer-text.ac-error {
+    color: #f87171;
+  }
+
+  .ac-answer-loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  .ac-answer-loading.hidden {
+    display: none;
+  }
+  .ac-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #0284c7;
+    border-radius: 50%;
+    animation: ac-spin 0.7s linear infinite;
+  }
+  @keyframes ac-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .ac-answer-sources {
+    margin-top: 1.25rem;
+  }
+  .ac-answer-sources.hidden {
+    display: none;
+  }
+  .ac-sources-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+    margin-bottom: 0.4rem;
+  }
+  .ac-answer-sources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ac-answer-sources li {
+    font-size: 0.8rem;
+  }
+  .ac-answer-sources a {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #0369a1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.12s;
+  }
+  .ac-answer-sources a:hover {
+    background: #bae6fd;
+  }
+
+  .ac-answer-actions {
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+  .ac-answer-actions.hidden {
+    display: none;
+  }
+  .ac-ask-another {
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #475569;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  .ac-ask-another:hover {
+    background: #f1f5f9;
+  }
+
+  /* Resources */
+  .ac-resources {
+    padding: 0 0 2rem;
+  }
+  .ac-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .ac-resource-card {
+    display: block;
+    padding: 1.25rem;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    text-decoration: none;
+    transition:
+      box-shadow 0.15s,
+      transform 0.12s;
+  }
+  .dark .ac-resource-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  .ac-resource-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  .ac-resource-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .ac-resource-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.25rem;
+  }
+  .dark .ac-resource-card h3 {
+    color: #f1f5f9;
+  }
+  .ac-resource-card p {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+  .dark .ac-resource-card p {
+    color: #94a3b8;
+  }
+
+  @media (max-width: 640px) {
+    .ac-title {
+      font-size: 1.75rem;
+    }
+    .ac-form {
+      flex-direction: column;
+    }
+    .ac-submit {
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Privacy Policy — ${SITE.name}`,
+  description: 'Felizbay privacy policy. Learn how we collect, use, and protect your personal data.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Privacy Policy' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+    <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">Privacy Policy</h1>
+    <div
+      class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+    >
+      <p><em>Last updated: June 18, 2026</em></p>
+      <p>
+        Felizbay ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect, use,
+        disclose, and safeguard your information when you visit our website or purchase our products.
+      </p>
+      <h2 id="information-we-collect">Information We Collect</h2>
+      <p>
+        We may collect personal identification information (Name, Email Address, Phone Number, Shipping Address) and
+        usage data (browser type, visit duration, pages viewed) when you interact with our site.
+      </p>
+      <h2 id="how-we-use-your-information">How We Use Your Information</h2>
+      <p>
+        We use the information we collect to process transactions, send periodic emails regarding your order or other
+        products and services, improve our website, and comply with legal obligations.
+      </p>
+      <h2 id="cookies">Cookies</h2>
+      <p>
+        Our website uses cookies to enhance user experience. You can set your browser to refuse all or some browser
+        cookies, or to alert you when websites set or access cookies.
+      </p>
+      <h2 id="data-protection">Data Protection</h2>
+      <p>
+        We implement appropriate technical and organizational security measures to protect your personal data against
+        unauthorized access, alteration, disclosure, or destruction.
+      </p>
+      <h2 id="third-party-disclosure">Third-Party Disclosure</h2>
+      <p>
+        We do not sell, trade, or otherwise transfer your personally identifiable information to third parties without
+        your consent, except as required by law or as necessary to provide our services.
+      </p>
+      <h2 id="contact">Contact</h2>
+      <p>If you have questions about this Privacy Policy, contact us at info@felizbay.com.</p>
+    </div>
+  </section>
+</Layout>

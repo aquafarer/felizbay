@@ -1,0 +1,56 @@
+---
+export interface ExperienceStory {
+  quote: string;
+  narrative: string;
+  context: string;
+  source?: string;
+}
+
+export interface Props {
+  title: string;
+  subtitle?: string;
+  eyebrow?: string;
+  stories: ExperienceStory[];
+  background?: string;
+}
+
+const {
+  title,
+  subtitle,
+  eyebrow = 'Real-World Experience',
+  stories,
+  background = 'bg-gradient-to-br from-gray-50 to-blue-50',
+} = Astro.props;
+---
+
+<section class={`py-24 px-6 ${background}`}>
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{eyebrow}</span>
+      <h2 class="mt-4 text-3xl font-semibold text-gray-900">{title}</h2>
+      {subtitle && <p class="mt-4 text-lg text-gray-500">{subtitle}</p>}
+    </div>
+    <div class="mt-16 space-y-10">
+      {
+        stories.map((story) => (
+          <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+            <blockquote class="text-lg text-gray-700 italic leading-relaxed border-l-4 border-sky-400 pl-6">
+              &ldquo;{story.quote}&rdquo;
+            </blockquote>
+            <p class="mt-6 text-gray-600 leading-relaxed">{story.narrative}</p>
+            <div class="mt-4 flex items-center gap-3 text-sm text-gray-400">
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-sky-400" />
+              <span>{story.context}</span>
+              {story.source && (
+                <>
+                  <span class="text-gray-300">·</span>
+                  <span class="font-medium text-gray-500">{story.source}</span>
+                </>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

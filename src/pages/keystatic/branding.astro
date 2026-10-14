@@ -1,0 +1,634 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient, getRepoInfo } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/config.yaml', locale);
+getRepoInfo();
+
+let data: Record<string, any> = {
+  site_name: 'Felizbay',
+  logo_image: '',
+  logo_alt: 'Felizbay logo',
+  copyright: '© {year} Felizbay · All rights reserved.',
+  phone: '+86 13305324192',
+  address: 'Economic Development Zone, Laixi, Qingdao, China, 266600',
+  email: 'info@felizbay.com',
+  whatsapp_number: '',
+  whatsapp_default_message: 'Hello, I would like to inquire about your products.',
+  contact_email_to: '',
+  contact_email_provider: 'none',
+  contact_from_email: '',
+  contact_from_name: '',
+  contact_resend_api_key: '',
+  gmap_api_key: '',
+  map_latitude: '36.8861',
+  map_longitude: '120.5261',
+};
+let fullConfigStr = '';
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/config.yaml');
+        }
+      }
+    }
+    if (f) {
+      const yamlMod = await import('js-yaml');
+      const parsed = yamlMod.load(f.content) as Record<string, any>;
+      if (parsed?.branding && typeof parsed.branding === 'object') {
+        data = { ...data, ...parsed.branding };
+      }
+      fullConfigStr = JSON.stringify(parsed || {});
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+
+const year = new Date().getFullYear();
+---
+
+<AdminLayout title="Branding & Logo" active="branding">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="text-2xl font-semibold">
+          Branding & Logo <span class="text-base text-gray-400 font-normal">(品牌与 Logo)</span>
+        </h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      编辑站点名称、Logo、版权信息、联系方式、WhatsApp、邮件配置和谷歌地图。 Edit site name, logo, copyright, contact
+      info, WhatsApp, email config, and Google Maps. File: <code class="font-mono">{file}</code>. You can use <code
+        class="font-mono">{'{year}'}</code
+      > and <code class="font-mono">{'{site_name}'}</code> placeholders in the copyright text, which will be auto-replaced
+      (current year {year}, current site_name "{data.site_name}").
+      {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+    </p>
+    <p class="mt-1 text-xs text-amber-600 dark:text-amber-400">
+      <strong>提示：</strong> 此面板编辑的是显示用信息。JSON-LD 结构化数据中的组织信息和社交链接请在 SEO 面板中编辑。 Tip:
+      This panel edits display info. For JSON-LD organization info and social links, use the SEO panel.
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="branding-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-locale={locale}
+    data-key="branding"
+    data-sha={sha}
+    data-full-config={fullConfigStr}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Site Name (Logo Text)</label>
+        <input
+          type="text"
+          name="site_name"
+          value={data.site_name ?? ''}
+          placeholder="Felizbay"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+        <p class="mt-1 text-xs text-gray-500">
+          Displayed in the top-right logo, bottom footer logo, and copyright. Keep consistent after changes.
+        </p>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Logo Image URL (optional)</label>
+        <input
+          type="text"
+          name="logo_image"
+          value={data.logo_image ?? ''}
+          placeholder="https://example.com/logo.webp"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">
+          Leave empty to use the first letter as a placeholder. Recommended PNG/SVG, square 1:1.
+        </p>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Logo Image Alt Text</label>
+        <input
+          type="text"
+          name="logo_alt"
+          value={data.logo_alt ?? ''}
+          placeholder="Felizbay logo"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Copyright (supports HTML tags, e.g. <code class="font-mono">&lt;a class="text-blue-600 underline"&gt;</code
+          >)</label
+        >
+        <textarea
+          name="copyright"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          >{data.copyright ?? ''}</textarea
+        >
+        <p class="mt-1 text-xs text-gray-500">
+          Preview (live replacement of <code class="font-mono">{'{year}'}</code>): <span
+            class="font-mono"
+            data-copyright-preview></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">
+        Contact Information <span class="text-xs text-gray-400 font-normal">(联系方式 - 显示用) </span>
+        <p class="text-xs text-gray-500">
+          显示在 footer 和 contact 页面。同时 JSON-LD 结构化数据中的组织信息和社交链接请在 SEO 面板中编辑。 Displayed in
+          footer and contact page. To update JSON-LD organization info, use the SEO panel.
+        </p>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Phone Number <span class="text-xs text-gray-400 font-normal">(电话)</span></label
+          >
+          <input
+            type="text"
+            name="phone"
+            value={data.phone ?? ''}
+            placeholder="+86 13305324192"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+          <p class="mt-1 text-xs text-gray-500">显示在 footer 和 contact 页面。不会影响 JSON-LD schema。</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Address <span class="text-xs text-gray-400 font-normal">(地址)</span></label
+          >
+          <input
+            type="text"
+            name="address"
+            value={data.address ?? ''}
+            placeholder="Economic Development Zone, Laixi, Qingdao, China, 266600"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Email <span class="text-xs text-gray-400 font-normal">(邮箱)</span></label
+          >
+          <input
+            type="email"
+            name="email"
+            value={data.email ?? ''}
+            placeholder="info@felizbay.com"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+      </h2>
+
+      <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+        <h2 class="text-base font-semibold">WhatsApp Floating Chat</h2>
+        <p class="text-xs text-gray-500">
+          WhatsApp chat button in the bottom-right corner. Leave the number empty to hide it.
+        </p>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">WhatsApp Number</label>
+          <input
+            type="text"
+            name="whatsapp_number"
+            value={data.whatsapp_number ?? ''}
+            placeholder="8613800000000 (with country code, without +)"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Default Message</label>
+          <textarea
+            name="whatsapp_default_message"
+            rows="2"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >{data.whatsapp_default_message ?? ''}</textarea
+          >
+        </div>
+      </div>
+
+      <div
+        class="rounded-xl border border-amber-300 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 p-6 space-y-5"
+      >
+        <div>
+          <h2 class="text-base font-semibold text-amber-900 dark:text-amber-200">Contact Form Storage + Email</h2>
+          <p class="mt-1 text-xs text-amber-800 dark:text-amber-300">
+            Submissions from <code class="font-mono">/contact</code> are stored in
+            <strong>Cloudflare D1</strong> (written by the contact worker, protected by Turnstile + per-IP rate limiting)
+            — no GitHub writes. They can be viewed, filtered, status-marked and exported as CSV at{' '}
+            <a class="underline" href="/keystatic/inquiries"> /keystatic/inquiries</a>; the notification email is sent
+            via Resend (Reply-To set to the submitter).
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Recipient Email (Contact email →To)</label
+          >
+          <input
+            type="email"
+            name="contact_email_to"
+            value={data.contact_email_to ?? ''}
+            placeholder="admin@your-domain.com"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+          <p class="mt-1 text-xs text-gray-500">
+            All contact form submissions will be sent to this email (via Resend). Can also be overridden individually in
+            contact.yaml's contact_form.email_to.
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Sender Email (Contact →From)</label
+          >
+          <input
+            type="email"
+            name="contact_from_email"
+            value={data.contact_from_email ?? ''}
+            placeholder="noreply@your-domain.com"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+          <p class="mt-1 text-xs text-gray-500">
+            SPF/DKIM must be configured on your domain (Cloudflare DNS), otherwise emails will be marked as spam.
+            Recommended: Use Cloudflare Email Routing to route <code class="font-mono">noreply@your-domain.com</code> to your
+            real email, then verify <code class="font-mono">your-domain.com</code> in Resend's Domain settings.
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Sender Display Name (From name)</label
+          >
+          <input
+            type="text"
+            name="contact_from_name"
+            value={data.contact_from_name ?? ''}
+            placeholder="Felizbay Contact"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Service Provider</label>
+          <select
+            name="contact_email_provider"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >
+            <option value="none" selected={!data.contact_email_provider || data.contact_email_provider === 'none'}
+              >Do not send email (only store to GitHub)</option
+            >
+            <option value="resend" selected={data.contact_email_provider === 'resend'}
+              >Resend (Recommended · Free 100/day · Cloudflare compatible)</option
+            >
+          </select>
+          <p class="mt-1 text-xs text-gray-500">
+            Cloudflare Email Workers can only handle <strong>inbound</strong> emails, not send arbitrary outbound mail. Resend
+            is a Cloudflare Pages-compatible sending service. If you want to use SMTP instead, you can replace <code
+              class="font-mono">sendEmailViaResend</code
+            > in <code class="font-mono">src/pages/api/contact.ts</code>.
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Resend API Key <span class="text-xs text-gray-400 font-normal">(Resend 密钥)</span></label
+          >
+          <input
+            type="password"
+            name="contact_resend_api_key"
+            value={data.contact_resend_api_key ?? ''}
+            placeholder="re_xxx"
+            autocomplete="off"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+          <p class="mt-1 text-xs text-gray-500">
+            用于发送联系表单邮件。创建地址 <a
+              class="underline"
+              href="https://resend.com/api-keys"
+              target="_blank"
+              rel="noopener">resend.com/api-keys</a
+            >，Full access 权限即可。 <strong class="text-amber-600"
+              >注意：此密钥明文存储于 git 仓库中，请使用专用密钥。</strong
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+        <h2 class="text-base font-semibold">Google Maps</h2>
+        <p class="text-xs text-gray-500">
+          Used on the contact page. Get a free API key at <a
+            class="underline"
+            href="https://console.cloud.google.com/google/maps-apis"
+            target="_blank"
+            rel="noopener">Google Cloud Console</a
+          > (enable "Maps Embed API").
+        </p>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">API Key</label>
+          <input
+            type="text"
+            name="gmap_api_key"
+            value={data.gmap_api_key ?? ''}
+            placeholder="AIza..."
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Latitude</label>
+            <input
+              type="text"
+              name="map_latitude"
+              value={data.map_latitude ?? '36.8861'}
+              placeholder="36.8861"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Longitude</label>
+            <input
+              type="text"
+              name="map_longitude"
+              value={data.map_longitude ?? '120.5261'}
+              placeholder="120.5261"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50 p-4">
+        <div class="text-xs text-gray-500 mb-2">Current Logo Preview (live)</div>
+        <div class="flex items-center gap-2" data-logo-preview>
+          {
+            data.logo_image ? (
+              <img
+                src={data.logo_image}
+                alt={data.logo_alt}
+                class="h-9 w-9 rounded-lg object-cover shadow-sm"
+                data-preview-img
+              />
+            ) : (
+              <span
+                class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white font-black text-lg shadow-sm"
+                data-preview-letter
+              >
+                {(data.site_name || 'V').charAt(0).toUpperCase()}
+              </span>
+            )
+          }
+          <span
+            class="self-center text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white tracking-tight"
+            data-preview-name>{data.site_name}</span
+          >
+        </div>
+        <p class="mt-2 text-xs text-gray-500">The footer logo text will display the same site_name.</p>
+      </div>
+
+      <div
+        class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+      >
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+          <div class="text-xs text-gray-500" data-fileInfo>File: <code class="font-mono">{file}</code></div>
+          <div class="flex gap-2">
+            <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+              >Cancel</a
+            >
+            <button
+              id="save-draft-btn"
+              type="button"
+              class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+              >Save Draft</button
+            >
+            <button
+              id="publish-btn"
+              type="button"
+              class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
+              >Publish</button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function () {
+        const form = document.getElementById('branding-form');
+        if (!form) return;
+        const saveBtn = document.getElementById('save-draft-btn');
+        const publishBtn = document.getElementById('publish-btn');
+        const file = form.dataset.file;
+        let sha = form.dataset.sha;
+        const year = new Date().getFullYear();
+
+        // Locale switcher
+        const localeSelect = document.getElementById('locale-select');
+        localeSelect?.addEventListener('change', () => {
+          const loc = localeSelect.value;
+          const base = window.location.pathname;
+          const href = loc === 'en' ? base : base + '?locale=' + loc;
+          window.location.href = href;
+        });
+        const siteNameEl = form.querySelector('[name="site_name"]');
+        const logoImageEl = form.querySelector('[name="logo_image"]');
+        const copyrightEl = form.querySelector('[name="copyright"]');
+        const previewEl = form.querySelector('[data-copyright-preview]');
+        const previewName = form.querySelector('[data-preview-name]');
+        const previewImg = form.querySelector('[data-preview-img]');
+        const previewLetter = form.querySelector('[data-preview-letter]');
+        const previewWrap = form.querySelector('[data-logo-preview]');
+
+        function refreshCopyright() {
+          if (copyrightEl instanceof HTMLTextAreaElement && previewEl) {
+            const name =
+              siteNameEl instanceof HTMLInputElement
+                ? (siteNameEl.value || 'Felizbay').trim() || 'Felizbay'
+                : 'Felizbay';
+            previewEl.textContent = (copyrightEl.value || '')
+              .replace(/\\{year\\}/gi, String(year))
+              .replace(/\\{site_name\\}/gi, name);
+          }
+        }
+        function refreshName() {
+          const name = siteNameEl instanceof HTMLInputElement ? (siteNameEl.value || 'V').trim() || 'V' : 'V';
+          if (previewName) previewName.textContent = name;
+          if (previewLetter) previewLetter.textContent = name.charAt(0).toUpperCase();
+        }
+        function refreshLogo() {
+          const url = logoImageEl instanceof HTMLInputElement ? (logoImageEl.value || '').trim() : '';
+          if (!previewWrap) return;
+          if (url) {
+            if (previewImg) {
+              previewImg.src = url;
+            } else if (previewLetter && previewLetter.parentNode) {
+              const img = document.createElement('img');
+              img.src = url;
+              img.alt = '';
+              img.className = 'h-9 w-9 rounded-lg object-cover shadow-sm';
+              img.setAttribute('data-preview-img', '');
+              previewLetter.parentNode.replaceChild(img, previewLetter);
+            }
+          } else {
+            if (previewImg) {
+              const name =
+                siteNameEl instanceof HTMLInputElement ? (siteNameEl.value || 'V').charAt(0).toUpperCase() : 'V';
+              const span = document.createElement('span');
+              span.className =
+                'inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white font-black text-lg shadow-sm';
+              span.setAttribute('data-preview-letter', '');
+              span.textContent = name;
+              previewImg.parentNode.replaceChild(span, previewImg);
+            }
+          }
+        }
+        function refreshAll() {
+          refreshCopyright();
+          refreshName();
+          refreshLogo();
+        }
+        if (siteNameEl) siteNameEl.addEventListener('input', refreshAll);
+        if (logoImageEl) logoImageEl.addEventListener('input', refreshAll);
+        if (copyrightEl) copyrightEl.addEventListener('input', refreshCopyright);
+        refreshAll();
+
+        saveBtn?.addEventListener('click', async () => {
+          saveBtn.disabled = true;
+          saveBtn.textContent = 'Saving...';
+          publishBtn.disabled = true;
+          const fd = new FormData(form);
+          const fullConfig = JSON.parse(form.dataset.fullConfig || '{}');
+          fullConfig.branding = {
+            site_name: String(fd.get('site_name') || '').trim(),
+            logo_image: String(fd.get('logo_image') || '').trim(),
+            logo_alt: String(fd.get('logo_alt') || '').trim(),
+            copyright: String(fd.get('copyright') || ''),
+            phone: String(fd.get('phone') || '').trim(),
+            address: String(fd.get('address') || '').trim(),
+            email: String(fd.get('email') || '').trim(),
+            whatsapp_number: String(fd.get('whatsapp_number') || '').trim(),
+            whatsapp_default_message: String(fd.get('whatsapp_default_message') || ''),
+            contact_email_to: String(fd.get('contact_email_to') || '').trim(),
+            contact_email_provider: String(fd.get('contact_email_provider') || 'none'),
+            contact_from_email: String(fd.get('contact_from_email') || '').trim(),
+            contact_from_name: String(fd.get('contact_from_name') || '').trim(),
+            contact_resend_api_key: String(fd.get('contact_resend_api_key') || '').trim(),
+            gmap_api_key: String(fd.get('gmap_api_key') || '').trim(),
+            map_latitude: String(fd.get('map_latitude') || '36.8861').trim(),
+            map_longitude: String(fd.get('map_longitude') || '120.5261').trim(),
+          };
+
+          try {
+            const res = await fetch('/api/admin/update', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                format: 'yaml',
+                path: file,
+                sha,
+                branch: 'draft',
+                data: fullConfig,
+                commitMessage: 'Draft: Update site branding and copyright',
+              }),
+            });
+            const result = await res.json();
+            if (!res.ok || res.status >= 400) {
+              window.__adminToast?.(result?.error || result?.message || 'Save failed', 'error');
+              saveBtn.disabled = false;
+              saveBtn.textContent = 'Save Draft';
+              publishBtn.disabled = false;
+              return;
+            }
+            if (result?.content?.sha) {
+              sha = result.content.sha;
+              form.dataset.sha = sha;
+            }
+            window.__adminToast?.('Draft saved (not deployed)', 'success');
+          } catch {
+            window.__adminToast?.('Network error', 'error');
+          }
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+          publishBtn.disabled = false;
+        });
+
+        publishBtn?.addEventListener('click', async () => {
+          saveBtn.disabled = true;
+          publishBtn.disabled = true;
+          publishBtn.textContent = 'Publishing...';
+          try {
+            const res = await fetch('/api/admin/publish', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+            });
+            const result = await res.json();
+            if (!res.ok || !result.success) {
+              window.__adminToast?.(result?.error || 'Publish failed', 'error');
+              publishBtn.textContent = 'Publish';
+              saveBtn.disabled = false;
+              publishBtn.disabled = false;
+              return;
+            }
+            window.__adminToast?.('Published! Deploying to production...', 'success');
+            setTimeout(() => {
+              window.location.reload();
+            }, 800);
+          } catch {
+            window.__adminToast?.('Network error', 'error');
+            publishBtn.textContent = 'Publish';
+            saveBtn.disabled = false;
+            publishBtn.disabled = false;
+          }
+        });
+      })();
+    </script>
+  </form>
+</AdminLayout>

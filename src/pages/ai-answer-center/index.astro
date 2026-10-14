@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import AnswerCenter from '~/components/ai/AnswerCenter.astro';
+
+const metadata = {
+  title: `AI Answer Center | ${SITE.name}`,
+  description: `Ask questions about Felizbay inflatable swimming pools — setup, materials, water care, storage, and ordering. AI-powered answers with source citations.`,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'AI Answer Center',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <AnswerCenter lang="en" />
+  </div>
+</Layout>

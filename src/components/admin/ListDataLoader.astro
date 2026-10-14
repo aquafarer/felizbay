@@ -1,0 +1,213 @@
+---
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+interface Props {
+  dir: string;
+  contentType: string;
+}
+---
+
+<script is:inline>
+  (function () {
+    const table = document.getElementById('file-list');
+    if (!table) return;
+    const tbody = table.querySelector('tbody');
+    if (!tbody) return;
+    const dir = decodeURIComponent(tbody.dataset.dir || '');
+    if (!dir) return;
+    const contentType = tbody.dataset.contentType || '';
+
+    function showError(msg) {
+      const err = document.getElementById('list-error') || document.createElement('div');
+      err.id = 'list-error';
+      err.className =
+        'mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300';
+      err.textContent = msg;
+      table.parentNode.insertBefore(err, table);
+    }
+
+    function showLoading() {
+      let loading = document.getElementById('list-loading');
+      if (!loading) {
+        loading = document.createElement('div');
+        loading.id = 'list-loading';
+        loading.className =
+          'mb-4 rounded-md border border-blue-200 bg-blue-50 dark:bg-blue-950/40 dark:border-blue-900 p-3 text-sm text-blue-700 dark:text-blue-300';
+        loading.textContent = 'Loading file list from GitHub...';
+        table.parentNode.insertBefore(loading, table);
+      }
+    }
+
+    function removeLoading() {
+      const loading = document.getElementById('list-loading');
+      if (loading) loading.remove();
+    }
+
+    function parseFrontmatter(text) {
+      const m = text.match(/^---\s*\n([\s\S]*?)\n---\s*\n/);
+      if (!m) return {};
+      const frontmatter = {};
+      m[1].split('\n').forEach(function (line) {
+        const sep = line.indexOf(':');
+        if (sep > 0) {
+          const k = line.slice(0, sep).trim();
+          let v = line.slice(sep + 1).trim();
+          v = v.replace(/^["']|["']$/g, '');
+          frontmatter[k] = v;
+        }
+      });
+      return frontmatter;
+    }
+
+    function escapeHtml(text) {
+      const d = document.createElement('div');
+      d.textContent = text;
+      return d.innerHTML;
+    }
+
+    function buildRow(file, fm) {
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/50';
+      const slug = file.name.replace(/\.(md|mdx)$/, '');
+      const editUrl = '/keystatic/' + contentType + '/' + slug;
+      const title = fm && (fm.title || slug);
+      const date = fm && fm.publishDate ? new Date(fm.publishDate).toLocaleDateString() : '';
+      const draft = fm && fm.draft === 'true';
+      const category = fm && fm.category ? fm.category : '';
+      const sku = fm && fm.sku ? fm.sku : '';
+
+      let cells = '';
+      cells +=
+        '<td class="px-4 py-3 text-sm">' +
+        '<a href="' +
+        editUrl +
+        '" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">' +
+        escapeHtml(title) +
+        '</a>' +
+        '<div class="text-xs text-gray-400 font-mono mt-0.5">' +
+        slug +
+        '</div></td>';
+
+      cells +=
+        '<td class="px-4 py-3">' +
+        (category
+          ? '<span class="inline-block px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs">' +
+            escapeHtml(category) +
+            '</span>'
+          : '<span class="text-gray-400">&mdash;</span>') +
+        '</td>';
+
+      if (contentType === 'products') {
+        cells +=
+          '<td class="px-4 py-3 text-gray-600 dark:text-gray-300 font-mono text-xs">' +
+          (sku ? escapeHtml(sku) : '<span class="text-gray-400">&mdash;</span>') +
+          '</td>';
+      }
+
+      cells +=
+        '<td class="px-4 py-3 text-gray-600 dark:text-gray-300 text-sm">' +
+        (date || '<span class="text-gray-400">&mdash;</span>') +
+        '</td>';
+
+      cells +=
+        '<td class="px-4 py-3">' +
+        (draft
+          ? '<span class="inline-block px-2 py-0.5 text-xs rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">Draft</span>'
+          : '<span class="text-xs text-green-600 dark:text-green-400">Published</span>') +
+        '</td>';
+
+      cells +=
+        '<td class="px-4 py-3 text-right">' +
+        '<button type="button" data-delete-file data-name="' +
+        escapeHtml(slug) +
+        '" data-path="' +
+        escapeHtml(file.path) +
+        '" data-sha="' +
+        escapeHtml(file.sha) +
+        '" class="text-red-600 dark:text-red-400 hover:underline text-xs">Delete</button>' +
+        '</td>';
+
+      tr.innerHTML = cells;
+      return tr;
+    }
+
+    async function load() {
+      showLoading();
+      try {
+        const res = await fetch('/api/admin/list?dir=' + encodeURIComponent(dir), { credentials: 'include' });
+        if (!res.ok) throw new Error('Failed to list: ' + res.status);
+        let files = await res.json();
+        if (!Array.isArray(files)) throw new Error('Unexpected response');
+        files = files.filter(function (f) {
+          return f.type === 'file' && /\.(md|mdx)$/i.test(f.name);
+        });
+        if (files.length === 0) {
+          showError('No pages or posts found.');
+          removeLoading();
+          return;
+        }
+        tbody.innerHTML = '';
+        const readPromises = files.map(async function (file) {
+          const r = await fetch('/api/admin/read?path=' + encodeURIComponent(file.path), { credentials: 'include' });
+          const data = r.ok ? await r.json() : null;
+          if (data && data.decoded) {
+            const fm = parseFrontmatter(data.decoded);
+            return buildRow(file, fm);
+          }
+          return buildRow(file, {});
+        });
+        const rows = await Promise.all(readPromises);
+        rows.forEach(function (row) {
+          tbody.appendChild(row);
+        });
+        removeLoading();
+      } catch (e) {
+        showError('Failed to load files: ' + e.message);
+        removeLoading();
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      const btn = e.target instanceof Element ? e.target.closest('[data-delete-file]') : null;
+      if (!btn) return;
+      e.preventDefault();
+      const name = btn.dataset.name || '';
+      const path = btn.dataset.path || '';
+      const sha = btn.dataset.sha || '';
+      if (!confirm('Delete "' + name + '" permanently?')) return;
+      const orig = btn.textContent;
+      btn.textContent = 'Deleting...';
+      btn.setAttribute('disabled', 'true');
+      fetch('/api/admin/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path: path, sha: sha, message: 'Delete ' + name }),
+      })
+        .then(function (r) {
+          return r.json();
+        })
+        .then(function (data) {
+          if (!data.success) {
+            window.__adminToast?.(data.error || 'Delete failed', 'error');
+            btn.textContent = orig;
+            btn.removeAttribute('disabled');
+          } else {
+            window.__adminToast?.('Deleted', 'success');
+            setTimeout(function () {
+              window.location.reload();
+            }, 600);
+          }
+        })
+        .catch(function () {
+          window.__adminToast?.('Network error', 'error');
+          btn.textContent = orig;
+          btn.removeAttribute('disabled');
+        });
+    });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', load);
+    } else {
+      load();
+    }
+  })();
+</script>

@@ -1,0 +1,298 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/top-guides.yaml', locale);
+
+const defaultData = {
+  badge: 'Top Guides',
+  heading: 'Start here before you buy',
+  description:
+    'Three beginner guides that cover the essentials \u2014 surfboard selection, wetsuit fit, and your first session.',
+  guides: ['how-to-choose-a-surfboard-for-beginners', 'wetsuit-thickness-guide', 'surfing-for-beginners'],
+  browseText: 'Browse all 20 guides and comparisons \u2192',
+  browseHref: '/v2',
+};
+
+let data = { ...defaultData };
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/top-guides.yaml');
+        }
+      }
+    }
+    if (f) {
+      const { load } = await import('js-yaml');
+      const parsed = load(f.content) as Record<string, any>;
+      if (parsed && typeof parsed === 'object') data = { ...defaultData, ...parsed };
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title="Top Guides" active="top-guides">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <div>
+      <h1 class="text-2xl font-semibold">Top Guides Section</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <label class="text-xs text-gray-500">Locale:</label>
+      <select
+        id="locale-select"
+        class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+      >
+        {
+          ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+  </div>
+  <p class="mt-1 text-sm text-gray-500">
+    File: <code class="font-mono">{file}</code>
+    {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+  </p>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="top-guides-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-sha={sha}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+      <h2 class="text-base font-semibold">Section Text</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Badge Label</label>
+          <input
+            type="text"
+            name="badge"
+            value={data.badge || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Heading</label>
+          <input
+            type="text"
+            name="heading"
+            value={data.heading || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Description</label>
+        <textarea
+          name="description"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{data.description || ''}</textarea
+        >
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+      <h2 class="text-base font-semibold">Featured Guide Slugs</h2>
+      <p class="text-xs text-gray-500">
+        Slug (URL path segment) of each guide to feature, e.g. <code class="font-mono"
+          >how-to-choose-a-surfboard-for-beginners</code
+        >
+      </p>
+      {
+        (data.guides || []).map((slug: string, i: number) => (
+          <div>
+            <label class="block text-xs font-medium text-gray-500 mb-1">Guide #{i + 1}</label>
+            <input
+              type="text"
+              name={'guide' + i}
+              value={slug || ''}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+      <h2 class="text-base font-semibold">Browse All Link</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Link Text</label>
+          <input
+            type="text"
+            name="browseText"
+            value={data.browseText || ''}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Link Href</label>
+          <input
+            type="text"
+            name="browseHref"
+            value={data.browseHref || '/v2'}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('top-guides-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+      });
+
+      saveBtn.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        const fd = new FormData(form);
+
+        const data = {
+          badge: String(fd.get('badge') || '').trim(),
+          heading: String(fd.get('heading') || '').trim(),
+          description: String(fd.get('description') || '').trim(),
+          guides: [],
+          browseText: String(fd.get('browseText') || '').trim(),
+          browseHref: String(fd.get('browseHref') || '/v2').trim(),
+        };
+
+        for (let i = 0; i < 20; i++) {
+          const val = fd.get('guide' + i);
+          if (val && String(val).trim()) data.guides.push(String(val).trim());
+          else break;
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data,
+              commitMessage: 'Draft: Update top guides section',
+              branch: 'draft',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            return;
+          }
+          if (result?.content?.sha) {
+            form.dataset.sha = result.content.sha;
+          }
+          window.__adminToast?.('Draft saved', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+        }
+      });
+
+      publishBtn.addEventListener('click', async () => {
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              path: file,
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Publish failed', 'error');
+            publishBtn.disabled = false;
+            publishBtn.textContent = 'Publish';
+            return;
+          }
+          window.__adminToast?.('Published, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.disabled = false;
+          publishBtn.textContent = 'Publish';
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

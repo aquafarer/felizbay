@@ -1,0 +1,34 @@
+name = "felizbay-admin"
+main = "index.ts"
+compatibility_date = "2026-07-08"
+compatibility_flags = ["nodejs_compat"]
+
+routes = [
+  { pattern = "felizbay.com/api/admin/*", zone_name = "felizbay.com" },
+  { pattern = "felizbay.com/api/auth/*", zone_name = "felizbay.com" },
+]
+
+[vars]
+GITHUB_OWNER = "Felizbay"
+GITHUB_REPO = "official"
+BETTER_AUTH_URL = "https://felizbay.com"
+
+# Secrets (set via `wrangler secret put`, NOT here):
+#   BETTER_AUTH_SECRET        — session signing key (openssl rand -base64 32)
+#   GOOGLE_CLIENT_ID          — Google OAuth client id
+#   GOOGLE_CLIENT_SECRET      — Google OAuth client secret
+#   ADMIN_EMAILS              — comma-separated admin emails (role source of truth)
+#   GITHUB_TOKEN              — Fine-grained PAT for the CMS content endpoints
+
+# D1 (created via: wrangler d1 create Felizbay-db)
+[[d1_databases]]
+binding = "DB"
+database_name = "Felizbay-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "../../migrations"
+
+# Inquiry attachments (written by contact-worker under `inquiry-files/`) —
+# served back to admins through /api/admin/inquiries/file.
+[[r2_buckets]]
+binding = "DATA_BUCKET"
+bucket_name = "felizbay-data"

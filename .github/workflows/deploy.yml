@@ -1,0 +1,194 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "22"
+  # Large generated translation files (product-content-l10n.ts, product-texts.ts)
+  # push tsc/astro-check past the default V8 heap on 7GB CI runners.
+  NODE_OPTIONS: --max-old-space-size=6144
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # secrets cannot be used in `if`; probe them first and expose as step output so a
+      # repo without credentials skips the Cloudflare steps gracefully instead of failing red.
+      - name: Check for Cloudflare credentials
+        id: guard
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID not set — skipping Cloudflare steps. Set these repo secrets to enable auto-deploy."
+          fi
+
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - run: npm ci
+      - name: Lint + typecheck + prettier + i18n
+        run: npm run check
+      - run: npm run build
+        env:
+          # Public site key (safe to embed) — rendered into contact form & login.
+          PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
+
+      - name: Upload assets to R2
+        if: steps.guard.outputs.enabled == 'true'
+        run: node scripts/fast-upload-r2.mjs
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID || '' }}
+
+      - name: Apply R2 bucket CORS rules
+        if: steps.guard.outputs.enabled == 'true'
+        run:           npx wrangler r2 bucket cors set felizbay-assets --file scripts/r2-cors.json
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Deploy Pages
+        if: steps.guard.outputs.enabled == 'true'
+        run: npx wrangler pages deploy dist/ --project-name felizbay
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Inject D1 database_id into wrangler.toml
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          for f in workers/*/wrangler.toml; do
+            sed -i "s/REPLACE_WITH_D1_DATABASE_ID/${CF_PROD_D1_ID}/g" "$f"
+          done
+        env:
+          CF_PROD_D1_ID: ${{ secrets.CF_PROD_D1_ID }}
+
+      - name: Apply D1 migrations + seed news (first run only)
+        if: steps.guard.outputs.enabled == 'true'
+        continue-on-error: true
+        run: |
+          npx wrangler d1 migrations apply Felizbay-db -c workers/news-worker/wrangler.toml --remote
+          node scripts/seed-news.mjs
+          COUNT=$(npx wrangler d1 execute Felizbay-db -c workers/news-worker/wrangler.toml --remote --command "SELECT count(*) AS c FROM news;" --json | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s)[0].results[0].c)}catch(e){console.log('-1')}})")
+          if [ "$COUNT" = "0" ]; then
+            npx wrangler d1 execute Felizbay-db -c workers/news-worker/wrangler.toml --remote --file=.wrangler-tmp/news-seed.sql
+            echo "[d1] news table was empty, inserted seed posts"
+          else
+            echo "[d1] news table already has $COUNT rows; skipping seed (admin-created posts preserved)"
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # One `wrangler secret bulk` per worker replaces N `secret put` steps; GitHub
+      # secrets that are unset/empty are dropped automatically (Cloudflare values stay).
+      - name: Sync contact worker secrets
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          jq -n '{
+            CONTACT_RESEND_API_KEY: env.CONTACT_RESEND_API_KEY,
+            CONTACT_EMAIL_TO: env.CONTACT_EMAIL_TO,
+            CONTACT_FROM_EMAIL: env.CONTACT_FROM_EMAIL,
+            TURNSTILE_SECRET_KEY: env.TURNSTILE_SECRET_KEY
+          } | with_entries(select(.value != null and .value != ""))' > /tmp/contact-secrets.json
+          if [ -s /tmp/contact-secrets.json ]; then
+            npx wrangler secret bulk /tmp/contact-secrets.json -c workers/contact-worker/wrangler.toml
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CONTACT_RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          CONTACT_EMAIL_TO: ${{ secrets.CONTACT_EMAIL_TO }}
+          CONTACT_FROM_EMAIL: ${{ secrets.CONTACT_FROM_EMAIL }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+
+      - name: Sync admin worker secrets
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          jq -n '{
+            BETTER_AUTH_SECRET: env.BETTER_AUTH_SECRET,
+            ADMIN_EMAILS: env.ADMIN_EMAILS,
+            GOOGLE_CLIENT_ID: env.GOOGLE_CLIENT_ID,
+            GOOGLE_CLIENT_SECRET: env.GOOGLE_CLIENT_SECRET,
+            TURNSTILE_SECRET_KEY: env.TURNSTILE_SECRET_KEY
+          } | with_entries(select(.value != null and .value != ""))' > /tmp/admin-secrets.json
+          if [ -s /tmp/admin-secrets.json ]; then
+            npx wrangler secret bulk /tmp/admin-secrets.json -c workers/admin-worker/wrangler.toml
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+          ADMIN_EMAILS: ${{ secrets.ADMIN_EMAILS }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+
+      - name: Sync AI worker secrets
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          jq -n '{
+            REINDEX_TOKEN: env.REINDEX_TOKEN
+          } | with_entries(select(.value != null and .value != ""))' > /tmp/ai-secrets.json
+          if [ -s /tmp/ai-secrets.json ] && ! grep -q '^{}$' /tmp/ai-secrets.json; then
+            npx wrangler secret bulk /tmp/ai-secrets.json -c workers/ai-worker/wrangler.toml
+          else
+            echo "::notice::REINDEX_TOKEN not set — /api/reindex stays disabled (404) until it is added as a repo secret."
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          REINDEX_TOKEN: ${{ secrets.REINDEX_TOKEN }}
+
+      - name: Ensure Vectorize index exists
+        if: steps.guard.outputs.enabled == 'true'
+        continue-on-error: true
+        run: |
+          set +e
+          npx wrangler vectorize create ai-index-v2 --dimensions=1024 --metric=cosine > /tmp/vectorize-create.log 2>&1
+          status=$?
+          set -e
+          if [ $status -ne 0 ] && ! grep -qiE "already exist|duplicate_name|code: 3002" /tmp/vectorize-create.log; then
+            cat /tmp/vectorize-create.log
+            echo "::warning::Could not ensure ai-index-v2 exists — deploy fails if the index is missing."
+            exit 1
+          fi
+          cat /tmp/vectorize-create.log
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Deploy Workers
+        if: steps.guard.outputs.enabled == 'true'
+        run: npm run deploy:workers
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Purge CDN cache
+        if: steps.guard.outputs.enabled == 'true'
+        continue-on-error: true
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '{"purge_everything":true}'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID || '' }}

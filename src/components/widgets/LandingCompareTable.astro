@@ -1,0 +1,102 @@
+---
+import { products } from '~/data/products';
+
+export interface Props {
+  title: string;
+  subtitle: string;
+  productIds: string[];
+  specs: string[];
+  productLabel?: string;
+  descriptionLabel?: string;
+  specLabelOverrides?: Record<string, string>;
+  viewAllText?: string;
+  viewAllHref?: string;
+}
+
+const {
+  title,
+  subtitle,
+  productIds,
+  specs,
+  productLabel = 'Product',
+  descriptionLabel = 'Description',
+  specLabelOverrides = {},
+  viewAllText = 'View all products',
+  viewAllHref = '/products',
+} = Astro.props;
+const filtered = products.filter((p) => productIds.includes(p.id));
+
+const specLabels: Record<string, string> = {
+  category: 'Type',
+  skill: 'Skill Level',
+  environment: 'Environment',
+  water_condition: 'Water Condition',
+  use_case: 'Use Cases',
+  safety_level: 'Safety',
+  ...specLabelOverrides,
+};
+---
+
+<section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800 py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-slate-100">{title}</h2>
+      <p class="mt-3 text-gray-600 dark:text-slate-400 max-w-2xl mx-auto">{subtitle}</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-200 dark:border-slate-700">
+            <th class="text-left py-3 px-4 font-semibold text-gray-900 dark:text-slate-100 w-36">{productLabel}</th>
+            {
+              filtered.map((p) => (
+                <th class="text-center py-3 px-4 font-semibold text-gray-900 dark:text-slate-100 min-w-[140px]">
+                  {p.name}
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100 dark:border-slate-800">
+            <td class="py-3 px-4 text-gray-500 text-xs font-medium uppercase tracking-wider">{descriptionLabel}</td>
+            {
+              filtered.map((p) => (
+                <td class="py-3 px-4 text-center text-xs text-gray-600 dark:text-slate-400">
+                  {p.desc?.slice(0, 80)}...
+                </td>
+              ))
+            }
+          </tr>
+          {
+            specs.map((spec) => (
+              <tr class="border-b border-gray-100 dark:border-slate-800">
+                <td class="py-3 px-4 text-gray-500 text-xs font-medium uppercase tracking-wider">
+                  {specLabels[spec] || spec}
+                </td>
+                {filtered.map((p) => {
+                  const val = p[spec as keyof typeof p];
+                  const display = Array.isArray(val) ? val.join(', ') : String(val || '-');
+                  return (
+                    <td class="py-3 px-4 text-center text-xs text-gray-700 dark:text-slate-300 capitalize">
+                      {display}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center mt-8">
+      <a
+        href={viewAllHref}
+        class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 dark:text-sky-400 hover:underline"
+      >
+        {viewAllText}
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>

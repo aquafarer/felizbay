@@ -1,0 +1,167 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Sign In — ${SITE.name}`,
+  description: 'Sign in to your Felizbay account for order tracking, warranty registration, and support.',
+  robots: { index: false, follow: false },
+};
+---
+
+<Layout metadata={metadata}>
+  <main class="min-h-[70vh] flex items-center justify-center px-4 py-24">
+    <div class="w-full max-w-md">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8">
+        <div class="text-center mb-8">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Welcome back</h1>
+          <p class="text-gray-500 dark:text-gray-400 mt-2">Sign in to your account</p>
+        </div>
+
+        <div
+          id="error-message"
+          class="hidden bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-sm rounded-lg p-3 mb-5"
+        >
+        </div>
+
+        <a
+          id="google-login"
+          href="/api/auth/sign-in/social?provider=google&callbackURL=/keystatic"
+          class="w-full flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition mb-5"
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="#4285F4"
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"
+            ></path>
+            <path
+              fill="#34A853"
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"
+            ></path>
+            <path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88z"></path>
+            <path
+              fill="#EA4335"
+              d="M12 4.75c1.62 0 3.06.56 4.21 1.64l3.15-3.15A11 11 0 0 0 2.18 7.06L5.84 9.9c.87-2.6 3.3-4.53 6.16-4.53z"
+            ></path>
+          </svg>
+          Continue with Google
+        </a>
+
+        <div class="flex items-center gap-3 mb-5">
+          <div class="flex-1 border-t border-gray-200 dark:border-gray-600"></div>
+          <span class="text-xs text-gray-400">or</span>
+          <div class="flex-1 border-t border-gray-200 dark:border-gray-600"></div>
+        </div>
+
+        <form id="login-form" class="space-y-5">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="username"
+              class="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              autocomplete="current-password"
+              class="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <div id="turnstile-widget"></div>
+
+          <button
+            type="submit"
+            class="w-full py-2.5 px-4 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+          >
+            Sign In
+          </button>
+
+          <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+            New here?
+            <a href="/register" class="text-sky-600 dark:text-sky-400 hover:underline">Create an account</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const siteKey = (import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined) || '';
+    if (siteKey) {
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        const el = document.getElementById('turnstile-widget');
+        if (el && window.turnstile) {
+          window.turnstile.render(el, { sitekey: siteKey, theme: 'light' });
+        }
+      };
+      document.head.appendChild(script);
+    }
+
+    document.getElementById('login-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.currentTarget as HTMLFormElement | null;
+      if (!form) return;
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      const errorEl = document.getElementById('error-message');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Signing in...';
+      }
+      errorEl?.classList.add('hidden');
+
+      try {
+        const formData = new FormData(form);
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        const token = window.turnstile && window.turnstile.getResponse ? window.turnstile.getResponse() : '';
+        if (token) headers['x-captcha-response'] = token;
+        const res = await fetch('/api/auth/sign-in/email', {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            email: formData.get('email'),
+            password: formData.get('password'),
+          }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.user) {
+          window.location.href = new URLSearchParams(window.location.search).get('redirect') || '/keystatic';
+        } else {
+          if (errorEl) {
+            errorEl.textContent = data.message || data.error || 'Invalid email or password';
+            errorEl.classList.remove('hidden');
+          }
+        }
+      } catch {
+        if (errorEl) {
+          errorEl.textContent = 'Network error. Please try again.';
+          errorEl.classList.remove('hidden');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Sign In';
+        }
+      }
+    });
+  </script>
+</Layout>

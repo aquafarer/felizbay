@@ -1,0 +1,209 @@
+hero:
+  tagline: 'Inflatable Swimming Pool Specialist'
+  title: 'Inflatable Swimming Pools<br />for Every Backyard'
+  subtitle: |
+    Felizbay designs and manufactures premium drop stitch inflatable swimming pools.<br />
+    Fast to set up, rigid when inflated, and easy to store away at season's end.<br />
+    OEM/ODM manufacturing available for brands and distributors.
+  actions:
+    - variant: primary
+      text: View Our Pools
+      href: /products
+      icon: tabler:pool
+    - text: Contact Us
+      href: /contact
+      icon: tabler:mail
+  image:
+    src: /images/pools/rectangular-pool-2.png
+    alt: Felizbay rectangular drop stitch inflatable swimming pool
+
+stats:
+  title: Felizbay at a Glance
+  columns: 4
+  stats:
+    - title: Pool Collections
+      amount: '3'
+    - title: Setup Time
+      amount: '~10 min'
+    - title: Rated Pressure
+      amount: '8-10 PSI'
+    - title: Business Model
+      amount: OEM, ODM, Wholesale
+    - title: Custom Sizes
+      amount: Available
+    - title: Contact
+      amount: info@felizbay.com
+
+content_customer_types:
+  tagline: Who We Serve
+  title: 'Inflatable Pools for Homes<br />and Businesses'
+  subtitle: 'Felizbay serves families and business buyers with the same high manufacturing standard.'
+  items:
+    - title: 'Families'
+      description: 'A real swimming pool for the backyard — no construction, no permits, no permanent installation. Set it up in minutes and store it away in winter.'
+      icon: tabler:home
+      cta: 'Shop Pools'
+      cta_href: /products
+    - title: 'Distributors / Wholesalers'
+      description: 'Competitive factory pricing, custom sizes, custom colors, logo printing, and retail-ready packaging for garden and pool retail channels.'
+      icon: tabler:world
+      cta: 'Get a Wholesale Quote'
+      cta_href: /contact
+    - title: 'Hotels / Resorts / Glamping'
+      description: 'Premium seasonal pools for hospitality — fast to deploy, easy to maintain, and a memorable guest experience.'
+      icon: tabler:beach
+      cta: 'Discuss a Project'
+      cta_href: /contact
+    - title: 'Brand Owners / OEM & ODM'
+      description: 'Full private-label manufacturing: custom dimensions, colors, covers, branding, and packaging under your own brand.'
+      icon: tabler:palette
+      cta: 'Request OEM Quote'
+      cta_href: /contact
+
+features:
+  id: features
+  tagline: Drop Stitch Technology
+  title: 'Why a Felizbay Pool<br />Is Different'
+  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  columns: 2
+  items:
+    - title: Rigid Drop Stitch Walls
+      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 8-10 PSI and keeps its shape when filled.'
+      icon: tabler:hexagon
+    - title: Fast, Tool-Free Setup
+      description: 'Inflate with the included electric pump in about 10 minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+      icon: tabler:rocket
+    - title: Packs Away Small
+      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+      icon: tabler:package
+    - title: Durable & UV-Resistant
+      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+      icon: tabler:shield
+    - title: Complete Package
+      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+      icon: tabler:box
+    - title: OEM/ODM Manufacturing
+      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands and distributors. Factory-direct pricing.'
+      icon: tabler:adjustments
+
+content_categories:
+  tagline: Product Collections
+  title: 'Inflatable Swimming Pools'
+  subtitle: 'Rectangular and round drop stitch pools — all built with the same high-pressure construction.'
+  items:
+    - title: 'Rectangular Pools'
+      description: 'Family-size rectangular drop stitch pools that maximize the swim area for your space.'
+      icon: tabler:rectangle
+      link: /products
+    - title: 'Round Pools'
+      description: 'Classic round pools in blue and premium grey, with optional fitted covers.'
+      icon: tabler:circle
+      link: /products
+
+content_workshop:
+  isReversed: true
+  tagline: Manufacturing
+  title: 'Pool Manufacturing,<br />Done Properly'
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay — Inflatable Pool Manufacturer</h3>
+  items:
+    - title: 'High-Pressure Construction'
+      description: 'Every pool is built from double-layer PVC drop stitch fabric and pressure-tested to well above its 8-10 PSI working pressure.'
+    - title: 'Quality Materials'
+      description: 'UV-resistant, puncture-resistant fabrics with reinforced seams, chosen for full-season outdoor use.'
+    - title: 'Custom Manufacturing'
+      description: 'OEM/ODM production with custom sizes, colors, covers, branding, and retail packaging for partners worldwide.'
+
+content_compliance:
+  tagline: Quality Promise
+  title: 'Quality You<br />Can Trust'
+  subtitle: 'Every Felizbay pool is inspected and pressure-tested before it leaves the factory.'
+  items:
+    - title: 'Pressure Tested'
+      description: 'Each pool is inflated and inspected above its rated working pressure before packing.'
+      icon: tabler:certificate
+    - title: 'Durable Materials'
+      description: 'UV-resistant, REACH-compliant PVC drop stitch fabric that is safe for children and built for seasons of use.'
+      icon: tabler:shield-check
+    - title: 'Complete Accessories'
+      description: 'Electric air pump, repair kit, and storage bag included with every pool.'
+      icon: tabler:box
+    - title: 'After-Sales Support'
+      description: 'Responsive support and spare-part availability via info@felizbay.com.'
+      icon: tabler:lifebuoy
+
+steps:
+  title: 'From Order to Backyard'
+  items:
+    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
+      description: 'Browse our rectangular and round drop stitch pools, or tell us your required size for a custom OEM order.'
+      icon: tabler:pool
+    - title: 'Step 2: <span class="font-medium">Get a Quote</span>'
+      description: 'Contact info@felizbay.com for pricing, availability, and wholesale or OEM/ODM options.'
+      icon: tabler:file-text
+    - title: 'Step 3: <span class="font-medium">Fast Delivery</span>'
+      description: 'We ship worldwide with careful packaging. Retail and bulk orders welcome.'
+      icon: tabler:truck-delivery
+    - title: 'Step 4: <span class="font-medium">Inflate & Swim</span>'
+      description: 'Unbox, inflate in about 10 minutes with the included electric pump, fill, and enjoy your pool all summer.'
+      icon: tabler:ripple
+  image:
+    src: /images/pools/round-grey-pool-1.png
+    alt: Felizbay round drop stitch inflatable swimming pool
+
+blog_latest:
+  title: Pool Guides & Insights
+  information: |
+    Setup guides, care tips, and buying advice for inflatable swimming pools
+    from the Felizbay team.
+
+faqs:
+  title: Inflatable Pool FAQ
+  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  columns: 2
+  items:
+    - title: How long does setup take?
+      description: 'About 10 minutes with the included electric air pump, plus the time to fill the pool with a garden hose.'
+      icon: tabler:clock
+      category: all
+    - title: How rigid is a drop stitch pool?
+      description: 'Very rigid. The drop stitch walls inflate hard at 8-10 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+      icon: tabler:hexagon
+      category: all
+    - title: Can children use the pool?
+      description: 'Yes, with constant adult supervision. The stable rigid walls and even depth make our pools a great environment for kids to learn to swim.'
+      icon: tabler:users
+      category: all
+    - title: How do I store the pool in winter?
+      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+      icon: tabler:package
+      category: all
+    - title: What is included with the pool?
+      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+      icon: tabler:box
+      category: all
+    - title: Do you offer custom sizes or OEM/ODM?
+      description: 'Yes. We manufacture custom sizes, colors, covers, and logo printing for brands, distributors, and hospitality projects. Contact info@felizbay.com.'
+      icon: tabler:adjustments
+      category: all
+    - title: What surfaces can the pool stand on?
+      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces.'
+      icon: tabler:layout-grid
+      category: all
+    - title: How do I keep the water clean?
+      description: 'Use the fitted cover (round models) when the pool is not in use, skim debris regularly, and refresh the water as needed. Small filtration systems can also be used.'
+      icon: tabler:droplet
+      category: all
+
+cta:
+  title: |
+    Ready for a summer<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">full of swimming?</span>
+  subtitle: 'Get in touch for pricing, wholesale, and OEM/ODM manufacturing options.'
+  actions:
+    - variant: primary
+      text: Contact Felizbay
+      href: /contact
+      icon: tabler:mail
+    - text: View Our Pools
+      href: /products
+      icon: tabler:pool

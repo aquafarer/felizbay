@@ -1,0 +1,17 @@
+points:
+  - id: quality
+    metric: '100%'
+    label: pressure-tested pools
+    detail: Every pool is inflation-tested before it leaves the factory
+  - id: setup
+    metric: '15–30'
+    label: minutes to set up
+    detail: One person, one pump, no tools required
+  - id: storage
+    metric: '5+'
+    label: seasons of use
+    detail: Drop stitch construction with UV-resistant PVC, fold-away winter storage
+  - id: support
+    metric: '1 day'
+    label: response time
+    detail: Sales and support questions answered within one business day

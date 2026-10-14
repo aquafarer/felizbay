@@ -1,0 +1,70 @@
+- slug: home
+  label: Home
+  path: /
+  permalink: /
+  file: src/data/pages/home.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Hero Section (static, only used when no carousel)' }
+    - { key: hero_carousel, type: hero_carousel, label: 'Hero Carousel (3 switchable slides)' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: features, type: features, label: 'Features Section (Why Choose Us)' }
+    - { key: featured_products, type: featured_products, label: 'Featured Products Section' }
+    - { key: content_workshop, type: content, label: 'Workshop Content Section' }
+    - { key: steps, type: steps, label: 'Steps Section (From Order to Delivery)' }
+    - { key: blog_latest, type: blog_latest, label: 'Latest Blog Section' }
+    - { key: faqs, type: faqs, label: 'FAQs' }
+    - { key: cta, type: cta, label: 'Bottom CTA Section' }
+
+- slug: about
+  label: About
+  path: /about
+  permalink: /about
+  file: src/data/pages/about.yaml
+  sections:
+    - { key: hero, type: hero, label: 'Top Hero' }
+    - { key: stats, type: stats, label: 'Statistics' }
+    - { key: brand_hub_tagline, type: content, label: 'Brand Hub Tagline' }
+    - { key: brand_hub_title, type: content, label: 'Brand Hub Title' }
+    - { key: brand_hub_subtitle, type: content, label: 'Brand Hub Subtitle' }
+    - { key: brand_hub_cards, type: features, label: 'Brand Hub Cards' }
+    - { key: features3_what_we_build, type: features3, label: 'What we build' }
+    - { key: features3_more, type: features3, label: 'More (with image)' }
+    - { key: steps2_values, type: steps2, label: 'Our values' }
+    - { key: steps2_milestones, type: steps2, label: 'Milestones' }
+    - { key: features2_locations, type: features2, label: 'Our locations' }
+
+- slug: contact
+  label: Contact
+  path: /contact
+  permalink: /contact
+  file: src/data/pages/contact.yaml
+  sections:
+    - { key: hero_text, type: hero_text, label: 'Contact Hero Text' }
+    - { key: contact_form, type: contact, label: 'Contact Form' }
+    - { key: features2_other_ways, type: features2, label: 'Other Ways to Connect' }
+
+- slug: request-quotation
+  label: Request a Quotation
+  path: /request-quotation
+  permalink: /request-quotation
+  file: src/data/pages/request-quotation.yaml
+  sections:
+    - { key: hero_text, type: hero_text, label: 'Quotation Hero Text' }
+    - { key: contact_form, type: contact, label: 'Quotation Form' }
+    - { key: features2_other_ways, type: features2, label: 'Other Ways to Connect' }
+
+- slug: products
+  label: Products
+  path: /products
+  permalink: /products
+  file: src/pages/products/index.astro
+  sections:
+    - { key: product_grid, type: featured_products, label: 'Pool Product Grid' }
+
+- slug: faq
+  label: FAQ
+  path: /faq
+  permalink: /faq
+  file: src/pages/faq.astro
+  sections:
+    - { key: faqs, type: faqs, label: 'FAQ List' }

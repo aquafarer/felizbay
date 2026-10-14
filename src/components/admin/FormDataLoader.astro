@@ -1,0 +1,265 @@
+---
+
+---
+
+<script is:inline>
+  (function () {
+    const form = document.querySelector('form[data-file]');
+    if (!form || form.dataset.loaded === 'true') return;
+    const file = form.dataset.file;
+    if (!file) return;
+    const dataKey = form.dataset.key || '';
+
+    function getLocale() {
+      const sel = form.querySelector('#lang-select');
+      return sel ? sel.value : form.dataset.locale || 'en';
+    }
+
+    function getFilePath() {
+      const loc = getLocale();
+      if (loc === 'en') return file;
+      const slug = file.replace(/^.*[\\/]/, '').replace(/\.(md|mdx)$/, '');
+      return 'src/data/product-texts/' + loc + '/' + slug + '.yaml';
+    }
+
+    function getFileFormat() {
+      return getLocale() === 'en' ? form.dataset.format || 'yaml' : 'yaml';
+    }
+
+    function showError(msg) {
+      const err = form.querySelector('.loader-error') || document.createElement('div');
+      err.className =
+        'loader-error mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300';
+      err.textContent = msg;
+      if (!err.parentNode) form.prepend(err);
+      const loading = form.querySelector('.loader-loading');
+      if (loading) loading.remove();
+    }
+
+    function showLoading() {
+      const loading = document.createElement('div');
+      loading.className =
+        'loader-loading mb-4 rounded-md border border-blue-200 bg-blue-50 dark:bg-blue-950/40 dark:border-blue-900 p-3 text-sm text-blue-700 dark:text-blue-300';
+      loading.textContent = 'Loading data from GitHub...';
+      form.prepend(loading);
+    }
+
+    async function fetchData(branch) {
+      const path = getFilePath();
+      const fmt = getFileFormat();
+      const params = new URLSearchParams({ path: path, format: fmt });
+      if (branch) params.set('branch', branch);
+      const res = await fetch('/api/admin/read?' + params.toString(), { credentials: 'include' });
+      if (!res.ok) {
+        if (getLocale() !== 'en') {
+          return { parsed: {}, body: '' };
+        }
+        const text = await res.text();
+        throw new Error(res.status + ': ' + text.slice(0, 200));
+      }
+      return await res.json();
+    }
+
+    function resolve(obj, key) {
+      const parts = key.split('.');
+      let cur = obj;
+      for (let i = 0; i < parts.length; i++) {
+        if (cur == null || typeof cur !== 'object') return undefined;
+        cur = cur[parts[i]];
+      }
+      return cur;
+    }
+
+    function fillField(input, val) {
+      if (input.type === 'checkbox') input.checked = !!val;
+      else if (Array.isArray(val)) input.value = JSON.stringify(val);
+      else if (typeof val === 'object' && val !== null) input.value = JSON.stringify(val);
+      else input.value = String(val);
+    }
+
+    function fillRepeater(listId, arr, fieldMap) {
+      const list = form.querySelector('#' + listId);
+      if (!list || !Array.isArray(arr)) return;
+      const addBtn = form.querySelector('[data-repeater-add="' + listId + '"]');
+      const existing = list.querySelectorAll('[data-gallery-row], [data-specs-row], [data-repeater-row]');
+      existing.forEach(function (el) {
+        el.remove();
+      });
+      arr.forEach(function (item) {
+        if (addBtn) addBtn.click();
+        const rows = list.querySelectorAll('[data-gallery-row], [data-specs-row], [data-repeater-row]');
+        const row = rows[rows.length - 1];
+        if (!row) return;
+        fieldMap.forEach(function (m) {
+          const inp = row.querySelector('[name="' + m.name + '"]');
+          if (inp) {
+            const v = resolve(item, m.path || m.name);
+            if (v !== undefined && v !== null) fillField(inp, v);
+          }
+        });
+      });
+    }
+
+    const TRANSLATABLE_FIELDS = [
+      'name',
+      'title',
+      'summary',
+      'description',
+      'definition',
+      'problem',
+      'howItWorks',
+      'audience',
+      'ai_use_cases',
+      'ai_comparison',
+      'ai_faq_q',
+      'ai_faq_a',
+    ];
+
+    function isTranslatable(name) {
+      return TRANSLATABLE_FIELDS.indexOf(name) !== -1;
+    }
+
+    function fillFields(data) {
+      const isTrans = getLocale() !== 'en';
+      let source = dataKey && data.parsed[dataKey] ? data.parsed[dataKey] : data.parsed;
+      if (!source || typeof source !== 'object') {
+        if (isTrans) {
+          source = {};
+        } else {
+          showError('Data format unexpected');
+          return;
+        }
+      }
+
+      const inputs = form.querySelectorAll('[name]');
+      for (let i = 0; i < inputs.length; i++) {
+        const input = inputs[i];
+        if (
+          input.closest(
+            '[data-gallery-row], [data-specs-row], [data-repeater-row], [data-ai-faq-row], [data-ai-specs-row]'
+          )
+        )
+          continue;
+        if (isTrans && !isTranslatable(input.name)) continue;
+        const path = input.getAttribute('data-fm-path') || input.name;
+        const val = resolve(source, path);
+        if (val !== undefined && val !== null) fillField(input, val);
+      }
+
+      if (!isTrans) {
+        fillRepeater('gallery-list', source.gallery, [
+          { name: 'galleryUrl', path: 'url' },
+          { name: 'galleryAlt', path: 'alt' },
+        ]);
+        fillRepeater('specs-list', source.specs, [
+          { name: 'specLabel', path: 'label' },
+          { name: 'specValue', path: 'value' },
+        ]);
+
+        function fillSimpleList(listId, arr) {
+          if (!Array.isArray(arr)) return;
+          const list = form.querySelector('#' + listId);
+          if (!list) return;
+          const rows = list.querySelectorAll('[data-repeater-row]');
+          rows.forEach(function (el) {
+            el.remove();
+          });
+          arr.forEach(function (item) {
+            const addBtn = form.querySelector('[data-repeater-add="' + listId + '"]');
+            if (addBtn) addBtn.click();
+            const newRows = list.querySelectorAll('[data-repeater-row]');
+            const row = newRows[newRows.length - 1];
+            if (row) {
+              const inp = row.querySelector('input');
+              if (inp) inp.value = String(item || '');
+            }
+          });
+        }
+
+        fillSimpleList('tags-list', source.tags);
+        fillSimpleList('environment-list', source.environment);
+        fillSimpleList('water_condition-list', source.water_condition);
+      }
+
+      if (Array.isArray(source.ai_use_cases)) {
+        const ucList = form.querySelector('#ai_use_cases-list');
+        if (ucList) {
+          const ucRows = ucList.querySelectorAll('[data-repeater-row]');
+          ucRows.forEach(function (el) {
+            el.remove();
+          });
+          source.ai_use_cases.forEach(function (uc) {
+            const addBtn = form.querySelector('[data-repeater-add="ai_use_cases-list"]');
+            if (addBtn) addBtn.click();
+            const rows = ucList.querySelectorAll('[data-repeater-row]');
+            const row = rows[rows.length - 1];
+            if (row) {
+              const inp = row.querySelector('input');
+              if (inp) inp.value = String(uc || '');
+            }
+          });
+        }
+      }
+
+      fillRepeater('ai_faq-list', source.ai_faq, [
+        { name: 'ai_faq_q', path: 'q' },
+        { name: 'ai_faq_a', path: 'a' },
+      ]);
+
+      if (source.ai_specs && typeof source.ai_specs === 'object') {
+        const specsList = form.querySelector('#ai_specs-list');
+        if (specsList) {
+          const specRows = specsList.querySelectorAll('[data-ai-specs-row]');
+          specRows.forEach(function (el) {
+            el.remove();
+          });
+          const aiSpecKeys = Object.keys(source.ai_specs).filter(function (k) {
+            return !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k);
+          });
+          aiSpecKeys.forEach(function (k) {
+            const addBtn = form.querySelector('[data-repeater-add="ai_specs-list"]');
+            if (addBtn) addBtn.click();
+            const rows = specsList.querySelectorAll('[data-ai-specs-row]');
+            const row = rows[rows.length - 1];
+            if (row) {
+              const keyInp = row.querySelector('[name="ai_specs_key"]');
+              const valInp = row.querySelector('[name="ai_specs_value"]');
+              if (keyInp) keyInp.value = k;
+              if (valInp) valInp.value = String(source.ai_specs[k] || '');
+            }
+          });
+        }
+      }
+
+      if (data.sha) form.dataset.sha = data.sha;
+      if (data.decoded) form.dataset.fullConfig = data.decoded;
+      if (data.body && !isTrans) {
+        const bodyEl = form.querySelector('[name="body"]');
+        if (bodyEl) bodyEl.value = data.body;
+      }
+      form.dataset.loaded = 'true';
+      const loading = form.querySelector('.loader-loading');
+      if (loading) loading.remove();
+    }
+
+    (async function () {
+      try {
+        showLoading();
+        const data = await fetchData();
+        if (data && data.parsed) {
+          fillFields(data);
+          return;
+        }
+      } catch {
+        /* skip */
+      }
+      try {
+        const data = await fetchData('draft');
+        if (data && data.parsed) fillFields(data);
+        else showError('No data found on main or draft branch');
+      } catch (err2) {
+        showError('Failed to load: ' + err2.message);
+      }
+    })();
+  })();
+</script>

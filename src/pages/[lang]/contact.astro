@@ -1,0 +1,390 @@
+---
+const PAGE_DESC: Record<string, { description: string }> = {
+  de: {
+    description:
+      'Nehmen Sie Kontakt mit Felizbay auf — Vertriebs-, Support- und Partnerschaftsanfragen werden innerhalb eines Werktags beantwortet.',
+  },
+  es: {
+    description:
+      'Póngase en contacto con Felizbay: las consultas de ventas, soporte y colaboraciones se responden en un día laborable.',
+  },
+  fr: {
+    description:
+      "Contactez Felizbay — les demandes commerciales, d'assistance et de partenariat reçoivent une réponse sous un jour ouvré.",
+  },
+  it: {
+    description:
+      'Contatta Felizbay: le richieste di vendita, assistenza e partnership ricevono risposta entro un giorno lavorativo.',
+  },
+  cs: {
+    description:
+      'Kontaktujte společnost Felizbay — obchodním, servisním a partnerským dotazům odpovídáme do jednoho pracovního dne.',
+  },
+  sv: {
+    description:
+      'Kontakta Felizbay — Förfrågningar om försäljning, support och partnerskap kommer att besvaras inom en arbetsdag.',
+  },
+  da: {
+    description:
+      'Kontakt Felizbay — Forespørgsler om salg, support og partnerskab vil blive besvaret inden for en hverdag.',
+  },
+  el: {
+    description:
+      'Επικοινωνήστε με Felizbay — Τα ερωτήματα πωλήσεων, υποστήριξης και συνεργασίας θα απαντηθούν εντός μίας εργάσιμης ημέρας.',
+  },
+  no: {
+    description: 'Kontakt Felizbay — Forespørsler om salg, støtte og partnerskap vil bli besvart innen én virkedag.',
+  },
+  ru: {
+    description:
+      'Свяжитесь с Felizbay — на запросы о продажах, поддержке и партнерстве мы ответим в течение одного рабочего дня.',
+  },
+  nl: {
+    description:
+      'Neem contact op met Felizbay — Vragen over verkoop, ondersteuning en samenwerking worden binnen één werkdag beantwoord.',
+  },
+  fi: {
+    description: 'Ota yhteyttä Felizbay — Myynti-, tuki- ja kumppanuuskyselyihin vastataan yhden arkipäivän kuluessa.',
+  },
+  pl: {
+    description:
+      'Skontaktuj się z Felizbay — odpowiedzi na zapytania dotyczące sprzedaży, wsparcia i partnerstwa będą udzielane w ciągu jednego dnia roboczego.',
+  },
+  ar: {
+    description: 'جهة الاتصال Felizbay — سيتم الرد على استفسارات المبيعات والدعم والشراكة خلال يوم عمل واحد.',
+  },
+  pt: {
+    description: 'Contato Felizbay — Consultas sobre vendas, suporte e parceria serão respondidas em um dia útil.',
+  },
+  ja: {
+    description:
+      'Felizbay へのお問い合わせ — 販売、サポート、パートナーシップに関するお問い合わせには 1 営業日以内に回答させていただきます。',
+  },
+};
+const PAGE_META: Record<string, { title: string }> = {
+  de: { title: 'Kontakt' },
+  es: { title: 'Contacto' },
+  fr: { title: 'Contact' },
+  it: { title: 'Contatti' },
+  pt: { title: 'Contato' },
+  ar: { title: 'اتصل بنا' },
+  ru: { title: 'Контакты' },
+  pl: { title: 'Kontakt' },
+  nl: { title: 'Contact' },
+  sv: { title: 'Kontakt' },
+  no: { title: 'Kontakt' },
+  el: { title: 'Επικοινωνία' },
+  fi: { title: 'Yhteystiedot' },
+  da: { title: 'Kontakt' },
+  cs: { title: 'Kontakt' },
+  ja: { title: '接触' },
+};
+const HUB_TEXT: Record<
+  string,
+  { cardTitle: string; hqTitle: string; hubTitle: string; emailTitle: string; emailNote: string }
+> = {
+  en: {
+    cardTitle: 'Contact Information',
+    hqTitle: 'Global HQ & Billing — Felizbay LLC',
+    hubTitle: 'Manufacturing & Export Hub',
+    emailTitle: 'General enquiries',
+    emailNote: 'MST & GMT+8 — replies within 24 hours',
+  },
+  de: {
+    cardTitle: 'Kontaktinformationen',
+    hqTitle: 'Globalzentrale & Abrechnung — Felizbay LLC',
+    hubTitle: 'Fertigungs- & Exportzentrum',
+    emailTitle: 'Allgemeine Anfragen',
+    emailNote: 'MST & GMT+8 — Antwort innerhalb von 24 Stunden',
+  },
+  es: {
+    cardTitle: 'Información de contacto',
+    hqTitle: 'Sede global y facturación — Felizbay LLC',
+    hubTitle: 'Centro de producción y exportación',
+    emailTitle: 'Consultas generales',
+    emailNote: 'MST y GMT+8 — respuesta en 24 horas',
+  },
+  fr: {
+    cardTitle: 'Coordonnées',
+    hqTitle: 'Siège mondial & facturation — Felizbay LLC',
+    hubTitle: 'Centre de production & export',
+    emailTitle: 'Demandes générales',
+    emailNote: 'MST et GMT+8 — réponse sous 24 heures',
+  },
+  it: {
+    cardTitle: 'Informazioni di contatto',
+    hqTitle: 'Sede globale e fatturazione — Felizbay LLC',
+    hubTitle: 'Hub di produzione ed esportazione',
+    emailTitle: 'Richieste generali',
+    emailNote: 'MST e GMT+8 — risposta entro 24 ore',
+  },
+  cs: {
+    cardTitle: 'Kontaktní informace',
+    hqTitle: 'Globální centrála & fakturace — Felizbay LLC',
+    hubTitle: 'Výrobní a exportní centrum',
+    emailTitle: 'Obecné dotazy',
+    emailNote: 'MST a GMT+8 — odpověď do 24 hodin',
+  },
+};
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Map from '~/components/widgets/Map.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent, setPageContentData } from '~/i18n/page-content';
+import __pageData from '~/i18n/generated/pages/contact.ts';
+import { localizePageTitle, localizePageDescription } from '~/i18n/page-title';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+import cfg from '~/config.yaml';
+const branding = (cfg as any)?.branding || {};
+import { pageContentData } from '~/i18n/generated/site-data';
+import formTextData from '~/data/site/contact-form-text.yaml';
+const lang = Astro.params.lang || 'en';
+const hub = HUB_TEXT[lang] || HUB_TEXT.en;
+setPageContentData(__pageData);
+const page = getPageContent(lang, 'contact');
+const data = page && Object.keys(page).length > 0 ? page : {};
+
+const ft: any = formTextData ?? {};
+
+function t(record: Record<string, string> | undefined, fallback = ''): string {
+  return record?.[lang] || record?.en || fallback;
+}
+
+const ht = data.hero_text ?? {};
+const form = data.contact_form ?? {};
+const other = data.features2_other_ways ?? {};
+
+const fields = (form.fields ?? []).map((f: any) => {
+  const trans = (ft.fields ?? []).find((tf: any) => tf.name === f.name);
+  if (trans) {
+    return {
+      ...f,
+      label: t(trans.label, f.label),
+      placeholder: t(trans.placeholder, f.placeholder ?? ''),
+    };
+  }
+  return f;
+});
+
+const countries =
+  (pageContentData[`${lang}/site-countries`] || pageContentData['en/site-countries'] || {}).countries?.map(
+    (c: any) => ({
+      value: c.value,
+      label: c.label?.[lang] || c.label?.en || c.value,
+    })
+  ) ?? [];
+
+const countryCodes =
+  (pageContentData[`${lang}/site-countries`] || pageContentData['en/site-countries'] || {}).countries?.map(
+    (c: any) => ({
+      code: c.tel,
+      label: `${c.label?.[lang] || c.label?.en || c.value} ${c.tel}`,
+    })
+  ) ?? [];
+
+const submitButton = t(ft.submit_button) || form.submit_button || 'Send message';
+const successMessage = t(ft.success_message) || form.success_message || 'Thanks!';
+const errorMessage = t(ft.error_message) || form.error_message || 'Something went wrong.';
+const consentText = t(ft.consent_text) || form.consent?.text;
+const consentLinkText = t(ft.consent_link_text) || form.consent?.link_text;
+
+const consent = form.consent
+  ? {
+      ...form.consent,
+      text: consentText,
+      link_text: consentLinkText,
+    }
+  : undefined;
+
+const brandingData: any = branding ?? {};
+const resolvedEmailTo =
+  (form.email_to && String(form.email_to).trim()) || (brandingData.contact_email_to as string) || '';
+
+const metadata = {
+  title: localizePageTitle(page, PAGE_META[lang]?.title || `Contact ${SITE.name}`),
+  description: localizePageDescription(
+    page,
+    PAGE_DESC[lang]?.description ||
+      'Get in touch with Felizbay — sales, support and partnership enquiries answered within one business day.'
+  ),
+};
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How can I contact Felizbay?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Email, WhatsApp, or the contact form on this page. OEM/ODM inquiries typically receive a response within 24 hours.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I visit the factory?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. On-site and virtual factory tours available. See our Factory Audit page for preparation details.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best way to start an OEM project?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Use our Request Quotation form for the fastest response. Include your product requirements, target quantity, and timeline.',
+      },
+    },
+  ],
+});
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Organization"
+    data={{
+      name: SITE.name,
+      url: 'https://felizbay.com',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-279-732-3333',
+        contactType: 'sales',
+        availableLanguage: ['English', 'Chinese', 'Spanish', 'French', 'German', 'Arabic'],
+      },
+    }}
+  />
+  <section class="bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800 text-white py-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-sm font-semibold tracking-widest uppercase text-sky-200">{ht.tagline || 'Contact'}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold">{ht.title || 'Get in Touch'}</h1>
+      <p class="mt-4 text-lg text-white/80 max-w-2xl mx-auto">{ht.subtitle || form.subtitle || ''}</p>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto py-16 px-6">
+    <div class="grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <ContactUs
+          id={form.id ?? 'form'}
+          title={form.title}
+          subtitle={form.subtitle}
+          emailTo={resolvedEmailTo}
+          submitButton={submitButton}
+          successMessage={successMessage}
+          errorMessage={errorMessage}
+          fields={fields}
+          consent={consent}
+          defaultCountryCode={form.default_country_code ?? '+1'}
+          countryCodes={countryCodes}
+          countries={countries}
+          enableFileUpload
+          fileLabel={t(ft.file_upload_label, 'Attachment (optional)')}
+          fileHint={t(
+            ft.file_upload_hint,
+            'Spec sheet, drawing or catalog — PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP, up to 20 MB.'
+          )}
+        />
+      </div>
+      <div class="md:col-span-2 space-y-8">
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 space-y-6">
+          <h3 class="text-lg font-semibold text-gray-900">{data.quick_info?.title || hub.cardTitle}</h3>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 shrink-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"
+                  ></circle></svg
+                >
+              </div>
+              <div>
+                <p class="font-medium text-gray-900">{hub.hqTitle}</p>
+                <p class="text-sm text-gray-500">New Mexico, United States</p>
+                <p class="text-sm text-gray-500">+1 279 732 3333 · contact@felizbay.com</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 shrink-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path></svg
+                >
+              </div>
+              <div>
+                <p class="font-medium text-gray-900">{hub.hubTitle}</p>
+                <p
+                  class="text-sm text-gray-500"
+                  set:html={branding.address || 'New Mexico, USA'}
+                />
+                <p class="text-sm text-gray-500">+86 13305324192 · factory@felizbay.com</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 shrink-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path><polyline points="22,6 12,13 2,6"></polyline></svg
+                >
+              </div>
+              <div>
+                <p class="font-medium text-gray-900">{hub.emailTitle}</p>
+                <p class="text-sm text-gray-500">info@felizbay.com</p>
+                <p class="text-sm text-gray-500">{hub.emailNote}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Map
+          title={data.map?.title}
+          subtitle={data.map?.subtitle}
+          address={data.map?.address}
+          embedUrl={data.map?.embedUrl}
+          latitude={data.map?.latitude}
+          longitude={data.map?.longitude}
+          zoom={data.map?.zoom}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <Features2
+        title={other.title}
+        tagline={other.tagline}
+        columns={other.columns}
+        items={other.items}
+        isDark={other.isDark}
+      />
+    </div>
+  </section>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
+</Layout>

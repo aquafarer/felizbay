@@ -1,0 +1,30 @@
+name = "felizbay-ai"
+main = "index.ts"
+compatibility_date = "2026-07-08"
+compatibility_flags = ["nodejs_compat"]
+
+routes = [
+  { pattern = "felizbay.com/api/chat*", zone_name = "felizbay.com" },
+  { pattern = "felizbay.com/api/ask*", zone_name = "felizbay.com" },
+  { pattern = "felizbay.com/api/search*", zone_name = "felizbay.com" },
+  { pattern = "felizbay.com/api/embed*", zone_name = "felizbay.com" },
+  { pattern = "felizbay.com/api/reindex*", zone_name = "felizbay.com" },
+  { pattern = "felizbay.com/api/ai/*", zone_name = "felizbay.com" },
+]
+
+[triggers]
+crons = ["0 3 * * *"]
+
+[vars]
+SITE_ORIGIN = "https://felizbay.com"
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "ai-index-v2"
+
+[[r2_buckets]]
+binding = "DATA_BUCKET"
+bucket_name = "felizbay-data"

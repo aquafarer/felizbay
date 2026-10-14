@@ -1,0 +1,796 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/seo.yaml', locale);
+
+interface SocialLink {
+  platform: string;
+  url: string;
+  icon: string;
+}
+interface SiteSettingsData {
+  siteName: string;
+  siteTagline: string;
+  siteDescription: string;
+  organization: { name: string; logo: string; contactEmail: string; contactPhone: string; address: string };
+  socialLinks: SocialLink[];
+}
+interface ConfigData {
+  site: { name: string; site: string };
+  metadata: {
+    keywords: string[];
+    robots: { index: boolean; follow: boolean };
+    twitter: { handle: string; site: string; cardType: string };
+  };
+  analytics: { vendors: { googleAnalytics: { id: string | null } } };
+  siteSettings: SiteSettingsData;
+}
+let data: ConfigData = {
+  site: { name: 'Felizbay', site: 'https://felizbay.com' },
+  metadata: {
+    keywords: [],
+    robots: { index: true, follow: true },
+    twitter: { handle: '', site: '', cardType: 'summary_large_image' },
+  },
+  analytics: { vendors: { googleAnalytics: { id: null } } },
+  siteSettings: {
+    siteName: '',
+    siteTagline: '',
+    siteDescription: '',
+    organization: { name: '', logo: '', contactEmail: '', contactPhone: '', address: '' },
+    socialLinks: [],
+  },
+};
+let sha = '';
+let loadError: string | null = null;
+// Full raw config preserved for client-side merge (avoids overwriting
+// fields like siteSettings, partytown, etc. that the form doesn't manage).
+let existingConfigStr = '{}';
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/seo.yaml');
+        }
+      }
+    }
+    if (f) {
+      const { load } = await import('js-yaml');
+      const parsed = load(f.content) as Record<string, any>;
+      if (parsed && typeof parsed === 'object') {
+        if (parsed.site) data.site = { ...data.site, ...parsed.site };
+        if (parsed.metadata) data.metadata = { ...data.metadata, ...parsed.metadata };
+        if (parsed.analytics) data.analytics = { ...data.analytics, ...parsed.analytics };
+        if (parsed.siteSettings) {
+          const s = parsed.siteSettings;
+          data.siteSettings.siteName = s.siteName ?? '';
+          data.siteSettings.siteTagline = s.siteTagline ?? '';
+          data.siteSettings.siteDescription = s.siteDescription ?? '';
+          if (s.organization) data.siteSettings.organization = { ...data.siteSettings.organization, ...s.organization };
+          if (Array.isArray(s.socialLinks)) data.siteSettings.socialLinks = s.socialLinks;
+        }
+        existingConfigStr = JSON.stringify(parsed);
+      }
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+
+const getData = () => data;
+const getSha = () => sha;
+const getLoadError = () => loadError;
+const PLATFORM_ICONS: Record<string, string> = {
+  linkedin: 'tabler:brand-linkedin',
+  youtube: 'tabler:brand-youtube',
+  x: 'tabler:brand-x',
+  instagram: 'tabler:brand-instagram',
+  facebook: 'tabler:brand-facebook',
+  tiktok: 'tabler:brand-tiktok',
+  pinterest: 'tabler:brand-pinterest',
+  github: 'tabler:brand-github',
+  rss: 'tabler:rss',
+};
+---
+
+<AdminLayout title="SEO & Site Settings" active="seo">
+  <div class="flex items-center justify-between gap-4 flex-wrap">
+    <div>
+      <h1 class="text-2xl font-semibold">SEO & Site Settings</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <label class="text-xs text-gray-500">Locale:</label>
+      <select
+        id="locale-select"
+        class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+      >
+        {
+          ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+  </div>
+  <p class="mt-1 text-sm text-gray-500">
+    File: <code class="font-mono">{file}</code>
+    {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+  </p>
+
+  {
+    getLoadError() && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {getLoadError()}
+      </div>
+    )
+  }
+
+  <form
+    id="seo-form"
+    class="space-y-6 pb-32"
+    data-file={file}
+    data-sha={getSha()}
+    data-locale={locale}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">Site URL (Canonical)</h2>
+      <p class="text-xs text-gray-500">
+        This must match the actual deployment URL. It controls canonical tags, sitemaps, and hreflang. Changing this
+        requires a rebuild.
+      </p>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Site URL</label>
+        <input
+          type="text"
+          name="site_url"
+          readonly
+          value={getData().site.site ?? ''}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-100 dark:bg-gray-800 text-sm font-mono cursor-not-allowed"
+        />
+        <p class="mt-1 text-xs text-amber-600">
+          Read-only. Change via the code repository if you need a different domain.
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">
+        Google Services <span class="text-xs text-gray-400 font-normal">(谷歌服务)</span>
+      </h2>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Google Analytics Measurement ID</label
+        >
+        <input
+          type="text"
+          name="google_analytics_id"
+          value={getData().analytics?.vendors?.googleAnalytics?.id ?? ''}
+          placeholder="e.g. G-XXXXXXXXXX"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">
+          留空则禁用。填充后会在所有页面添加 gtag.js 跟踪脚本。 Leave empty to disable. Adds gtag.js script to all
+          pages.
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">
+        Default Keywords & Robots <span class="text-xs text-gray-400 font-normal">(默认关键词与爬虫设置)</span>
+      </h2>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Default Keywords <span class="text-xs text-gray-400 font-normal">(默认关键词，逗号分隔)</span></label
+        >
+        <input
+          type="text"
+          name="keywords"
+          value={Array.isArray(getData().metadata?.keywords) ? getData().metadata.keywords.join(', ') : ''}
+          placeholder="Felizbay, inflatable swimming pool, drop stitch pool, backyard pool"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+        <p class="mt-1 text-xs text-gray-500">
+          当页面未定义自有关键词时作为后备。对搜索引擎排名影响较小，建议设置 5-10 个核心词。 Fallback keywords used when
+          a page doesn't define its own. Minor SEO impact; 5-10 core terms recommended.
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <label class="flex items-center gap-2 text-sm">
+          <input
+            type="checkbox"
+            name="robots_index"
+            value="true"
+            checked={getData().metadata?.robots?.index !== false}
+            class="rounded border-gray-300 dark:border-gray-700"
+          />
+          Allow indexing (noindex) &mdash; <span class="text-gray-400">允许索引</span>
+        </label>
+        <label class="flex items-center gap-2 text-sm">
+          <input
+            type="checkbox"
+            name="robots_follow"
+            value="true"
+            checked={getData().metadata?.robots?.follow !== false}
+            class="rounded border-gray-300 dark:border-gray-700"
+          />
+          Allow follow links (nofollow) &mdash; <span class="text-gray-400">允许跟随链接</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">
+        Twitter / X Card <span class="text-xs text-gray-400 font-normal">(推特卡片设置)</span>
+      </h2>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Twitter Handle (creator) <span class="text-xs text-gray-400 font-normal">(创作者账号)</span></label
+        >
+        <input
+          type="text"
+          name="twitter_handle"
+          value={getData().metadata?.twitter?.handle ?? ''}
+          placeholder="@felizbay"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">twitter:creator meta 标签。在 Twitter 卡片中显示为"由 @xxx 创作"。</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Twitter Site (account) <span class="text-xs text-gray-400 font-normal">(站点账号)</span></label
+        >
+        <input
+          type="text"
+          name="twitter_site"
+          value={getData().metadata?.twitter?.site ?? ''}
+          placeholder="@felizbay"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">twitter:site meta 标签。在 Twitter 卡片中显示网站关联账号。</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Twitter Card Type <span class="text-xs text-gray-400 font-normal">(卡片类型)</span></label
+        >
+        <select
+          name="twitter_card_type"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          <option value="summary_large_image" selected={getData().metadata?.twitter?.cardType === 'summary_large_image'}
+            >Summary Large Image (recommended) &mdash; 大图推荐
+          </option>
+          <option value="summary" selected={getData().metadata?.twitter?.cardType === 'summary'}
+            >Summary (small image) &mdash; 小图</option
+          >
+        </select>
+        <p class="mt-1 text-xs text-gray-500">
+          summary_large_image 展示大图（推荐）。summary 仅展示小图。twitter.com 上分享链接时可见。 summary_large_image
+          shows a large image (recommended). summary shows a small thumbnail. Visible when links are shared on
+          X/Twitter.
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">Site Tagline & Description</h2>
+      <p class="text-xs text-gray-500">
+        站点标语与描述 &mdash; JSON-LD 结构 (WebSite Schema)，全站 meta 标签。 Site tagline & description &mdash; used
+        in JSON-LD structured data (WebSite Schema) and meta tags across all pages.
+      </p>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Site Tagline <span class="text-xs text-gray-400 font-normal">(站点标语)</span></label
+        >
+        <input
+          type="text"
+          name="site_tagline"
+          value={getData().siteSettings.siteTagline ?? ''}
+          placeholder="Inflatable Water Sports Equipment Factory - OEM/ODM Manufacturer"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+        <p class="mt-1 text-xs text-gray-500">
+          显示在 JSON-LD WebSite schema 的 alternateName 字段。搜索引擎知识面板中会展示此内容。推荐 15-20
+          字，突出核心业务。 Appears in the alternateName field of WebSite schema. Displayed in search engine knowledge
+          panels.
+        </p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Site Description <span class="text-xs text-gray-400 font-normal">(站点描述)</span></label
+        >
+        <textarea
+          name="site_description"
+          rows="3"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          >{getData().siteSettings.siteDescription ?? ''}</textarea
+        >
+        <p class="mt-1 text-xs text-gray-500">
+          用于 WebSite schema 的 description 字段，同时也是页面默认 fallback meta description。搜索引擎可能截断至 160
+          字符。 Used for WebSite schema description and fallback meta description. Search engines may truncate to ~160
+          chars.
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">
+        Organization Info <span class="text-xs text-gray-400 font-normal">(组织信息 - JSON-LD Schema)</span>
+      </h2>
+      <p class="text-xs text-gray-500">
+        Organization schema 结构化数据，影响搜索引擎知识面板展示，同时也显示在 footer 和 contact 页面。 Used for
+        Organization schema structured data. Affects search engine knowledge panels. Also displayed in footer and
+        contact page.
+        <br /><strong class="text-amber-600 dark:text-amber-400">注意：</strong> 此处的联系方式仅影响 JSON-LD 结构化数据。网站的显示用联系方式请在
+        Branding 面板中编辑。 Note: These fields affect JSON-LD structured data only. For display contact info (footer/contact
+        page), use the Branding panel.
+      </p>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Organization Name <span class="text-xs text-gray-400 font-normal">(组织名称)</span></label
+        >
+        <input
+          type="text"
+          name="org_name"
+          value={getData().siteSettings.organization?.name ?? ''}
+          placeholder="Felizbay"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+        <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.name。应与 Branding 面板中的 Site Name 保持一致。</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Logo URL <span class="text-xs text-gray-400 font-normal">(Logo 链接)</span></label
+        >
+        <input
+          type="text"
+          name="org_logo"
+          value={getData().siteSettings.organization?.logo ?? ''}
+          placeholder="https://felizbay.com/favicon.svg"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">
+          JSON-LD Organization.logo。留空则使用 favicon 作为 fallback。推荐使用 SVG 或 PNG，112x112px 以上。 Leave empty
+          to use favicon as fallback. Recommended SVG or PNG, at least 112x112px.
+        </p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Contact Email <span class="text-xs text-gray-400 font-normal">(联系邮箱)</span></label
+        >
+        <input
+          type="email"
+          name="org_email"
+          value={getData().siteSettings.organization?.contactEmail ?? ''}
+          placeholder="info@felizbay.com"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.contactPoint.email。不影响联系表单发送。</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Contact Phone <span class="text-xs text-gray-400 font-normal">(联系电话)</span></label
+        >
+        <input
+          type="text"
+          name="org_phone"
+          value={getData().siteSettings.organization?.contactPhone ?? ''}
+          placeholder="+1 (213) 557-7888"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.contactPoint.telephone。推荐包含国际区号。</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Address <span class="text-xs text-gray-400 font-normal">(地址)</span></label
+        >
+        <input
+          type="text"
+          name="org_address"
+          value={getData().siteSettings.organization?.address ?? ''}
+          placeholder="Economic Development Zone, Laixi, Qingdao, China, 266600"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+        />
+        <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.address。显示在 contact 页面和 footer。</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <h2 class="text-base font-semibold">
+        Social Links <span class="text-xs text-gray-400 font-normal">(社交链接 - sameAs Schema)</span>
+      </h2>
+      <p class="text-xs text-gray-500">
+        JSON-LD sameAs 属性。影响搜索引擎知识面板中的社交链接展示，填写公司社交媒体主页 URL。 Used for JSON-LD sameAs
+        property. These appear in search engine knowledge panels. Add full profile URLs.
+      </p>
+      <div id="social-links-list" class="space-y-3">
+        {
+          getData().siteSettings.socialLinks.map((sl) => (
+            <div class="social-row flex items-start gap-2 rounded-lg border border-gray-200 dark:border-gray-800 p-3 bg-gray-50 dark:bg-gray-900/50">
+              <div class="flex-1 space-y-2">
+                <select
+                  name="social_platform"
+                  class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                >
+                  <option value="">- Select platform -</option>
+                  {Object.keys(PLATFORM_ICONS).map((p) => (
+                    <option value={p} selected={sl.platform === p}>
+                      {p.charAt(0).toUpperCase() + p.slice(1)}
+                    </option>
+                  ))}
+                  <option
+                    value="other"
+                    selected={!Object.keys(PLATFORM_ICONS).includes(sl.platform) && sl.platform !== ''}
+                  >
+                    Other...
+                  </option>
+                </select>
+                <input
+                  type="text"
+                  name="social_url"
+                  value={sl.url ?? ''}
+                  placeholder="https://linkedin.com/company/..."
+                  class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
+              </div>
+              <button
+                type="button"
+                data-remove-social
+                class="text-xs text-red-600 dark:text-red-400 hover:underline mt-1 whitespace-nowrap"
+              >
+                Delete
+              </button>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mt-1 text-xs text-gray-500">
+        添加后保存，社交链接将出现在搜索引擎的知识面板中。footer 中社交图标展示请使用 Navigation 面板。 After saving,
+        social links will appear in search engine knowledge panels. For footer social icons, use the Navigation panel.
+      </p>
+      <button type="button" id="add-social-btn" class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+        >+ Add Social Link</button
+      >
+      <template id="social-row-template">
+        <div
+          class="social-row flex items-start gap-2 rounded-lg border border-gray-200 dark:border-gray-800 p-3 bg-gray-50 dark:bg-gray-900/50"
+        >
+          <div class="flex-1 space-y-2">
+            <select
+              name="social_platform"
+              class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              <option value="">- Select platform -</option>
+              {
+                Object.keys(PLATFORM_ICONS).map((p) => (
+                  <option value={p}>{p.charAt(0).toUpperCase() + p.slice(1)}</option>
+                ))
+              }
+              <option value="other">Other...</option>
+            </select>
+            <input
+              type="text"
+              name="social_url"
+              placeholder="https://..."
+              class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+          </div>
+          <button
+            type="button"
+            data-remove-social
+            class="text-xs text-red-600 dark:text-red-400 hover:underline mt-1 whitespace-nowrap">Delete</button
+          >
+        </div>
+      </template>
+    </div>
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500" data-fileInfo>File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline type="application/json" id="existing-config" data-str={existingConfigStr}></script>
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('seo-form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+      });
+
+      const platformIcons = {
+        linkedin: 'tabler:brand-linkedin',
+        youtube: 'tabler:brand-youtube',
+        x: 'tabler:brand-x',
+        instagram: 'tabler:brand-instagram',
+        facebook: 'tabler:brand-facebook',
+        tiktok: 'tabler:brand-tiktok',
+        pinterest: 'tabler:brand-pinterest',
+        github: 'tabler:brand-github',
+        rss: 'tabler:rss',
+      };
+
+      // Social links add/remove
+      const socialList = document.getElementById('social-links-list');
+      const addSocialBtn = document.getElementById('add-social-btn');
+      if (addSocialBtn && socialList) {
+        addSocialBtn.addEventListener('click', function () {
+          const tmpl = document.getElementById('social-row-template');
+          if (!tmpl) return;
+          const clone = tmpl.content.cloneNode(true);
+          socialList.appendChild(clone);
+        });
+        socialList.addEventListener('click', function (e) {
+          const target = e.target;
+          if (target && target.hasAttribute('data-remove-social')) {
+            const row = target.closest('.social-row');
+            if (row) row.remove();
+          }
+        });
+      }
+
+      /** Deep merge: mutates `target` with values from `source` (recursive for plain objects). */
+      function deepMerge(target, source) {
+        if (!source || typeof source !== 'object') return target;
+        for (const key of Object.keys(source)) {
+          if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+            target[key] = deepMerge(target[key] || {}, source[key]);
+          } else {
+            target[key] = source[key];
+          }
+        }
+        return target;
+      }
+
+      saveBtn.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+
+        let existing = {};
+        try {
+          const tag = document.getElementById('existing-config');
+          if (tag) existing = JSON.parse(tag.getAttribute('data-str') || '{}');
+        } catch {
+          // noop
+        }
+
+        const keywordsRaw = String(form.querySelector('[name="keywords"]')?.value || '').trim();
+        const keywords = keywordsRaw
+          ? keywordsRaw
+              .split(',')
+              .map((k) => k.trim())
+              .filter((k) => k)
+          : [];
+
+        const robotsIndex = !(form.querySelector('[name="robots_index"]')?.checked === false);
+        const robotsFollow = !(form.querySelector('[name="robots_follow"]')?.checked === false);
+
+        const gaId = String(form.querySelector('[name="google_analytics_id"]')?.value || '').trim();
+
+        const socialLinks = [];
+        const socialRows = document.querySelectorAll('#social-links-list .social-row');
+        socialRows.forEach(function (row) {
+          const platform = String(row.querySelector('[name="social_platform"]')?.value || '').trim();
+          const url = String(row.querySelector('[name="social_url"]')?.value || '').trim();
+          if (platform && url) {
+            socialLinks.push({
+              platform: platform,
+              url: url,
+              icon: platformIcons[platform] || 'tabler:brand-' + platform.toLowerCase(),
+            });
+          }
+        });
+
+        const override = {
+          metadata: {
+            keywords,
+            robots: { index: robotsIndex, follow: robotsFollow },
+            twitter: {
+              handle: String(form.querySelector('[name="twitter_handle"]')?.value || '').trim(),
+              site: String(form.querySelector('[name="twitter_site"]')?.value || '').trim(),
+              cardType: String(form.querySelector('[name="twitter_card_type"]')?.value || 'summary_large_image'),
+            },
+          },
+          analytics: {
+            vendors: {
+              googleAnalytics: { id: gaId || null },
+            },
+          },
+          siteSettings: {
+            siteTagline: String(form.querySelector('[name="site_tagline"]')?.value || '').trim(),
+            siteDescription: String(form.querySelector('[name="site_description"]')?.value || '').trim(),
+            organization: {
+              name: String(form.querySelector('[name="org_name"]')?.value || '').trim(),
+              logo: String(form.querySelector('[name="org_logo"]')?.value || '').trim(),
+              contactEmail: String(form.querySelector('[name="org_email"]')?.value || '').trim(),
+              contactPhone: String(form.querySelector('[name="org_phone"]')?.value || '').trim(),
+              address: String(form.querySelector('[name="org_address"]')?.value || '').trim(),
+            },
+            socialLinks: socialLinks,
+          },
+        };
+
+        const data = deepMerge(existing, override);
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data,
+              commitMessage: 'Draft: Update SEO, site settings & social links',
+              branch: 'draft',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            return;
+          }
+          if (result?.content?.sha) sha = result.content.sha;
+          window.__adminToast?.('Draft saved', 'success');
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Draft';
+        }
+      });
+
+      publishBtn.addEventListener('click', async () => {
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const res = await fetch('/api/admin/publish', { method: 'POST' });
+          if (!res.ok) {
+            window.__adminToast?.('Publish failed', 'error');
+            publishBtn.disabled = false;
+            publishBtn.textContent = 'Publish';
+            return;
+          }
+          window.__adminToast?.('Published, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.disabled = false;
+          publishBtn.textContent = 'Publish';
+        }
+      });
+    })();
+  </script>
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('seo-form');
+      if (!form || form.dataset.loaded === 'true') return;
+      (async function () {
+        try {
+          var res = await fetch('/api/admin/read?path=' + encodeURIComponent('src/config.yaml') + '&format=yaml', {
+            credentials: 'include',
+          });
+          if (!res.ok) return;
+          var data = await res.json();
+          if (!data || !data.parsed) return;
+          var p = data.parsed;
+          var tags = document.getElementById('existing-config');
+          if (tags) tags.setAttribute('data-str', JSON.stringify(p));
+          if (p.metadata) {
+            var m = p.metadata;
+            if (Array.isArray(m.keywords)) setVal('keywords', m.keywords.join(', '));
+            if (m.robots) {
+              setCheck('robots_index', m.robots.index !== false);
+              setCheck('robots_follow', m.robots.follow !== false);
+            }
+            if (m.twitter) {
+              setVal('twitter_handle', m.twitter.handle);
+              setVal('twitter_site', m.twitter.site);
+              setVal('twitter_card_type', m.twitter.cardType);
+            }
+          }
+          if (p.analytics && p.analytics.vendors && p.analytics.vendors.googleAnalytics) {
+            setVal('google_analytics_id', p.analytics.vendors.googleAnalytics.id);
+          }
+          if (p.siteSettings) {
+            var s = p.siteSettings;
+            setVal('site_tagline', s.siteTagline);
+            setVal('site_description', s.siteDescription);
+            if (s.organization) {
+              setVal('org_name', s.organization.name);
+              setVal('org_logo', s.organization.logo);
+              setVal('org_email', s.organization.contactEmail);
+              setVal('org_phone', s.organization.contactPhone);
+              setVal('org_address', s.organization.address);
+            }
+            if (Array.isArray(s.socialLinks)) {
+              var list = document.getElementById('social-links-list');
+              if (list) {
+                var existing = list.querySelectorAll('.social-row');
+                existing.forEach(function (r) {
+                  r.remove();
+                });
+                s.socialLinks.forEach(function (link) {
+                  var tmpl = document.getElementById('social-row-template');
+                  if (!tmpl) return;
+                  var clone = tmpl.content.cloneNode(true);
+                  var platformInput = clone.querySelector('[name="social_platform"]');
+                  var urlInput = clone.querySelector('[name="social_url"]');
+                  if (platformInput) platformInput.value = link.platform;
+                  if (urlInput) urlInput.value = link.url;
+                  list.appendChild(clone);
+                });
+              }
+            }
+          }
+          if (data.sha) form.dataset.sha = data.sha;
+          form.dataset.loaded = 'true';
+        } catch (e) {
+          console.error('SEO loader:', e);
+        }
+      })();
+      function setVal(name, val) {
+        if (val == null) return;
+        var el = form.querySelector('[name="' + name + '"]');
+        if (el) el.value = String(val);
+      }
+      function setCheck(name, val) {
+        var el = form.querySelector('[name="' + name + '"]');
+        if (el) el.checked = !!val;
+      }
+    })();
+  </script>
+</AdminLayout>

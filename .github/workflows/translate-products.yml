@@ -1,0 +1,127 @@
+name: Translate product texts (Google via CI runner)
+
+on:
+  workflow_dispatch:
+    inputs:
+      lang:
+        description: 'Target language (e.g. ja, cs)'
+        required: true
+        default: 'ja'
+      mode:
+        description: 'What to translate: productTexts | content | content-all | content-refine | refine | page-meta | body-components'
+        required: true
+        default: 'productTexts'
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # These scripts use only node builtins (fs/path/url/fetch) — no npm install needed.
+      - name: Translate productTexts for ${{ github.event.inputs.lang }}
+        if: github.event.inputs.mode == 'productTexts'
+        run: node scripts/translate-products.mjs --lang=${{ github.event.inputs.lang }}
+
+      - name: Inject RIB titles/summaries into product-l10n
+        if: github.event.inputs.mode == 'productTexts'
+        run: node scripts/inject-rib-l10n.mjs
+
+      - name: Translate product MDX content for ${{ github.event.inputs.lang }}
+        if: github.event.inputs.mode == 'content'
+        run: node scripts/translate-content-l10n.mjs --lang=${{ github.event.inputs.lang }}
+
+      - name: Translate product MDX content (all remaining languages)
+        if: github.event.inputs.mode == 'content-all'
+        run: node scripts/translate-content-l10n.mjs
+
+      - name: Refine partial content translations for ${{ github.event.inputs.lang }}
+        if: github.event.inputs.mode == 'content-refine'
+        run: node scripts/translate-content-l10n.mjs --lang=${{ github.event.inputs.lang }} --refine
+
+      - name: Refine fallback fields for ${{ github.event.inputs.lang }}
+        if: github.event.inputs.mode == 'refine'
+        run: node scripts/translate-products.mjs --lang=${{ github.event.inputs.lang }} --refine
+
+      - name: Translate page META blocks (${{ github.event.inputs.lang }})
+        if: github.event.inputs.mode == 'page-meta' && github.event.inputs.lang != 'all'
+        run: node scripts/translate-page-meta.mjs --lang=${{ github.event.inputs.lang }}
+
+      - name: Translate page META blocks (all languages)
+        if: github.event.inputs.mode == 'page-meta' && github.event.inputs.lang == 'all'
+        run: node scripts/translate-page-meta.mjs
+
+      # body-components 模式需要 prettier API + prettier-plugin-astro 格式化输出（脚本是
+      # node builtins + 上述两个包，不装整个依赖树）
+      - name: Install formatting tools (body-components mode)
+        if: github.event.inputs.mode == 'body-components'
+        run: npm install --no-save --no-audit --no-fund prettier prettier-plugin-astro
+
+      - name: Translate body components (${{ github.event.inputs.lang }})
+        if: github.event.inputs.mode == 'body-components' && github.event.inputs.lang != 'all'
+        run: node scripts/translate-body-components.mjs --lang=${{ github.event.inputs.lang }}
+
+      - name: Translate body components (all languages)
+        if: github.event.inputs.mode == 'body-components' && github.event.inputs.lang == 'all'
+        run: node scripts/translate-body-components.mjs
+
+      - name: Verify syntax
+        run: |
+          set -o pipefail
+          npx --yes esbuild src/data/product-texts.ts src/lib/product-l10n.ts src/lib/product-content-l10n.ts --outdir=/tmp/tscheck --format=esm 2>&1 | tee /tmp/esbuild.log || {
+            echo "::error::generated files failed esbuild syntax check"
+            exit 1
+          }
+          if grep -q "duplicate-object-key" /tmp/esbuild.log; then
+            echo "::error::duplicate object keys detected in generated files — dedupe before pushing"
+            grep -m 5 "duplicate-object-key" /tmp/esbuild.log
+            exit 1
+          fi
+
+      - name: Verify page frontmatter syntax (page-meta mode)
+        if: github.event.inputs.mode == 'page-meta'
+        run: node scripts/check-frontmatter.mjs
+
+      - name: Verify page formatting (page-meta mode)
+        if: github.event.inputs.mode == 'page-meta'
+        run: |
+          files=$(git diff --name-only HEAD -- 'src/pages/[lang]' || true)
+          if [ -n "$files" ]; then
+            npx prettier --check $files || {
+              echo "::error::injected META blocks are not prettier-formatted — fix translate-page-meta.mjs output"
+              exit 1
+            }
+          fi
+
+      # 新组件是 untracked 文件，git diff 看不到 —— 合并 diff 与 ls-files 列表
+      # prettier --check 同时是语法门（prettier-plugin-astro 解析失败即报错）
+      - name: Verify generated components (body-components mode)
+        if: github.event.inputs.mode == 'body-components'
+        run: |
+          files="$( (git diff --name-only HEAD -- 'src/components' 'src/pages/[lang]'; git ls-files --others --exclude-standard 'src/components' 'src/pages/[lang]') | sort -u )"
+          if [ -n "$files" ]; then
+            echo "$files" | xargs npx prettier --check || {
+              echo "::error::generated components/pages are not prettier-formatted — fix translate-body-components.mjs output"
+              exit 1
+            }
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/product-texts.ts src/lib/product-l10n.ts src/lib/product-content-l10n.ts src/pages/[lang] src/components .cache/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: ${{ github.event.inputs.lang }} ${{ github.event.inputs.mode }} translations (Google via CI runner)"
+            git push
+          fi

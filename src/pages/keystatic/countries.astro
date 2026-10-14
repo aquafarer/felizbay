@@ -1,0 +1,371 @@
+---
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+import { ADMIN_LOCALES, ADMIN_LOCALE_CODES, siteFileForLocale } from '~/lib/i18n-admin';
+export const prerender = true;
+
+const token = readTokenFromCookies(Astro.cookies);
+
+const locale = (Astro.url.searchParams.get('locale') || 'en').toLowerCase();
+const isDefault = locale === 'en';
+const file = siteFileForLocale('src/data/site/countries.yaml', locale);
+
+let countries: any[] = [];
+let sha = '';
+let loadError: string | null = null;
+
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    let f: { sha: string; content: string; downloadUrl: string } | undefined;
+    try {
+      f = await client.readFile(file, 'draft');
+    } catch {
+      try {
+        f = await client.readFile(file);
+      } catch {
+        if (!isDefault) {
+          f = await client.readFile('src/data/site/countries.yaml');
+        }
+      }
+    }
+    if (f) {
+      const { load } = await import('js-yaml');
+      const parsed = load(f.content) as Record<string, any>;
+      if (parsed?.countries && Array.isArray(parsed.countries)) {
+        countries = parsed.countries;
+      }
+      sha = f.sha;
+    }
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Failed to read';
+  }
+}
+---
+
+<AdminLayout title="Countries" active="countries">
+  <div class="mb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h1 class="text-2xl font-semibold">Countries</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <label class="text-xs text-gray-500">Locale:</label>
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            ADMIN_LOCALE_CODES.map((l) => (
+              <option value={l} selected={l === locale}>
+                {ADMIN_LOCALES[l]}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      File: <code class="font-mono">{file}</code> ({countries.length} countries)
+      {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form
+    id="form"
+    class="pb-32"
+    data-file={file}
+    data-sha={sha}
+    data-locale={locale}
+    data-locale-codes={JSON.stringify(ADMIN_LOCALE_CODES)}
+    onsubmit="arguments[0].preventDefault()"
+  >
+    <div class="mb-4 flex items-center gap-3">
+      <input
+        id="filter"
+        type="text"
+        placeholder="Search countries..."
+        class="w-full max-w-xs px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+      />
+      <span class="text-xs text-gray-400"><span id="count">{countries.length}</span> countries</span>
+      <button
+        id="add-btn"
+        type="button"
+        class="ml-auto px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
+        >+ Add</button
+      >
+    </div>
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+          <tr>
+            <th class="text-left px-4 py-2 font-medium text-gray-500 w-48">Value</th>
+            {
+              ADMIN_LOCALE_CODES.map((l) => (
+                <th class="text-left px-2 py-2 font-medium text-gray-500 text-xs">{ADMIN_LOCALES[l]}</th>
+              ))
+            }
+            <th class="text-left px-4 py-2 font-medium text-gray-500 w-24">Tel Code</th>
+            <th class="w-10"></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          {
+            countries.map((c, i) => (
+              <tr class="country-row border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/50">
+                <td class="px-4 py-2">
+                  <input
+                    type="text"
+                    name={'c' + i + '.value'}
+                    value={c.value}
+                    class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm font-medium"
+                  />
+                </td>
+                {ADMIN_LOCALE_CODES.map((locale) => (
+                  <td class="px-2 py-1">
+                    <input
+                      type="text"
+                      name={'c' + i + '.label.' + locale}
+                      value={(c.label || {})[locale] || ''}
+                      class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm"
+                    />
+                  </td>
+                ))}
+                <td class="px-4 py-2">
+                  <input
+                    type="text"
+                    name={'c' + i + '.tel'}
+                    value={c.tel || ''}
+                    class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm"
+                  />
+                </td>
+                <td class="px-2 py-2">
+                  <button type="button" class="remove-btn text-red-500 hover:text-red-700 text-lg leading-none">
+                    &times;
+                  </button>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="save-draft-btn"
+            type="button"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+          >
+          <button
+            id="publish-btn"
+            type="button"
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const localeSelect = document.getElementById('locale-select');
+      localeSelect?.addEventListener('change', () => {
+        const loc = localeSelect.value;
+        const base = window.location.pathname;
+        window.location.href = loc === 'en' ? base : base + '?locale=' + loc;
+      });
+
+      const form = document.getElementById('form');
+      if (!form) return;
+      const saveBtn = document.getElementById('save-draft-btn');
+      const publishBtn = document.getElementById('publish-btn');
+      const file = form.dataset.file;
+      let sha = form.dataset.sha;
+      const locales = JSON.parse(form.dataset.localeCodes || '[]');
+
+      // Filter
+      const filter = document.getElementById('filter');
+      const tbody = document.getElementById('tbody');
+      const count = document.getElementById('count');
+      if (filter && tbody) {
+        filter.addEventListener('input', () => {
+          const q = filter.value.toLowerCase();
+          const rows = tbody.querySelectorAll('tr');
+          let visible = 0;
+          rows.forEach((row) => {
+            const match = Array.from(row.querySelectorAll('input')).some((inp) => inp.value.toLowerCase().includes(q));
+            row.style.display = match ? '' : 'none';
+            if (match) visible++;
+          });
+          if (count) count.textContent = String(visible);
+        });
+      }
+
+      // Remove row
+      tbody?.addEventListener('click', (e) => {
+        const el = e.target;
+        const btn = el.closest ? el.closest('.remove-btn') : null;
+        if (btn) {
+          const row = btn.closest('tr');
+          if (row && confirm('Remove this country?')) {
+            row.remove();
+            updateCount();
+            reindexNames();
+          }
+        }
+      });
+
+      // Add row
+      document.getElementById('add-btn')?.addEventListener('click', () => {
+        const tr = document.createElement('tr');
+        tr.className =
+          'country-row border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/50';
+        const idx = tbody?.querySelectorAll('tr').length || 0;
+        let html = `<td class="px-4 py-2"><input type="text" name="c${idx}.value" value="" class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm font-medium" placeholder="Country name" /></td>`;
+        locales.forEach((l) => {
+          html += `<td class="px-2 py-1"><input type="text" name="c${idx}.label.${l}" value="" class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm" /></td>`;
+        });
+        html += `<td class="px-4 py-2"><input type="text" name="c${idx}.tel" value="" class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm" placeholder="+1" /></td>`;
+        html += `<td class="px-2 py-2"><button type="button" class="remove-btn text-red-500 hover:text-red-700 text-lg leading-none">&times;</button></td>`;
+        tr.innerHTML = html;
+        tbody?.appendChild(tr);
+        updateCount();
+      });
+
+      function updateCount() {
+        const n = tbody?.querySelectorAll('tr').length || 0;
+        if (count) count.textContent = String(n);
+      }
+
+      function reindexNames() {
+        const rows = tbody?.querySelectorAll('tr') || [];
+        rows.forEach((row, idx) => {
+          const inputs = row.querySelectorAll('input');
+          inputs.forEach((inp) => {
+            const name = inp.getAttribute('name') || '';
+            inp.setAttribute('name', name.replace(/^c\d+/, 'c' + idx));
+          });
+        });
+      }
+
+      // Submit
+      saveBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        publishBtn.disabled = true;
+        const fd = new FormData(form);
+
+        // Build structured country list
+        const countryMap = new Map();
+        for (const [key, val] of fd.entries()) {
+          const m = key.match(/^c(\d+)\.(.+)$/);
+          if (!m) continue;
+          const idx = parseInt(m[1]);
+          const field = m[2];
+          if (!countryMap.has(idx)) countryMap.set(idx, { label: {}, tel: '' });
+          const entry = countryMap.get(idx) || { label: {}, tel: '' };
+          if (field === 'value') entry.value = String(val).trim();
+          else if (field === 'tel') entry.tel = String(val).trim();
+          else {
+            const lm = field.match(/^label\.(.+)$/);
+            if (lm) entry.label[lm[1]] = String(val).trim();
+          }
+        }
+
+        // Deduplicate by value (keep last occurrence)
+        const seen = new Set();
+        const countries = [];
+        const sorted = Array.from(countryMap.entries()).sort((a, b) => a[0] - b[0]);
+        sorted.forEach(([_, entry]) => {
+          if (entry.value && !seen.has(entry.value)) {
+            seen.add(entry.value);
+            countries.push(entry);
+          }
+        });
+
+        const data = { countries };
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              branch: 'draft',
+              data,
+              commitMessage: 'Draft: Update countries',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || res.status >= 400) {
+            window.__adminToast?.(result?.error || result?.message || 'Save failed', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save Draft';
+            publishBtn.disabled = false;
+            return;
+          }
+          if (result?.content?.sha) {
+            sha = result.content.sha;
+            form.dataset.sha = sha;
+          }
+          window.__adminToast?.('Draft saved (not deployed)', 'success');
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+        }
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Draft';
+        publishBtn.disabled = false;
+      });
+
+      publishBtn?.addEventListener('click', async () => {
+        saveBtn.disabled = true;
+        publishBtn.disabled = true;
+        publishBtn.textContent = 'Publishing...';
+        try {
+          const res = await fetch('/api/admin/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result?.error || 'Publish failed', 'error');
+            publishBtn.textContent = 'Publish';
+            saveBtn.disabled = false;
+            publishBtn.disabled = false;
+            return;
+          }
+          window.__adminToast?.('Published! Deploying to production...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          publishBtn.textContent = 'Publish';
+          saveBtn.disabled = false;
+          publishBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

@@ -1,0 +1,273 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => getUiForLang(lang)?.[key] || '';
+import TermsDe from '~/components/legal/terms.de.astro';
+import TermsEs from '~/components/legal/terms.es.astro';
+import TermsFr from '~/components/legal/terms.fr.astro';
+import TermsIt from '~/components/legal/terms.it.astro';
+import TermsCs from '~/components/legal/terms.cs.astro';
+import TermsSv from '~/components/legal/terms.sv.astro';
+import TermsDa from '~/components/legal/terms.da.astro';
+import TermsEl from '~/components/legal/terms.el.astro';
+import TermsNo from '~/components/legal/terms.no.astro';
+import TermsRu from '~/components/legal/terms.ru.astro';
+import TermsNl from '~/components/legal/terms.nl.astro';
+import TermsFi from '~/components/legal/terms.fi.astro';
+import TermsPl from '~/components/legal/terms.pl.astro';
+import TermsAr from '~/components/legal/terms.ar.astro';
+import TermsPt from '~/components/legal/terms.pt.astro';
+import TermsJa from '~/components/legal/terms.ja.astro';
+const Body: any =
+  (
+    {
+      de: TermsDe,
+      es: TermsEs,
+      fr: TermsFr,
+      it: TermsIt,
+      cs: TermsCs,
+      sv: TermsSv,
+      da: TermsDa,
+      el: TermsEl,
+      no: TermsNo,
+      ru: TermsRu,
+      nl: TermsNl,
+      fi: TermsFi,
+      pl: TermsPl,
+      ar: TermsAr,
+      pt: TermsPt,
+      ja: TermsJa,
+    } as Record<string, any>
+  )[lang] || null;
+
+const META: Record<string, { title: string; description: string }> = {
+  en: {
+    title: `Terms and Conditions — ${SITE.name}`,
+    description: 'Felizbay terms and conditions governing the use of our website and services.',
+  },
+  de: {
+    title: 'Allgemeine Geschäftsbedingungen — Felizbay',
+    description: 'Bitte lesen Sie diese Allgemeinen Geschäftsbedingungen sorgfältig, bevor Sie unseren Dienst nutzen.',
+  },
+  es: {
+    title: 'Términos y Condiciones — Felizbay',
+    description: 'Lea atentamente estos términos y condiciones antes de utilizar Nuestro Servicio.',
+  },
+  fr: {
+    title: 'Conditions générales — Felizbay',
+    description: "Veuillez lire attentivement ces conditions générales avant d'utiliser Notre Service.",
+  },
+  it: {
+    title: 'Termini e Condizioni — Felizbay',
+    description:
+      'Ti preghiamo di leggere attentamente questi termini e condizioni prima di utilizzare il nostro Servizio.',
+  },
+  cs: {
+    title: 'Obchodní podmínky — Felizbay',
+    description: 'Obchodní podmínky společnosti Felizbay upravující využívání našich webových stránek a služeb.',
+  },
+  sv: {
+    title: `Allmänna villkor — ${SITE.name}`,
+    description: 'Felizbay villkor som styr användningen av vår webbplats och tjänster.',
+  },
+  da: {
+    title: `Vilkår og betingelser — ${SITE.name}`,
+    description: 'Felizbay vilkår og betingelser for brugen af ​​vores hjemmeside og tjenester.',
+  },
+  el: {
+    title: `Όροι και Προϋποθέσεις — ${SITE.name}`,
+    description: 'Felizbay όροι και προϋποθέσεις που διέπουν τη χρήση του ιστότοπου και των υπηρεσιών μας.',
+  },
+  no: {
+    title: `Vilkår og betingelser — ${SITE.name}`,
+    description: 'Felizbay vilkår og betingelser for bruken av nettstedet og tjenestene våre.',
+  },
+  ru: {
+    title: `Условия использования — ${SITE.name}`,
+    description: 'Felizbay условия, регулирующие использование нашего веб-сайта и услуг.',
+  },
+  nl: {
+    title: `Algemene voorwaarden — ${SITE.name}`,
+    description: 'Felizbay algemene voorwaarden die van toepassing zijn op het gebruik van onze website en diensten.',
+  },
+  fi: {
+    title: `Ehdot – ${SITE.name}`,
+    description: 'Felizbay ehdot ja ehdot, jotka koskevat verkkosivustomme ja palveluidemme käyttöä.',
+  },
+  pl: {
+    title: `Regulamin — ${SITE.name}`,
+    description: 'Felizbay warunki regulujące korzystanie z naszej strony internetowej i usług.',
+  },
+  ar: {
+    title: `الشروط والأحكام — ${SITE.name}`,
+    description: 'Felizbay الشروط والأحكام التي تحكم استخدام موقعنا وخدماتنا.',
+  },
+  pt: {
+    title: `Termos e Condições — ${SITE.name}`,
+    description: 'Felizbay termos e condições que regem o uso de nosso site e serviços.',
+  },
+  ja: {
+    title: `利用規約 — ${SITE.name}`,
+    description: 'Felizbay 当社の Web サイトとサービスの使用を規定する利用規約。',
+  },
+};
+const meta = META[lang] || META.en;
+
+const metadata = {
+  title: meta.title,
+  description: meta.description,
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'Terms and Conditions' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  {
+    Body ? (
+      <Body lang={lang} />
+    ) : (
+      <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+        <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">
+          Terms and Conditions
+        </h1>
+        <div class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+          <p>
+            <em>Last updated: January 06, 2023</em>
+          </p>
+          <p>Please read these terms and conditions carefully before using Our Service.</p>
+
+          <h2 id="interpretation-and-definitions">Interpretation and Definitions</h2>
+          <h3 id="interpretation">Interpretation</h3>
+          <p>
+            The words of which the initial letter is capitalized have meanings defined under the following conditions.
+          </p>
+          <h3 id="definitions">Definitions</h3>
+          <p>For the purposes of these Terms and Conditions:</p>
+          <ul>
+            <li>
+              <strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with
+              a party.
+            </li>
+            <li>
+              <strong>Country</strong> refers to: New Mexico, United States
+            </li>
+            <li>
+              <strong>Company</strong> refers to Felizbay LLC, a supplier of inflatable swimming pools.
+            </li>
+            <li>
+              <strong>Device</strong> means any device that can access the Service.
+            </li>
+            <li>
+              <strong>Service</strong> refers to the Website.
+            </li>
+            <li>
+              <strong>Website</strong> refers to Felizbay, accessible from{' '}
+              <a href="https://felizbay.com">https://felizbay.com</a>
+            </li>
+            <li>
+              <strong>You</strong> means the individual accessing or using the Service.
+            </li>
+          </ul>
+
+          <h2 id="acknowledgment">Acknowledgment</h2>
+          <p>
+            These are the Terms and Conditions governing the use of this Service. Your access to and use of the Service
+            is conditioned on Your acceptance of and compliance with these Terms and Conditions.
+          </p>
+          <p>
+            You represent that you are over the age of 18. The Company does not permit those under 18 to use the
+            Service.
+          </p>
+
+          <h2 id="links-to-other-websites">Links to Other Websites</h2>
+          <p>
+            Our Service may contain links to third-party web sites or services that are not owned or controlled by the
+            Company. We assume no responsibility for the content, privacy policies, or practices of any third party
+            sites or services.
+          </p>
+
+          <h2 id="termination">Termination</h2>
+          <p>
+            We may terminate or suspend Your access immediately, without prior notice or liability, for any reason
+            whatsoever, including without limitation if You breach these Terms and Conditions.
+          </p>
+
+          <h2 id="limitation-of-liability">Limitation of Liability</h2>
+          <p>
+            To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable
+            for any special, incidental, indirect, or consequential damages whatsoever.
+          </p>
+
+          <h2 id="as-is-and-as-available-disclaimer">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+          <p>
+            The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty
+            of any kind.
+          </p>
+
+          <h2 id="regional-distribution">Regional Distribution & Service Areas</h2>
+          <p>Felizbay LLC operates with exclusive regional distribution agreements.</p>
+
+          <h2 id="governing-law">Governing Law</h2>
+          <p>
+            The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the
+            Service.
+          </p>
+
+          <h2 id="disputes-resolution">Disputes Resolution</h2>
+          <p>
+            If You have any concern or dispute about the Service, You agree to first try to resolve the dispute
+            informally by contacting the Company.
+          </p>
+
+          <h2 id="for-european-union-eu-users">For European Union (EU) Users</h2>
+          <p>
+            If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the
+            country in which you are resident in.
+          </p>
+
+          <h2 id="united-states-legal-compliance">United States Legal Compliance</h2>
+          <p>
+            You represent and warrant that You are not located in a country subject to US government embargo and You are
+            not listed on any US government list of prohibited or restricted parties.
+          </p>
+
+          <h2 id="severability-and-waiver">Severability and Waiver</h2>
+          <p>
+            If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and
+            interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable
+            law.
+          </p>
+
+          <h2 id="translation-interpretation">Translation Interpretation</h2>
+          <p>
+            These Terms and Conditions may have been translated. You agree that the original English text shall prevail
+            in the case of a dispute.
+          </p>
+
+          <h2 id="changes-to-these-terms-and-conditions">Changes to These Terms and Conditions</h2>
+          <p>
+            We reserve the right to modify or replace these Terms at any time. If a revision is material We will make
+            reasonable efforts to provide at least 30 days' notice.
+          </p>
+
+          <h2 id="contact-us">Contact Us</h2>
+          <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
+          <ul>
+            <li>By email: info@felizbay.com</li>
+            <li>By mail: New Mexico, USA</li>
+          </ul>
+        </div>
+      </section>
+    )
+  }
+</Layout>

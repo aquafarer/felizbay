@@ -1,0 +1,296 @@
+---
+import '~/assets/styles/tailwind.css';
+
+interface Props {
+  title: string;
+  active:
+    | 'dashboard'
+    | 'posts'
+    | 'products'
+    | 'pages'
+    | 'navigation'
+    | 'branding'
+    | 'submissions'
+    | 'links'
+    | 'languages'
+    | 'seo'
+    | 'hero'
+    | 'categories'
+    | 'tech'
+    | 'trust'
+    | 'visuals'
+    | 'usecases'
+    | 'proofs'
+    | 'faqs'
+    | 'about'
+    | 'testimonials'
+    | 'learning'
+    | 'trust-bar'
+    | 'top-guides'
+    | 'contact-form-text'
+    | 'users'
+    | 'countries'
+    | 'content-v2'
+    | 'technology'
+    | 'case-use'
+    | 'research'
+    | 'evidence';
+  username?: string;
+}
+
+const { title, active, username } = Astro.props;
+
+interface ChildTab {
+  id: string;
+  href: string;
+  label: string;
+}
+
+interface TabGroup {
+  label: string;
+  children: ChildTab[];
+}
+
+const groups: TabGroup[] = [
+  {
+    label: 'Home',
+    children: [
+      { id: 'hero', href: '/keystatic/hero-images', label: 'Hero Images' },
+      { id: 'categories', href: '/keystatic/categories', label: 'Categories' },
+      { id: 'tech', href: '/keystatic/tech-cards', label: 'Tech Cards' },
+      { id: 'trust', href: '/keystatic/trust-badges', label: 'Trust Badges' },
+      { id: 'trust-bar', href: '/keystatic/trust-bar', label: 'Trust Bar' },
+      { id: 'visuals', href: '/keystatic/product-visuals', label: 'Product Visuals' },
+      { id: 'usecases', href: '/keystatic/use-cases', label: 'Use Cases' },
+      { id: 'proofs', href: '/keystatic/proof-points', label: 'Proof Points' },
+      { id: 'faqs', href: '/keystatic/faqs', label: 'FAQs' },
+      { id: 'testimonials', href: '/keystatic/testimonials', label: 'Testimonials' },
+      { id: 'top-guides', href: '/keystatic/top-guides', label: 'Top Guides' },
+      { id: 'content-v2', href: '/keystatic/content-v2', label: 'Content v2' },
+    ],
+  },
+  {
+    label: 'About',
+    children: [{ id: 'about', href: '/keystatic/about', label: 'About Page' }],
+  },
+  {
+    label: 'Contact',
+    children: [
+      { id: 'contact-form-text', href: '/keystatic/contact-form-text', label: 'Contact Form' },
+      { id: 'countries', href: '/keystatic/countries', label: 'Countries' },
+      { id: 'submissions', href: '/keystatic/inquiries', label: 'Submissions (D1)' },
+    ],
+  },
+  {
+    label: 'Products',
+    children: [{ id: 'products', href: '/keystatic/products', label: 'Products' }],
+  },
+  {
+    label: 'Technology',
+    children: [{ id: 'technology', href: '/keystatic/technology', label: 'Technology' }],
+  },
+  {
+    label: 'Case Uses',
+    children: [{ id: 'case-use', href: '/keystatic/case-use', label: 'Case Uses' }],
+  },
+  {
+    label: 'Posts',
+    children: [{ id: 'posts', href: '/keystatic/news', label: 'News (D1)' }],
+  },
+  {
+    label: 'Pages',
+    children: [{ id: 'pages', href: '/keystatic/pages', label: 'Page Sections' }],
+  },
+  {
+    label: 'Content',
+    children: [
+      { id: 'learning', href: '/keystatic/learning-center', label: 'Learning Center' },
+      { id: 'research', href: '/keystatic/research', label: 'Research' },
+      { id: 'evidence', href: '/keystatic/evidence', label: 'Evidence' },
+    ],
+  },
+  {
+    label: 'Settings',
+    children: [
+      { id: 'dashboard', href: '/keystatic', label: 'Dashboard' },
+      { id: 'users', href: '/keystatic/users', label: 'Users' },
+      { id: 'navigation', href: '/keystatic/navigation', label: 'Navigation' },
+      { id: 'branding', href: '/keystatic/branding', label: 'Branding' },
+      { id: 'languages', href: '/keystatic/languages', label: 'Languages' },
+      { id: 'seo', href: '/keystatic/seo', label: 'SEO' },
+      { id: 'links', href: '/keystatic/link-refactor', label: 'Links' },
+    ],
+  },
+];
+
+const activeGroup = groups.find((g) => g.children.some((c) => c.id === active));
+const activeLabel = activeGroup?.label ?? '';
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title} — Felizbay Admin</title>
+    <script is:inline>
+      (function () {
+        // better-auth session gate: redirect to /login when not authenticated.
+        fetch('/api/auth/get-session', { credentials: 'same-origin' })
+          .then((r) => r.json())
+          .then((data) => {
+            const user = data?.user || data?.session?.user;
+            if (!user && window.location.pathname !== '/login') {
+              window.location.replace('/login');
+            }
+          })
+          .catch(() => {
+            if (window.location.pathname !== '/login') window.location.replace('/login');
+          });
+      })();
+    </script>
+  </head>
+  <body class="h-full bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased">
+    <header class="sticky top-0 z-40 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+      <div class="flex items-center justify-between px-4 lg:px-6 py-2.5">
+        <div class="flex items-center gap-3">
+          <button
+            id="sidebar-toggle"
+            class="lg:hidden p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle sidebar"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"
+              ></path></svg
+            >
+          </button>
+          <a href="/keystatic" class="text-lg font-semibold tracking-tight">Felizbay Admin</a>
+          <span class="hidden sm:inline text-xs text-gray-400">/ GitHub-backed CMS</span>
+        </div>
+        <div class="flex items-center gap-3 text-sm">
+          {username && <span class="text-gray-500 dark:text-gray-400">{username}</span>}
+          <form id="logout-form" method="post" action="/api/auth/sign-out" class="inline">
+            <input type="hidden" name="callbackURL" value="/login" />
+            <button type="submit" class="text-red-600 dark:text-red-400 hover:underline">Log Out</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex min-h-[calc(100vh-57px)]">
+      <aside
+        id="sidebar"
+        class="w-56 shrink-0 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-y-auto hidden lg:block"
+      >
+        <nav class="p-3 space-y-1">
+          {
+            groups.map((g) => {
+              const isExpanded = activeGroup?.label === g.label;
+              return (
+                <div>
+                  <button
+                    class={`group-toggle flex items-center justify-between w-full px-2 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-md ${activeLabel === g.label ? 'text-blue-700 dark:text-blue-300' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'}`}
+                  >
+                    {g.label}
+                    <svg
+                      class={`w-3 h-3 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                  <div class={`ml-1 space-y-0.5 ${isExpanded ? '' : 'hidden'}`}>
+                    {g.children.map((c) => (
+                      <a
+                        href={c.href}
+                        class={`block px-3 py-1.5 text-sm rounded-md ${active === c.id ? 'bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-medium' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'}`}
+                      >
+                        {c.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            })
+          }
+        </nav>
+      </aside>
+
+      <!-- Overlay for mobile -->
+      <div id="sidebar-overlay" class="fixed inset-0 z-30 bg-black/30 hidden lg:hidden"></div>
+
+      <main class="flex-1 min-w-0 max-w-7xl mx-auto px-4 lg:px-6 py-6">
+        <slot />
+      </main>
+    </div>
+
+    <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <script is:inline>
+      (function () {
+        // Sidebar toggle (mobile)
+        const toggleBtn = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        if (toggleBtn && sidebar && overlay) {
+          const show = () => {
+            sidebar.classList.remove('hidden');
+            sidebar.classList.add('fixed', 'inset-y-0', 'left-0', 'z-40');
+            overlay.classList.remove('hidden');
+          };
+          const hide = () => {
+            sidebar.classList.add('hidden');
+            sidebar.classList.remove('fixed', 'inset-y-0', 'left-0', 'z-40');
+            overlay.classList.add('hidden');
+          };
+          toggleBtn.addEventListener('click', show);
+          overlay.addEventListener('click', hide);
+        }
+
+        // Collapsible groups
+        document.querySelectorAll('.group-toggle').forEach((btn) => {
+          btn.addEventListener('click', function () {
+            const sub = this.nextElementSibling;
+            const arrow = this.querySelector('svg');
+            if (sub) {
+              sub.classList.toggle('hidden');
+              if (arrow) arrow.classList.toggle('rotate-90');
+            }
+          });
+        });
+
+        // Toast
+        function ensureContainer() {
+          let el = document.getElementById('toast-container');
+          if (!el) {
+            el = document.createElement('div');
+            el.id = 'toast-container';
+            el.className = 'fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none';
+            document.body.appendChild(el);
+          }
+          return el;
+        }
+        window.__adminToast = function (msg, type) {
+          const el = ensureContainer();
+          const div = document.createElement('div');
+          const bg =
+            type === 'error'
+              ? 'bg-red-600 text-white'
+              : type === 'success'
+                ? 'bg-green-600 text-white'
+                : 'bg-gray-800 text-white';
+          div.className = `${bg} px-4 py-2 rounded-md shadow-lg text-sm pointer-events-auto transition-opacity duration-300`;
+          div.textContent = msg;
+          el.appendChild(div);
+          setTimeout(() => {
+            div.style.opacity = '0';
+            setTimeout(() => div.remove(), 300);
+          }, 3500);
+        };
+      })();
+    </script>
+  </body>
+</html>

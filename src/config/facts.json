@@ -1,0 +1,102 @@
+{
+  "_comment": [
+    "Single Source of Truth for Felizbay pool brand facts.",
+    "All numbers and facts on pages, llms.txt and JSON-LD render from this file.",
+    "2026-10: rebranded to inflatable swimming pools only. Contact: info@felizbay.com."
+  ],
+
+  "brand": {
+    "name": "Felizbay",
+    "legalName": "Felizbay LLC",
+    "alternateName": "Felizbay Inflatable Pools",
+    "slogan": "Premium Drop Stitch Inflatable Swimming Pools",
+    "description": "Felizbay designs and supplies premium drop stitch inflatable swimming pools — rectangular and round models with rigid, rock-solid walls that set up in minutes and fold away for winter storage. Every pool is 100% pressure-tested before shipping and complies with EN 16582-1 and ASTM F2666 pool safety standards.",
+    "foundingYear": 2012,
+    "url": "https://felizbay.com"
+  },
+
+  "factory": {
+    "areaSqm": 0,
+    "city": "",
+    "prefecture": "",
+    "province": "New Mexico",
+    "country": "US",
+    "postalCode": "",
+    "streetAddress": "",
+    "productionLines": 0,
+    "workforceMin": 0,
+    "workforceMax": 0,
+    "annualCapacityUnits": 0,
+    "certifiedModels": 3
+  },
+
+  "reach": {
+    "countriesServed": "Worldwide",
+    "regions": ["North America", "EU", "Asia-Pacific", "Middle East", "Africa"]
+  },
+
+  "catalog": {
+    "certifiedModels": 3,
+    "categories": ["Rectangular Pool", "Round Pool", "Pool Cover"],
+    "categoryCount": 3,
+    "featuredProductCount": "3 featured pools"
+  },
+
+  "quality": {
+    "defectFreeRate": "99.3%",
+    "defectFreeRateNote": "Based on AQL 2.5 per ISO 2859 sampling inspection of outgoing shipments over the trailing 12-month period",
+    "pressureTest": {
+      "multiplier": "1.25x",
+      "holdHours": "24h",
+      "full": "24h hold at 1.25x rated pressure"
+    },
+    "samplingStandard": "AQL 2.5 per ISO 2859",
+    "testCoverage": "100% pressure-tested"
+  },
+
+  "certifications": [
+    { "name": "EN 16582-1", "body": "CEN" },
+    { "name": "ASTM F2666", "body": "ASTM International" },
+    { "name": "ISO 9001:2015", "body": "SGS", "since": 2022 },
+    { "name": "BSCI", "body": "Intertek" },
+    { "name": "REACH", "body": null },
+    { "name": "RoHS", "body": null }
+  ],
+
+  "commercial": {
+    "moqPools": "Contact for details",
+    "samplingLeadTimeDays": "15-20",
+    "productionLeadTimeDays": "30-45",
+    "warrantyPool": "2-year limited warranty on pool fabric, seams, and valves",
+    "warrantyNote": "2-year limited warranty covers drop stitch fabric integrity, seam air-holding capability, inflation valves, and accessories"
+  },
+
+  "contact": {
+    "primaryPhone": "",
+    "salesUsPhone": "",
+    "email": "info@felizbay.com",
+    "availableLanguages": ["English"]
+  },
+
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/Felizbay",
+    "youtube": "https://www.youtube.com/@felizbay",
+    "x": "https://x.com/Felizbay",
+    "instagram": "https://www.instagram.com/Felizbay",
+    "facebook": "https://www.facebook.com/Felizbay",
+    "rss": "https://felizbay.com/rss.xml"
+  },
+
+  "founder": {
+    "name": "David Chen",
+    "jobTitle": "Founder & CEO",
+    "personalLinkedin": "",
+    "credentials": []
+  },
+
+  "logo": {
+    "url": "https://felizbay.com/logo-512.png",
+    "width": 512,
+    "height": 512
+  }
+}

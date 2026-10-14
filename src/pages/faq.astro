@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import JsonLd from '~/components/common/JsonLd.astro';
+import Tldr from '~/components/common/Tldr.astro';
+import { faqs } from '~/data/faq';
+import { defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const lang = Astro.locals.lang;
+
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const metadata = {
+  title: `FAQ — ${SITE.name}`,
+  description:
+    'Frequently asked questions about Felizbay drop stitch inflatable swimming pools — setup, water care, storage, and ordering.',
+};
+
+const categories = [...new Set(faqs.map((f) => f.category))];
+---
+
+<Layout metadata={metadata}>
+  <meta name="ai-intent" content="faq,inflatable-pool-questions,pool-buying-faq" />
+
+  <section class="max-w-3xl mx-auto py-24 px-6" data-ai-block="faq">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('faq.pageLabel')}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{t('faq.title')}</h1>
+    <p class="mt-4 text-lg text-gray-500">{t('faq.pageDesc')}</p>
+
+    <Tldr summary={t('home.tldr.summary')} className="mt-8" />
+  </section>
+
+  {
+    categories.map((cat) => (
+      <section class="max-w-3xl mx-auto pb-16 px-6">
+        <h2 class="text-xl font-semibold text-gray-900 mb-6">{t('faq.category.' + cat) || cat}</h2>
+        <div class="space-y-4">
+          {faqs
+            .filter((f) => f.category === cat)
+            .map((item) => (
+              <details class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
+                <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
+                  <span>{item.question}</span>
+                  <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0">▼</span>
+                </summary>
+                <div class="px-6 pb-4 space-y-3">
+                  <p class="text-gray-600 leading-relaxed">{item.answer}</p>
+                </div>
+              </details>
+            ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <JsonLd type="FAQPage" faqs={faqs.map((f) => ({ q: f.question, a: f.answer }))} />
+</Layout>
