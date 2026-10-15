@@ -1,0 +1,302 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import {
+  poolSeries,
+  poolAccessories,
+  POOL_PRESSURE_SPECS,
+  POOL_PRODUCTION_STEPS,
+  POOL_KEY_FEATURES,
+  POOL_BUSINESS_ADVANTAGES,
+  PRICE_BASIS_NOTE,
+} from '~/data/pool-catalog';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Pool Specifications & FOB Price List | ${SITE.name}`,
+    description: `Complete Felizbay drop-stitch pool specification and FOB Qingdao price list — round pools, rectangular/square pools, and hot tub SPA models with sizes, wall thicknesses, weights, and wholesale prices.`,
+    canonical: getCanonical('/products/specs'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const formatUsd = (n: number) =>
+  `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Factory Price List
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Pool Specifications & FOB Price List
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Complete drop-stitch pool catalog — sizes, wall thicknesses, weights, and FOB Qingdao wholesale prices.
+      </p>
+      <p class="mt-4 mx-auto max-w-2xl text-sm text-gray-400 dark:text-slate-500">
+        {PRICE_BASIS_NOTE}
+      </p>
+    </header>
+
+    <!-- Key Features -->
+    <div class="mb-14 grid sm:grid-cols-2 gap-4">
+      {
+        POOL_KEY_FEATURES.map((f) => (
+          <div class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+              <Icon name={f.icon} class="w-5 h-5" />
+            </span>
+            <div>
+              <h2 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{f.title}</h2>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{f.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="space-y-14">
+      {
+        poolSeries.map((series) => (
+          <section id={series.id} class="scroll-mt-24">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">{series.name}</h2>
+              <span class="text-sm font-medium text-gray-400 dark:text-slate-500">{series.heading}</span>
+            </div>
+            <p class="text-sm text-gray-500 dark:text-slate-400 mb-4 max-w-3xl">{series.highlights}</p>
+
+            <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700 mb-4">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                    <th class="px-4 py-3">Item No.</th>
+                    <th class="px-4 py-3">Size (m)</th>
+                    <th class="px-4 py-3">Wall</th>
+                    <th class="px-4 py-3">Weight</th>
+                    <th class="px-4 py-3 text-right">FOB Qingdao</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {series.items.map((item, i) => (
+                    <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                      <td class="px-4 py-2.5 font-mono text-xs text-gray-500 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                        {item.item}
+                      </td>
+                      <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                        {item.size}
+                      </td>
+                      <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                        {item.wall}
+                      </td>
+                      <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                        {item.weightKg ? `${item.weightKg} kg` : '—'}
+                      </td>
+                      <td class="px-4 py-2.5 text-right font-semibold text-gray-900 dark:text-slate-100 border-b border-gray-100 dark:border-slate-800">
+                        {formatUsd(item.fobUsd)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                Standard inclusions:
+              </span>
+              {series.included.map((inc) => (
+                <span class="px-2.5 py-1 bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 text-xs font-medium rounded-full">
+                  {inc}
+                </span>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+
+      <!-- Optional Accessories -->
+      <section id="accessories" class="scroll-mt-24">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">Optional Accessories</h2>
+          <span class="text-sm font-medium text-gray-400 dark:text-slate-500">Extra charge</span>
+        </div>
+        <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+          High-margin add-ons that complete turnkey pool packages — entry/exit assistance, pumping, and water
+          circulation.
+        </p>
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+          <table class="w-full text-sm">
+            <thead>
+              <tr
+                class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+              >
+                <th class="px-4 py-3">Accessory</th>
+                <th class="px-4 py-3">Specification</th>
+                <th class="px-4 py-3 text-right">FOB Qingdao</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                poolAccessories.map((acc, i) => (
+                  <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                    <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                      {acc.name}
+                    </td>
+                    <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                      {acc.spec}
+                    </td>
+                    <td class="px-4 py-2.5 text-right font-semibold text-gray-900 dark:text-slate-100 border-b border-gray-100 dark:border-slate-800">
+                      {formatUsd(acc.fobUsd)}
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Pressure & Safety Specifications -->
+      <section id="pressure" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+          Pressure & Safety Specifications
+        </h2>
+        <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+          All Felizbay drop-stitch pools run at a recommended 4–5 PSI daily operating pressure. Air chamber side walls
+          carry a pressure-relief valve that automatically releases above 6 PSI, and every unit passes a 24–48 hour
+          pressure-drop leak test before packing.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {
+            POOL_PRESSURE_SPECS.map((p) => (
+              <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                  {p.label}
+                </div>
+                <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Production Process -->
+      <section id="production" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">Production Process</h2>
+        <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+          Every Felizbay pool goes through the same five-step factory workflow — from CNC-cut drop-stitch fabric to a
+          24–48 hour pressure-drop test before packing.
+        </p>
+        <ol class="space-y-3">
+          {
+            POOL_PRODUCTION_STEPS.map((step, i) => (
+              <li class="flex gap-4 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{step.title}</h3>
+                  <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step.description}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <!-- Product Videos -->
+      <section id="videos" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">Product Videos</h2>
+        <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+          Watch the drop-stitch pools inflate to full rigidity and hold shape under load.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <video
+            controls
+            preload="metadata"
+            class="w-full aspect-video rounded-xl bg-black border border-gray-200 dark:border-slate-700"
+            aria-label="Felizbay drop-stitch pool demo video 1"
+          >
+            <source src="/videos/pools/felizbay-pool-demo-1.mp4" type="video/mp4" />
+          </video>
+          <video
+            controls
+            preload="metadata"
+            class="w-full aspect-video rounded-xl bg-black border border-gray-200 dark:border-slate-700"
+            aria-label="Felizbay drop-stitch pool demo video 2"
+          >
+            <source src="/videos/pools/felizbay-pool-demo-2.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <!-- Why Import Drop-Stitch Pools -->
+      <section id="advantages" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+          Why Import Drop-Stitch Pools
+        </h2>
+        <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+          The commercial case for wholesale drop-stitch pool programs versus rigid acrylic/FRP pools and entry-level
+          vinyl inflatables.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          {
+            POOL_BUSINESS_ADVANTAGES.map((adv) => (
+              <div class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                  <Icon name={adv.icon} class="w-5 h-5" />
+                </span>
+                <div>
+                  <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{adv.title}</h3>
+                  <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{adv.description}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-14 text-center">
+      <p class="text-lg text-gray-600 dark:text-slate-400 mb-5 max-w-2xl mx-auto">
+        Prices are based on 20 pcs per item, FOB Qingdao. For mixed containers, custom sizes, or OEM/ODM projects,
+        request an itemized quotation.
+      </p>
+      <a
+        href="/request-quotation"
+        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+      >
+        <Icon name="tabler:file-invoice" class="w-5 h-5" />
+        Request a Quotation
+      </a>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="specification" aria-hidden="true">
+    <p>
+      Felizbay factory price list: drop-stitch inflatable pools FOB Qingdao, price basis 20 pcs per item. Round pools
+      10/15 cm wall from 2×0.5 m to 10×1.2 m ($137.96–$1,600.58); rectangular/square pools 15/20/50 cm wall from 2×2×0.8
+      m to 6×5×1.5 m ($285.70–$1,753.74); hot tub SPA models with built-in seats and 5 mm insulated bottom
+      ($381.36–$667.06 square/rectangular, $390.29–$487.22 round). Accessories: inflatable stairs, 4-step ladder,
+      rechargeable pump, FS-12C sand filter pump. Recommended operating pressure 4–5 PSI, QC test 6 PSI, maximum 8 PSI,
+      pressure-relief valve above 6 PSI. Five-step production process: CNC cutting, valve heat-sealing, panel welding
+      with rail reinforcement, accessory integration, and 24–48 hour pressure testing. Key features: rigid walls users
+      can sit on at 4–5 PSI, self-supporting integrated shell, sizes from 1.5 m plunge pools to 10 m commercial pools,
+      5–15 minute single-person setup with the included 1000W pump. Commercial advantages: deflated packaging at 5–10%
+      of rigid acrylic/FRP pool volume for efficient 20GP/40HQ container loading, high-margin mid-to-high-end
+      positioning, plug-and-play installation without excavation, and a cross-sell accessory ecosystem.
+    </p>
+  </section>
+</Layout>

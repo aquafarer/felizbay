@@ -11,8 +11,8 @@
  *    render time via the nav.* keys in src/data/site/i18n-config.json
  *    (see navTextMap in src/components/widgets/Header.astro).
  *  - Product texts live in src/data/product-texts.ts under per-language
- *    blocks. The completeness standard is the 11 fully-translated languages
- *    (fr, de, es, pt, it, ja, ko, ru, pl, zh, ar).
+ *    blocks. The completeness standard is the 8 fully-translated languages
+ *    (fr, de, es, pt, it, ru, pl, ar).
  *
  * Usage:
  *   node scripts/check-translations.mjs
@@ -63,9 +63,13 @@ function loadLocales() {
   return locales;
 }
 
-// The 11 languages that are the product-text completeness standard.
+// The 8 languages that are the product-text completeness standard.
 const PRODUCT_LANGS = ['fr', 'de', 'es', 'pt', 'it', 'ru', 'pl', 'ar'];
-const PAGE_TYPES = ['home', 'about', 'contact', 'news'];
+// Static page YAMLs that must exist for every enabled locale. Note: news is
+// served by the news-worker from Cloudflare D1 (no static page YAML by
+// design), and request-quotation has partial locale coverage (untranslated
+// pages fold to the EN canonical), so neither belongs on this list.
+const PAGE_TYPES = ['home', 'about', 'contact'];
 
 // ── 1. Navigation (nav.* key coverage per locale) ──
 function checkNav(locales) {
@@ -99,7 +103,11 @@ function checkConfig(locales) {
       continue;
     }
     const c = read(f);
-    if (!c.includes('siteSettings:')) fail('Config missing siteSettings: ' + f);
+    // Required structure per config.{lang}.yaml: the site and metadata blocks
+    // (siteSettings is a keystatic SEO-admin form concept merged on save, not
+    // part of the config schema, so it is not required here).
+    if (!c.includes('site:')) fail('Config missing site block: ' + f);
+    if (!c.includes('metadata:')) fail('Config missing metadata block: ' + f);
     if (c.includes('TODO:')) warn('TODO in ' + f);
   }
   ok('Config files checked (' + (locales.length - 1) + ' languages)');

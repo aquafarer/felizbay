@@ -11,6 +11,10 @@ header:
           href: /products
         - text: Round Pools
           href: /products
+        - text: Hot Tub SPA Pools
+          href: /products/hot-tub-square-rect
+        - text: Pool Specs & FOB Price List
+          href: /products/specs
     - text: Company
       links:
         - text: About Felizbay
@@ -34,6 +38,10 @@ footer:
           href: /products
         - text: Round Pools
           href: /products
+        - text: Hot Tub SPA Pools
+          href: /products/hot-tub-square-rect
+        - text: Pool Specs & FOB Price List
+          href: /products/specs
     - title: Company
       links:
         - text: About Felizbay

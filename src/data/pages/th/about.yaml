@@ -13,11 +13,11 @@ stats:
   columns: 4
   stats:
     - title: Pool collections
-      amount: '3'
+      amount: '4'
     - title: Setup time
       amount: '~10 min'
     - title: Rated pressure
-      amount: '8-10 PSI'
+      amount: '4-5 PSI'
     - title: Contact
       amount: info@felizbay.com
 
@@ -36,6 +36,9 @@ features3_what_we_build:
     - title: Round grey pools
       description: Our premium line with a modern grey finish and optional fitted cover.
       icon: tabler:circle-dot
+    - title: Hot tub SPA pools
+      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+      icon: tabler:ripple
 
 features3_more:
   columns: 3
@@ -136,7 +139,7 @@ production_section:
     - title: 'Strict Quality Control'
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 8-10 PSI working range'
+        - 'Pressure testing above the rated 4-5 PSI working range'
         - 'Strict airtightness and durability testing before shipping'
 
 global_ops_section:
@@ -144,9 +147,9 @@ global_ops_section:
   title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
   description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
   stats:
-    - value: '3'
+    - value: '4'
       label: 'Pool collections'
     - value: '~10 min'
       label: 'Setup time'
-    - value: '8-10 PSI'
+    - value: '4-5 PSI'
       label: 'Rated pressure'

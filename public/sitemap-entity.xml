@@ -218,7 +218,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>ar/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/ar/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>ar/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/ar/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>ar/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -503,7 +552,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>cs/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/cs/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>cs/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/cs/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>cs/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -764,7 +862,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>da/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/da/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>da/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/da/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>da/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -1025,7 +1172,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>de/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/de/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>de/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/de/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>de/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -1309,7 +1505,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>el/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/el/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>el/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/el/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>el/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -1570,7 +1815,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>es/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/es/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>es/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/es/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>es/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -1855,7 +2149,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>fi/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/fi/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>fi/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/fi/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>fi/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -2116,7 +2459,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>fr/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/fr/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>fr/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/fr/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>fr/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -2377,7 +2769,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>it/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/it/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>it/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/it/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>it/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -2593,6 +3034,78 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>ja/privacy</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/ja/products/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
+    <x:entity>ja/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/ja/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>ja/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/ja/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>ja/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -2830,7 +3343,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>nl/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/nl/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>nl/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/nl/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>nl/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -3091,7 +3653,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>no/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/no/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>no/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/no/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>no/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -3352,7 +3963,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>pl/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pl/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>pl/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pl/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>pl/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -3494,6 +4154,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>index</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -3503,6 +4164,54 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/compare/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/compare/"/>
     <x:entity>compare</x:entity>
+    <x:type>product</x:type>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>hot-tub-round</x:entity>
+    <x:type>product</x:type>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>hot-tub-square-rect</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
   </url>
@@ -3575,6 +4284,14 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>round-grey-drop-stitch-pool</x:entity>
+    <x:type>product</x:type>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/products/specs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/specs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/specs/"/>
+    <x:entity>specs</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
   </url>
@@ -3740,7 +4457,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>pt/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pt/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>pt/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pt/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>pt/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -4009,7 +4775,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>ru/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/ru/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>ru/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/ru/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>ru/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -4270,7 +5085,56 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>sv/products</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/sv/products/hot-tub-round/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
+    <x:entity>sv/products/hot-tub-round</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/sv/products/hot-tub-square-rect/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
+    <x:entity>sv/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>

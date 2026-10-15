@@ -38,4 +38,24 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
       'Differentiates from the sea of blue pools at retail. The bundled cover improves customer satisfaction scores and reduces support tickets about water care.',
     lifespan: '5+ seasons with basic care',
   },
+  'hot-tub-square-rect': {
+    bestFor: ['families', 'retailers', 'oem'],
+    recommendation:
+      'A four-season hot tub that sells beyond the summer pool season. Built-in seats and the 5 mm insulated bottom justify a premium price tier, and seven factory sizes cover solo soakers up to 3 × 2 m party tubs.',
+    useCase: 'Year-round home spa, wellness and hydrotherapy, glamping and boutique hospitality, vacation rental amenity',
+    operatingCost: 'Moderate — heating energy is the main cost; the insulated bottom and a thermal cover keep it down',
+    whyBusinessesChooseIt:
+      'Extends the selling season into autumn and winter. The deflated tub ships at 5–10% of a rigid hot tub\u2019s packaging volume, cutting freight and overseas warehousing costs while supporting high retail margins.',
+    lifespan: '5+ seasons with basic care',
+  },
+  'hot-tub-round': {
+    bestFor: ['families', 'retailers', 'oem'],
+    recommendation:
+      'The entry model of the hot tub line. The compact 1.8 m footprint opens sales to apartment balconies and urban courtyards, and the tub doubles as a professional cold plunge bath for the athletic recovery market.',
+    useCase: 'Balcony and courtyard wellness, cold plunge recovery, compact year-round spa, glamping amenity',
+    operatingCost: 'Low to moderate — small water volume heats fast; insulated bottom retains heat between sessions',
+    whyBusinessesChooseIt:
+      'The lowest entry price in the wellness line with the smallest shipping footprint. Popular with glamping operators and fitness studios that add recovery baths without construction.',
+    lifespan: '5+ seasons with basic care',
+  },
 };

@@ -1,4 +1,4 @@
-﻿---
+---
 import type { InferGetStaticPropsType } from 'astro';
 import type { ImageMetadata } from 'astro';
 import Icon from '~/components/ui/Icon.astro';
@@ -42,11 +42,11 @@ const related = await findRelatedProducts(product, 3);
 const relatedGuides = rec ? guides.filter((g) => g.relatedProducts.includes(rec.id)).slice(0, 3) : [];
 
 const defaultTitle = product.categoryLabel
-  ? `${product.title} 鈥?${product.categoryLabel} | ${SITE.name}`
+  ? `${product.title} —${product.categoryLabel} | ${SITE.name}`
   : `${product.title} | ${SITE.name}`;
 const defaultDesc =
   (product.summary ?? product.description)
-    ? `${product.summary ?? product.description} 鈥?Contact ${SITE.name} for pricing, specs, and ordering.`
+    ? `${product.summary ?? product.description} —Contact ${SITE.name} for pricing, specs, and ordering.`
     : `Explore the ${product.title} from ${SITE.name}. Contact us for pricing, technical specs, and ordering information.`;
 
 const metadata = merge(
@@ -299,7 +299,7 @@ const productExtraData: Record<string, unknown> = {
                 product.sku && (
                   <>
                     <>
-                      <span aria-hidden="true">路</span>
+                      <span aria-hidden="true">·</span>
                       <span class="font-mono text-xs">{product.sku}</span>
                     </>
                   </>
@@ -474,7 +474,7 @@ const productExtraData: Record<string, unknown> = {
     )
   }
 
-  {/* Product Definition 鈥?Who is it for? */}
+  {/* Product Definition —Who is it for? */}
   {
     rec && rec.definition && (
       <section
@@ -661,6 +661,13 @@ const productExtraData: Record<string, unknown> = {
               </tbody>
             </table>
           </div>
+          <a
+            href="/products/specs"
+            class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-sky-600 dark:text-sky-400 hover:underline"
+          >
+            <Icon name="tabler:table" class="w-4 h-4" />
+            View the full pool specification & FOB price list
+          </a>
         </div>
       </section>
     )

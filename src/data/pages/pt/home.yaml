@@ -22,11 +22,11 @@ stats:
   columns: 4
   stats:
     - title: Pool Collections
-      amount: '3'
+      amount: '4'
     - title: Setup Time
       amount: '~10 min'
     - title: Rated Pressure
-      amount: '8-10 PSI'
+      amount: '4-5 PSI'
     - title: Business Model
       amount: OEM, ODM, Wholesale
     - title: Custom Sizes
@@ -68,7 +68,7 @@ features:
   columns: 2
   items:
     - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 8-10 PSI and keeps its shape when filled.'
+      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
       icon: tabler:hexagon
     - title: Fast, Tool-Free Setup
       description: 'Inflate with the included electric pump in about 10 minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
@@ -108,7 +108,7 @@ content_workshop:
     <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay — Inflatable Pool Manufacturer</h3>
   items:
     - title: 'High-Pressure Construction'
-      description: 'Every pool is built from double-layer PVC drop stitch fabric and pressure-tested to well above its 8-10 PSI working pressure.'
+      description: 'Every pool is built from double-layer PVC drop stitch fabric and pressure-tested to well above its 4-5 PSI working pressure.'
     - title: 'Quality Materials'
       description: 'UV-resistant, puncture-resistant fabrics with reinforced seams, chosen for full-season outdoor use.'
     - title: 'Custom Manufacturing'
@@ -167,7 +167,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 8-10 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
       icon: tabler:hexagon
       category: all
     - title: Can children use the pool?
