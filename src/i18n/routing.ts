@@ -1,4 +1,5 @@
 import { defaultLang } from './config';
+import { isRootOnlyRoute } from './root-only';
 
 export const LOCALIZED_ROUTES = new Set([
   '/disclaimer',
@@ -20,6 +21,9 @@ export function localizeHref(href: string | URL | undefined | null, locale: stri
   if (locale === defaultLang) return str;
   const base = str.split('?')[0].split('#')[0];
   if (base === '/') return str;
+  // Root-only routes never have localized variants — keep them un-prefixed or
+  // they 404 (e.g. nav "Pool Specs" on localized pages).
+  if (isRootOnlyRoute(base)) return str;
   if ([...LOCALIZED_ROUTES].some((r) => base === r || base.startsWith(r + '/'))) {
     return '/' + locale + str;
   }

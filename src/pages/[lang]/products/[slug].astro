@@ -13,7 +13,7 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 
-import { findRelatedProducts, getStaticPathsProduct, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import { findRelatedProducts, getStaticPathsProduct } from '~/utils/products';
 import { productBusinessData } from '~/data/product-business-data';
 import { findImage } from '~/utils/images';
 import { SITE } from 'astrowind:config';
@@ -109,7 +109,7 @@ const productCrumbs = [
     ? [
         {
           name: product.categoryLabel,
-          href: `/${lang}/${CATEGORY_SLUG_TO_URL[(product.category || '') as keyof typeof CATEGORY_SLUG_TO_URL] || 'products'}`,
+          href: `/${lang}/products?category=${product.category || 'pool'}`,
         },
       ]
     : []),
@@ -800,68 +800,6 @@ const productCompliance = getProductCompliance(product.category);
     </div>
   </section>
 
-  {/* Downloads & Resources */}
-  <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-      <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
-        {t('product.resources') || 'Resources'}
-      </span>
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-        {t('product.downloads') || 'Downloads & Resources'}
-      </h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a
-          href={'/' + lang + '/technical-drawings'}
-          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
-        >
-          <span class="text-sky-500 text-xl mt-0.5">&#9661;</span>
-          <div>
-            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
-              {t('product.cadDrawings') || 'CAD Drawings'}
-            </h3>
-            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">PDF GA drawings available</p>
-          </div>
-        </a>
-        <a
-          href={'/' + lang + '/ce-compliance'}
-          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
-        >
-          <span class="text-sky-500 text-xl mt-0.5">&#10003;</span>
-          <div>
-            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
-              {t('product.complianceDocs') || 'Compliance Docs'}
-            </h3>
-            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">CE/ISO certificates &amp; DoC</p>
-          </div>
-        </a>
-        <a
-          href={'/' + lang + '/factory-audit'}
-          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
-        >
-          <span class="text-sky-500 text-xl mt-0.5">&#9881;</span>
-          <div>
-            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
-              {t('product.factoryAudit') || 'Factory Audit'}
-            </h3>
-            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">QC process &amp; audit prep</p>
-          </div>
-        </a>
-        <a
-          href={'/' + lang + '/request-quotation'}
-          class="flex items-start gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:shadow-md hover:border-sky-300 dark:hover:border-sky-600 transition-all"
-        >
-          <span class="text-sky-500 text-xl mt-0.5">&#9993;</span>
-          <div>
-            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100">
-              {t('product.specSheet') || 'Request Spec Sheet'}
-            </h3>
-            <p class="text-xs text-gray-500 dark:text-slate-400 mt-1">Full specs &amp; pricing</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
   {/* Trust Badges */}
   <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
@@ -1031,5 +969,5 @@ const productCompliance = getProductCompliance(product.category);
     )
   }
 
-  <ToBlogLink />
+  <ToBlogLink href={`/${lang}/products`} text={t('product.backToProducts') || 'Back to Products'} />
 </ProductLayout>

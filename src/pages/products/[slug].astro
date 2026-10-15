@@ -11,7 +11,7 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 
-import { findRelatedProducts, getStaticPathsProduct, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import { findRelatedProducts, getStaticPathsProduct } from '~/utils/products';
 import { findImage } from '~/utils/images';
 import { SITE } from 'astrowind:config';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
@@ -70,7 +70,7 @@ const productCrumbs = [
     ? [
         {
           name: product.categoryLabel,
-          href: `/${CATEGORY_SLUG_TO_URL[(product.category || '') as keyof typeof CATEGORY_SLUG_TO_URL] || 'products'}`,
+          href: `/products?category=${product.category || 'pool'}`,
         },
       ]
     : []),
@@ -941,5 +941,5 @@ const productExtraData: Record<string, unknown> = {
     )
   }
 
-  <ToBlogLink />
+  <ToBlogLink text="Back to Products" />
 </ProductLayout>
