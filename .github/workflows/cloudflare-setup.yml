@@ -105,18 +105,25 @@ jobs:
           if [ "$status" = "200" ] && grep -q '"subdomain"' /tmp/subdomain.json && ! grep -q '"subdomain":null' /tmp/subdomain.json; then
             echo "workers.dev subdomain already claimed"
           else
-            code=$(curl -s -o /tmp/subdomain-put.json -w "%{http_code}" -X PUT \
-              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-              -H "Content-Type: application/json" \
-              -d '{"enabled": true, "preview_urls_enabled": true}' \
-              "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain")
-            echo "PUT subdomain -> $code"; cat /tmp/subdomain-put.json; echo
+            # PUT requires an explicit subdomain name (error 10033 otherwise).
+            for name in felizbay felizbay-web aquafarer-felizbay; do
+              code=$(curl -s -o /tmp/subdomain-put.json -w "%{http_code}" -X PUT \
+                -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+                -H "Content-Type: application/json" \
+                -d "{\"enabled\": true, \"preview_urls_enabled\": true, \"subdomain\": \"$name\"}" \
+                "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain")
+              echo "PUT subdomain '$name' -> $code"; cat /tmp/subdomain-put.json; echo
+              if [ "$code" = "200" ]; then
+                echo "claimed workers.dev subdomain: $name"
+                echo "- workers.dev subdomain: \`$name\`" >> "$GITHUB_STEP_SUMMARY"
+                break
+              fi
+            done
             if [ "$code" != "200" ]; then
               echo "::error::Could not claim workers.dev subdomain. Open Cloudflare Dashboard -> Workers & Pages once (this creates the subdomain), then re-run this workflow."
               exit 1
             fi
           fi
-          echo "- workers.dev subdomain: claimed" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Summary
         run: |
