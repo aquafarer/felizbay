@@ -120,6 +120,20 @@ const formatUsd = (n: number) =>
                   {inc}
                 </span>
               ))}
+              {series.includedImage && (
+                <span class="ml-1 inline-flex items-center gap-2 px-2 py-1 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+                  <img
+                    src={series.includedImage}
+                    alt={`${series.name} standard factory inclusions`}
+                    class="h-10 w-auto rounded"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="text-[10px] font-medium uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                    Factory photo
+                  </span>
+                </span>
+              )}
             </div>
           </section>
         ))
@@ -141,6 +155,7 @@ const formatUsd = (n: number) =>
               <tr
                 class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
               >
+                <th class="px-4 py-3">Photo</th>
                 <th class="px-4 py-3">Accessory</th>
                 <th class="px-4 py-3">Specification</th>
                 <th class="px-4 py-3 text-right">FOB Qingdao</th>
@@ -150,6 +165,19 @@ const formatUsd = (n: number) =>
               {
                 poolAccessories.map((acc, i) => (
                   <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                    <td class="px-4 py-2.5 border-b border-gray-100 dark:border-slate-800">
+                      {acc.image ? (
+                        <img
+                          src={acc.image}
+                          alt={acc.name}
+                          class="h-14 w-auto rounded-md border border-gray-100 dark:border-slate-700"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <span class="text-gray-300 dark:text-slate-600">—</span>
+                      )}
+                    </td>
                     <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
                       {acc.name}
                     </td>

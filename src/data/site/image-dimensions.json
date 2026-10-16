@@ -15,6 +15,14 @@
     "w": 2002,
     "h": 1210
   },
+  "/images/pools/sand-filter-fs12c.png": {
+    "w": 424,
+    "h": 501
+  },
+  "/images/pools/round-pool-s2005.png": {
+    "w": 762,
+    "h": 425
+  },
   "/images/pools/round-grey-pool-cover-1.png": {
     "w": 1728,
     "h": 2304
@@ -35,6 +43,10 @@
     "w": 2048,
     "h": 2048
   },
+  "/images/pools/rectangular-pool-sr220815.png": {
+    "w": 711,
+    "h": 470
+  },
   "/images/pools/rectangular-pool-4.png": {
     "w": 2048,
     "h": 2048
@@ -50,5 +62,41 @@
   "/images/pools/rectangular-pool-1.jpg": {
     "w": 1000,
     "h": 1000
+  },
+  "/images/pools/rechargeable-air-pump.png": {
+    "w": 630,
+    "h": 460
+  },
+  "/images/pools/ladder-4-step-3.png": {
+    "w": 453,
+    "h": 327
+  },
+  "/images/pools/ladder-4-step-2.png": {
+    "w": 455,
+    "h": 296
+  },
+  "/images/pools/ladder-4-step-1.png": {
+    "w": 458,
+    "h": 265
+  },
+  "/images/pools/inflatable-stairs.png": {
+    "w": 101,
+    "h": 104
+  },
+  "/images/pools/hot-tub-square.png": {
+    "w": 305,
+    "h": 302
+  },
+  "/images/pools/hot-tub-round.png": {
+    "w": 125,
+    "h": 135
+  },
+  "/images/pools/accessories-set.png": {
+    "w": 823,
+    "h": 340
+  },
+  "/images/pools/accessories-kit.jpg": {
+    "w": 1080,
+    "h": 1920
   }
 }
