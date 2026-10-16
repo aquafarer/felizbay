@@ -92,6 +92,32 @@ jobs:
           cat /tmp/vec.log
           echo "- Vectorize index \`ai-index-v2\` (1024d cosine): ready" >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Claim workers.dev subdomain (required by cron schedules API)
+        run: |
+          # Accounts that never opened the Workers dashboard have no workers.dev
+          # subdomain; wrangler's cron-schedule upload fails with
+          # "You need a workers.dev subdomain in order to proceed".
+          # GET first, PUT to claim if missing. Idempotent.
+          status=$(curl -s -o /tmp/subdomain.json -w "%{http_code}" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain")
+          echo "GET subdomain -> $status"; cat /tmp/subdomain.json; echo
+          if [ "$status" = "200" ] && grep -q '"subdomain"' /tmp/subdomain.json && ! grep -q '"subdomain":null' /tmp/subdomain.json; then
+            echo "workers.dev subdomain already claimed"
+          else
+            code=$(curl -s -o /tmp/subdomain-put.json -w "%{http_code}" -X PUT \
+              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d '{"enabled": true, "preview_urls_enabled": true}' \
+              "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain")
+            echo "PUT subdomain -> $code"; cat /tmp/subdomain-put.json; echo
+            if [ "$code" != "200" ]; then
+              echo "::error::Could not claim workers.dev subdomain. Open Cloudflare Dashboard -> Workers & Pages once (this creates the subdomain), then re-run this workflow."
+              exit 1
+            fi
+          fi
+          echo "- workers.dev subdomain: claimed" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Summary
         run: |
           {
