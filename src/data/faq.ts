@@ -2,7 +2,15 @@ export interface FaqRecord {
   id: string;
   question: string;
   answer: string;
-  category: 'product' | 'shipping' | 'safety' | 'maintenance' | 'general' | 'ordering' | 'warranty';
+  category:
+    | 'product'
+    | 'shipping'
+    | 'safety'
+    | 'maintenance'
+    | 'general'
+    | 'ordering'
+    | 'warranty'
+    | 'sourcing';
   relatedProducts: string[];
   relatedGuides: string[];
 }
@@ -167,6 +175,69 @@ export const faqs: FaqRecord[] = [
     answer:
       'Felizbay is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
     category: 'ordering',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'sourcing-moq',
+    question: 'What is your MOQ for wholesale and OEM orders?',
+    answer:
+      'Samples start from a single piece, and our standard price list is based on 20 pcs per item — so a first order can be as small as 20 units per SKU. Mixed orders across multiple SKUs at 20 pcs each all qualify for list pricing.',
+    category: 'sourcing',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'sourcing-sample-policy',
+    question: 'Can I order a sample before committing to production?',
+    answer:
+      'Yes. A pre-production sample is manufactured and pressure-tested for your approval before any volume order is released. The sample stage verifies print quality, color accuracy, dimensions and packaging fit against your specification.',
+    category: 'sourcing',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'sourcing-incoterms',
+    question: 'What Incoterms do you quote?',
+    answer:
+      'Standard quotations are FOB Qingdao in USD — the price covers the goods, export packing and delivery onto your forwarder\u2019s vessel at Qingdao port. Ocean freight, insurance, duty and destination charges are arranged by the buyer.',
+    category: 'sourcing',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'sourcing-factory-location',
+    question: 'Where is the Felizbay factory located?',
+    answer:
+      'Our production facility is in Qingdao, China — one of the world\u2019s largest hubs for inflatable and water-sports manufacturing. Buyers are welcome to audit the factory in person or join a live video walkthrough of the production and pressure-test areas.',
+    category: 'sourcing',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'sourcing-custom-packaging',
+    question: 'Can you produce custom retail packaging?',
+    answer:
+      'Yes. We manufacture printed cartons, color boxes and mailer packaging sized for garden-retail shelves or e-commerce parcel networks, plus manuals and hang tags under your brand. Packed weight and carton dimensions are tuned to your logistics.',
+    category: 'sourcing',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'sourcing-material-compliance',
+    question: 'What material compliance documents do you provide?',
+    answer:
+      'Our pools are built from REACH-compliant, UV-resistant, double-layer drop-stitch PVC. Compliance declarations and material specification sheets are available to wholesale and OEM buyers on request.',
+    category: 'sourcing',
+    relatedProducts: [],
+    relatedGuides: [],
+  },
+  {
+    id: 'sourcing-third-party-inspection',
+    question: 'Can we appoint a third-party inspector?',
+    answer:
+      'Yes. Third-party inspection (SGS, Bureau Veritas, TÜV, QIMA and similar) is welcome on any order — during production, at the 24–48 hour pressure-drop test stage, or before container loading.',
+    category: 'sourcing',
     relatedProducts: [],
     relatedGuides: [],
   },

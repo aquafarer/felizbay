@@ -29,6 +29,10 @@ header:
           href: /manufacturing
         - text: Quality Control
           href: /quality-control
+        - text: Procurement Guides
+          href: /guides
+    - text: Guides
+      href: /guides
     - text: Company
       links:
         - text: About Felizbay
@@ -70,6 +74,8 @@ footer:
           href: /manufacturing
         - text: Quality Control
           href: /quality-control
+        - text: Procurement Guides
+          href: /guides
     - title: Company
       links:
         - text: About Felizbay

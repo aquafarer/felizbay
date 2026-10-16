@@ -18,6 +18,10 @@ const metadata = {
 };
 
 const categories = [...new Set(faqs.map((f) => f.category))];
+
+const categoryLabels: Record<string, string> = {
+  sourcing: 'Sourcing & OEM (B2B)',
+};
 ---
 
 <Layout metadata={metadata}>
@@ -34,7 +38,9 @@ const categories = [...new Set(faqs.map((f) => f.category))];
   {
     categories.map((cat) => (
       <section class="max-w-3xl mx-auto pb-16 px-6">
-        <h2 class="text-xl font-semibold text-gray-900 mb-6">{t('faq.category.' + cat) || cat}</h2>
+        <h2 class="text-xl font-semibold text-gray-900 mb-6">
+          {t('faq.category.' + cat) || categoryLabels[cat] || cat}
+        </h2>
         <div class="space-y-4">
           {faqs
             .filter((f) => f.category === cat)

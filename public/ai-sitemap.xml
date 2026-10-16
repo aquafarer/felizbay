@@ -76,6 +76,9 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/guides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/contact/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/contact/"/>
