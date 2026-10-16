@@ -513,7 +513,7 @@ async function retrieve(
   minScore: number
 ): Promise<RetrievedChunk[]> {
   const vector = await embedOne(query, env);
-  const result = await env.VECTORIZE.query(vector, { topK, returnVectors: false });
+  const result = await env.VECTORIZE.query(vector, { topK, returnVectors: false, returnMetadata: 'all' });
   const matches = (result?.matches || []).filter(
     (m): m is VectorizeMatch & { metadata: ChunkMetadata } =>
       typeof m.score === 'number' && m.score >= minScore && m.metadata !== undefined
@@ -728,7 +728,7 @@ async function handleSearch(request: Request, env: Env, ctx: ExecutionContext): 
   const query = typeof body.query === 'string' ? body.query.trim() : '';
   if (!query) return json({ error: 'Query required' }, 400);
   const vector = await embedOne(query, env);
-  const result = await env.VECTORIZE.query(vector, { topK: SEARCH_K, returnVectors: false });
+  const result = await env.VECTORIZE.query(vector, { topK: SEARCH_K, returnVectors: false, returnMetadata: 'all' });
   const results = (result?.matches || []).map((m) => ({
     score: m.score,
     title: m.metadata?.title || '',
