@@ -5,3 +5,7 @@ visuals:
     image: /images/pools/round-blue-pool-1.png
   - id: round-grey-drop-stitch-pool
     image: /images/pools/round-grey-pool-1.png
+  - id: hot-tub-square-rect
+    image: /images/pools/rectangular-pool-2.png
+  - id: hot-tub-round
+    image: /images/pools/round-grey-pool-cover-1.png
