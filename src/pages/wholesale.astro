@@ -1,0 +1,251 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Wholesale Inflatable Swimming Pools — Factory Prices | ${SITE.name}`,
+    description: `Wholesale drop-stitch inflatable pools direct from the Felizbay factory. 48 SKUs from $137.96, FOB Qingdao price list, efficient 20GP/40HQ container loading. Request wholesale pricing.`,
+    canonical: getCanonical('/wholesale'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Wholesale Program' }];
+
+const seriesRows = [
+  {
+    name: 'Classic Round Pool',
+    sizes: 'Ø 2.0 m – 10.0 m',
+    wall: '10 / 15 cm',
+    price: '$137.96 – $1,600.58',
+    href: '/products/specs#round',
+  },
+  {
+    name: 'Rectangular / Square Pool',
+    sizes: '2 × 2 × 0.8 m – 6 × 5 × 1.5 m',
+    wall: '15 / 20 / 50 cm',
+    price: '$285.70 – $1,753.74',
+    href: '/products/specs#rect-square',
+  },
+  {
+    name: 'Square / Rectangular SPA Tub',
+    sizes: '1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m',
+    wall: '15 / 20 cm',
+    price: '$381.36 – $667.06',
+    href: '/products/specs#hot-tub-square-rect',
+  },
+  {
+    name: 'Round SPA Tub',
+    sizes: 'Ø 1.8 / 2.0 / 2.3 m',
+    wall: '8 / 10 / 15 cm',
+    price: '$390.29 – $487.22',
+    href: '/products/specs#hot-tub-round',
+  },
+];
+
+const benefits = [
+  {
+    icon: 'tabler:ship',
+    title: 'Container-Efficient Packing',
+    description:
+      'A deflated drop-stitch pool packs at just 5–10% of the volume of an equivalent acrylic or FRP pool — meaning more units per 20GP/40HQ container and lower landed freight cost per pool.',
+  },
+  {
+    icon: 'tabler:trending-up',
+    title: 'Mid-to-High-End Retail Margins',
+    description:
+      'Rigid 4–5 PSI walls and a premium finish position these pools clearly above thin-gauge vinyl inflatables, selling into patio, vacation-rental, glamping and wellness channels with strong margins.',
+  },
+  {
+    icon: 'tabler:shopping-cart',
+    title: 'Accessory Cross-Selling',
+    description:
+      'Boarding stairs, safety ladders, thermal covers, rechargeable pumps and FS-12C sand filter pumps turn a single pool order into a higher-value turnkey program.',
+  },
+  {
+    icon: 'tabler:plug',
+    title: 'Low After-Sales Friction',
+    description:
+      'No excavation, foundation or frame assembly — end users unbox, inflate in 5–15 minutes and fill. That means fewer installation complaints and lower support cost for your dealers.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Wholesale Program
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Wholesale Inflatable Swimming Pools at Factory Prices
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Buy drop-stitch inflatable pools direct from the Felizbay factory — 48 SKUs across four collections, transparent
+        FOB Qingdao pricing, and container-efficient packing for garden retail, pool shops and online stores.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Get Wholesale Pricing
+        </a>
+        <a
+          href="/products/specs"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:table" class="w-4 h-4" /> Full FOB Price List
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Wholesale Range & FOB Prices
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Prices are FOB Qingdao, USD, based on 20 pcs per item. Sample orders start from a single piece; mixed-container
+        and multi-item orders are welcome and quoted itemized.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700 mb-4">
+        <table class="w-full text-sm">
+          <thead>
+            <tr
+              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
+            >
+              <th class="px-4 py-3">Collection</th>
+              <th class="px-4 py-3">Size Range</th>
+              <th class="px-4 py-3">Wall Options</th>
+              <th class="px-4 py-3 text-right">FOB Price Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              seriesRows.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                    <a href={row.href} class="hover:text-primary dark:hover:text-sky-400">
+                      {row.name}
+                    </a>
+                  </td>
+                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                    {row.sizes}
+                  </td>
+                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                    {row.wall}
+                  </td>
+                  <td class="px-4 py-2.5 text-right font-semibold text-gray-900 dark:text-slate-100 border-b border-gray-100 dark:border-slate-800">
+                    {row.price}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 dark:text-slate-400">
+        Every pool ships with a 1000W electric air pump and repair kit; rectangular models add a full-coverage dustproof
+        and waterproof cover. Hot tub models include built-in seats and a 5 mm insulated thermal bottom.
+      </p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-5">
+        Why Retailers Choose Drop-Stitch Pools
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          benefits.map((b) => (
+            <div class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                <Icon name={b.icon} class="w-5 h-5" />
+              </span>
+              <div>
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{b.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{b.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14 p-6 rounded-2xl border border-gray-200 dark:border-slate-700">
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-3">How to Order</h2>
+      <ol class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
+        <li>
+          <strong class="text-gray-900 dark:text-slate-200">1.</strong> Browse the <a
+            href="/products/specs"
+            class="text-primary dark:text-sky-400 hover:underline">specification & FOB price list</a
+          > and shortlist your items.
+        </li>
+        <li>
+          <strong class="text-gray-900 dark:text-slate-200">2.</strong> Request an itemized quotation — single items, mixed
+          containers and annual programs are all welcome.
+        </li>
+        <li>
+          <strong class="text-gray-900 dark:text-slate-200">3.</strong> Order samples from 1 piece to check quality in your
+          market before committing to volume.
+        </li>
+        <li>
+          <strong class="text-gray-900 dark:text-slate-200">4.</strong> Approve the proforma invoice; production runs with
+          inline QC and a 24–48 hour pressure test on every unit.
+        </li>
+        <li>
+          <strong class="text-gray-900 dark:text-slate-200">5.</strong> Goods ship FOB Qingdao (or CFR/CIF/DDP on request)
+          with full export documentation.
+        </li>
+      </ol>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/oem-odm"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >OEM / ODM</a
+        >
+        <a
+          href="/private-label"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Private Label</a
+        >
+        <a
+          href="/commercial-pools"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Commercial Pools</a
+        >
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="wholesale" aria-hidden="true">
+    <p>
+      Felizbay wholesale program: buy drop-stitch inflatable swimming pools at factory prices, FOB Qingdao, USD, price
+      basis 20 pcs per item, samples from 1 piece. 48 SKUs in four collections — classic round pools Ø 2–10 m with 10/15
+      cm walls ($137.96–$1,600.58), rectangular/square pools up to 6 × 5 × 1.5 m with 15/20/50 cm walls
+      ($285.70–$1,753.74), square/rectangular SPA tubs ($381.36–$667.06) and round SPA tubs ($390.29–$487.22) with
+      built-in seats and 5 mm insulated bottoms. Deflated pools pack at 5–10% of rigid acrylic/FRP pool volume for
+      efficient 20GP/40HQ container loading. Standard inclusions: 1000W electric pump, repair kit, dustproof cover
+      (rectangular). Accessories available: inflatable boarding stairs, 4-step safety ladder, rechargeable pump, FS-12C
+      sand filter pump. Mixed containers and annual programs welcome; every unit passes a 24–48 hour pressure-drop test
+      before shipping.
+    </p>
+  </section>
+</Layout>

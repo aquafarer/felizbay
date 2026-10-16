@@ -1,0 +1,141 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { POOL_PRODUCTION_STEPS, POOL_PRESSURE_SPECS } from '~/data/pool-catalog';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Drop Stitch Pool Manufacturing Process | ${SITE.name} Factory`,
+    description: `Inside the Felizbay Qingdao factory: CNC cutting, valve heat-sealing, panel welding with reinforced rails, finishing and 24–48 hour pressure testing — five controlled production steps.`,
+    canonical: getCanonical('/manufacturing'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Qingdao Factory</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        How Felizbay Manufactures Drop-Stitch Pools
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Every Felizbay pool goes through the same five-step factory workflow — from CNC-cut drop-stitch fabric to a
+        24–48 hour pressure-drop test before packing. This is the process behind 48 SKUs of rigid inflatable pools.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Factory Quote
+        </a>
+        <a
+          href="/quality-control"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:shield-check" class="w-4 h-4" /> Quality Control & Testing
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        The Five Production Steps
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        High-density double-layer drop-stitch fabric — the same premium material used for our SUP boards — is
+        transformed into a single-chamber, self-supporting pool through five controlled steps.
+      </p>
+      <ol class="space-y-3">
+        {
+          POOL_PRODUCTION_STEPS.map((step, i) => (
+            <li class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                {i + 1}
+              </span>
+              <div>
+                <h3 class="text-base font-bold text-gray-900 dark:text-slate-100 mb-1">{step.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step.description}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Pressure & Safety Specifications
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        The manufacturing target on every unit: rigid, leak-proof walls at a safe, repeatable working pressure with
+        automatic over-pressure protection.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {
+          POOL_PRESSURE_SPECS.map((p) => (
+            <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                {p.label}
+              </div>
+              <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control</a
+        >
+        <a
+          href="/oem-odm"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >OEM / ODM</a
+        >
+        <a
+          href="/wholesale"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Wholesale Program</a
+        >
+        <a
+          href="/products/specs#production"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Price List & Process</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="manufacturing" aria-hidden="true">
+    <p>
+      Felizbay drop-stitch pool manufacturing process at the Qingdao factory, five controlled steps: (1) material
+      preparation and CNC cutting of high-density double-layer drop-stitch fabric — the same material as SUP boards —
+      for floors, walls and reinforcement patches; (2) valve and fitting installation — 38 mm standard filter-pump
+      ports, water shut-off valves, over-inflation safety valves and drain valves heat-sealed leak-proof; (3) panel
+      assembly and rail bonding into a single air chamber with double/triple-layer reinforced PVC rail bands; (4)
+      accessory integration and finishing with full seam, valve and dimension inspection; (5) pressure and leak testing
+      — every pool inflated to rated pressure and held for a 24–48 hour pressure-drop test before deflating, cleaning
+      and packaging. Pressure specifications: 4–5 PSI recommended operating, 6 PSI factory QC test, 8 PSI maximum
+      tolerance, pressure-relief valve auto-release above 6 PSI. 48 SKUs across round, rectangular and hot tub
+      collections.
+    </p>
+  </section>
+</Layout>

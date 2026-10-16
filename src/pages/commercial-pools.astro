@@ -1,0 +1,187 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Commercial Inflatable Pools for Hotels, Resorts & Glamping | ${SITE.name}`,
+    description: `Commercial drop-stitch pools up to 10 m diameter and 6 × 5 m, portable hot tubs with insulated bottoms, 50 cm reinforced walls. Fast deployment for hotels, resorts, glamping and events.`,
+    canonical: getCanonical('/commercial-pools'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Commercial Pools' }];
+
+const useCases = [
+  {
+    icon: 'tabler:building',
+    title: 'Hotels & Resorts',
+    description:
+      'Add a seasonal swim amenity without construction. Round pools up to Ø 10 m and rectangular pools up to 6 × 5 × 1.5 m deploy on a lawn, terrace or rooftop in under a day, then pack away in the off-season.',
+  },
+  {
+    icon: 'tabler:tent',
+    title: 'Glamping & Vacation Rentals',
+    description:
+      'A rigid drop-stitch pool is a proven booking-booster for glamping sites and Airbnb-style properties — a real swimming experience with no permits, no excavation and no year-round maintenance.',
+  },
+  {
+    icon: 'tabler:ripple',
+    title: 'Wellness & SPA',
+    description:
+      'Portable hot tubs with built-in seats and 5 mm insulated thermal bottoms, compatible with external heating units — hydrotherapy offerings for balconies, private courtyards and spa terraces.',
+  },
+  {
+    icon: 'tabler:flag',
+    title: 'Events & Promotions',
+    description:
+      'Ballast-free, frame-free pools that inflate in 5–15 minutes with a 1000W pump — ideal for brand activations, exhibitions and seasonal event installations that must appear and disappear fast.',
+  },
+];
+
+const commercialSpecs = [
+  { label: 'Largest round pool', value: 'Ø 10 × 1.2 m (S10012)' },
+  { label: 'Largest rectangular pool', value: '6 × 5 × 1.5 m (SR561550)' },
+  { label: 'Reinforced wall options', value: '15 / 20 / 50 cm' },
+  { label: 'Operating pressure', value: '4–5 PSI rigid walls' },
+  { label: 'Setup time', value: '5–15 minutes, one person' },
+  { label: 'QC pressure test', value: '24–48 hour pressure-drop test' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Commercial Solutions
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Commercial Inflatable Pools for Hospitality & Events
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Hotel-grade drop-stitch pools up to 10 meters across, with reinforced 50 cm walls that hold tens of tons of
+        water without any metal frame — deployable in hours, storable in winter, and rated for full-season commercial
+        use.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Discuss a Commercial Project
+        </a>
+        <a
+          href="/products/specs"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:table" class="w-4 h-4" /> Sizes & FOB Prices
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-5">
+        Where Commercial Pools Perform
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          useCases.map((u) => (
+            <div class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                <Icon name={u.icon} class="w-5 h-5" />
+              </span>
+              <div>
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{u.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{u.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Commercial-Grade Specifications
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Large-format models use 50 cm reinforced extra-thick side walls that support tens of tons of lateral water
+        pressure without external frames — and the rim is strong enough for guests to sit on.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        {
+          commercialSpecs.map((s) => (
+            <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                {s.label}
+              </div>
+              <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{s.value}</div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14 p-6 rounded-2xl border border-gray-200 dark:border-slate-700">
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-3">Complete a Commercial Package</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400 mb-3">
+        Finish the installation with commercial accessories: inflatable boarding stairs (1.2 m / 1.5 m), a 4-step safety
+        ladder, the FS-12C sand filter pump (370 W) for water circulation, and rechargeable pumps for servicing. Every
+        commercial quote is itemized — pool, accessories, covers and spare repair kits — so your operations team knows
+        exactly what lands on site.
+      </p>
+      <p class="text-sm text-gray-600 dark:text-slate-400">
+        Off-season, the entire installation drains, deflates and rolls into storage at 5–10% of an equivalent rigid
+        pool's volume — no winterizing, no permanent footprint, no permitting in most jurisdictions.
+      </p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/wholesale"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Wholesale Program</a
+        >
+        <a
+          href="/oem-odm"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >OEM / ODM</a
+        >
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control</a
+        >
+        <a
+          href="/products"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Pool Catalog</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="commercial-pools" aria-hidden="true">
+    <p>
+      Felizbay commercial inflatable pools for hotels, resorts, glamping sites, vacation rentals, wellness spas and
+      events. Large-format drop-stitch pools: round up to Ø 10 × 1.2 m (S10012), rectangular up to 6 × 5 × 1.5 m
+      (SR561550) with 50 cm reinforced walls that support tens of tons of lateral water pressure without metal frames;
+      sit-on rims. Portable hot tubs with built-in seats and 5 mm insulated thermal bottoms compatible with external
+      heating units. 4–5 PSI rigid operating pressure, 5–15 minute single-person setup with 1000W pump, 24–48 hour
+      factory pressure-drop test. Commercial accessories: inflatable boarding stairs 1.2/1.5 m, 4-step safety ladder,
+      FS-12C 370 W sand filter pump, rechargeable pumps. Deflated storage at 5–10% of rigid pool volume — no winterizing
+      or permanent footprint.
+    </p>
+  </section>
+</Layout>

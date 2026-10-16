@@ -15,6 +15,20 @@ header:
           href: /products/hot-tub-square-rect
         - text: Pool Specs & FOB Price List
           href: /products/specs
+    - text: B2B & Manufacturing
+      links:
+        - text: OEM / ODM Manufacturing
+          href: /oem-odm
+        - text: Wholesale Program
+          href: /wholesale
+        - text: Private Label Pools
+          href: /private-label
+        - text: Commercial Pools
+          href: /commercial-pools
+        - text: Manufacturing Process
+          href: /manufacturing
+        - text: Quality Control
+          href: /quality-control
     - text: Company
       links:
         - text: About Felizbay
@@ -42,6 +56,20 @@ footer:
           href: /products/hot-tub-square-rect
         - text: Pool Specs & FOB Price List
           href: /products/specs
+    - title: B2B & Manufacturing
+      links:
+        - text: OEM / ODM Manufacturing
+          href: /oem-odm
+        - text: Wholesale Program
+          href: /wholesale
+        - text: Private Label Pools
+          href: /private-label
+        - text: Commercial Pools
+          href: /commercial-pools
+        - text: Manufacturing Process
+          href: /manufacturing
+        - text: Quality Control
+          href: /quality-control
     - title: Company
       links:
         - text: About Felizbay

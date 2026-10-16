@@ -1,0 +1,182 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { POOL_PRESSURE_SPECS } from '~/data/pool-catalog';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Inflatable Pool Quality Control & Testing | ${SITE.name}`,
+    description: `Felizbay quality control: 24–48 hour pressure-drop tests, seam and valve inspection, relief-valve verification and packing checks on every inflatable pool before shipping.`,
+    canonical: getCanonical('/quality-control'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Quality Control' }];
+
+const qcChecks = [
+  {
+    icon: 'tabler:gauge',
+    title: '24–48 Hour Pressure-Drop Test',
+    description:
+      'Every completed pool is inflated to its rated operating pressure and held for 24–48 hours. Any measurable pressure drop, deformation or leak means the unit does not ship.',
+  },
+  {
+    icon: 'tabler:circle-dot',
+    title: 'Valve & Seal Verification',
+    description:
+      'Filter-pump ports, shut-off valves, drain valves and over-inflation safety valves are individually checked for absolute air and water tightness after heat-sealing.',
+  },
+  {
+    icon: 'tabler:search',
+    title: 'Full Seam & Rail Inspection',
+    description:
+      'Welded seams, reinforced rail bands and corners are visually inspected on every unit for continuity, flatness and spec adherence — no skipped stitches, no pinholes.',
+  },
+  {
+    icon: 'tabler:ruler-measure',
+    title: 'Dimensional Control',
+    description:
+      'Finished height, diameter and squareness are checked against engineering drawings so pools match the published dimensions and packed sizes on the price list.',
+  },
+  {
+    icon: 'tabler:shield',
+    title: 'Material Compliance',
+    description:
+      'UV-resistant, REACH-compliant double-layer drop-stitch PVC with proven full-season outdoor service life — the same fabric family as our SUP boards.',
+  },
+  {
+    icon: 'tabler:package-export',
+    title: 'Packing & Loading Check',
+    description:
+      'Inclusions (1000W pump, repair kit, covers where applicable) are verified against the packing list before carton sealing and container loading.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Quality Control</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Quality Control & Testing for Every Pool
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        No Felizbay pool leaves the factory without passing a 24–48 hour pressure-drop test and a full inspection of
+        seams, valves and dimensions. This is the QC system behind our wholesale and OEM/ODM programs.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Quote
+        </a>
+        <a
+          href="/manufacturing"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:building-factory" class="w-4 h-4" /> Manufacturing Process
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Six Checks Before Packing
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Quality at Felizbay is not a final random spot-check — it is a sequence of checks woven through production,
+        ending with a hold-time test that verifies the finished product as a whole.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          qcChecks.map((c) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                <Icon name={c.icon} class="w-5 h-5" />
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{c.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{c.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">Pressure Test Standards</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Published pressure limits are enforced on 100% of production — not on a sample basis.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {
+          POOL_PRESSURE_SPECS.map((p) => (
+            <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                {p.label}
+              </div>
+              <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14 p-6 rounded-2xl border border-gray-200 dark:border-slate-700">
+      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-3">After-Sales Commitment</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-400">
+        Every pool ships with a repair kit for field fixes, and spare parts — valves, patches, pumps and covers — remain
+        available through our support team at info@felizbay.com for the life of the product. Wholesale and OEM partners
+        receive priority spare-part allocation with their orders.
+      </p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/manufacturing"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Manufacturing Process</a
+        >
+        <a
+          href="/wholesale"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Wholesale Program</a
+        >
+        <a
+          href="/oem-odm"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >OEM / ODM</a
+        >
+        <a
+          href="/products/specs#pressure"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Full Specifications</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="quality-control" aria-hidden="true">
+    <p>
+      Felizbay inflatable pool quality control: 100% of production units pass a 24–48 hour pressure-drop test at rated
+      operating pressure before shipping; individual valve and seal verification (filter-pump ports, shut-off valves,
+      drain valves, over-inflation safety valves); full seam and reinforced rail inspection; dimensional control against
+      engineering drawings; REACH-compliant UV-resistant double-layer drop-stitch PVC; packing and loading checks
+      against the inclusion list (1000W pump, repair kit, covers). Pressure standards: 4–5 PSI recommended operating, 6
+      PSI factory QC test, 8 PSI maximum tolerance, pressure-relief valve auto-release above 6 PSI. After-sales: repair
+      kit included, spare parts (valves, patches, pumps, covers) available via info@felizbay.com, priority spare-part
+      allocation for wholesale and OEM partners.
+    </p>
+  </section>
+</Layout>

@@ -367,6 +367,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/commercial-pools/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/commercial-pools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/commercial-pools/"/>
+    <x:entity>commercial-pools</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/contact/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/contact/"/>
@@ -3182,6 +3190,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/manufacturing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/manufacturing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/manufacturing/"/>
+    <x:entity>manufacturing</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/nl/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/"/>
@@ -3802,6 +3818,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/oem-odm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/oem-odm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/oem-odm/"/>
+    <x:entity>oem-odm</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/pl/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/"/>
@@ -4132,6 +4156,14 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>privacy</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/private-label/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/private-label/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/private-label/"/>
+    <x:entity>private-label</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -4602,6 +4634,14 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/terms/"/>
     <x:entity>pt/terms</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/quality-control/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/quality-control/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/quality-control/"/>
+    <x:entity>quality-control</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -5230,6 +5270,14 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/terms/"/>
     <x:entity>sv/terms</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/wholesale/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/wholesale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/wholesale/"/>
+    <x:entity>wholesale</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>

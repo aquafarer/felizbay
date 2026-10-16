@@ -1,0 +1,224 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Private Label Inflatable Pools — Your Brand, Our Factory | ${SITE.name}`,
+    description: `Private label inflatable pool manufacturing: your logo, colors, packaging and covers on Felizbay drop-stitch pools. Low minimums, retail-ready packaging, NDA-protected.`,
+    canonical: getCanonical('/private-label'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Private Label' }];
+
+const brandOptions = [
+  {
+    icon: 'tabler:brush',
+    title: 'Logo on the Product',
+    description:
+      'Your logo silk-screen printed or heat-transferred on the drop-stitch walls, floor or fitted cover — positioned and sized to your brand guidelines.',
+  },
+  {
+    icon: 'tabler:palette',
+    title: 'Brand Colorways',
+    description:
+      'Choose wall, rail-band, floor and cover colors from your palette. Premium grey and classic blue are our best-proven retail sellers.',
+  },
+  {
+    icon: 'tabler:package',
+    title: 'Custom Packaging',
+    description:
+      'Full-color printed cartons, retail color boxes and hang tags with your brand and barcode. Packaging tuned for garden retail shelves or e-commerce parcels.',
+  },
+  {
+    icon: 'tabler:book',
+    title: 'Branded Documentation',
+    description:
+      'Custom user manuals, warranty cards and QR-coded care guides that carry your brand, not ours. Your customers see only your company.',
+  },
+];
+
+const steps = [
+  {
+    title: 'Choose a Base Model',
+    description:
+      'Start from one of our 48 standard SKUs — round, rectangular or hot tub — or request a fully custom shape.',
+  },
+  {
+    title: 'Apply Your Brand',
+    description:
+      'Send your logo files and color codes; we return a pre-production sample with your branding applied for approval.',
+  },
+  {
+    title: 'Launch Your Line',
+    description:
+      'We produce, pressure-test and pack under your label, shipping complete private-label pool lines FOB Qingdao.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Private Label Manufacturing
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Private Label Inflatable Pools for Your Brand
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Put your brand on factory-direct drop-stitch pools — your logo, your colors, your packaging. Felizbay
+        manufactures the product; you own the customer relationship and the margin.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Start a Private Label Project
+        </a>
+        <a
+          href="/oem-odm"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:tool" class="w-4 h-4" /> Full OEM/ODM Capabilities
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">What We Brand for You</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        Private label goes beyond a printed logo. Every customer touchpoint — product, packaging and paperwork — carries
+        your brand identity exclusively.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          brandOptions.map((b) => (
+            <div class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                <Icon name={b.icon} class="w-5 h-5" />
+              </span>
+              <div>
+                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{b.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{b.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        Three Steps to Your Own Pool Line
+      </h2>
+      <div class="mt-5 grid md:grid-cols-3 gap-4">
+        {
+          steps.map((s, i) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="mb-3 flex w-8 h-8 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                {i + 1}
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{s.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{s.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14 grid md:grid-cols-2 gap-4">
+      <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Commercial Terms</h2>
+        <ul class="space-y-1.5 text-sm text-gray-600 dark:text-slate-400">
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Samples from
+            1 piece; standard price basis 20 pcs per item, FOB Qingdao
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Branding tooling
+            quoted per project — no hidden license fees
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> NDA signed before
+            any artwork exchange; your designs stay exclusive
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Reorder pricing
+            locked for the production season
+          </li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Product Quality Baseline</h2>
+        <ul class="space-y-1.5 text-sm text-gray-600 dark:text-slate-400">
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Rigid drop-stitch
+            walls rated 4–5 PSI operating pressure
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Pressure-relief
+            valve auto-release above 6 PSI
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> 24–48 hour pressure-drop
+            leak test on every unit
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> REACH-compliant,
+            UV-resistant double-layer PVC fabric
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/oem-odm"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >OEM / ODM</a
+        >
+        <a
+          href="/wholesale"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Wholesale Program</a
+        >
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control</a
+        >
+        <a
+          href="/products/specs"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >FOB Price List</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="private-label" aria-hidden="true">
+    <p>
+      Felizbay private label inflatable pool manufacturing: your logo, brand colorways, custom packaging (printed
+      cartons, retail color boxes, hang tags) and branded documentation on factory-direct drop-stitch pools. Three-step
+      process — choose a base model from 48 standard SKUs or custom shapes, apply your brand with a pre-production
+      sample for approval, then launch your private-label pool line. Commercial terms: samples from 1 piece, standard
+      price basis 20 pcs per item FOB Qingdao, NDA-protected designs, locked reorder pricing. Quality baseline: 4–5 PSI
+      rigid drop-stitch walls, pressure-relief valve above 6 PSI, 24–48 hour pressure-drop leak test per unit,
+      REACH-compliant UV-resistant PVC.
+    </p>
+  </section>
+</Layout>

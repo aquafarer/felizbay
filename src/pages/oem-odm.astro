@@ -1,0 +1,252 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Inflatable Pool OEM/ODM Manufacturer | ${SITE.name}`,
+    description: `OEM/ODM inflatable pool manufacturing by Felizbay — custom sizes, colors, logo printing, covers and retail packaging. 48 standard SKUs plus full custom engineering. Request a quote.`,
+    canonical: getCanonical('/oem-odm'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'OEM / ODM Manufacturing' }];
+
+const capabilities = [
+  {
+    icon: 'tabler:ruler-2',
+    title: 'Custom Sizes & Shapes',
+    description:
+      'Round pools from Ø 2 m to Ø 10 m, rectangular pools from 2 × 2 × 0.8 m to 6 × 5 × 1.5 m in our standard program — and fully engineered custom dimensions beyond it. Wall thickness options of 10, 15, 20 and 50 cm.',
+  },
+  {
+    icon: 'tabler:palette',
+    title: 'Custom Colors & Materials',
+    description:
+      'Match your brand palette across the drop-stitch walls, rail bands and floor. UV-resistant, REACH-compliant double-layer PVC fabric in custom colorways.',
+  },
+  {
+    icon: 'tabler:brand-figma',
+    title: 'Logo Printing & Branding',
+    description:
+      'Silk-screen or heat-transfer logo printing on walls, floors and covers. Optional Oxford-fabric fitted covers and custom hang tags for retail shelves.',
+  },
+  {
+    icon: 'tabler:package',
+    title: 'Retail-Ready Packaging',
+    description:
+      'Custom-printed cartons, color boxes and mailer packaging sized for e-commerce and garden-retail channels. Packed weight and carton dimensions tuned to your logistics.',
+  },
+  {
+    icon: 'tabler:tool',
+    title: 'Hardware & Valve Options',
+    description:
+      'Standard 38 mm filter-pump ports, water shut-off valves, over-inflation safety valves and drain valves — repositioned or resized to your specification.',
+  },
+  {
+    icon: 'tabler:shield-lock',
+    title: 'Design Confidentiality',
+    description:
+      'Your drawings, molds and colorways stay yours. We never sell a customer-exclusive design to another buyer, and NDA agreements are welcome.',
+  },
+];
+
+const process = [
+  {
+    step: '1',
+    title: 'Send Your RFQ',
+    description:
+      'Share drawings, reference photos or target specs — or pick a starting point from our 48-SKU standard catalog.',
+  },
+  {
+    step: '2',
+    title: 'Engineering & Quote',
+    description:
+      'We confirm dimensions, materials, wall thickness and branding, then quote FOB Qingdao with MOQ and lead time.',
+  },
+  {
+    step: '3',
+    title: 'Sample Approval',
+    description:
+      'A pre-production sample is manufactured and pressure-tested for your approval before the order is released.',
+  },
+  {
+    step: '4',
+    title: 'Mass Production',
+    description: 'CNC cutting, heat-welding and assembly at our Qingdao factory with inline seam and valve inspection.',
+  },
+  {
+    step: '5',
+    title: 'QC & Shipping',
+    description: 'Every unit passes a 24–48 hour pressure-drop test before deflating, cleaning and container loading.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        OEM / ODM Manufacturing
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Custom Inflatable Pool Manufacturing for Your Brand
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Felizbay manufactures drop-stitch inflatable pools to your specification — custom sizes, colors, logo printing,
+        covers and retail packaging, produced at our Qingdao factory and shipped worldwide.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request an OEM Quote
+        </a>
+        <a
+          href="/products/specs"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:table" class="w-4 h-4" /> Standard Catalog & Prices
+        </a>
+      </div>
+    </header>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-14">
+      {
+        capabilities.map((c) => (
+          <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+              <Icon name={c.icon} class="w-5 h-5" />
+            </span>
+            <h2 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{c.title}</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{c.description}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
+        How an OEM/ODM Project Runs
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
+        From first drawing to container loading, a typical custom project follows five controlled steps. Sample orders
+        start from a single piece; standard pricing is based on 20 pcs per item, FOB Qingdao.
+      </p>
+      <ol class="grid md:grid-cols-5 gap-3">
+        {
+          process.map((p) => (
+            <li class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <span class="mb-2 flex w-8 h-8 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+                {p.step}
+              </span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{p.title}</h3>
+              <p class="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{p.description}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="mb-14 grid md:grid-cols-2 gap-4">
+      <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">What You Can Customize</h2>
+        <ul class="space-y-1.5 text-sm text-gray-600 dark:text-slate-400">
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Pool dimensions,
+            wall thickness (10/15/20/50 cm) and height
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Fabric colorways,
+            rail-band colors and floor patterns
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Logo printing,
+            fitted covers, built-in seats, 5 mm insulated bottoms
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Valve placement,
+            38 mm filter ports, drain and safety valves
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Carton artwork,
+            color boxes, manuals and hang tags
+          </li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Engineering Baseline</h2>
+        <ul class="space-y-1.5 text-sm text-gray-600 dark:text-slate-400">
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> 4–5 PSI recommended
+            operating pressure, rock-hard rigid walls
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> Pressure-relief
+            valve auto-releases above 6 PSI; 8 PSI maximum tolerance
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> 24–48 hour pressure-drop
+            leak test on every production unit
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> REACH-compliant,
+            UV-resistant double-layer drop-stitch PVC
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-primary dark:text-sky-400 flex-shrink-0" /> 1000W electric
+            air pump and repair kit included as standard
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/private-label"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Private Label Pools</a
+        >
+        <a
+          href="/wholesale"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Wholesale Program</a
+        >
+        <a
+          href="/manufacturing"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Manufacturing Process</a
+        >
+        <a
+          href="/quality-control"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Quality Control</a
+        >
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="oem-odm" aria-hidden="true">
+    <p>
+      Felizbay offers OEM/ODM inflatable pool manufacturing at its Qingdao factory: custom sizes (round Ø 2–10 m,
+      rectangular up to 6 × 5 × 1.5 m and beyond), wall thickness options of 10/15/20/50 cm, custom colors, logo
+      printing, Oxford-fabric covers, built-in seats, 5 mm insulated bottoms, custom valve and 38 mm filter-port
+      placement, and retail-ready packaging. Five-step project flow: RFQ, engineering and FOB Qingdao quote, sample
+      approval, mass production, and QC with a 24–48 hour pressure-drop test. Engineering baseline: 4–5 PSI operating
+      pressure, pressure-relief valve above 6 PSI, 8 PSI maximum, REACH-compliant UV-resistant drop-stitch PVC. Samples
+      from 1 piece; standard price basis 20 pcs per item. Design confidentiality guaranteed; NDA welcome.
+    </p>
+  </section>
+</Layout>

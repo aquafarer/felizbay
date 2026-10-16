@@ -1,18 +1,18 @@
 hero:
-  tagline: 'Inflatable Swimming Pool Specialist'
-  title: 'Inflatable Swimming Pools<br />for Every Backyard'
+  tagline: 'Drop Stitch Inflatable Pool Manufacturer'
+  title: 'Drop Stitch Inflatable Pool Manufacturer<br />for OEM & Wholesale'
   subtitle: |
-    Felizbay designs and manufactures premium drop stitch inflatable swimming pools.<br />
-    Fast to set up, rigid when inflated, and easy to store away at season's end.<br />
-    OEM/ODM manufacturing available for brands and distributors.
+    Felizbay manufactures high-pressure drop stitch inflatable swimming pools at our Qingdao factory.<br />
+    48 SKUs across 4 collections — round, rectangular and portable hot tubs, rated 4-5 PSI.<br />
+    OEM/ODM, wholesale and private label. MOQ from 1 piece for samples. FOB price list on request.
   actions:
     - variant: primary
-      text: View Our Pools
+      text: Request a Quote
+      href: /request-quotation
+      icon: tabler:file-text
+    - text: View Pool Catalog
       href: /products
       icon: tabler:pool
-    - text: Contact Us
-      href: /contact
-      icon: tabler:mail
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay rectangular drop stitch inflatable swimming pool
@@ -197,13 +197,13 @@ faqs:
 
 cta:
   title: |
-    Ready for a summer<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">full of swimming?</span>
-  subtitle: 'Get in touch for pricing, wholesale, and OEM/ODM manufacturing options.'
+    Ready to source pools<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">direct from the factory?</span>
+  subtitle: 'Get the FOB price list, OEM/ODM options and sample terms for your brand, store or project.'
   actions:
     - variant: primary
-      text: Contact Felizbay
-      href: /contact
-      icon: tabler:mail
-    - text: View Our Pools
-      href: /products
-      icon: tabler:pool
+      text: Request a Quote
+      href: /request-quotation
+      icon: tabler:file-text
+    - text: Pool Specs & FOB Price List
+      href: /products/specs
+      icon: tabler:table
