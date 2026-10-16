@@ -134,12 +134,15 @@ jobs:
           AUTH=(-H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json")
           BUCKET=felizbay-assets
           DOMAIN=assets.felizbay.com
-          ZONE_ID="${CLOUDFLARE_ZONE_ID:-}"
+          # Resolve the zone id: prefer the live API value (a secret pasted with
+          # trailing whitespace/newline produced invalid JSON -> API error 10040),
+          # fall back to the trimmed secret. Validate the 32-hex shape.
+          ZONE_ID=$(curl -sS "${AUTH[@]}" "${CF_API}/zones?name=felizbay.com" | jq -r '.result[0].id // empty' | tr -d '[:space:]')
           if [ -z "$ZONE_ID" ]; then
-            ZONE_ID=$(curl -sS "${AUTH[@]}" "${CF_API}/zones?name=felizbay.com" | jq -r '.result[0].id // empty')
+            ZONE_ID=$(printf '%s' "${CLOUDFLARE_ZONE_ID:-}" | tr -d '[:space:]')
           fi
-          if [ -z "$ZONE_ID" ]; then
-            echo "::error::Could not resolve the felizbay.com zone id (Zone:Read permission / CLOUDFLARE_ZONE_ID secret)"
+          if ! printf '%s' "$ZONE_ID" | grep -qE '^[0-9a-f]{32}$'; then
+            echo "::error::Could not resolve a valid felizbay.com zone id (needs Zone:Read permission or a correct CLOUDFLARE_ZONE_ID secret)"
             exit 1
           fi
 
@@ -149,9 +152,11 @@ jobs:
           if echo "$LIST" | jq -e --arg d "$DOMAIN" '[(.result.domains // .result // [])[] | select(.domain == $d)] | length > 0' > /dev/null; then
             echo "custom domain $DOMAIN already attached"
           else
+            # jq builds the body so no variable can ever break the JSON.
+            BODY=$(jq -nc --arg d "$DOMAIN" --arg z "$ZONE_ID" '{domain: $d, enabled: true, zoneId: $z}')
             RESP=$(curl -sS -X POST "${AUTH[@]}" \
               "${CF_API}/accounts/$CLOUDFLARE_ACCOUNT_ID/r2/buckets/$BUCKET/domains/custom" \
-              -d "{\"domain\":\"$DOMAIN\",\"zoneId\":\"$ZONE_ID\",\"zoneName\":\"felizbay.com\"}")
+              -d "$BODY")
             echo "attach response: $RESP"
             if ! echo "$RESP" | jq -e '.success' > /dev/null; then
               echo "::error::Failed to attach $DOMAIN to bucket $BUCKET (check Workers R2 Storage:Edit permission)"
@@ -165,8 +170,8 @@ jobs:
           REC=$(curl -sS "${AUTH[@]}" "${CF_API}/zones/$ZONE_ID/dns_records?name=$DOMAIN" | jq -r '.result[0] // empty')
           echo "dns record: $REC"
           if [ -z "$REC" ]; then
-            CREATE=$(curl -sS -X POST "${AUTH[@]}" "${CF_API}/zones/$ZONE_ID/dns_records" \
-              -d "{\"type\":\"CNAME\",\"name\":\"$DOMAIN\",\"content\":\"${BUCKET}.${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com\",\"proxied\":true}")
+            DNS_BODY=$(jq -nc --arg n "$DOMAIN" --arg c "${BUCKET}.${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" '{type: "CNAME", name: $n, content: $c, proxied: true}')
+            CREATE=$(curl -sS -X POST "${AUTH[@]}" "${CF_API}/zones/$ZONE_ID/dns_records" -d "$DNS_BODY")
             echo "dns create: $CREATE"
             echo "$CREATE" | jq -e '.success' > /dev/null || {
               echo "::error::Failed to create the $DOMAIN CNAME record (check Zone DNS:Edit permission)"
