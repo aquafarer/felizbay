@@ -152,6 +152,9 @@ Zone Resources 选 Include → `felizbay.com`。创建后得到 `CLOUDFLARE_API_
 
 **位置：GitHub 仓库 → Settings → Secrets and variables → Actions → New repository secret**
 
+> **关于 Variables（同页的 "New repository variable" 标签）：无需设置。**
+> 四个工作流（`ci.yml` / `deploy.yml` / `ai-index.yml` / `seo-gate.yml`）已逐一检查，不含任何 `vars.*` 引用——所有配置均通过 `secrets.*` 传入。Secrets 与 Variables 的区别：Secret 加密存储且日志中自动脱敏（适合密钥）；Variables 明文存储（适合非敏感开关）。本项目未使用后者，此页只添加 Secrets。环境级（Environments）Secrets/Variables 同样未使用（仓库无 environment 配置）。
+
 | Secret                  | 值                                   | 来源                           |
 | ----------------------- | ------------------------------------ | ------------------------------ |
 | `CLOUDFLARE_API_TOKEN`  | §4 创建的 token                      | Cloudflare                     |
