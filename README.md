@@ -458,7 +458,9 @@ Two layers of locale detection:
 | `ci.yml`     | Pull requests  | npm ci → `npm run check` → `npm run build` (with `PUBLIC_TURNSTILE_SITE_KEY`) → worker dry-run bundles (admin/contact/news/automation)                                                                                               |
 | `deploy.yml` | Push to `main` | credential guard → npm ci → `npm run check` → `npm run build` → R2 upload → Pages deploy → D1 migrations + news seed → `wrangler secret bulk` (contact + admin) → `npm run deploy:workers` (5 workers in parallel) → CDN cache purge |
 
-**Required Secrets:** `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ZONE_ID`, `CF_PROD_D1_ID`, `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `CONTACT_EMAIL_TO`, `BETTER_AUTH_SECRET`, `ADMIN_EMAILS`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
+**First-time setup (creating Cloudflare resources, domain migration, third-party keys, GitHub secrets):** see [`SETUP.md`](./SETUP.md) — CI only deploys into pre-existing resources (Pages project, R2 buckets, D1 database, zone).
+
+**Required Secrets:** `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ZONE_ID`, `CF_PROD_D1_ID`, `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `CONTACT_EMAIL_TO`, `CONTACT_FROM_EMAIL`, `BETTER_AUTH_SECRET`, `ADMIN_EMAILS`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
 
 The deploy workflow degrades gracefully: if the Cloudflare secrets are not configured, the build still runs and only the Cloudflare steps are skipped (via the `guard` step).
 

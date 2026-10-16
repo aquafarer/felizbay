@@ -796,6 +796,8 @@ guard (探测 CLOUDFLARE_API_TOKEN/ACCOUNT_ID → enabled=true|false)
 
 ### 10.5 必需的 GitHub Secrets
 
+> **首次部署完整步骤**（Cloudflare 资源创建、域名 NS 迁移、第三方密钥、Secrets 设置路径、验证清单）见 **[`SETUP.md`](./SETUP.md)**。CI 只向已存在的资源内部署，Pages 项目 / R2 桶 / D1 / zone 均需先手动创建。
+
 | Secret 名称               | 用途                                               | 来源                                           |
 | ------------------------- | -------------------------------------------------- | ---------------------------------------------- |
 | `CLOUDFLARE_API_TOKEN`    | 用于 `wrangler deploy` 的 Cloudflare API 令牌      | Cloudflare Dashboard → My Profile → API Tokens |
