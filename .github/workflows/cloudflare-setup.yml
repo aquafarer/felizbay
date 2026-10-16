@@ -125,6 +125,69 @@ jobs:
             fi
           fi
 
+      - name: Attach R2 custom domain (assets.felizbay.com)
+        run: |
+          # The Pages middleware 301s /images/* and /files/* to this domain and
+          # product data references it directly — without it all images 404/530.
+          # Idempotent: skips when the domain is already attached.
+          CF_API="https://api.cloudflare.com/client/v4"
+          AUTH=(-H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json")
+          BUCKET=felizbay-assets
+          DOMAIN=assets.felizbay.com
+          ZONE_ID="${CLOUDFLARE_ZONE_ID:-}"
+          if [ -z "$ZONE_ID" ]; then
+            ZONE_ID=$(curl -sS "${AUTH[@]}" "${CF_API}/zones?name=felizbay.com" | jq -r '.result[0].id // empty')
+          fi
+          if [ -z "$ZONE_ID" ]; then
+            echo "::error::Could not resolve the felizbay.com zone id (Zone:Read permission / CLOUDFLARE_ZONE_ID secret)"
+            exit 1
+          fi
+
+          # already attached?
+          LIST=$(curl -sS "${AUTH[@]}" "${CF_API}/accounts/$CLOUDFLARE_ACCOUNT_ID/r2/buckets/$BUCKET/domains/custom")
+          echo "current custom domains: $(echo "$LIST" | jq -c '.result.domains // .result // []')"
+          if echo "$LIST" | jq -e --arg d "$DOMAIN" '[(.result.domains // .result // [])[] | select(.domain == $d)] | length > 0' > /dev/null; then
+            echo "custom domain $DOMAIN already attached"
+          else
+            RESP=$(curl -sS -X POST "${AUTH[@]}" \
+              "${CF_API}/accounts/$CLOUDFLARE_ACCOUNT_ID/r2/buckets/$BUCKET/domains/custom" \
+              -d "{\"domain\":\"$DOMAIN\",\"zoneId\":\"$ZONE_ID\",\"zoneName\":\"felizbay.com\"}")
+            echo "attach response: $RESP"
+            if ! echo "$RESP" | jq -e '.success' > /dev/null; then
+              echo "::error::Failed to attach $DOMAIN to bucket $BUCKET (check Workers R2 Storage:Edit permission)"
+              exit 1
+            fi
+          fi
+
+          # Ensure the proxied CNAME exists (the attach API usually creates it,
+          # but if the record pre-existed as unproxied or was deleted, R2 returns
+          # error 530/1001 at the edge).
+          REC=$(curl -sS "${AUTH[@]}" "${CF_API}/zones/$ZONE_ID/dns_records?name=$DOMAIN" | jq -r '.result[0] // empty')
+          echo "dns record: $REC"
+          if [ -z "$REC" ]; then
+            CREATE=$(curl -sS -X POST "${AUTH[@]}" "${CF_API}/zones/$ZONE_ID/dns_records" \
+              -d "{\"type\":\"CNAME\",\"name\":\"$DOMAIN\",\"content\":\"${BUCKET}.${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com\",\"proxied\":true}")
+            echo "dns create: $CREATE"
+            echo "$CREATE" | jq -e '.success' > /dev/null || {
+              echo "::error::Failed to create the $DOMAIN CNAME record (check Zone DNS:Edit permission)"
+              exit 1
+            }
+          else
+            PROXIED=$(echo "$REC" | jq -r '.proxied')
+            if [ "$PROXIED" != "true" ]; then
+              REC_ID=$(echo "$REC" | jq -r '.id')
+              UPDATE=$(curl -sS -X PATCH "${AUTH[@]}" "${CF_API}/zones/$ZONE_ID/dns_records/$REC_ID" -d '{"proxied":true}')
+              echo "dns proxied update: $UPDATE"
+              echo "$UPDATE" | jq -e '.success' > /dev/null || {
+                echo "::error::Could not proxy the $DOMAIN record (R2 custom domains only work proxied)"
+                exit 1
+              }
+            fi
+          fi
+          echo "- R2 custom domain \`$DOMAIN\` → bucket \`$BUCKET\` (SSL may take a few minutes to activate)" >> "$GITHUB_STEP_SUMMARY"
+        env:
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+
       - name: Summary
         run: |
           {
