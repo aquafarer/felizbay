@@ -28,6 +28,12 @@
 
 所有资源**必须先手动创建**——CI 只向已存在的资源内部署（Pages 项目、R2 桶、D1 库都不存在时 CI 会失败）。
 
+> **自动化方式（推荐）**：以上资源创建已全部自动化为 [`cloudflare-setup.yml`](./.github/workflows/cloudflare-setup.yml) 工作流（workflow_dispatch 手动触发，幂等可重复执行）。
+> 前提：GitHub Secrets 中已设置 `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`。
+> 它会创建 D1/R2×2（含 CORS）/Pages 项目/Vectorize 索引，并认领 workers.dev 子域（cron schedules API 要求账户必须有 workers.dev 子域，否则带定时任务的 worker 部署失败）。
+> 运行完成后从 run Summary 或日志（`D1_ID_FOR_SECRET=`）提取 database_id 填入 `CF_PROD_D1_ID`。
+> 以下手动命令为等效备选。
+
 ### 1.1 登录 wrangler
 
 ```bash
