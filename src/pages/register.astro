@@ -31,7 +31,8 @@ const metadata = {
         </div>
 
         <a
-          href="/api/auth/sign-in/social?provider=google&callbackURL=/keystatic"
+          id="google-login"
+          href="#"
           class="w-full flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition mb-5"
         >
           <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
@@ -118,6 +119,43 @@ const metadata = {
   </main>
 
   <script>
+    // better-auth's /sign-in/social is POST-only (GET returns 404): POST JSON,
+    // then follow the authorization URL returned in the response body.
+    document.getElementById('google-login')?.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const link = e.currentTarget as HTMLAnchorElement | null;
+      if (!link) return;
+      const errorEl = document.getElementById('error-message');
+      link.style.pointerEvents = 'none';
+      link.style.opacity = '0.6';
+      const restore = () => {
+        link.style.pointerEvents = '';
+        link.style.opacity = '';
+      };
+      const fail = (msg: string) => {
+        if (errorEl) {
+          errorEl.textContent = msg;
+          errorEl.classList.remove('hidden');
+        }
+        restore();
+      };
+      try {
+        const res = await fetch('/api/auth/sign-in/social', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ provider: 'google', callbackURL: '/keystatic' }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.url) {
+          window.location.href = data.url;
+        } else {
+          fail(data.message || data.error || 'Could not start Google sign-in');
+        }
+      } catch {
+        fail('Network error. Please try again.');
+      }
+    });
+
     document.getElementById('register-form')?.addEventListener('submit', async (e) => {
       e.preventDefault();
       const form = e.currentTarget as HTMLFormElement | null;
