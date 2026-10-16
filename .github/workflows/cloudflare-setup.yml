@@ -193,6 +193,48 @@ jobs:
         env:
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
 
+      - name: Verify R2 assets serving (status + bucket contents + fetch test)
+        run: |
+          CF_API="https://api.cloudflare.com/client/v4"
+          AUTH=(-H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json")
+          BUCKET=felizbay-assets
+          DOMAIN=assets.felizbay.com
+
+          # 1. Custom domain attach status (ownership/ssl must both be "active").
+          for i in 1 2 3 4 5 6; do
+            STATUS=$(curl -sS "${AUTH[@]}" "${CF_API}/accounts/$CLOUDFLARE_ACCOUNT_ID/r2/buckets/$BUCKET/domains/custom" \
+              | jq -c --arg d "$DOMAIN" '[(.result.domains // .result // [])[] | select(.domain == $d)][0] // null')
+            echo "domain status (try $i): $STATUS"
+            OWNERSHIP=$(echo "$STATUS" | jq -r '.status.ownership // empty')
+            SSL=$(echo "$STATUS" | jq -r '.status.ssl // empty')
+            if [ "$OWNERSHIP" = "active" ] && [ "$SSL" = "active" ]; then
+              break
+            fi
+            sleep 20
+          done
+          if [ "$OWNERSHIP" != "active" ] || [ "$SSL" != "active" ]; then
+            echo "::warning::$DOMAIN ownership=$OWNERSHIP ssl=$SSL (not fully active yet — re-run this workflow in a few minutes)"
+          fi
+
+          # 2. Bucket contents: count objects under images/ (the CI deploy uploads
+          # public/images here; an empty prefix means the deploy upload failed).
+          LISTING=$(curl -sS "${AUTH[@]}" "${CF_API}/accounts/$CLOUDFLARE_ACCOUNT_ID/r2/buckets/$BUCKET/objects?prefix=images/&per_page=100")
+          COUNT=$(echo "$LISTING" | jq '.result | length')
+          echo "objects under images/ (first page): $COUNT"
+          echo "$LISTING" | jq -r '.result[]?.key' | head -15
+
+          # 3. End-to-end fetch test from this runner (clean network).
+          for path in "images/default.webp" "images/pools/rectangular-pool-2.png"; do
+            CODE=$(curl -sS -o /tmp/obj.bin -w "%{http_code}" --max-time 30 "https://$DOMAIN/$path")
+            SIZE=$(wc -c < /tmp/obj.bin 2>/dev/null || echo 0)
+            echo "fetch https://$DOMAIN/$path -> HTTP $CODE ($SIZE bytes)"
+            if [ "$CODE" != "200" ]; then
+              echo "::warning::$DOMAIN/$path returned HTTP $CODE"
+            fi
+          done
+          CODE=$(curl -sSL -o /tmp/obj2.bin -w "%{http_code}" --max-time 30 "https://felizbay.com/images/default.webp")
+          echo "fetch (via site 301) https://felizbay.com/images/default.webp -> HTTP $CODE ($(wc -c < /tmp/obj2.bin) bytes)"
+
       - name: Summary
         run: |
           {
