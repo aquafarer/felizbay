@@ -23,6 +23,8 @@ stats:
   stats:
     - title: Pool Collections
       amount: '4'
+    - title: Standard SKUs
+      amount: '48'
     - title: Setup Time
       amount: '15-30 min'
     - title: Rated Pressure

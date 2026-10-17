@@ -34,9 +34,9 @@ design:
   image: /images/pools/round-grey-pool-1.png
   image_alt: 'Felizbay pool design'
   stats:
-    - value: '5+'
-      label: 'seasons of<br />use'
-    - value: '1,500+'
-      label: 'UV hours<br />tested'
+    - value: '100%'
+      label: 'pressure-tested<br />before packing'
+    - value: '4–5'
+      label: 'PSI rated<br />working pressure'
     - value: '15–30'
       label: 'minute<br />setup'

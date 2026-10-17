@@ -65,7 +65,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-water-treatment',
     question: 'How do I keep the water clean?',
     answer:
-      'Use standard pool chemicals: chlorine or bromine tablets in a floating dispenser, plus regular pH checks (7.2–7.6). Run the filter pump daily, skim debris, and cover the pool when not in use. With basic care, water can last several weeks before changing.',
+      'Use standard pool chemicals: chlorine or bromine tablets in a floating dispenser, plus regular pH checks (target 7.2–7.6). Run the filter pump daily, skim debris, and cover the pool when not in use. How long water lasts before changing depends on pool size, bather load, temperature, and filtration capacity — always follow the chemical product label and test the water regularly rather than relying on a fixed schedule.',
     category: 'maintenance',
     relatedProducts: [],
     relatedGuides: [],
@@ -155,7 +155,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-warranty',
     question: 'What is the Felizbay warranty?',
     answer:
-      'Felizbay pools carry a limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers seams, valves, and fabric. Contact info@felizbay.com with your order details to start a claim.',
+      'Felizbay pools carry a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers drop stitch fabric, seams, and valves; it excludes improper use, unauthorized modifications, and normal wear. Contact info@felizbay.com with your order details to start a claim.',
     category: 'warranty',
     relatedProducts: [],
     relatedGuides: [],
