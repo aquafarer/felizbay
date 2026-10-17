@@ -98,5 +98,49 @@
   "/images/pools/accessories-kit.jpg": {
     "w": 1080,
     "h": 1920
+  },
+  "/images/pool-ideas/townhome-and-compact-yard-pools.jpg": {
+    "w": 1024,
+    "h": 841
+  },
+  "/images/pool-ideas/pools-for-water-fitness-and-recreation.jpg": {
+    "w": 1200,
+    "h": 799
+  },
+  "/images/pool-ideas/pools-for-vacation-rentals.jpg": {
+    "w": 1362,
+    "h": 734
+  },
+  "/images/pool-ideas/pools-for-retirees-and-empty-nesters.jpg": {
+    "w": 1200,
+    "h": 818
+  },
+  "/images/pool-ideas/pools-for-rental-and-event-operators.jpg": {
+    "w": 1200,
+    "h": 728
+  },
+  "/images/pool-ideas/pools-for-pet-families.jpg": {
+    "w": 1155,
+    "h": 655
+  },
+  "/images/pool-ideas/pools-for-glamping-and-hospitality.jpg": {
+    "w": 1382,
+    "h": 768
+  },
+  "/images/pool-ideas/pools-for-dink-households.jpg": {
+    "w": 1200,
+    "h": 797
+  },
+  "/images/pool-ideas/pools-for-boutique-hotels-and-luxury-estates.jpg": {
+    "w": 1200,
+    "h": 848
+  },
+  "/images/pool-ideas/large-pools-for-family-gatherings.jpg": {
+    "w": 1600,
+    "h": 1121
+  },
+  "/images/pool-ideas/cold-plunge-and-recovery-pools.jpg": {
+    "w": 1024,
+    "h": 762
   }
 }

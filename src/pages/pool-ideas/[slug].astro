@@ -62,6 +62,7 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
     article={{
       headline: idea.title,
       description: idea.intro[0].slice(0, 200),
+      image: idea.image ? `${SITE.site}${idea.image}` : undefined,
       datePublished: '2026-10-17',
       dateModified: '2026-10-17',
       authorName: 'Felizbay Team',
@@ -74,6 +75,20 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">{idea.title}</h1>
       {idea.intro.map((p) => <p class="mt-4 text-lg text-gray-500 dark:text-slate-400 leading-relaxed">{p}</p>)}
     </header>
+    {
+      idea.image && (
+        <img
+          src={idea.image}
+          alt={idea.imageAlt ?? idea.title}
+          class="aspect-[16/10] w-full rounded-2xl border border-gray-100 dark:border-slate-800 object-cover shadow-sm"
+          width="1200"
+          height="750"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      )
+    }
   </section>
 
   <!-- Is this you? -->

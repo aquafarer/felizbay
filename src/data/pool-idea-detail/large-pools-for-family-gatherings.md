@@ -23,6 +23,10 @@ A common mistake when planning for large gatherings is determining capacity sole
 
 Unlike standard inflatable pools with sloped walls that squeeze interior usable space, Felizbay's [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) maintains straight, vertical 90-degree walls. This delivers edge-to-edge usable interior volume, allowing adults to sit or lean comfortably along the pool perimeter without losing wall stability or losing precious water over the sides.
 
+### A working density rule
+
+For comfortable socializing, allow roughly **1.0–1.5 m² (10–15 sq ft) of water surface per adult bather** — six adults want a Ø 4–5 m round or equivalent, not a splash pool. Vertical walls also absorb wave action from multi-person play, so active games do not slosh water onto seating and food areas.
+
 ## 2. Total Space Requirements & Backyard Layout
 
 A large pool needs more than just a footprint matching its exterior size. To ensure safe party flow and easy access, properly plan your backyard layout:

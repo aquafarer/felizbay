@@ -19,6 +19,15 @@ In short-term rentals, turnover windows between checking out at 11:00 AM and che
   - When maintaining water across multi-day stays, equip the pool with a high-capacity sand filter pump (1,500+ GPH) and an automated floating chlorinator or brominator.
   - Schedule automatic pump timers to run during off-peak guest hours (for example, late night or early morning) to ensure pristine water clarity upon guest wakeup.
 
+### The 3–4 hour turnover, step by step
+
+A repeatable between-stay routine keeps turnovers inside a standard housekeeping window:
+
+1. **Check-out:** skim the surface, brush the walls, and test the water.
+2. **Refresh or treat:** either run a full drain-and-refill via the high-flow drain valves (practical for smaller pools) or apply a gentle shock treatment and restart the filter loop.
+3. **Inspect:** valve seals, wall pressure, and drain function — between every stay, not just when something looks wrong.
+4. **Check-in:** fitted cover off, water clear, house-rules card visible at the pool.
+
 ## 2. Structural Durability for High-Frequency Commercial Use
 
 Guest handling is unpredictable, making commercial durability essential:

@@ -9,7 +9,7 @@ import type { MetaData } from '~/types';
 const metadata = merge(
   {
     title: `Pool Ideas & Inspiration | ${SITE.name}`,
-    description: `Real backyard scenarios for Felizbay drop-stitch inflatable pools — family pools, small backyards, gatherings, soaking tubs, vacation rentals, and glamping.`,
+    description: `Real backyard scenarios for Felizbay drop-stitch inflatable pools — families, small spaces, gatherings, soaking, cold plunge, pets, rentals, glamping, and hospitality.`,
     openGraph: { type: 'website' },
   },
   {}
@@ -34,32 +34,45 @@ const metadata = merge(
         POOL_IDEAS.map((idea) => (
           <a
             href={`/pool-ideas/${idea.slug}`}
-            class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow overflow-hidden p-6"
+            class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow overflow-hidden"
           >
-            <div class="flex items-center justify-between mb-3">
-              <h2 class="text-lg font-semibold font-heading dark:text-slate-100 group-hover:text-primary transition-colors">
-                {idea.navTitle}
-              </h2>
-            </div>
-            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{idea.intro[0]}</p>
-            <div class="mt-4 pt-4 border-t border-gray-100 dark:border-slate-800">
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                {idea.matches.map((m) => (
-                  <span class="px-2.5 py-1 bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 text-xs font-medium rounded-full">
-                    {m.series === 'round' || m.series === 'hot-tub-round'
-                      ? 'Round'
-                      : m.series === 'rect-square'
-                        ? 'Rectangular'
-                        : m.series === 'hot-tub-square-rect'
-                          ? 'Square SPA'
-                          : 'SPA Tub'}
-                  </span>
-                ))}
+            {idea.image && (
+              <img
+                src={idea.image}
+                alt={idea.imageAlt ?? idea.title}
+                class="aspect-[4/3] w-full object-cover"
+                width="640"
+                height="480"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+            <div class="flex flex-1 flex-col p-6">
+              <div class="flex items-center justify-between mb-3">
+                <h2 class="text-lg font-semibold font-heading dark:text-slate-100 group-hover:text-primary transition-colors">
+                  {idea.navTitle}
+                </h2>
               </div>
-              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-blue-400">
-                Explore this idea
-                <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
+              <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{idea.intro[0]}</p>
+              <div class="mt-4 pt-4 border-t border-gray-100 dark:border-slate-800">
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  {idea.matches.map((m) => (
+                    <span class="px-2.5 py-1 bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 text-xs font-medium rounded-full">
+                      {m.series === 'round' || m.series === 'hot-tub-round'
+                        ? 'Round'
+                        : m.series === 'rect-square'
+                          ? 'Rectangular'
+                          : m.series === 'hot-tub-square-rect'
+                            ? 'Square SPA'
+                            : 'SPA Tub'}
+                    </span>
+                  ))}
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-blue-400">
+                  Explore this idea
+                  <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
             </div>
           </a>
         ))

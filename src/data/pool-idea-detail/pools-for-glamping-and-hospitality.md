@@ -64,6 +64,9 @@ Operating water amenities in commercial hospitality environments requires strict
 - **Insurance & risk management:**
   Ensure your commercial property and general liability insurance policies explicitly cover guest use of outdoor water amenities. Always provide locking thermo-protective pool covers when facilities are unmonitored or closed.
 
+- **Environmental discharge:**
+  In eco-sensitive or off-grid locations, verify that drainage discharge complies with local environmental regulations for treated wastewater — route drains to approved points rather than releasing chlorinated water into natural habitats.
+
 ## 6. Commercial Inquiries & Custom OEM/ODM Solutions
 
 Looking to elevate your glamping site or hospitality resort with custom water features? Felizbay offers end-to-end commercial solutions, including tailored dimensions, custom colorways, branded logos, and integrated filtration accessories designed specifically for commercial resort operators.
