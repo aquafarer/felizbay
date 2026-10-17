@@ -8,20 +8,45 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 
 - [Products](https://felizbay.com/products/): Catalog of drop stitch inflatable swimming pools — rectangular and round models
 - [About](https://felizbay.com/about/): Company background and design philosophy
-- [FAQ](https://felizbay.com/faq/): Answers to common setup, water care, and ordering questions
+- [FAQ](https://felizbay.com/faq/): Answers to common setup, water care, ordering, and B2B sourcing questions
 - [Contact](https://felizbay.com/contact/): Contact the Felizbay team
 - [Request a Quotation](https://felizbay.com/request-quotation/): Request pricing for pools and bulk orders
 - [AI Answer Center](https://felizbay.com/ai-answer-center/): AI-powered answers about Felizbay inflatable pools
+
+## B2B & Manufacturing
+
+- [OEM / ODM Manufacturing](https://felizbay.com/oem-odm/): Custom inflatable pool manufacturing — sizes, colors, logo printing, packaging
+- [Wholesale Program](https://felizbay.com/wholesale/): Factory-direct wholesale pricing on a 20-pc basis, FOB Qingdao
+- [Private Label Pools](https://felizbay.com/private-label/): Launch your own pool brand with proven drop stitch designs
+- [Commercial Pools](https://felizbay.com/commercial-pools/): Event-scale and commercial inflatable pool solutions
+- [Manufacturing Process](https://felizbay.com/manufacturing/): Five-step factory production — CNC cutting to pressure testing
+- [Quality Control](https://felizbay.com/quality-control/): 24–48 hour pressure-drop testing on every unit
+- [Pool Specs & FOB Price List](https://felizbay.com/products/specs/): Full SKU specifications, FOB Qingdao prices, and ordering rules
+
+## Procurement Guides
+
+- [All Guides](https://felizbay.com/guides/): Procurement & technical guides index
+- [How to Choose a Drop Stitch Pool Manufacturer](https://felizbay.com/guides/how-to-choose-a-drop-stitch-pool-manufacturer/): 7 evaluation criteria for B2B buyers
+- [OEM vs ODM Inflatable Pools](https://felizbay.com/guides/oem-vs-odm-inflatable-pools/): Manufacturing models, costs, and how to choose
+- [Private Label Inflatable Pools: A Buyer's Guide](https://felizbay.com/guides/private-label-inflatable-pool-buyers-guide/): Brand launch workflow, MOQ, and packaging
+- [Inflatable Pool Pressure Testing Explained](https://felizbay.com/guides/inflatable-pool-pressure-testing-explained/): PSI standards and the 24–48 hour leak test
+- [How Much Does a Wholesale Drop Stitch Pool Cost?](https://felizbay.com/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/): Real FOB prices and landed-cost math
+- [Inflatable Pool Container Loading Guide](https://felizbay.com/guides/inflatable-pool-container-loading-guide/): Packed weights, 20GP vs 40HQ planning
 
 ## Products
 
 - [Rectangular Drop Stitch Pool](https://felizbay.com/products/rectangular-drop-stitch-pool/): Family-size rectangular inflatable pool with rigid walls
 - [Round Blue Drop Stitch Pool](https://felizbay.com/products/round-blue-drop-stitch-pool/): Round pool in classic blue
 - [Round Grey Drop Stitch Pool](https://felizbay.com/products/round-grey-drop-stitch-pool/): Round pool in modern grey with matching cover
+- [Square & Rectangular Hot Tub SPA Pool](https://felizbay.com/products/hot-tub-square-rect/): Constant-temperature inflatable SPA tub with built-in seats
+- [Round Hot Tub SPA Pool](https://felizbay.com/products/hot-tub-round/): Compact round hydrotherapy SPA tub
 
 ## Knowledge
 
-- [Drop Stitch Technology](https://felizbay.com/standalone/drop-stitch-technology/): How drop stitch construction creates rigid inflatable pool walls
-- [Why Drop Stitch Pools](https://felizbay.com/content-v2/why-drop-stitch-pools/): Benefits of drop stitch pools over frame and ring pools
-- [Inflatable Pool vs Steel Frame](https://felizbay.com/content-v2/inflatable-pool-vs-steel-frame/): Comparison of inflatable and steel frame pools
-- [Pool Water Care Basics](https://felizbay.com/content-v2/inflatable-pool-water-care-basics/): Keeping inflatable pool water clean and safe
+- [Drop Stitch Technology](https://felizbay.com/llms/pages/drop-stitch-technology): How drop stitch construction creates rigid inflatable pool walls
+- [Why Drop Stitch Pools](https://felizbay.com/llms/v2/why-drop-stitch-pools): Benefits of drop stitch pools over frame and ring pools
+- [Inflatable Pool vs Steel Frame](https://felizbay.com/llms/v2/inflatable-pool-vs-steel-frame): Comparison of inflatable and steel frame pools
+- [Pool Water Care Basics](https://felizbay.com/llms/v2/inflatable-pool-water-care-basics): Keeping inflatable pool water clean and safe
+- [How to Choose an Inflatable Swimming Pool](https://felizbay.com/guides/how-to-choose-inflatable-pool/): Consumer guide to selecting the right pool
+- [Inflatable Pool Setup](https://felizbay.com/guides/inflatable-pool-setup/): 8-step setup guide
+- [Inflatable Pool Maintenance](https://felizbay.com/guides/inflatable-pool-maintenance/): Water care and maintenance routine

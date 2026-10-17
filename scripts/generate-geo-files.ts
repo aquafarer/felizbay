@@ -70,6 +70,7 @@ function extractPageTitle(content: string): string | null {
     const val = parsed[key];
     if (val && typeof val === 'object' && val.title) {
       return String(val.title)
+        .replace(/<[^>]+>/g, ' ')
         .replace(/<br\s*\/?>/gi, ' ')
         .replace(/\s+/g, ' ')
         .trim();
