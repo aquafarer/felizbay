@@ -16,7 +16,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     operatingCost: 'Low — standard chlorine and filter cartridges; no tools or permanent installation',
     whyBusinessesChooseIt:
       'A premium, high-margin SKU that ships flat and stores compactly. Fast 30-minute setup is a strong selling point, and the fold-away design appeals to customers who cannot commit to a permanent pool.',
-    lifespan: '5+ seasons with basic care',
+    lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'round-blue-drop-stitch-pool': {
     bestFor: ['families', 'retailers'],
@@ -26,7 +26,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     operatingCost: 'Low — smaller water volume means less chemicals and faster heating',
     whyBusinessesChooseIt:
       'The best-selling shape in the category. Compact shipping keeps logistics costs down, and the approachable price point moves volume through both e-commerce and brick-and-mortar channels.',
-    lifespan: '5+ seasons with basic care',
+    lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'round-grey-drop-stitch-pool': {
     bestFor: ['families', 'retailers', 'oem'],
@@ -36,7 +36,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     operatingCost: 'Low — included cover cuts cleaning time and chemical loss between swims',
     whyBusinessesChooseIt:
       'Differentiates from the sea of blue pools at retail. The bundled cover improves customer satisfaction scores and reduces support tickets about water care.',
-    lifespan: '5+ seasons with basic care',
+    lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'hot-tub-square-rect': {
     bestFor: ['families', 'retailers', 'oem'],
@@ -46,7 +46,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     operatingCost: 'Moderate — heating energy is the main cost; the insulated bottom and a thermal cover keep it down',
     whyBusinessesChooseIt:
       'Extends the selling season into autumn and winter. The deflated tub ships at 5–10% of a rigid hot tub\u2019s packaging volume, cutting freight and overseas warehousing costs while supporting high retail margins.',
-    lifespan: '5+ seasons with basic care',
+    lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'hot-tub-round': {
     bestFor: ['families', 'retailers', 'oem'],
@@ -56,6 +56,6 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     operatingCost: 'Low to moderate — small water volume heats fast; insulated bottom retains heat between sessions',
     whyBusinessesChooseIt:
       'The lowest entry price in the wellness line with the smallest shipping footprint. Popular with glamping operators and fitness studios that add recovery baths without construction.',
-    lifespan: '5+ seasons with basic care',
+    lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
 };

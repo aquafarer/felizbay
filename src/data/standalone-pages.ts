@@ -25,7 +25,7 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Materials & Durability',
-        body: 'Felizbay pools use multi-layer laminated PVC with UV stabilizers and puncture-resistant reinforcement. Every pool is inflation-tested at the factory before shipment, and with basic care — clean chemistry, careful ground prep, and dry storage — a pool lasts 5+ seasons.',
+        body: 'Felizbay pools use multi-layer laminated PVC with UV stabilizers and puncture-resistant reinforcement. Every pool is inflation-tested at the factory before shipment, and with basic care — clean chemistry, careful ground prep, and dry storage — a pool can deliver seasons of reliable use.',
       },
       {
         heading: 'Setup and Storage',

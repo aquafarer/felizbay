@@ -76,7 +76,7 @@ const poolArticles: ContentV2Record[] = [
       },
       {
         q: 'Which lasts longer?',
-        a: 'Both last 5+ seasons with care. Frames rust and liners wear at the rails; a quality drop stitch pool mainly needs clean chemistry and dry storage.',
+        a: 'Lifespan for both depends on climate, care, and storage conditions. Frames rust and liners wear at the rails; a quality drop stitch pool mainly needs clean chemistry and dry storage.',
       },
     ],
     relatedGuides: ['how-to-choose-inflatable-pool', 'inflatable-pool-maintenance'],

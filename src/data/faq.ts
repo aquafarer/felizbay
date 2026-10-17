@@ -20,7 +20,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-setup-time',
     question: 'How long does it take to set up an inflatable pool?',
     answer:
-      'Most Felizbay pools set up in 15–30 minutes. Unroll the pool on flat ground, connect the included pump, and inflate the drop stitch walls to the rated pressure. Then fill with water. Rectangular pools take slightly longer than round models due to their larger footprint.',
+      'Inflating takes about 10 minutes with the included electric pump; full setup — positioning, inflating to the rated pressure, and connecting the filter pump — typically takes 15–30 minutes depending on the model. Filling with water takes additional time depending on pool size and your water source. Rectangular pools take slightly longer than round models due to their larger footprint.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: [],
@@ -119,7 +119,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-lifespan',
     question: 'How long does an inflatable pool last?',
     answer:
-      'With proper care, a Felizbay drop stitch pool lasts 5+ seasons of regular use. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
+      'With proper care, a Felizbay drop stitch pool can provide seasons of reliable use — the exact lifespan depends on climate, UV exposure, water chemistry, and storage conditions. The UV-resistant, puncture-resistant PVC is built for repeated setup, takedown, and storage. Key factors are clean water chemistry, careful ground prep, and dry storage.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: [],
