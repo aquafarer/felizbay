@@ -140,6 +140,12 @@ const LANGS = [
   'lt',
   'lv',
   'et',
+  'kk',
+  'vi',
+  'uz',
+  'uk',
+  'az',
+  'fa',
 ];
 
 const NON_LATIN = [

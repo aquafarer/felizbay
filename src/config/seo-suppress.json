@@ -8,7 +8,7 @@
     "^/(?:[a-z]{2}/)?search/?$",
     "^/(?:[a-z]{2}/)?internal/seo/",
     "^/(?:[a-z]{2}/)?register/?$",
-    "^/(?:bg|et|he|hr|hu|id|ko|lt|lv|ms|ro|sk|sl|sr|th|tl|tr|zh)(?:/|$)",
+    "^/(?:az|bg|et|fa|he|hr|hu|id|kk|ko|lt|lv|ms|ro|sk|sl|sr|th|tl|tr|uk|uz|vi|zh)(?:/|$)",
     "^/en/"
   ],
   "compareAllowlist": [],

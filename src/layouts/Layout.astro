@@ -68,7 +68,7 @@ const language = currentLang;
 // Populate the generated per-language UI strings (small per-language modules,
 // statically imported in src/i18n/generated/ui-all.ts) for all components.
 setLang(currentLang);
-const RTL_LANGS = new Set(['ar', 'he']);
+const RTL_LANGS = new Set(['ar', 'he', 'fa']);
 const textDirection = RTL_LANGS.has(language) ? 'rtl' : defaultTextDir || 'ltr';
 
 // Root-only routes have no localized versions. Emitting per-locale

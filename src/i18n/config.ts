@@ -33,6 +33,12 @@ export const languages: Record<string, string> = {
   lt: 'Lietuvių',
   lv: 'Latviešu',
   et: 'Eesti',
+  kk: 'Қазақша',
+  vi: 'Tiếng Việt',
+  uz: 'Oʻzbekcha',
+  uk: 'Українська',
+  az: 'Azərbaycanca',
+  fa: 'فارسی',
 };
 export const defaultLang = 'en';
 export const showDefaultLang = true;

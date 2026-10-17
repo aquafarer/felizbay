@@ -168,3 +168,33 @@
   locale: et
   textDirection: ltr
   enabled: true
+- code: KK
+  name: Қазақша
+  locale: kk
+  textDirection: ltr
+  enabled: true
+- code: VI
+  name: Tiếng Việt
+  locale: vi
+  textDirection: ltr
+  enabled: true
+- code: UZ
+  name: Oʻzbekcha
+  locale: uz
+  textDirection: ltr
+  enabled: true
+- code: UK
+  name: Українська
+  locale: uk
+  textDirection: ltr
+  enabled: true
+- code: AZ
+  name: Azərbaycanca
+  locale: az
+  textDirection: ltr
+  enabled: true
+- code: FA
+  name: فارسی
+  locale: fa
+  textDirection: rtl
+  enabled: true

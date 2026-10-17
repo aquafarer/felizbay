@@ -49,6 +49,12 @@ const LANGUAGES: Record<string, string> = {
   lt: 'Lietuvių',
   lv: 'Latviešu',
   et: 'Eesti',
+  kk: 'Қазақша',
+  vi: 'Tiếng Việt',
+  uz: 'Oʻzbekcha',
+  uk: 'Українська',
+  az: 'Azərbaycanca',
+  fa: 'فارسی',
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
