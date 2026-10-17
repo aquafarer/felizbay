@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Map from '~/components/widgets/Map.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
@@ -138,8 +137,8 @@ const metadata = {
                 >
               </div>
               <div>
-                <p class="font-medium text-gray-900">Global HQ &amp; Billing — Felizbay LLC</p>
-                <p class="text-sm text-gray-500">New Mexico, United States</p>
+                <p class="font-medium text-gray-900">US Office — Felizbay LLC</p>
+                <p class="text-sm text-gray-500">Design, Sales &amp; Billing — New Mexico, United States</p>
                 <p class="text-sm text-gray-500">+1 279 732 3333 · contact@felizbay.com</p>
               </div>
             </div>
@@ -159,7 +158,7 @@ const metadata = {
               </div>
               <div>
                 <p class="font-medium text-gray-900">Manufacturing &amp; Export Hub</p>
-                <p class="text-sm text-gray-500" set:html={branding.address || 'New Mexico, USA'} />
+                <p class="text-sm text-gray-500">Qingdao, Shandong, China — FOB Qingdao port</p>
                 <p class="text-sm text-gray-500">+86 13305324192 · factory@felizbay.com</p>
               </div>
             </div>
@@ -184,15 +183,6 @@ const metadata = {
             </div>
           </div>
         </div>
-        <Map
-          title={data.map?.title}
-          subtitle={data.map?.subtitle}
-          address={data.map?.address}
-          embedUrl={data.map?.embedUrl}
-          latitude={data.map?.latitude}
-          longitude={data.map?.longitude}
-          zoom={data.map?.zoom}
-        />
       </div>
     </div>
   </section>

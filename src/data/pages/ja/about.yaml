@@ -15,7 +15,7 @@ stats:
     - title: Pool collections
       amount: '4'
     - title: Setup time
-      amount: '~10 min'
+      amount: '15-30 min'
     - title: Rated pressure
       amount: '4-5 PSI'
     - title: Contact
@@ -149,7 +149,7 @@ global_ops_section:
   stats:
     - value: '4'
       label: 'Pool collections'
-    - value: '~10 min'
+    - value: '15-30 min'
       label: 'Setup time'
     - value: '4-5 PSI'
       label: 'Rated pressure'

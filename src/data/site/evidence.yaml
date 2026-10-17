@@ -64,7 +64,7 @@ certifications:
     body: ASTM International
     desc: Standard consumer safety specification for residential above-ground pools and related equipment.
   - name: ISO 9001
-    body: SGS / BSI
+    body: SGS
     desc: Quality management system certified for design, manufacturing, and distribution of inflatable products.
   - name: BSCI
     body: amfori

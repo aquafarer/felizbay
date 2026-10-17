@@ -18,6 +18,7 @@ import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 import { products as productRecords } from '~/data/products';
 import { guides } from '~/data/guides';
+import { poolSeries } from '~/data/pool-catalog';
 import { productBusinessData } from '~/data/product-business-data';
 import { getProductMentionsJsonLd } from '~/data/knowledge-graph';
 import { getProductCompliance } from '~/data/product-compliance';
@@ -78,6 +79,17 @@ const productCrumbs = [
 ];
 
 const specRows = product.specs ?? [];
+
+const catalogSeriesBySlug: Record<string, string> = {
+  'rectangular-drop-stitch-pool': 'rect-square',
+  'round-blue-drop-stitch-pool': 'round',
+  'round-grey-drop-stitch-pool': 'round',
+  'hot-tub-square-rect': 'hot-tub-square-rect',
+  'hot-tub-round': 'hot-tub-round',
+};
+const catalogSeries = poolSeries.find((s) => s.id === catalogSeriesBySlug[product.slug]);
+const minFobUsd =
+  catalogSeries && catalogSeries.items.length > 0 ? Math.min(...catalogSeries.items.map((i) => i.fobUsd)) : null;
 
 const productCompliance = getProductCompliance(product.category);
 const productMentions = rec ? getProductMentionsJsonLd(rec.id) : [];
@@ -316,13 +328,23 @@ const productExtraData: Record<string, unknown> = {
             }
             {
               product.price?.amount ? (
-                <div class="mt-4 flex items-baseline gap-3">
-                  <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">
-                    {product.price.currency === 'USD' || !product.price.currency
-                      ? `$${product.price.amount}`
-                      : `${product.price.currency ?? ''} ${product.price.amount}`}
-                  </span>
-                  {product.inStock && <span class="text-sm font-medium text-green-600">In stock</span>}
+                <div class="mt-4">
+                  <div class="flex items-baseline gap-3">
+                    <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">
+                      {product.price.currency === 'USD' || !product.price.currency
+                        ? `$${product.price.amount}`
+                        : `${product.price.currency ?? ''} ${product.price.amount}`}
+                    </span>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                      Retail price
+                    </span>
+                    {product.inStock && <span class="text-sm font-medium text-green-600">In stock</span>}
+                  </div>
+                  {minFobUsd !== null && (
+                    <p class="mt-1 text-sm font-medium text-sky-700 dark:text-sky-400">
+                      Wholesale FOB Qingdao from ${minFobUsd.toFixed(2)} — price basis 20 pcs per item
+                    </p>
+                  )}
                 </div>
               ) : null
             }
@@ -451,29 +473,6 @@ const productExtraData: Record<string, unknown> = {
     )
   }
 
-  {/* Why This Exists (Problem) */}
-  {
-    rec && rec.problem && (
-      <section
-        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
-        data-ai-block="problem"
-      >
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <div class="bg-blue-50/80 dark:bg-blue-900/30 border-l-4 border-blue-500 rounded-r-xl px-6 py-5">
-            <div class="flex items-start gap-3">
-              <span class="text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider flex-shrink-0 mt-0.5">
-                Why this exists
-              </span>
-              <div class="space-y-2 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
-                <p>{rec.problem}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
   {/* Product Definition —Who is it for? */}
   {
     rec && rec.definition && (
@@ -483,17 +482,13 @@ const productExtraData: Record<string, unknown> = {
       >
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
-            Product Definition
+            Business Fit
           </span>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
             Who is it for?
           </h2>
-          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">{rec.definition}</p>
           {rec.audience && (
-            <div class="mt-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
-              <p class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-2">Designed for</p>
-              <p class="text-sm text-gray-600 dark:text-slate-400 capitalize">{rec.audience}</p>
-            </div>
+            <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed capitalize">{rec.audience}</p>
           )}
           {rec && productBusinessData[rec.id] && (
             <div class="mt-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-5">
@@ -553,37 +548,6 @@ const productExtraData: Record<string, unknown> = {
     )
   }
 
-  {/* Overview + Use Cases */}
-  {
-    rec && rec.ai_use_cases.length > 0 && (
-      <section
-        class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800"
-        data-ai-block="use-case"
-      >
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            Use Cases
-          </h2>
-          <div class="grid md:grid-cols-2 gap-3">
-            {rec.ai_use_cases.map((uc) => (
-              <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-                <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
-                <p class="text-sm text-gray-700 dark:text-slate-300">{uc}</p>
-              </div>
-            ))}
-            <div class="flex items-start gap-3 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/30 border border-sky-100 dark:border-sky-800">
-              <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
-              <div>
-                <p class="text-sm font-semibold text-sky-800 dark:text-sky-300">Skill level</p>
-                <p class="text-sm text-sky-700 dark:text-sky-400 capitalize">{rec.skill}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
   {/* Comparison */}
   {
     rec && rec.ai_comparison && (
@@ -633,6 +597,29 @@ const productExtraData: Record<string, unknown> = {
   }
 
   <JsonLd type="FAQPage" faqs={rec?.ai_faq || []} />
+
+  {/* Safety & Usage */}
+  {
+    rec && rec.safety_rules.length > 0 && (
+      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="safety">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+            Safety &amp; Usage
+          </h2>
+          <div class="bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl px-6 py-5">
+            <ul class="space-y-2.5">
+              {rec.safety_rules.map((rule) => (
+                <li class="flex items-start gap-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+                  <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 flex-shrink-0" />
+                  <span class="capitalize">{rule}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   {/* Full Technical Specifications */}
   {
@@ -898,48 +885,6 @@ const productExtraData: Record<string, unknown> = {
       }
     }
   </script>
-
-  {/* Hidden AI data blocks (machine-readable) */}
-  {
-    rec && (
-      <section class="sr-only" aria-hidden="true">
-        <div data-ai-block="definition">
-          <p>{rec.definition}</p>
-          <p>Problem it solves: {rec.problem}</p>
-          <p>How it works: {rec.howItWorks}</p>
-          <p>Target audience: {rec.audience}</p>
-        </div>
-        <div data-ai-block="use-case">
-          <p>Use cases: {rec.ai_use_cases.join('; ')}</p>
-          <p>Environments: {rec.environment.join(', ')}</p>
-          <p>Water conditions: {rec.water_condition.join(', ')}</p>
-          <p>Skill level: {rec.skill}</p>
-        </div>
-        <div data-ai-block="specification">
-          {Object.entries(rec.ai_specs).map(([k, v]) => (
-            <p data-spec={k}>
-              {k}: {v}
-            </p>
-          ))}
-        </div>
-        <div data-ai-block="comparison">
-          <p>{rec.ai_comparison}</p>
-        </div>
-        <div data-ai-block="faq">
-          {rec.ai_faq.map((f) => (
-            <p>
-              <strong>Q:</strong> {f.q} <strong>A:</strong> {f.a}
-            </p>
-          ))}
-        </div>
-        <div data-ai-block="constraint">
-          <p>Safety rules: {rec.safety_rules.join('; ')}</p>
-          <p>Safety level: {rec.safety_level}</p>
-          <p>Regions: {rec.region.join(', ')}</p>
-        </div>
-      </section>
-    )
-  }
 
   <ToBlogLink text="Back to Products" />
 </ProductLayout>

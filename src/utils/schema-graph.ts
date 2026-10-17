@@ -61,11 +61,24 @@ export function organizationNode() {
 
     address: {
       '@type': 'PostalAddress',
-      streetAddress: facts.factory.streetAddress,
-      addressLocality: facts.factory.city,
-      addressRegion: facts.factory.province,
-      postalCode: facts.factory.postalCode,
-      addressCountry: facts.factory.country,
+      streetAddress: facts.office.city ? `${facts.office.label}, ${facts.office.city}` : facts.office.label,
+      addressRegion: facts.office.province,
+      addressCountry: facts.office.country,
+    },
+
+    // ManufacturingBusiness 的生产地点：美国设计 + 青岛工厂生产。
+    // address 是法律实体（Felizbay LLC, New Mexico）的注册地址，
+    // location 单独声明中国生产基地，两个实体不再混在一处。
+    location: {
+      '@type': 'Place',
+      '@id': ID.factory,
+      name: facts.factory.label,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: facts.factory.city,
+        addressRegion: facts.factory.province,
+        addressCountry: facts.factory.country,
+      },
     },
 
     // 两个电话拆成两个 contactPoint 并标明用途，而不是在两个 schema 块里各写一个

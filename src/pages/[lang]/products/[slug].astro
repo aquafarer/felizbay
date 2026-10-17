@@ -20,6 +20,7 @@ import { SITE } from 'astrowind:config';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 import { products as productRecords } from '~/data/products';
+import { poolSeries } from '~/data/pool-catalog';
 import { localizeProduct } from '~/utils/product-i18n';
 import { localizeProductData } from '~/lib/product-l10n';
 import { PRODUCT_CONTENT_L10N } from '~/lib/product-content-l10n';
@@ -117,6 +118,16 @@ const productCrumbs = [
 ];
 
 const specRows = product.specs ?? [];
+const catalogSeriesBySlug: Record<string, string> = {
+  'rectangular-drop-stitch-pool': 'rect-square',
+  'round-blue-drop-stitch-pool': 'round',
+  'round-grey-drop-stitch-pool': 'round',
+  'hot-tub-square-rect': 'hot-tub-square-rect',
+  'hot-tub-round': 'hot-tub-round',
+};
+const catalogSeries = poolSeries.find((s) => s.id === catalogSeriesBySlug[product.slug]);
+const minFobUsd =
+  catalogSeries && catalogSeries.items.length > 0 ? Math.min(...catalogSeries.items.map((i) => i.fobUsd)) : null;
 const productCompliance = getProductCompliance(product.category);
 ---
 
@@ -372,14 +383,25 @@ const productCompliance = getProductCompliance(product.category);
             }
             {
               product.price?.amount ? (
-                <div class="mt-4 flex items-baseline gap-3">
-                  <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">
-                    {product.price.currency === 'USD' || !product.price.currency
-                      ? `$${product.price.amount}`
-                      : `${product.price.currency ?? ''} ${product.price.amount}`}
-                  </span>
-                  {product.inStock && (
-                    <span class="text-sm font-medium text-green-600">{t('product.inStock') || 'In stock'}</span>
+                <div class="mt-4">
+                  <div class="flex items-baseline gap-3">
+                    <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">
+                      {product.price.currency === 'USD' || !product.price.currency
+                        ? `$${product.price.amount}`
+                        : `${product.price.currency ?? ''} ${product.price.amount}`}
+                    </span>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                      {t('product.retailPrice') || 'Retail price'}
+                    </span>
+                    {product.inStock && (
+                      <span class="text-sm font-medium text-green-600">{t('product.inStock') || 'In stock'}</span>
+                    )}
+                  </div>
+                  {minFobUsd !== null && (
+                    <p class="mt-1 text-sm font-medium text-sky-700 dark:text-sky-400">
+                      {t('product.wholesaleFrom') || 'Wholesale FOB Qingdao from'} ${minFobUsd.toFixed(2)} —{' '}
+                      {t('product.priceBasis') || 'price basis 20 pcs per item'}
+                    </p>
                   )}
                 </div>
               ) : null
@@ -523,90 +545,6 @@ const productCompliance = getProductCompliance(product.category);
     )
   }
 
-  {/* Why This Exists (Problem) */}
-  {
-    (product.problem || rec?.problem) && (
-      <section
-        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
-        data-ai-block="problem"
-      >
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <div class="bg-blue-50/80 dark:bg-blue-900/30 border-l-4 border-blue-500 rounded-r-xl px-6 py-5">
-            <div class="flex items-start gap-3">
-              <span class="text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider flex-shrink-0 mt-0.5">
-                {t('v2.problem')}
-              </span>
-              <div class="space-y-2 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
-                <p>{product.problem || rec?.problem}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  {/* Product Definition — Who is it for? */}
-  {
-    (product.definition || rec?.definition) && (
-      <section
-        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
-        data-ai-block="definition"
-      >
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
-            {t('product.definition') || 'Product Definition'}
-          </span>
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
-            {t('product.whoIsItFor') || 'Who is it for?'}
-          </h2>
-          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">
-            {product.definition || rec?.definition}
-          </p>
-          {(product.audience || rec?.audience) && (
-            <div class="mt-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-5">
-              <p class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-2">
-                {t('product.designedFor') || 'Designed for'}
-              </p>
-              <p class="text-sm text-gray-600 dark:text-slate-400 capitalize">{product.audience || rec?.audience}</p>
-            </div>
-          )}
-        </div>
-      </section>
-    )
-  }
-
-  {/* Overview + Use Cases */}
-  {
-    ((product.ai_use_cases || []).length > 0 || (rec?.ai_use_cases || []).length > 0) && (
-      <section
-        class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800"
-        data-ai-block="use-case"
-      >
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            {t('product.useCases')}
-          </h2>
-          <div class="grid md:grid-cols-2 gap-3">
-            {(product.ai_use_cases || rec?.ai_use_cases || []).map((uc: any) => (
-              <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-                <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
-                <p class="text-sm text-gray-700 dark:text-slate-300">{uc}</p>
-              </div>
-            ))}
-            <div class="flex items-start gap-3 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/30 border border-sky-100 dark:border-sky-800">
-              <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
-              <div>
-                <p class="text-sm font-semibold text-sky-800 dark:text-sky-300">{t('product.skillLevel')}</p>
-                <p class="text-sm text-sky-700 dark:text-sky-400 capitalize">{product.skill || rec?.skill}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
   {/* Comparison */}
   {
     (product.ai_comparison || rec?.ai_comparison) && (
@@ -658,6 +596,29 @@ const productCompliance = getProductCompliance(product.category);
   }
 
   <JsonLd type="FAQPage" faqs={product.ai_faq || rec?.ai_faq || []} />
+
+  {/* Safety & Usage */}
+  {
+    ((rec?.safety_rules || []).length > 0 || (product.safety_rules || []).length > 0) && (
+      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="safety">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+            {t('product.safetyUsage') || 'Safety & Usage'}
+          </h2>
+          <div class="bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl px-6 py-5">
+            <ul class="space-y-2.5">
+              {(product.safety_rules || rec?.safety_rules || []).map((rule: string) => (
+                <li class="flex items-start gap-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+                  <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 flex-shrink-0" />
+                  <span class="capitalize">{rule}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   {/* Full Technical Specifications */}
   {
@@ -926,48 +887,6 @@ const productCompliance = getProductCompliance(product.category);
       }
     }
   </script>
-
-  {/* Hidden AI data blocks (machine-readable) */}
-  {
-    (product.definition || product.problem || product.audience || rec) && (
-      <section class="sr-only" aria-hidden="true">
-        <div data-ai-block="definition">
-          <p>{product.definition || rec?.definition}</p>
-          <p>Problem it solves: {product.problem || rec?.problem}</p>
-          <p>How it works: {product.howItWorks || rec?.howItWorks}</p>
-          <p>Target audience: {product.audience || rec?.audience}</p>
-        </div>
-        <div data-ai-block="use-case">
-          <p>Use cases: {(product.ai_use_cases || rec?.ai_use_cases || []).join('; ')}</p>
-          <p>Environments: {(product.environment || rec?.environment || []).join(', ')}</p>
-          <p>Water conditions: {(product.water_condition || rec?.water_condition || []).join(', ')}</p>
-          <p>Skill level: {product.skill || rec?.skill}</p>
-        </div>
-        <div data-ai-block="specification">
-          {Object.entries(product.ai_specs || rec?.ai_specs || {}).map(([k, v]) => (
-            <p data-spec={k}>
-              {k}: {v}
-            </p>
-          ))}
-        </div>
-        <div data-ai-block="comparison">
-          <p>{product.ai_comparison || rec?.ai_comparison}</p>
-        </div>
-        <div data-ai-block="faq">
-          {(product.ai_faq || rec?.ai_faq || []).map((f: any) => (
-            <p>
-              <strong>Q:</strong> {f.q} <strong>A:</strong> {f.a}
-            </p>
-          ))}
-        </div>
-        <div data-ai-block="constraint">
-          <p>Safety rules: {(rec?.safety_rules || []).join('; ')}</p>
-          <p>Safety level: {rec?.safety_level}</p>
-          <p>Regions: {(rec?.region || []).join(', ')}</p>
-        </div>
-      </section>
-    )
-  }
 
   <ToBlogLink href={`/${lang}/products`} text={t('product.backToProducts') || 'Back to Products'} />
 </ProductLayout>

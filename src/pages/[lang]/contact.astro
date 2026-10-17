@@ -85,42 +85,42 @@ const HUB_TEXT: Record<
 > = {
   en: {
     cardTitle: 'Contact Information',
-    hqTitle: 'Global HQ & Billing — Felizbay LLC',
+    hqTitle: 'US Office — Felizbay LLC',
     hubTitle: 'Manufacturing & Export Hub',
     emailTitle: 'General enquiries',
     emailNote: 'MST & GMT+8 — replies within 24 hours',
   },
   de: {
     cardTitle: 'Kontaktinformationen',
-    hqTitle: 'Globalzentrale & Abrechnung — Felizbay LLC',
+    hqTitle: 'US-Büro — Felizbay LLC',
     hubTitle: 'Fertigungs- & Exportzentrum',
     emailTitle: 'Allgemeine Anfragen',
     emailNote: 'MST & GMT+8 — Antwort innerhalb von 24 Stunden',
   },
   es: {
     cardTitle: 'Información de contacto',
-    hqTitle: 'Sede global y facturación — Felizbay LLC',
+    hqTitle: 'Oficina en EE. UU. — Felizbay LLC',
     hubTitle: 'Centro de producción y exportación',
     emailTitle: 'Consultas generales',
     emailNote: 'MST y GMT+8 — respuesta en 24 horas',
   },
   fr: {
     cardTitle: 'Coordonnées',
-    hqTitle: 'Siège mondial & facturation — Felizbay LLC',
+    hqTitle: 'Bureau américain — Felizbay LLC',
     hubTitle: 'Centre de production & export',
     emailTitle: 'Demandes générales',
     emailNote: 'MST et GMT+8 — réponse sous 24 heures',
   },
   it: {
     cardTitle: 'Informazioni di contatto',
-    hqTitle: 'Sede globale e fatturazione — Felizbay LLC',
+    hqTitle: 'Ufficio USA — Felizbay LLC',
     hubTitle: 'Hub di produzione ed esportazione',
     emailTitle: 'Richieste generali',
     emailNote: 'MST e GMT+8 — risposta entro 24 ore',
   },
   cs: {
     cardTitle: 'Kontaktní informace',
-    hqTitle: 'Globální centrála & fakturace — Felizbay LLC',
+    hqTitle: 'Americká kancelář — Felizbay LLC',
     hubTitle: 'Výrobní a exportní centrum',
     emailTitle: 'Obecné dotazy',
     emailNote: 'MST a GMT+8 — odpověď do 24 hodin',
@@ -130,7 +130,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Map from '~/components/widgets/Map.astro';
 import { SITE } from 'astrowind:config';
 import { languages } from '~/i18n/config';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
@@ -313,7 +312,7 @@ const faqSchema = JSON.stringify({
               </div>
               <div>
                 <p class="font-medium text-gray-900">{hub.hqTitle}</p>
-                <p class="text-sm text-gray-500">New Mexico, United States</p>
+                <p class="text-sm text-gray-500">Design, Sales &amp; Billing — New Mexico, United States</p>
                 <p class="text-sm text-gray-500">+1 279 732 3333 · contact@felizbay.com</p>
               </div>
             </div>
@@ -333,7 +332,7 @@ const faqSchema = JSON.stringify({
               </div>
               <div>
                 <p class="font-medium text-gray-900">{hub.hubTitle}</p>
-                <p class="text-sm text-gray-500" set:html={branding.address || 'New Mexico, USA'} />
+                <p class="text-sm text-gray-500">Qingdao, Shandong, China — FOB Qingdao port</p>
                 <p class="text-sm text-gray-500">+86 13305324192 · factory@felizbay.com</p>
               </div>
             </div>
@@ -358,16 +357,6 @@ const faqSchema = JSON.stringify({
             </div>
           </div>
         </div>
-
-        <Map
-          title={data.map?.title}
-          subtitle={data.map?.subtitle}
-          address={data.map?.address}
-          embedUrl={data.map?.embedUrl}
-          latitude={data.map?.latitude}
-          longitude={data.map?.longitude}
-          zoom={data.map?.zoom}
-        />
       </div>
     </div>
   </section>

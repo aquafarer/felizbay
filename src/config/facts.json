@@ -15,12 +15,21 @@
     "url": "https://felizbay.com"
   },
 
-  "factory": {
-    "areaSqm": 0,
+  "office": {
+    "label": "US Office — Design, Sales & Billing",
+    "legalEntity": "Felizbay LLC",
     "city": "",
-    "prefecture": "",
     "province": "New Mexico",
-    "country": "US",
+    "country": "US"
+  },
+
+  "factory": {
+    "label": "Manufacturing & Export Hub",
+    "areaSqm": 0,
+    "city": "Qingdao",
+    "prefecture": "",
+    "province": "Shandong",
+    "country": "CN",
     "postalCode": "",
     "streetAddress": "",
     "productionLines": 0,
@@ -58,7 +67,7 @@
     { "name": "EN 16582-1", "body": "CEN" },
     { "name": "ASTM F2666", "body": "ASTM International" },
     { "name": "ISO 9001:2015", "body": "SGS", "since": 2022 },
-    { "name": "BSCI", "body": "Intertek" },
+    { "name": "BSCI", "body": "amfori" },
     { "name": "REACH", "body": null },
     { "name": "RoHS", "body": null }
   ],

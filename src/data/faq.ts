@@ -92,7 +92,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-kids-safety',
     question: 'Are inflatable pools safe for children?',
     answer:
-      'Yes, with basic supervision. Always watch children near water, empty small pools after use, and secure larger pools with a cover or ladder removal. Check local fencing regulations for pools above certain depths, and never leave children unattended.',
+      'Yes — with active adult supervision at all times. Children must never be left unattended in or near any pool, even shallow ones. Empty small pools after use, secure larger pools with a cover or ladder removal, and check local fencing regulations for pools above certain depths.',
     category: 'safety',
     relatedProducts: [],
     relatedGuides: [],
