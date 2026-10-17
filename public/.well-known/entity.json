@@ -3,14 +3,14 @@
   "@type": "Organization",
   "@id": "https://felizbay.com/#organization",
   "name": "Felizbay",
-  "legalName": "Felizbay LLC",
+  "legalName": "Aquafarer LLC",
   "url": "https://felizbay.com",
   "description": "Felizbay designs and supplies premium drop stitch inflatable swimming pools — rectangular and round models with rigid, rock-solid walls that set up in minutes and fold away for winter storage.",
   "industry": "Consumer Pool & Outdoor Products",
   "isicV4": "3230",
   "location": {
     "@type": "Place",
-    "name": "Felizbay LLC",
+    "name": "Aquafarer LLC",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "New Mexico",

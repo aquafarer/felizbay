@@ -67,7 +67,7 @@ export function organizationNode() {
     },
 
     // ManufacturingBusiness 的生产地点：美国设计 + 青岛工厂生产。
-    // address 是法律实体（Felizbay LLC, New Mexico）的注册地址，
+    // address 是法律实体（Aquafarer LLC, New Mexico）的注册地址，
     // location 单独声明中国生产基地，两个实体不再混在一处。
     location: {
       '@type': 'Place',

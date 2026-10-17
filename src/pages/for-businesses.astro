@@ -1,0 +1,193 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import type { MetaData } from '~/types';
+
+interface BusinessTrack {
+  icon: string;
+  title: string;
+  description: string;
+  points: string[];
+  href: string;
+  cta: string;
+}
+
+const tracks: BusinessTrack[] = [
+  {
+    icon: 'tabler:building-cottage',
+    title: 'Vacation Rentals & Glamping',
+    description:
+      'Equip cabins, glamping sites, and short-term rentals with pools and SPA tubs that install in under an hour and store in the off-season.',
+    points: [
+      'Seasonal setups with no construction',
+      'Commercial configurations available',
+      'Volume pricing for multi-unit sites',
+    ],
+    href: '/pool-ideas/pools-for-vacation-rentals',
+    cta: 'See rental setups',
+  },
+  {
+    icon: 'tabler:building-store',
+    title: 'Retail & Brand Partners',
+    description:
+      'Stock the retail Felizbay range or become a distribution partner for drop-stitch pools and SPA tubs in your market.',
+    points: [
+      'Wholesale program with clear MOQ tiers',
+      'Full size and FOB price matrix published',
+      'Qingdao factory production capacity',
+    ],
+    href: '/wholesale',
+    cta: 'Wholesale program',
+  },
+  {
+    icon: 'tabler:tools',
+    title: 'Custom OEM / ODM',
+    description:
+      'Your specification, our factory: custom sizes, colors, logo printing, covers, and retail packaging produced at our Qingdao manufacturing partner.',
+    points: [
+      'Five-step documented production process',
+      '24–48 hour pressure-drop test on every unit',
+      'Custom packaging and accessories',
+    ],
+    href: '/oem-odm',
+    cta: 'OEM / ODM details',
+  },
+  {
+    icon: 'tabler:tag',
+    title: 'Private Label Pools',
+    description:
+      'Launch your own pool brand on proven drop-stitch platforms — from product adaptation to branded packaging and documentation.',
+    points: [
+      'Your brand on tested platforms',
+      'Branded manuals, packaging, and warranty docs',
+      'Quality control process you can audit',
+    ],
+    href: '/private-label',
+    cta: 'Private label program',
+  },
+];
+
+const resources: Array<{ title: string; description: string; href: string }> = [
+  {
+    title: 'Commercial Pools',
+    description: 'Larger-format pools for commercial and event applications.',
+    href: '/commercial-pools',
+  },
+  {
+    title: 'Manufacturing Process',
+    description: 'Inside the five-step Qingdao production line, from CNC cutting to pressure testing.',
+    href: '/manufacturing',
+  },
+  {
+    title: 'Quality Control',
+    description: 'The 24–48 hour pressure-drop test, seam inspection, and material compliance checks.',
+    href: '/quality-control',
+  },
+  {
+    title: 'Specs & FOB Price List',
+    description: 'The complete size ladder and FOB Qingdao price matrix, updated October 2026.',
+    href: '/products/specs',
+  },
+];
+
+const metadata = merge(
+  {
+    title: `For Businesses | ${SITE.name}`,
+    description: `Felizbay business programs: vacation rental and glamping setups, wholesale, OEM/ODM manufacturing, and private-label pools from our Qingdao factory partner.`,
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata} breadcrumbs={[{ name: 'For Businesses' }]}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-14 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">For Businesses</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Felizbay for Business Projects
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium leading-relaxed">
+        The same drop-stitch platform behind our retail pools powers rental fleets, retail programs, and custom brand
+        production. Four ways to work with us — pick the track that matches your project.
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        tracks.map((track) => (
+          <div class="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-7">
+            <Icon name={track.icon} class="w-9 h-9 text-primary dark:text-blue-400 mb-4" />
+            <h2 class="text-xl font-semibold font-heading dark:text-slate-100 mb-2">{track.title}</h2>
+            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed mb-4">{track.description}</p>
+            <ul class="space-y-2 mb-6 flex-1">
+              {track.points.map((p) => (
+                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-300">
+                  <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-green-500 shrink-0" />
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={track.href}
+              class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              {track.cta}
+              <Icon name="tabler:arrow-right" class="w-4 h-4" />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Resources -->
+    <div class="mt-14">
+      <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+        Factory &amp; program resources
+      </h2>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {
+          resources.map((r) => (
+            <a
+              href={r.href}
+              class="block p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
+            >
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200 mb-1">{r.title}</h3>
+              <p class="text-xs text-gray-500 dark:text-slate-400 leading-relaxed">{r.description}</p>
+              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
+                Open
+                <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-14 bg-gray-900 dark:bg-slate-800 rounded-2xl px-6 sm:px-10 py-10 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">Have a project in mind?</h2>
+      <p class="text-gray-300 dark:text-slate-300 max-w-xl mx-auto mb-6">
+        Tell us the sizes, quantities, and timeline — our team responds with a quotation, usually within one business
+        day.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all"
+        >
+          Request a Quotation
+          <Icon name="tabler:arrow-right" class="w-5 h-5" />
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+        >
+          Contact the Team
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

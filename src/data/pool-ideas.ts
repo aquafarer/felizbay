@@ -1,0 +1,252 @@
+/**
+ * Pool Ideas scenario content — consumer-first use-case pages.
+ * Each scenario answers a real buyer need, lists suitable conditions,
+ * matches Felizbay product families, and embeds a real size table
+ * sourced from the pool catalog (no invented specs).
+ */
+
+export interface PoolIdeaMatch {
+  /** Series id from pool-catalog.ts */
+  series: 'round' | 'rect-square' | 'hot-tub-square-rect' | 'hot-tub-round';
+  /** Why this family fits the scenario */
+  reason: string;
+}
+
+export interface PoolIdea {
+  slug: string;
+  navTitle: string;
+  /** Eyebrow / category label */
+  eyebrow: string;
+  title: string;
+  intro: string[];
+  /** Suitable-conditions checklist */
+  conditions: string[];
+  matches: PoolIdeaMatch[];
+  /** Optional inline note shown between matches and the size table */
+  tableNote?: string;
+  safety: string[];
+  /** Closing CTA line */
+  cta: string;
+}
+
+export const POOL_IDEAS: PoolIdea[] = [
+  {
+    slug: 'backyard-pools-for-families',
+    navTitle: 'Backyard Pools for Families',
+    eyebrow: 'Pool Ideas',
+    title: 'Backyard Pools for Families',
+    intro: [
+      'A family pool has to survive summer holidays, birthday parties, and daily after-school splashing — while still being safe for mixed ages and easy for parents to manage. Felizbay drop-stitch pools give you rigid, full-size swimming at a fraction of the cost and commitment of a built-in pool.',
+      'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rock-solid at 4–5 PSI: children can lean on the rim, and the pool keeps its shape all season. When summer ends, it drains, folds, and stores in a storage bag.',
+    ],
+    conditions: [
+      'A flat, load-bearing surface of about 3 × 3 m or larger (lawn, patio, or deck rated for the water weight)',
+      'Backyards where a permanent pool is impossible, not allowed, or too expensive',
+      'Families who want a real swimming depth (up to 1.5 m) without construction',
+      'Parents who can supervise actively whenever the pool is in use — inflatable pools require the same supervision as any pool',
+    ],
+    matches: [
+      {
+        series: 'round',
+        reason: 'The classic family choice — no corners, simple setup, and the largest size menu (2–10 m diameter) so the pool grows with your kids.',
+      },
+      {
+        series: 'rect-square',
+        reason: 'A rectangular layout is better for swimming lengths, pool games, and fitting along a fence or patio edge.',
+      },
+    ],
+    tableNote:
+      'Popular family sizes sit between 3 m and 5 m round, or 3 × 2 m rectangular — big enough to swim and play, small enough to heat and fill.',
+    safety: [
+      'Active adult supervision is required at all times when children are in or near the pool.',
+      'Empty or securely cover the pool when not in use; never leave standing water unattended around small children.',
+      'Check local fencing/barrier regulations — many jurisdictions require pool barriers regardless of pool type.',
+      'Inflate to the rated 4–5 PSI operating pressure so walls stay rigid; the pressure-relief valve guards against over-inflation.',
+    ],
+    cta: 'Ready to pick a size? Compare every model in the shop.',
+  },
+  {
+    slug: 'pools-for-small-backyards',
+    navTitle: 'Pools for Small Backyards',
+    eyebrow: 'Pool Ideas',
+    title: 'Pools for Small Backyards',
+    intro: [
+      'You do not need a big garden to have a real pool. Felizbay pools start at 2 m round and 2 × 2 m rectangular — footprints that fit a small patio, a side yard, or the corner of a townhouse garden — and they pack away completely in the off-season, returning your space when you need it.',
+      'Because the walls are rigid drop-stitch instead of sagging vinyl, even the smallest sizes feel like proper pools: straight sides, stable rim, real water depth.',
+    ],
+    conditions: [
+      'Free space from about 2 × 2 m upward, on a surface that can carry the water weight (a 2 m pool holds roughly 1.5 m³ of water — about 1.5 t)',
+      'Renters and homeowners who cannot excavate or build',
+      'Balconies and roof terraces only after a structural load check by a qualified engineer',
+      'Households that want the space back in winter for dining, play, or storage',
+    ],
+    matches: [
+      {
+        series: 'round',
+        reason: 'The Ø 2 × 0.5 m and Ø 3 × 1.2 m rounds are the smallest true swimmers in the range — low water volume, fast filling, easy storage.',
+      },
+      {
+        series: 'hot-tub-square-rect',
+        reason: 'From 1.5 × 1.5 m, a square SPA tub turns a tiny courtyard into a soaking spot with built-in seats.',
+      },
+      {
+        series: 'hot-tub-round',
+        reason: 'Ø 1.8–2.3 m round SPA tubs fit where nothing else does and seat the whole household.',
+      },
+    ],
+    tableNote:
+      'Small-space favorites: Ø 2 × 0.5 m round for splash play with young kids; Ø 3 × 1.2 m round or a square SPA tub for adults to actually swim or soak.',
+    safety: [
+      'Verify the floor or deck load rating before filling — water weighs about 1 t per m³.',
+      'Keep a clear, non-slip path around the pool for safe entry and exit.',
+      'Active supervision is required whenever children are near the water.',
+      'Use the included drain valve to empty the pool quickly when the season or weather demands it.',
+    ],
+    cta: 'See the exact footprints and prices in the shop.',
+  },
+  {
+    slug: 'large-pools-for-family-gatherings',
+    navTitle: 'Large Pools for Family Gatherings',
+    eyebrow: 'Pool Ideas',
+    title: 'Large Pools for Family Gatherings',
+    intro: [
+      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Felizbay\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m of real swimming depth and rims strong enough to sit on.',
+      'Despite the size, setup stays measured in minutes-to-an-hour with a 1000W electric pump — no crane, no excavation, no permits for permanent structures in most areas (always confirm local rules).',
+    ],
+    conditions: [
+      'Open lawn or hardstanding from roughly 5 × 5 m to 11 × 11 m',
+      'Ground that has been checked for level and load — a 6 m round pool at 1.2 m depth holds around 30 m³ of water (≈ 30 t)',
+      'Access to a water source with practical fill time and a safe drainage route for emptying',
+      'An adult designated to supervise the pool zone during gatherings, exactly as with any pool party',
+    ],
+    matches: [
+      {
+        series: 'round',
+        reason: 'Rounds up to Ø 10 m give the most swim area per square meter with no corners to manage — the natural centerpiece for a gathering.',
+      },
+      {
+        series: 'rect-square',
+        reason: 'The 6 × 5 × 1.5 m rectangular flagship is built for lap swimming, volleyball, and crowds of kids at once.',
+      },
+    ],
+    tableNote:
+      'Hosting 6–10 swimmers comfortably usually means Ø 5 m round or larger, or the biggest rectangular model — see the size ladder below.',
+    safety: [
+      'Assign a sober, undistracted adult as pool watcher whenever the pool is in use — crowded pool parties are the highest-risk scenario.',
+      'Establish and enforce a single entry/exit point; add the optional ladder or inflatable stairs for safe climbing.',
+      'Brief visiting children on pool rules before their first swim; non-swimmers stay in shallow zones with active supervision.',
+      'Empty the pool or block access after the event if it will be unattended.',
+    ],
+    cta: 'Compare the large-size options and pick your gathering pool.',
+  },
+  {
+    slug: 'outdoor-soaking-pools',
+    navTitle: 'Outdoor Soaking & Relaxation',
+    eyebrow: 'Pool Ideas',
+    title: 'Outdoor Soaking & Relaxation',
+    intro: [
+      'Not every backyard moment is about swimming. Sometimes the goal is hot water, built-in seats, and the sky above you. Felizbay constant-temperature SPA tubs bring that experience to patios, gardens, and terraces in square, rectangular, and round layouts from 1.5 m up.',
+      'The tubs share the same drop-stitch construction as our pools — rigid walls, 4–5 PSI operating pressure — plus insulated designs with seats, so they hold temperature efficiently and stay in place through four-season use in mild climates.',
+    ],
+    conditions: [
+      'A compact footprint from about 1.5 × 1.5 m on a level, load-capable surface',
+      'Access to power for the heater system (confirm the heater specification for the model you choose)',
+      'Users who want seated soaking and hydrotherapy-style relaxation rather than laps',
+      'A drainage route for regular water changes',
+    ],
+    matches: [
+      {
+        series: 'hot-tub-round',
+        reason: 'Ø 1.8 / 2.0 / 2.3 m round SPA tubs with built-in seats — the classic soaking circle for 2–6 people.',
+      },
+      {
+        series: 'hot-tub-square-rect',
+        reason: 'Square and rectangular tubs from 1.5 × 1.5 m to 3 × 2 m fit against walls and into corners without wasting a centimeter.',
+      },
+    ],
+    tableNote: 'All SPA sizes below are constant-temperature designs with integrated seating.',
+    safety: [
+      'Follow the heater manufacturer\u2019s water-temperature guidance; hot water is unsuitable for small children, pregnancy, and certain medical conditions — consult a doctor if unsure.',
+      'Never soak alone under the influence of alcohol or medication that causes drowsiness.',
+      'Keep electrical connections to the heater and pump protected and away from the water edge, per the product manual.',
+      'Enter and exit slowly using the built-in seats as steps; wet surfaces are slippery.',
+    ],
+    cta: 'Explore the SPA tubs and find your soaking size.',
+  },
+  {
+    slug: 'pools-for-vacation-rentals',
+    navTitle: 'Pools for Vacation Rentals',
+    eyebrow: 'Pool Ideas',
+    title: 'Pools for Vacation Rentals',
+    intro: [
+      'A pool is one of the strongest booking magnets a vacation rental can add — and one of the hardest. Felizbay drop-stitch pools were made for this gap: a genuine swimming pool that installs in under an hour, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
+      'Rigid 4–5 PSI walls and reinforced seams stand up to guest traffic, and the pressure-relief valve keeps over-enthusiastic inflation from doing damage.',
+    ],
+    conditions: [
+      'Rental properties with 3 × 3 m of usable outdoor space or more',
+      'Owners who want a pool amenity without permanent construction or year-round maintenance',
+      'Seasonal rentals where the pool can be drained, dried, and stored in the off-season',
+      'Clear guest rules: adult supervision required, pool hours, and no unattended children — reflect this in your listing and house manual',
+    ],
+    matches: [
+      {
+        series: 'round',
+        reason: 'Rounds are guest-proof: no corners, simplest cleaning, and sizes from splash-friendly to genuinely swimmable.',
+      },
+      {
+        series: 'rect-square',
+        reason: 'Rectangular models photograph beautifully for listings and give guests a defined swimming lane.',
+      },
+    ],
+    tableNote:
+      'For 4–8 guests, Ø 4–5 m round or 4 × 3 m rectangular is the sweet spot — impressive in photos, manageable to maintain.',
+    safety: [
+      'State supervision requirements prominently in the listing and inside the property.',
+      'Provide the pool rules in writing and confirm guests acknowledge them at check-in.',
+      'Check local short-term-rental pool regulations — barrier requirements typically apply to any pool, inflatable or not.',
+      'Inspect the pool between stays: valve seals, wall pressure, and drain function.',
+    ],
+    cta: 'Equip your rental — see the models and sizes.',
+  },
+  {
+    slug: 'pools-for-glamping-and-hospitality',
+    navTitle: 'Pools for Glamping & Hospitality',
+    eyebrow: 'Pool Ideas',
+    title: 'Pools for Glamping & Hospitality',
+    intro: [
+      'Glamping sites, boutique cabins, and countryside hotels compete on experience. A drop-stitch pool or SPA tub delivers a premium amenity that moves with your business: set it up for the season on a deck or level ground, then store it when the weather turns — no planning permission for permanent structures in many jurisdictions (always confirm locally).',
+      'For operators, the same product line is available in commercial configurations: custom sizes, branded colors, and OEM/ODM production through our Qingdao manufacturing partner.',
+    ],
+    conditions: [
+      'Level ground or a purpose-built deck rated for full water weight',
+      'Sites that operate seasonally and need the amenity to disappear in the off-season',
+      'Hospitality teams able to manage water treatment, daily checks, and guest supervision rules',
+      'Operators planning multiple units — volume pricing and private-label options apply (see For Businesses)',
+    ],
+    matches: [
+      {
+        series: 'hot-tub-round',
+        reason: 'A woodside soaking tub is the signature glamping moment — Ø 1.8–2.3 m fits almost any cabin deck.',
+      },
+      {
+        series: 'hot-tub-square-rect',
+        reason: 'Square tubs tuck against cabin walls and seat guests in a compact footprint.',
+      },
+      {
+        series: 'round',
+        reason: 'For sites that want a swim amenity, rounds up to Ø 10 m create a destination feature.',
+      },
+    ],
+    tableNote:
+      'Most glamping operators start with one or two SPA tubs per cabin cluster, then add a large round pool as the shared centerpiece.',
+    safety: [
+      'Post pool and tub rules at the amenity and in guest welcome materials; supervision requirements must be explicit.',
+      'Assign trained staff to daily water-quality and equipment checks during the season.',
+      'Follow commercial water-treatment guidance applicable to your region for shared guest pools.',
+      'Secure or drain amenities outside supervised hours.',
+    ],
+    cta: 'Outfit your site — browse the shop, or talk to our business team for volume pricing.',
+  },
+];
+
+export const findPoolIdea = (slug: string): PoolIdea | undefined => POOL_IDEAS.find((i) => i.slug === slug);

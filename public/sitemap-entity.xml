@@ -2306,6 +2306,22 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/find-your-pool/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/find-your-pool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/find-your-pool/"/>
+    <x:entity>find-your-pool</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/for-businesses/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/for-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/for-businesses/"/>
+    <x:entity>for-businesses</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/fr/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/"/>
@@ -4212,6 +4228,62 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/terms/"/>
     <x:entity>pl/terms</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-ideas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/"/>
+    <x:entity>pool-ideas</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-ideas/backyard-pools-for-families/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/backyard-pools-for-families/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/backyard-pools-for-families/"/>
+    <x:entity>pool-ideas/backyard-pools-for-families</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-ideas/large-pools-for-family-gatherings/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/large-pools-for-family-gatherings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/large-pools-for-family-gatherings/"/>
+    <x:entity>pool-ideas/large-pools-for-family-gatherings</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-ideas/outdoor-soaking-pools/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/outdoor-soaking-pools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/outdoor-soaking-pools/"/>
+    <x:entity>pool-ideas/outdoor-soaking-pools</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-ideas/pools-for-glamping-and-hospitality/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/pools-for-glamping-and-hospitality/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/pools-for-glamping-and-hospitality/"/>
+    <x:entity>pool-ideas/pools-for-glamping-and-hospitality</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-ideas/pools-for-small-backyards/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/pools-for-small-backyards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/pools-for-small-backyards/"/>
+    <x:entity>pool-ideas/pools-for-small-backyards</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-ideas/pools-for-vacation-rentals/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/pools-for-vacation-rentals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/pools-for-vacation-rentals/"/>
+    <x:entity>pool-ideas/pools-for-vacation-rentals</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>

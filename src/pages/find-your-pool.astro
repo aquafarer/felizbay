@@ -1,0 +1,306 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import type { MetaData } from '~/types';
+
+interface PoolSetup {
+  title: string;
+  description: string;
+  sizes: string;
+  products: string;
+  ideaHref?: string;
+  tags: string[];
+}
+
+const setups: PoolSetup[] = [
+  {
+    title: 'Family Splash Pool',
+    description:
+      'Knee-to-waist-deep play space for kids with rigid walls parents can lean on. Fills fast, heats easily.',
+    sizes: 'Ø 3 – 4 m round, 1 – 1.2 m wall',
+    products: 'Classic Round Pool',
+    ideaHref: '/pool-ideas/backyard-pools-for-families',
+    tags: ['use-play', 'space-medium', 'who-family'],
+  },
+  {
+    title: 'Compact Plunge Pool',
+    description:
+      'The smallest true pool we make — fits a side yard or small patio corner, still rigid and deep enough to cool off in.',
+    sizes: 'Ø 2 × 0.5 m round',
+    products: 'Classic Round Pool (S2005)',
+    ideaHref: '/pool-ideas/pools-for-small-backyards',
+    tags: ['use-play', 'space-compact', 'who-family'],
+  },
+  {
+    title: 'Backyard Swim Pool',
+    description:
+      'Real swimming depth with a rim strong enough to sit on. The everyday family pool that packs away in autumn.',
+    sizes: 'Ø 5 – 6 m round or 4 × 3 m rectangular',
+    products: 'Round & Rectangular Pools',
+    ideaHref: '/pool-ideas/backyard-pools-for-families',
+    tags: ['use-play', 'space-large', 'who-family'],
+  },
+  {
+    title: 'Patio Soaking Tub',
+    description: 'Built-in seats, constant-temperature design, and a footprint that fits the smallest courtyard.',
+    sizes: '1.5 × 1.5 m square or Ø 1.8 m round',
+    products: 'SPA Tubs (SS / RS Series)',
+    ideaHref: '/pool-ideas/outdoor-soaking-pools',
+    tags: ['use-soak', 'space-compact', 'who-adults'],
+  },
+  {
+    title: 'Garden Hot Tub',
+    description: 'A full soaking spa for the household — insulated, seated, and sized for a normal garden corner.',
+    sizes: 'Ø 2.0 – 2.3 m round or 3 × 2 m square',
+    products: 'SPA Tubs (SS / RS Series)',
+    ideaHref: '/pool-ideas/outdoor-soaking-pools',
+    tags: ['use-soak', 'space-medium', 'who-adults'],
+  },
+  {
+    title: 'Gathering Pool',
+    description:
+      'The centerpiece for parties and reunions — swim-area sizes with reinforced seams and a pressure-relief valve.',
+    sizes: 'Ø 6 – 10 m round or 6 × 5 m rectangular',
+    products: 'Large Round & Rectangular',
+    ideaHref: '/pool-ideas/large-pools-for-family-gatherings',
+    tags: ['use-entertain', 'space-large', 'who-mixed'],
+  },
+  {
+    title: 'Guest Amenity Pool',
+    description:
+      'A booking magnet for vacation rentals — installs in under an hour, drains at season end, no construction.',
+    sizes: 'Ø 4 – 5 m round typical',
+    products: 'Round & Rectangular Pools',
+    ideaHref: '/pool-ideas/pools-for-vacation-rentals',
+    tags: ['use-entertain', 'space-medium', 'who-mixed'],
+  },
+  {
+    title: 'Cabin Soaking Tub',
+    description: 'The signature glamping moment: a woodside hot tub for cabin decks and boutique hospitality sites.',
+    sizes: 'Ø 1.8 – 2.3 m round',
+    products: 'Round SPA Tub (RS Series)',
+    ideaHref: '/pool-ideas/pools-for-glamping-and-hospitality',
+    tags: ['use-soak', 'space-medium', 'who-mixed'],
+  },
+];
+
+const questions: Array<{ label: string; filters: Array<{ id: string; text: string }> }> = [
+  {
+    label: 'What will you use it for?',
+    filters: [
+      { id: 'use-play', text: 'Swim & Play' },
+      { id: 'use-soak', text: 'Relax & Soak' },
+      { id: 'use-entertain', text: 'Entertain Guests' },
+    ],
+  },
+  {
+    label: 'How much flat space do you have?',
+    filters: [
+      { id: 'space-compact', text: 'Compact (under 3 m)' },
+      { id: 'space-medium', text: 'Medium (3 – 5 m)' },
+      { id: 'space-large', text: 'Large (over 5 m)' },
+    ],
+  },
+  {
+    label: 'Who is it mainly for?',
+    filters: [
+      { id: 'who-family', text: 'Kids & Family' },
+      { id: 'who-adults', text: 'Adults' },
+      { id: 'who-mixed', text: 'Guests / Mixed' },
+    ],
+  },
+];
+
+const metadata = merge(
+  {
+    title: `Find Your Pool | ${SITE.name}`,
+    description: `Answer three quick questions — use, space, and who's swimming — and find the right Felizbay inflatable pool size and model for your backyard.`,
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata} breadcrumbs={[{ name: 'Find Your Pool' }]}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Pool Finder</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Find Your Pool</h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Three questions. One clear recommendation. Sizes come straight from the Felizbay factory catalog.
+      </p>
+    </header>
+
+    <!-- Questions -->
+    <div class="mb-10 space-y-5" data-finder>
+      {
+        questions.map((q) => (
+          <div class="text-center" data-question={q.label}>
+            <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">{q.label}</p>
+            <div class="flex flex-wrap items-center justify-center gap-2">
+              {q.filters.map((f) => (
+                <button
+                  type="button"
+                  data-answer={f.id}
+                  class="finder-chip inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700"
+                >
+                  {f.text}
+                </button>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+      <div class="text-center">
+        <button
+          type="button"
+          data-finder-reset
+          class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-500 dark:text-slate-400 hover:text-gray-800 dark:hover:text-slate-200 transition-colors"
+        >
+          <Icon name="tabler:refresh" class="w-4 h-4" />
+          Start over
+        </button>
+      </div>
+    </div>
+
+    <!-- Result cards -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-setup-grid>
+      {
+        setups.map((s) => (
+          <article
+            class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
+            data-tags={s.tags.join(' ')}
+          >
+            <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
+            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
+            <dl class="mt-4 space-y-2 text-sm">
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  Typical size
+                </dt>
+                <dd class="font-medium text-primary dark:text-blue-400">{s.sizes}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  Product family
+                </dt>
+                <dd class="text-gray-700 dark:text-slate-300">{s.products}</dd>
+              </div>
+            </dl>
+            <div class="mt-5 flex items-center gap-3">
+              <a
+                href="/products"
+                class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                Shop this setup
+              </a>
+              {s.ideaHref && (
+                <a
+                  href={s.ideaHref}
+                  class="inline-flex items-center justify-center px-4 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+                >
+                  Guide
+                </a>
+              )}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <p class="mt-6 text-center text-sm text-gray-400 dark:text-slate-500" data-finder-hint>
+      Tip: answer all three questions for the tightest match — or browse everything in the shop.
+    </p>
+
+    <!-- How to measure -->
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+      {
+        [
+          {
+            icon: 'tabler:ruler',
+            title: 'Measure your space',
+            text: 'Mark the pool footprint with string or tape, leaving at least 50 cm of clear, non-slip walkway on all sides. Remember the surface must carry the water: roughly 1 t per m³.',
+          },
+          {
+            icon: 'tabler:flame',
+            title: 'Plan for water & power',
+            text: 'Check your fill time from a garden tap, plan a safe drainage route for the drain valve, and keep the electric pump connection away from the water edge.',
+          },
+          {
+            icon: 'tabler:shield-check',
+            title: 'Plan for safety',
+            text: 'Active adult supervision whenever the pool is in use, empty or cover it between sessions, and check your local barrier rules — they usually apply to inflatable pools too.',
+          },
+        ].map((step) => (
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-6">
+            <Icon name={step.icon} class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+            <h3 class="font-semibold font-heading dark:text-slate-100 mb-2">{step.title}</h3>
+            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{step.text}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-14 text-center">
+      <a
+        href="/products"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition-all"
+      >
+        Browse All Felizbay Pools
+        <Icon name="tabler:arrow-right" class="w-5 h-5" />
+      </a>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const grid = document.querySelector<HTMLElement>('[data-setup-grid]');
+      const chips = document.querySelectorAll<HTMLElement>('[data-answer]');
+      const reset = document.querySelector<HTMLElement>('[data-finder-reset]');
+      if (!grid) return;
+      const container: HTMLElement = grid;
+      const active: Record<string, string> = {};
+      function apply(): void {
+        const groups = Object.keys(active).filter((g) => active[g]);
+        const cards = Array.from(container.children) as HTMLElement[];
+        for (const card of cards) {
+          const tags = (card.getAttribute('data-tags') || '').split(' ');
+          const show = groups.every((g) => tags.includes(active[g]));
+          card.style.display = show ? '' : 'none';
+        }
+      }
+      function setChip(chip: HTMLElement, on: boolean): void {
+        chip.classList.toggle('bg-primary', on);
+        chip.classList.toggle('text-white', on);
+        chip.classList.toggle('border-primary', on);
+        chip.classList.toggle('dark:bg-blue-500', on);
+        chip.classList.toggle('dark:border-blue-500', on);
+      }
+      chips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+          const groupEl = chip.closest('[data-question]');
+          const group = groupEl?.getAttribute('data-question') || '';
+          const wasOn = active[group] === chip.getAttribute('data-answer');
+          if (wasOn) {
+            delete active[group];
+          } else {
+            const prev = groupEl?.querySelector<HTMLElement>('[data-answer].bg-primary');
+            if (prev) setChip(prev, false);
+            active[group] = chip.getAttribute('data-answer') || '';
+          }
+          setChip(chip, !wasOn);
+          apply();
+        });
+      });
+      if (reset) {
+        reset.addEventListener('click', () => {
+          for (const key of Object.keys(active)) delete active[key];
+          chips.forEach((chip) => setChip(chip, false));
+          apply();
+        });
+      }
+    })();
+  </script>
+</Layout>

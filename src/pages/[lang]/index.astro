@@ -9,6 +9,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
+import Icon from '~/components/ui/Icon.astro';
 import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
 import { localizeProductData } from '~/lib/product-l10n';
@@ -50,52 +51,26 @@ const customerItems = (customerTypes.items ?? []).map(
 );
 
 const metadata = {
-  title: `Drop Stitch Inflatable Pool Manufacturer | ${SITE.name}`,
+  title: `Premium Drop Stitch Inflatable Pools | ${SITE.name}`,
   description:
-    'Felizbay is a drop stitch inflatable pool manufacturer with 48 SKUs across 4 collections. OEM/ODM, wholesale and private label with FOB factory pricing.',
+    'Felizbay premium drop stitch inflatable pools — rigid walls, fast setup, and easy storage for backyards and outdoor spaces. Compare sizes and find your pool. Designed and operated by Aquafarer LLC, USA.',
 };
 ---
 
 <Layout metadata={metadata}>
   {
     hero.image || hero.title ? (
-      <Hero tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} image={hero.image} />
+      <Hero
+        tagline={hero.tagline}
+        title={hero.title}
+        subtitle={hero.subtitle}
+        actions={hero.actions}
+        image={hero.image}
+      />
     ) : null
   }
 
-  <!-- Product highlights -->
-  {
-    poolProducts.length > 0 && (
-      <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
-        <div class="text-center mb-8">
-          <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
-            {t('product.catalog') || 'Pool Catalog'}
-          </p>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading">
-            {categories.title || 'Inflatable Swimming Pools'}
-          </h2>
-          <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
-            {categories.subtitle || ''}
-          </p>
-        </div>
-        <div class="grid gap-6 md:grid-cols-3">
-          {poolProducts.map((p) => (
-            <ProductCard product={p} lang={lang} />
-          ))}
-        </div>
-      </section>
-    )
-  }
-
   <Stats title={stats.title} stats={stats.stats} />
-
-  <Features2
-    tagline={customerTypes.tagline}
-    title={customerTypes.title}
-    subtitle={customerTypes.subtitle}
-    columns={2}
-    items={customerItems}
-  />
 
   <Features2
     id={features.id}
@@ -106,9 +81,63 @@ const metadata = {
     items={features.items}
   />
 
+  <Features2
+    tagline={customerTypes.tagline}
+    title={customerTypes.title}
+    subtitle={customerTypes.subtitle}
+    columns={3}
+    items={customerItems}
+  />
+
+  <!-- Product highlights -->
+  {
+    poolProducts.length > 0 && (
+      <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
+        <div class="text-center mb-8">
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+            {categories.tagline || t('product.catalog') || 'Shop Pools'}
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading">
+            {categories.title || 'Explore Our Pools'}
+          </h2>
+          <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
+            {categories.subtitle || ''}
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          {poolProducts.map((p) => (
+            <ProductCard product={p} lang={lang} />
+          ))}
+        </div>
+        <div class="mt-8 text-center">
+          <a
+            href={`/products`}
+            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+          >
+            <Icon name="tabler:pool" class="w-4 h-4" />
+            View All Pools
+          </a>
+        </div>
+      </section>
+    )
+  }
+
+  <Steps2 title={steps.title} items={steps.items} image={steps.image} />
+
+  <Features2
+    tagline={compliance.tagline}
+    title={compliance.title}
+    subtitle={compliance.subtitle}
+    columns={4}
+    items={compliance.items}
+  />
+
+  <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
+
+  <!-- For Businesses band -->
   {
     workshop.title ? (
-      <section class="px-4 py-12 sm:px-6 mx-auto max-w-7xl">
+      <section class="px-4 py-12 sm:px-6 mx-auto max-w-7xl bg-gray-50/50 dark:bg-slate-900/40 rounded-3xl">
         <div class="text-center max-w-3xl mx-auto mb-10">
           {workshop.tagline && (
             <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
@@ -119,27 +148,24 @@ const metadata = {
         </div>
         <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {(workshop.items ?? []).map((item: { title: string; description: string }) => (
-            <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/60 border border-gray-100 dark:border-slate-700">
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-800/60 border border-gray-100 dark:border-slate-700">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100">{item.title}</h3>
               <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
+        <div class="mt-8 text-center">
+          <a
+            href="/for-businesses"
+            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+          >
+            Explore Business Solutions
+            <Icon name="tabler:arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
       </section>
     ) : null
   }
-
-  <Features2
-    tagline={compliance.tagline}
-    title={compliance.title}
-    subtitle={compliance.subtitle}
-    columns={4}
-    items={compliance.items}
-  />
-
-  <Steps2 title={steps.title} items={steps.items} image={steps.image} />
-
-  <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
 
   {cta.title ? <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} /> : null}
 </Layout>
