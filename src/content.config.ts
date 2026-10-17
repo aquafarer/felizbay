@@ -145,9 +145,18 @@ const caseUseCollection = defineCollection({
   schema: caseUseSchema,
 });
 
+const poolIdeaDetailCollection = defineCollection({
+  loader: glob({ pattern: ['*.md'], base: 'src/data/pool-idea-detail' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
   product: productCollection,
   technology: technologyCollection,
   'case-use': caseUseCollection,
+  'pool-idea-detail': poolIdeaDetailCollection,
 };

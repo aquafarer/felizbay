@@ -60,6 +60,34 @@ const capabilities = [
   },
 ];
 
+const commercialTerms = [
+  {
+    title: 'Minimum order quantities',
+    body: 'Custom branding on existing platforms typically starts at 50–100 units per model; fully custom geometric molds typically start at 100–200 units depending on raw material yield. Final MOQs are confirmed per project scope.',
+  },
+  {
+    title: 'Sample development lead time',
+    body: '15–20 business days following technical drawing sign-off and sample deposit confirmation.',
+  },
+  {
+    title: 'Mass production lead time',
+    body: '30–45 calendar days depending on seasonal production schedules and raw material availability.',
+  },
+  {
+    title: 'Quality assurance standard',
+    body: 'Every drop-stitch hull is 100% pressure-tested — a 24-hour hold at 1.25x rated pressure — before proceeding to final packaging.',
+  },
+];
+
+const quoteChecklist = [
+  'Target dimensions: length × width × outer wall height (or internal water depth goal).',
+  'Estimated order quantity: initial sample request plus projected mass production volume.',
+  'Branding requirements: number of logo colors, logo placement locations, and preferred EVA deck pad texture.',
+  'Target destination and delivery terms: FOB port, CIF, or DDP destination address.',
+  'Target retail or commercial launch date: your required delivery window.',
+  'Required compliance documentation: regional standards you need supported (we work to EN 16582-1, ASTM F2666, REACH, and RoHS baselines).',
+];
+
 const process = [
   {
     step: '1',
@@ -209,6 +237,45 @@ const process = [
           </li>
         </ul>
       </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Commercial Terms: MOQ, Lead Times &amp; Sample Terms
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Typical commercial terms for custom projects — exact figures are confirmed in your quotation based on project
+        scope and season.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          commercialTerms.map((t) => (
+            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{t.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{t.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Checklist: What We Need for a Precise Custom Quote
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-2xl">
+        Prepare these details before submitting your inquiry to receive a fast, accurate OEM/ODM quote.
+      </p>
+      <ul class="grid md:grid-cols-2 gap-3">
+        {
+          quoteChecklist.map((item) => (
+            <li class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+              <Icon name="tabler:square-check" class="w-5 h-5 mt-0.5 text-primary dark:text-sky-400 shrink-0" />
+              <span class="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">{item}</span>
+            </li>
+          ))
+        }
+      </ul>
     </section>
 
     <section class="mb-6">

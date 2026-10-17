@@ -74,6 +74,7 @@ export const VALID_ICON_NAMES = new Set([
   "tabler:ship",
   "tabler:shopping-bag",
   "tabler:shopping-cart",
+  "tabler:square-check",
   "tabler:sun",
   "tabler:table",
   "tabler:tag",

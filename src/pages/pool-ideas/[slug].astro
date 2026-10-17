@@ -1,5 +1,6 @@
 ---
 import merge from 'lodash.merge';
+import { getEntry, render } from 'astro:content';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
@@ -32,6 +33,10 @@ const matchCards = idea.matches.map((m) => {
 });
 
 const otherIdeas = POOL_IDEAS.filter((i) => i.slug !== idea.slug);
+
+const detailEntry = await getEntry('pool-idea-detail', idea.slug);
+const detailRendered = detailEntry ? await render(detailEntry) : undefined;
+const DetailContent = detailRendered?.Content;
 
 const guideBySlug: Record<string, { slug: string; title: string; description: string }> = {};
 for (const g of guides) guideBySlug[g.slug] = g;
@@ -89,6 +94,17 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
       </div>
     </div>
   </section>
+
+  <!-- Full guide -->
+  {
+    DetailContent && (
+      <section class="max-w-4xl mx-auto px-4 md:px-6 py-10 md:py-14">
+        <div class="prose prose-lg dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-blockquote:border-sky-400 prose-blockquote:not-italic max-w-none prose-table:block prose-table:overflow-x-auto prose-th:whitespace-nowrap">
+          <DetailContent />
+        </div>
+      </section>
+    )
+  }
 
   <!-- Matched product families -->
   <section class="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-14">

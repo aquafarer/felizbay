@@ -69,6 +69,30 @@ const tracks: BusinessTrack[] = [
   },
 ];
 
+const valueMatrix: Array<{ challenge: string; solution: string; reality: string }> = [
+  {
+    challenge: 'Limited permitting & construction time',
+    solution: 'Portable, above-ground drop-stitch structures deploy in under 30 minutes without excavation.',
+    reality: 'Requires flat, level ground and compliant access to water fill/drain points.',
+  },
+  {
+    challenge: 'Commercial guest wear & tear',
+    solution:
+      'Dual-layer reinforced PVC skin and thousands of vertical drop-stitch polyester threads create rock-hard wall stability.',
+    reality: 'Designed for heavy recreational use; daily bather limits and water sanitation still apply.',
+  },
+  {
+    challenge: 'Turnaround sanitation & efficiency',
+    solution: 'Dual high-flow valves and standard filter pump quick-connect fittings allow efficient water treatment.',
+    reality: 'Guests must be briefed on pool rules; routine chemical balancing remains required.',
+  },
+  {
+    challenge: 'Custom branding & fit',
+    solution: 'Custom dimensions, co-branded logo placement, custom colors, and retail-ready packaging.',
+    reality: 'Flexible MOQs tailored per project scope with structured sample validation rounds.',
+  },
+];
+
 const resources: Array<{ title: string; description: string; href: string }> = [
   {
     title: 'Commercial Pools',
@@ -140,6 +164,45 @@ const metadata = merge(
           </div>
         ))
       }
+    </div>
+
+    <!-- Why partner -->
+    <div class="mt-14">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-2">
+        Why partner with Felizbay?
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-2xl">
+        Every row pairs an operational challenge with how our drop-stitch platform answers it — and the practical
+        realities your team should plan for.
+      </p>
+      <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800/70 text-left">
+              <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                Operational challenge
+              </th>
+              <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                How Felizbay solves it
+              </th>
+              <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                Technical &amp; practical reality
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              valueMatrix.map((row, idx) => (
+                <tr class={idx % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                  <td class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-200 align-top">{row.challenge}</td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-300 align-top leading-relaxed">{row.solution}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400 align-top leading-relaxed">{row.reality}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Resources -->
