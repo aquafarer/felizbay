@@ -2640,10 +2640,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/drop-stitch-vs-traditional-inflatable-pools/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/drop-stitch-vs-traditional-inflatable-pools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/drop-stitch-vs-traditional-inflatable-pools/"/>
+    <x:entity>drop-stitch-vs-traditional-inflatable-pools</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/"/>
     <x:entity>how-much-does-a-wholesale-drop-stitch-pool-cost</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/how-much-space-do-you-need-for-an-inflatable-pool/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-much-space-do-you-need-for-an-inflatable-pool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-much-space-do-you-need-for-an-inflatable-pool/"/>
+    <x:entity>how-much-space-do-you-need-for-an-inflatable-pool</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
   </url>
@@ -2696,6 +2712,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/inflatable-pools-for-vacation-rentals/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/inflatable-pools-for-vacation-rentals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/inflatable-pools-for-vacation-rentals/"/>
+    <x:entity>inflatable-pools-for-vacation-rentals</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/oem-vs-odm-inflatable-pools/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/oem-vs-odm-inflatable-pools/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/oem-vs-odm-inflatable-pools/"/>
@@ -2704,10 +2728,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/placing-an-inflatable-pool-on-a-patio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/placing-an-inflatable-pool-on-a-patio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/placing-an-inflatable-pool-on-a-patio/"/>
+    <x:entity>placing-an-inflatable-pool-on-a-patio</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/private-label-inflatable-pool-buyers-guide/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/private-label-inflatable-pool-buyers-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/private-label-inflatable-pool-buyers-guide/"/>
     <x:entity>private-label-inflatable-pool-buyers-guide</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/what-is-a-drop-stitch-inflatable-pool/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/what-is-a-drop-stitch-inflatable-pool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/what-is-a-drop-stitch-inflatable-pool/"/>
+    <x:entity>what-is-a-drop-stitch-inflatable-pool</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
   </url>

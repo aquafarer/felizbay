@@ -313,6 +313,9 @@ if (type === 'Organization') {
       ...(s.url ? { url: s.url } : {}),
     })),
   };
+} else if (data) {
+  // Generic fallback: caller supplies the full schema node (e.g. ItemList, CollectionPage).
+  schema = { ...schema, ...data };
 }
 ---
 

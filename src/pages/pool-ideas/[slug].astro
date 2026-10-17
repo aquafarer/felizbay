@@ -2,7 +2,9 @@
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
 import { POOL_IDEAS, findPoolIdea } from '~/data/pool-ideas';
+import { guides } from '~/data/guides';
 import { poolSeries } from '~/data/pool-catalog';
 import { SITE } from 'astrowind:config';
 import type { MetaData } from '~/types';
@@ -31,6 +33,12 @@ const matchCards = idea.matches.map((m) => {
 
 const otherIdeas = POOL_IDEAS.filter((i) => i.slug !== idea.slug);
 
+const guideBySlug: Record<string, { slug: string; title: string; description: string }> = {};
+for (const g of guides) guideBySlug[g.slug] = g;
+const relatedGuideCards = (idea.relatedGuides ?? [])
+  .map((slug) => guideBySlug[slug])
+  .filter((g): g is { slug: string; title: string; description: string } => Boolean(g));
+
 const metadata = merge(
   {
     title: `${idea.title} | ${SITE.name}`,
@@ -44,6 +52,17 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: idea.title,
+      description: idea.intro[0].slice(0, 200),
+      datePublished: '2026-10-17',
+      dateModified: '2026-10-17',
+      authorName: 'Felizbay Team',
+    }}
+    data={{ url: `${SITE.site}/pool-ideas/${idea.slug}` }}
+  />
   <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
     <header class="mb-10 md:mb-12 max-w-3xl">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">{idea.eyebrow}</p>
@@ -157,6 +176,34 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
       </div>
     </div>
   </section>
+
+  <!-- Related Guides -->
+  {
+    relatedGuideCards.length > 0 && (
+      <section class="bg-gray-50/50 dark:bg-slate-900/50 border-y border-gray-100 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-14">
+          <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+            Guides &amp; Care
+          </h2>
+          <div class="grid gap-4 md:grid-cols-2">
+            {relatedGuideCards.map((g) => (
+              <a
+                href={`/guides/${g.slug}`}
+                class="block p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
+              >
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
+                <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 line-clamp-2">{g.description}</p>
+                <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
+                  Read guide
+                  <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   <!-- More ideas -->
   <section class="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-14">

@@ -27,6 +27,8 @@ export interface PoolIdea {
   safety: string[];
   /** Closing CTA line */
   cta: string;
+  /** Related guide slugs from src/data/guides.ts */
+  relatedGuides?: string[];
 }
 
 export const POOL_IDEAS: PoolIdea[] = [
@@ -64,6 +66,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Inflate to the rated 4–5 PSI operating pressure so walls stay rigid; the pressure-relief valve guards against over-inflation.',
     ],
     cta: 'Ready to pick a size? Compare every model in the shop.',
+    relatedGuides: ["how-to-choose-inflatable-pool","inflatable-pool-setup"],
   },
   {
     slug: 'pools-for-small-backyards',
@@ -103,6 +106,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Use the included drain valve to empty the pool quickly when the season or weather demands it.',
     ],
     cta: 'See the exact footprints and prices in the shop.',
+    relatedGuides: ["how-much-space-do-you-need-for-an-inflatable-pool","placing-an-inflatable-pool-on-a-patio"],
   },
   {
     slug: 'large-pools-for-family-gatherings',
@@ -138,6 +142,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Empty the pool or block access after the event if it will be unattended.',
     ],
     cta: 'Compare the large-size options and pick your gathering pool.',
+    relatedGuides: ["how-much-space-do-you-need-for-an-inflatable-pool","how-to-choose-inflatable-pool"],
   },
   {
     slug: 'outdoor-soaking-pools',
@@ -172,6 +177,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Enter and exit slowly using the built-in seats as steps; wet surfaces are slippery.',
     ],
     cta: 'Explore the SPA tubs and find your soaking size.',
+    relatedGuides: ["inflatable-pool-maintenance","what-is-a-drop-stitch-inflatable-pool"],
   },
   {
     slug: 'pools-for-vacation-rentals',
@@ -207,6 +213,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Inspect the pool between stays: valve seals, wall pressure, and drain function.',
     ],
     cta: 'Equip your rental — see the models and sizes.',
+    relatedGuides: ["inflatable-pools-for-vacation-rentals","inflatable-pool-maintenance"],
   },
   {
     slug: 'pools-for-glamping-and-hospitality',
@@ -246,6 +253,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Secure or drain amenities outside supervised hours.',
     ],
     cta: 'Outfit your site — browse the shop, or talk to our business team for volume pricing.',
+    relatedGuides: ["inflatable-pools-for-vacation-rentals","what-is-a-drop-stitch-inflatable-pool"],
   },
 ];
 
