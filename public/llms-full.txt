@@ -79,17 +79,10 @@ Contact: info@felizbay.com
 - https://felizbay.com/it/contact/ — GET IN TOUCH
 - https://felizbay.com/it/home/ — Make More of Your Outdoor Space.
 - https://felizbay.com/it/request-quotation/ — Request a Quotation for Your Pool Order
-- https://felizbay.com/ja/about/ — Making swimming simple, the Felizbay way
-- https://felizbay.com/ja/contact/ — GET IN TOUCH
-- https://felizbay.com/ja/home/ — Make More of Your Outdoor Space.
-- https://felizbay.com/ja/request-quotation/ — Request a Quotation for Your Pool Order
 - https://felizbay.com/kk/about/ — Making swimming simple, the Felizbay way
 - https://felizbay.com/kk/contact/ — GET IN TOUCH
 - https://felizbay.com/kk/home/ — Make More of Your Outdoor Space.
 - https://felizbay.com/kk/request-quotation/ — Request a Quotation for Your Pool Order
-- https://felizbay.com/ko/about/ — Making swimming simple, the Felizbay way
-- https://felizbay.com/ko/contact/ — GET IN TOUCH
-- https://felizbay.com/ko/home/ — Make More of Your Outdoor Space.
 - https://felizbay.com/lt/about/ — Making swimming simple, the Felizbay way
 - https://felizbay.com/lt/contact/ — GET IN TOUCH
 - https://felizbay.com/lt/home/ — Make More of Your Outdoor Space.
@@ -153,10 +146,6 @@ Contact: info@felizbay.com
 - https://felizbay.com/uz/contact/ — GET IN TOUCH
 - https://felizbay.com/uz/home/ — Make More of Your Outdoor Space.
 - https://felizbay.com/uz/request-quotation/ — Request a Quotation for Your Pool Order
-- https://felizbay.com/vi/about/ — Making swimming simple, the Felizbay way
-- https://felizbay.com/vi/contact/ — GET IN TOUCH
-- https://felizbay.com/vi/home/ — Make More of Your Outdoor Space.
-- https://felizbay.com/vi/request-quotation/ — Request a Quotation for Your Pool Order
 
 ## Product Catalog
 
@@ -340,27 +329,7 @@ Contact: info@felizbay.com
 - https://felizbay.com/products/hot-tub-square-rect/ — Vasca SPA gonfiabile quadrata e rettangolare
 - https://felizbay.com/products/hot-tub-round/ — Vasca SPA gonfiabile rotonda
 
-### 日本語 (ja)
-
-#### Inflatable Swimming Pools
-
-- https://felizbay.com/products/rectangular-drop-stitch-pool/ — Rectangular Drop Stitch Inflatable Swimming Pool
-- https://felizbay.com/products/round-blue-drop-stitch-pool/ — Round Drop Stitch Blue Inflatable Swimming Pool
-- https://felizbay.com/products/round-grey-drop-stitch-pool/ — Round Drop Stitch Grey Inflatable Swimming Pool
-- https://felizbay.com/products/hot-tub-square-rect/ — Square and Rectangular Inflatable Hot Tub SPA Pool
-- https://felizbay.com/products/hot-tub-round/ — Round Inflatable Hot Tub SPA Pool
-
 ### Қазақша (kk)
-
-#### Inflatable Swimming Pools
-
-- https://felizbay.com/products/rectangular-drop-stitch-pool/ — Rectangular Drop Stitch Inflatable Swimming Pool
-- https://felizbay.com/products/round-blue-drop-stitch-pool/ — Round Drop Stitch Blue Inflatable Swimming Pool
-- https://felizbay.com/products/round-grey-drop-stitch-pool/ — Round Drop Stitch Grey Inflatable Swimming Pool
-- https://felizbay.com/products/hot-tub-square-rect/ — Square and Rectangular Inflatable Hot Tub SPA Pool
-- https://felizbay.com/products/hot-tub-round/ — Round Inflatable Hot Tub SPA Pool
-
-### 한국어 (ko)
 
 #### Inflatable Swimming Pools
 
@@ -541,16 +510,6 @@ Contact: info@felizbay.com
 - https://felizbay.com/products/hot-tub-round/ — Round Inflatable Hot Tub SPA Pool
 
 ### Oʻzbekcha (uz)
-
-#### Inflatable Swimming Pools
-
-- https://felizbay.com/products/rectangular-drop-stitch-pool/ — Rectangular Drop Stitch Inflatable Swimming Pool
-- https://felizbay.com/products/round-blue-drop-stitch-pool/ — Round Drop Stitch Blue Inflatable Swimming Pool
-- https://felizbay.com/products/round-grey-drop-stitch-pool/ — Round Drop Stitch Grey Inflatable Swimming Pool
-- https://felizbay.com/products/hot-tub-square-rect/ — Square and Rectangular Inflatable Hot Tub SPA Pool
-- https://felizbay.com/products/hot-tub-round/ — Round Inflatable Hot Tub SPA Pool
-
-### Tiếng Việt (vi)
 
 #### Inflatable Swimming Pools
 

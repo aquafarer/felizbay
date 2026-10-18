@@ -27,7 +27,6 @@ import PrivacyFi from '~/components/legal/privacy.fi.astro';
 import PrivacyPl from '~/components/legal/privacy.pl.astro';
 import PrivacyAr from '~/components/legal/privacy.ar.astro';
 import PrivacyPt from '~/components/legal/privacy.pt.astro';
-import PrivacyJa from '~/components/legal/privacy.ja.astro';
 const Body: any =
   (
     {
@@ -46,7 +45,6 @@ const Body: any =
       pl: PrivacyPl,
       ar: PrivacyAr,
       pt: PrivacyPt,
-      ja: PrivacyJa,
     } as Record<string, any>
   )[lang] || null;
 

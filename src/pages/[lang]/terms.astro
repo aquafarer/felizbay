@@ -27,7 +27,6 @@ import TermsFi from '~/components/legal/terms.fi.astro';
 import TermsPl from '~/components/legal/terms.pl.astro';
 import TermsAr from '~/components/legal/terms.ar.astro';
 import TermsPt from '~/components/legal/terms.pt.astro';
-import TermsJa from '~/components/legal/terms.ja.astro';
 const Body: any =
   (
     {
@@ -46,7 +45,6 @@ const Body: any =
       pl: TermsPl,
       ar: TermsAr,
       pt: TermsPt,
-      ja: TermsJa,
     } as Record<string, any>
   )[lang] || null;
 

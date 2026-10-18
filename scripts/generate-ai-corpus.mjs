@@ -13,7 +13,7 @@ const PAGES_MAX_BYTES = 25 * 1024 * 1024;
 
 const MODEL = '@cf/baai/bge-m3';
 const DIMENSIONS = 1024;
-const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'it', 'ar', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'cs', 'ja'];
+const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'it', 'ar', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'cs'];
 const SKIP_PREFIXES = ['en/', 'llms/', 'internal/', 'keystatic/', 'admin/', 'login/'];
 const THIN_TEXT = 400;
 const CHUNK_TARGET = 1600;
@@ -165,7 +165,6 @@ function main() {
     fi: 0,
     da: 0,
     cs: 0,
-    ja: 0,
   };
 
   for (const file of files) {

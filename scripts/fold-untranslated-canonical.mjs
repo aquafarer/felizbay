@@ -131,8 +131,6 @@ const LANGS = [
   'bg',
   'sl',
   'sr',
-  'ja',
-  'ko',
   'tr',
   'id',
   'he',
@@ -141,7 +139,6 @@ const LANGS = [
   'lv',
   'et',
   'kk',
-  'vi',
   'uz',
   'uk',
   'az',
@@ -152,8 +149,6 @@ const NON_LATIN = [
   ['ar', /[\u0600-\u06FF]/g],
   ['el', /[\u0370-\u03FF]/g],
   ['ru', /[\u0400-\u04FF]/g],
-  // ja 毕业清单 §16.4-4：日语用 CJK 字符检测（停用词 token 正则只覆盖拉丁字母，无法匹配日文）
-  ['ja', /[\u3040-\u30FF\u4E00-\u9FFF]/g],
   // cs 毕业清单 §16.4-4：捷克语用专属变音字符检测（č/ď/ě/ň/ř/š/ť/ů/ž，Latin Extended-A）。
   // 捷克语功能词多为单字符介词（v/s/k/z/o/a/i），被 stopwordHits 的 length>1 过滤，
   // 停用词计数天然偏低（实测 cs/ap330 扩表后 cs=10:en=13 仍误折叠）；而英文页面

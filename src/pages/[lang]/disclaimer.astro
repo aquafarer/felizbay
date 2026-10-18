@@ -27,7 +27,6 @@ import DisclaimerFi from '~/components/legal/disclaimer.fi.astro';
 import DisclaimerPl from '~/components/legal/disclaimer.pl.astro';
 import DisclaimerAr from '~/components/legal/disclaimer.ar.astro';
 import DisclaimerPt from '~/components/legal/disclaimer.pt.astro';
-import DisclaimerJa from '~/components/legal/disclaimer.ja.astro';
 const Body: any =
   (
     {
@@ -46,7 +45,6 @@ const Body: any =
       pl: DisclaimerPl,
       ar: DisclaimerAr,
       pt: DisclaimerPt,
-      ja: DisclaimerJa,
     } as Record<string, any>
   )[lang] || null;
 

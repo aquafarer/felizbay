@@ -19,7 +19,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>index</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -43,7 +42,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>index</x:entity>
     <x:type>brand</x:type>
     <priority>0.8</priority>
@@ -75,7 +73,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>ar</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -99,7 +96,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>ar/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -123,7 +119,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>ar/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -170,7 +165,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>ar/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -194,7 +188,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>ar/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -218,7 +211,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>ar/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -242,7 +234,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>ar/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -266,7 +257,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>ar/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -290,7 +280,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>ar/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -314,7 +303,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>ar/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -338,7 +326,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>ar/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -393,7 +380,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>index</x:entity>
     <x:type>service</x:type>
     <priority>0.6</priority>
@@ -417,7 +403,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>cs</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -441,7 +426,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>cs/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -465,7 +449,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>cs/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -512,7 +495,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>cs/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -536,7 +518,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>cs/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -560,7 +541,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>cs/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -584,7 +564,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>cs/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -608,7 +587,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>cs/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -632,7 +610,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>cs/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -656,7 +633,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>cs/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -680,7 +656,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>cs/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -727,7 +702,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>da</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -751,7 +725,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>da/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -775,7 +748,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>da/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -822,7 +794,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>da/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -846,7 +817,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>da/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -870,7 +840,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>da/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -894,7 +863,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>da/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -918,7 +886,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>da/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -942,7 +909,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>da/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -966,7 +932,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>da/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -990,7 +955,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>da/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1037,7 +1001,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>de</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1061,7 +1024,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>de/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1085,7 +1047,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>de/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1132,7 +1093,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>de/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1156,7 +1116,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>de/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1180,7 +1139,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>de/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1204,7 +1162,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>de/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1228,7 +1185,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>de/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1252,7 +1208,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>de/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1276,7 +1231,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>de/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1300,7 +1254,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>de/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1370,7 +1323,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>el</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1394,7 +1346,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>el/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1418,7 +1369,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>el/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1465,7 +1415,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>el/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1489,7 +1438,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>el/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1513,7 +1461,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>el/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1537,7 +1484,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>el/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1561,7 +1507,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>el/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1585,7 +1530,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>el/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1609,7 +1553,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>el/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1633,7 +1576,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>el/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1680,7 +1622,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>es</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1704,7 +1645,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>es/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1728,7 +1668,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>es/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1775,7 +1714,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>es/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1799,7 +1737,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>es/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1823,7 +1760,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>es/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1847,7 +1783,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>es/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1871,7 +1806,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>es/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1895,7 +1829,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>es/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1919,7 +1852,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>es/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1943,7 +1875,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>es/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -1990,7 +1921,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>index</x:entity>
     <x:type>support</x:type>
     <priority>0.5</priority>
@@ -2014,7 +1944,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>fi</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2038,7 +1967,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>fi/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2062,7 +1990,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>fi/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2109,7 +2036,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>fi/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2133,7 +2059,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>fi/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2157,7 +2082,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>fi/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2181,7 +2105,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>fi/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2205,7 +2128,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>fi/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2229,7 +2151,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>fi/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2253,7 +2174,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>fi/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2277,7 +2197,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>fi/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2340,7 +2259,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>fr</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2364,7 +2282,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>fr/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2388,7 +2305,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>fr/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2435,7 +2351,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>fr/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2459,7 +2374,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>fr/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2483,7 +2397,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>fr/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2507,7 +2420,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>fr/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2531,7 +2443,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>fr/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2555,7 +2466,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>fr/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2579,7 +2489,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>fr/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2603,7 +2512,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>fr/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2770,7 +2678,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>it</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2794,7 +2701,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>it/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2818,7 +2724,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>it/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2865,7 +2770,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>it/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2889,7 +2793,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>it/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2913,7 +2816,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>it/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2937,7 +2839,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>it/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2961,7 +2862,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>it/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -2985,7 +2885,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>it/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3009,7 +2908,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>it/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3033,7 +2931,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>it/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3058,270 +2955,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/terms/"/>
     <x:entity>it/terms</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
-    <x:entity>ja</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/about/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/about/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/about/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/about/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/about/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/about/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/about/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/about/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/about/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/about/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/about/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
-    <x:entity>ja/about</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/contact/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/contact/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/contact/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/contact/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/contact/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/contact/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/contact/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/contact/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/contact/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/contact/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/contact/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
-    <x:entity>ja/contact</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/faq/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/faq/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/faq/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/faq/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/faq/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/faq/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/faq/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/faq/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/faq/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/faq/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/faq/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/faq/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/faq/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
-    <x:entity>ja/faq</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
-    <x:entity>ja/privacy</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/products/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
-    <x:entity>ja/products</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/products/hot-tub-round/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
-    <x:entity>ja/products/hot-tub-round</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/products/hot-tub-square-rect/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
-    <x:entity>ja/products/hot-tub-square-rect</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/products/rectangular-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
-    <x:entity>ja/products/rectangular-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/products/round-blue-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
-    <x:entity>ja/products/round-blue-drop-stitch-pool</x:entity>
-    <x:type>page</x:type>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://felizbay.com/ja/products/round-grey-drop-stitch-pool/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://felizbay.com/fr/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://felizbay.com/de/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://felizbay.com/es/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://felizbay.com/it/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://felizbay.com/cs/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://felizbay.com/sv/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://felizbay.com/da/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="el" href="https://felizbay.com/el/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="no" href="https://felizbay.com/no/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://felizbay.com/ru/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://felizbay.com/nl/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
-    <x:entity>ja/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
@@ -3352,7 +2985,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>nl</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3376,7 +3008,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>nl/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3400,7 +3031,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>nl/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3447,7 +3077,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>nl/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3471,7 +3100,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>nl/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3495,7 +3123,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>nl/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3519,7 +3146,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>nl/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3543,7 +3169,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>nl/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3567,7 +3192,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>nl/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3591,7 +3215,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>nl/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3615,7 +3238,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>nl/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3662,7 +3284,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>no</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3686,7 +3307,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>no/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3710,7 +3330,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>no/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3757,7 +3376,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>no/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3781,7 +3399,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>no/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3805,7 +3422,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>no/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3829,7 +3445,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>no/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3853,7 +3468,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>no/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3877,7 +3491,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>no/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3901,7 +3514,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>no/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3925,7 +3537,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>no/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -3980,7 +3591,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>pl</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4004,7 +3614,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>pl/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4028,7 +3637,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>pl/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4075,7 +3683,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>pl/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4099,7 +3706,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>pl/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4123,7 +3729,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>pl/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4147,7 +3752,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>pl/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4171,7 +3775,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>pl/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4195,7 +3798,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>pl/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4219,7 +3821,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>pl/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4243,7 +3844,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>pl/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4410,7 +4010,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4442,7 +4041,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>index</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -4474,7 +4072,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>hot-tub-round</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -4498,7 +4095,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>hot-tub-square-rect</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -4522,7 +4118,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>rectangular-drop-stitch-pool</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -4546,7 +4141,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>round-blue-drop-stitch-pool</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -4570,7 +4164,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>round-grey-drop-stitch-pool</x:entity>
     <x:type>product</x:type>
     <priority>0.8</priority>
@@ -4602,7 +4195,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>pt</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4626,7 +4218,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>pt/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4650,7 +4241,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>pt/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4697,7 +4287,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>pt/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4721,7 +4310,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>pt/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4745,7 +4333,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>pt/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4769,7 +4356,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>pt/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4793,7 +4379,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>pt/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4817,7 +4402,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>pt/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4841,7 +4425,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>pt/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4865,7 +4448,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>pt/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4928,7 +4510,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>ru</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4952,7 +4533,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>ru/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -4976,7 +4556,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>ru/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5023,7 +4602,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>ru/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5047,7 +4625,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>ru/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5071,7 +4648,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>ru/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5095,7 +4671,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>ru/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5119,7 +4694,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>ru/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5143,7 +4717,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>ru/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5167,7 +4740,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>ru/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5191,7 +4763,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>ru/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5238,7 +4809,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/"/>
     <x:entity>sv</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5262,7 +4832,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/about/"/>
     <x:entity>sv/about</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5286,7 +4855,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/contact/"/>
     <x:entity>sv/contact</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5333,7 +4901,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/faq/"/>
     <x:entity>sv/faq</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5357,7 +4924,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/privacy/"/>
     <x:entity>sv/privacy</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5381,7 +4947,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/"/>
     <x:entity>sv/products</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5405,7 +4970,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-round/"/>
     <x:entity>sv/products/hot-tub-round</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5429,7 +4993,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/hot-tub-square-rect/"/>
     <x:entity>sv/products/hot-tub-square-rect</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5453,7 +5016,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/rectangular-drop-stitch-pool/"/>
     <x:entity>sv/products/rectangular-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5477,7 +5039,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-blue-drop-stitch-pool/"/>
     <x:entity>sv/products/round-blue-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
@@ -5501,7 +5062,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://felizbay.com/ja/products/round-grey-drop-stitch-pool/"/>
     <x:entity>sv/products/round-grey-drop-stitch-pool</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>

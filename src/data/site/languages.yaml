@@ -123,16 +123,6 @@
   locale: sr
   textDirection: ltr
   enabled: true
-- code: JA
-  name: 日本語
-  locale: ja
-  textDirection: ltr
-  enabled: true
-- code: KO
-  name: 한국어
-  locale: ko
-  textDirection: ltr
-  enabled: true
 - code: TR
   name: Türkçe
   locale: tr
@@ -171,11 +161,6 @@
 - code: KK
   name: Қазақша
   locale: kk
-  textDirection: ltr
-  enabled: true
-- code: VI
-  name: Tiếng Việt
-  locale: vi
   textDirection: ltr
   enabled: true
 - code: UZ
