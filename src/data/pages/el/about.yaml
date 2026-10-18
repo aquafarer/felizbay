@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: Σχετικά με εμάς
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: Φουσκωτή πισίνα Felizbay
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay designs and manufactures premium drop stitch inflatable swimming pools. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    Κάνοντας το κολύμπι απλό, <br />
+    με το στυλ <span class="text-accent dark:text-white">Felizbay</span> 
+  subtitle: Το Felizbay είναι μια premium μάρκα φουσκωτή πισίνα Drop Stitch που σχεδιάστηκε και λειτουργεί από την Aquafarer LLC (ΗΠΑ). Πιστεύουμε ότι κάθε οικογένεια αξίζει μια πραγματική πισίνα στην πίσω αυλή — χωρίς κατασκευή, άδειες ή μόνιμη εγκατάσταση. Οι πισίνες μας φουσκώνουν άκαμπτες μέσα σε λίγα λεπτά, επιβιώνουν σε ολόκληρα καλοκαίρια οικογενειακής διασκέδασης και μαζεύονται μικρές στο τέλος της σεζόν.
 stats:
-  title: By the numbers
+  title: Με τους αριθμούς
   columns: 4
   stats:
-    - title: Pool collections
+    - title: Συλλογές πισίνας
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: Χρόνος ρύθμισης
+      amount: 15-30 min
+    - title: Ονομαστική πίεση
+      amount: 4-5 PSI
+    - title: Επαφή
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: Αυτό που χτίζουμε
+  subtitle: Μια εστιασμένη σειρά προϊόντων που γνωρίζουμε από μέσα προς τα έξω — φουσκωτές πισίνες Drop Stitch υψηλής πίεσης.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: Ορθογώνιες πισίνες
+      description: Ορθογώνιες πισίνες Drop Stitch οικογενειακού μεγέθους που μεγιστοποιούν την περιοχή κολύμβησης για τον χώρο σας.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: Στρογγυλές μπλε πισίνες
+      description: Η κλασική πισίνα στην πίσω αυλή — ζωηρό μπλε, άκαμπτοι τοίχοι Drop Stitch, γρήγορη εγκατάσταση.
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: Στρογγυλές γκρι πισίνες
+      description: Η premium σειρά μας με μοντέρνο γκρι φινίρισμα και προαιρετικά τοποθετημένο κάλυμμα.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: Υδρομασάζ Πισίνες SPA
+      description: Μοντέλα υδρομασάζ τεσσάρων εποχών με ενσωματωμένα καθίσματα και μονωμένο πάτο 5 mm.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: Ολοκληρωμένα πακέτα
+      description: Κάθε πισίνα συνοδεύεται από ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: Προσαρμοσμένα μεγέθη
+      description: Μεγέθη, χρώματα και καλύμματα OEM για μάρκες, διανομείς και έργα φιλοξενίας.
       icon: tabler:adjustments
     - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+      description: Κατασκευή ιδιωτικής ετικέτας με εκτύπωση λογότυπου και έτοιμη συσκευασία λιανικής.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: Felizbay ορθογώνια φουσκωτή πισίνα Drop Stitch
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: Οι αξίες μας
+  subtitle: Τρεις αρχές που διαμορφώνουν κάθε πισίνα που κατασκευάζουμε.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: Φτιάξτε όπως θα το χρησιμοποιήσει η οικογένειά σας
+      description: Κάθε ραφή, τοίχος και βαλβίδα αντιμετωπίζεται σαν να κολυμπούν οι δικές μας οικογένειες.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: Μηχανικός πριν πουλήσουμε
+      description: Κατασκευή Drop Stitch υψηλής πίεσης, δοκιμασμένη πάνω από την ονομαστική της πίεση, πριν από οποιαδήποτε πλοία πισίνας.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: Υποστήριξη που διαρκεί περισσότερο από τη σεζόν
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: Ορόσημα
+  subtitle: Μια σύντομη εκδοχή της ιστορίας του Felizbay.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: Επικεντρώθηκε στις φουσκωτές πισίνες
+      description: 'Η Felizbay ιδρύθηκε με ένα μόνο επίκεντρο: φουσκωτές πισίνες premium drop stitch.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: Τρεις συλλογές υπογραφών
+      description: Ορθογώνιες, στρογγυλές μπλε και στρογγυλές γκρι γραμμές πισίνας, καθεμία με προαιρετικά καλύμματα και προσαρμοσμένα μεγέθη.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM για συνεργάτες σε όλο τον κόσμο
+      description: Προσαρμοσμένη κατασκευή για μάρκες, διανομείς, ξενοδοχεία και χειριστές glamping.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: Ελάτε σε επαφή
+  tagline: Επαφή
   columns: 3
   items:
-    - title: Email
+    - title: E-mail
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: Δικτυακός τόπος
+      description: felizbay.com — περιηγηθείτε στις πισίνες μας και ζητήστε μια προσφορά.
+    - title: OEM / Χονδρική
+      description: Προσαρμοσμένα μεγέθη, χρώματα και επωνυμία διαθέσιμα για επιχειρηματικούς συνεργάτες.
+brand_hub_tagline: Προϊόντα
+brand_hub_title: Εξερευνήστε τις πισίνες μας
+brand_hub_subtitle: Ανακαλύψτε τις συλλογές μας για φουσκωτές πισίνες κατασκευασμένες με τεχνολογία Drop Stitch υψηλής πίεσης.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: Ορθογώνιες Πισίνες
+    desc: Ορθογώνιες πισίνες Drop Stitch οικογενειακού μεγέθους με άκαμπτους τοίχους και μέγιστη περιοχή κολύμβησης.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: Προβολή πισινών →
+  - title: Στρογγυλές μπλε πισίνες
+    desc: Η κλασική στρογγυλή πισίνα σε έντονο μπλε — γρήγορη εγκατάσταση, άκαμπτη κατασκευή, ανθεκτικότητα σε όλη την εποχή.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: Προβολή πισινών →
+  - title: Στρογγυλές γκρι πισίνες
+    desc: Premium γκρι πισίνες με προαιρετικά τοποθετημένα καλύμματα για μοντέρνα εμφάνιση στην πίσω αυλή.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: Προβολή πισινών →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: Αριστεία Παραγωγής
+  title: Εξασφάλιση εξαιρετικής χειροτεχνίας
+  description: Η γραμμή παραγωγής Felizbay είναι αφιερωμένη σε υψηλής ποιότητας, ανθεκτικές και υψηλής πίεσης φουσκωτές πισίνες.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: Ομάδα έμπειρων τεχνικών
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: Προηγμένος Εξοπλισμός Παραγωγής
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: Σύστημα ώριμης διαχείρισης
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: Αυστηρός Ποιοτικός Έλεγχος
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: Παγκόσμια Απήχηση
+  title_html: Μία μάρκα, <span class="text-white/90">παγκόσμια αποστολή</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: Συλλογές πισίνας
+    - value: 15-30 min
+      label: Χρόνος ρύθμισης
+    - value: 4-5 PSI
+      label: Ονομαστική πίεση
+

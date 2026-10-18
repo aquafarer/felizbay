@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: درباره ما
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: استخر بادی Felizbay
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay is a premium drop stitch inflatable pool brand designed and operated by Aquafarer LLC (USA). We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    ساده کردن شنا، <br />
+    به سبک <span class="text-accent dark:text-white">Felizbay</span> 
+  subtitle: Felizbay یک برند استخر بادی درجه یک Drop Stitch است که توسط Aquafarer LLC (ایالات متحده آمریکا) طراحی و اداره می شود. ما معتقدیم که هر خانواده سزاوار یک استخر واقعی در حیاط خلوت است - بدون ساخت و ساز، مجوز، یا نصب دائمی. استخرهای ما در عرض چند دقیقه به صورت سفت و سخت باد می‌شوند، تابستان‌های کاملی از تفریحات خانوادگی را پشت سر می‌گذارند، و در پایان فصل بسته‌بندی کوچکی را در خود جای می‌دهند.
 stats:
-  title: By the numbers
+  title: با اعداد
   columns: 4
   stats:
-    - title: Pool collections
+    - title: مجموعه های استخر
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: زمان راه اندازی
+      amount: 15-30 min
+    - title: فشار نامی
+      amount: 4-5 PSI
+    - title: تماس بگیرید
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: چیزی که ما می سازیم
+  subtitle: خط تولید متمرکزی که از درون می شناسیم - استخرهای بادی Drop Stitch با فشار بالا.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: استخرهای مستطیلی
+      description: استخرهای Drop Stitch مستطیل شکل خانوادگی که فضای شنا را برای فضای شما به حداکثر می رساند.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: استخرهای گرد آبی
+      description: استخر کلاسیک حیاط خلوت - آبی پر جنب و جوش، دیوارهای Drop Stitch سفت و سخت، راه اندازی سریع.
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: استخرهای گرد خاکستری
+      description: خط ممتاز ما با روکش خاکستری مدرن و روکش نصب شده اختیاری.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: استخرهای آب گرم SPA
+      description: مدل های جکوزی چهار فصل با صندلی های توکار و کف 5 میلی متری عایق.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: بسته های کامل
+      description: هر استخر با یک پمپ باد الکتریکی، کیت تعمیر و کیسه ذخیره سازی حمل می شود.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: اندازه های سفارشی
+      description: اندازه‌ها، رنگ‌ها و پوشش‌های OEM برای برندها، توزیع‌کنندگان و پروژه‌های مهمان‌نوازی.
       icon: tabler:adjustments
     - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+      description: تولید لیبل خصوصی با چاپ آرم و بسته بندی آماده خرده فروشی.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: استخر بادی مستطیلی Felizbay Drop Stitch
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: ارزش های ما
+  subtitle: سه اصل که هر استخری را که می سازیم شکل می دهد.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: طوری بسازید که خانواده شما از آن استفاده کنند
+      description: با هر درز، دیوار و دریچه طوری رفتار می شود که گویی خانواده های خودمان در آن شنا خواهند کرد.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: مهندس قبل از فروش
+      description: ساخت و ساز Drop Stitch فشار بالا، بالاتر از فشار نامی آن، قبل از هر کشتی استخر آزمایش شده است.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: حمایتی که طول فصل را بیشتر می کند
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: نقاط عطف
+  subtitle: نسخه کوتاهی از داستان Felizbay.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: تمرکز بر استخرهای بادی
+      description: 'Felizbay با یک تمرکز تاسیس شد: استخرهای بادی درجه یک Drop Stitch.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: سه مجموعه امضا
+      description: خطوط مستطیلی، آبی گرد و خاکستری گرد استخر، هر کدام با روکش های اختیاری و اندازه های سفارشی.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM برای شرکای سراسر جهان
+      description: ساخت سفارشی برای مارک ها، توزیع کنندگان، هتل ها و اپراتورهای گلمپینگ.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: تماس بگیرید
+  tagline: تماس بگیرید
   columns: 3
   items:
-    - title: Email
+    - title: ایمیل
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: وب سایت
+      description: felizbay.com - استخرهای ما را مرور کنید و درخواست قیمت دهید.
+    - title: OEM / عمده فروشی
+      description: اندازه‌ها، رنگ‌ها و نام تجاری سفارشی برای شرکای تجاری در دسترس است.
+brand_hub_tagline: محصولات
+brand_hub_title: استخرهای ما را کاوش کنید
+brand_hub_subtitle: مجموعه استخرهای بادی ما را که با فناوری Drop Stitch با فشار بالا ساخته شده است، کشف کنید.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: استخرهای مستطیلی
+    desc: استخرهای Drop Stitch مستطیل شکل خانوادگی با دیوارهای سفت و حداکثر سطح شنا.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: مشاهده استخرها →
+  - title: استخرهای آبی گرد
+    desc: استخر گرد کلاسیک به رنگ آبی پر جنب و جوش - راه اندازی سریع، ساختار سفت، دوام در طول فصل.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: مشاهده استخرها →
+  - title: استخرهای گرد خاکستری
+    desc: استخرهای خاکستری درجه یک با روکش‌های تعبیه شده اختیاری برای نمای مدرن حیاط خلوت.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: مشاهده استخرها →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: تعالی تولید
+  title: حصول اطمینان از کاردستی عالی
+  description: خط تولید Felizbay به استخرهای بادی با کیفیت بالا، بادوام و فشار بالا اختصاص دارد.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: تیم تکنسین با تجربه
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: تجهیزات پیشرفته تولید
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: سیستم مدیریت بالغ
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: کنترل کیفیت دقیق
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: دسترسی جهانی
+  title_html: یک برند، <span class="text-white/90">حمل و نقل در سراسر جهان</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: مجموعه های استخر
+    - value: 15-30 min
+      label: زمان راه اندازی
+    - value: 4-5 PSI
+      label: فشار نامی
+

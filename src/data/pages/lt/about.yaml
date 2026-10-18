@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: Apie mus
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: Felizbay pripučiamas baseinas
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay designs and manufactures premium drop stitch inflatable swimming pools. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    Kad plaukimas būtų paprastas, <br />
+    pagal <span class="text-accent dark:text-white">Felizbay</span> 
+  subtitle: Felizbay yra aukščiausios kokybės „Drop Stitch“ pripučiamų baseinų prekės ženklas, kurį sukūrė ir valdo „Aquafarer LLC“ (JAV). Manome, kad kiekviena šeima nusipelno tikro baseino kieme – be statybų, leidimų ar nuolatinio įrengimo. Mūsų baseinai išsipučia per kelias minutes, išgyvena visas šeimos linksmybių vasaras, o sezono pabaigoje supakuoja nedidelius.
 stats:
-  title: By the numbers
+  title: Pagal skaičius
   columns: 4
   stats:
-    - title: Pool collections
+    - title: Baseino kolekcijos
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: Nustatymo laikas
+      amount: 15-30 min
+    - title: Vardinis slėgis
+      amount: 4-5 PSI
+    - title: Susisiekite
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: Ką statome
+  subtitle: Tikslinga produktų linija, kurią žinome iš vidaus – aukšto slėgio „Drop Stitch“ pripučiami baseinai.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: Stačiakampiai baseinai
+      description: Šeimos dydžio stačiakampiai „Drop Stitch“ baseinai, kurie maksimaliai padidina jūsų erdvės plaukimo zoną.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: Apvalūs mėlyni baseinai
+      description: Klasikinis kiemo baseinas – ryškiai mėlyna, standžios Drop Stitch sienos, greitas montavimas.
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: Apvalūs pilki baseinai
+      description: Mūsų aukščiausios kokybės linija su modernia pilka apdaila ir pasirenkamu uždėtu dangteliu.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: Sūkurinės vonios SPA baseinai
+      description: Keturių sezonų kubilų modeliai su įmontuotomis sėdynėmis ir 5 mm izoliuotu dugnu.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: Sukomplektuotos pakuotės
+      description: Kiekviename baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: Individualūs dydžiai
+      description: OEM dydžiai, spalvos ir dangteliai prekės ženklams, platintojams ir svetingumo projektams.
       icon: tabler:adjustments
     - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+      description: Privačių etikečių gamyba su logotipo spausdinimu ir mažmeninei prekybai paruošta pakuotė.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: Felizbay stačiakampis Drop Stitch pripučiamas baseinas
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: Mūsų vertybės
+  subtitle: Trys principai, kurie formuoja kiekvieną mūsų statomą baseiną.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: Kurkite taip, kaip tuo naudosis jūsų šeima
+      description: Su kiekviena siūle, siena ir vožtuvu elgiamasi taip, lyg joje plauks mūsų pačių šeimos.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: Inžinierius prieš parduodant
+      description: Aukšto slėgio „Drop Stitch“ konstrukcija, išbandyta virš vardinio slėgio, prieš siunčiant baseiną.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: Parama, kuri trunka ilgiau nei sezoną
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: Gairės
+  subtitle: Trumpa Felizbay istorijos versija.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: Orientuota į pripučiamus baseinus
+      description: '„Felizbay“ buvo įkurta vienu tikslu: aukščiausios kokybės „Drop Stitch“ pripučiamiems baseinams.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: Trys parašų rinkiniai
+      description: Stačiakampės, apvalios mėlynos ir apvalios pilkos baseino linijos su pasirenkamais dangčiais ir pasirinktiniais dydžiais.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM partneriams visame pasaulyje
+      description: Gamyba pagal užsakymą prekių ženklams, platintojams, viešbučiams ir glamping operatoriams.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: Susisiekite
+  tagline: Susisiekite
   columns: 3
   items:
-    - title: Email
+    - title: El. paštas
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: Svetainė
+      description: felizbay.com — naršykite mūsų baseinuose ir paprašykite kainos pasiūlymo.
+    - title: OEM / didmeninė prekyba
+      description: Verslo partneriams galimi pasirinktiniai dydžiai, spalvos ir prekės ženklas.
+brand_hub_tagline: Produktai
+brand_hub_title: Naršykite mūsų baseinus
+brand_hub_subtitle: Atraskite mūsų pripučiamų baseinų kolekcijas, sukurtas naudojant aukšto slėgio Drop Stitch technologiją.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: Stačiakampiai baseinai
+    desc: Šeimos dydžio stačiakampiai „Drop Stitch“ baseinai su tvirtomis sienomis ir maksimalia plaukimo zona.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: Žiūrėti baseinus →
+  - title: Apvalūs mėlyni baseinai
+    desc: Klasikinis apvalus ryškiai mėlynos spalvos baseinas – greitas montavimas, tvirta konstrukcija, patvarumas visą sezoną.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: Žiūrėti baseinus →
+  - title: Apvalūs pilki baseinai
+    desc: Aukščiausios kokybės pilki baseinai su papildomai montuojamais dangčiais, kad atrodytų šiuolaikiškai.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: Žiūrėti baseinus →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: Gamybos meistriškumas
+  title: Išskirtinio meistriškumo užtikrinimas
+  description: Felizbay gamybos linija skirta aukštos kokybės, patvariems, aukšto slėgio pripučiamiems baseinams.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: Patyrusi technikų komanda
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: Pažangi gamybos įranga
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: Brandi valdymo sistema
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: Griežta kokybės kontrolė
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: Pasaulinis pasiekiamumas
+  title_html: Vienas prekės ženklas, <span class="text-white/90">gabenimas visame pasaulyje</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: Baseino kolekcijos
+    - value: 15-30 min
+      label: Nustatymo laikas
+    - value: 4-5 PSI
+      label: Vardinis slėgis
+

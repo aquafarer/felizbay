@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Nafukovacie bazény Premium Drop Stitch
+  title: Využite viac svojho<br />Vonkajšieho priestoru.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Objavte prémiové nafukovacie bazény určené na oddych na dvore, rodinnú zábavu a pobyt vonku.<br />
+    Preskúmajte veľkosti bazénov, porovnajte funkcie a nájdite to pravé pre váš priestor.<br />
+    Navrhnuté a prevádzkované spoločnosťou Aquafarer LLC, USA.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Obchod Pools
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Nájdite svoj bazén
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Obdĺžnikový nafukovací bazén Felizbay Drop Stitch na dvore
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay v skratke
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Bazénové zbierky
       amount: '4'
-    - title: Standard SKUs
+    - title: Štandardné SKU
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Čas nastavenia
+      amount: 15-30 min
+    - title: Menovitý tlak
+      amount: 4-5 PSI
+    - title: Záruka
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Vlastné veľkosti
       amount: Available
-    - title: Contact
+    - title: Kontaktovať
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Technológia Drop Stitch
+  title: Prečo bazén Felizbay<br />Je iný
+  subtitle: Vďaka vysokotlakovej konštrukcii Drop Stitch sú naše bazény pevné, odolné a nenáročné na skladovanie.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Pevné Drop Stitch steny
+      description: Tisíce vnútorných závitov spájajú vrstvy stien dohromady, takže bazén sa nafúkne ako skala na 4-5 PSI a po naplnení si zachová svoj tvar.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Rýchle nastavenie bez použitia nástrojov
+      description: Nafúknite pomocou priloženej elektrickej pumpy za pár minút a potom naplňte záhradnou hadicou. Bez náradia, bez konštrukcie, bez odbornej inštalácie.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Malé balenia
+      description: Vypustite, vyfúknite, zrolujte a uložte bazén cez zimu do vrecka. Plnohodnotný bazén, ktorý sa zmestí do šatníka.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Odolný a UV-odolný
+      description: Dvojvrstvová PVC tkanina Drop Stitch odoláva prepichnutiu, UV žiareniu a počas celej sezóny rodinného používania.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Kompletný balík
+      description: Každý bazén sa dodáva s elektrickým vzduchovým čerpadlom, súpravou na opravu a úložným vakom. Pre okrúhle modely sú k dispozícii namontované kryty.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Bezpečný dizajn
+      description: Dizajn obytného bazéna podľa EN 16582-1 a ASTM F2666 s pretlakovými ventilmi a stabilnými pevnými stenami. Vždy je potrebný neustály dozor dospelej osoby.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Nápady na bazén
+  title: Ten správny bazén pre<br />Váš priestor
+  subtitle: Skutočné nastavenia, skutočné veľkosti a poctivé poradenstvo pri výbere správneho bazéna.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Bazény na dvore pre rodiny
+      description: Plánovanie priestoru, skutočné použiteľné veľkosti a jednoduchá údržba pre rodinné letá na dvore.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Získajte nápady
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Bazény pre malé záhrady
+      description: Kompaktné okrúhle a štvorcové modely, ktoré sa hodia do stiesnených vonkajších priestorov bez toho, aby ste sa vzdali plávania.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Získajte nápady
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Veľké bazény na stretnutia
+      description: Veľké obdĺžnikové bazény so skutočným priestorom na plávanie pre celú posádku v letných dňoch.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Získajte nápady
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Vonkajšie namáčanie a relaxácia
+      description: SPA vane so vstavanými sedadlami a izolovaným dnom pre každodenné oddychovanie doma.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Získajte nápady
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Bazény na rekreačné prenájmy
+      description: Sezónne zariadenie pre hostí, ktoré sa rýchlo zariaďuje a mimo sezóny sa skladuje.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Získajte nápady
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping a pohostinstvo
+      description: Charakteristické vonkajšie pobyty – glampingové lokality, butiky a miesta konania podujatí.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Získajte nápady
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Obchod Pools
+  title: Preskúmajte naše bazény
+  subtitle: Porovnajte tvary, veľkosti a vlastnosti, aby ste našli ten správny bazén pre váš dvor alebo vonkajší priestor.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Pre firmy
+  title: Bazény pre firmy,<br />tiež
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay pre obchodných partnerov</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Dovolenkové prenájmy a pohostinstvo
+      description: Sezónne vybavenie pre hostí na dovolenkové prenájmy, glampingy a butiky – rýchle nasadenie, jednoduchá údržba, jednoduché skladovanie.
+    - title: Maloobchodní a značkoví partneri
+      description: Veľkoobchodné programy a maloobchodné bazény Drop Stitch pre záhradné centrá, obchody s bazénmi a online obchody.
+    - title: Custom & Private Label
+      description: Vlastné veľkosti, farby, obaly, tlač loga a maloobchodné balenie pre značky – vytvorené našimi výrobnými partnermi.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Starostlivosť a bezpečnosť
+  title: Jednoduché vlastnenie,<br />Ľahké milovať
+  subtitle: Od doručenia cez prvé kúpanie až po uskladnenie na konci sezóny je vlastnenie bazéna Felizbay jednoduché.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Nastavenie v minútach
+      description: Rozbaľte, nafúknite priloženou pumpou a naplňte – úplné nastavenie zvyčajne trvá 15 – 30 minút na pevnom, rovnom povrchu.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Jednoduchá starostlivosť o vodu
+      description: Štandardné 32/38 mm otvory pre filtračné čerpadlo, pravidelné kontroly pH a namontovaný kryt na okrúhlych modeloch udržujú vodu čistú.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Vyčistite, vypustite a uskladnite
+      description: Vypustite, vysušte, zrolujte a zabaľte bazén do úložného vrecka na zimu. Nevyžaduje trvalú inštaláciu.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Bezpečnosť na prvom mieste
+      description: Deti musia byť neustále pod aktívnym dohľadom dospelej osoby. Postupujte podľa návodu, miestnych pravidiel a pokynov na bezpečné používanie.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Z krabice do dvora
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Krok 1: <span class="font-medium">Vyberte si svoj bazén</span>'
+      description: Porovnajte tvary a veľkosti, aby zodpovedali vášmu priestoru, domácnosti a tomu, ako plánujete využívať vodu.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Krok 2: <span class="font-medium">Nastaviť</span>'
+      description: Položte na pevnú, rovnú zem, nafúknite priloženou elektrickou pumpou a naplňte záhradnou hadicou.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Krok 3: <span class="font-medium">Plávať celé leto</span>'
+      description: Udržujte vodu čerstvú pomocou jednoduchej starostlivosti – zbierajte, prikryte a kontrolujte pH ako v každom malom bazéne.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Krok 4: <span class="font-medium">Uložte to preč</span>'
+      description: Po skončení sezóny bazén vypustite, vysušte, zrolujte a uložte do vrecka až do budúceho leta.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Guľatý nafukovací bazén Felizbay Drop Stitch
 blog_latest:
   title: Pool Guides & Insights
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Sprievodcovia nastavením, tipy na starostlivosť a rady pri nákupe nafukovacích bazénov
+    z tímu Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Časté otázky o nafukovacom bazéne
+  subtitle: Časté otázky o nafukovacích bazénoch Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Ako dlho trvá nastavenie?
+      description: Nafúknutie trvá približne 10 minút pomocou priloženej elektrickej vzduchovej pumpy; úplné nastavenie vrátane umiestnenia a plnenia je zvyčajne 15-30 minút.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Aký pevný je bazén typu Drop Stitch?
+      description: Veľmi tuhý. Steny Drop Stitch sa nafukujú tvrdo na 4-5 PSI – podobne ako nafukovacie paddleboardy – takže bazén si po naplnení vodou zachováva svoj tvar.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Môžu bazén využívať deti?
+      description: Áno, vždy s aktívnym dohľadom dospelej osoby. Deti nikdy nesmú zostať bez dozoru v bazéne alebo v jeho blízkosti – dodržujte návod a miestne bezpečnostné pravidlá.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Ako skladovať bazén v zime?
+      description: Vypustite vodu, vypustite bazén, nechajte ho úplne vyschnúť, potom ho zrolujte a uložte v priloženom úložnom vrecku na miesto, kde nemrzne.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Čo je súčasťou bazéna?
+      description: Každý bazén Felizbay obsahuje elektrické vzduchové čerpadlo, súpravu na opravu a úložný vak. Okrúhle modely majú voliteľný namontovaný kryt.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Aké veľkosti sú k dispozícii?
+      description: 48 štandardných SKU v štyroch kolekciách – okrúhle bazény do 10 m, obdĺžnikové bazény do 6 × 5 m a SPA vane so zabudovanými sedadlami. Pre obchodných partnerov sú k dispozícii vlastné veľkosti.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Na akých povrchoch môže bazén stáť?
+      description: Akýkoľvek plochý, rovný povrch bez ostrých predmetov – trávnik, terasa alebo terasa. Na drsné povrchy sa odporúča brúska. Skontrolujte, či povrch unesie váhu naplneného bazéna.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Ako udržím vodu čistú?
+      description: Ak je namontované, použite filtračné čerpadlo, odstráňte nečistoty, skontrolujte pH a zakryte bazén, keď sa nepoužíva. Ako dlho voda vydrží závisí od veľkosti bazéna, používania a filtrácie – testujte radšej pravidelne, než sa spoliehajte na pevný plán.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Nájdite ten správny bazén<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">pre váš dvor.</span>
+  subtitle: Porovnajte modely a veľkosti alebo získajte pomoc pri výbere – náš tím odpovedá na otázky do jedného pracovného dňa.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Obchod Pools
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Nájdite svoj bazén
       href: /find-your-pool
       icon: tabler:compass
+

@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Prémium Drop Stitch felfújható medencék
+  title: Hozzon ki többet<br />Szabadtéri teréből.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Fedezze fel a prémium felfújható medencéket, amelyeket kerti pihenéshez, családi szórakozáshoz és szabadtéri élethez terveztek.<br />
+    Fedezze fel a medenceméreteket, hasonlítsa össze a funkciókat, és találja meg a helyének megfelelőt.<br />
+    Tervezője és üzemeltetője az Aquafarer LLC, USA.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Vásároljon medencéket
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Találja meg medencéjét
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Felizbay téglalap alakú Drop Stitch felfújható medence egy hátsó udvarban
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay egy pillantásra
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Medence gyűjtemények
       amount: '4'
-    - title: Standard SKUs
+    - title: Szabványos cikkszámok
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Beállítási idő
+      amount: 15-30 min
+    - title: Névleges nyomás
+      amount: 4-5 PSI
+    - title: Garancia
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Egyedi méretek
       amount: Available
-    - title: Contact
+    - title: Érintkezés
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Drop Stitch technológia
+  title: Miért egy Felizbay medence?<br />Különböző
+  subtitle: A nagynyomású Drop Stitch konstrukció merevvé, tartóssá és könnyedén tárolhatóvá teszi medencéinket.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Merev Drop Stitch falak
+      description: Több ezer belső szál rögzíti egymáshoz a falrétegeket, így a medence 4-5 PSI-vel kőkeményen felfújódik, és megtöltéskor megtartja alakját.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Gyors, szerszámmentes beállítás
+      description: Fújja fel a mellékelt elektromos szivattyúval percek alatt, majd töltse fel kerti tömlővel. Nincsenek szerszámok, nincs építés, nincs szakszerű telepítés.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Kicsit csomagolva
+      description: Engedje le, eressze le, tekerje fel és tárolja a medencét zacskóban télen. Szekrényben elférő teljes méretű medence.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Tartós és UV-álló
+      description: A kétrétegű PVC Drop Stitch anyag ellenáll a szúrásnak, az UV-sugárzásnak és a teljes családi használatra.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Komplett csomag
+      description: Minden medencét elektromos légszivattyúval, javítókészlettel és tárolótáskával szállítunk. Kerek modellekhez felszerelt burkolatok kaphatók.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Biztonságtudatos tervezés
+      description: Lakossági medence kialakítása EN 16582-1 és ASTM F2666 szabvány szerint, nyomáscsökkentő szelepekkel és stabil merev falakkal. Állandó felnőtt felügyelet szükséges.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Medence ötletek
+  title: A megfelelő medence<br />A te tered
+  subtitle: Valódi beállítások, valós méretek és őszinte útmutatás a megfelelő medence kiválasztásához.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Háztáji medencék családoknak
+      description: Helytervezés, valós használható méretek és egyszerű karbantartás a családi nyarakhoz a kertben.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Ötleteket
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Medencék kis kertekbe
+      description: Kompakt kerek és négyzet alakú modellek, amelyek szűk kültéri helyekre is illeszkednek anélkül, hogy feladnák az úszást.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Ötleteket
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Nagy medencék összejövetelekhez
+      description: Nagy téglalap alakú medencék igazi úszótérrel a nyári napokon az egész legénység számára.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Ötleteket
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Szabadtéri áztatás és relaxáció
+      description: SPA kádak beépített ülőfelülettel és szigetelt fenékkel a mindennapi otthoni széllökésekhez.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Ötleteket
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Medence nyaralók számára
+      description: Szezonális vendégfelszerelés, amely gyorsan elkészül, és holtszezonban el is tárolható.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Ötleteket
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping és vendéglátás
+      description: Megkülönböztető szabadtéri üdülés – látványos helyek, butikok és rendezvények helyszínei.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Ötleteket
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Vásároljon medencéket
+  title: Fedezze fel medencéinket
+  subtitle: Hasonlítsa össze a formákat, méreteket és jellemzőket, hogy megtalálja a megfelelő medencét kertjében vagy kültéri helyiségében.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Vállalkozásoknak
+  title: Üzleti medencék,<br />Is
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay üzleti partnereknek</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Nyaralás és vendéglátás
+      description: Szezonális vendégszolgáltatások nyaralókhoz, kilátóhelyekhez és butik ingatlanokhoz – gyorsan telepíthető, könnyen karbantartható, egyszerűen tárolható.
+    - title: Kiskereskedelmi és márkapartnerek
+      description: Nagykereskedelmi programok és kiskereskedelmi használatra kész Drop Stitch medencék kertészeti központok, medenceboltok és online áruházak számára.
+    - title: Egyedi és privát címke
+      description: Egyedi méretek, színek, borítók, logónyomtatás és kiskereskedelmi csomagolás márkák számára – gyártópartnereink által.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Gondozás és biztonság
+  title: Könnyen birtokolható,<br />Könnyű Szeretni
+  subtitle: A szállítástól az első úszáson át a szezon végi tárolásig a Felizbay medence birtoklása egyszerű marad.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Beállítás percekben
+      description: Bontsa ki a dobozt, fújja fel a mellékelt pumpával, és töltse fel – a teljes beállítás szilárd, vízszintes talajon általában 15-30 percet vesz igénybe.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Egyszerű vízkezelés
+      description: A szabványos 32/38 mm-es szűrőszivattyú-csatlakozók, a rendszeres pH-ellenőrzés és a kerek modellek felszerelt burkolata tisztán tartják a vizet.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Tisztítás, leeresztés és tárolás
+      description: Csavarja le, szárítsa meg, tekerje fel, és csomagolja be a medencét a tárolótáskájába télre. Nincs karbantartásra való állandó telepítés.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Első a biztonság
+      description: A gyermekeket mindig egy felnőtt aktív felügyelete alatt kell tartani. Kövesse a kézikönyvet, a helyi szabályokat és a biztonságos használat útmutatásait.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Boxtól a hátsó udvarig
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: '1. lépés: <span class="font-medium">Válassza ki a medencéjét</span>'
+      description: Hasonlítsa össze a formákat és a méreteket, hogy illeszkedjen a helyéhez, a háztartásához és a vízhasználathoz.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: '2. lépés: <span class="font-medium">Állítsa be</span>'
+      description: Helyezze szilárd, vízszintes talajra, fújja fel a mellékelt elektromos szivattyúval, és töltse fel kerti tömlővel.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: '3. lépés: <span class="font-medium">Ússz egész nyáron</span>'
+      description: Egyszerű gondozással tartsa frissen a vizet – simítsa le, fedje le és ellenőrizze a pH-t, mint minden kis medencében.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: '4. lépés: <span class="font-medium">Tárolja el</span>'
+      description: Amikor a szezon véget ér, ürítse ki, szárítsa meg, tekerje fel, és tárolja a medencét a zsákjában a következő nyárig.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay kerek Drop Stitch felfújható medence
 blog_latest:
-  title: Pool Guides & Insights
+  title: Pool útmutatók és betekintések
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Felfújható úszómedencék beállítási útmutatói, gondozási tanácsai és vásárlási tanácsok
+    a Felizbay csapattól.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Felfújható medence GYIK
+  subtitle: Gyakori kérdések a Felizbay felfújható medencékkel kapcsolatban.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Mennyi ideig tart a beállítás?
+      description: A felfújás körülbelül 10 percet vesz igénybe a mellékelt elektromos légszivattyúval; a teljes beállítás, beleértve az elhelyezést és a feltöltést, általában 15-30 percet vesz igénybe.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Mennyire merev a Drop Stitch medence?
+      description: Nagyon merev. A Drop Stitch falai 4-5 PSI-vel keményen felfújódnak – hasonlóan egy felfújható eveződeszkához –, így a medence megtartja formáját, ha vízzel van feltöltve.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Gyermekek használhatják a medencét?
+      description: Igen, mindenkor aktív felnőtt felügyelet mellett. A gyermekeket soha nem szabad felügyelet nélkül hagyni a medencében vagy annak közelében – kövesse a kézikönyvet és a helyi biztonsági szabályokat.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Hogyan tároljam a medencét télen?
+      description: Engedje le a vizet, engedje le a medencét, hagyja teljesen megszáradni, majd tekerje fel és tárolja a mellékelt tárolózsákban, fagymentes helyen.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Mit tartalmaz a medence?
+      description: Minden Felizbay medence tartalmaz egy elektromos légszivattyút, egy javítókészletet és egy tárolótáskát. A kerek modellek opcionálisan felszerelt burkolattal rendelkeznek.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Milyen méretek kaphatók?
+      description: 48 szabványos SKU négy kollekcióban – kerek medencék 10 m-ig, téglalap alakú medencék 6 × 5 m-ig és SPA kádak beépített ülésekkel. Üzleti partnerek számára egyedi méretek állnak rendelkezésre.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Milyen felületeken állhat a medence?
+      description: Bármilyen sík, vízszintes felület, éles tárgyaktól mentes – pázsit, terasz vagy fedélzet. Durva felületeken köszörült lemez használata javasolt. Ellenőrizze, hogy a felület elbírja-e egy feltöltött medence súlyát.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Hogyan tartsam tisztán a vizet?
+      description: Ha van, használjon szűrőszivattyút, távolítsa el a törmeléket, ellenőrizze a pH-t, és fedje le a medencét, ha nem használja. Az, hogy mennyi ideig tart a víz, a medence méretétől, a használattól és a szűréstől függ – rendszeresen tesztelje, ahelyett, hogy rögzített ütemezésre hagyatkozna.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Találja meg a megfelelő medencét<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">a hátsó udvarodért.</span>
+  subtitle: Hasonlítsa össze a modelleket és méreteket, vagy kérjen segítséget a választáshoz – csapatunk egy munkanapon belül válaszol a kérdésekre.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Vásároljon medencéket
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Találja meg medencéjét
       href: /find-your-pool
       icon: tabler:compass
+

@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Φουσκωτές πισίνες Premium Drop Stitch
+  title: Αξιοποιήστε περισσότερο τον εξωτερικό<br />Σας χώρο.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Ανακαλύψτε premium φουσκωτές πισίνες σχεδιασμένες για χαλάρωση στην πίσω αυλή, οικογενειακή διασκέδαση και υπαίθρια διαβίωση.<br />
+    Εξερευνήστε τα μεγέθη της πισίνας, συγκρίνετε χαρακτηριστικά και βρείτε τη σωστή εφαρμογή για τον χώρο σας.<br />
+    Σχεδιάστηκε και λειτουργεί από την Aquafarer LLC, ΗΠΑ.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Πισίνες καταστημάτων
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Βρείτε την πισίνα σας
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Felizbay ορθογώνια Drop Stitch φουσκωτή πισίνα σε μια πίσω αυλή
 stats:
-  title: Felizbay at a Glance
+  title: Το Felizbay με μια ματιά
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Συλλογές πισίνας
       amount: '4'
-    - title: Standard SKUs
+    - title: Τυπικά SKU
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Ώρα εγκατάστασης
+      amount: 15-30 min
+    - title: Ονομαστική πίεση
+      amount: 4-5 PSI
+    - title: Εγγύηση
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Προσαρμοσμένα μεγέθη
       amount: Available
-    - title: Contact
+    - title: Επαφή
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Τεχνολογία Drop Stitch
+  title: Γιατί μια πισίνα Felizbay<br />Είναι Διαφορετικό
+  subtitle: Η κατασκευή Drop Stitch υψηλής πίεσης κάνει τις πισίνες μας άκαμπτες, ανθεκτικές και αβίαστη στην αποθήκευση.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Άκαμπτοι τοίχοι Drop Stitch
+      description: Χιλιάδες εσωτερικά νήματα κλειδώνουν τα στρώματα του τοίχου μεταξύ τους, έτσι η πισίνα φουσκώνει σκληρά στα 4-5 PSI και διατηρεί το σχήμα της όταν γεμίζει.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Γρήγορη εγκατάσταση χωρίς εργαλεία
+      description: Φουσκώστε με την παρεχόμενη ηλεκτρική αντλία μέσα σε λίγα λεπτά και μετά γεμίστε με έναν εύκαμπτο σωλήνα κήπου. Χωρίς εργαλεία, χωρίς κατασκευή, χωρίς επαγγελματική εγκατάσταση.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Πακέτα μακριά Μικρά
+      description: Στραγγίστε, ξεφουσκώστε, τυλίξτε και αποθηκεύστε την πισίνα σε μια σακούλα κατά τη διάρκεια του χειμώνα. Μια πισίνα πλήρους μεγέθους που χωράει σε μια ντουλάπα.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Ανθεκτικό & Ανθεκτικό στην UV
+      description: Το διπλό ύφασμα PVC Drop Stitch αντέχει στα τρυπήματα, στην έκθεση στην υπεριώδη ακτινοβολία και σε μια πλήρη περίοδο οικογενειακής χρήσης.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Ολοκληρωμένο Πακέτο
+      description: Κάθε πισίνα συνοδεύεται από ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Εφαρμοσμένα καλύμματα διαθέσιμα για στρογγυλά μοντέλα.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Σχεδιασμός Ασφαλείας-Συνειδητός
+      description: Σχεδιασμός οικιακής πισίνας με αναφορά στα πρότυπα EN 16582-1 και ASTM F2666, με βαλβίδες εκτόνωσης πίεσης και σταθερούς άκαμπτους τοίχους. Απαιτείται πάντα η συνεχής επίβλεψη από ενήλικα.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Ιδέες για πισίνα
+  title: Η σωστή πισίνα για<br />Ο χώρος σας
+  subtitle: Πραγματικές ρυθμίσεις, πραγματικά μεγέθη και ειλικρινής καθοδήγηση για την επιλογή της σωστής πισίνας.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Πισίνες πίσω αυλής για οικογένειες
+      description: Χωροταξικός σχεδιασμός, πραγματικά χρησιμοποιήσιμα μεγέθη και εύκολη συντήρηση για οικογενειακά καλοκαίρια στην πίσω αυλή.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Λάβετε ιδέες
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Πισίνες για μικρές αυλές
+      description: Συμπαγή στρογγυλά και τετράγωνα μοντέλα που ταιριάζουν σε στενούς εξωτερικούς χώρους χωρίς να εγκαταλείπουν το κολύμπι.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Λάβετε ιδέες
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Μεγάλες πισίνες για συγκεντρώσεις
+      description: Μεγάλες ορθογώνιες πισίνες με πραγματικό χώρο κολύμβησης για όλο το πλήρωμα τις καλοκαιρινές μέρες.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Λάβετε ιδέες
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Υπαίθρια Διασκέδαση & Χαλάρωση
+      description: Μπανιέρες SPA με ενσωματωμένα καθίσματα και μονωμένο πάτο για καθημερινή αναρρίχηση στο σπίτι.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Λάβετε ιδέες
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Πισίνες για ενοικιάσεις διακοπών
+      description: Μια εποχική ανέσεις επισκεπτών που στήνεται γρήγορα και αποθηκεύεται εκτός εποχής.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Λάβετε ιδέες
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping & Hospitality
+      description: Ξεχωριστές υπαίθριες διαμονές — τοποθεσίες με γκλάμ, μπουτίκ και χώρους εκδηλώσεων.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Λάβετε ιδέες
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Πισίνες καταστημάτων
+  title: Εξερευνήστε τις πισίνες μας
+  subtitle: Συγκρίνετε σχήματα, μεγέθη και χαρακτηριστικά για να βρείτε τη σωστή πισίνα για την αυλή ή τον εξωτερικό σας χώρο.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Για Επιχειρήσεις
+  title: Πισίνες για Επιχειρήσεις,<br />Πολύ
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay για επιχειρηματικούς εταίρους</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Ενοικιάσεις διακοπών και φιλοξενίας
+      description: Εποχικές ανέσεις επισκεπτών για ενοικιάσεις διακοπών, τοποθεσίες με λάμπινγκ και μπουτίκ — γρήγορη ανάπτυξη, εύκολη συντήρηση, απλή αποθήκευση.
+    - title: Συνεργάτες λιανικής & επωνυμίας
+      description: Προγράμματα χονδρικής και πισίνες Drop Stitch έτοιμες για λιανική πώληση για κέντρα κήπου, καταστήματα πισίνας και ηλεκτρονικά καταστήματα.
+    - title: Προσαρμοσμένη & Ιδιωτική ετικέτα
+      description: Προσαρμοσμένα μεγέθη, χρώματα, εξώφυλλα, εκτύπωση λογότυπων και συσκευασίες λιανικής για επωνυμίες — κατασκευασμένες από τους κατασκευαστές μας συνεργάτες.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Φροντίδα & Ασφάλεια
+  title: Εύκολο στην κατοχή,<br />Εύκολο να αγαπάς
+  subtitle: Από την παράδοση μέχρι το πρώτο κολύμπι μέχρι την αποθήκευση στο τέλος της σεζόν, η ιδιοκτησία μιας πισίνας Felizbay παραμένει απλή.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Ρύθμιση σε λεπτά
+      description: Αποσυσκευάστε, φουσκώστε με την αντλία που περιλαμβάνεται και γεμίστε — η πλήρης εγκατάσταση διαρκεί συνήθως 15-30 λεπτά σε σταθερό, επίπεδο έδαφος.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Απλή φροντίδα νερού
+      description: Οι τυπικές θύρες αντλίας φίλτρου 32/38 mm, οι τακτικοί έλεγχοι pH και το τοποθετημένο κάλυμμα σε στρογγυλά μοντέλα διατηρούν το νερό καθαρό.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Καθαρισμός, αποστράγγιση & αποθήκευση
+      description: Στραγγίστε, στεγνώστε, τυλίξτε και συσκευάστε την πισίνα στη σακούλα αποθήκευσης για το χειμώνα. Δεν υπάρχει μόνιμη εγκατάσταση για συντήρηση.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Πρώτα η ασφάλεια
+      description: Τα παιδιά πρέπει να επιβλέπονται ενεργά από ενήλικα ανά πάσα στιγμή. Ακολουθήστε το εγχειρίδιο, τους τοπικούς κανόνες και τις οδηγίες ασφαλούς χρήσης.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Από το κουτί στην πίσω αυλή
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Βήμα 1: <span class="font-medium">Επιλέξτε την πισίνα σας</span>'
+      description: Συγκρίνετε σχήματα και μεγέθη ώστε να ταιριάζουν με τον χώρο, το νοικοκυριό σας και τον τρόπο που σκοπεύετε να χρησιμοποιήσετε το νερό.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Βήμα 2: <span class="font-medium">Ρυθμίστε το</span>'
+      description: Τοποθετήστε σε σταθερό, επίπεδο έδαφος, φουσκώστε με την παρεχόμενη ηλεκτρική αντλία και γεμίστε με έναν εύκαμπτο σωλήνα κήπου.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Βήμα 3: <span class="font-medium">Κολυμπήστε όλο το καλοκαίρι</span>'
+      description: Διατηρήστε το νερό φρέσκο ​​με απλή φροντίδα — ξαφρίστε, καλύψτε και ελέγξτε το pH όπως κάθε μικρή πισίνα.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Βήμα 4: <span class="font-medium">Αποθηκεύστε το μακριά</span>'
+      description: Όταν τελειώσει η σεζόν, στραγγίστε, στεγνώστε, τυλίξτε και αποθηκεύστε την πισίνα στην τσάντα της μέχρι το επόμενο καλοκαίρι.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay στρογγυλή φουσκωτή πισίνα Drop Stitch
 blog_latest:
   title: Pool Guides & Insights
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Οδηγοί εγκατάστασης, συμβουλές φροντίδας και συμβουλές αγοράς για φουσκωτές πισίνες
+    από την ομάδα Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Συχνές ερωτήσεις για φουσκωτή πισίνα
+  subtitle: Συνήθεις ερωτήσεις σχετικά με τις φουσκωτές πισίνες Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Πόσο χρόνο διαρκεί η εγκατάσταση;
+      description: Το φούσκωμα διαρκεί περίπου 10 λεπτά με την παρεχόμενη ηλεκτρική αντλία αέρα. Η πλήρης ρύθμιση, συμπεριλαμβανομένης της τοποθέτησης και της πλήρωσης, είναι συνήθως 15-30 λεπτά.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Πόσο άκαμπτη είναι μια πισίνα Drop Stitch;
+      description: Πολύ άκαμπτο. Τα τοιχώματα Drop Stitch φουσκώνουν δυνατά στα 4-5 PSI - παρόμοια με μια φουσκωτή σανίδα κουπιών - έτσι η πισίνα διατηρεί το σχήμα της όταν γεμίζει με νερό.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Μπορούν τα παιδιά να χρησιμοποιήσουν την πισίνα;
+      description: Ναι, με ενεργή επίβλεψη ενηλίκων ανά πάσα στιγμή. Τα παιδιά δεν πρέπει ποτέ να αφήνονται χωρίς επίβλεψη μέσα ή κοντά στην πισίνα — ακολουθήστε το εγχειρίδιο και τους τοπικούς κανόνες ασφαλείας.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Πώς αποθηκεύω την πισίνα το χειμώνα;
+      description: Στραγγίστε το νερό, ξεφουσκώστε την πισίνα, αφήστε την να στεγνώσει τελείως, στη συνέχεια τυλίξτε την σε ρολό και αποθηκεύστε την στην παρεχόμενη σακούλα αποθήκευσης σε μέρος χωρίς παγετό.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Τι περιλαμβάνει η πισίνα;
+      description: Κάθε πισίνα Felizbay περιλαμβάνει ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Τα στρογγυλά μοντέλα διαθέτουν προαιρετικά τοποθετημένο κάλυμμα.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Τι μεγέθη είναι διαθέσιμα;
+      description: 48 τυπικές SKU σε τέσσερις συλλογές — στρογγυλές πισίνες πλάτους έως 10 m, ορθογώνιες πισίνες έως 6 × 5 m και μπανιέρες SPA με ενσωματωμένα καθίσματα. Προσαρμοσμένα μεγέθη είναι διαθέσιμα για επιχειρηματικούς συνεργάτες.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Σε ποιες επιφάνειες μπορεί να σταθεί η πισίνα;
+      description: Οποιαδήποτε επίπεδη, επίπεδη επιφάνεια χωρίς αιχμηρά αντικείμενα — γκαζόν, αίθριο ή κατάστρωμα. Συνιστάται ένα αλεσμένο φύλλο σε τραχιές επιφάνειες. Ελέγξτε ότι η επιφάνεια μπορεί να αντέξει το βάρος μιας γεμάτης πισίνας.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Πώς διατηρώ το νερό καθαρό;
+      description: Χρησιμοποιήστε μια αντλία φίλτρου όπου υπάρχει, καθαρίστε τα υπολείμματα, ελέγξτε το pH και καλύψτε την πισίνα όταν δεν τη χρησιμοποιείτε. Το πόσο διαρκεί το νερό εξαρτάται από το μέγεθος της πισίνας, τη χρήση και το φιλτράρισμα — δοκιμάζετε τακτικά αντί να βασίζεστε σε ένα σταθερό πρόγραμμα.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Βρείτε τη σωστή πισίνα<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">για την αυλή σας.</span>
+  subtitle: Συγκρίνετε μοντέλα και μεγέθη ή λάβετε βοήθεια για την επιλογή — η ομάδα μας απαντά σε ερωτήσεις εντός μιας εργάσιμης ημέρας.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Πισίνες καταστημάτων
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Βρείτε την πισίνα σας
       href: /find-your-pool
       icon: tabler:compass
+

@@ -1,35 +1,35 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Kontakt
+  title: KONTAKTUJTE SE
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Pošlete nám zprávu
+  subtitle: V případě cenových nabídek, technických dotazů nebo dotazů na partnerství nám napište. Odpovídáme do jednoho pracovního dne.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Odeslat poptávku → Získejte cenovou nabídku
+  success_message: Díky! Vaše zpráva přistála v naší doručené poště. Odpovíme do jednoho pracovního dne.
+  error_message: Při odesílání vaší zprávy se něco pokazilo. Zkuste to znovu nebo nám napište přímo.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: vyřešte prosím následující'
   fields:
     - name: firstName
-      label: First Name
+      label: Křestní jméno
       row: 1
     - name: lastName
-      label: Last Name
+      label: Příjmení
       row: 1
     - name: companyName
-      label: Company Name
+      label: Název společnosti
       row: 2
     - name: address
-      label: Address
+      label: Adresa
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: PSČ
       row: 4
     - name: country
-      label: Country
+      label: Země
       row: 4
       type: select
       optionsKey: countries
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Odhadovaný objem objednávky
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Vyberte odhadovaný objem...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Pouze vzorky / prototypy
+        - value: 5-10
+          label: 5–10 jednotek (standardní MOQ)
+        - value: 100-500
+          label: 100–500 jednotek
+        - value: 500-plus
+          label: 500+ jednotek (množstevní cena)
     - name: customization
-      label: Customization Needed?
+      label: Je potřeba přizpůsobení?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Vyberte typ přizpůsobení...
         - value: none
-          label: Standard product (no customization)
+          label: Standardní produkt (žádné přizpůsobení)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Pouze vlastní logo / branding
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Kompletní OEM (velikost, barva, grafika, balení)
         - value: consultation
-          label: Not sure — need consultation
+          label: Nejsem si jistý – potřebuji konzultaci
     - name: productInterest
-      label: Pool of Interest
+      label: Fond zájmu
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Vyberte typ bazénu...
         - value: all
-          label: All pools / Full catalog
+          label: Všechny bazény / Kompletní katalog
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Podrobit
       row: 9
     - name: message
-      label: Message
+      label: Zpráva
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Jiné způsoby, jak se k nám dostat
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Prodejní dotazy
+      description: Shromáždit citace, velkoobchodní ceny a hromadné objednávky.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Technická podpora
+      description: Pomoc s nastavením, opravy, náhradní díly a otázky týkající se péče.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Vlastní velikosti, barvy, kryty, značky a balení.
       icon: tabler:palette
-    - title: Email
+    - title: E-mail
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: webové stránky
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Doba odezvy
+      description: Odpovídáme do jednoho pracovního dne.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Kontaktujte nás
+  subtitle: Kontaktujte Felizbay
   address: felizbay.com
   zoom: 15
+

@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: Haqqımızda
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: Felizbay şişmə hovuzu
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay is a premium drop stitch inflatable pool brand designed and operated by Aquafarer LLC (USA). We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    Üzgüçülüyün sadələşdirilməsi, <br />
+     <span class="text-accent dark:text-white">Felizbay</span> üslubunda
+  subtitle: Felizbay, Aquafarer MMC (ABŞ) tərəfindən dizayn edilmiş və idarə olunan premium Drop Stitch şişmə hovuz markasıdır. Biz inanırıq ki, hər bir ailə həyətdə əsl hovuza layiqdir - tikinti, icazə və ya daimi quraşdırma olmadan. Hovuzlarımız bir neçə dəqiqə ərzində sərt şəkildə şişirilir, ailə əyləncəsinin tam yaylarından sağ çıxır və mövsümün sonunda kiçik həcmdə yığışır.
 stats:
-  title: By the numbers
+  title: Rəqəmlərə görə
   columns: 4
   stats:
-    - title: Pool collections
+    - title: Hovuz kolleksiyaları
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: Quraşdırma vaxtı
+      amount: 15-30 min
+    - title: Nominal təzyiq
+      amount: 4-5 PSI
+    - title: Əlaqə
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: Biz nə qururuq
+  subtitle: İçəridən bildiyimiz diqqət mərkəzində olan məhsul xətti - yüksək təzyiqli Drop Stitch şişmə hovuzları.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: Düzbucaqlı hovuzlar
+      description: Məkanınız üçün üzgüçülük sahəsini maksimuma çatdıran ailə ölçülü düzbucaqlı Drop Stitch hovuzları.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: Dairəvi mavi hovuzlar
+      description: Klassik həyət hovuzu - canlı mavi, sərt Drop Stitch divarları, sürətli quraşdırma.
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: Dəyirmi boz hovuzlar
+      description: Müasir boz rəngə və isteğe bağlı quraşdırılmış örtüyə malik premium xəttimiz.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: İsti vanna SPA hovuzları
+      description: Quraşdırılmış oturacaqlar və 5 mm izolyasiya edilmiş dibləri olan dörd mövsüm isti vanna modelləri.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: Tam paketlər
+      description: Hər hovuz elektrik hava nasosu, təmir dəsti və saxlama çantası ilə təchiz olunur.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: Xüsusi ölçülər
+      description: Brendlər, distribyutorlar və qonaqpərvərlik layihələri üçün OEM ölçüləri, rəngləri və örtükləri.
       icon: tabler:adjustments
     - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+      description: Loqo çapı və pərakəndə satışa hazır qablaşdırma ilə özəl etiketli istehsal.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: Felizbay düzbucaqlı Drop Stitch şişmə hovuzu
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: Bizim dəyərlərimiz
+  subtitle: Qurduğumuz hər hovuzu formalaşdıran üç prinsip.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: Ailənizin istifadə edəcəyi kimi qurun
+      description: Hər tikişə, divara və klapanlara elə baxılır ki, sanki bizim öz ailəmiz orada üzəcək.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: Satışdan əvvəl mühəndis
+      description: Hovuz gəmilərindən əvvəl nominal təzyiqdən yuxarı sınaqdan keçirilmiş yüksək təzyiqli Drop Stitch konstruksiyası.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: Mövsümü geridə qoyan dəstək
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: Mərhələlər
+  subtitle: Felizbay hekayəsinin qısa versiyası.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: Şişirilən hovuzlara diqqət yetirir
+      description: 'Felizbay bir fokusla yaradılmışdır: premium drop stitch şişmə hovuzlar.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: Üç imza kolleksiyası
+      description: Düzbucaqlı, dəyirmi mavi və dəyirmi boz hovuz xətləri, hər biri isteğe bağlı örtüklər və fərdi ölçülərə malikdir.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: Dünya üzrə tərəfdaşlar üçün OEM/ODM
+      description: Brendlər, distribyutorlar, otellər və glamping operatorları üçün xüsusi istehsal.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: Əlaqə saxlayın
+  tagline: Əlaqə
   columns: 3
   items:
-    - title: Email
+    - title: E-poçt
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: Veb sayt
+      description: felizbay.com — hovuzlarımızı nəzərdən keçirin və qiymət tələb edin.
+    - title: OEM / Topdan
+      description: Biznes tərəfdaşları üçün xüsusi ölçülər, rənglər və brendinq mövcuddur.
+brand_hub_tagline: Məhsullar
+brand_hub_title: Hovuzlarımızı kəşf edin
+brand_hub_subtitle: Yüksək təzyiqli Drop Stitch texnologiyası ilə tikilmiş şişmə hovuz kolleksiyalarımızı kəşf edin.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: Düzbucaqlı Hovuzlar
+    desc: Sərt divarları və maksimum üzmə sahəsi olan ailə ölçülü düzbucaqlı Drop Stitch hovuzları.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: Hovuzlara baxın →
+  - title: Dairəvi Mavi Hovuzlar
+    desc: Canlı mavi rəngli klassik dəyirmi hovuz - sürətli quraşdırma, sərt tikinti, mövsüm boyu davamlılıq.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: Hovuzlara baxın →
+  - title: Dəyirmi Boz Hovuzlar
+    desc: Müasir həyət görünüşü üçün əlavə quraşdırılmış örtüklərlə premium boz hovuzlar.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: Hovuzlara baxın →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: İstehsal Mükəmməlliyi
+  title: Nəfis sənətkarlığın təmin edilməsi
+  description: Felizbay istehsal xətti yüksək keyfiyyətli, davamlı, yüksək təzyiqli şişmə hovuzlara həsr edilmişdir.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: Təcrübəli Texniki Komanda
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: Qabaqcıl İstehsal Avadanlıqları
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: Yetkin İdarəetmə Sistemi
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: Ciddi keyfiyyətə nəzarət
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: Qlobal Çatdırılma
+  title_html: Bir marka, <span class="text-white/90">dünya miqyasında göndərmə</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: Hovuz kolleksiyaları
+    - value: 15-30 min
+      label: Quraşdırma vaxtı
+    - value: 4-5 PSI
+      label: Nominal təzyiq
+

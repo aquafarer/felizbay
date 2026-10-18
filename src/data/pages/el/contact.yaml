@@ -1,35 +1,35 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Επαφή
+  title: ΕΠΙΚΟΙΝΩΝΗΣΤΕ
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Στείλτε μας ένα μήνυμα
+  subtitle: Για προσφορές, τεχνικές ερωτήσεις ή ερωτήσεις συνεργασίας, στείλτε μας μια γραμμή. Απαντάμε εντός μιας εργάσιμης ημέρας.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Αποστολή ερωτήματος → Λάβετε προσφορά
+  success_message: Ευχαριστώ! Το μήνυμά σας έφτασε στα εισερχόμενά μας. Θα απαντήσουμε εντός μιας εργάσιμης ημέρας.
+  error_message: Παρουσιάστηκε κάποιο πρόβλημα κατά την αποστολή του μηνύματός σας. Δοκιμάστε ξανά ή στείλτε μας email απευθείας.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: λύστε τα παρακάτω'
   fields:
     - name: firstName
-      label: First Name
+      label: Ονομα
       row: 1
     - name: lastName
-      label: Last Name
+      label: Επώνυμο
       row: 1
     - name: companyName
-      label: Company Name
+      label: Όνομα εταιρείας
       row: 2
     - name: address
-      label: Address
+      label: Διεύθυνση
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Ταχυδρομικός Κώδικας
       row: 4
     - name: country
-      label: Country
+      label: Χώρα
       row: 4
       type: select
       optionsKey: countries
@@ -38,49 +38,49 @@ contact_form:
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: ΤΗΛ
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Εκτιμώμενος όγκος παραγγελιών
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Επιλέξτε τον εκτιμώμενο όγκο σας...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Δείγματα / Πρωτότυπα μόνο
+        - value: 5-10
+          label: 5–10 μονάδες (Τυπικό MOQ)
+        - value: 100-500
+          label: 100–500 μονάδες
+        - value: 500-plus
+          label: 500+ μονάδες (τιμολόγηση όγκου)
     - name: customization
-      label: Customization Needed?
+      label: Απαιτείται προσαρμογή;
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Επιλέξτε τύπο προσαρμογής...
         - value: none
-          label: Standard product (no customization)
+          label: Τυπικό προϊόν (χωρίς προσαρμογή)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Προσαρμοσμένο λογότυπο / Μόνο επωνυμία
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Πλήρης OEM (μέγεθος, χρώμα, γραφικά, συσκευασία)
         - value: consultation
-          label: Not sure — need consultation
+          label: Δεν είμαι σίγουρος - χρειάζεται διαβούλευση
     - name: productInterest
-      label: Pool of Interest
+      label: Δεξαμενή Ενδιαφέροντος
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Επιλέξτε τύπο πισίνας...
         - value: all
-          label: All pools / Full catalog
+          label: Όλες οι πισίνες / Πλήρης κατάλογος
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Θέμα
       row: 9
     - name: message
-      label: Message
+      label: Μήνυμα
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Άλλοι τρόποι να επικοινωνήσετε μαζί μας
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Ερωτήσεις πωλήσεων
+      description: Προσφορές πισίνας, τιμές χονδρικής και μαζικές παραγγελίες.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Τεχνική υποστήριξη
+      description: Βοήθεια εγκατάστασης, επισκευές, ανταλλακτικά και ερωτήσεις φροντίδας.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Προσαρμοσμένα μεγέθη, χρώματα, καλύμματα, επωνυμία και συσκευασία.
       icon: tabler:palette
-    - title: Email
+    - title: E-mail
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Δικτυακός τόπος
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Χρόνος απόκρισης
+      description: Απαντάμε εντός μιας εργάσιμης ημέρας.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Επικοινωνήστε
+  subtitle: Επικοινωνήστε με το Felizbay
   address: felizbay.com
   zoom: 15
+

@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Əlaqə
+  title: ƏLAQƏ EDİN
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Bizə mesaj göndərin
+  subtitle: Kotirovkalar, texniki suallar və ya tərəfdaşlıq sorğuları üçün bizə bir xətt buraxın. Bir iş günü ərzində cavab veririk.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Sorğu göndər → Təklif alın
+  success_message: Təşəkkürlər! Mesajınız inboxumuza düşdü. Biz bir iş günü ərzində cavab verəcəyik.
+  error_message: Mesajınızı göndərərkən xəta baş verdi. Lütfən, yenidən cəhd edin və ya birbaşa bizə e-poçt göndərin.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: lütfən, aşağıdakıları həll edin'
   fields:
     - name: firstName
-      label: First Name
+      label: Ad
       row: 1
     - name: lastName
-      label: Last Name
+      label: Soyadı
       row: 1
     - name: companyName
-      label: Company Name
+      label: Şirkət Adı
       row: 2
     - name: address
-      label: Address
+      label: Ünvan
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Poçt / Poçt Kodu
       row: 4
     - name: country
-      label: Country
+      label: ölkə
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: E-poçt
       row: 5
       type: email
     - name: tel
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Təxmini Sifariş Həcmi
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Təxmini həcminizi seçin...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Yalnız nümunələr / Prototiplər
+        - value: 5-10
+          label: 5–10 ədəd (Standart MOQ)
+        - value: 100-500
+          label: 100-500 ədəd
+        - value: 500-plus
+          label: 500+ kontur (həcmi qiymət)
     - name: customization
-      label: Customization Needed?
+      label: Fərdiləşdirmə tələb olunur?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Fərdiləşdirmə növünü seçin...
         - value: none
-          label: Standard product (no customization)
+          label: Standart məhsul (fərdiləşdirmə yoxdur)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Yalnız Fərdi Loqo / Brendinq
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Tam OEM (ölçü, rəng, qrafika, qablaşdırma)
         - value: consultation
-          label: Not sure — need consultation
+          label: Əmin deyiləm - məsləhət lazımdır
     - name: productInterest
-      label: Pool of Interest
+      label: Maraq Hovuzu
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Hovuz növünü seçin...
         - value: all
-          label: All pools / Full catalog
+          label: Bütün hovuzlar / Tam kataloq
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Mövzu
       row: 9
     - name: message
-      label: Message
+      label: Mesaj
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Bizə çatmağın başqa yolları
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Satış sorğuları
+      description: Hovuz qiymətləri, topdansatış qiymətləri və toplu sifarişlər.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Texniki dəstək
+      description: Quraşdırma yardımı, təmir, ehtiyat hissələri və qayğı sualları.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Xüsusi ölçülər, rənglər, örtüklər, marka və qablaşdırma.
       icon: tabler:palette
-    - title: Email
+    - title: E-poçt
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Veb sayt
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Cavab vaxtı
+      description: Bir iş günü ərzində cavab veririk.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Əlaqə saxlayın
+  subtitle: Felizbayla əlaqə saxlayın
   address: felizbay.com
   zoom: 15
+

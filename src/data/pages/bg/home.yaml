@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Първокласни надуваеми басейни Drop Stitch
+  title: Възползвайте се повече от вашето<br />Външно пространство.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Открийте първокласни надуваеми басейни, предназначени за релакс в задния двор, семейно забавление и живот на открито.<br />
+    Разгледайте размерите на басейна, сравнете характеристиките и намерете подходящото за вашето пространство.<br />
+    Проектиран и управляван от Aquafarer LLC, САЩ.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Магазин Басейни
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Намерете своя басейн
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Правоъгълен надуваем плувен басейн Felizbay Drop Stitch в задния двор
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay с един поглед
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Колекции басейн
       amount: '4'
-    - title: Standard SKUs
+    - title: Стандартни SKU
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Време за настройка
+      amount: 15-30 min
+    - title: Номинално налягане
+      amount: 4-5 PSI
+    - title: Гаранция
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Персонализирани размери
       amount: Available
-    - title: Contact
+    - title: Контакт
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Технология Drop Stitch
+  title: Защо басейн Felizbay<br />е различен
+  subtitle: Конструкцията Drop Stitch под високо налягане прави нашите басейни твърди, издръжливи и лесни за съхранение.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Твърди стени с Drop Stitch
+      description: Хиляди вътрешни нишки заключват стенните слоеве заедно, така че басейнът се надува като скала при 4-5 PSI и запазва формата си, когато се напълни.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Бърза настройка без инструменти
+      description: Надуйте с включената електрическа помпа за минути, след което напълнете с градински маркуч. Без инструменти, без конструкция, без професионален монтаж.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Малки опаковки
+      description: Източете, обезвъздушете, навийте и съхранявайте басейна в торба през зимата. Плувен басейн в пълен размер, който се побира в килера.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Издръжлив и UV-устойчив
+      description: Двуслойната PVC Drop Stitch тъкан е устойчива на пробиви, UV излагане и цял сезон на семейна употреба.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Пълен пакет
+      description: Всеки басейн се доставя с електрическа въздушна помпа, ремонтен комплект и чанта за съхранение. Предлагат се монтирани капаци за кръгли модели.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Дизайн, съобразен с безопасността
+      description: Дизайн на жилищен басейн, съобразен с EN 16582-1 и ASTM F2666, с клапани за освобождаване на налягането и стабилни твърди стени. Винаги е необходим постоянен надзор от възрастен.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Идеи за басейн
+  title: Правилният басейн за<br />Вашето пространство
+  subtitle: Реални настройки, реални размери и честни насоки за избор на правилния басейн.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Басейни в задния двор за семейства
+      description: Планиране на пространството, реални използваеми размери и лесна поддръжка за семейни лета в задния двор.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Вземете идеи
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Басейни за малки дворове
+      description: Компактни кръгли и квадратни модели, които пасват на тесни външни пространства, без да се отказват от плуването.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Вземете идеи
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Големи басейни за събирания
+      description: Големи правоъгълни басейни с истинско пространство за плуване за целия екипаж през летните дни.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Вземете идеи
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Накисване и релаксация на открито
+      description: СПА вани с вградени седалки и изолирани дъна за ежедневно отпускане у дома.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Вземете идеи
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Басейни за ваканционни наеми
+      description: Сезонно удобство за гости, което се настройва бързо и се съхранява извън сезона.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Вземете идеи
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Глемпинг и хотелиерство
+      description: Отличителни престои на открито — места за глемпинг, бутикови имоти и места за събития.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Вземете идеи
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Магазин Басейни
+  title: Разгледайте нашите басейни
+  subtitle: Сравнете форми, размери и характеристики, за да намерите правилния басейн за вашия двор или открито пространство.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: За бизнеса
+  title: Пулове за бизнес,<br />също
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay за бизнес партньори</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Ваканционни имоти под наем и хотелиерство
+      description: Сезонни удобства за гости за ваканционни наеми, места за глемпинг и бутикови имоти — бързо разгръщане, лесно за поддръжка, лесно за съхранение.
+    - title: Партньори за търговия на дребно и марка
+      description: Програми за търговия на едро и готови за продажба на дребно Drop Stitch басейни за градински центрове, магазини за басейни и онлайн магазини.
+    - title: Персонализиран и частен етикет
+      description: Персонализирани размери, цветове, корици, отпечатване на лого и опаковки за търговия на дребно за марки — създадени от нашите партньори производители.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Грижи и безопасност
+  title: Лесен за притежаване,<br />Лесен за обичане
+  subtitle: От доставката през първото плуване до съхранението в края на сезона, притежаването на басейн Felizbay остава лесно.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Настройка за минути
+      description: Разопаковайте, напомпайте с включената помпа и напълнете - пълната настройка обикновено отнема 15-30 минути на твърда, равна земя.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Проста грижа за водата
+      description: Стандартните 32/38 mm портове за филтърна помпа, редовните проверки на pH и монтираният капак на кръглите модели поддържат водата чиста.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Почистете, източете и съхранявайте
+      description: Отцедете, изсушете, навийте и опаковайте басейна в торбата за съхранение за зимата. Няма постоянна инсталация за поддръжка.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Безопасността на първо място
+      description: Децата трябва да бъдат активно наблюдавани от възрастен през цялото време. Следвайте ръководството, местните правила и указанията за безопасна употреба.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: От кутия до задния двор
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Стъпка 1: <span class="font-medium">Изберете своя басейн</span>'
+      description: Сравнете формите и размерите, за да отговарят на вашето пространство, домакинство и начина, по който планирате да използвате водата.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Стъпка 2: <span class="font-medium">Настройте го</span>'
+      description: Поставете на твърда, равна земя, напомпайте с включената електрическа помпа и напълнете с градински маркуч.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Стъпка 3: <span class="font-medium">Плувайте цяло лято</span>'
+      description: Поддържайте водата свежа с лесна грижа - обезмаслете, покрийте и проверете pH като всеки малък басейн.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Стъпка 4: <span class="font-medium">Съхранявайте го</span>'
+      description: Когато сезонът свърши, изцедете, изсушете, навийте и приберете басейна в торбата до следващото лято.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay кръгъл надуваем басейн Drop Stitch
 blog_latest:
-  title: Pool Guides & Insights
+  title: Ръководства и прозрения за басейна
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Ръководства за настройка, съвети за грижа и съвети за закупуване на надуваеми плувни басейни
+    от екипа на Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: ЧЗВ за надуваем басейн
+  subtitle: Често задавани въпроси относно надуваемите басейни Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Колко време отнема настройката?
+      description: Напомпването отнема около 10 минути с включената електрическа въздушна помпа; пълната настройка, включително поставянето и пълненето, обикновено отнема 15-30 минути.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Колко твърд е Drop Stitch басейн?
+      description: Много твърд. Стените Drop Stitch се надуват силно при 4-5 PSI — подобно на надуваема дъска за гребла — така че басейнът запазва формата си, когато се напълни с вода.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Могат ли деца да използват басейна?
+      description: Да, с активно наблюдение от възрастен през цялото време. Децата никога не трябва да се оставят без надзор в или близо до басейна — следвайте ръководството и местните правила за безопасност.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Как да съхранявам басейна през зимата?
+      description: Източете водата, издухайте басейна, оставете го да изсъхне напълно, след това го навийте на руло и го съхранявайте в включената чанта за съхранение на място, защитено от замръзване.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Какво е включено в басейна?
+      description: Всеки басейн Felizbay включва електрическа въздушна помпа, ремонтен комплект и чанта за съхранение. Кръглите модели имат опционален монтиран капак.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Какви размери са налични?
+      description: 48 стандартни SKU в четири колекции — кръгли басейни с диаметър до 10 m, правоъгълни басейни с размери до 6 × 5 m и SPA вани с вградени седалки. Предлагат се персонализирани размери за бизнес партньори.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: На какви повърхности може да стои басейнът?
+      description: Всякаква плоска, равна повърхност без остри предмети - морава, вътрешен двор или палуба. При грапави повърхности се препоръчва шлифован лист. Проверете дали повърхността може да понесе тежестта на напълнен басейн.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Как да поддържам водата чиста?
+      description: Използвайте филтърна помпа, където е поставена, обезмаслете остатъците, проверете pH и покрийте басейна, когато не се използва. Колко дълго издържа водата зависи от размера на басейна, употребата и филтрацията - тествайте редовно, вместо да разчитате на фиксиран график.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Намерете правилния басейн<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">за вашия заден двор.</span>
+  subtitle: Сравнете модели и размери или получете помощ при избора — нашият екип отговаря на въпроси в рамките на един работен ден.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Магазин Басейни
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Намерете своя басейн
       href: /find-your-pool
       icon: tabler:compass
+

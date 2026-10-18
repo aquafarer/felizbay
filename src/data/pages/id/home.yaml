@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Kolam Tiup Drop Stitch Premium
+  title: Maksimalkan Ruang Luar<br />Ruangan Anda.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Temukan kolam tiup premium yang dirancang untuk relaksasi di halaman belakang, kesenangan keluarga, dan kehidupan di luar ruangan.<br />
+    Jelajahi ukuran kolam, bandingkan fiturnya, dan temukan yang paling cocok untuk ruangan Anda.<br />
+    Dirancang dan dioperasikan oleh Aquafarer LLC, AS.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Kolam Toko
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Temukan Kolam Anda
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Kolam renang tiup Drop Stitch persegi panjang Felizbay di halaman belakang
 stats:
-  title: Felizbay at a Glance
+  title: Sekilas tentang Felizbay
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Koleksi Kolam Renang
       amount: '4'
-    - title: Standard SKUs
+    - title: SKU Standar
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Waktu Pengaturan
+      amount: 15-30 min
+    - title: Nilai Tekanan
+      amount: 4-5 PSI
+    - title: Jaminan
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Ukuran Khusus
       amount: Available
-    - title: Contact
+    - title: Kontak
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Teknologi Drop Stitch
+  title: Mengapa Kolam Felizbay<br />Berbeda
+  subtitle: Konstruksi Drop Stitch bertekanan tinggi membuat kolam kami kaku, tahan lama, dan mudah disimpan.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Dinding Drop Stitch Kaku
+      description: Ribuan benang internal mengunci lapisan dinding menjadi satu, sehingga kolam mengembang sekeras batu dengan kecepatan 4-5 PSI dan mempertahankan bentuknya saat diisi.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Penyiapan Cepat dan Tanpa Alat
+      description: Mengembang dengan pompa listrik yang disertakan dalam hitungan menit, lalu isi dengan selang taman. Tanpa alat, tanpa konstruksi, tanpa instalasi profesional.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Paket Kecil
+      description: Tiriskan, kempiskan, gulung, dan simpan kolam di dalam tas selama musim dingin. Kolam renang ukuran penuh yang muat di dalam lemari.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Tahan lama & Tahan UV
+      description: Kain Drop Stitch PVC dua lapis tahan terhadap tusukan, paparan sinar UV, dan penggunaan keluarga selama satu musim penuh.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Paket Lengkap
+      description: Setiap kolam dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Penutup terpasang tersedia untuk model bulat.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Desain Sadar Keselamatan
+      description: Desain kolam perumahan mengacu pada EN 16582-1 dan ASTM F2666, dengan katup pelepas tekanan dan dinding kaku yang stabil. Pengawasan orang dewasa yang konstan selalu diperlukan.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Ide Kolam Renang
+  title: Kolam yang Tepat untuk<br />Ruang Anda
+  subtitle: Pengaturan nyata, ukuran nyata, dan panduan jujur ​​​​untuk memilih kolam yang tepat.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Kolam Halaman Belakang untuk Keluarga
+      description: Perencanaan ruang, ukuran nyata yang dapat digunakan, dan perawatan mudah untuk musim panas keluarga di halaman belakang.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Dapatkan Ide
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Kolam untuk Halaman Belakang Kecil
+      description: Model bulat dan persegi kompak yang cocok untuk ruang luar yang sempit tanpa harus berhenti berenang.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Dapatkan Ide
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Kolam Besar untuk Pertemuan
+      description: Kolam persegi panjang besar dengan ruang berenang nyata untuk seluruh kru di musim panas.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Dapatkan Ide
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Berendam & Relaksasi di Luar Ruangan
+      description: Bak SPA dengan tempat duduk internal dan alas berinsulasi untuk bersantai setiap hari di rumah.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Dapatkan Ide
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Kolam Renang untuk Sewa Liburan
+      description: Fasilitas tamu musiman yang disiapkan dengan cepat dan disimpan di luar musim.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Dapatkan Ide
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping & Perhotelan
+      description: Penginapan luar ruangan yang khas — tempat glamping, properti butik, dan tempat acara.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Dapatkan Ide
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Kolam Toko
+  title: Jelajahi Kolam Renang Kami
+  subtitle: Bandingkan bentuk, ukuran, dan fitur untuk menemukan kolam yang tepat untuk halaman belakang atau ruang luar ruangan Anda.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Untuk Bisnis
+  title: Kolam untuk Bisnis,<br />Juga
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay untuk mitra bisnis</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Penyewaan Liburan & Perhotelan
+      description: Fasilitas tamu musiman untuk persewaan liburan, tempat glamping, dan properti butik — cepat digunakan, mudah dirawat, dan mudah disimpan.
+    - title: Mitra Ritel & Merek
+      description: Program grosir dan kolam drop stitch siap pakai eceran untuk pusat taman, toko kolam renang, dan toko online.
+    - title: Label Khusus & Pribadi
+      description: Ukuran, warna, sampul, pencetakan logo, dan kemasan ritel khusus untuk merek — dibuat oleh mitra manufaktur kami.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Perawatan & Keamanan
+  title: Mudah untuk Dimiliki,<br />Mudah untuk Mencintai
+  subtitle: Dari pengiriman hingga renang pertama hingga penyimpanan akhir musim, memiliki kolam Felizbay tetaplah sederhana.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Pengaturan dalam hitungan Menit
+      description: Buka kotaknya, kembangkan dengan pompa yang disertakan, dan isi — penyiapan penuh biasanya memerlukan waktu 15-30 menit di permukaan yang kokoh dan rata.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Perawatan Air Sederhana
+      description: Port pompa filter standar 32/38 mm, pemeriksaan pH rutin, dan penutup terpasang pada model bundar menjaga air tetap bersih.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Bersihkan, Tiriskan & Simpan
+      description: Tiriskan, keringkan, gulung, dan masukkan kolam ke dalam kantong penyimpanannya untuk musim dingin. Tidak ada instalasi permanen yang harus dipelihara.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Keselamatan Pertama
+      description: Anak-anak harus diawasi secara aktif oleh orang dewasa setiap saat. Ikuti manual, peraturan setempat, dan panduan penggunaan yang aman.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Dari Kotak ke Halaman Belakang
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Langkah 1: <span class="font-medium">Pilih Kolam Anda</span>'
+      description: Bandingkan bentuk dan ukuran agar sesuai dengan ruangan, rumah tangga, dan cara Anda berencana menggunakan air.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Langkah 2: <span class="font-medium">Siapkan</span>'
+      description: Letakkan di tanah yang kokoh dan rata, pompa dengan pompa listrik yang disertakan, dan isi dengan selang taman.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Langkah 3: <span class="font-medium">Berenang Sepanjang Musim Panas</span>'
+      description: Jagalah kesegaran air dengan perawatan sederhana — saring, tutupi, dan periksa pH seperti kolam kecil lainnya.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Langkah 4: <span class="font-medium">Simpanlah</span>'
+      description: Saat musim berakhir, tiriskan, keringkan, gulung, dan simpan kolam di dalam tasnya hingga musim panas mendatang.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Kolam renang tiup Drop Stitch bulat Felizbay
 blog_latest:
-  title: Pool Guides & Insights
+  title: Panduan & Wawasan Kolam Renang
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Panduan pengaturan, tip perawatan, dan saran pembelian untuk kolam renang tiup
+    dari tim Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: FAQ Kolam Tiup
+  subtitle: Pertanyaan umum tentang kolam renang tiup Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Berapa lama waktu yang dibutuhkan untuk pengaturan?
+      description: Menggembungkan membutuhkan waktu sekitar 10 menit dengan pompa udara listrik yang disertakan; pengaturan penuh termasuk penempatan dan pengisian biasanya memakan waktu 15-30 menit.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Seberapa kakukah kolam Drop Stitch?
+      description: Sangat kaku. Dinding Drop Stitch mengembang dengan kecepatan 4-5 PSI — mirip dengan papan dayung tiup — sehingga kolam tetap bentuknya saat diisi air.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Bisakah anak-anak menggunakan kolam renang?
+      description: Ya, dengan pengawasan aktif orang dewasa setiap saat. Anak-anak tidak boleh ditinggalkan tanpa pengawasan di dalam atau di dekat kolam renang — ikuti panduan dan peraturan keselamatan setempat.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Bagaimana cara menyimpan kolam di musim dingin?
+      description: Tiriskan air, kempiskan kolam, biarkan hingga benar-benar kering, lalu gulung dan simpan dalam kantong penyimpanan yang disertakan di tempat bebas embun beku.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Apa saja yang termasuk dalam kolam renang?
+      description: Setiap kolam Felizbay dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Model bulat memiliki penutup opsional.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Ukuran apa yang tersedia?
+      description: 48 SKU standar dalam empat koleksi — kolam bundar dengan lebar hingga 10 m, kolam persegi panjang hingga 6 × 5 m, dan bak SPA dengan tempat duduk internal. Ukuran khusus tersedia untuk mitra bisnis.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Pada permukaan apa kolam dapat berdiri?
+      description: Permukaan datar dan rata yang bebas dari benda tajam — halaman rumput, teras, atau dek. Lembaran tanah direkomendasikan pada permukaan kasar. Periksa apakah permukaannya mampu menahan beban kolam yang terisi.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Bagaimana cara menjaga air tetap bersih?
+      description: Gunakan pompa penyaring jika terpasang, singkirkan kotoran, periksa pH, dan tutupi kolam saat tidak digunakan. Berapa lama air bertahan tergantung pada ukuran kolam, penggunaan, dan penyaringan — ujilah secara teratur daripada mengandalkan jadwal yang tetap.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Temukan kolam yang tepat<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">untuk halaman belakang rumahmu.</span>
+  subtitle: Bandingkan model dan ukuran, atau dapatkan bantuan dalam memilih — tim kami menjawab pertanyaan dalam satu hari kerja.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Kolam Toko
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Temukan Kolam Anda
       href: /find-your-pool
       icon: tabler:compass
+

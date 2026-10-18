@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Premium Drop Stitch uppblåsbara pooler
+  title: Gör mer av<br />Ditt utomhusutrymme.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Upptäck förstklassiga uppblåsbara pooler designade för avkoppling i trädgården, familjeskoj och utomhusliv.<br />
+    Utforska poolstorlekar, jämför funktioner och hitta rätt passform för ditt utrymme.<br />
+    Designad och drivs av Aquafarer LLC, USA.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Shoppa pooler
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Hitta din pool
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Felizbay rektangulär Drop Stitch uppblåsbar pool på en bakgård
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay i korthet
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Pool samlingar
       amount: '4'
-    - title: Standard SKUs
+    - title: Standard SKU:er
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Inställningstid
+      amount: 15-30 min
+    - title: Nominellt tryck
+      amount: 4-5 PSI
+    - title: Garanti
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Anpassade storlekar
       amount: Available
-    - title: Contact
+    - title: Kontakta
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Drop Stitch-teknik
+  title: Varför en Felizbay Pool<br />är annorlunda
+  subtitle: Högtrycks-Drop Stitch-konstruktion gör våra pooler styva, hållbara och lätta att lagra.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Styva Drop Stitch-väggar
+      description: Tusentals invändiga gängor låser ihop vägglagren, så poolen blåser upp stenhårt vid 4-5 PSI och behåller sin form när den fylls.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Snabb, verktygsfri installation
+      description: Blås upp med den medföljande elektriska pumpen på några minuter och fyll sedan med en trädgårdsslang. Inga verktyg, ingen konstruktion, ingen professionell installation.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Packar bort små
+      description: Töm, töm ut luften, rulla ihop och förvara poolen i en påse över vintern. En pool i full storlek som får plats i en garderob.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Hållbar och UV-beständig
+      description: Dubbellager PVC Drop Stitch-tyg motstår punkteringar, UV-exponering och en hel säsong av familjeanvändning.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Komplett paket
+      description: Varje pool levereras med en elektrisk luftpump, reparationssats och förvaringsväska. Passade överdrag tillgängliga för runda modeller.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Säkerhetsmedveten design
+      description: Bostadspooldesign med hänvisning till EN 16582-1 och ASTM F2666, med övertrycksventiler och stabila styva väggar. Ständig vuxenövervakning krävs alltid.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Pool idéer
+  title: Rätt pool för<br />Ditt utrymme
+  subtitle: Riktiga inställningar, riktiga storlekar och ärlig vägledning för att välja rätt pool.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Bakgårdspooler för familjer
+      description: Utrymmesplanering, riktiga användbara storlekar och enkelt underhåll för familjesomrar på bakgården.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Få idéer
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Pooler för små bakgårdar
+      description: Kompakta runda och fyrkantiga modeller som passar trånga utomhusutrymmen utan att ge upp simningen.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Få idéer
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Stora pooler för sammankomster
+      description: Stora rektangulära pooler med riktigt badutrymme för hela besättningen på sommardagar.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Få idéer
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Utomhus blötläggning & avkoppling
+      description: SPA-badkar med inbyggda säten och isolerad botten för dagliga varv i hemmet.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Få idéer
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Pooler för semesterbostäder
+      description: En säsongsbetonad gästbekvämlighet som ställs in snabbt och lagras under lågsäsong.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Få idéer
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping & gästfrihet
+      description: Distinkt utomhusvistelse – glampingplatser, boutiquefastigheter och evenemangslokaler.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Få idéer
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Shoppa pooler
+  title: Utforska våra pooler
+  subtitle: Jämför former, storlekar och funktioner för att hitta rätt pool för din bakgård eller utomhus.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: För företag
+  title: Pooler för företag,<br />För
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay för affärspartners</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Semesterbostäder och gästfrihet
+      description: Säsongsbetonade gästbekvämligheter för semesterbostäder, glampingplatser och boutiquefastigheter – snabba att installera, lätta att underhålla, lätta att förvara.
+    - title: Retail & Brand Partners
+      description: Grossistprogram och detaljhandelsklara Drop Stitch-pooler för trädgårdscenter, poolbutiker och onlinebutiker.
+    - title: Custom & Private Label
+      description: Anpassade storlekar, färger, omslag, logotyptryck och detaljhandelsförpackningar för varumärken – byggda av våra tillverkningspartners.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Vård & Säkerhet
+  title: Lätt att äga,<br />Lätt att älska
+  subtitle: Från leverans till första simtur till förvaring vid slutet av säsongen är det enkelt att äga en Felizbay-pool.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Installation på några minuter
+      description: Packa upp, blås upp med den medföljande pumpen och fyll på — en fullständig installation tar vanligtvis 15-30 minuter på fast, jämn mark.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Enkel vattenvård
+      description: Standard 32/38 mm filterpumpportar, regelbundna pH-kontroller och ett monterat lock på runda modeller håller vattnet rent.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Rengör, dränera & förvara
+      description: Töm, torka, rulla ihop och packa poolen i förvaringsväskan för vintern. Ingen permanent installation att underhålla.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Säkerheten först
+      description: Barn måste alltid övervakas aktivt av en vuxen. Följ manualen, lokala regler och vägledning för säker användning.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Från box till bakgård
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Steg 1: <span class="font-medium">Välj din pool</span>'
+      description: Jämför former och storlekar för att matcha ditt utrymme, hushåll och hur du planerar att använda vattnet.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Steg 2: <span class="font-medium">Ställ in den</span>'
+      description: Placera på fast, jämn mark, blås upp med den medföljande elektriska pumpen och fyll på med en trädgårdsslang.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Steg 3: <span class="font-medium">Simma hela sommaren</span>'
+      description: Håll vattnet fräscht med enkel omsorg - skumma, täck och kontrollera pH som vilken liten pool som helst.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Steg 4: <span class="font-medium">Förvara det undan</span>'
+      description: När säsongen är slut, dränera, torka, rulla ihop och förvara poolen i sin påse till nästa sommar.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay rund Drop Stitch uppblåsbar pool
 blog_latest:
-  title: Pool Guides & Insights
+  title: Poolguider och insikter
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Installationsguider, skötseltips och köpråd för uppblåsbara simbassänger
+    från Felizbay-teamet.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Vanliga frågor om uppblåsbar pool
+  subtitle: Vanliga frågor om Felizbay uppblåsbara simbassänger.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Hur lång tid tar installationen?
+      description: Uppblåsning tar cirka 10 minuter med den medföljande elektriska luftpumpen; fullständig installation inklusive placering och fyllning är vanligtvis 15-30 minuter.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Hur stel är en Drop Stitch-pool?
+      description: Mycket stel. Drop Stitch-väggarna blåser upp hårt vid 4-5 PSI - liknande en uppblåsbar paddelbräda - så poolen behåller sin form när den fylls med vatten.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Kan barn använda poolen?
+      description: Ja, med aktiv vuxenövervakning hela tiden. Barn får aldrig lämnas utan tillsyn i eller nära poolen – följ manualen och lokala säkerhetsregler.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Hur förvarar jag poolen på vintern?
+      description: Töm vattnet, töm poolen, låt den torka helt, rulla sedan ihop den och förvara den i den medföljande förvaringspåsen på ett frostfritt ställe.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Vad ingår i poolen?
+      description: Varje Felizbay-pool inkluderar en elektrisk luftpump, en reparationssats och en förvaringsväska. Runda modeller har en valfri monterad kåpa.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Vilka storlekar finns tillgängliga?
+      description: 48 standard-SKU:er i fyra samlingar — runda pooler upp till 10 m i diameter, rektangulära pooler upp till 6 × 5 m och SPA-badkar med inbyggda säten. Anpassade storlekar är tillgängliga för affärspartners.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Vilka ytor kan poolen stå på?
+      description: Alla plana, jämna ytor fria från vassa föremål - gräsmatta, uteplats eller däck. En markduk rekommenderas på grova ytor. Kontrollera att ytan tål vikten av en fylld pool.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Hur håller jag vattnet rent?
+      description: Använd en filterpump där den finns, skumma bort skräp, kontrollera pH och täck över poolen när den inte används. Hur länge vattnet räcker beror på poolens storlek, användning och filtrering - testa regelbundet istället för att förlita sig på ett fast schema.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Hitta rätt pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">för din bakgård.</span>
+  subtitle: Jämför modeller och storlekar, eller få hjälp med att välja — vårt team svarar på frågor inom en arbetsdag.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Shoppa pooler
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Hitta din pool
       href: /find-your-pool
       icon: tabler:compass
+

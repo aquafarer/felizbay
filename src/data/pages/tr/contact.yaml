@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Temas etmek
+  title: İLETİŞİME GEÇİN
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Bize bir mesaj gönderin
+  subtitle: Fiyat teklifleri, teknik sorular veya ortaklık sorularınız için bize bir satır bırakın. Bir iş günü içinde cevap veriyoruz.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Talep Gönder → Teklif Al
+  success_message: Teşekkürler! Mesajınız gelen kutumuza ulaştı. Bir iş günü içinde cevap vereceğiz.
+  error_message: Mesajınızı gönderirken bir şeyler ters gitti. Lütfen tekrar deneyin veya doğrudan bize e-posta gönderin.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Spam önleme: lütfen aşağıdakileri çözün'
   fields:
     - name: firstName
-      label: First Name
+      label: İlk adı
       row: 1
     - name: lastName
-      label: Last Name
+      label: Soy isim
       row: 1
     - name: companyName
-      label: Company Name
+      label: Firma Adı
       row: 2
     - name: address
-      label: Address
+      label: Adres
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Posta Kodu / Posta Kodu
       row: 4
     - name: country
-      label: Country
+      label: Ülke
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: E-posta
       row: 5
       type: email
     - name: tel
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Tahmini Sipariş Hacmi
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Tahmini hacminizi seçin...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Yalnızca numuneler / Prototipler
+        - value: 5-10
+          label: 5–10 adet (Standart Adedi)
+        - value: 100-500
+          label: 100–500 adet
+        - value: 500-plus
+          label: 500+ birim (Toplu fiyatlandırma)
     - name: customization
-      label: Customization Needed?
+      label: Özelleştirme Gerekli mi?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Özelleştirme türünü seçin...
         - value: none
-          label: Standard product (no customization)
+          label: Standart ürün (özelleştirme yok)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Yalnızca Özel Logo / Markalama
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Tam OEM (boyut, renk, grafikler, ambalaj)
         - value: consultation
-          label: Not sure — need consultation
+          label: Emin değilim — danışmaya ihtiyacım var
     - name: productInterest
-      label: Pool of Interest
+      label: İlgi Havuzu
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Havuz tipini seçin...
         - value: all
-          label: All pools / Full catalog
+          label: Tüm havuzlar / Tam katalog
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Ders
       row: 9
     - name: message
-      label: Message
+      label: Mesaj
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Bize ulaşmanın diğer yolları
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Satış soruları
+      description: Havuz fiyatları, toptan fiyatlandırma ve toplu siparişler.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Teknik destek
+      description: Kurulum yardımı, onarımlar, yedek parçalar ve bakımla ilgili sorular.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Özel boyutlar, renkler, kapaklar, markalama ve paketleme.
       icon: tabler:palette
-    - title: Email
+    - title: E-posta
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Web sitesi
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Tepki süresi
+      description: Bir iş günü içinde cevap veriyoruz.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: İletişime Geçin
+  subtitle: Felizbay ile iletişime geçin
   address: felizbay.com
   zoom: 15
+

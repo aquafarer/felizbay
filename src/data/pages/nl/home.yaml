@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Premium Drop Stitch opblaasbare zwembaden
+  title: Haal meer uit<br />Uw buitenruimte.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Ontdek premium opblaasbare zwembaden ontworpen voor ontspanning in de achtertuin, gezinsplezier en buitenleven.<br />
+    Ontdek zwembadformaten, vergelijk kenmerken en vind de juiste oplossing voor uw ruimte.<br />
+    Ontworpen en beheerd door Aquafarer LLC, VS.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Winkel zwembaden
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Vind uw zwembad
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Felizbay rechthoekig drop stitch opblaasbaar zwembad in een achtertuin
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay in één oogopslag
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Zwembadcollecties
       amount: '4'
-    - title: Standard SKUs
+    - title: Standaard SKU's
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Insteltijd
+      amount: 15-30 min
+    - title: Nominale druk
+      amount: 4-5 PSI
+    - title: Garantie
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Aangepaste formaten
       amount: Available
     - title: Contact
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Drop Stitch-technologie
+  title: Waarom een ​​Felizbay-zwembad<br />Is anders
+  subtitle: Dankzij de hogedruk-drop-stitch-constructie zijn onze zwembaden stijf, duurzaam en gemakkelijk op te bergen.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Stijve Drop Stitch-wanden
+      description: Duizenden interne draden houden de wandlagen aan elkaar vast, zodat het zwembad keihard opblaast met 4-5 PSI en zijn vorm behoudt als het gevuld is.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Snelle, gereedschapsloze installatie
+      description: Binnen enkele minuten opblazen met de meegeleverde elektrische pomp en vervolgens vullen met een tuinslang. Geen gereedschap, geen constructie, geen professionele installatie.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Klein op te bergen
+      description: Laat het zwembad leeglopen, laat het leeglopen, rol het op en berg het in een zak op in de winter. Een groot zwembad dat in een kast past.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Duurzaam en UV-bestendig
+      description: Dubbellaags PVC-drop-stitch-stof is bestand tegen lekrijden, UV-blootstelling en een volledig seizoen gezinsgebruik.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Compleet pakket
+      description: Elk zwembad wordt geleverd met een elektrische luchtpomp, reparatieset en opbergtas. Passende hoezen beschikbaar voor ronde modellen.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Veiligheidsbewust ontwerp
+      description: Ontwerp voor een residentieel zwembad volgens EN 16582-1 en ASTM F2666, met overdrukventielen en stabiele stijve wanden. Constant toezicht van een volwassene is altijd vereist.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Zwembadideeën
+  title: Het juiste zwembad voor<br />Jouw ruimte
+  subtitle: Echte opstellingen, echte maten en eerlijke begeleiding bij het kiezen van het juiste zwembad.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Achtertuinzwembaden voor gezinnen
+      description: Ruimteplanning, echte bruikbare afmetingen en eenvoudig onderhoud voor gezinszomers in de achtertuin.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Krijg ideeën
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Zwembaden voor kleine achtertuinen
+      description: Compacte ronde en vierkante modellen die passen in krappe buitenruimtes zonder het zwemmen op te geven.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Krijg ideeën
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Grote zwembaden voor bijeenkomsten
+      description: Grote rechthoekige zwembaden met echte zwemruimte voor de hele bemanning op zomerdagen.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Krijg ideeën
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Buiten genieten en ontspannen
+      description: SPA-baden met ingebouwde stoelen en geïsoleerde bodems voor de dagelijkse ontspanning thuis.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Krijg ideeën
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Zwembaden voor vakantiewoningen
+      description: Een seizoensgebonden gastenvoorziening die snel klaar is en buiten het seizoen kan worden opgeborgen.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Krijg ideeën
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping en gastvrijheid
+      description: 'Onderscheidende buitenverblijven: glampinglocaties, boetiekhotels en evenementenlocaties.'
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Krijg ideeën
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Winkel zwembaden
+  title: Ontdek onze zwembaden
+  subtitle: Vergelijk vormen, maten en kenmerken om het juiste zwembad voor uw achtertuin of buitenruimte te vinden.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Voor bedrijven
+  title: Zwembaden voor bedrijven,<br />Te
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay voor zakenpartners</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Vakantiewoningen en gastvrijheid
+      description: Seizoensgebonden gastenvoorzieningen voor vakantiewoningen, glampings en boetiekaccommodaties – snel in gebruik, gemakkelijk te onderhouden en eenvoudig op te slaan.
+    - title: Retail- en merkpartners
+      description: Groothandelprogramma's en kant-en-klare drop-stitch-zwembaden voor tuincentra, zwembadwinkels en online winkels.
+    - title: Aangepast en privélabel
+      description: Aangepaste formaten, kleuren, omslagen, logobedrukking en retailverpakkingen voor merken – gebouwd door onze productiepartners.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Zorg en veiligheid
+  title: Gemakkelijk te bezitten,<br />Makkelijk om lief te hebben
+  subtitle: 'Van de levering tot de eerste zwembeurt tot de opslag aan het einde van het seizoen: het bezitten van een Felizbay-zwembad blijft eenvoudig.'
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Installatie in enkele minuten
+      description: 'Uitpakken, opblazen met de meegeleverde pomp en vullen: de volledige installatie duurt doorgaans 15-30 minuten op een stevige, vlakke ondergrond.'
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Eenvoudige waterverzorging
+      description: Standaard filterpomppoorten van 32/38 mm, regelmatige pH-controles en een passend deksel op ronde modellen houden het water schoon.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Reinigen, laten leeglopen en opslaan
+      description: Laat het zwembad leeglopen, droog het, rol het op en stop het in de opbergtas voor de winter. Geen permanente installatie om te onderhouden.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Veiligheid eerst
+      description: Kinderen moeten te allen tijde actief onder toezicht staan ​​van een volwassene. Volg de handleiding, lokale regels en richtlijnen voor veilig gebruik.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Van doos tot achtertuin
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Stap 1: <span class="font-medium">Kies uw zwembad</span>'
+      description: Vergelijk vormen en maten die passen bij uw ruimte, huishouden en hoe u het water wilt gebruiken.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Stap 2: <span class="font-medium">Stel het in</span>'
+      description: Zet hem op een stevige, vlakke ondergrond, blaas hem op met de meegeleverde elektrische pomp en vul hem met een tuinslang.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Stap 3: <span class="font-medium">Zwem de hele zomer</span>'
+      description: 'Houd het water fris met eenvoudige zorg: afschuimen, afdekken en de pH controleren zoals bij elk klein zwembad.'
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Stap 4: <span class="font-medium">Berg het op</span>'
+      description: Wanneer het seizoen voorbij is, laat u het zwembad leeglopen, drogen, oprollen en in de zak bewaren tot de volgende zomer.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay rond drop stitch opblaasbaar zwembad
 blog_latest:
-  title: Pool Guides & Insights
+  title: Zwembadgidsen en -inzichten
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Installatiehandleidingen, onderhoudstips en aankoopadvies voor opblaasbare zwembaden
+    van het Felizbay-team.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Veelgestelde vragen over opblaasbaar zwembad
+  subtitle: Veelgestelde vragen over Felizbay opblaasbare zwembaden.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Hoe lang duurt het instellen?
+      description: Opblazen duurt ongeveer 10 minuten met de meegeleverde elektrische luchtpomp; De volledige installatie, inclusief plaatsing en vullen, duurt doorgaans 15-30 minuten.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Hoe stijf is een drop-stitch-zwembad?
+      description: Zeer stijf. De drop-stitch-wanden worden hard opgeblazen met 4-5 PSI – vergelijkbaar met een opblaasbaar paddleboard – zodat het zwembad zijn vorm behoudt wanneer het met water is gevuld.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Kunnen kinderen het zwembad gebruiken?
+      description: Ja, te allen tijde met actief toezicht van volwassenen. Kinderen mogen nooit zonder toezicht in of bij het zwembad worden achtergelaten; volg de handleiding en de plaatselijke veiligheidsregels.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Hoe berg ik het zwembad op in de winter?
+      description: Laat het water weglopen, laat het zwembad leeglopen, laat het volledig drogen, rol het vervolgens op en bewaar het in de meegeleverde opbergtas op een vorstvrije plaats.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Wat is inbegrepen bij het zwembad?
+      description: Bij elk Felizbay-zwembad wordt een elektrische luchtpomp, een reparatieset en een opbergtas geleverd. Ronde modellen hebben optioneel een gemonteerde hoes.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Welke maten zijn beschikbaar?
+      description: "48 standaard SKU's verdeeld over vier collecties: ronde zwembaden tot 10 m breed, rechthoekige zwembaden tot 6 x 5 m en SPA-baden met ingebouwde stoelen. Aangepaste formaten zijn beschikbaar voor zakenpartners."
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Op welke oppervlakken kan het zwembad staan?
+      description: Elk vlak, horizontaal oppervlak zonder scherpe voorwerpen – gazon, terras of terras. Op ruwe ondergronden wordt een grondzeil aanbevolen. Controleer of het oppervlak het gewicht van een gevuld zwembad kan dragen.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Hoe houd ik het water schoon?
+      description: Gebruik indien aanwezig een filterpomp, verwijder het vuil, controleer de pH en dek het zwembad af wanneer het niet in gebruik is. Hoe lang het water meegaat, hangt af van de grootte, het gebruik en de filtratie van het zwembad. Test regelmatig in plaats van te vertrouwen op een vast schema.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Vind het juiste zwembad<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">voor uw achtertuin.</span>
+  subtitle: 'Vergelijk modellen en maten, of krijg hulp bij het kiezen: ons team beantwoordt vragen binnen één werkdag.'
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Winkel zwembaden
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Vind uw zwembad
       href: /find-your-pool
       icon: tabler:compass
+

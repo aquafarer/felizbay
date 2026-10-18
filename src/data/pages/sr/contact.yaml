@@ -1,35 +1,35 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Kontakt
+  title: JAVITE SE
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Pošaljite nam poruku
+  subtitle: Za ponude, tehnička pitanja ili upite o partnerstvu, pošaljite nam liniju. Odgovaramo u roku od jednog radnog dana.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Pošaljite upit → Dobijte ponudu
+  success_message: Hvala! Vaša poruka je stigla u naše prijemno sanduče. Odgovorićemo u roku od jednog radnog dana.
+  error_message: Nešto nije u redu pri slanju vaše poruke. Pokušajte ponovo ili nam direktno pošaljite email.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: rešite sledeće'
   fields:
     - name: firstName
-      label: First Name
+      label: Ime
       row: 1
     - name: lastName
-      label: Last Name
+      label: Prezime
       row: 1
     - name: companyName
-      label: Company Name
+      label: Naziv kompanije
       row: 2
     - name: address
-      label: Address
+      label: Adresa
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Poštanski broj
       row: 4
     - name: country
-      label: Country
+      label: Država
       row: 4
       type: select
       optionsKey: countries
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Procenjeni obim porudžbine
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Izaberite procenjeni volumen...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Samo uzorci/prototipovi
+        - value: 5-10
+          label: 5–10 jedinica (standardni MOK)
+        - value: 100-500
+          label: 100–500 jedinica
+        - value: 500-plus
+          label: 500+ jedinica (količina cena)
     - name: customization
-      label: Customization Needed?
+      label: Potrebno je prilagođavanje?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Izaberite tip prilagođavanja...
         - value: none
-          label: Standard product (no customization)
+          label: Standardni proizvod (bez prilagođavanja)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Samo prilagođeni logotip/brendiranje
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Kompletan OEM (veličina, boja, grafika, pakovanje)
         - value: consultation
-          label: Not sure — need consultation
+          label: Nisam siguran - potrebna je konsultacija
     - name: productInterest
-      label: Pool of Interest
+      label: Grupa interesa
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Izaberite tip bazena...
         - value: all
-          label: All pools / Full catalog
+          label: Svi bazeni / Kompletan katalog
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Predmet
       row: 9
     - name: message
-      label: Message
+      label: Poruka
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Drugi načini da dođete do nas
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Pitanja o prodaji
+      description: Grupne ponude, veleprodajne cene i velike porudžbine.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Tehnička podrška
+      description: Pomoć za podešavanje, popravke, rezervni delovi i pitanja o nezi.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Prilagođene veličine, boje, korice, brendiranje i pakovanje.
       icon: tabler:palette
     - title: Email
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
-      description: felizbay.com
+    - title: Vebsite
+      description: felizbai.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Vreme odgovora
+      description: Odgovaramo u roku od jednog radnog dana.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
-  address: felizbay.com
+  title: Javite se
+  subtitle: Kontaktirajte Felizbay
+  address: felizbai.com
   zoom: 15
+

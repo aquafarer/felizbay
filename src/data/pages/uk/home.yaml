@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Надувні басейни преміум-класу Drop Stitch
+  title: Використовуйте більше свого<br />Зовнішнього простору.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Відкрийте для себе надувні басейни преміум-класу, призначені для відпочинку на задньому дворі, сімейного відпочинку та життя на відкритому повітрі.<br />
+    Дізнайтеся про розміри басейнів, порівняйте характеристики та знайдіть відповідний варіант для свого простору.<br />
+    Розроблено та експлуатується Aquafarer LLC, США.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Магазин Басейни
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Знайдіть свій басейн
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Прямокутний надувний басейн Felizbay Drop Stitch у дворі
 stats:
-  title: Felizbay at a Glance
+  title: Короткий погляд на Felizbay
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Колекції басейнів
       amount: '4'
-    - title: Standard SKUs
+    - title: Стандартні SKU
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Час налаштування
+      amount: 15-30 min
+    - title: Номінальний тиск
+      amount: 4-5 PSI
+    - title: Гарантія
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Спеціальні розміри
       amount: Available
-    - title: Contact
+    - title: контакт
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Технологія Drop Stitch
+  title: Чому саме басейн Felizbay?<br />Є різним
+  subtitle: Конструкція Drop Stitch високого тиску робить наші басейни жорсткими, довговічними та легкими для зберігання.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Жорсткі стіни Drop Stitch
+      description: Тисячі внутрішніх ниток скріплюють шари стін разом, тому басейн надувається як камінь при тиску 4-5 PSI і зберігає свою форму, коли наповнюється.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Швидке налаштування без інструментів
+      description: Накачайте за допомогою електричного насоса, що входить у комплект, за лічені хвилини, а потім наповніть садовим шлангом. Без інструментів, без конструкції, без професійного монтажу.
       icon: tabler:rocket
     - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+      description: Осушіть, спустіть повітря, згорніть і зберігайте басейн у мішку на зиму. Повнорозмірний басейн, який поміститься в шафі.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Міцний і стійкий до УФ-променів
+      description: Двошарова ПВХ тканина Drop Stitch стійка до проколів, ультрафіолетового випромінювання та повного сімейного використання.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Повний пакет
+      description: Кожен басейн поставляється з електричним повітряним насосом, ремонтним набором і сумкою для зберігання. Встановлені чохли доступні для круглих моделей.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Дизайн з урахуванням безпеки
+      description: Дизайн житлового басейну відповідає EN 16582-1 і ASTM F2666, із запобіжними клапанами та стійкими жорсткими стінками. Завжди потрібен постійний нагляд дорослих.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Ідеї ​​басейну
+  title: Правильний басейн для<br />Ваш простір
+  subtitle: Реальні налаштування, реальні розміри та чесні поради щодо вибору правильного басейну.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Басейни на задньому дворі для сімей
+      description: Планування простору, реальні корисні розміри та легке обслуговування для сімейного літа на задньому дворі.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Отримайте ідеї
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Басейни для маленьких подвір'їв
+      description: Компактні круглі та квадратні моделі, які підходять для тісних відкритих просторів, не відмовляючись від плавання.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Отримайте ідеї
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Великі басейни для посиденьок
+      description: Великі прямокутні басейни зі справжнім простором для плавання всієї команди в літні дні.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Отримайте ідеї
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Відпочинок і відпочинок на свіжому повітрі
+      description: СПА-ванни з вбудованими сидіннями та ізольованим дном для щоденного відпочинку вдома.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Отримайте ідеї
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Басейни для оренди на час відпочинку
+      description: Сезонні зручності для гостей, які швидко встановлюються та зберігаються в міжсезоння.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Отримайте ідеї
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Глемпінг і готельний бізнес
+      description: Особливе перебування на природі — місця для глемпінгу, бутики та місця для проведення заходів.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Отримайте ідеї
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Магазин Басейни
+  title: Дослідіть наші басейни
+  subtitle: Порівняйте форми, розміри та особливості, щоб знайти правильний басейн для свого подвір’я чи відкритого простору.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Для бізнесу
+  title: Пули для бізнесу,<br />теж
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay для ділових партнерів</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Оренда та готельний бізнес
+      description: Сезонні зручності для гостей для оренди на відпочинок, місць для глемпінгу та бутиків — швидко розгортати, легко обслуговувати, легко зберігати.
+    - title: Партнери з роздрібної торгівлі та брендів
+      description: Оптові програми та готові для роздрібної торгівлі пули Drop Stitch для садових центрів, магазинів басейнів та інтернет-магазинів.
+    - title: Спеціальна та приватна торгова марка
+      description: Нестандартні розміри, кольори, обкладинки, друк логотипів і роздрібна упаковка для брендів — створені нашими партнерами-виробниками.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Догляд і безпека
+  title: Легко володіти,<br />Легко любити
+  subtitle: Від доставки до першого запливу до зберігання в кінці сезону – володіти басейном Felizbay залишається простим.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Налаштування за лічені хвилини
+      description: Розпакуйте, накачайте насосом, що входить у комплект, і наповніть — повне налаштування зазвичай займає 15-30 хвилин на твердій рівній землі.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Простий догляд за водою
+      description: Стандартні порти фільтра-насосу 32/38 мм, регулярні перевірки pH і встановлена ​​кришка на круглих моделях забезпечують чистоту води.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Очистіть, злийте та зберігайте
+      description: Злийте воду, висушіть, згорніть і запакуйте басейн у мішок для зберігання на зиму. Немає постійної установки для обслуговування.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Безпека перш за все
+      description: Діти повинні постійно перебувати під наглядом дорослих. Дотримуйтеся посібника, місцевих правил і вказівок щодо безпечного використання.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Від ящика до заднього двору
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Крок 1: <span class="font-medium">Виберіть свій басейн</span>'
+      description: Порівняйте форми та розміри відповідно до вашого простору, домогосподарства та того, як ви плануєте використовувати воду.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'крок 2: <span class="font-medium">Налаштуйте це</span>'
+      description: Поставте на тверду рівну землю, накачайте електричним насосом, що входить у комплект, і заповніть садовим шлангом.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'крок 3: <span class="font-medium">Плавати все літо</span>'
+      description: Підтримуйте воду свіжою простим доглядом — знімайте, накривайте та перевіряйте pH, як у будь-якому маленькому басейні.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'крок 4: <span class="font-medium">Зберігайте це подалі</span>'
+      description: Коли сезон закінчиться, осушіть, висушіть, згорніть і зберігайте басейн у сумці до наступного літа.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Круглий надувний басейн Felizbay Drop Stitch
 blog_latest:
-  title: Pool Guides & Insights
+  title: Посібники та аналітика пулу
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Посібники з налаштування, поради з догляду та поради щодо купівлі надувних басейнів
+    від команди Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Часті питання про надувний басейн
+  subtitle: Поширені запитання про надувні басейни Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Скільки часу займає налаштування?
+      description: Надування займає близько 10 хвилин за допомогою електричного повітряного насоса, що входить у комплект; повне налаштування, включаючи розміщення та заповнення, зазвичай займає 15-30 хвилин.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Наскільки жорстким є пул Drop Stitch?
+      description: Дуже жорсткий. Стінки Drop Stitch сильно надуваються при 4-5 PSI — подібно до надувної дошки для веслування — тому басейн зберігає свою форму, коли наповнюється водою.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Чи можуть діти відвідувати басейн?
+      description: Так, постійно під наглядом дорослих. Ні в якому разі не можна залишати дітей без нагляду в басейні або біля нього — дотримуйтесь інструкції та місцевих правил безпеки.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Як зберігати басейн взимку?
+      description: Злийте воду, здуйте басейн, дайте йому повністю висохнути, потім згорніть його та зберігайте в пакеті для зберігання, що додається, у захищеному від морозу місці.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Що входить в басейн?
+      description: До кожного басейну Felizbay входить електричний повітряний насос, ремонтний набір і сумка для зберігання. Круглі моделі мають додаткову кришку.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Які розміри доступні?
+      description: 48 стандартних SKU у чотирьох колекціях — круглі басейни до 10 м у поперечнику, прямокутні басейни до 6 × 5 м і SPA-ванни з вбудованими сидіннями. Для ділових партнерів доступні індивідуальні розміри.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: На яких поверхнях може стояти басейн?
+      description: Будь-яка плоска рівна поверхня без гострих предметів — газон, патіо або майданчик. На шорстких поверхнях рекомендується накладати ґрунтовий лист. Переконайтеся, що поверхня може витримати вагу наповненого басейну.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Як зберегти воду чистою?
+      description: Використовуйте фільтруючий насос, якщо він є, зніміть сміття, перевірте рН і накрийте басейн, коли він не використовується. Тривалість води залежить від розміру басейну, використання та фільтрації — перевіряйте регулярно, а не покладайтеся на фіксований графік.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Знайдіть правильний басейн<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">для вашого двору.</span>
+  subtitle: Порівняйте моделі та розміри або отримайте допомогу у виборі — наша команда відповідає на запитання протягом одного робочого дня.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Магазин Басейни
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Знайдіть свій басейн
       href: /find-your-pool
       icon: tabler:compass
+

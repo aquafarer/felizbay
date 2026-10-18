@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: برك سباحة قابلة للنفخ Drop Stitch فاخرة
+  title: تحقيق المزيد من الخاص بك<br />الفضاء الخارجي.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    اكتشف حمامات السباحة القابلة للنفخ المتميزة المصممة للاسترخاء في الفناء الخلفي والمرح العائلي والمعيشة في الهواء الطلق.<br />
+    استكشف أحجام حمامات السباحة، وقارن الميزات، واعثر على المقاس المناسب لمساحتك.<br />
+    تم تصميمه وتشغيله بواسطة شركة Aquafarer LLC، الولايات المتحدة الأمريكية.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: تسوق حمامات السباحة
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: ابحث عن حمام السباحة الخاص بك
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل الشكل من Felizbay في الفناء الخلفي
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay في لمحة
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: مجموعات البلياردو
       amount: '4'
-    - title: Standard SKUs
+    - title: وحدات SKU القياسية
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: وقت الإعداد
+      amount: 15-30 min
+    - title: الضغط المقدر
+      amount: 4-5 PSI
+    - title: ضمان
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: أحجام مخصصة
       amount: Available
-    - title: Contact
+    - title: اتصال
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: تقنية Drop Stitch
+  title: لماذا بركة Felizbay<br />مختلف
+  subtitle: هيكل Drop Stitch عالي الضغط يجعل حمامات السباحة الخاصة بنا صلبة ومتينة وسهلة التخزين.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: جدران Drop Stitch جامدة
+      description: تعمل الآلاف من الخيوط الداخلية على تثبيت طبقات الجدار معًا، لذلك يتم نفخ حوض السباحة بقوة تصل إلى 4-5 رطل لكل بوصة مربعة ويحافظ على شكله عند ملئه.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: إعداد سريع وخالي من الأدوات
+      description: انفخها بالمضخة الكهربائية المرفقة في دقائق، ثم املأها بخرطوم الحديقة. لا توجد أدوات، ولا بناء، ولا تركيب احترافي.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: حزم بعيدا الصغيرة
+      description: قم بتصريف حوض السباحة وتفريغه ولفه وتخزينه في كيس خلال فصل الشتاء. حمام سباحة كامل الحجم يناسب الخزانة.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: متين ومقاوم للأشعة فوق البنفسجية
+      description: نسيج PVC ذو طبقة مزدوجة Drop Stitch يقاوم الثقوب والتعرض للأشعة فوق البنفسجية وموسم كامل من الاستخدام العائلي.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: حزمة كاملة
+      description: يأتي كل حمام سباحة مزودًا بمضخة هواء كهربائية ومجموعة إصلاح وحقيبة تخزين. الأغطية المجهزة متاحة للنماذج المستديرة.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: تصميم مراعٍ للسلامة
+      description: تصميم حمامات السباحة السكنية يتوافق مع EN 16582-1 وASTM F2666، مع صمامات تخفيف الضغط وجدران صلبة ثابتة. مطلوب دائمًا إشراف الكبار المستمر.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: أفكار تجمع
+  title: المسبح المناسب ل<br />المساحة الخاصة بك
+  subtitle: إعدادات حقيقية وأحجام حقيقية وإرشادات صادقة لاختيار حمام السباحة المناسب.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: حمامات الفناء الخلفي للعائلات
+      description: تخطيط المساحة، والأحجام الحقيقية القابلة للاستخدام، وسهولة الصيانة لفصل الصيف العائلي في الفناء الخلفي.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: احصل على أفكار
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: حمامات سباحة للساحات الخلفية الصغيرة
+      description: نماذج مستديرة ومربعة مدمجة تناسب المساحات الخارجية الضيقة دون التخلي عن السباحة.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: احصل على أفكار
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: حمامات سباحة كبيرة للتجمعات
+      description: حمامات سباحة كبيرة مستطيلة الشكل مع مساحة حقيقية للسباحة لجميع أفراد الطاقم في أيام الصيف.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: احصل على أفكار
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: الغطس والاسترخاء في الهواء الطلق
+      description: أحواض سبا بمقاعد مدمجة وقيعان معزولة للاسترخاء اليومي في المنزل.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: احصل على أفكار
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: حمامات للإيجار لقضاء العطلات
+      description: وسيلة راحة موسمية للضيوف يتم إعدادها بسرعة وتخزينها بعيدًا في غير موسمها.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: احصل على أفكار
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: تخييم والضيافة
+      description: إقامات مميزة في الهواء الطلق - مواقع تخييم وعقارات بوتيكية وأماكن لإقامة الفعاليات.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: احصل على أفكار
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: تسوق حمامات السباحة
+  title: استكشف حمامات السباحة لدينا
+  subtitle: قارن الأشكال والأحجام والميزات للعثور على حمام السباحة المناسب للفناء الخلفي أو المساحة الخارجية.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: للشركات
+  title: حمامات سباحة للأعمال،<br />أيضاً
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay لشركاء الأعمال</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: إيجارات العطلات والضيافة
+      description: وسائل الراحة الموسمية للضيوف للإيجارات أثناء العطلات، والمواقع الفاخرة، وعقارات البوتيك - سريعة النشر، وسهلة الصيانة، وسهلة التخزين.
+    - title: شركاء البيع بالتجزئة والعلامات التجارية
+      description: برامج البيع بالجملة وحمامات Drop Stitch الجاهزة للبيع بالتجزئة لمراكز الحدائق ومحلات حمامات السباحة والمتاجر عبر الإنترنت.
+    - title: تسمية مخصصة وخاصة
+      description: أحجام وألوان وأغلفة مخصصة وطباعة الشعار وتغليف التجزئة للعلامات التجارية - تم تصميمها بواسطة شركائنا في التصنيع.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: الرعاية والسلامة
+  title: سهل التملك،<br />من السهل أن تحب
+  subtitle: من التسليم إلى السباحة الأولى إلى التخزين في نهاية الموسم، يظل امتلاك حمام سباحة Felizbay أمرًا بسيطًا.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: الإعداد في دقائق
+      description: قم بإخراج العلبة، ثم نفخها باستخدام المضخة المرفقة، ثم املأها - يستغرق الإعداد الكامل عادةً من 15 إلى 30 دقيقة على أرض ثابتة ومستوية.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: العناية بالمياه البسيطة
+      description: تعمل منافذ مضخة الفلتر القياسية مقاس 32/38 مم، وفحوصات منتظمة لدرجة الحموضة، والغطاء المجهز في الموديلات المستديرة على الحفاظ على نظافة المياه.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: تنظيف وصرف وتخزين
+      description: قم بتصريف حوض السباحة وتجفيفه ولفه وتعبئته في حقيبة التخزين الخاصة به لفصل الشتاء. لا يوجد تركيب دائم للصيانة.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: السلامة أولا
+      description: يجب أن يكون الأطفال تحت إشراف شخص بالغ في جميع الأوقات. اتبع الدليل والقواعد المحلية وإرشادات الاستخدام الآمن.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: من الصندوق إلى الفناء الخلفي
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'الخطوة 1: <span class="font-medium">اختر حمام السباحة الخاص بك</span>'
+      description: قارن الأشكال والأحجام بما يتناسب مع مساحتك وأسرتك وكيف تخطط لاستخدام المياه.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'الخطوة 2: <span class="font-medium">قم بإعداده</span>'
+      description: ضعه على أرض ثابتة ومستوية، ثم انفخه بالمضخة الكهربائية المرفقة، واملأه بخرطوم الحديقة.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'الخطوة 3: <span class="font-medium">السباحة طوال الصيف</span>'
+      description: حافظ على المياه نقية بعناية بسيطة - قم بمسحها وتغطيتها والتحقق من درجة الحموضة مثل أي حمام سباحة صغير.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'الخطوة 4: <span class="font-medium">قم بتخزينه بعيدًا</span>'
+      description: عندما ينتهي الموسم، قم بتصفية حوض السباحة وتجفيفه ولفه وتخزينه في حقيبته حتى الصيف المقبل.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: حمام سباحة Drop Stitch قابل للنفخ دائري من Felizbay
 blog_latest:
-  title: Pool Guides & Insights
+  title: أدلة ورؤى حمام السباحة
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    أدلة الإعداد، ونصائح العناية، ونصائح الشراء لحمامات السباحة القابلة للنفخ
+    من فريق Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: الأسئلة الشائعة حول حمام السباحة القابل للنفخ
+  subtitle: أسئلة شائعة حول حمامات السباحة القابلة للنفخ Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: كم من الوقت يستغرق الإعداد؟
+      description: يستغرق النفخ حوالي 10 دقائق باستخدام مضخة الهواء الكهربائية المتضمنة؛ يستغرق الإعداد الكامل بما في ذلك التنسيب والتعبئة عادةً 15-30 دقيقة.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: ما مدى صلابة تجمع Drop Stitch؟
+      description: جامدة جدا. تنتفخ جدران Drop Stitch بقوة عند 4-5 PSI - على غرار لوح التجديف القابل للنفخ - بحيث يحافظ حوض السباحة على شكله عند ملؤه بالماء.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: هل يمكن للأطفال استخدام المسبح؟
+      description: نعم، مع إشراف الكبار النشط في جميع الأوقات. لا ينبغي أبدًا ترك الأطفال دون مراقبة في حمام السباحة أو بالقرب منه - اتبع قواعد السلامة اليدوية والمحلية.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: كيف أقوم بتخزين المسبح في الشتاء؟
+      description: قم بتصريف الماء، وتفريغ حوض السباحة من الهواء، واتركه حتى يجف تمامًا، ثم قم بلفه وتخزينه في حقيبة التخزين المرفقة في مكان خالٍ من الصقيع.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: ما الذي يتم تضمينه مع المسبح؟
+      description: يشتمل كل مسبح في Felizbay على مضخة هواء كهربائية ومجموعة أدوات إصلاح وحقيبة تخزين. تحتوي النماذج المستديرة على غطاء اختياري مُجهز.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: ما هي الأحجام المتوفرة؟
+      description: 48 وحدة SKU قياسية في أربع مجموعات — حمامات سباحة مستديرة يصل عرضها إلى 10 أمتار، وأحواض سباحة مستطيلة يصل حجمها إلى 6 × 5 أمتار، وأحواض سبا بمقاعد مدمجة. تتوفر أحجام مخصصة لشركاء الأعمال.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: ما هي الأسطح التي يمكن أن يقف عليها حمام السباحة؟
+      description: أي سطح مستوٍ وخالي من الأشياء الحادة - العشب أو الفناء أو سطح السفينة. يوصى باستخدام لوح أرضي على الأسطح الخشنة. تأكد من أن السطح يمكن أن يتحمل وزن حوض السباحة المملوء.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: كيف أحافظ على نظافة المياه؟
+      description: استخدم مضخة الفلتر في مكان تركيبها، وأزل الحطام، وتحقق من الرقم الهيدروجيني، وقم بتغطية حوض السباحة في حالة عدم الاستخدام. تعتمد مدة بقاء الماء على حجم حمام السباحة والاستخدام والترشيح - اختبره بانتظام بدلاً من الاعتماد على جدول زمني محدد.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    ابحث عن حمام السباحة المناسب<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">للفناء الخلفي الخاص بك.</span>
+  subtitle: قارن بين النماذج والأحجام، أو احصل على مساعدة في الاختيار - يجيب فريقنا على الأسئلة خلال يوم عمل واحد.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: تسوق حمامات السباحة
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: ابحث عن حمام السباحة الخاص بك
       href: /find-your-pool
       icon: tabler:compass
+

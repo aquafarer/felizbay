@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Nadmuchiwane baseny Premium Drop Stitch
+  title: Wykorzystaj więcej swojej<br />Przestrzeni zewnętrznej.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Odkryj najwyższej jakości nadmuchiwane baseny przeznaczone do relaksu na podwórku, rodzinnej zabawy i życia na świeżym powietrzu.<br />
+    Przeglądaj rozmiary basenów, porównaj funkcje i znajdź odpowiedni dla swojej przestrzeni.<br />
+    Zaprojektowany i obsługiwany przez Aquafarer LLC, USA.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Kup baseny
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Znajdź swój basen
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Prostokątny nadmuchiwany basen Felizbay Drop Stitch na podwórku
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay w skrócie
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Kolekcje basenowe
       amount: '4'
-    - title: Standard SKUs
+    - title: Standardowe jednostki SKU
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Czas konfiguracji
+      amount: 15-30 min
+    - title: Ciśnienie znamionowe
+      amount: 4-5 PSI
+    - title: Gwarancja
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Rozmiary niestandardowe
       amount: Available
-    - title: Contact
+    - title: Kontakt
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Technologia Drop Stitch
+  title: Dlaczego basen Felizbay<br />Jest inny
+  subtitle: Wysokociśnieniowa konstrukcja Drop Stitch sprawia, że ​​nasze baseny są sztywne, trwałe i łatwe w przechowywaniu.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Sztywne ściany Drop Stitch
+      description: Tysiące wewnętrznych gwintów łączy ze sobą warstwy ścian, dzięki czemu basen napompowuje się do twardości skały przy ciśnieniu 4-5 PSI i zachowuje swój kształt po napełnieniu.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Szybka konfiguracja bez użycia narzędzi
+      description: Napompuj za pomocą dołączonej pompy elektrycznej w ciągu kilku minut, a następnie napełnij wężem ogrodowym. Bez narzędzi, bez konstrukcji, bez profesjonalnego montażu.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Pakuje się w małych rozmiarach
+      description: Odcedź, wypuść powietrze, zwiń i przechowuj basen w torbie przez zimę. Pełnowymiarowy basen mieszczący się w szafie.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Trwałe i odporne na promieniowanie UV
+      description: Dwuwarstwowa tkanina Drop Stitch z PVC jest odporna na przebicia, promieniowanie UV i cały sezon rodzinnego użytku.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Kompletny pakiet
+      description: Każdy basen jest dostarczany z elektryczną pompą powietrza, zestawem naprawczym i torbą do przechowywania. Do modeli okrągłych dostępne są dopasowane pokrowce.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Projekt uwzględniający bezpieczeństwo
+      description: Projekt basenu mieszkalnego zgodny z normami EN 16582-1 i ASTM F2666, z zaworami nadmiarowymi i stabilnymi, sztywnymi ścianami. Zawsze wymagany jest stały nadzór osoby dorosłej.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Pomysły na basen
+  title: Właściwy basen dla<br />Twoja przestrzeń
+  subtitle: Prawdziwe konfiguracje, prawdziwe rozmiary i uczciwe wskazówki dotyczące wyboru odpowiedniego basenu.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Baseny przydomowe dla rodzin
+      description: Planowanie przestrzeni, rzeczywiste rozmiary użytkowe i łatwa konserwacja na rodzinne wakacje na podwórku.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Zdobądź pomysły
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Baseny dla małych podwórek
+      description: Kompaktowe, okrągłe i kwadratowe modele, które pasują do ciasnych przestrzeni zewnętrznych, nie rezygnując z pływania.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Zdobądź pomysły
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Duże baseny na spotkania
+      description: Duże prostokątne baseny z prawdziwą przestrzenią do pływania dla całej załogi w letnie dni.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Zdobądź pomysły
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Moczenie i relaks na świeżym powietrzu
+      description: Wanny SPA z wbudowanymi siedziskami i izolowanym dnem do codziennego odpoczynku w domu.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Zdobądź pomysły
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Baseny do wynajęcia na wakacje
+      description: Sezonowe udogodnienie dla gości, które można szybko rozłożyć i przechowywać poza sezonem.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Zdobądź pomysły
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping i hotelarstwo
+      description: Wyjątkowe pobyty na świeżym powietrzu — glampingi, obiekty butikowe i miejsca wydarzeń.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Zdobądź pomysły
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Kup baseny
+  title: Poznaj nasze baseny
+  subtitle: Porównaj kształty, rozmiary i funkcje, aby znaleźć odpowiedni basen do swojego ogrodu lub przestrzeni na zewnątrz.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Dla firm
+  title: Baseny dla Biznesu,<br />Zbyt
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay dla partnerów biznesowych</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Wynajem wakacyjny i hotelarstwo
+      description: Sezonowe udogodnienia dla gości do wynajmu wakacyjnego, obiektów typu glamping i obiektów butikowych — szybkie we wdrażaniu, łatwe w utrzymaniu i proste w przechowywaniu.
+    - title: Partnerzy handlowi i marki
+      description: Programy hurtowe i gotowe do sprzedaży detalicznej baseny Drop Stitch dla centrów ogrodniczych, sklepów basenowych i sklepów internetowych.
+    - title: Etykieta niestandardowa i prywatna
+      description: Niestandardowe rozmiary, kolory, okładki, drukowanie logo i opakowania detaliczne dla marek — tworzone przez naszych partnerów produkcyjnych.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Opieka i bezpieczeństwo
+  title: Łatwy w posiadaniu,<br />Łatwo kochać
+  subtitle: Od dostawy, przez pierwsze pływanie, aż po przechowywanie na koniec sezonu, posiadanie basenu Felizbay pozostaje proste.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Konfiguracja w kilka minut
+      description: Rozpakuj, napompuj za pomocą dołączonej pompki i napełnij — pełna konfiguracja zajmuje zwykle 15–30 minut na twardym, równym podłożu.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Prosta pielęgnacja wody
+      description: Standardowe porty pompy filtrującej 32/38 mm, regularne kontrole pH i dopasowana pokrywa w modelach okrągłych utrzymują wodę w czystości.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Wyczyść, osusz i przechowuj
+      description: Odcedź, osusz, zwiń i zapakuj basen do torby do przechowywania na zimę. Brak stałej instalacji wymagającej konserwacji.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Bezpieczeństwo przede wszystkim
+      description: Dzieci muszą być przez cały czas aktywnie nadzorowane przez osobę dorosłą. Postępuj zgodnie z instrukcją, lokalnymi przepisami i wskazówkami dotyczącymi bezpiecznego użytkowania.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Od pudełka do podwórka
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Krok 1: <span class="font-medium">Wybierz swój basen</span>'
+      description: Porównaj kształty i rozmiary, aby dopasować je do swojej przestrzeni, gospodarstwa domowego i sposobu, w jaki planujesz korzystać z wody.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Krok 2: <span class="font-medium">Skonfiguruj to</span>'
+      description: Umieść na twardym, równym podłożu, napompuj za pomocą dołączonej pompy elektrycznej i napełnij wężem ogrodowym.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Krok 3: <span class="font-medium">Pływaj całe lato</span>'
+      description: Utrzymuj świeżość wody dzięki prostej pielęgnacji — przeglądaj, przykrywaj i sprawdzaj pH jak w każdym małym basenie.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Krok 4: <span class="font-medium">Przechowuj to</span>'
+      description: Po zakończeniu sezonu odcedź, osusz, zwiń i przechowuj basen w torbie do następnego lata.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Okrągły nadmuchiwany basen Felizbay Drop Stitch
 blog_latest:
-  title: Pool Guides & Insights
+  title: Przewodniki i spostrzeżenia dotyczące basenów
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Poradniki konfiguracji, wskazówki dotyczące pielęgnacji i porady dotyczące zakupu nadmuchiwanych basenów
+    z zespołu Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Często zadawane pytania dotyczące nadmuchiwanego basenu
+  subtitle: Często zadawane pytania dotyczące nadmuchiwanych basenów Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Jak długo trwa konfiguracja?
+      description: Napompowanie za pomocą dołączonej elektrycznej pompki zajmuje około 10 minut; pełna konfiguracja, w tym umieszczanie i napełnianie, trwa zwykle 15–30 minut.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Jak sztywny jest basen Drop Stitch?
+      description: Bardzo sztywny. Ściany Drop Stitch napompowują się mocno przy ciśnieniu 4-5 PSI — podobnie jak nadmuchiwana deska do wiosłowania — dzięki czemu basen zachowuje swój kształt po napełnieniu wodą.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Czy dzieci mogą korzystać z basenu?
+      description: Tak, przez cały czas pod aktywnym nadzorem osoby dorosłej. Nigdy nie wolno pozostawiać dzieci bez opieki w basenie lub w jego pobliżu – należy przestrzegać instrukcji i lokalnych zasad bezpieczeństwa.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Jak przechowywać basen zimą?
+      description: Spuść wodę, wypuść wodę z basenu, pozostaw do całkowitego wyschnięcia, następnie zwiń go i przechowuj w dołączonej torbie do przechowywania, w miejscu chronionym przed mrozem.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Co jest wliczone w cenę basenu?
+      description: Każdy basen Felizbay zawiera elektryczną pompę powietrza, zestaw naprawczy i torbę do przechowywania. Modele okrągłe mają opcjonalną dopasowaną pokrywę.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Jakie rozmiary są dostępne?
+      description: 48 standardowych jednostek SKU w czterech kolekcjach – baseny okrągłe o średnicy do 10 m, baseny prostokątne do 6×5 m oraz wanny SPA z wbudowanymi siedziskami. Rozmiary niestandardowe są dostępne dla partnerów biznesowych.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Na jakich powierzchniach może stać basen?
+      description: Jakakolwiek płaska, pozioma powierzchnia wolna od ostrych przedmiotów – trawnik, patio lub taras. Na szorstkich powierzchniach zaleca się użycie podkładu. Sprawdź, czy powierzchnia wytrzyma ciężar napełnionego basenu.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Jak utrzymać czystość wody?
+      description: Użyj pompy filtrującej, jeśli jest zainstalowana, usuń zanieczyszczenia, sprawdź pH i przykryj basen, gdy nie jest używany. To, jak długo wystarczy woda, zależy od wielkości basenu, sposobu użytkowania i filtracji — testuj regularnie, zamiast polegać na ustalonym harmonogramie.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Znajdź odpowiedni basen<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">dla Twojego podwórka.</span>
+  subtitle: Porównaj modele i rozmiary lub uzyskaj pomoc w wyborze — nasz zespół odpowiada na pytania w ciągu jednego dnia roboczego.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Kup baseny
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Znajdź swój basen
       href: /find-your-pool
       icon: tabler:compass
+

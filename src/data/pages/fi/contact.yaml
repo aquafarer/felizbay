@@ -1,86 +1,86 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Ota yhteyttä
+  title: OTA YHTEYTTÄ
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Lähetä meille viesti
+  subtitle: Tarjouksia, teknisiä kysymyksiä tai kumppanuuskyselyitä varten ota meihin yhteyttä. Vastaamme yhden arkipäivän kuluessa.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Lähetä kysely → Pyydä tarjous
+  success_message: Kiitos! Viestisi on päätynyt postilaatikkoomme. Vastaamme yhden arkipäivän kuluessa.
+  error_message: Jotain meni pieleen viestisi lähettämisessä. Yritä uudelleen tai lähetä meille sähköpostia.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Roskapostin esto: ratkaise seuraavat asiat'
   fields:
     - name: firstName
-      label: First Name
+      label: Etunimi
       row: 1
     - name: lastName
-      label: Last Name
+      label: Sukunimi
       row: 1
     - name: companyName
-      label: Company Name
+      label: Yrityksen nimi
       row: 2
     - name: address
-      label: Address
+      label: Osoite
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Postinumero
       row: 4
     - name: country
-      label: Country
+      label: Maa
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: Sähköposti
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: PUH
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Arvioitu tilausmäärä
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Valitse arvioitu äänenvoimakkuus...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Vain näytteet / prototyypit
+        - value: 5-10
+          label: 5–10 yksikköä (standardi MOQ)
+        - value: 100-500
+          label: 100-500 yksikköä
+        - value: 500-plus
+          label: Yli 500 yksikköä (määrähinta)
     - name: customization
-      label: Customization Needed?
+      label: Tarvitaanko mukauttamista?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Valitse mukautustyyppi...
         - value: none
-          label: Standard product (no customization)
+          label: Vakiotuote (ei mukauttamista)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Vain mukautettu logo / brändäys
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Täysi OEM (koko, väri, grafiikka, pakkaus)
         - value: consultation
-          label: Not sure — need consultation
+          label: Etkö ole varma - tarvitsee konsultaatiota
     - name: productInterest
-      label: Pool of Interest
+      label: Kiinnostuksen kohde
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Valitse allastyyppi...
         - value: all
-          label: All pools / Full catalog
+          label: Kaikki uima-altaat / Täysi luettelo
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Aihe
       row: 9
     - name: message
-      label: Message
+      label: Viesti
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Muita tapoja tavoittaa meidät
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Myynnin tiedustelut
+      description: Pool-tarjoukset, tukkuhinnat ja joukkotilaukset.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Tekninen tuki
+      description: Asennusohjeet, korjaukset, varaosat ja huoltokysymykset.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Mukautetut koot, värit, kannet, tuotemerkit ja pakkaukset.
       icon: tabler:palette
-    - title: Email
+    - title: Sähköposti
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Verkkosivusto
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Vastausaika
+      description: Vastaamme yhden arkipäivän kuluessa.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Ota yhteyttä
+  subtitle: Ota yhteyttä Felizbayyn
   address: felizbay.com
   zoom: 15
+

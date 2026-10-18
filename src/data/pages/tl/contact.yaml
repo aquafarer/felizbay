@@ -1,26 +1,26 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Makipag-ugnayan
+  title: MAKIPAG-UGNAYAN
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Padalhan kami ng mensahe
+  subtitle: Para sa mga quote, teknikal na tanong o mga katanungan sa pakikipagsosyo, i-drop sa amin ang isang linya. Sumasagot kami sa loob ng isang araw ng negosyo.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Magpadala ng Pagtatanong → Kumuha ng Quote
+  success_message: Salamat! Ang iyong mensahe ay nakarating sa aming inbox. Sasagot kami sa loob ng isang araw ng negosyo.
+  error_message: Nagkaproblema sa pagpapadala ng iyong mensahe. Pakisubukang muli o direktang mag-email sa amin.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: mangyaring lutasin ang sumusunod'
   fields:
     - name: firstName
-      label: First Name
+      label: Unang Pangalan
       row: 1
     - name: lastName
-      label: Last Name
+      label: Apelyido
       row: 1
     - name: companyName
-      label: Company Name
+      label: Pangalan ng Kumpanya
       row: 2
     - name: address
       label: Address
@@ -29,7 +29,7 @@ contact_form:
       label: Zip / Postal Code
       row: 4
     - name: country
-      label: Country
+      label: Bansa
       row: 4
       type: select
       optionsKey: countries
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Tinantyang Dami ng Order
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Piliin ang iyong tinantyang dami...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
+          label: Mga Sample / Prototype lamang
+        - value: 5-10
+          label: 5–10 unit (Karaniwang MOQ)
+        - value: 100-500
+          label: 100–500 unit
+        - value: 500-plus
           label: 500+ units (Volume pricing)
     - name: customization
-      label: Customization Needed?
+      label: Kailangan ang Customization?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Pumili ng uri ng pagpapasadya...
         - value: none
-          label: Standard product (no customization)
+          label: Karaniwang produkto (walang pag-customize)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Custom na Logo / Branding lang
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Buong OEM (laki, kulay, graphics, packaging)
         - value: consultation
-          label: Not sure — need consultation
+          label: Hindi sigurado - kailangan ng konsultasyon
     - name: productInterest
-      label: Pool of Interest
+      label: Pool ng Interes
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Pumili ng uri ng pool...
         - value: all
-          label: All pools / Full catalog
+          label: Lahat ng pool / Buong catalog
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,25 +92,25 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Paksa
       row: 9
     - name: message
-      label: Message
+      label: Mensahe
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Iba pang mga paraan upang maabot kami
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Mga katanungan sa pagbebenta
+      description: Pool quote, pakyawan pagpepresyo, at maramihang mga order.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Teknikal na suporta
+      description: Tulong sa pag-setup, pag-aayos, mga ekstrang bahagi, at mga tanong sa pangangalaga.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Mga custom na laki, kulay, cover, branding, at packaging.
       icon: tabler:palette
     - title: Email
       description: info@felizbay.com
@@ -118,11 +118,12 @@ features2_other_ways:
     - title: Website
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Oras ng pagtugon
+      description: Sumasagot kami sa loob ng isang araw ng negosyo.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Makipag-ugnayan
+  subtitle: Makipag-ugnayan kay Felizbay
   address: felizbay.com
   zoom: 15
+

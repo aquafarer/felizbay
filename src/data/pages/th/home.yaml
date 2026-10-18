@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: สระน้ำเป่าลมแบบ Drop Stitch ระดับพรีเมี่ยม
+  title: สร้างความเป็นคุณให้มากขึ้น<br />พื้นที่กลางแจ้ง
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    พบกับสระน้ำเป่าลมระดับพรีเมียมที่ออกแบบมาเพื่อการพักผ่อนในสวนหลังบ้าน ความสนุกสนานในครอบครัว และการใช้ชีวิตกลางแจ้ง<br />
+    สำรวจขนาดสระว่ายน้ำ เปรียบเทียบคุณลักษณะ และค้นหาขนาดที่เหมาะกับพื้นที่ของคุณ<br />
+    ออกแบบและดำเนินการโดย Aquafarer LLC สหรัฐอเมริกา
   actions:
     - variant: primary
-      text: Shop Pools
+      text: ร้านค้าสระว่ายน้ำ
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: ค้นหาสระน้ำของคุณ
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Felizbay Drop Stitch ในสวนหลังบ้าน
 stats:
-  title: Felizbay at a Glance
+  title: ข้อมูลโดยย่อของFelizbay
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: คอลเลกชันสระว่ายน้ำ
       amount: '4'
-    - title: Standard SKUs
+    - title: SKU มาตรฐาน
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: เวลาตั้งค่า
+      amount: 15-30 min
+    - title: จัดอันดับความดัน
+      amount: 4-5 PSI
+    - title: การรับประกัน
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: ขนาดที่กำหนดเอง
       amount: Available
-    - title: Contact
+    - title: ติดต่อ
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: เทคโนโลยีDrop Stitch
+  title: ทำไมต้องมีสระFelizbay<br />มีความแตกต่าง
+  subtitle: โครงสร้าง Drop Stitch แรงดันสูงทำให้สระของเรามีความแข็งแกร่ง ทนทาน และจัดเก็บได้อย่างง่ายดาย
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: ผนัง Drop Stitch แข็ง
+      description: เกลียวภายในหลายพันเส้นล็อคชั้นผนังไว้ด้วยกัน ดังนั้นสระน้ำจึงพองตัวได้แรงมากที่ 4-5 PSI และคงรูปร่างไว้เมื่อเติมน้ำ
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: ติดตั้งรวดเร็วโดยไม่ต้องใช้เครื่องมือ
+      description: สูบลมด้วยที่สูบไฟฟ้าที่ให้มาภายในไม่กี่นาที จากนั้นเติมสายยางสวน ไม่มีเครื่องมือ ไม่มีการก่อสร้าง ไม่มีการติดตั้งอย่างมืออาชีพ
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: แพ็คออกไปขนาดเล็ก
+      description: ระบาย ปล่อยลม ม้วนขึ้น และเก็บสระไว้ในถุงตลอดฤดูหนาว สระว่ายน้ำขนาดเต็มขนาดพอดีกับตู้เสื้อผ้า
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: ทนทานและทนต่อรังสียูวี
+      description: ผ้า PVC Drop Stitch สองชั้นทนทานต่อการเจาะทะลุ แสงยูวี และการใช้งานทั้งครอบครัวตลอดฤดูกาล
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: แพ็คเกจที่สมบูรณ์
+      description: สระทุกสระมาพร้อมกับปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ ฝาครอบพอดีสำหรับรุ่นทรงกลม
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: การออกแบบที่คำนึงถึงความปลอดภัย
+      description: การออกแบบสระว่ายน้ำที่อยู่อาศัยอ้างอิง EN 16582-1 และ ASTM F2666 พร้อมวาล์วระบายแรงดันและผนังที่แข็งแรงมั่นคง จำเป็นต้องมีการดูแลจากผู้ใหญ่อย่างต่อเนื่อง
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: ไอเดียสระว่ายน้ำ
+  title: สระน้ำที่เหมาะสมสำหรับ<br />พื้นที่ของคุณ
+  subtitle: การตั้งค่าจริง ขนาดจริง และคำแนะนำที่ซื่อสัตย์ในการเลือกสระว่ายน้ำที่เหมาะสม
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: สระว่ายน้ำหลังบ้านสำหรับครอบครัว
+      description: การวางแผนพื้นที่ ขนาดใช้งานได้จริง และการบำรุงรักษาง่ายสำหรับฤดูร้อนของครอบครัวในสวนหลังบ้าน
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: รับไอเดีย
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: สระว่ายน้ำสำหรับสวนหลังบ้านขนาดเล็ก
+      description: รุ่นทรงกลมและสี่เหลี่ยมขนาดกะทัดรัดที่เหมาะกับพื้นที่กลางแจ้งที่คับแคบโดยไม่ต้องละทิ้งการว่ายน้ำ
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: รับไอเดีย
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: สระน้ำขนาดใหญ่สำหรับการชุมนุม
+      description: สระว่ายน้ำทรงสี่เหลี่ยมขนาดใหญ่พร้อมพื้นที่ว่ายน้ำที่แท้จริงสำหรับลูกเรือทั้งหมดในวันฤดูร้อน
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: รับไอเดีย
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: การแช่น้ำกลางแจ้งและการพักผ่อน
+      description: อ่างสปาพร้อมที่นั่งในตัวและพื้นฉนวนกันความร้อนสำหรับการพักผ่อนที่บ้านทุกวัน
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: รับไอเดีย
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: สระว่ายน้ำสำหรับการเช่าวันหยุด
+      description: สิ่งอำนวยความสะดวกสำหรับแขกตามฤดูกาลที่จัดเตรียมไว้อย่างรวดเร็วและจัดเก็บไว้ในช่วงนอกฤดูกาล
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: รับไอเดีย
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: แกลมปิ้งและการต้อนรับ
+      description: การเข้าพักกลางแจ้งที่โดดเด่น ไม่ว่าจะเป็นสถานที่ตั้งแคมป์ ที่พักบูติก และสถานที่จัดกิจกรรม
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: รับไอเดีย
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: ร้านค้าสระว่ายน้ำ
+  title: สำรวจสระน้ำของเรา
+  subtitle: เปรียบเทียบรูปทรง ขนาด และคุณลักษณะต่างๆ เพื่อค้นหาสระว่ายน้ำที่เหมาะสมสำหรับสวนหลังบ้านหรือพื้นที่กลางแจ้งของคุณ
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: สำหรับธุรกิจ
+  title: สระว่ายน้ำสำหรับธุรกิจ<br />ด้วย
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay สำหรับพันธมิตรทางธุรกิจ</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: ที่พักให้เช่าและการต้อนรับ
+      description: สิ่งอำนวยความสะดวกสำหรับผู้เข้าพักตามฤดูกาลสำหรับที่พักให้เช่า สถานที่ตั้งแคมป์ และที่พักสไตล์บูติก — ปรับใช้ได้รวดเร็ว บำรุงรักษาง่าย และจัดเก็บง่าย
+    - title: พันธมิตรค้าปลีกและแบรนด์
+      description: โปรแกรมขายส่งและสระ Drop Stitch พร้อมขายปลีกสำหรับศูนย์สวน ร้านค้าสระน้ำ และร้านค้าออนไลน์
+    - title: ป้ายกำกับที่กำหนดเองและส่วนตัว
+      description: ขนาด สี ปก การพิมพ์โลโก้ และบรรจุภัณฑ์ขายปลีกที่กำหนดเองสำหรับแบรนด์ต่างๆ — สร้างโดยพันธมิตรการผลิตของเรา
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: การดูแลและความปลอดภัย
+  title: เป็นเจ้าของได้ง่ายๆ<br />รักง่าย
+  subtitle: ตั้งแต่การจัดส่งไปจนถึงการว่ายน้ำครั้งแรกไปจนถึงการจัดเก็บเมื่อสิ้นสุดฤดูกาล การเป็นเจ้าของสระว่ายน้ำ Felizbay ยังคงเป็นเรื่องง่าย
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: ตั้งค่าในไม่กี่นาที
+      description: แกะกล่อง เติมลมด้วยปั๊มที่ให้มา และเติมลม โดยทั่วไปการติดตั้งแบบเต็มจะใช้เวลา 15-30 นาทีบนพื้นแข็งและเรียบ
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: การดูแลน้ำแบบง่ายๆ
+      description: พอร์ตปั๊มกรองมาตรฐาน 32/38 มม. การตรวจสอบค่า pH เป็นประจำ และฝาปิดที่ติดตั้งไว้สำหรับรุ่นทรงกลมช่วยให้น้ำสะอาด
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: ทำความสะอาด ระบายน้ำ และจัดเก็บ
+      description: สะเด็ดน้ำ ตากให้แห้ง ม้วนขึ้น และบรรจุสระลงในถุงเก็บของสำหรับฤดูหนาว ไม่มีการติดตั้งถาวรในการบำรุงรักษา
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: ปลอดภัยไว้ก่อน
+      description: เด็กจะต้องได้รับการดูแลจากผู้ใหญ่ตลอดเวลา ปฏิบัติตามคู่มือ กฎท้องถิ่น และคำแนะนำในการใช้งานอย่างปลอดภัย
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: จากกล่องสู่สวนหลังบ้าน
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'ขั้นตอนที่ 1: <span class="font-medium">เลือกสระว่ายน้ำของคุณ</span>'
+      description: เปรียบเทียบรูปทรงและขนาดเพื่อให้ตรงกับพื้นที่ ครัวเรือน และวิธีที่คุณวางแผนจะใช้น้ำ
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'ขั้นตอนที่ 2: <span class="font-medium">ตั้งค่า</span>'
+      description: วางบนพื้นเรียบและมั่นคง สูบลมด้วยปั๊มไฟฟ้าที่ให้มา และเติมสายยางสวน
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'ขั้นตอนที่ 3: <span class="font-medium">ว่ายน้ำตลอดฤดูร้อน</span>'
+      description: รักษาความสดของน้ำด้วยการดูแลง่ายๆ — ลอกออก ปิดฝา และตรวจสอบ pH เหมือนสระน้ำขนาดเล็ก
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'ขั้นตอนที่ 4: <span class="font-medium">เก็บมันออกไป</span>'
+      description: เมื่อฤดูกาลสิ้นสุดลง ให้สะเด็ดน้ำ ตากให้แห้ง ม้วนตัว และเก็บสระไว้ในกระเป๋าจนถึงฤดูร้อนหน้า
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: สระว่ายน้ำเป่าลม Felizbay Round Drop Stitch
 blog_latest:
-  title: Pool Guides & Insights
+  title: คู่มือสระว่ายน้ำและข้อมูลเชิงลึก
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    คู่มือการติดตั้ง เคล็ดลับการดูแล และคำแนะนำในการซื้อสระว่ายน้ำเป่าลม
+    จากทีมFelizbay
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: คำถามที่พบบ่อยเกี่ยวกับสระน้ำเป่าลม
+  subtitle: คำถามทั่วไปเกี่ยวกับสระว่ายน้ำทำให้พอง Felizbay
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: การตั้งค่าใช้เวลานานเท่าใด?
+      description: การพองลมใช้เวลาประมาณ 10 นาทีด้วยปั๊มลมไฟฟ้าที่ให้มา โดยทั่วไปการตั้งค่าเต็มรูปแบบรวมทั้งการจัดวางและการเติมจะใช้เวลา 15-30 นาที
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: สระ Drop Stitch มีความแข็งแกร่งแค่ไหน?
+      description: แข็งมาก. ผนังของ Drop Stitch พองอย่างแรงที่ 4-5 PSI ซึ่งคล้ายกับแพดเดิ้ลบอร์ดแบบเป่าลม ดังนั้นสระจึงคงรูปทรงไว้เมื่อเติมน้ำ
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: เด็กสามารถใช้สระว่ายน้ำได้หรือไม่?
+      description: ใช่ โดยมีผู้ใหญ่คอยดูแลตลอดเวลา จะต้องไม่ทิ้งเด็กไว้ในหรือใกล้สระน้ำโดยไม่มีใครดูแล — ปฏิบัติตามคู่มือและกฎความปลอดภัยในท้องถิ่น
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: ฉันจะเก็บสระว่ายน้ำในฤดูหนาวได้อย่างไร?
+      description: ระบายน้ำ ปล่อยลมออกจากสระ ปล่อยให้แห้งสนิท จากนั้นม้วนขึ้นและเก็บไว้ในถุงเก็บที่ให้มาในที่ที่ไม่มีน้ำค้างแข็ง
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: มีอะไรรวมอยู่ในสระว่ายน้ำ?
+      description: สระ Felizbay ทุกสระมีปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ รุ่นทรงกลมมีฝาครอบแบบติดตั้งที่เป็นอุปกรณ์เสริม
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: มีขนาดอะไรบ้าง?
+      description: SKU มาตรฐาน 48 รายการในสี่คอลเลกชัน ได้แก่ สระทรงกลมเส้นผ่านศูนย์กลางสูงสุด 10 ม. สระทรงสี่เหลี่ยมขนาดสูงสุด 6 × 5 ม. และอ่าง SPA พร้อมที่นั่งในตัว ขนาดที่กำหนดเองมีไว้สำหรับพันธมิตรทางธุรกิจ
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: สระน้ำสามารถยืนบนพื้นผิวใดได้บ้าง?
+      description: พื้นผิวราบเรียบที่ไม่มีของมีคม เช่น สนามหญ้า ลานบ้าน หรือดาดฟ้า แนะนำให้ใช้แผ่นปูพื้นบนพื้นผิวขรุขระ ตรวจสอบว่าพื้นผิวสามารถรับน้ำหนักของสระน้ำที่เต็มแล้วได้
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: ฉันจะทำให้น้ำสะอาดได้อย่างไร?
+      description: ใช้ปั๊มกรองที่ติดตั้งไว้ ขจัดคราบสกปรก ตรวจสอบ pH และปิดสระเมื่อไม่ได้ใช้งาน ระยะเวลาที่น้ำอยู่ได้ขึ้นอยู่กับขนาดสระว่ายน้ำ การใช้งาน และการกรอง — ทดสอบเป็นประจำแทนที่จะอาศัยกำหนดเวลาที่แน่นอน
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    ค้นหาสระว่ายน้ำที่เหมาะสม<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">สำหรับสนามหลังบ้านของคุณ</span>
+  subtitle: เปรียบเทียบรุ่นและขนาด หรือขอความช่วยเหลือในการเลือก — ทีมงานของเราตอบคำถามภายในหนึ่งวันทำการ
   actions:
     - variant: primary
-      text: Shop Pools
+      text: ร้านค้าสระว่ายน้ำ
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: ค้นหาสระน้ำของคุณ
       href: /find-your-pool
       icon: tabler:compass
+

@@ -1,86 +1,86 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Байланыс
+  title: ХАБАРЛАСЫҢЫЗ
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Бізге хабарлама жіберіңіз
+  subtitle: Баға ұсыныстары, техникалық сұрақтар немесе серіктестік туралы сұраулар үшін бізге желіні қалдырыңыз. Біз бір жұмыс күні ішінде жауап береміз.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Сұрау жіберу → Баға алу
+  success_message: Рахмет! Сіздің хабарламаңыз біздің кіріс жәшігімізге түсті. Біз бір жұмыс күні ішінде жауап береміз.
+  error_message: Хабарыңызды жіберу кезінде бірдеңе дұрыс болмады. Қайталап көріңіз немесе бізге тікелей электрондық хат жіберіңіз.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Спамға қарсы: мынаны шешіңіз'
   fields:
     - name: firstName
-      label: First Name
+      label: Аты
       row: 1
     - name: lastName
-      label: Last Name
+      label: Фамилия
       row: 1
     - name: companyName
-      label: Company Name
+      label: Компания атауы
       row: 2
     - name: address
-      label: Address
+      label: Мекенжай
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Пошталық индекс
       row: 4
     - name: country
-      label: Country
+      label: Ел
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: Электрондық пошта
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: ТЕЛ
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Болжалды тапсырыс көлемі
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Болжалды көлемді таңдаңыз...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Үлгілер/тек прототиптер
+        - value: 5-10
+          label: 5–10 бірлік (стандартты MOQ)
+        - value: 100-500
+          label: 100-500 бірлік
+        - value: 500-plus
+          label: 500+ бірлік (көлемдік баға)
     - name: customization
-      label: Customization Needed?
+      label: Теңшеу қажет пе?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Теңшеу түрін таңдаңыз...
         - value: none
-          label: Standard product (no customization)
+          label: Стандартты өнім (теңшеу жоқ)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Тек пайдаланушы логотипі/брендинг
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Толық OEM (өлшем, түс, графика, орау)
         - value: consultation
-          label: Not sure — need consultation
+          label: Сенімсіз - кеңес қажет
     - name: productInterest
-      label: Pool of Interest
+      label: Қызығушылықтар пулы
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Бассейн түрін таңдаңыз...
         - value: all
-          label: All pools / Full catalog
+          label: Барлық бассейндер / Толық каталог
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Тақырып
       row: 9
     - name: message
-      label: Message
+      label: Хабарлама
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Бізге жетудің басқа жолдары
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Сату сұраулары
+      description: Пул бағалары, көтерме бағалар және жаппай тапсырыстар.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Техникалық көмек
+      description: Орнату бойынша анықтама, жөндеу, қосалқы бөлшектер және күтім сұрақтары.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Таңдамалы өлшемдер, түстер, мұқабалар, брендинг және орау.
       icon: tabler:palette
-    - title: Email
+    - title: Электрондық пошта
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Веб-сайт
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Жауап беру уақыты
+      description: Біз бір жұмыс күні ішінде жауап береміз.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Хабарласыңыз
+  subtitle: Felizbayға хабарласыңыз
   address: felizbay.com
   zoom: 15
+

@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Kenalan
+  title: HUBUNGI
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Hantar mesej kepada kami
+  subtitle: Untuk sebut harga, soalan teknikal atau pertanyaan perkongsian, hubungi kami. Kami membalas dalam satu hari perniagaan.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Hantar Pertanyaan → Dapatkan Sebut Harga
+  success_message: Terima kasih! Mesej anda telah sampai di peti masuk kami. Kami akan membalas dalam masa satu hari bekerja.
+  error_message: Kesilapan telah berlaku semasa menghantar mesej anda. Sila cuba lagi atau e-mel terus kepada kami.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: sila selesaikan perkara berikut'
   fields:
     - name: firstName
-      label: First Name
+      label: Nama Pertama
       row: 1
     - name: lastName
-      label: Last Name
+      label: Nama Akhir
       row: 1
     - name: companyName
-      label: Company Name
+      label: Nama Syarikat
       row: 2
     - name: address
-      label: Address
+      label: Alamat
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Poskod / Poskod
       row: 4
     - name: country
-      label: Country
+      label: Negara
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: e-mel
       row: 5
       type: email
     - name: tel
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Anggaran Jumlah Pesanan
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Pilih anggaran volum anda...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Sampel / Prototaip sahaja
+        - value: 5-10
+          label: 5–10 unit (MOQ Standard)
+        - value: 100-500
+          label: 100–500 unit
+        - value: 500-plus
+          label: 500+ unit (Harga volum)
     - name: customization
-      label: Customization Needed?
+      label: Penyesuaian Diperlukan?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Pilih jenis penyesuaian...
         - value: none
-          label: Standard product (no customization)
+          label: Produk standard (tiada penyesuaian)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Logo / Penjenamaan Tersuai sahaja
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: OEM penuh (saiz, warna, grafik, pembungkusan)
         - value: consultation
-          label: Not sure — need consultation
+          label: Tidak pasti - memerlukan perundingan
     - name: productInterest
-      label: Pool of Interest
+      label: Kumpulan Kepentingan
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Pilih jenis kolam...
         - value: all
-          label: All pools / Full catalog
+          label: Semua kolam / Katalog penuh
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Subjek
       row: 9
     - name: message
-      label: Message
+      label: Mesej
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Cara lain untuk menghubungi kami
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Pertanyaan jualan
+      description: Sebut harga kumpulan, harga borong dan pesanan pukal.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Sokongan teknikal
+      description: Bantuan persediaan, pembaikan, alat ganti dan soalan penjagaan.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Saiz, warna, penutup, penjenamaan dan pembungkusan tersuai.
       icon: tabler:palette
-    - title: Email
+    - title: E-mel
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: laman web
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Masa tindak balas
+      description: Kami membalas dalam satu hari perniagaan.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Hubungi
+  subtitle: Hubungi Felizbay
   address: felizbay.com
   zoom: 15
+

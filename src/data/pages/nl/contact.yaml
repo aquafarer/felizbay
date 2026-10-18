@@ -1,35 +1,35 @@
 hero_text:
   tagline: Contact
-  title: GET IN TOUCH
+  title: NEEM CONTACT OP
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Stuur ons een bericht
+  subtitle: Voor offertes, technische vragen of vragen over samenwerking kunt u ons een bericht sturen. Wij antwoorden binnen één werkdag.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Stuur een aanvraag → Ontvang een offerte
+  success_message: Bedankt! Uw bericht is in onze inbox beland. Wij zullen binnen één werkdag antwoorden.
+  error_message: Er is iets misgegaan bij het verzenden van uw bericht. Probeer het opnieuw of stuur ons direct een e-mail.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: los het volgende op'
   fields:
     - name: firstName
-      label: First Name
+      label: Voornaam
       row: 1
     - name: lastName
-      label: Last Name
+      label: Achternaam
       row: 1
     - name: companyName
-      label: Company Name
+      label: Bedrijfsnaam
       row: 2
     - name: address
-      label: Address
+      label: Adres
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Postcode
       row: 4
     - name: country
-      label: Country
+      label: Land
       row: 4
       type: select
       optionsKey: countries
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Geschat ordervolume
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Selecteer uw geschatte volume...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Alleen monsters/prototypes
+        - value: 5-10
+          label: 5–10 eenheden (standaard MOQ)
+        - value: 100-500
+          label: 100–500 eenheden
+        - value: 500-plus
+          label: 500+ eenheden (volumeprijzen)
     - name: customization
-      label: Customization Needed?
+      label: Maatwerk nodig?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Aanpassingstype selecteren...
         - value: none
-          label: Standard product (no customization)
+          label: Standaardproduct (geen maatwerk)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Alleen aangepast logo/branding
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Volledige OEM (grootte, kleur, afbeeldingen, verpakking)
         - value: consultation
-          label: Not sure — need consultation
+          label: Ik weet het niet zeker - overleg nodig
     - name: productInterest
-      label: Pool of Interest
+      label: Pool van interesse
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Selecteer zwembadtype...
         - value: all
-          label: All pools / Full catalog
+          label: Alle zwembaden / Volledige catalogus
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Onderwerp
       row: 9
     - name: message
-      label: Message
+      label: Bericht
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Andere manieren om ons te bereiken
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Verkoopvragen
+      description: Pooloffertes, groothandelsprijzen en bulkbestellingen.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Technische ondersteuning
+      description: Installatiehulp, reparaties, reserveonderdelen en onderhoudsvragen.
       icon: tabler:tool
-    - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+    - title: OEM/ODM
+      description: Aangepaste formaten, kleuren, covers, branding en verpakking.
       icon: tabler:palette
-    - title: Email
+    - title: E-mail
       description: info@felizbay.com
       icon: tabler:mail
     - title: Website
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Reactietijd
+      description: Wij antwoorden binnen één werkdag.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Neem contact op
+  subtitle: Neem contact op met Felizbay
   address: felizbay.com
   zoom: 15
+

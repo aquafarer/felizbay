@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Võtke ühendust
+  title: VÕTA ÜHENDUST
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Saada meile sõnum
+  subtitle: Hinnapakkumiste, tehniliste küsimuste või partnerluspäringute korral kirjutage meile. Vastame ühe tööpäeva jooksul.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Saada päring → Küsi pakkumist
+  success_message: Aitäh! Teie sõnum jõudis meie postkasti. Vastame ühe tööpäeva jooksul.
+  error_message: Midagi läks teie sõnumi saatmisel valesti. Proovige uuesti või saatke meile otse e-kiri.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Rämpspostitõrje: palun lahendage järgmine'
   fields:
     - name: firstName
-      label: First Name
+      label: Eesnimi
       row: 1
     - name: lastName
-      label: Last Name
+      label: Perekonnanimi
       row: 1
     - name: companyName
-      label: Company Name
+      label: Ettevõtte nimi
       row: 2
     - name: address
-      label: Address
+      label: Aadress
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Postiindeks
       row: 4
     - name: country
-      label: Country
+      label: Riik
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: E-post
       row: 5
       type: email
     - name: tel
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Hinnanguline tellimuste maht
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Valige oma hinnanguline helitugevus...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Ainult näidised/prototüübid
+        - value: 5-10
+          label: 5–10 ühikut (standardne MOQ)
+        - value: 100-500
+          label: 100-500 ühikut
+        - value: 500-plus
+          label: 500+ ühikut (mahuhinnakujundus)
     - name: customization
-      label: Customization Needed?
+      label: Kas vajate kohandamist?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Valige kohandamise tüüp...
         - value: none
-          label: Standard product (no customization)
+          label: Standardtoode (ilma kohandamiseta)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Ainult kohandatud logo/bränding
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Täielik originaalseadmete tootja (suurus, värv, graafika, pakend)
         - value: consultation
-          label: Not sure — need consultation
+          label: Pole kindel - vajan konsultatsiooni
     - name: productInterest
-      label: Pool of Interest
+      label: Huvikogum
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Valige basseini tüüp...
         - value: all
-          label: All pools / Full catalog
+          label: Kõik basseinid / Täielik kataloog
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Teema
       row: 9
     - name: message
-      label: Message
+      label: Sõnum
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Muud viisid meieni jõudmiseks
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Müügipäringud
+      description: Basseini hinnapakkumised, hulgihinnad ja hulgitellimused.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Tehniline tugi
+      description: Seadistusabi, remont, varuosad ja hooldusküsimused.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Kohandatud suurused, värvid, kaaned, kaubamärk ja pakend.
       icon: tabler:palette
-    - title: Email
+    - title: Meil
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Veebisait
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Reageerimisaeg
+      description: Vastame ühe tööpäeva jooksul.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Võtke ühendust
+  subtitle: Võtke Felizbayga ühendust
   address: felizbay.com
   zoom: 15
+

@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Premium Drop Stitch Puflanadigan hovuzlar
+  title: Ochiq makoningizdan<br />Ko'proq foydalaning.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Hovlida dam olish, oilaviy dam olish va ochiq havoda yashash uchun mo'ljallangan yuqori sifatli shishiriladigan basseynlarni kashf eting.<br />
+    Hovuz oʻlchamlarini oʻrganing, xususiyatlarni taqqoslang va oʻz joyingizga mos keladiganini toping.<br />
+    Aquafarer MChJ tomonidan ishlab chiqilgan va boshqariladi, AQSh.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Do'konlar basseynlari
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Hovuzingizni toping
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Orqa hovlida Felizbay to'rtburchaklar Drop Stitch shishiriladigan suzish havzasi
 stats:
-  title: Felizbay at a Glance
+  title: Bir qarashda Felizbay
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Hovuz kolleksiyalari
       amount: '4'
-    - title: Standard SKUs
+    - title: Standart SKUlar
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Sozlash vaqti
+      amount: 15-30 min
+    - title: Nominal bosim
+      amount: 4-5 PSI
+    - title: Kafolat
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Maxsus o'lchamlar
       amount: Available
-    - title: Contact
+    - title: Aloqa
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Drop Stitch texnologiyasi
+  title: Nima uchun Felizbay hovuzi<br />Turli
+  subtitle: Yuqori bosimli Drop Stitch konstruktsiyasi bizning hovuzlarimizni qattiq, bardoshli va saqlashni osonlashtiradi.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Qattiq Drop Stitch devorlari
+      description: Minglab ichki iplar devor qatlamlarini bir-biriga bog'lab turadi, shuning uchun hovuz 4-5 PSI darajasida toshdek qattiq shishiradi va to'ldirilganda shaklini saqlaydi.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Tez, asboblarsiz sozlash
+      description: Bir necha daqiqada kiritilgan elektr nasos bilan puflang, keyin bog 'shlangi bilan to'ldiring. Asboblar, qurilish yo'q, professional o'rnatish yo'q.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Kichik paketlar
+      description: Hovuzni to'kib tashlang, o'chiring, o'rang va qishda sumkada saqlang. Shkafga mos keladigan to'liq o'lchamli suzish havzasi.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Bardoshli va UV nuriga chidamli
+      description: Ikki qatlamli PVX Drop Stitch mato teshilishlarga, UV ta'siriga va oilaviy foydalanishning to'liq mavsumiga qarshi turadi.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Toʻliq toʻplam
+      description: Har bir hovuz elektr havo pompasi, ta'mirlash to'plami va saqlash sumkasi bilan birga keladi. Dumaloq modellar uchun o'rnatilgan qopqoqlar mavjud.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Xavfsizlik nuqtai nazaridan dizayn
+      description: EN 16582-1 va ASTM F2666 standartlariga mos keladigan turar-joy hovuzining dizayni, bosimni o'chirish klapanlari va barqaror qattiq devorlarga ega. Doimiy kattalar nazorati doimo talab qilinadi.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Hovuz g'oyalari
+  title: To'g'ri basseyn<br />Sizning makoningiz
+  subtitle: Haqiqiy sozlamalar, haqiqiy o'lchamlar va to'g'ri hovuzni tanlash bo'yicha halol ko'rsatmalar.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Oilalar uchun hovli hovuzlari
+      description: Kosmosni rejalashtirish, haqiqiy foydalanish mumkin bo'lgan o'lchamlar va hovlida oilaviy yoz uchun oson parvarishlash.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Fikrlarni oling
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Kichik hovlilar uchun hovuzlar
+      description: Suzishdan voz kechmasdan, qattiq ochiq joylarga mos keladigan ixcham yumaloq va kvadrat modellar.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Fikrlarni oling
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Yig'ilishlar uchun katta hovuzlar
+      description: Yoz kunlarida butun ekipaj uchun haqiqiy suzish maydoni bo'lgan katta to'rtburchaklar hovuzlar.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Fikrlarni oling
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Ochiq havoda namlash va dam olish
+      description: Uyda har kuni shamollash uchun o'rnatilgan o'rindiqli va izolyatsiyalangan tagliklari bo'lgan SPA vannalari.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Fikrlarni oling
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Dam olish uchun ijaraga olingan basseynlar
+      description: Tez o'rnatiladigan va mavsumdan tashqari saqlanadigan mavsumiy mehmonlar uchun qulaylik.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Fikrlarni oling
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping va mehmondo'stlik
+      description: O'ziga xos ochiq turar joy - glamping saytlari, butiklar va tadbirlar o'tkaziladigan joylar.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Fikrlarni oling
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Do'konlar basseynlari
+  title: Hovuzlarimizni o'rganing
+  subtitle: Orqa hovlingiz yoki tashqi makoningiz uchun to'g'ri hovuzni topish uchun shakllar, o'lchamlar va xususiyatlarni solishtiring.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Korxonalar uchun
+  title: Biznes uchun basseynlar,<br />ham
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay biznes hamkorlari uchun</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Dam olish uchun ijara va mehmondo'stlik
+      description: Dam olish maskanlari, glamping saytlari va butik ob'ektlari uchun mavsumiy mehmonlar uchun qulayliklar - tez o'rnatish, parvarish qilish oson, saqlash oson.
+    - title: Chakana savdo va brend hamkorlari
+      description: Bog 'markazlari, basseyn do'konlari va onlayn-do'konlar uchun ulgurji dasturlar va chakana savdoga tayyor Drop Stitch hovuzlari.
+    - title: Maxsus va shaxsiy yorliq
+      description: Ishlab chiqarish bo'yicha hamkorlarimiz tomonidan ishlab chiqarilgan o'lchamlar, ranglar, qopqoqlar, logotip chop etish va brendlar uchun chakana qadoqlash.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Xizmat va xavfsizlik
+  title: Oson egalik qilish,<br />Sevish oson
+  subtitle: Yetkazib berishdan tortib, birinchi suzishgacha, mavsum oxirida saqlashgacha, Felizbay hovuziga ega bo'lish oddiy bo'lib qoladi.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Bir necha daqiqada sozlash
+      description: Qutidan chiqaring, kiritilgan nasos bilan puflang va to'ldiring - to'liq o'rnatish odatda qattiq, tekis yerda 15-30 daqiqa davom etadi.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Oddiy suvni parvarish qilish
+      description: Standart 32/38 mm filtr-nasos portlari, muntazam pH tekshiruvlari va dumaloq modellarda o'rnatilgan qopqoq suvni toza saqlaydi.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Tozalash, to'kib tashlash va saqlash
+      description: Hovuzni to'kib tashlang, quriting, o'rang va qish uchun saqlash sumkasiga soling. Xizmat uchun doimiy o'rnatish yo'q.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Birinchi navbatda xavfsizlik
+      description: Bolalar har doim kattalar tomonidan faol nazorat qilinishi kerak. Qo'llanma, mahalliy qoidalar va xavfsiz foydalanish yo'riqnomasiga rioya qiling.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Qutidan orqa hovliga
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: '1-qadam: <span class="font-medium">Hovuzingizni tanlang</span>'
+      description: Shakl va o'lchamlarni bo'sh joyingiz, uyingiz va suvdan qanday foydalanishni rejalashtirganingizga mos keladigan tarzda solishtiring.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: '2-qadam: <span class="font-medium">Uni sozlash</span>'
+      description: Qattiq, tekis erga qo'ying, kiritilgan elektr nasos bilan puflang va bog 'shlangi bilan to'ldiring.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: '3-qadam: <span class="font-medium">Butun yoz suzish</span>'
+      description: Suvni oddiy parvarish bilan toza tuting - har qanday kichik hovuz kabi tozalang, yoping va pH ni tekshiring.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: '4-qadam: <span class="font-medium">Uni uzoqroqda saqlang</span>'
+      description: Mavsum tugagach, suvni to'kib tashlang, quriting, o'rang va keyingi yozgacha hovuzni sumkasida saqlang.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay dumaloq Drop Stitch shishiriladigan suzish havzasi
 blog_latest:
-  title: Pool Guides & Insights
+  title: Hovuz bo'yicha ko'rsatmalar va tushunchalar
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Puflanadigan suzish havzalarini sozlash bo'yicha ko'rsatmalar, parvarish bo'yicha maslahatlar va sotib olish bo'yicha maslahatlar
+    Felizbay jamoasidan.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Puflanadigan basseyn haqida tez-tez so'raladigan savollar
+  subtitle: Felizbay shishiriladigan suzish havzalari haqida umumiy savollar.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: O'rnatish qancha vaqt oladi?
+      description: O'rnatilgan elektr havo pompasi bilan shishirish taxminan 10 daqiqa davom etadi; to'liq o'rnatish, shu jumladan joylashtirish va to'ldirish odatda 15-30 minut.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Drop Stitch hovuzi qanchalik qattiq?
+      description: Juda qattiq. Drop Stitch devorlari 4-5 PSI darajasida qattiq shishiradi - xuddi shishiriladigan belkurak taxtasi - shuning uchun hovuz suv bilan to'ldirilganda o'z shaklini saqlab qoladi.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Bolalar basseyndan foydalanishlari mumkinmi?
+      description: Ha, har doim faol kattalar nazorati ostida. Bolalarni hech qachon hovuzda yoki uning yonida qarovsiz qoldirmaslik kerak - qo'llanma va mahalliy xavfsizlik qoidalariga rioya qiling.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Hovuzni qishda qanday saqlash kerak?
+      description: Suvni to'kib tashlang, hovuzni to'kib tashlang, uni to'liq quriting, so'ng uni o'rab oling va qo'shilgan saqlash sumkasida sovuq bo'lmagan joyda saqlang.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Hovuzga nima kiradi?
+      description: Har bir Felizbay hovuzida elektr havo nasosi, ta'mirlash to'plami va saqlash sumkasi mavjud. Dumaloq modellarda ixtiyoriy o'rnatilgan qopqoq mavjud.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Qanday o'lchamlar mavjud?
+      description: To'rtta to'plam bo'yicha 48 ta standart SKU - diametri 10 m gacha bo'lgan yumaloq hovuzlar, 6 × 5 m gacha bo'lgan to'rtburchaklar hovuzlar va o'rnatilgan o'rindiqli SPA vannalari. Biznes hamkorlar uchun maxsus o'lchamlar mavjud.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Hovuz qanday sirtlarda turishi mumkin?
+      description: O'tkir narsalardan xoli har qanday tekis, tekis sirt - maysazor, veranda yoki pastki. Qo'pol sirtlarda tuproqli varaq tavsiya etiladi. Sirt to'ldirilgan hovuz og'irligiga bardosh bera olishini tekshiring.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Qanday qilib suvni toza saqlashim mumkin?
+      description: O'rnatilgan joyda filtr nasosidan foydalaning, qoldiqlarni tozalang, pH darajasini tekshiring va foydalanilmaganda hovuzni yoping. Suv qancha davom etishi hovuz hajmi, foydalanish va filtratsiyaga bog'liq - belgilangan jadvalga tayanishdan ko'ra muntazam ravishda sinovdan o'tkazing.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    To'g'ri hovuzni toping<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">hovlingiz uchun.</span>
+  subtitle: Model va oʻlchamlarni solishtiring yoki tanlashda yordam oling — bizning jamoamiz savollarga bir ish kuni ichida javob beradi.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Do'konlar basseynlari
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Hovuzingizni toping
       href: /find-your-pool
       icon: tabler:compass
+

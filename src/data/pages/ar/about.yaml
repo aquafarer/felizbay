@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: معلومات عنا
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: حوض سباحة قابل للنفخ في Felizbay
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay designs and manufactures premium drop stitch inflatable swimming pools. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    جعل السباحة بسيطة، <br />
+    على طريقة <span class="text-accent dark:text-white">Felizbay</span> 
+  subtitle: Felizbay هي علامة تجارية فاخرة لحمام السباحة القابل للنفخ Drop Stitch تم تصميمها وإدارتها بواسطة Aquafarer LLC (الولايات المتحدة الأمريكية). نحن نؤمن بأن كل عائلة تستحق حمام سباحة حقيقي في الفناء الخلفي - بدون بناء أو تصاريح أو تركيب دائم. يتم نفخ حمامات السباحة الخاصة بنا بشكل قوي في دقائق، وتظل على قيد الحياة في الصيف الكامل من المرح العائلي، ويتم تعبئتها بكميات صغيرة في نهاية الموسم.
 stats:
-  title: By the numbers
+  title: بالأرقام
   columns: 4
   stats:
-    - title: Pool collections
+    - title: مجموعات حمامات السباحة
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: وقت الإعداد
+      amount: 15-30 min
+    - title: الضغط المقدر
+      amount: 4-5 PSI
+    - title: اتصال
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: ما نبنيه
+  subtitle: خط إنتاج مركّز نعرفه من الداخل إلى الخارج - حمامات سباحة قابلة للنفخ Drop Stitch عالية الضغط.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: حمامات سباحة مستطيلة
+      description: برك Drop Stitch مستطيلة بحجم عائلي تزيد من مساحة السباحة في مساحتك.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: حمامات سباحة زرقاء مستديرة
+      description: حوض السباحة الكلاسيكي في الفناء الخلفي — أزرق نابض بالحياة، جدران Drop Stitch صلبة، وإعداد سريع.
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: حمامات رمادية مستديرة
+      description: خطنا المتميز ذو اللون الرمادي الحديث والغطاء الاختياري المجهز.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: حوض استحمام ساخن حمامات سبا
+      description: نماذج أحواض استحمام ساخنة صالحة للفصول الأربعة بمقاعد مدمجة وقيعان معزولة بسمك 5 مم.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: حزم كاملة
+      description: يأتي كل حمام سباحة مزودًا بمضخة هواء كهربائية ومجموعة إصلاح وحقيبة تخزين.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: أحجام مخصصة
+      description: أحجام وألوان وأغطية OEM للعلامات التجارية والموزعين ومشاريع الضيافة.
       icon: tabler:adjustments
-    - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+    - title: تصنيع المعدات الأصلية / أوديإم
+      description: تصنيع الملصقات الخاصة مع طباعة الشعار والتعبئة الجاهزة للبيع بالتجزئة.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل من Felizbay
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: قيمنا
+  subtitle: ثلاثة مبادئ تشكل كل حمام سباحة نبنيه.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: قم بالبناء كما لو أن عائلتك سوف تستخدمه
+      description: يتم التعامل مع كل التماس والجدار والصمام كما لو أن عائلاتنا سوف تسبح فيه.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: مهندس قبل أن نبيع
+      description: هيكل Drop Stitch عالي الضغط، تم اختباره أعلى من الضغط المقدر، قبل شحن أي حمام سباحة.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: الدعم الذي يدوم هذا الموسم
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: المعالم
+  subtitle: نسخة قصيرة من قصة Felizbay.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: تركز على حمامات السباحة القابلة للنفخ
+      description: 'تم تأسيس Felizbay بتركيز واحد: برك سباحة Drop Stitch قابلة للنفخ فاخرة.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: ثلاث مجموعات التوقيع
+      description: خطوط حمام سباحة مستطيلة، وزرقاء مستديرة، ورمادية مستديرة، كل منها مزود بأغطية اختيارية وأحجام مخصصة.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM للشركاء في جميع أنحاء العالم
+      description: تصنيع مخصص للعلامات التجارية والموزعين والفنادق ومشغلي التخييم.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: تواصل معنا
+  tagline: اتصال
   columns: 3
   items:
-    - title: Email
+    - title: بريد إلكتروني
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: موقع إلكتروني
+      description: felizbay.com - تصفح حمامات السباحة لدينا واطلب عرض أسعار.
+    - title: تصنيع المعدات الأصلية / بالجملة
+      description: الأحجام والألوان والعلامات التجارية المخصصة متاحة لشركاء الأعمال.
+brand_hub_tagline: منتجات
+brand_hub_title: استكشف حمامات السباحة لدينا
+brand_hub_subtitle: اكتشف مجموعات حمامات السباحة القابلة للنفخ الخاصة بنا والتي تم تصميمها باستخدام تقنية Drop Stitch ذات الضغط العالي.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: حمامات سباحة مستطيلة
+    desc: برك Drop Stitch مستطيلة بحجم عائلي بجدران صلبة وأقصى مساحة للسباحة.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: عرض حمامات السباحة →
+  - title: حمامات مستديرة زرقاء
+    desc: حمام السباحة الدائري الكلاسيكي باللون الأزرق النابض بالحياة - إعداد سريع، وبنية صلبة، ومتانة طوال الموسم.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: عرض حمامات السباحة →
+  - title: حمامات مستديرة رمادية
+    desc: حمامات سباحة باللون الرمادي الفاخر مع أغطية اختيارية مناسبة لإضفاء مظهر عصري على الفناء الخلفي.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: عرض حمامات السباحة →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: التميز في الإنتاج
+  title: ضمان براعة رائعة
+  description: إن خط إنتاج Felizbay مخصص لحمامات السباحة القابلة للنفخ عالية الجودة والمتينة وعالية الضغط.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: فريق فني من ذوي الخبرة
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: معدات الإنتاج المتقدمة
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: نظام إدارة ناضج
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: رقابة صارمة على الجودة
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: الوصول العالمي
+  title_html: علامة تجارية واحدة، <span class="text-white/90">الشحن في جميع أنحاء العالم</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: مجموعات حمامات السباحة
+    - value: 15-30 min
+      label: وقت الإعداد
+    - value: 4-5 PSI
+      label: الضغط المقدر
+

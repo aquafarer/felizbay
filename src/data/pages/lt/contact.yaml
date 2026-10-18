@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Susisiekite
+  title: SUSISIEKITE
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Atsiųskite mums žinutę
+  subtitle: Jei turite pasiūlymų, techninių klausimų ar užklausų dėl partnerystės, susisiekite su mumis. Atsakome per vieną darbo dieną.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Siųsti užklausą → Gaukite pasiūlymą
+  success_message: Ačiū! Jūsų žinutė pateko į mūsų pašto dėžutę. Atsakysime per vieną darbo dieną.
+  error_message: Siunčiant pranešimą įvyko klaida. Bandykite dar kartą arba parašykite mums tiesiogiai el. paštu.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: išspręskite šiuos klausimus'
   fields:
     - name: firstName
-      label: First Name
+      label: Vardas
       row: 1
     - name: lastName
-      label: Last Name
+      label: Pavardė
       row: 1
     - name: companyName
-      label: Company Name
+      label: Įmonės pavadinimas
       row: 2
     - name: address
-      label: Address
+      label: Adresas
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Pašto kodas
       row: 4
     - name: country
-      label: Country
+      label: Šalis
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: paštas
       row: 5
       type: email
     - name: tel
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Numatomas užsakymų kiekis
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Pasirinkite numatomą garsumą...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Tik pavyzdžiai / prototipai
+        - value: 5-10
+          label: 5–10 vienetų (standartinis MOQ)
+        - value: 100-500
+          label: 100–500 vienetų
+        - value: 500-plus
+          label: Daugiau nei 500 vienetų (tūrinė kainodara)
     - name: customization
-      label: Customization Needed?
+      label: Reikia pritaikymo?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Pasirinkite tinkinimo tipą...
         - value: none
-          label: Standard product (no customization)
+          label: Standartinis produktas (be pritaikymo)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Tik tinkintas logotipas / prekės ženklas
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Visas OEM (dydis, spalva, grafika, pakuotė)
         - value: consultation
-          label: Not sure — need consultation
+          label: Nežinau - reikia konsultacijos
     - name: productInterest
-      label: Pool of Interest
+      label: Interesų baseinas
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Pasirinkite baseino tipą...
         - value: all
-          label: All pools / Full catalog
+          label: Visi baseinai / Visas katalogas
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Tema
       row: 9
     - name: message
-      label: Message
+      label: Pranešimas
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Kiti būdai mus pasiekti
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Pardavimų užklausos
+      description: Baseinas, didmeninės kainos ir masiniai užsakymai.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Techninė pagalba
+      description: Sąrankos pagalba, remontas, atsarginės dalys ir priežiūros klausimai.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Individualūs dydžiai, spalvos, viršeliai, prekės ženklas ir pakuotė.
       icon: tabler:palette
-    - title: Email
+    - title: El. paštas
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Svetainė
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Reagavimo laikas
+      description: Atsakome per vieną darbo dieną.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Susisiekite
+  subtitle: Susisiekite su Felizbay
   address: felizbay.com
   zoom: 15
+

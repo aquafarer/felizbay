@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Kontakta
+  title: TA KONTAKT
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Skicka ett meddelande till oss
+  subtitle: För offerter, tekniska frågor eller partnerskapsförfrågningar, kontakta oss. Vi svarar inom en arbetsdag.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Skicka förfrågan → Få en offert
+  success_message: Tack! Ditt meddelande har hamnat i vår inkorg. Vi kommer att svara inom en arbetsdag.
+  error_message: Något gick fel när ditt meddelande skickades. Försök igen eller maila oss direkt.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: lösa följande'
   fields:
     - name: firstName
-      label: First Name
+      label: Förnamn
       row: 1
     - name: lastName
-      label: Last Name
+      label: Efternamn
       row: 1
     - name: companyName
-      label: Company Name
+      label: Företagsnamn
       row: 2
     - name: address
-      label: Address
+      label: Adress
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Postnummer
       row: 4
     - name: country
-      label: Country
+      label: Land
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: E-post
       row: 5
       type: email
     - name: tel
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Beräknad ordervolym
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Välj din beräknade volym...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Endast prover/prototyper
+        - value: 5-10
+          label: 5–10 enheter (standard MOQ)
+        - value: 100-500
+          label: 100–500 enheter
+        - value: 500-plus
+          label: 500+ enheter (volymprissättning)
     - name: customization
-      label: Customization Needed?
+      label: Behövs anpassning?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Välj anpassningstyp...
         - value: none
-          label: Standard product (no customization)
+          label: Standardprodukt (ingen anpassning)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Endast anpassad logotyp/varumärke
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Full OEM (storlek, färg, grafik, förpackning)
         - value: consultation
-          label: Not sure — need consultation
+          label: Inte säker - behöver konsultation
     - name: productInterest
-      label: Pool of Interest
+      label: Intressepool
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Välj pooltyp...
         - value: all
-          label: All pools / Full catalog
+          label: Alla pooler / Fullständig katalog
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Ämne
       row: 9
     - name: message
-      label: Message
+      label: Meddelande
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Andra sätt att nå oss
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Försäljningsförfrågningar
+      description: Poolofferter, grossistpriser och massbeställningar.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Teknisk support
+      description: Installationshjälp, reparationer, reservdelar och skötselfrågor.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Anpassade storlekar, färger, omslag, varumärke och förpackning.
       icon: tabler:palette
-    - title: Email
+    - title: E-post
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Webbplats
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Svarstid
+      description: Vi svarar inom en arbetsdag.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Hör av dig
+  subtitle: Kontakta Felizbay
   address: felizbay.com
   zoom: 15
+

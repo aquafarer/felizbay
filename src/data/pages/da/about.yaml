@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: Om os
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: Felizbay oppustelig swimmingpool
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay designs and manufactures premium drop stitch inflatable swimming pools. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    Gør svømning enkel, <br />
+    på <span class="text-accent dark:text-white">Felizbay</span>-vis
+  subtitle: Felizbay er et premium drop stitch oppustelig poolmærke designet og drevet af Aquafarer LLC (USA). Vi mener, at enhver familie fortjener en rigtig pool i baghaven - uden byggeri, tilladelser eller en permanent installation. Vores pools pustes op på få minutter, overlever hele somre med familiehygge og pakker småt sammen ved sæsonens afslutning.
 stats:
-  title: By the numbers
+  title: Ved tallene
   columns: 4
   stats:
-    - title: Pool collections
+    - title: Pool samlinger
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: Opsætningstid
+      amount: 15-30 min
+    - title: Nominelt tryk
+      amount: 4-5 PSI
+    - title: Kontakte
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: Hvad vi bygger
+  subtitle: En fokuseret produktlinje, vi kender ud og ind - højtryks Drop Stitch oppustelige svømmebassiner.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: Rektangulære pools
+      description: Rektangulære Drop Stitch-bassiner i familiestørrelse, der maksimerer svømmeområdet til dit rum.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: Runde blå pools
+      description: Den klassiske baggårdspool - levende blå, stive Drop Stitch-vægge, hurtig opsætning.
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: Runde grå bassiner
+      description: Vores premium-serie med en moderne grå finish og valgfrit monteret betræk.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: Spabad SPA pools
+      description: Fire-sæsons boblebadsmodeller med indbyggede sæder og 5 mm isoleret bund.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: Komplet pakker
+      description: Hver pool leveres med en elektrisk luftpumpe, reparationssæt og opbevaringstaske.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: Brugerdefinerede størrelser
+      description: OEM størrelser, farver og covers til mærker, distributører og gæstfrihedsprojekter.
       icon: tabler:adjustments
     - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+      description: Private label-fremstilling med logotryk og detailklar emballage.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: Felizbay rektangulær drop stitch oppustelig swimmingpool
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: Vores værdier
+  subtitle: Tre principper, der former enhver pool, vi bygger.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: Byg som din familie vil bruge det
+      description: Hver søm, væg og ventil bliver behandlet, som om vores egne familier vil svømme i den.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: Ingeniør før vi sælger
+      description: Højtryks Drop Stitch-konstruktion, testet over dets nominelle tryk, før enhver pool sendes.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: Støtte, der varer længere end sæsonen
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: Milepæle
+  subtitle: En kort version af Felizbay-historien.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: Fokus på oppustelige pools
+      description: 'Felizbay blev grundlagt med et enkelt fokus: premium drop stitch oppustelige svømmebassiner.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: Tre signatursamlinger
+      description: Rektangulære, runde blå og runde grå poollinjer, hver med valgfri dæksler og brugerdefinerede størrelser.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM til partnere over hele verden
+      description: Skræddersyet fremstilling til mærker, distributører, hoteller og glamping-operatører.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: Tag kontakt
+  tagline: Kontakte
   columns: 3
   items:
-    - title: Email
+    - title: E-mail
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: Hjemmeside
+      description: felizbay.com — gennemse vores pools og anmod om et tilbud.
+    - title: OEM / Engros
+      description: Brugerdefinerede størrelser, farver og branding tilgængelig for forretningspartnere.
+brand_hub_tagline: Produkter
+brand_hub_title: Udforsk vores pools
+brand_hub_subtitle: Oplev vores oppustelige swimmingpoolkollektioner bygget med højtryks Drop Stitch-teknologi.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: Rektangulære pools
+    desc: Rektangulære Drop Stitch-bassiner i familiestørrelse med stive vægge og maksimalt svømmeområde.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: Se pools →
+  - title: Runde blå pools
+    desc: Den klassiske runde pool i levende blå — hurtig opsætning, stiv konstruktion, sæsonlang holdbarhed.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: Se pools →
+  - title: Runde Grå Pools
+    desc: Premium-grå pools med valgfrit monterede dæksler for et moderne baghave-look.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: Se pools →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: Fremragende produktion
+  title: Sikrer udsøgt håndværk
+  description: Felizbay produktionslinjen er dedikeret til højkvalitets, holdbare højtryks oppustelige svømmebassiner.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: Erfarent teknikerteam
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: Avanceret produktionsudstyr
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: Modent ledelsessystem
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: Streng kvalitetskontrol
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: Global rækkevidde
+  title_html: Et mærke, <span class="text-white/90">verdensomspændende forsendelse</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: Pool samlinger
+    - value: 15-30 min
+      label: Opsætningstid
+    - value: 4-5 PSI
+      label: Nominelt tryk
+

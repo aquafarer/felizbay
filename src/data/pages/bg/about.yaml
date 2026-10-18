@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: За нас
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: Надуваем басейн Felizbay
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay designs and manufactures premium drop stitch inflatable swimming pools. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    Опростяване на плуването, <br />
+    в стила на <span class="text-accent dark:text-white">Felizbay</span> 
+  subtitle: Felizbay е първокласна марка за надуваеми басейни Drop Stitch, проектирана и управлявана от Aquafarer LLC (САЩ). Вярваме, че всяко семейство заслужава истински басейн в задния двор - без строителство, разрешителни или постоянна инсталация. Нашите басейни се надуват стабилно за минути, преживяват пълни лета на семейни забавления и се събират малки в края на сезона.
 stats:
-  title: By the numbers
+  title: По числата
   columns: 4
   stats:
-    - title: Pool collections
+    - title: Колекции басейн
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: Време за настройка
+      amount: 15-30 min
+    - title: Номинално налягане
+      amount: 4-5 PSI
+    - title: Контакт
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: Какво изграждаме
+  subtitle: Фокусирана продуктова линия, която познаваме отвътре навън — надуваеми басейни Drop Stitch с високо налягане.
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: Правоъгълни басейни
+      description: Правоъгълни Drop Stitch басейни със семеен размер, които увеличават максимално площта за плуване за вашето пространство.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: Кръгли сини басейни
+      description: Класическият басейн в задния двор — ярко синьо, твърди стени Drop Stitch, бърза настройка.
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: Кръгли сиви басейни
+      description: Нашата първокласна линия с модерно сиво покритие и опционално монтирано покритие.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: Гореща вана СПА басейни
+      description: Четирисезонни модели джакузи с вградени седалки и 5 мм изолирани дъна.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: Пълни пакети
+      description: Всеки басейн се доставя с електрическа въздушна помпа, ремонтен комплект и чанта за съхранение.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: Персонализирани размери
+      description: OEM размери, цветове и корици за марки, дистрибутори и хотелиерски проекти.
       icon: tabler:adjustments
     - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+      description: Производство на собствена марка с отпечатване на лого и опаковки, готови за продажба на дребно.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: Правоъгълен надуваем басейн Felizbay Drop Stitch
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: Нашите ценности
+  subtitle: Три принципа, които оформят всеки басейн, който изграждаме.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: Изградете така, сякаш вашето семейство ще го използва
+      description: Всеки шев, стена и клапа се третират така, сякаш собствените ни семейства ще плуват в тях.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: Инженер преди да продадем
+      description: Конструкция Drop Stitch с високо налягане, тествана над номиналното си налягане, преди да бъде изпратен басейн.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: Поддръжка, която надживява сезона
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: Важни етапи
+  subtitle: Кратка версия на историята на Felizbay.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: Фокусира се върху надуваемите басейни
+      description: 'Felizbay е основана с един единствен фокус: първокласни надуваеми басейни Drop Stitch.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: Три колекции от подписи
+      description: Правоъгълни, кръгли сини и кръгли сиви линии за басейн, всяка с опционални капаци и персонализирани размери.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM за партньори по целия свят
+      description: Производство по поръчка за марки, дистрибутори, хотели и оператори на глемпинг.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: Свържете се
+  tagline: Контакт
   columns: 3
   items:
-    - title: Email
+    - title: Имейл
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: уебсайт
+      description: felizbay.com — прегледайте нашите басейни и поискайте оферта.
+    - title: OEM / търговия на едро
+      description: Персонализирани размери, цветове и брандиране, достъпни за бизнес партньори.
+brand_hub_tagline: Продукти
+brand_hub_title: Разгледайте нашите басейни
+brand_hub_subtitle: Открийте нашите колекции надуваеми плувни басейни, изградени с технология Drop Stitch под високо налягане.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: Правоъгълни басейни
+    desc: Правоъгълни Drop Stitch басейни със семеен размер с твърди стени и максимална площ за плуване.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: Вижте басейни →
+  - title: Кръгли сини басейни
+    desc: Класическият кръгъл басейн в ярко синьо — бърза настройка, здрава конструкция, издръжливост през целия сезон.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: Вижте басейни →
+  - title: Кръгли сиви басейни
+    desc: Първокласни сиви басейни с опционални монтирани капаци за модерен вид на задния двор.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: Вижте басейни →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: Отлично производство
+  title: Осигуряване на изящно майсторство
+  description: Производствената линия Felizbay е посветена на висококачествени, издръжливи надуваеми басейни с високо налягане.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: Екип от опитни техници
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: Усъвършенствано производствено оборудване
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: Зряла система за управление
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: Стриктен контрол на качеството
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: Глобален обхват
+  title_html: Една марка, <span class="text-white/90">доставка по целия свят</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: Колекции басейн
+    - value: 15-30 min
+      label: Време за настройка
+    - value: 4-5 PSI
+      label: Номинално налягане
+

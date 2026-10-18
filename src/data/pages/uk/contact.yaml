@@ -1,86 +1,86 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: контакт
+  title: ЗВ'ЯЖІТЬСЯ
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Надішліть нам повідомлення
+  subtitle: Щоб отримати пропозиції, отримати технічні запитання чи запити про партнерство, зв’яжіться з нами. Ми відповідаємо протягом одного робочого дня.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Надіслати запит → Отримати пропозицію
+  success_message: дякую Ваше повідомлення надійшло до нашої поштової скриньки. Ми відповімо протягом одного робочого дня.
+  error_message: Під час надсилання повідомлення сталася помилка. Спробуйте ще раз або напишіть нам напряму.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Антиспам: вирішіть наступне'
   fields:
     - name: firstName
-      label: First Name
+      label: Ім'я
       row: 1
     - name: lastName
-      label: Last Name
+      label: Прізвище
       row: 1
     - name: companyName
-      label: Company Name
+      label: Назва компанії
       row: 2
     - name: address
-      label: Address
+      label: Адреса
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Поштовий індекс
       row: 4
     - name: country
-      label: Country
+      label: Країна
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: Електронна пошта
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: ТЕЛ
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Орієнтовний обсяг замовлення
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Виберіть приблизний обсяг...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Лише зразки/прототипи
+        - value: 5-10
+          label: 5–10 одиниць (стандарт MOQ)
+        - value: 100-500
+          label: 100–500 одиниць
+        - value: 500-plus
+          label: 500+ одиниць (об’ємна ціна)
     - name: customization
-      label: Customization Needed?
+      label: Потрібна настройка?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Виберіть тип налаштування...
         - value: none
-          label: Standard product (no customization)
+          label: Стандартний продукт (без налаштування)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Лише спеціальний логотип / брендинг
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Повний OEM (розмір, колір, графіка, упаковка)
         - value: consultation
-          label: Not sure — need consultation
+          label: Не впевнений — потрібна консультація
     - name: productInterest
-      label: Pool of Interest
+      label: Пул інтересів
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Виберіть тип басейну...
         - value: all
-          label: All pools / Full catalog
+          label: Всі басейни / Повний каталог
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Тема
       row: 9
     - name: message
-      label: Message
+      label: повідомлення
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Інші шляхи до нас
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Запити щодо продажу
+      description: Об’єднання котирувань, оптові ціни та оптові замовлення.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Технічна підтримка
+      description: Допомога з налаштування, ремонт, запасні частини та питання догляду.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Нестандартні розміри, кольори, обкладинки, брендування та упаковка.
       icon: tabler:palette
-    - title: Email
+    - title: Електронна пошта
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Веб-сайт
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Час відгуку
+      description: Ми відповідаємо протягом одного робочого дня.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Зв'яжіться з нами
+  subtitle: Зв'яжіться з Felizbay
   address: felizbay.com
   zoom: 15
+

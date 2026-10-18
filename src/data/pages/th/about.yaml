@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: เกี่ยวกับเรา
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: สระว่ายน้ำเป่าลม Felizbay
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay designs and manufactures premium drop stitch inflatable swimming pools. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    ว่ายน้ำให้เป็นเรื่องง่าย <br />
+    สไตล์ <span class="text-accent dark:text-white">Felizbay</span> 
+  subtitle: Felizbay คือแบรนด์สระน้ำเป่าลม Drop Stitch ระดับพรีเมียมที่ออกแบบและดำเนินการโดย Aquafarer LLC (สหรัฐอเมริกา) เราเชื่อว่าทุกครอบครัวสมควรมีสระว่ายน้ำจริงๆ ในสวนหลังบ้าน โดยไม่ต้องก่อสร้าง ใบอนุญาต หรือติดตั้งถาวร สระน้ำของเราพองตัวได้ภายในไม่กี่นาที สนุกสนานกับครอบครัวในช่วงฤดูร้อน และแพ็คให้เล็กลงเมื่อสิ้นสุดฤดูกาล
 stats:
-  title: By the numbers
+  title: โดยตัวเลข
   columns: 4
   stats:
-    - title: Pool collections
+    - title: คอลเลกชันสระว่ายน้ำ
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
-    - title: Contact
+    - title: เวลาตั้งค่า
+      amount: 15-30 min
+    - title: จัดอันดับความดัน
+      amount: 4-5 PSI
+    - title: ติดต่อ
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: สิ่งที่เราสร้าง
+  subtitle: กลุ่มผลิตภัณฑ์ที่มุ่งเน้นที่เรารู้จักจากภายในสู่ภายนอก — สระว่ายน้ำเป่าลม Drop Stitch แรงดันสูง
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: สระน้ำทรงสี่เหลี่ยม
+      description: สระ Drop Stitch ทรงสี่เหลี่ยมขนาดครอบครัวที่เพิ่มพื้นที่ว่ายน้ำให้สูงสุดสำหรับพื้นที่ของคุณ
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: สระน้ำสีฟ้าทรงกลม
+      description: สระว่ายน้ำหลังบ้านแบบคลาสสิก — สีฟ้าสดใส ผนัง Drop Stitch ที่แข็งแกร่ง ติดตั้งได้รวดเร็ว
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: สระน้ำทรงกลมสีเทา
+      description: กลุ่มผลิตภัณฑ์ระดับพรีเมี่ยมของเรามีพื้นผิวสีเทาทันสมัยและฝาครอบเสริมแบบพอดีตัว
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: อ่างน้ำร้อน สระสปา
+      description: อ่างน้ำร้อนรุ่นสี่ฤดูพร้อมที่นั่งในตัวและพื้นฉนวนหนา 5 มม.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: แพ็คเกจสมบูรณ์
+      description: สระทุกสระมาพร้อมกับปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: ขนาดที่กำหนดเอง
+      description: ขนาด สี และปก OEM สำหรับแบรนด์ ผู้จัดจำหน่าย และโครงการด้านการบริการ
       icon: tabler:adjustments
-    - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+    - title: OEM/ODM
+      description: การผลิตฉลากส่วนตัวพร้อมการพิมพ์โลโก้และบรรจุภัณฑ์พร้อมขายปลีก
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: Felizbay สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Drop Stitch
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: ค่านิยมของเรา
+  subtitle: หลักการสามประการที่หล่อหลอมทุกสระที่เราสร้าง
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: สร้างเหมือนครอบครัวของคุณจะใช้มัน
+      description: ทุกตะเข็บ ผนัง และวาล์วได้รับการปฏิบัติราวกับว่าครอบครัวของเราเองว่ายน้ำอยู่ในนั้น
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: วิศวกรก่อนที่เราจะขาย
+      description: โครงสร้างแบบ Drop Stitch แรงดันสูง ผ่านการทดสอบเหนือแรงดันที่กำหนด ก่อนลงเรือในสระน้ำ
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: การสนับสนุนที่ยาวนานกว่าฤดูกาล
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: เหตุการณ์สำคัญ
+  subtitle: เรื่องราวสั้น ๆ ของ Felizbay
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: มุ่งเน้นไปที่สระน้ำเป่าลม
+      description: 'Felizbay ก่อตั้งขึ้นโดยมุ่งเน้นที่เดียว: สระว่ายน้ำเป่าลม Drop Stitch ระดับพรีเมี่ยม'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: คอลเลกชันลายเซ็นสามรายการ
+      description: เส้นสระว่ายน้ำทรงสี่เหลี่ยม กลมสีน้ำเงิน และกลมสีเทา แต่ละเส้นมีฝาปิดเสริมและขนาดที่กำหนดเอง
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM สำหรับพันธมิตรทั่วโลก
+      description: การผลิตตามสั่งสำหรับแบรนด์ ผู้จัดจำหน่าย โรงแรม และผู้ประกอบธุรกิจโคมไฟ
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
-  tagline: Contact
+  title: สนใจติดต่อ
+  tagline: ติดต่อ
   columns: 3
   items:
-    - title: Email
+    - title: อีเมล
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: เว็บไซต์
+      description: felizbay.com — เรียกดูพูลของเราและขอใบเสนอราคา
+    - title: OEM/ขายส่ง
+      description: ขนาด สี และตราสินค้าที่กำหนดเองสำหรับพันธมิตรทางธุรกิจ
+brand_hub_tagline: สินค้า
+brand_hub_title: สำรวจสระน้ำของเรา
+brand_hub_subtitle: ค้นพบคอลเลกชันสระว่ายน้ำเป่าลมของเราที่สร้างด้วยเทคโนโลยี Drop Stitch แรงดันสูง
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: สระน้ำทรงสี่เหลี่ยม
+    desc: สระ Drop Stitch ทรงสี่เหลี่ยมขนาดครอบครัวพร้อมผนังที่แข็งแรงและพื้นที่ว่ายน้ำสูงสุด
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: ดูพูล →
+  - title: สระน้ำกลมสีฟ้า
+    desc: สระว่ายน้ำทรงกลมคลาสสิกในสีฟ้าสดใส ติดตั้งรวดเร็ว โครงสร้างแข็งแรง ทนทานตลอดฤดูกาล
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: ดูพูล →
+  - title: สระน้ำกลมสีเทา
+    desc: สระน้ำสีเทาระดับพรีเมียมพร้อมอุปกรณ์เสริมสำหรับตกแต่งสวนหลังบ้านให้ดูทันสมัย
     link: /products
-    link_label: 'View pools →'
-
+    link_label: ดูพูล →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: ความเป็นเลิศด้านการผลิต
+  title: รับรองฝีมือประณีต
+  description: สายการผลิตของ Felizbay ทุ่มเทให้กับสระว่ายน้ำแบบเป่าลมคุณภาพสูง ทนทาน และมีแรงดันสูงโดยเฉพาะ
   cards:
-    - title: 'Experienced Technician Team'
+    - title: ทีมช่างผู้มีประสบการณ์
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: อุปกรณ์การผลิตขั้นสูง
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: ระบบการจัดการผู้ใหญ่
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: การควบคุมคุณภาพอย่างเข้มงวด
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: การเข้าถึงทั่วโลก
+  title_html: แบรนด์หนึ่ง, <span class="text-white/90">จัดส่งทั่วโลก</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: คอลเลกชันสระว่ายน้ำ
+    - value: 15-30 min
+      label: เวลาตั้งค่า
+    - value: 4-5 PSI
+      label: จัดอันดับความดัน
+

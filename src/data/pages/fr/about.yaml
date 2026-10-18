@@ -1,155 +1,146 @@
 hero:
-  tagline: About us
+  tagline: À propos de nous
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay inflatable swimming pool
+    alt: Piscine gonflable Felizbay
   title: |
-    Making swimming simple, <br />
-    the <span class="text-accent dark:text-white">Felizbay</span> way
-  subtitle: 'Felizbay designs and manufactures premium drop stitch inflatable swimming pools. We believe every family deserves a real pool in the backyard — without construction, permits, or a permanent installation. Our pools inflate rigid in minutes, survive full summers of family fun, and pack away small at season''s end.'
-
+    Rendre la natation simple, <br />
+    à la <span class="text-accent dark:text-white">Felizbay</span> 
+  subtitle: Felizbay est une marque de piscines gonflables Drop Stitch haut de gamme conçue et exploitée par Aquafarer LLC (USA). Nous pensons que chaque famille mérite une vraie piscine dans son jardin, sans construction, sans permis ni installation permanente. Nos piscines se gonflent en quelques minutes, survivent à des étés complets de plaisir en famille et se rangent petites à la fin de la saison.
 stats:
-  title: By the numbers
+  title: En chiffres
   columns: 4
   stats:
-    - title: Pool collections
+    - title: Collections de piscine
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
-    - title: Rated pressure
-      amount: '4-5 PSI'
+    - title: Temps d'installation
+      amount: 15-30 min
+    - title: Pression nominale
+      amount: 4-5 PSI
     - title: Contact
       amount: info@felizbay.com
-
 features3_what_we_build:
-  title: What we build
-  subtitle: A focused product line we know inside out — high-pressure drop stitch inflatable swimming pools.
+  title: Ce que nous construisons
+  subtitle: 'Une gamme de produits ciblée que nous connaissons parfaitement : les piscines gonflables Drop Stitch haute pression.'
   columns: 3
   isBeforeContent: true
   items:
-    - title: Rectangular pools
-      description: Family-size rectangular drop stitch pools that maximize the swimming area for your space.
+    - title: Piscines rectangulaires
+      description: Piscines Drop Stitch rectangulaires de taille familiale qui maximisent la zone de baignade de votre espace.
       icon: tabler:rectangle
-    - title: Round blue pools
-      description: The classic backyard pool — vibrant blue, rigid drop stitch walls, fast setup.
+    - title: Piscines rondes bleues
+      description: "La piscine d'arrière-cour classique : bleu vif, parois rigides Drop Stitch, installation rapide."
       icon: tabler:circle
-    - title: Round grey pools
-      description: Our premium line with a modern grey finish and optional fitted cover.
+    - title: Piscines rondes grises
+      description: Notre ligne haut de gamme avec une finition grise moderne et une housse ajustée en option.
       icon: tabler:circle-dot
-    - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+    - title: Piscines spa spa
+      description: Modèles de spas quatre saisons avec sièges intégrés et fonds isolés de 5 mm.
       icon: tabler:ripple
-
 features3_more:
   columns: 3
   isAfterContent: true
   items:
-    - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+    - title: Forfaits complets
+      description: Chaque piscine est livrée avec une pompe à air électrique, un kit de réparation et un sac de rangement.
       icon: tabler:package
-    - title: Custom sizes
-      description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.
+    - title: Tailles personnalisées
+      description: Tailles, couleurs et couvertures OEM pour les marques, les distributeurs et les projets hôteliers.
       icon: tabler:adjustments
-    - title: OEM / ODM
-      description: Private-label manufacturing with logo printing and retail-ready packaging.
+    - title: OEM/ODM
+      description: Fabrication de marques privées avec impression de logo et emballage prêt à la vente au détail.
       icon: tabler:palette
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool
-
+    alt: Piscine gonflable rectangulaire Drop Stitch Felizbay
 steps2_values:
-  title: Our values
-  subtitle: Three principles that shape every pool we build.
+  title: Nos valeurs
+  subtitle: Trois principes qui façonnent chaque piscine que nous construisons.
   items:
-    - title: Build like your family will use it
-      description: Every seam, wall, and valve is treated as if our own families will swim in it.
+    - title: Construisez comme si votre famille l'utiliserait
+      description: Chaque couture, mur et valve est traité comme si nos propres familles allaient y nager.
       icon: tabler:heart
-    - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+    - title: Ingénieur avant de vendre
+      description: Construction Drop Stitch haute pression, testée au-dessus de sa pression nominale, avant l'expédition de toute piscine.
       icon: tabler:settings
-    - title: Support that outlasts the season
+    - title: Un soutien qui dure toute la saison
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
       icon: tabler:headset
-
 steps2_milestones:
-  title: Milestones
-  subtitle: A short version of the Felizbay story.
+  title: Jalons
+  subtitle: Une version courte de l'histoire de Felizbay.
   isReversed: true
   items:
-    - title: Focused on inflatable pools
-      description: 'Felizbay was founded with a single focus: premium drop stitch inflatable swimming pools.'
+    - title: Axé sur les piscines gonflables
+      description: 'Felizbay a été fondée avec un seul objectif : les piscines gonflables Drop Stitch haut de gamme.'
       icon: tabler:pool
-    - title: Three signature collections
-      description: Rectangular, round blue, and round grey pool lines, each with optional covers and custom sizes.
+    - title: Trois collections signatures
+      description: Lignes de piscine rectangulaires, rondes bleues et rondes grises, chacune avec des couvertures en option et des tailles personnalisées.
       icon: tabler:circle-check
-    - title: OEM/ODM for partners worldwide
-      description: Custom manufacturing for brands, distributors, hotels, and glamping operators.
+    - title: OEM/ODM pour les partenaires du monde entier
+      description: Fabrication sur mesure pour les marques, distributeurs, hôtels et opérateurs de glamping.
       icon: tabler:world
-
 features2_locations:
-  title: Get in touch
+  title: Entrer en contact
   tagline: Contact
   columns: 3
   items:
-    - title: Email
+    - title: E-mail
       description: info@felizbay.com — we reply within one business day.
-    - title: Website
-      description: felizbay.com — browse our pools and request a quote.
-    - title: OEM / Wholesale
-      description: Custom sizes, colors, and branding available for business partners.
-
-brand_hub_tagline: Products
-brand_hub_title: Explore Our Pools
-brand_hub_subtitle: Discover our inflatable swimming pool collections built with high-pressure drop stitch technology.
-
+    - title: Site web
+      description: felizbay.com — parcourez nos piscines et demandez un devis.
+    - title: OEM / Vente en gros
+      description: Tailles, couleurs et marques personnalisées disponibles pour les partenaires commerciaux.
+brand_hub_tagline: Produits
+brand_hub_title: Explorez nos piscines
+brand_hub_subtitle: Découvrez nos collections de piscines gonflables construites avec la technologie Drop Stitch haute pression.
 brand_hub_cards:
-  - title: Rectangular Pools
-    desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
+  - title: Piscines rectangulaires
+    desc: Piscines Drop Stitch rectangulaires de taille familiale avec parois rigides et surface de nage maximale.
     link: /products
-    link_label: 'View pools →'
-  - title: Round Blue Pools
-    desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
+    link_label: Voir les piscines →
+  - title: Piscines rondes bleues
+    desc: 'La piscine ronde classique en bleu vif : installation rapide, construction rigide, durabilité toute la saison.'
     link: /products
-    link_label: 'View pools →'
-  - title: Round Grey Pools
-    desc: Premium grey pools with optional fitted covers for a modern backyard look.
+    link_label: Voir les piscines →
+  - title: Piscines rondes grises
+    desc: Piscines grises haut de gamme avec couvertures ajustées en option pour un look de jardin moderne.
     link: /products
-    link_label: 'View pools →'
-
+    link_label: Voir les piscines →
 production_section:
-  tagline: 'Production Excellence'
-  title: 'Ensuring Exquisite Craftsmanship'
-  description: 'The Felizbay production line is dedicated to high-quality, durable, high-pressure inflatable swimming pools.'
+  tagline: Excellence de la production
+  title: Assurer un savoir-faire exquis
+  description: La ligne de production Felizbay est dédiée aux piscines gonflables haute pression de haute qualité, durables.
   cards:
-    - title: 'Experienced Technician Team'
+    - title: Équipe de techniciens expérimentés
       items:
-        - 'Professional knowledge of drop stitch and PVC materials'
-        - 'Precise craftsmanship in cutting, welding, and assembly'
-        - 'Continuous training to master the latest production technologies'
-    - title: 'Advanced Production Equipment'
+        - Professional knowledge of drop stitch and PVC materials
+        - Precise craftsmanship in cutting, welding, and assembly
+        - Continuous training to master the latest production technologies
+    - title: Équipement de production avancé
       items:
-        - 'Precision cutting equipment for accurate fabric panels'
-        - 'High-precision heat welding for airtight, durable seams'
-        - 'Professional pressure and airtightness testing equipment'
-    - title: 'Mature Management System'
+        - Precision cutting equipment for accurate fabric panels
+        - High-precision heat welding for airtight, durable seams
+        - Professional pressure and airtightness testing equipment
+    - title: Système de gestion mature
       items:
-        - 'Standardized production processes with clear quality standards'
-        - 'Lean production philosophy reducing waste and improving efficiency'
-        - 'Efficient supply chain management with reliable suppliers'
-    - title: 'Strict Quality Control'
+        - Standardized production processes with clear quality standards
+        - Lean production philosophy reducing waste and improving efficiency
+        - Efficient supply chain management with reliable suppliers
+    - title: Contrôle de qualité strict
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
-        - 'Strict airtightness and durability testing before shipping'
-
+        - Pressure testing above the rated 4-5 PSI working range
+        - Strict airtightness and durability testing before shipping
 global_ops_section:
-  tagline: 'Global Reach'
-  title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
-  description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
+  tagline: Portée mondiale
+  title_html: Une marque, <span class="text-white/90">expédition dans le monde entier</span>
+  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
-      label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
-    - value: '4-5 PSI'
-      label: 'Rated pressure'
+      label: Collections de piscine
+    - value: 15-30 min
+      label: Temps d'installation
+    - value: 4-5 PSI
+      label: Pression nominale
+

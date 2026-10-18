@@ -1,86 +1,86 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: اتصال
+  title: تواصل معنا
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: أرسل لنا رسالة
+  subtitle: للحصول على عروض الأسعار أو الأسئلة الفنية أو استفسارات الشراكة، راسلنا. نقوم بالرد خلال يوم عمل واحد.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: أرسل استفسار → احصل على عرض أسعار
+  success_message: شكرًا! لقد وصلت رسالتك إلى صندوق البريد الوارد لدينا. سوف نقوم بالرد خلال يوم عمل واحد.
+  error_message: حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى أو مراسلتنا عبر البريد الإلكتروني مباشرة.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'مكافحة البريد العشوائي: الرجاء حل ما يلي'
   fields:
     - name: firstName
-      label: First Name
+      label: الاسم الأول
       row: 1
     - name: lastName
-      label: Last Name
+      label: اسم العائلة
       row: 1
     - name: companyName
-      label: Company Name
+      label: اسم الشركة
       row: 2
     - name: address
-      label: Address
+      label: عنوان
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: الرمز البريدي / الرمز البريدي
       row: 4
     - name: country
-      label: Country
+      label: دولة
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: بريد إلكتروني
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: هاتف
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: حجم الطلب المقدر
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: حدد الحجم المقدر...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: عينات/نماذج أولية فقط
+        - value: 5-10
+          label: 5-10 وحدات (موك القياسي)
+        - value: 100-500
+          label: 100-500 وحدة
+        - value: 500-plus
+          label: أكثر من 500 وحدة (تسعير الحجم)
     - name: customization
-      label: Customization Needed?
+      label: التخصيص مطلوب؟
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: حدد نوع التخصيص...
         - value: none
-          label: Standard product (no customization)
+          label: المنتج القياسي (بدون تخصيص)
         - value: logo
-          label: Custom Logo / Branding only
+          label: شعار مخصص/العلامة التجارية فقط
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: OEM كامل (الحجم واللون والرسومات والتعبئة والتغليف)
         - value: consultation
-          label: Not sure — need consultation
+          label: لست متأكدا - بحاجة إلى التشاور
     - name: productInterest
-      label: Pool of Interest
+      label: تجمع الاهتمام
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: اختر نوع المسبح...
         - value: all
-          label: All pools / Full catalog
+          label: جميع حمامات السباحة / كتالوج كامل
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: موضوع
       row: 9
     - name: message
-      label: Message
+      label: رسالة
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: طرق أخرى للوصول إلينا
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: استفسارات المبيعات
+      description: عروض أسعار المجمعات وأسعار الجملة والطلبات بالجملة.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: الدعم الفني
+      description: تعليمات الإعداد والإصلاحات وقطع الغيار وأسئلة الرعاية.
       icon: tabler:tool
-    - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+    - title: تصنيع المعدات الأصلية / أوديإم
+      description: الأحجام والألوان والأغلفة والعلامات التجارية والتغليف المخصصة.
       icon: tabler:palette
-    - title: Email
+    - title: بريد إلكتروني
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: موقع إلكتروني
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: وقت الاستجابة
+      description: نقوم بالرد خلال يوم عمل واحد.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: تواصل معنا
+  subtitle: تواصل مع Felizbay
   address: felizbay.com
   zoom: 15
+

@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Piscine gonflabile Premium Drop Stitch
+  title: Faceți mai mult din spațiul dvs. în<br />Aer liber.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Descoperiți piscine gonflabile premium concepute pentru relaxarea în curte, distracția în familie și viața în aer liber.<br />
+    Explorați dimensiunile piscinei, comparați caracteristicile și găsiți cea potrivită pentru spațiul dvs.<br />
+    Proiectat și operat de Aquafarer LLC, SUA.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Piscine de magazin
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Găsește-ți piscina
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Piscina gonflabilă dreptunghiulară Felizbay Drop Stitch într-o curte
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay dintr-o privire
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Colecții de piscină
       amount: '4'
-    - title: Standard SKUs
+    - title: SKU-uri standard
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Ora de configurare
+      amount: 15-30 min
+    - title: Presiune nominală
+      amount: 4-5 PSI
+    - title: garanție
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Dimensiuni personalizate
       amount: Available
     - title: Contact
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Tehnologia Drop Stitch
+  title: De ce o piscină Felizbay<br />Este diferit
+  subtitle: Construcția Drop Stitch de înaltă presiune face piscinele noastre rigide, durabile și depozitate fără efort.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Pereți rigizi Drop Stitch
+      description: Mii de fire interne blochează straturile de perete împreună, astfel încât piscina se umflă tare ca piatra la 4-5 PSI și își păstrează forma atunci când este umplută.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Configurare rapidă, fără instrumente
+      description: Umflați cu pompa electrică inclusă în câteva minute, apoi umpleți cu un furtun de grădină. Fără unelte, fără construcție, fără instalare profesională.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Se ambalează mic
+      description: Scurgeți, dezumflați, rulați și depozitați piscina într-o pungă peste iarnă. O piscină de dimensiuni mari care se potrivește într-un dulap.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Durabil și rezistent la UV
+      description: Țesătura PVC Drop Stitch cu două straturi rezistă la perforare, la expunerea la UV și la un sezon întreg de utilizare în familie.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Pachet complet
+      description: Fiecare piscină se livrează cu o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Huse montate disponibile pentru modelele rotunde.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Design conștient de siguranță
+      description: Design de piscină rezidențială care face referire la EN 16582-1 și ASTM F2666, cu supape de reducere a presiunii și pereți rigidi stabili. Este întotdeauna necesară supravegherea constantă a unui adult.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Idei de piscină
+  title: Piscina potrivită pentru<br />Spațiul tău
+  subtitle: Configurații reale, dimensiuni reale și îndrumări sincere pentru alegerea piscinei potrivite.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Piscine din curte pentru familii
+      description: Planificarea spațiului, dimensiuni reale utile și întreținere ușoară pentru verile de familie în curtea din spate.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Obțineți idei
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Piscine pentru curți mici
+      description: Modele compacte rotunde și pătrate care se potrivesc spațiilor exterioare înguste fără a renunța la înot.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Obțineți idei
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Piscine mari pentru adunări
+      description: Piscine dreptunghiulare mari cu spațiu real de înot pentru întregul echipaj în zilele de vară.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Obțineți idei
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Înmuiere în aer liber și relaxare
+      description: Căzi SPA cu scaune încorporate și fund izolat pentru relaxare zilnică acasă.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Obțineți idei
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Piscine pentru inchirieri de vacanta
+      description: O facilități sezoniere pentru oaspeți care se instalează rapid și se depozitează în afara sezonului.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Obțineți idei
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping și ospitalitate
+      description: Sejururi distincte în aer liber — site-uri de glamping, proprietăți tip boutique și locații pentru evenimente.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Obțineți idei
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Piscine de magazin
+  title: Explorați piscinele noastre
+  subtitle: Comparați formele, dimensiunile și caracteristicile pentru a găsi piscina potrivită pentru curtea din spate sau spațiul în aer liber.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Pentru afaceri
+  title: piscine pentru afaceri,<br />Prea
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay pentru partenerii de afaceri</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Închirieri de vacanță și ospitalitate
+      description: Facilități sezoniere pentru oaspeți pentru închirieri de vacanță, site-uri de lux și proprietăți tip boutique — rapid de implementat, ușor de întreținut, simplu de depozitat.
+    - title: Retail & Brand Partners
+      description: Programe de vânzare cu ridicata și piscine Drop Stitch gata de vânzare cu amănuntul pentru centre de grădinărit, magazine de piscină și magazine online.
+    - title: Etichetă personalizată și privată
+      description: Dimensiuni, culori, coperți personalizate, imprimare sigle și ambalaje de vânzare cu amănuntul pentru mărci — construite de partenerii noștri de producție.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Îngrijire și siguranță
+  title: Ușor de deținut,<br />Ușor de iubit
+  subtitle: De la livrare la prima înot până la depozitarea la sfârșitul sezonului, deținerea unei piscine Felizbay rămâne simplă.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Configurare în minute
+      description: Despachetați, umflați cu pompa inclusă și umpleți - configurarea completă durează de obicei 15-30 de minute pe un teren ferm și plan.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Îngrijire simplă a apei
+      description: Porturile standard pentru pompa de filtru de 32/38 mm, verificări regulate ale pH-ului și un capac montat pe modelele rotunde mențin apa curată.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Curățați, scurgeți și depozitați
+      description: Scurgeți, uscați, rulați și împachetați piscina în geanta de depozitare pentru iarnă. Fără instalație permanentă de întreținut.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Siguranța pe primul loc
+      description: Copiii trebuie să fie supravegheați activ de un adult în orice moment. Urmați manualul, regulile locale și îndrumările de utilizare în siguranță.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: De la cutie la curte
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Pasul 1: <span class="font-medium">Alegeți piscina dvs</span>'
+      description: Comparați formele și dimensiunile pentru a se potrivi cu spațiul dvs., gospodăria și modul în care intenționați să utilizați apa.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Pasul 2: <span class="font-medium">Setează-l</span>'
+      description: Așezați pe un teren ferm, plan, umflați cu pompa electrică inclusă și umpleți cu un furtun de grădină.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Pasul 3: <span class="font-medium">Înot toată vara</span>'
+      description: Păstrați apa proaspătă cu o îngrijire simplă - degresați, acoperiți și verificați pH-ul ca orice piscină mică.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Pasul 4: <span class="font-medium">Păstrați-l departe</span>'
+      description: Când se termină sezonul, scurgeți, uscați, rulați și depozitați piscina în geantă până vara viitoare.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Piscina gonflabilă rotundă Felizbay Drop Stitch
 blog_latest:
-  title: Pool Guides & Insights
+  title: Ghiduri și informații despre piscină
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Ghiduri de configurare, sfaturi de îngrijire și sfaturi de cumpărare pentru piscine gonflabile
+    din echipa Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Întrebări frecvente ale piscinei gonflabile
+  subtitle: Întrebări frecvente despre piscinele gonflabile Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Cât durează configurarea?
+      description: Umflarea durează aproximativ 10 minute cu pompa de aer electrică inclusă; configurarea completă, inclusiv plasarea și umplerea, durează de obicei 15-30 de minute.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Cât de rigidă este o piscină Drop Stitch?
+      description: Foarte rigid. Pereții Drop Stitch se umflă puternic la 4-5 PSI - asemănător cu o placă gonflabilă cu vâsle - astfel încât piscina își păstrează forma atunci când este umplută cu apă.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Copiii pot folosi piscina?
+      description: Da, cu supraveghere activă a unui adult în orice moment. Copiii nu trebuie lăsați niciodată nesupravegheați în sau lângă piscină - urmați manualul și regulile locale de siguranță.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Cum depozitez piscina iarna?
+      description: Scurgeți apa, dezumflați piscina, lăsați-o să se usuce complet, apoi rulați-o și depozitați-o în punga de depozitare inclusă într-un loc ferit de îngheț.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Ce este inclus cu piscina?
+      description: Fiecare piscină Felizbay include o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Modelele rotunde au o husă montată opțional.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Ce dimensiuni sunt disponibile?
+      description: 48 de SKU-uri standard din patru colecții — piscine rotunde cu o lungime de până la 10 m, piscine dreptunghiulare de până la 6 × 5 m și căzi SPA cu scaune încorporate. Dimensiunile personalizate sunt disponibile pentru partenerii de afaceri.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Pe ce suprafete poate sta piscina?
+      description: Orice suprafață plană, plană, fără obiecte ascuțite - gazon, terasă sau terasă. Se recomandă o foaie de pământ pe suprafețele aspre. Verificați dacă suprafața poate suporta greutatea unei piscine umplute.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Cum păstrez apa curată?
+      description: Utilizați o pompă de filtru acolo unde este prevăzută, îndepărtați resturile, verificați pH-ul și acoperiți piscina atunci când nu este utilizată. Cât de mult durează apa depinde de dimensiunea piscinei, de utilizare și de filtrare - testați în mod regulat, mai degrabă decât să vă bazați pe un program fix.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Găsiți piscina potrivită<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">pentru curtea ta.</span>
+  subtitle: Comparați modele și dimensiuni sau obțineți ajutor pentru a alege — echipa noastră răspunde la întrebări în termen de o zi lucrătoare.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Piscine de magazin
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Găsește-ți piscina
       href: /find-your-pool
       icon: tabler:compass
+

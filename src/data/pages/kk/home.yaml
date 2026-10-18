@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Премиум Drop Stitch үрленетін бассейндер
+  title: Ашық кеңістігіңізді<br />Көбірек пайдаланыңыз.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Аулада демалуға, отбасылық көңіл көтеруге және ашық ауада өмір сүруге арналған жоғары сапалы үрленетін бассейндерді табыңыз.<br />
+    Бассейн өлшемдерін зерттеңіз, мүмкіндіктерді салыстырыңыз және кеңістігіңізге сәйкес келетінін табыңыз.<br />
+    Aquafarer LLC, АҚШ әзірлеген және басқарған.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Дүкен бассейндері
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Өз бассейніңізді табыңыз
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Ауладағы Felizbay тікбұрышты Drop Stitch үрлемелі бассейні
 stats:
-  title: Felizbay at a Glance
+  title: Бір қарағанда Felizbay
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Бассейн жинақтары
       amount: '4'
-    - title: Standard SKUs
+    - title: Стандартты SKU
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Орнату уақыты
+      amount: 15-30 min
+    - title: Номиналды қысым
+      amount: 4-5 PSI
+    - title: Кепілдік
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Арнайы өлшемдер
       amount: Available
-    - title: Contact
+    - title: Байланыс
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Drop Stitch технологиясы
+  title: Неліктен Felizbay бассейні<br />Басқа
+  subtitle: Жоғары қысымды Drop Stitch конструкциясы бассейндерімізді қатты, берік және сақтауға оңай етеді.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Қатты Drop Stitch қабырғалары
+      description: Мыңдаған ішкі жіптер қабырға қабаттарын бір-біріне бекітеді, сондықтан бассейн 4-5 PSI деңгейінде тасты қатты үрлейді және толтырылған кезде пішінін сақтайды.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Жылдам, құралсыз орнату
+      description: Жинақтағы электр сорғымен бірнеше минут ішінде үрлеңіз, содан кейін бақша шлангімен толтырыңыз. Құрал жоқ, құрылыс жоқ, кәсіби орнату жоқ.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Пакеттер кішкентай
+      description: Қыста бассейнді ағызып, дефляциялаңыз, орап, сөмкеде сақтаңыз. Шкафқа сәйкес келетін толық өлшемді бассейн.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Төзімді және ультракүлгін сәулелеріне төзімді
+      description: Екі қабатты PVC Drop Stitch матасы тесуге, ультракүлгін сәулелеріне және отбасылық пайдаланудың толық маусымына қарсы тұрады.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Толық пакет
+      description: Әрбір бассейнде электрлік ауа сорғысы, жөндеу жинағы және сақтауға арналған сөмке бар. Дөңгелек үлгілер үшін орнатылған қақпақтар бар.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Қауіпсіздікке негізделген дизайн
+      description: EN 16582-1 және ASTM F2666 стандарттарына сәйкес келетін, қысымды түсіретін клапандары және тұрақты қатты қабырғалары бар тұрғын үй бассейнінің дизайны. Әрқашан ересектердің бақылауы қажет.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Бассейн идеялары
+  title: Дұрыс бассейн<br />Сіздің кеңістігіңіз
+  subtitle: Нақты орнатулар, нақты өлшемдер және дұрыс пулды таңдауға арналған шынайы нұсқаулар.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Отбасыларға арналған ауладағы бассейндер
+      description: Кеңістікті жоспарлау, нақты қолдануға болатын өлшемдер және артқы аулада отбасылық жазда оңай техникалық қызмет көрсету.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Идеяларды алыңыз
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Кішкентай аулаларға арналған бассейндер
+      description: Жүзуден бас тартпай, тар ашық кеңістіктерге сай келетін ықшам дөңгелек және шаршы модельдер.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Идеяларды алыңыз
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Жиналыстарға арналған үлкен бассейндер
+      description: Жазғы күндері бүкіл экипаж үшін жүзу кеңістігі бар үлкен төртбұрышты бассейндер.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Идеяларды алыңыз
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Сыртта сулану және релаксация
+      description: Кіріктірілген отырғыштары мен оқшауланған түбі бар СПА ванналары үйде күнделікті демалуға арналған.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Идеяларды алыңыз
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Демалыстарды жалға алуға арналған бассейндер
+      description: Жылдам орнатылатын және маусымаралық уақытта сақтайтын маусымдық қонақтарға арналған ыңғайлылық.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Идеяларды алыңыз
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Глампинг және қонақжайлылық
+      description: Ерекше ашық ауада тұру - глампинг алаңдары, бутик объектілері және іс-шаралар өткізу орындары.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Идеяларды алыңыз
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Дүкен бассейндері
+  title: Біздің бассейндерімізді зерттеңіз
+  subtitle: Аулаға немесе сыртқы кеңістікке сәйкес бассейнді табу үшін пішіндерді, өлшемдерді және мүмкіндіктерді салыстырыңыз.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Бизнеске арналған
+  title: Бизнеске арналған бассейндер,<br />Сондай-ақ
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Іскерлік серіктестерге арналған Felizbay</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Демалыстарды жалға беру және қонақжайлылық
+      description: Демалыстарды жалға алу, глампинг алаңдары және бутик қасиеттеріне арналған маусымдық ыңғайлылықтар — орналастыру жылдам, техникалық қызмет көрсету оңай, сақтау оңай.
+    - title: Бөлшек сауда және бренд серіктестері
+      description: Көтерме бағдарламалар және бақша орталықтарына, бассейн дүкендеріне және интернет-дүкендерге арналған бөлшек саудаға дайын Drop Stitch бассейндері.
+    - title: Арнаулы және жеке белгі
+      description: Таңдамалы өлшемдер, түстер, мұқабалар, логотипті басып шығару және брендтерге арналған бөлшек орам – біздің өндірістік серіктестеріміз жасаған.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Күтім және қауіпсіздік
+  title: Меншікке оңай,<br />Сүйу оңай
+  subtitle: Жеткізуден бастап бірінші жүзуге дейін маусымның соңына дейін Felizbay бассейніне ие болу оңай.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Минуттарда орнату
+      description: Қораптан шығарыңыз, жинақтағы сорғымен үрлеңіз және толтырыңыз — толық орнату әдетте қатты, тегіс жерде 15-30 минутты алады.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Қарапайым су күтімі
+      description: Стандартты 32/38 мм сүзгі сорғы порттары, тұрақты рН тексерулері және дөңгелек үлгілерде орнатылған қақпақ суды таза ұстайды.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Тазалаңыз, ағызыңыз және сақтаңыз
+      description: Суды төгіп тастаңыз, құрғатыңыз, орап алыңыз және бассейнді қыста сақтауға арналған сөмкеге салыңыз. Тұрақты орнату қажет емес.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Ең алдымен қауіпсіздік
+      description: Балалар әрқашан ересектердің белсенді бақылауында болуы керек. Нұсқаулықты, жергілікті ережелерді және қауіпсіз пайдалану нұсқауларын орындаңыз.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Қораптан аулаға дейін
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: '1-қадам: <span class="font-medium">Өз бассейніңізді таңдаңыз</span>'
+      description: Кеңістігіңізге, үй шаруашылығыңызға және суды қалай пайдалануды жоспарлап отырғаныңызға сәйкес келетін пішіндер мен өлшемдерді салыстырыңыз.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: '2-қадам: <span class="font-medium">Оны орнату</span>'
+      description: Қатты, тегіс жерге қойыңыз, жинақтағы электр сорғымен үрлеңіз және бақша шлангімен толтырыңыз.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: '3-қадам: <span class="font-medium">Жаз бойы жүзу</span>'
+      description: Қарапайым күтіммен суды таза ұстаңыз - майсыздандырыңыз, жабыңыз және кез келген шағын бассейн сияқты рН деңгейін тексеріңіз.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: '4-қадам: <span class="font-medium">Оны сақтаңыз</span>'
+      description: Маусым аяқталғаннан кейін бассейнді ағызып, кептіріп, орап, келесі жазға дейін сөмкесінде сақтаңыз.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay дөңгелек Drop Stitch үрлемелі бассейн
 blog_latest:
-  title: Pool Guides & Insights
+  title: Бассейнге арналған гидтер және түсініктемелер
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Үрлемелі бассейндерді орнату бойынша нұсқаулықтар, күтім бойынша кеңестер және сатып алу бойынша кеңестер
+    Felizbay командасынан.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Үрлемелі бассейн туралы жиі қойылатын сұрақтар
+  subtitle: Felizbay үрлемелі бассейндері туралы жиі қойылатын сұрақтар.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Орнату қанша уақытты алады?
+      description: Жинақтағы электрлік ауа сорғысының көмегімен үрлеуге шамамен 10 минут кетеді; орналастыру мен толтыруды қоса алғанда, толық орнату әдетте 15-30 минутты құрайды.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Drop Stitch бассейні қаншалықты қатты?
+      description: Өте қатты. Drop Stitch қабырғалары үрленетін қалақ тақтасына ұқсас 4-5 PSI деңгейінде қатты үрленеді, сондықтан бассейн сумен толтырылған кезде пішінін сақтайды.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Балалар бассейнді пайдалана ала ма?
+      description: Иә, әрқашан ересектердің белсенді бақылауымен. Балаларды ешқашан бассейнде немесе оның жанында қараусыз қалдыруға болмайды — нұсқаулықты және жергілікті қауіпсіздік ережелерін сақтаңыз.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Қыста бассейнді қалай сақтауға болады?
+      description: Суды төгіп тастаңыз, бассейнді сөндіріңіз, оны толығымен құрғатыңыз, содан кейін оны орап, жинақтағы сақтауға арналған қапшықта аязсыз жерде сақтаңыз.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Бассейнге не кіреді?
+      description: Әрбір Felizbay бассейнінде электрлік ауа сорғысы, жөндеу жинағы және сақтауға арналған сөмке бар. Дөңгелек үлгілерде қосымша орнатылған қақпақ бар.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Қандай өлшемдері бар?
+      description: Төрт топтама бойынша 48 стандартты SKU – ені 10 м-ге дейінгі дөңгелек бассейндер, 6 × 5 м-ге дейінгі тікбұрышты бассейндер және кіріктірілген отырғыштары бар SPA ванналары. Жеке өлшемдер іскер серіктестер үшін қол жетімді.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Бассейн қандай беттерде тұра алады?
+      description: Үшкір заттарсыз кез келген тегіс, тегіс бет – көгалдар, патио немесе палуба. Кедір-бұдыр беттерге жер бетін төсеу ұсынылады. Бетінің толтырылған бассейннің салмағын көтере алатынын тексеріңіз.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Суды қалай таза ұстаймын?
+      description: Орнатылған жерде сүзгі сорғысын пайдаланыңыз, қоқысты тазалаңыз, рН деңгейін тексеріңіз және пайдаланбаған кезде бассейнді жабыңыз. Су қанша уақытқа созылатыны бассейннің көлеміне, пайдалануына және сүзуіне байланысты - бекітілген кестеге сүйенбей, жүйелі түрде сынақтан өткізіңіз.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Дұрыс бассейнді табыңыз<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">сіздің аулаңыз үшін.</span>
+  subtitle: Үлгілер мен өлшемдерді салыстырыңыз немесе таңдау бойынша көмек алыңыз — біздің команда бір жұмыс күні ішінде сұрақтарға жауап береді.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Дүкен бассейндері
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Өз бассейніңізді табыңыз
       href: /find-your-pool
       icon: tabler:compass
+

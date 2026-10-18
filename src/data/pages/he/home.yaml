@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: בריכות מתנפחות פרימיום Drop Stitch
+  title: עשה יותר משלך<br />שטח חיצוני.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    גלה בריכות מתנפחות מובחרות המיועדות להרגעה בחצר האחורית, כיף משפחתי וחיים בחוץ.<br />
+    חקור את גדלי הבריכה, השווה תכונות ומצא את ההתאמה המתאימה לחלל שלך.<br />
+    עוצב ומופעל על ידי Aquafarer LLC, ארה"ב.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: חנות בריכות
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: מצא את הבריכה שלך
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Felizbay מלבנית Drop Stitch בריכת שחייה מתנפחת בחצר אחורית
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay במבט חטוף
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: אוספי בריכה
       amount: '4'
-    - title: Standard SKUs
+    - title: מק"ט סטנדרטי
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: זמן התקנה
+      amount: 15-30 min
+    - title: לחץ מדורג
+      amount: 4-5 PSI
+    - title: אַחֲרָיוּת
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: גדלים מותאמים אישית
       amount: Available
-    - title: Contact
+    - title: מַגָע
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: טכנולוגיית Drop Stitch
+  title: למה בריכת Felizbay<br />הוא שונה
+  subtitle: בניית Drop Stitch בלחץ גבוה הופכת את הבריכות שלנו לקשיחות, עמידות וללא מאמץ לאחסון.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: קירות Drop Stitch קשיחים
+      description: אלפי חוטים פנימיים נועלים את שכבות הקיר יחד, כך שהבריכה מתנפחת בעוצמה של 4-5 PSI ושומרת על צורתה בעת מילויה.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: התקנה מהירה וללא כלים
+      description: יש לנפח עם המשאבה החשמלית הכלולה תוך דקות, ולאחר מכן למלא בצינור גינה. ללא כלים, ללא בנייה, ללא התקנה מקצועית.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: אריזות קטנות
+      description: רוקנו, רוקנו, גלגלו ואחסנו את הבריכה בשקית במהלך החורף. בריכת שחייה בגודל מלא המתאימה לארון.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: עמיד ועמיד בפני UV
+      description: בד דו-שכבתי PVC Drop Stitch עמיד בפני פנצ'רים, חשיפה ל-UV ועונה מלאה של שימוש משפחתי.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: חבילה שלמה
+      description: כל בריכה נשלחת עם משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. כיסויים מצוידים זמינים לדגמים עגולים.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: עיצוב מודע לבטיחות
+      description: עיצוב בריכות למגורים בהתייחס ל-EN 16582-1 ו-ASTM F2666, עם שסתומי שחרור לחץ וקירות קשיחים יציבים. תמיד נדרשת השגחת מבוגר מתמדת.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: רעיונות לבריכה
+  title: הבריכה הנכונה עבור<br />המרחב שלך
+  subtitle: הגדרות אמיתיות, גדלים אמיתיים והדרכה כנה לבחירת הבריכה הנכונה.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: בריכות למשפחות בחצר האחורית
+      description: תכנון חלל, גדלים שמישים אמיתיים ותחזוקה קלה לקיץ משפחתי בחצר האחורית.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: קבלו רעיונות
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: בריכות לחצרות קטנות
+      description: דגמים עגולים ומרובעים קומפקטיים המתאימים לחללים חיצוניים צמודים מבלי לוותר על השחייה.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: קבלו רעיונות
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: בריכות גדולות להתכנסויות
+      description: בריכות מלבניות גדולות עם מרחב שחייה אמיתי לכל הצוות בימי הקיץ.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: קבלו רעיונות
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: השרייה והרפיה בחוץ
+      description: אמבטיות ספא ​​עם מושבים מובנים ותחתית מבודדת להרגעות יומיומיות בבית.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: קבלו רעיונות
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: בריכות להשכרות נופש
+      description: אבזור אורחים עונתי שמתקבע מהר ומאחסן מחוץ לעונה.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: קבלו רעיונות
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: גלמפינג ואירוח
+      description: שהייה חיצונית ייחודית - אתרי גלמפינג, נכסי בוטיק ומקומות אירועים.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: קבלו רעיונות
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: חנות בריכות
+  title: חקור את הבריכות שלנו
+  subtitle: השווה צורות, גדלים ותכונות כדי למצוא את הבריכה המתאימה לחצר האחורית או לחלל החיצוני שלך.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: לעסקים
+  title: בריכות לעסקים,<br />גַם
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay לשותפים עסקיים</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: השכרת נופש ואירוח
+      description: שירותים עונתיים לאורחים עבור השכרות נופש, אתרי גלמפינג ונכסי בוטיק - מהיר לפריסה, קל לתחזוקה, פשוט לאחסון.
+    - title: שותפי קמעונאות ומותגים
+      description: תוכניות סיטונאיות ובריכות Drop Stitch מוכנות לקמעונאות למרכזי גנים, חנויות בריכות וחנויות מקוונות.
+    - title: מותג מותאם אישית & פרטי
+      description: גדלים מותאמים אישית, צבעים, כריכות, הדפסת לוגו ואריזות קמעונאיות למותגים - שנבנו על ידי שותפי הייצור שלנו.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: טיפול ובטיחות
+  title: קל לבעלות,<br />קל לאהוב
+  subtitle: מהמסירה לשחייה הראשונה ועד לאחסון סוף העונה, בעלות על בריכת Felizbay נשארת פשוטה.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: הגדרה תוך דקות
+      description: שחרר את הארגז, נפח בעזרת המשאבה המצורפת ומלא - התקנה מלאה נמשכת בדרך כלל 15-30 דקות על קרקע יציבה וישרה.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: טיפול פשוט במים
+      description: יציאות משאבת מסנן סטנדרטיות בגודל 32/38 מ"מ, בדיקות pH רגילות ומכסה מצויד בדגמים עגולים שומרים על ניקיון המים.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: נקה, ניקוז ואחסן
+      description: רוקנו, יבשו, גלגלו וארוז את הבריכה בתיק האחסון שלה לחורף. אין התקנה קבועה לתחזוקה.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: בטיחות ראשונה
+      description: ילדים חייבים להיות בהשגחה פעילה של מבוגר בכל עת. פעל לפי המדריך, הכללים המקומיים וההנחיות לשימוש בטוח.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: מקופסה לחצר האחורית
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'שלב 1: <span class="font-medium">בחר את הבריכה שלך</span>'
+      description: השווה צורות וגדלים כדי להתאים לחלל, למשק הבית שלך ולאופן שבו אתה מתכנן להשתמש במים.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'שלב 2: <span class="font-medium">הגדר את זה</span>'
+      description: הניחו על קרקע יציבה וישרה, נפחו בעזרת המשאבה החשמלית המצורפת, ומלאו בצינור גינה.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'שלב 3: <span class="font-medium">לשחות כל הקיץ</span>'
+      description: שמור את המים טריים עם טיפול פשוט - רפרף, כסה ובדוק את ה-pH כמו כל בריכה קטנה.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'שלב 4: <span class="font-medium">אחסן את זה משם</span>'
+      description: בסיום העונה יש לנקז, לייבש, לגלגל ולאחסן את הבריכה בתיק עד הקיץ הבא.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay בריכת שחיה מתנפחת Drop Stitch עגולה
 blog_latest:
-  title: Pool Guides & Insights
+  title: מדריכים ותובנות לבריכה
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    מדריכי התקנה, טיפים לטיפול ועצות קנייה לבריכות שחייה מתנפחות
+    מצוות Felizbay.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: בריכה מתנפחת שאלות נפוצות
+  subtitle: שאלות נפוצות על בריכות שחייה מתנפחות של Felizbay.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: כמה זמן לוקחת ההתקנה?
+      description: הניפוח נמשך כ-10 דקות עם משאבת האוויר החשמלית הכלולה; ההגדרה המלאה כולל מיקום ומילוי היא בדרך כלל 15-30 דקות.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: כמה קשיחה בריכת Drop Stitch?
+      description: מאוד נוקשה. קירות Drop Stitch מתנפחים בעוצמה של 4-5 PSI - בדומה ללוח משוטים מתנפח - כך שהבריכה שומרת על צורתה כשהיא מלאה במים.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: האם ילדים יכולים להשתמש בבריכה?
+      description: כן, עם השגחת מבוגרים פעילה בכל עת. אסור להשאיר ילדים ללא השגחה בבריכה או ליד הבריכה - פעל לפי המדריך וכללי הבטיחות המקומיים.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: איך אני מאחסן את הבריכה בחורף?
+      description: רוקנו את המים, רוקנו את הבריכה, הניחו לה להתייבש לחלוטין, ואז גלגלו אותה ואחסנו אותה בשקית האחסון המצורפת במקום נטול כפור.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: מה כלול בבריכה?
+      description: כל בריכת Felizbay כוללת משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. לדגמים עגולים יש כיסוי אופציונלי.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: אילו גדלים זמינים?
+      description: 48 מק"טים סטנדרטיים על פני ארבע אוספים - בריכות עגולות בקוטר של עד 10 מ', בריכות מלבניות עד 6 × 5 מ', ואמבטיות ספא ​​עם מושבים מובנים. גדלים מותאמים אישית זמינים עבור שותפים עסקיים.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: על אילו משטחים הבריכה יכולה לעמוד?
+      description: כל משטח שטוח וישר ללא חפצים חדים - מדשאה, פטיו או סיפון. יריעת קרקע מומלצת על משטחים מחוספסים. בדוק שהמשטח יכול לשאת את משקלה של בריכה מלאה.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: איך אני שומרת על ניקיון המים?
+      description: השתמש במשאבת סינון במקום שבו היא מותקנת, הסר פסולת, בדוק את ה-pH, וכסה את הבריכה כאשר אינה בשימוש. משך זמן המים תלוי בגודל הבריכה, השימוש והסינון - בדוק באופן קבוע במקום להסתמך על לוח זמנים קבוע.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    מצא את הבריכה המתאימה<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">לחצר האחורית שלך.</span>
+  subtitle: השווה דגמים וגדלים, או קבל עזרה בבחירה - הצוות שלנו עונה על שאלות תוך יום עסקים אחד.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: חנות בריכות
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: מצא את הבריכה שלך
       href: /find-your-pool
       icon: tabler:compass
+

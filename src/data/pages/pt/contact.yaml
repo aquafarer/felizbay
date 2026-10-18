@@ -1,35 +1,35 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Contato
+  title: ENTRE EM CONTATO
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Envie-nos uma mensagem
+  subtitle: Para cotações, dúvidas técnicas ou dúvidas sobre parcerias, entre em contato conosco. Respondemos dentro de um dia útil.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Enviar consulta → Obter um orçamento
+  success_message: Obrigado! Sua mensagem chegou em nossa caixa de entrada. Responderemos dentro de um dia útil.
+  error_message: Algo deu errado ao enviar sua mensagem. Por favor, tente novamente ou envie-nos um e-mail diretamente.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: resolva o seguinte'
   fields:
     - name: firstName
-      label: First Name
+      label: Primeiro nome
       row: 1
     - name: lastName
-      label: Last Name
+      label: Sobrenome
       row: 1
     - name: companyName
-      label: Company Name
+      label: nome da empresa
       row: 2
     - name: address
-      label: Address
+      label: Endereço
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: CEP / Código Postal
       row: 4
     - name: country
-      label: Country
+      label: País
       row: 4
       type: select
       optionsKey: countries
@@ -38,49 +38,49 @@ contact_form:
       row: 5
       type: email
     - name: tel
-      label: TEL
+      label: TELEFONE
       row: 5
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Volume estimado do pedido
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Selecione seu volume estimado...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Apenas amostras/protótipos
+        - value: 5-10
+          label: 5–10 unidades (MOQ padrão)
+        - value: 100-500
+          label: 100–500 unidades
+        - value: 500-plus
+          label: Mais de 500 unidades (preço por volume)
     - name: customization
-      label: Customization Needed?
+      label: Personalização necessária?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Selecione o tipo de personalização...
         - value: none
-          label: Standard product (no customization)
+          label: Produto padrão (sem personalização)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Apenas logotipo/branding personalizado
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: OEM completo (tamanho, cor, gráficos, embalagem)
         - value: consultation
-          label: Not sure — need consultation
+          label: Não tenho certeza – preciso de consulta
     - name: productInterest
-      label: Pool of Interest
+      label: Conjunto de interesse
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Selecione o tipo de piscina...
         - value: all
-          label: All pools / Full catalog
+          label: Todas as piscinas / Catálogo completo
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Assunto
       row: 9
     - name: message
-      label: Message
+      label: Mensagem
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Outras maneiras de chegar até nós
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Consultas de vendas
+      description: Cotações de pool, preços de atacado e pedidos em grandes quantidades.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Suporte técnico
+      description: Ajuda de configuração, reparos, peças de reposição e perguntas sobre cuidados.
       icon: tabler:tool
-    - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+    - title: OEM/ODM
+      description: Tamanhos, cores, capas, marcas e embalagens personalizadas.
       icon: tabler:palette
-    - title: Email
+    - title: E-mail
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
-      description: felizbay.com
+    - title: Site
+      description: felizbay. com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Tempo de resposta
+      description: Respondemos dentro de um dia útil.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
-  address: felizbay.com
+  title: Entre em contato
+  subtitle: Contato Felizbay
+  address: felizbay. com
   zoom: 15
+

@@ -1,212 +1,203 @@
 hero:
-  tagline: 'Premium Drop Stitch Inflatable Pools'
-  title: 'Make More of Your<br />Outdoor Space.'
+  tagline: Premium Drop Stitch bazeni na napuhavanje
+  title: Iskoristite više svog<br />Vanjskog prostora.
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
-    Explore pool sizes, compare features, and find the right fit for your space.<br />
-    Designed and operated by Aquafarer LLC, USA.
+    Otkrijte vrhunske bazene na napuhavanje dizajnirane za opuštanje u dvorištu, obiteljsku zabavu i život na otvorenom.<br />
+    Istražite veličine bazena, usporedite značajke i pronađite ono što vam odgovara.<br />
+    Dizajnirao i upravlja Aquafarer LLC, SAD.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Trgovina bazenima
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Pronađite svoj bazen
       href: /find-your-pool
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.png
-    alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
-
+    alt: Felizbay pravokutni Drop Stitch bazen na napuhavanje u dvorištu
 stats:
-  title: Felizbay at a Glance
+  title: Felizbay na prvi pogled
   columns: 4
   stats:
-    - title: Pool Collections
+    - title: Zbirke bazena
       amount: '4'
-    - title: Standard SKUs
+    - title: Standardni SKU-ovi
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
+    - title: Vrijeme postavljanja
+      amount: 15-30 min
+    - title: Nazivni tlak
+      amount: 4-5 PSI
+    - title: Jamstvo
       amount: 2-Year Limited
-    - title: Custom Sizes
+    - title: Prilagođene veličine
       amount: Available
-    - title: Contact
+    - title: Kontakt
       amount: info@felizbay.com
-
 features:
   id: features
-  tagline: Drop Stitch Technology
-  title: 'Why a Felizbay Pool<br />Is Different'
-  subtitle: 'High-pressure drop stitch construction makes our pools rigid, durable, and effortless to store.'
+  tagline: Drop Stitch tehnologija
+  title: Zašto Felizbay bazen<br />je drugačiji
+  subtitle: Visokotlačna Drop Stitch konstrukcija čini naše bazene krutim, izdržljivim i lakim za spremanje.
   columns: 2
   items:
-    - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+    - title: Čvrsti Drop Stitch zidovi
+      description: Tisuće unutarnjih navoja pričvršćuju slojeve zidova zajedno, tako da se bazen napuhava kao kamen pri 4-5 PSI i zadržava svoj oblik kada se napuni.
       icon: tabler:hexagon
-    - title: Fast, Tool-Free Setup
-      description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
+    - title: Brzo postavljanje bez alata
+      description: Napuhajte uključenom električnom pumpom za nekoliko minuta, a zatim napunite vrtnim crijevom. Bez alata, bez konstrukcije, bez profesionalne instalacije.
       icon: tabler:rocket
-    - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+    - title: Pakirajte malo
+      description: Ocijedite, ispuhnite, smotajte i spremite bazen u vrećicu preko zime. Bazen pune veličine koji stane u ormar.
       icon: tabler:package
-    - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+    - title: Izdržljiv i otporan na UV zračenje
+      description: Dvoslojna PVC Drop Stitch tkanina otporna je na probijanje, UV izlaganje i cijelu sezonu obiteljske upotrebe.
       icon: tabler:shield
-    - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+    - title: Kompletan paket
+      description: Svaki bazen se isporučuje s električnom pumpom za zrak, kompletom za popravak i torbom za pohranu. Uklopljene navlake dostupne za okrugle modele.
       icon: tabler:box
-    - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+    - title: Dizajn osviješten o sigurnosti
+      description: Dizajn stambenog bazena koji se odnosi na EN 16582-1 i ASTM F2666, s ventilima za smanjenje tlaka i stabilnim krutim stijenkama. Uvijek je potreban stalni nadzor odrasle osobe.
       icon: tabler:shield-check
-
 content_customer_types:
-  tagline: Pool Ideas
-  title: 'The Right Pool for<br />Your Space'
-  subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  tagline: Ideje za bazene
+  title: Pravi bazen za<br />Vaš prostor
+  subtitle: Prave postavke, stvarne veličine i poštene upute za odabir pravog bazena.
   items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
+    - title: Bazeni u dvorištu za obitelji
+      description: Planiranje prostora, stvarne korisne veličine i jednostavno održavanje za obiteljska ljeta u dvorištu.
       icon: tabler:home
-      cta: 'Get Ideas'
+      cta: Dođite do ideja
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+    - title: Bazeni za mala dvorišta
+      description: Kompaktni okrugli i četvrtasti modeli koji se uklapaju u uske vanjske prostore bez odricanja od plivanja.
       icon: tabler:layout-grid
-      cta: 'Get Ideas'
+      cta: Dođite do ideja
       cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
+    - title: Veliki bazeni za okupljanja
+      description: Veliki pravokutni bazeni s pravim prostorom za kupanje cijele ekipe u ljetnim danima.
       icon: tabler:users
-      cta: 'Get Ideas'
+      cta: Dođite do ideja
       cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
+    - title: Kupanje i opuštanje na otvorenom
+      description: SPA kade s ugrađenim sjedalima i izoliranim dnom za svakodnevno opuštanje kod kuće.
       icon: tabler:ripple
-      cta: 'Get Ideas'
+      cta: Dođite do ideja
       cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
+    - title: Bazeni za najam za odmor
+      description: Sezonski sadržaj za goste koji se brzo postavlja i sprema izvan sezone.
       icon: tabler:beach
-      cta: 'Get Ideas'
+      cta: Dođite do ideja
       cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
+    - title: Glamping i ugostiteljstvo
+      description: Prepoznatljiv boravak na otvorenom — mjesta za glamping, butici i mjesta za događanja.
       icon: tabler:tent
-      cta: 'Get Ideas'
+      cta: Dođite do ideja
       cta_href: /pool-ideas/pools-for-glamping-and-hospitality
-
 content_categories:
-  tagline: Shop Pools
-  title: 'Explore Our Pools'
-  subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
+  tagline: Trgovina bazenima
+  title: Istražite naše bazene
+  subtitle: Usporedite oblike, veličine i karakteristike kako biste pronašli pravi bazen za svoje dvorište ili vanjski prostor.
 content_workshop:
   isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
+  tagline: Za tvrtke
+  title: Pools for Business,<br />Također
   content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay za poslovne partnere</h3>
   items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
-
+    - title: Iznajmljivanje za odmor i ugostiteljstvo
+      description: Sezonski sadržaji za goste za iznajmljivanje na odmoru, mjesta za glamping i butik posjede — brzi za postavljanje, jednostavni za održavanje, jednostavni za spremanje.
+    - title: Maloprodajni i robni partneri
+      description: Veleprodajni programi i Drop Stitch bazeni spremni za maloprodaju za vrtne centre, trgovine bazenima i internetske trgovine.
+    - title: Prilagođena i privatna marka
+      description: Prilagođene veličine, boje, naslovnice, ispis logotipa i maloprodajna pakiranja za robne marke — izradili su ih naši proizvodni partneri.
 content_compliance:
-  tagline: Care & Safety
-  title: 'Easy to Own,<br />Easy to Love'
-  subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
+  tagline: Njega i sigurnost
+  title: Jednostavan za posjedovanje,<br />Lako za voljeti
+  subtitle: Od isporuke preko prvog kupanja do skladištenja na kraju sezone, posjedovanje bazena Felizbay ostaje jednostavno.
   items:
-    - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+    - title: Postavljanje u nekoliko minuta
+      description: Raspakirajte, napuhajte priloženom pumpom i napunite — potpuno postavljanje obično traje 15-30 minuta na čvrstoj, ravnoj podlozi.
       icon: tabler:rocket
-    - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+    - title: Jednostavna njega vode
+      description: Standardni 32/38 mm otvori za filtar-pumpu, redovite pH provjere i postavljeni poklopac na okruglim modelima održavaju vodu čistom.
       icon: tabler:droplet
-    - title: 'Clean, Drain & Store'
-      description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
+    - title: Očistite, ocijedite i pohranite
+      description: Ocijedite, osušite, smotajte i spakirajte bazen u vreću za zimu. Nema trajne instalacije za održavanje.
       icon: tabler:package
-    - title: 'Safety First'
-      description: 'Children must be actively supervised by an adult at all times. Follow the manual, local rules, and safe-use guidance.'
+    - title: Sigurnost prije svega
+      description: Djeca moraju cijelo vrijeme biti pod aktivnim nadzorom odrasle osobe. Slijedite priručnik, lokalna pravila i smjernice za sigurnu uporabu.
       icon: tabler:shield-check
-
 steps:
-  title: 'From Box to Backyard'
+  title: Od kutije do dvorišta
   items:
-    - title: 'Step 1: <span class="font-medium">Choose Your Pool</span>'
-      description: 'Compare shapes and sizes to match your space, household, and how you plan to use the water.'
+    - title: 'Korak 1: <span class="font-medium">Odaberite svoj bazen</span>'
+      description: Usporedite oblike i veličine kako bi odgovarali vašem prostoru, kućanstvu i načinu na koji planirate koristiti vodu.
       icon: tabler:pool
-    - title: 'Step 2: <span class="font-medium">Set It Up</span>'
-      description: 'Place on firm, level ground, inflate with the included electric pump, and fill with a garden hose.'
+    - title: 'Korak 2: <span class="font-medium">Postavite ga</span>'
+      description: Stavite na čvrsto, ravno tlo, napuhajte priloženom električnom pumpom i napunite vrtnim crijevom.
       icon: tabler:rocket
-    - title: 'Step 3: <span class="font-medium">Swim All Summer</span>'
-      description: 'Keep the water fresh with simple care — skim, cover, and check pH like any small pool.'
+    - title: 'Korak 3: <span class="font-medium">Plivajte cijelo ljeto</span>'
+      description: Održavajte vodu svježom uz jednostavnu njegu - prelijte, pokrijte i provjerite pH kao u svakom malom bazenu.
       icon: tabler:ripple
-    - title: 'Step 4: <span class="font-medium">Store It Away</span>'
-      description: 'When the season ends, drain, dry, roll up, and store the pool in its bag until next summer.'
+    - title: 'Korak 4: <span class="font-medium">Spremi to daleko</span>'
+      description: Kad sezona završi, bazen ocijedite, osušite, smotajte i spremite u vrećicu do sljedećeg ljeta.
       icon: tabler:package
   image:
     src: /images/pools/round-grey-pool-1.png
-    alt: Felizbay round drop stitch inflatable swimming pool
-
+    alt: Felizbay okrugli Drop Stitch bazen na napuhavanje
 blog_latest:
-  title: Pool Guides & Insights
+  title: Vodiči i uvidi u bazene
   information: |
-    Setup guides, care tips, and buying advice for inflatable swimming pools
-    from the Felizbay team.
-
+    Vodiči za postavljanje, savjeti za njegu i savjeti za kupnju bazena na napuhavanje
+    iz Felizbay tima.
 faqs:
-  title: Inflatable Pool FAQ
-  subtitle: 'Common questions about Felizbay inflatable swimming pools.'
+  title: Često postavljana pitanja o bazenu na napuhavanje
+  subtitle: Uobičajena pitanja o Felizbay bazenima na napuhavanje.
   columns: 2
   items:
-    - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+    - title: Koliko dugo traje postavljanje?
+      description: Napuhavanje traje oko 10 minuta s uključenom električnom zračnom pumpom; potpuno postavljanje uključujući postavljanje i punjenje obično traje 15-30 minuta.
       icon: tabler:clock
       category: all
-    - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI — similar to an inflatable paddle board — so the pool keeps its shape when filled with water.'
+    - title: Koliko je krut drop stitch bazen?
+      description: Vrlo krut. Drop Stitch stijenke snažno se napuhavaju pri 4-5 PSI — slično dasci za veslanje na napuhavanje — tako da bazen zadržava svoj oblik kada se napuni vodom.
       icon: tabler:hexagon
       category: all
-    - title: Can children use the pool?
-      description: 'Yes, with active adult supervision at all times. Children must never be left unattended in or near the pool — follow the manual and local safety rules.'
+    - title: Mogu li djeca koristiti bazen?
+      description: Da, uz aktivni nadzor odrasle osobe cijelo vrijeme. Djeca se nikada ne smiju ostavljati bez nadzora u bazenu ili u blizini bazena — pridržavajte se priručnika i lokalnih sigurnosnih pravila.
       icon: tabler:users
       category: all
-    - title: How do I store the pool in winter?
-      description: 'Drain the water, deflate the pool, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.'
+    - title: Kako čuvati bazen zimi?
+      description: Ispustite vodu, ispuhnite bazen, pustite da se potpuno osuši, zatim ga smotajte i spremite u priloženu vrećicu za pohranu na mjesto zaštićeno od smrzavanja.
       icon: tabler:package
       category: all
-    - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+    - title: Što je uključeno u bazen?
+      description: Svaki Felizbay bazen uključuje električnu zračnu pumpu, pribor za popravak i torbu za pohranu. Okrugli modeli imaju izborni poklopac.
       icon: tabler:box
       category: all
-    - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+    - title: Koje su veličine dostupne?
+      description: 48 standardnih SKU-ova u četiri kolekcije — okrugli bazeni do 10 m u promjeru, pravokutni bazeni do 6 × 5 m i SPA kade s ugrađenim sjedalima. Za poslovne partnere dostupne su prilagođene veličine.
       icon: tabler:ruler-2
       category: all
-    - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+    - title: Na koje podloge može stajati bazen?
+      description: Bilo koja ravna, ravna površina bez oštrih predmeta - travnjak, terasa ili terasa. Na grubim površinama preporuča se brušenje. Provjerite može li površina podnijeti težinu napunjenog bazena.
       icon: tabler:layout-grid
       category: all
-    - title: How do I keep the water clean?
-      description: 'Use a filter pump where fitted, skim debris, check pH, and cover the pool when not in use. How long water lasts depends on pool size, usage, and filtration — test regularly rather than relying on a fixed schedule.'
+    - title: Kako održavam vodu čistom?
+      description: Upotrijebite filtarsku pumpu gdje je ugrađena, očistite ostatke, provjerite pH i pokrijte bazen kada se ne koristi. Trajanje vode ovisi o veličini bazena, korištenju i filtraciji — testirajte redovito umjesto da se oslanjate na fiksni raspored.
       icon: tabler:droplet
       category: all
-
 cta:
   title: |
-    Find the right pool<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">for your backyard.</span>
-  subtitle: 'Compare models and sizes, or get help choosing — our team answers questions within one business day.'
+    Pronađite pravi bazen<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">za svoje dvorište.</span>
+  subtitle: Usporedite modele i veličine ili potražite pomoć pri odabiru — naš tim odgovara na pitanja unutar jednog radnog dana.
   actions:
     - variant: primary
-      text: Shop Pools
+      text: Trgovina bazenima
       href: /products
       icon: tabler:pool
-    - text: Find Your Pool
+    - text: Pronađite svoj bazen
       href: /find-your-pool
       icon: tabler:compass
+

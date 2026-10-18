@@ -1,40 +1,40 @@
 hero_text:
-  tagline: Contact
-  title: GET IN TOUCH
+  tagline: Sazināties
+  title: SAZINIETIES
 contact_form:
   id: form
-  title: Send us a message
-  subtitle: For quotes, technical questions or partnership enquiries, drop us a line. We reply within one business day.
+  title: Nosūtiet mums ziņu
+  subtitle: Lai saņemtu piedāvājumus, tehniskus jautājumus vai partnerības jautājumus, rakstiet mums. Mēs atbildam vienas darba dienas laikā.
   email_to: info@felizbay.com
-  submit_button: Send Inquiry → Get a Quote
-  success_message: Thanks! Your message has landed in our inbox. We will reply within one business day.
-  error_message: Something went wrong sending your message. Please try again or email us directly.
+  submit_button: Sūtīt pieprasījumu → Saņemt piedāvājumu
+  success_message: Paldies! Jūsu ziņojums ir nonācis mūsu iesūtnē. Mēs atbildēsim vienas darba dienas laikā.
+  error_message: Nosūtot ziņojumu, radās kļūda. Lūdzu, mēģiniet vēlreiz vai rakstiet mums tieši.
   default_country_code: '+1'
   captcha:
-    label: 'Anti-spam: please solve the following'
+    label: 'Anti-spam: lūdzu, atrisiniet tālāk norādīto'
   fields:
     - name: firstName
-      label: First Name
+      label: Vārds
       row: 1
     - name: lastName
-      label: Last Name
+      label: Uzvārds
       row: 1
     - name: companyName
-      label: Company Name
+      label: Uzņēmuma nosaukums
       row: 2
     - name: address
-      label: Address
+      label: Adrese
       row: 3
     - name: zip
-      label: Zip / Postal Code
+      label: Pasta indekss
       row: 4
     - name: country
-      label: Country
+      label: Valsts
       row: 4
       type: select
       optionsKey: countries
     - name: email
-      label: E-mail
+      label: E-pasts
       row: 5
       type: email
     - name: tel
@@ -43,44 +43,44 @@ contact_form:
       type: tel
       withCountryCode: true
     - name: orderVolume
-      label: Estimated Order Volume
+      label: Paredzamais pasūtījumu apjoms
       row: 6
       type: select
       options:
         - value: ''
-          label: Select your estimated volume...
+          label: Atlasiet aptuveno apjomu...
         - value: sample
-          label: Samples / Prototypes only
-        - value: '5-10'
-          label: 5–10 units (Standard MOQ)
-        - value: '100-500'
-          label: 100–500 units
-        - value: '500-plus'
-          label: 500+ units (Volume pricing)
+          label: Tikai paraugi/prototipi
+        - value: 5-10
+          label: 5–10 vienības (standarta MOQ)
+        - value: 100-500
+          label: 100–500 vienības
+        - value: 500-plus
+          label: Vairāk nekā 500 vienību (apjoma cena)
     - name: customization
-      label: Customization Needed?
+      label: Nepieciešama pielāgošana?
       row: 7
       type: select
       options:
         - value: ''
-          label: Select customization type...
+          label: Izvēlieties pielāgošanas veidu...
         - value: none
-          label: Standard product (no customization)
+          label: Standarta produkts (bez pielāgošanas)
         - value: logo
-          label: Custom Logo / Branding only
+          label: Tikai pielāgots logotips/zīmols
         - value: full
-          label: Full OEM (size, color, graphics, packaging)
+          label: Pilns OEM (izmērs, krāsa, grafika, iepakojums)
         - value: consultation
-          label: Not sure — need consultation
+          label: Neesat pārliecināts - nepieciešama konsultācija
     - name: productInterest
-      label: Pool of Interest
+      label: Interešu fonds
       row: 8
       type: select
       options:
         - value: ''
-          label: Select pool type...
+          label: Izvēlieties baseina veidu...
         - value: all
-          label: All pools / Full catalog
+          label: Visi baseini / Pilns katalogs
         - value: rectangular
           label: Rectangular Drop Stitch Pool
         - value: round-blue
@@ -92,37 +92,38 @@ contact_form:
         - value: oem
           label: OEM / Custom Pool
     - name: subject
-      label: Subject
+      label: Priekšmets
       row: 9
     - name: message
-      label: Message
+      label: Ziņojums
       row: 10
       type: textarea
       rows: 6
 features2_other_ways:
-  title: Other ways to reach us
+  title: Citi veidi, kā ar mums sazināties
   columns: 3
   items:
-    - title: Sales enquiries
-      description: Pool quotes, wholesale pricing, and bulk orders.
+    - title: Pārdošanas jautājumi
+      description: Baseina piedāvājumi, vairumtirdzniecības cenas un lielapjoma pasūtījumi.
       icon: tabler:shopping-bag
-    - title: Technical support
-      description: Setup help, repairs, spare parts, and care questions.
+    - title: Tehniskais atbalsts
+      description: Iestatīšanas palīdzība, remonts, rezerves daļas un kopšanas jautājumi.
       icon: tabler:tool
     - title: OEM / ODM
-      description: Custom sizes, colors, covers, branding, and packaging.
+      description: Pielāgoti izmēri, krāsas, vāki, zīmols un iepakojums.
       icon: tabler:palette
-    - title: Email
+    - title: E-pasts
       description: info@felizbay.com
       icon: tabler:mail
-    - title: Website
+    - title: Tīmekļa vietne
       description: felizbay.com
       icon: tabler:world
-    - title: Response time
-      description: We reply within one business day.
+    - title: Atbildes laiks
+      description: Mēs atbildam vienas darba dienas laikā.
       icon: tabler:clock
 map:
-  title: Get in Touch
-  subtitle: Contact Felizbay
+  title: Sazinieties
+  subtitle: Sazinieties ar Felizbaju
   address: felizbay.com
   zoom: 15
+
