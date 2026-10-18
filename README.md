@@ -1,8 +1,8 @@
 # Felizbay — Astro 7 Multilingual Platform
 
-Multilingual (15 languages) water sports equipment site for **Felizbay**, built on [Astro 7](https://astro.build) (Vite 8 / Rolldown, Rust compiler), pure static generation (`output: 'static'`), deployed to **Cloudflare Pages + 5 Workers**.
+Multilingual (37 languages) water sports equipment site for **Felizbay**, built on [Astro 7](https://astro.build) (Vite 8 / Rolldown, Rust compiler), pure static generation (`output: 'static'`), deployed to **Cloudflare Pages + 5 Workers**.
 
-**Scale:** ~4,650 pages across 15 languages, 0 build errors
+**Scale:** ~645 pages across 37 languages, 0 build errors
 **Domains:** `felizbay.com` (production), `assets.felizbay.com` (R2 asset storage)
 
 **2026-08 architecture snapshot** (latest changes): Astro 7.2 / Vite 8 (`@tailwindcss/vite`, postcss removed) · seo-worker deleted, **5 Workers** (contact/ai/admin/news/automation) · legacy `Astro.redirect()` pages migrated to `LEGACY_REDIRECTS` in `astro.config.ts` · i18n build data split: `site-data.ts` (2.2 MiB, `site-*` keys) + `pages/*.ts` (~110 per-page modules), full JSON kept in `src/i18n/generated/` (never in `public/` — Pages rejects files ≥ 25 MiB) · `content-v2*` keys excluded (loaded directly from YAML by `src/data/content-v2.ts`).
@@ -124,7 +124,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 /
 ├── src/
 │  ├── pages/
-│  │  ├── [lang]/                    # Localized pages (15 languages)
+│  │  ├── [lang]/                    # Localized pages (37 languages)
 │  │  │  ├── index.astro            # Homepage (SSG)
 │  │  │  ├── about.astro            # About page
 │  │  │  ├── brand/                 # Brand hub
@@ -353,7 +353,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 
 ### 4.4 news-worker (felizbay-news)
 
-- **Routes:** `/{lang}/news*`, `/{lang}/rss.xml`, `/sitemap-news.xml`, `/llms/news*` (15 languages + root)
+- **Routes:** `/{lang}/news*`, `/{lang}/rss.xml`, `/sitemap-news.xml`, `/llms/news*` (37 languages + root)
 - **Bindings:** `DB` (D1 — `Felizbay-db`, `news` table)
 - **Features:**
   - Serves news posts, RSS feeds, news sitemap and LLM markdown directly from D1 (no static news pages)
@@ -435,12 +435,12 @@ Two layers of locale detection:
      (page-content.json ~6.8 MiB + site-data.ts 2.2 MiB; site keys only, content-v2* excluded;
       page-content.json is NEVER written to public/ — Pages rejects files ≥ 25 MiB)
  3. scripts/generate-geo-files.ts       → Generate entity.json + auto-build llms-full.txt
-    (tsx)                                (idempotent: 63 products × 15 languages + all pages)
- 4. scripts/_gen-uiall.cjs              → Generate UI components (15 languages)
+     (tsx)                                (idempotent: 63 products × all languages + all pages)
+  4. scripts/_gen-uiall.cjs              → Generate UI components (37 languages)
  5. scripts/_gen-pages.cjs              → Generate page content TS modules from YAML
  6. scripts/gen-icon-svgs.cjs           → Generate icon SVGs
  7. scripts/generate-image-dimensions.mjs → Resolve width/height for all images (CLS fix)
- 8. astro build                         → Static site to dist/ (~4,650 pages)
+  8. astro build                         → Static site to dist/ (~645 pages)
  9. scripts/mirror-root-en.mjs          → Mirror English root pages
 10. scripts/generate-sitemaps.mjs       → Generate per-locale sitemaps
 11. scripts/validate-dist.mjs           → Full dist scan gate (broken links, missing images, meta)
@@ -558,7 +558,7 @@ All page content is stored as YAML files in `src/data/pages/`:
 
 - **Root level** (e.g., `home.yaml`) — English (default)
 - **Language subdirectories** (e.g., `fr/home.yaml`, `de/home.yaml`) — Per-locale translations
-- **15 languages** total, each with 60+ page YAML files (including brand-team, certifications, partners, legal pages, solutions, industries)
+- **37 languages** total — 16 fully-localized (incl. EN) with 60+ page YAML files each (including brand-team, certifications, partners, legal pages, solutions, industries); 21 EN-fallback languages with seed files (nav UI + config + home + threshold files, see TECH.md §16)
 
 ### 8.2 Data-Driven Page Templates
 
@@ -573,7 +573,7 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 
 ### 8.3 UI Translation Pipeline
 
-1. **Master file:** `public/data/i18n-config.json` — All UI strings for all 15 languages (1,721 keys × 14 non-EN langs = 24,094 translated entries; 808 sameAsEn retained as verified correct)
+1. **Master file:** `public/data/i18n-config.json` — All UI strings for all 37 languages (1,721 keys fully aligned for the original 14 non-EN langs = 24,094 translated entries at the 2026-08 milestone; newer languages seeded per TECH.md §16; 808 sameAsEn retained as verified correct)
 2. **Generation:** `scripts/_gen-uiall.cjs` reads the master file and generates per-locale TS files
 3. **Runtime:** `src/i18n/config.ts` imports generated translations via `getUiForLang(lang)`
 4. **Usage:** Components use `t('nav.products', currentLocale)` or `<span set:html={t(key, locale)}>`
@@ -649,9 +649,9 @@ Keystatic CMS pages (`/keystatic/*`, `/login`) are static Astro pages that post 
 - GitHub PAT for file operations (stored in a cookie via `/api/admin/save-token`); content edits target the `draft` branch, published via `/api/admin/publish`
 - User/session management at `/keystatic/users`
 
-### 12.1 Multi-Language Content Editing (15 Languages)
+### 12.1 Multi-Language Content Editing (37 Languages)
 
-All admin content pages support per-locale editing for 15 languages via `?locale=` query parameter (site content pages) or an in-form language selector (product pages).
+All admin content pages support per-locale editing for 37 languages via `?locale=` query parameter (site content pages) or an in-form language selector (product pages).
 
 **Locale-Aware Admin Pages** (20 site content + 3 collection pairs):
 
@@ -689,7 +689,7 @@ Same pattern, but uses `contentFileForLocale()` for per-record locale file paths
 2. `{file}` on main branch
 3. English `{basePath}` on main branch (if non-English locale file missing)
 
-### 12.2 Product Translation Editor (15 Languages)
+### 12.2 Product Translation Editor (37 Languages)
 
 Product translations use an in-form language selector (dropdown in `ProductForm.astro`).
 
@@ -739,7 +739,7 @@ The build script (`generate-data-json.mjs`) includes all `src/data/site/*.yaml` 
 ```
 src/data/products.ts  → SSOT (63 products)
 
-src/data/pages/*.yaml → Page content SSOT (55+ pages × 15 languages)
+src/data/pages/*.yaml → Page content SSOT (55+ pages × 37 languages)
    │
    ├── YAML-driven page templates (brand, certifications, partners, solutions, etc.)
    ├── JSON-LD structured data (Organization, Service, Article, Product, Dataset, etc.)
@@ -747,7 +747,7 @@ src/data/pages/*.yaml → Page content SSOT (55+ pages × 15 languages)
    ├── llms-full.txt (auto-generated page summaries)
    └── Search index
        │
-       ├── Product detail pages (SSG, 15 languages)
+        ├── Product detail pages (SSG, 37 languages)
        ├── Product catalog (SSG with filters)
        ├── AI recommendation engine (via ai-worker)
        ├── JSON-LD structured data
@@ -837,7 +837,7 @@ routes = ["felizbay.com/api/automation/*"]
 
 ## 15. Performance Notes
 
-- **Pure static deployment:** All ~4,650 content pages are pre-rendered HTML, served directly from Cloudflare Pages edge cache
+- **Pure static deployment:** All ~645 content pages are pre-rendered HTML, served directly from Cloudflare Pages edge cache
 - **Zero cold start for static routes:** No SSR Worker — every page is served as static HTML
 - **5 Workers with specific routes:** Only API/dynamic requests trigger Worker execution
 - **R2 data offload:** SEO/GEO data loaded at runtime from R2 (no bundled JSON in Workers) — keeps Workers under 3 MB

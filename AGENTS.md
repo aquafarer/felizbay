@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Felizbay** — a 15-language water-sports equipment platform (~4,650 pages), deployed to **Cloudflare Pages + 5 Workers**.
+AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Felizbay** — a 37-language water-sports equipment platform (~645 pages), deployed to **Cloudflare Pages + 5 Workers**.
 
 **Stack:** Astro 7.2 | Tailwind CSS 4.3 (`@tailwindcss/vite`) | TypeScript 5.9 | MDX | Sharp | Vite 8
 
@@ -171,7 +171,7 @@ Admin reads submissions at `/keystatic/contact-submissions` — the page fetches
 
 `scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):
 
-- `page-content.json` — **full** 15-language page + site YAML payload (~6.8 MiB after excluding `content-v2*`)
+- `page-content.json` — **full** 37-language page + site YAML payload (~6.8 MiB after excluding `content-v2*`)
 - `site-data.ts` — only `{lang}/site-{name}` keys (~2.2 MiB); imported by `[lang]/index`, `[lang]/[category]`, `about`, `contact`, `evidence/*`, `research/index`, `use-cases/index`
 - `pages/{name}.ts` — one module per page (~110 files); consumed via `setPageContentData(__pageData)` + `getPageContent(lang, page)` in `src/i18n/page-content.ts`
 - `i18n-config.json` / `ui-all.ts` / `ui/{lang}.ts` — UI strings (the only file that also ships in `public/data/` is the 1.9 MiB `i18n-config.json`)
@@ -204,7 +204,7 @@ Every page modification **must** be checked for garbled text (mojibake) across *
 
 After changes, always verify:
 
-1. `npm run build` succeeds (~4,650 pages)
+1. `npm run build` succeeds (~645 pages)
 2. `npm run check` passes (astro check + ESLint + Prettier)
 3. Quality gates on `dist/`: no broken internal links (one known false positive: JS template string in `ar/search`), hreflang alternates 0 broken, canonical 0 broken, translation-gap scan `transGap(X): 0` (3 accepted word-form warnings), zero `noindex` leaks in sitemaps
 4. Visual check in browser: homepage, blog, dark mode, mobile menu, contact form (verify captcha + submission roundtrip end-to-end)

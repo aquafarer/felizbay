@@ -370,9 +370,9 @@ Commands:
 
 Examples:
   node i18n-tool.cjs count
-  node i18n-tool.cjs audit ja
+  node i18n-tool.cjs audit cs
   node i18n-tool.cjs missing
-  node i18n-tool.cjs insert ja translations-ja.json
+  node i18n-tool.cjs insert cs translations-cs.json
   node i18n-tool.cjs extract ar
   node i18n-tool.cjs fix
   node i18n-tool.cjs verify en

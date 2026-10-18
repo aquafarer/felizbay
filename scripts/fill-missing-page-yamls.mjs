@@ -32,7 +32,7 @@ const PAGES = [
   'testimonials',
 ];
 
-const LANGS = ['ar', 'da', 'de', 'el', 'es', 'fi', 'fr', 'it', 'ja', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh'];
+const LANGS = ['ar', 'da', 'de', 'el', 'es', 'fi', 'fr', 'it', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh'];
 
 function main() {
   let created = 0;

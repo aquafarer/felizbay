@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       lang:
-        description: 'Target language (e.g. ja, cs)'
+        description: 'Target language (e.g. cs, de)'
         required: true
-        default: 'ja'
+        default: 'cs'
       mode:
         description: 'What to translate: productTexts | content | content-all | content-refine | refine | page-meta | body-components'
         required: true

@@ -24,8 +24,6 @@ const LANGUAGES: Record<string, string> = {
   bg: 'Български',
   sl: 'Slovenščina',
   sr: 'Srpski',
-  ja: '日本語',
-  ko: '한국어',
   tr: 'Türkçe',
   id: 'Bahasa Indonesia',
   he: 'עברית',
@@ -37,7 +35,7 @@ const LANGUAGES: Record<string, string> = {
 
 const DEFAULT_LANG = 'en';
 
-const REMOVED_LOCALES = ['zh', 'vi', 'hi'];
+const REMOVED_LOCALES = ['zh', 'vi', 'hi', 'ja', 'ko'];
 
 const LOCALE_MAP: Record<string, string> = {
   FR: 'fr',
@@ -67,8 +65,6 @@ const LOCALE_MAP: Record<string, string> = {
   BG: 'bg',
   SI: 'sl',
   RS: 'sr',
-  JP: 'ja',
-  KR: 'ko',
   TR: 'tr',
   ID: 'id',
   IL: 'he',
@@ -103,8 +99,6 @@ const ACCEPT_LANG_MAP: Record<string, string> = {
   bg: 'bg',
   sl: 'sl',
   sr: 'sr',
-  ja: 'ja',
-  ko: 'ko',
   tr: 'tr',
   id: 'id',
   he: 'he',

@@ -32,12 +32,12 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from langdetect_lite import has_kana, is_mismatch  # noqa: E402
+from langdetect_lite import is_mismatch  # noqa: E402
 
-LOCALES = {"en", "fr", "de", "es", "pt", "it", "ar", "ru", "pl", "cs", "nl", "sv", "no", "el", "fi", "da", "ja"}
+LOCALES = {"en", "fr", "de", "es", "pt", "it", "ar", "ru", "pl", "cs", "nl", "sv", "no", "el", "fi", "da"}
 
 # 跨语言 canonical 折叠是本站设计（本地页 → EN 根），G 检查时两边都去语言前缀比较
-STRIP_LOCALE = {"fr", "de", "es", "pt", "it", "ar", "ru", "pl", "cs", "nl", "sv", "no", "el", "fi", "da", "ja", "zh"}
+STRIP_LOCALE = {"fr", "de", "es", "pt", "it", "ar", "ru", "pl", "cs", "nl", "sv", "no", "el", "fi", "da", "zh"}
 
 
 def strip_locale(p):
@@ -182,12 +182,7 @@ def main():
                         trans_gap.append(f"{rel}\t{expected}\t{field}: {val[:100]}")
                         warnings.append(f"[X] {rel} — {field} 仍是英文（未翻译，conf={c2}）：{val[:70]!r}")
                     elif m2:
-                        # 纯汉字（无假名）的短字段从字形上无法区分 ja/zh；zh 是本站
-                        # noindex 种子语言，可索引 ja 页面的汉字标题按疑似日语降级为告警
-                        if expected == "ja" and d2 == "zh" and not has_kana(val):
-                            warnings.append(f"[A] {rel} — {field} 为纯汉字（ja/zh 字形无法区分，不阻断）：{val[:70]!r}")
-                        else:
-                            err("A", f"{field} 语种为 {d2} 但 locale={expected}（conf={c2}）：{val[:70]!r}")
+                        err("A", f"{field} 语种为 {d2} 但 locale={expected}（conf={c2}）：{val[:70]!r}")
 
         # B. 禁用字符
         if "B" not in skip:

@@ -25,7 +25,7 @@
 13. [附录: 关键文件引用](#13-附录-关键文件引用)
 14. [后台管理系统架构](#14-后台管理系统架构)
 15. [多语言批量编辑工具 (tools/)](#15-多语言批量编辑工具-tools)
-16. [34 语言架构与上架流程](#16-34-语言架构与上架流程)
+16. [37 语言架构与上架流程](#16-37-语言架构与上架流程)
 
 ---
 
@@ -287,7 +287,7 @@ localizeHref() (src/i18n/routing.ts): 匹配 LOCALIZED_ROUTES → 添加 /{lang}
 # 1. 编辑 navigation.yaml 添加新项
 # 2. 编辑 Header.astro 和 Footer.astro，在 navTextMap 中添加映射:
 #    'New Nav Text': 'nav.newKey',
-# 3. 编写脚本或手动编辑 i18n-config.json，为所有 15 语言添加:
+# 3. 编写脚本或手动编辑 i18n-config.json，为所有 37 语言添加:
 #    "nav.newKey": "翻译文本"
 # 4. 如果新页面在 [lang]/ 路由下，在 routing.ts 的 LOCALIZED_ROUTES 中添加路径
 ```
@@ -1825,7 +1825,7 @@ _patch-pages.cjs → 自动注入 import/setter 到 [lang]/ 页面
 
 ## 15. 多语言批量编辑工具 (tools/)
 
-> **铁律: 对 33 个非英语言副本的任何页面文案增删改, 必须走批量脚本, 禁止手工逐文件编辑。**
+> **铁律: 对 36 个非英语言副本的任何页面文案增删改, 必须走批量脚本, 禁止手工逐文件编辑。**
 > 脚本存放于仓库 `tools/`, 随代码一起提交推送; 用法或结构变更时, 必须同步更新本节 (维护规则见 §15.6)。
 
 ### 15.1 工具清单
@@ -1862,7 +1862,7 @@ _patch-pages.cjs → 自动注入 import/setter 到 [lang]/ 页面
 - 扫描 `src/data/pages/<lang>/*.yaml`, 与 EN 源逐路径对比, 值完全相等且不命中 NOISE_KEY 的计为泄漏
 - 输出 `tools/_work/audit.json`: `perLang[lang][file]` 与 `perFile[file][lang]` 双索引, 每条 `{ path, v }`
 - NOISE_KEY 排除键: icon/href/link/url/src/alt/file/image/cta_href/amount/logo/video/photo/email/phone/whatsapp/sku/code/id/source/address/company/color/badge/location/imageAlt/slug (机器字段, 见 11.23)
-- LANGS 已扩展到 33 个非英语言 (14 既有 + 19 新增); 无语言目录的语言自动 0 泄漏
+- LANGS 现为 36 个非英语言 (14 既有 + 19 新增 + 6 扩充 − 3 删除, 见 §16.6); 无语言目录的语言自动 0 泄漏
 - 当前基线: 7,438 (2026-09-23, 14 语言口径, solutions-watersports + solutions-offshore-energy 清零后); 19 新语言的 home 清零后, about/contact/news 为有意 EN 副本 (预期泄漏队列, 见 §16)
 
 ### 15.4 i18n-apply.mjs
@@ -1905,25 +1905,26 @@ spec.json 驱动的通用批量编辑器, 适合"同一改动跨多语言"的场
 
 ---
 
-## 16. 34 语言架构与上架流程
+## 16. 37 语言架构与上架流程
 
 > 2026-09-23 上线: 站点从 15 语言扩展到 **34 语言** (新增 19: cs,th,hr,tl,hu,ro,sk,bg,sl,sr,ja,ko,tr,id,he,ms,lt,lv,et)。
+> 2026-10-16 收敛: 先扩充 6 语言 (kk,vi,uz,uk,az,fa) 至 40, 随后**删除 ja/ko/vi → 37 语言** (en + 36, 见 §16.6)。
 > 设计: 新语言**立即可见** — 页面走 EN-fallback 管线渲染, 整语言 noindex (零 SEO 风险), 每语言只种子翻译
 > 导航 UI 键 (~84 个) + config 元数据 + 完整翻译的 home.yaml; 深度内容翻译为后续工作 (与 §15 泄漏清零同流程)。
 
 ### 16.1 语言注册表触点 (改语言列表必须同步的全部文件)
 
-| 文件                                                               | 作用                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `src/i18n/config.ts`                                               | `languages` map — 驱动全部 `getStaticPaths()` (~100 文件)、middleware、`getLangFromUrl`                                                                                                                                                                |
-| `src/data/site/languages.yaml`                                     | 切换器注册表 (code/name/locale/textDirection/enabled) — 用户展示顺序, Header 有 `enabled !== false` 过滤; 亦驱动 pageLangs、check 门槛 locales、hreflang enabled 集                                                                                    |
-| `functions/_middleware.ts`                                         | CF Pages 语言重定向: `LANGUAGES` + `REMOVED_LOCALES` (现仅 zh,vi,hi) + `ACCEPT_LANG_MAP` (含 fil→tl, iw→he, in→id 别名) + `LOCALE_MAP` (国家码→语言)                                                                                                   |
-| `src/config/seo-suppress.json` + `src/config/sitemap-exclude.json` | 18 码 noindex 正则 `^/(?:bg\|et\|he\|hr\|hu\|id\|ko\|lt\|lv\|ms\|ro\|sk\|sl\|sr\|th\|tl\|tr\|zh)(?:/\|$)` (cs 2026-09-27, sv/da/el/no/ru + nl/fi/pl/ar/pt 2026-09-28, ja 2026-09-29 毕业移出) — sitemap 从 seo-suppress 派生 (单一来源)                |
-| `astro.config.ts`                                                  | `buildLocalizedRedirects` locales — v2/遗留重定向 × 语言前缀                                                                                                                                                                                           |
-| `scripts/fold-untranslated-canonical.mjs`                          | `LANGS` 列表 (noindex 页自动跳过, 毕业后才实际生效) + `STOPWORDS` 语言检测词条 (cs 2026-09-27、pl 2026-09-28 新增; sv/no/da/nl/fi/pt 原有, el/ru/ar 走 NON_LATIN 正则; ja 2026-09-29 新增 NON_LATIN CJK 正则 — 停用词机制只匹配拉丁 token, 对日文无效) |
-| `scripts/generate-geo-files.ts` / `scripts/build-geo-v4.ts`        | llms-full.txt 语言段 + 每语言 llms.txt (`tagline[lang] \|\| tagline.en` 安全回退)                                                                                                                                                                      |
+| 文件                                                               | 作用                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/i18n/config.ts`                                               | `languages` map — 驱动全部 `getStaticPaths()` (~100 文件)、middleware、`getLangFromUrl`                                                                                                                                                                                      |
+| `src/data/site/languages.yaml`                                     | 切换器注册表 (code/name/locale/textDirection/enabled) — 用户展示顺序, Header 有 `enabled !== false` 过滤; 亦驱动 pageLangs、check 门槛 locales、hreflang enabled 集                                                                                                          |
+| `functions/_middleware.ts`                                         | CF Pages 语言重定向: `LANGUAGES` + `REMOVED_LOCALES` (zh,vi,hi,ja,ko) + `ACCEPT_LANG_MAP` (含 fil→tl, iw→he, in→id 别名) + `LOCALE_MAP` (国家码→语言)                                                                                                                        |
+| `src/config/seo-suppress.json` + `src/config/sitemap-exclude.json` | 22 码 noindex 正则 `^/(?:az\|bg\|et\|fa\|he\|hr\|hu\|id\|kk\|lt\|lv\|ms\|ro\|sk\|sl\|sr\|th\|tl\|tr\|uk\|uz\|zh)(?:/\|$)` (cs 2026-09-27, sv/da/el/no/ru + nl/fi/pl/ar/pt 2026-09-28 毕业移出; ja/ko/vi 2026-10-16 随语言删除移出) — sitemap 从 seo-suppress 派生 (单一来源) |
+| `astro.config.ts`                                                  | `buildLocalizedRedirects` locales — v2/遗留重定向 × 语言前缀                                                                                                                                                                                                                 |
+| `scripts/fold-untranslated-canonical.mjs`                          | `LANGS` 列表 (noindex 页自动跳过, 毕业后才实际生效) + `STOPWORDS` 语言检测词条 (cs 2026-09-27、pl 2026-09-28 新增; sv/no/da/nl/fi/pt 原有, el/ru/ar 走 NON_LATIN 正则; ja 2026-09-29 新增 NON_LATIN CJK 正则 — 停用词机制只匹配拉丁 token, 对日文无效)                       |
+| `scripts/generate-geo-files.ts` / `scripts/build-geo-v4.ts`        | llms-full.txt 语言段 + 每语言 llms.txt (`tagline[lang] \|\| tagline.en` 安全回退)                                                                                                                                                                                            |
 
-其他固定列表: `Layout.astro` `FULLY_LOCALIZED=['en','de','fr','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt','ja']` (hreflang 背书门槛, cs 2026-09-27 + sv/da/el/no/ru + nl/fi/pl/ar/pt 2026-09-28 + ja 2026-09-29 毕业后加入) 与 `RTL_LANGS={'ar','he'}`; `generate-sitemaps.mjs` hreflang alternates `['fr','de','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt','ja']`; `generate-ai-corpus.mjs` LANGS (16 语言全含); `tools/i18n-verify-home.mjs` / `tools/i18n-wordcount.mjs` 语言清单 (含全部毕业语言)。
+其他固定列表: `Layout.astro` `FULLY_LOCALIZED=['en','de','fr','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt']` (hreflang 背书门槛, 16 语言; ja 2026-09-29 毕业加入、2026-10-16 随语言删除移出) 与 `RTL_LANGS={'ar','he'}`; `generate-sitemaps.mjs` hreflang alternates `['fr','de','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt']`; `generate-ai-corpus.mjs` LANGS (16 语言全含, 无 ja); `tools/i18n-verify-home.mjs` / `tools/i18n-wordcount.mjs` 语言清单 (含全部毕业语言)。
 
 ### 16.2 新语言种子构成 (每语言 4 件事)
 
@@ -1936,32 +1937,32 @@ UI 逐键回退: `_gen-uiall.cjs` 生成时合并 `{...en, ...lang}` — 部分 
 
 ### 16.3 新语言状态表 (graduated = 进入索引/sitemap/hreflang)
 
-| 语言 | nav UI | config | home 译 | 门槛文件                 | graduated           |
-| ---- | ------ | ------ | ------- | ------------------------ | ------------------- |
-| ja   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-29)** |
-| ko   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| th   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| tr   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| id   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| cs   | ✓      | ✓      | ✓       | 79 页全译                | **是 (2026-09-27)** |
-| sv   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)** |
-| da   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)** |
-| el   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)** |
-| no   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)** |
-| ru   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)** |
-| hr   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| hu   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| ro   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| sk   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| bg   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| sl   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| sr   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| lt   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| lv   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| et   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| he   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| ms   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
-| tl   | ✓      | ✓      | ✓       | EN 副本                  | 否                  |
+| 语言 | nav UI | config | home 译 | 门槛文件                 | graduated                        |
+| ---- | ------ | ------ | ------- | ------------------------ | -------------------------------- |
+| ja   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | 是 (2026-09-29; 2026-10-16 删除) |
+| ko   | ✓      | ✓      | ✓       | EN 副本                  | 否 (2026-10-16 删除)             |
+| th   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| tr   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| id   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| cs   | ✓      | ✓      | ✓       | 79 页全译                | **是 (2026-09-27)**              |
+| sv   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)**              |
+| da   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)**              |
+| el   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)**              |
+| no   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)**              |
+| ru   | ✓      | ✓      | ✓       | 79 页全译 + 残留 EN 归零 | **是 (2026-09-28)**              |
+| hr   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| hu   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| ro   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| sk   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| bg   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| sl   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| sr   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| lt   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| lv   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| et   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| he   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| ms   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
+| tl   | ✓      | ✓      | ✓       | EN 副本                  | 否                               |
 
 RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srpski"; 他加禄语代码 = `tl` (全站 `[a-z]{2}` 正则兼容, `fil` 经 ACCEPT_LANG_MAP 别名映射)。
 
@@ -1972,7 +1973,7 @@ RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srp
 > 2026-09-27: cs 首个执行本清单 (解除 noindex、进入 sitemap/hreflang、fold STOPWORDS 生效; checkGraphNodes 0 WARN)。
 > 2026-09-28: sv/da/el/no/ru 第二批执行 (残留 EN 翻译 161 文件 781 处后毕业; el/ru 无 STOPWORDS 需求 — NON_LATIN 正则覆盖; audit 0 泄漏)。
 > 2026-09-28: nl/fi/pl/ar/pt 第三批执行 — 属 §15 原始 15 语言 (不在 16.3 新语言表内), 此前因残留 EN 被 24 码正则整体 noindex; 残留 EN 翻译 145 文件 778 处后毕业 (pl STOPWORDS 新增, nl/fi/pt 原有, ar 走 NON_LATIN; WorldMap 界面/区域名同步本地化 `src/data/world-map-data.ts`)。
-> 2026-09-29: ja 第四批执行 (首个 CJK/非拉丁非西里尔/非阿拉伯语言) — 79 页全译, 残留 EN 48 处均为白名单 (数字格式、产品型号、人名、认证代码、公司名); 语言检测走 NON_LATIN CJK 正则; WorldMap 界面/区域名 + `src/data/site/about.ja.yaml` 站点级文案同步本地化。
+> 2026-09-29: ja 第四批执行 (首个 CJK/非拉丁非西里尔/非阿拉伯语言) — 79 页全译, 残留 EN 48 处均为白名单 (数字格式、产品型号、人名、认证代码、公司名); 语言检测走 NON_LATIN CJK 正则; WorldMap 界面/区域名 + `src/data/site/about.ja.yaml` 站点级文案同步本地化。（该语言已于 2026-10-16 删除, 见 §16.6）
 
 1. UI 字典 ~1,721 键补全 (`tools/l10n/` 分批注入), 该语言 `node tools/i18n-audit.mjs` 泄漏 ≈ 0 (含 about/contact/news 真翻译)
 2. 从 `seo-suppress.json` + `sitemap-exclude.json` 的 29 码正则中移除该语言代码
@@ -1984,8 +1985,19 @@ RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srp
 
 ### 16.5 运行注意
 
-- **构建规模**: ~12,000 页 (5,447 + 19×~345), Cloudflare Pages 20K 文件软限制内 (~13K 文件), 构建时间约 2 倍
-- **REMOVED_LOCALES 反转**: ja/ko/tr/th/id/cs/he/ro 曾 301→根路径 (Google 已缓存); 重新曝光安全 — 页面 noindex 直到毕业
+- **构建规模**: ~645 页 / 37 语言 (2026-10-16 删除 ja/ko/vi 后从 ~12,000 页回落, 页面由 page-content 模块化管线按页生成), Cloudflare Pages 20K 文件软限制内
+- **REMOVED_LOCALES**: 现为 `zh,vi,hi,ja,ko` — zh/vi/hi 为历史种子语言回收, ja/ko 为 2026-10-16 语言删除后永久 301 剥前缀 (Google 已缓存旧 URL, 权重回收); tr/th/id/cs/he/ro 曾 301→根路径 (2026-09-23 解除, 重新曝光安全 — 页面 noindex 直到毕业)
 - **checkGraphNodes WARN**: 每个新语言 ~数十条图节点名缺失警告, 非阻塞噪音, 毕业清单第 7 项清理
 - **切换器布局**: 弹窗 `grid-cols-4 sm:grid-cols-5` + `max-h-[65vh] overflow-y-auto`, 容器 `max-w-2xl`; 展示顺序 = `languages.yaml` 文件顺序 (用户指定)
 - **`functions/_middleware.ts` 随 Pages 自动部署** — push 即生效, 无需单独发布
+
+### 16.6 语言删除 (2026-10-16, 40 → 37)
+
+> 删除 ja/ko/vi: 翻译 ROI 不及预期 (ja 79 页全译投入未换来自然流量), vi 为 2026-09 扩充语言未毕业。commit `63a1b18` + `a476c8a`。
+
+- **删除范围**: `src/pages/[lang]/{ja,ko,vi}/`、`src/data/pages/{ja,ko,vi}/`、`config.{ja,ko,vi}.yaml`、`tools/l10n/*.{ja,ko,vi}.json`、i18n-config.json/UI 字典相应键、FULLY_LOCALIZED/seo-suppress/sitemap/ai-corpus 等注册表条目
+- **重定向兜底 (双层)**: ① astro.config `LEGACY_REDIRECTS` 追加 `'/ja/': '/'`、`'/ko/': '/'` 静态壳页 (meta-refresh + noindex + canonical; validate-dist/fold/ai-corpus 跳过 noindex 页) — 本地 preview 生效; ② 生产环境由 `_middleware.ts` `REMOVED_LOCALES=['zh','vi','hi','ja','ko']` 301 剥前缀接管 (中间件优先于静态资产)
+- **死循环修复 (2026-10-18)**: 删除时 `LOCALE_MAP`(JP/KR) 与 `ACCEPT_LANG_MAP` 仍含 ja/ko → 日韩访客根路径被 302 至 /ja/、/ko/ 壳页 → meta-refresh 回根 → 死循环; 已从 `LANGUAGES`/`LOCALE_MAP`/`ACCEPT_LANG_MAP` 移除 ja/ko (checkout.ts 语言集合同步清理)
+- **翻译缓存清理**: `.cache/` 7 个 git 跟踪缓存移除 8,033 条 ja/ko/vi 死键 — page-translate-cache 4,743 / content-v2-bing-cache 1,357 / body-components-cache 1,041 / product-translate-cache 610 / i18n-translate-cache 121 / content-l10n-cache 100 / page-meta-cache 61
+- **残留死引用清理 (2026-10-18)**: `05_ci_gate.py` LOCALES/STRIP_LOCALE 移除 ja (含汉字/假名特判分支); `translate-products.yml` 默认语言 ja→cs; `fill-missing-page-yamls.mjs`/`inject-rib-l10n.mjs` LANGS 移除 ja; `i18n-tool.cjs` 用法示例更新; 历史一次性脚本 (add-missing-labels-csja.mjs、batch-translate.mjs 注释) 保留原样
+- **场景数据 SSoT (2026-10-16, commit `78f1776`)**: pool-ideas 三件套 (`src/data/pool-ideas.ts` + 2 个 MDX) 的尺寸/型号码/壁厚/水深/PSI 全部对齐 `src/data/pool-catalog.ts` (48 型号目录基准); 新增场景数据必须先查目录, 禁止虚构尺寸
