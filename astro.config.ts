@@ -30,6 +30,9 @@ export default defineConfig({
   redirects: {
     // P0-5：/zh/ 无页面（仓库无 zh 路由），防线上残留软 200
     '/zh/': '/',
+    // 语言下架（63a1b18）：ja/ko 已删除，旧 URL 用 meta-refresh + noindex + canonical 壳页回收权重
+    '/ja/': '/',
+    '/ko/': '/',
   },
   integrations: [
     mdx(),
