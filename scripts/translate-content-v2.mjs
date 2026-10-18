@@ -21,7 +21,7 @@ import YAML from 'yaml';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const LANGS = ['cs', 'sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'];
+const LANGS = ['cs', 'sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'];
 
 const MAIN_EN = path.join(ROOT, 'src/data/site/content-v2.yaml');
 const MAIN_OUT = (lang) => path.join(ROOT, 'src/data/site', `content-v2.${lang}.yaml`);

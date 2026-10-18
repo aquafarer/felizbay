@@ -39,8 +39,6 @@ const LANGS = [
   'bg',
   'sl',
   'sr',
-  'ja',
-  'ko',
   'tr',
   'id',
   'he',

@@ -36,8 +36,6 @@ export const NEWS_UI: Record<string, { title: string; subtitle: string }> = {
     title: 'Novità',
     subtitle: 'Ultime notizie da Felizbay – lanci prodotti, aggiornamenti aziendali, guide e storie dal mare',
   },
-  ja: { title: 'ニュース', subtitle: 'Felizbayからの最新情報—製品発表、会社情報、ガイド、海のストーリー' },
-  ko: { title: '뉴스', subtitle: 'Felizbay의 최신 소식—제품 출시, 회사 업데이트, 가이드 및 바다 이야기' },
   ru: {
     title: 'Новости',
     subtitle: 'Последние новости Felizbay — запуски продуктов, обновления компании, руководства и истории с воды',

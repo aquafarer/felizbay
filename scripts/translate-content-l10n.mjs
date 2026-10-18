@@ -8,7 +8,7 @@ const ROOT = path.resolve(__dirname, '..');
 const CONTENT_L10N_PATH = path.join(ROOT, 'src/lib/product-content-l10n.ts');
 const CACHE_FILE = path.join(ROOT, '.cache/content-l10n-cache.json');
 
-const MISSING_LANGS = ['ar', 'ru', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'pl', 'pt', 'cs', 'ja', 'de', 'fr', 'es', 'it'];
+const MISSING_LANGS = ['ar', 'ru', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'pl', 'pt', 'cs', 'de', 'fr', 'es', 'it'];
 
 const GOOGLE_URL = 'https://translate.googleapis.com/translate_a/single';
 const MYMEMORY_URL = 'https://api.mymemory.translated.net/get';

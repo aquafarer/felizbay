@@ -67,7 +67,7 @@ const RIB_SLUGS = [
   'zb-mt350',
 ];
 
-const LANGS = ['ja', 'da', 'fi', 'el', 'no', 'sv', 'nl', 'pl', 'ru', 'it', 'ar', 'pt', 'es', 'fr', 'de', 'cs'];
+const LANGS = ['da', 'fi', 'el', 'no', 'sv', 'nl', 'pl', 'ru', 'it', 'ar', 'pt', 'es', 'fr', 'de', 'cs'];
 
 function findLangBlockEnd(content, lang) {
   const marker = '\n  ' + lang + ': {';

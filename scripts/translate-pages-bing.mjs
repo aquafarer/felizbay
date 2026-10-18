@@ -20,10 +20,10 @@ const ROOT = path.resolve(__dirname, '..');
 
 // page -> target languages (languages that are missing this page's YAML)
 const PLAN = {
-  'oem-odm': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'],
-  'quality-control': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'],
-  'why-Felizbay': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'],
-  'oem-odm-blueprint': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja', 'de', 'fr', 'es', 'it'],
+  'oem-odm': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'],
+  'quality-control': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'],
+  'why-Felizbay': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'],
+  'oem-odm-blueprint': ['sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'de', 'fr', 'es', 'it'],
 };
 
 const CACHE_FILE = path.join(ROOT, '.cache', 'page-translate-cache.json');

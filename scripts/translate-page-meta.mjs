@@ -36,7 +36,7 @@ const GOOGLE_URL = 'https://translate.googleapis.com/translate_a/single';
 const MYMEMORY_URL = 'https://api.mymemory.translated.net/get';
 const RATE_MS = 900;
 
-const GRAD = ['de', 'fr', 'es', 'it', 'cs', 'sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'];
+const GRAD = ['de', 'fr', 'es', 'it', 'cs', 'sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'];
 const PRINT_WIDTH = 120;
 
 const PRESERVE_PATTERNS = [

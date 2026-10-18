@@ -71,7 +71,7 @@ const LEGACY_IDS = [
 
 const TARGET_IDS = [...RIB_IDS, ...LEGACY_IDS];
 
-const LANGUAGES = ['fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'cs', 'ja'];
+const LANGUAGES = ['fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'cs'];
 
 const PRESERVE_TERMS = [
   /\bAP\d+\b/gi,

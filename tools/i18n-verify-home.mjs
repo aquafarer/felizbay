@@ -12,7 +12,7 @@ const decode = (s) =>
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"')
     .replace(/&#x27;/g, "'");
-const langs = ['fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'cs', 'ja'];
+const langs = ['fr', 'de', 'es', 'pt', 'ar', 'it', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'cs'];
 // EN strings that must NOT leak into non-EN homepages
 const enLeaks = [
   'CE certified product models',

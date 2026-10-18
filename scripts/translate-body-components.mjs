@@ -59,7 +59,7 @@ const MYMEMORY_URL = 'https://api.mymemory.translated.net/get';
 // 批量端点把请求数降一个数量级后仍保持温和节奏（gtx 对高频 IP 会 429 硬限速）
 const RATE_MS = 500;
 
-const GRAD = ['de', 'fr', 'es', 'it', 'cs', 'sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt', 'ja'];
+const GRAD = ['de', 'fr', 'es', 'it', 'cs', 'sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'];
 const LANG_CAP = {
   cs: 'Cs',
   sv: 'Sv',
@@ -72,7 +72,6 @@ const LANG_CAP = {
   pl: 'Pl',
   ar: 'Ar',
   pt: 'Pt',
-  ja: 'Ja',
 };
 
 // 数字范围在前（组合优先于裸数字），其后为 META 同款术语表，最后裸数字兜底
