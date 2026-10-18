@@ -15,7 +15,7 @@ Integrating a water feature into geodesic domes, safari tents, tiny homes, or lu
   Clean geometric lines and neutral exterior tones allow Felizbay drop-stitch pools to integrate seamlessly with wooden decking, stone paving, or natural grass without looking like intrusive industrial hardware.
 
 - **Spatial clearance & decking integration:**
-  - **Compact soaking pods:** A 2.0 m × 1.5 m footprint fits neatly onto private guest deck platforms, offering an exclusive private soak per unit.
+  - **Compact soaking pods:** A 2.1 m × 1.6 m footprint (SS211608) fits neatly onto private guest deck platforms, offering an exclusive private soak per unit.
   - **Communal gathering pools:** Larger configurations (4.0 m to 5.0 m and up) work exceptionally well in central lounge hubs, near outdoor bars, or alongside shared firepits.
   - **Clearance requirements:** Ensure at least 1.5 meters of clear, non-slip deck surrounding the pool for lounger placement, guest flow, and discreet maintenance access.
 

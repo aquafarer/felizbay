@@ -12,8 +12,8 @@ This guide explores design-conscious dimensions, ergonomic seating options, real
 Modern landscape design emphasizes clean lines and seamless integration. Unlike traditional bulky, bright-blue vinyl pools, Felizbay soaking pools feature sleek, high-rigidity vertical side walls and refined modern color palettes that naturally complement outdoor patio furniture, wooden decking, and surrounding greenery.
 
 - **Compact footprints for soaking:**
-  - **Lounge & dip (1–2 adults):** ≈ 2.0 m × 1.5 m × 0.70 m (6.5' × 5' × 2.3'). Ideal for small courtyards or urban patios dedicated to quiet evening immersion.
-  - **Spacious sanctuary (2–4 adults):** ≈ 2.5 m × 2.0 m × 0.80 m (8.2' × 6.5' × 2.6'). Provides ample water depth for full torso immersion while keeping water volume manageable.
+  - **Lounge & dip (1–2 adults):** the 2.1 × 1.6 × 0.8 m rectangular tub (SS211608) — about 6.9' × 5.2' × 2.6'. Ideal for small courtyards or urban patios dedicated to quiet evening immersion.
+  - **Spacious sanctuary (2–4 adults):** the 3 × 2 × 1 m rectangular tub (SS302010) — about 9.8' × 6.6' × 3.3'. Provides ample water depth for full torso immersion while keeping water volume manageable.
 
 - **Sleek usability:** The vertical drop-stitch construction eliminates internal wall slanting, allowing for maximum internal floor space for reclining, meditating, or quiet conversation.
 
@@ -25,7 +25,7 @@ Achieving true outdoor comfort requires thoughtful seating solutions inside the 
   - High-density drop-stitch material provides a firm, supportive base. Bathers can use weighted submerged seating cushions or inflatable contour loungers to customize seat height and lumbar support.
 
 - **Comfort depth:**
-  - An effective water depth of 0.55 to 0.70 meters (22 to 28 inches) allows seated bathers to submerge up to chest height without feeling overwhelmed — ideal for muscle relaxation and evening cooling.
+  - With wall heights of 0.8–1 m filled to the marked maximum level, seated bathers submerge to chest height or higher without feeling overwhelmed — ideal for muscle relaxation and evening cooling.
 
 ## 3. Heater Compatibility & Temperature Limits
 

@@ -90,7 +90,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     matches: [
       {
         series: 'round',
-        reason: 'The Ø 2 × 0.5 m and Ø 3 × 1.2 m rounds are the smallest true swimmers in the range — low water volume, fast filling, easy storage.',
+        reason: 'The Ø 2 × 0.5 m (S2005) and Ø 3 × 1.2 m (S3012) rounds are the smallest true swimmers in the range — low water volume, fast filling, easy storage.',
       },
       {
         series: 'hot-tub-square-rect',
@@ -507,11 +507,11 @@ export const POOL_IDEAS: PoolIdea[] = [
       },
       {
         series: 'round',
-        reason: 'A Ø 2.5–3 m low-wall round keeps a cool-soak option open without much water to manage.',
+        reason: 'A Ø 3 × 1 m round (S3010) keeps a cool-soak option open without much water to manage.',
       },
     ],
     tableNote:
-      'Prioritize entry comfort: a rim height around 0.8 m with a stable sitting edge, plus a clear path with no hoses to step over.',
+      'Prioritize entry comfort: the 0.8 m rim of the SPA tubs gives a stable sitting edge, plus a clear path with no hoses to step over.',
     safety: [
       'Enter and exit slowly using the rim and seats; wet surfaces are slippery — keep a non-slip mat at the entry point.',
       'Avoid long solo soaks, especially in heated water; follow heater temperature guidance and consult a doctor where relevant.',

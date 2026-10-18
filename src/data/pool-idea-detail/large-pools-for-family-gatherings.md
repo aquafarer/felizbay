@@ -13,11 +13,13 @@ A common mistake when planning for large gatherings is determining capacity sole
 
 ### Bather capacity & depth guidelines
 
-| Pool Size Tier         | Dimensions (L × W × H)                                  | Actual Water Depth           | Recommended Capacity                    | Ideal Activity Type                                        |
-| ---------------------- | ------------------------------------------------------- | ---------------------------- | --------------------------------------- | ---------------------------------------------------------- |
-| **Large Family**       | 3.0 m × 2.0 m × 0.65 m (10' × 6.5' × 2.1')              | ≈ 0.50–0.55 m (20–22 in)     | **4–6 people** (e.g., 2 adults, 4 kids) | Family lounge, splash games, kid swimming                  |
-| **Party & Event**      | 4.0 m × 2.0 m × 0.75 m (13' × 6.5' × 2.5')              | ≈ 0.60–0.68 m (24–27 in)     | **6–8 people** (e.g., 4 adults, 4 kids) | Social lounging, floating lounges, multi-kid play          |
-| **Extra Large Gathering** | 5.0 m × 2.5 m × 0.85 m (16.5' × 8.2' × 2.8')          | ≈ 0.70–0.78 m (28–31 in)     | **8–12 people** (e.g., 6 adults, 6 kids)| Large pool parties, adult floating, group activities       |
+The tiers below map to real Felizbay catalog models — every dimension, wall height, and wall thickness comes straight from the size chart:
+
+| Pool Size Tier            | Catalog Model                          | Dimensions (Ø × H / L × W × H)  | Wall Thickness | Recommended Capacity                    | Ideal Activity Type                                  |
+| ------------------------- | -------------------------------------- | ------------------------------- | -------------- | --------------------------------------- | ---------------------------------------------------- |
+| **Large Family**          | S3012 round · SR230815 rectangle       | Ø 3 × 1.2 m · 3 × 2 × 0.8 m     | 15 cm          | **4–6 people** (e.g., 2 adults, 4 kids) | Family lounge, splash games, kid swimming            |
+| **Party & Event**         | S4012 round · SR341220 rectangle       | Ø 4 × 1.2 m · 4 × 3 × 1.2 m     | 15 cm · 20 cm  | **6–8 people** (e.g., 4 adults, 4 kids) | Social lounging, floating lounges, multi-kid play    |
+| **Extra Large Gathering** | S5012/S6012 round · SR561550 rectangle | Ø 5–6 × 1.2 m · 6 × 5 × 1.5 m   | 15 cm · 50 cm  | **8–12 people** (e.g., 6 adults, 6 kids)| Large pool parties, adult floating, group activities |
 
 ### Why vertical walls matter for capacity
 
@@ -42,7 +44,7 @@ A large pool needs more than just a footprint matching its exterior size. To ens
 Heavy pool usage during family gatherings introduces sunscreens, body oils, and organic debris into the water. Maintaining sparkling, clear water requires appropriate filtration and chemical care.
 
 - **Filter pump sizing:**
-  - For pools holding 4,000 to 10,000+ liters (1,000 to 2,600+ gallons), pair your pool with a cartridge filter pump or sand filter pump rated at **800 to 1,500 GPH** (gallons per hour).
+  - For large pools holding 7,000 to 30,000+ liters (1,850 to 8,000+ gallons), pair your pool with a cartridge filter pump or sand filter pump rated at **800 to 1,500 GPH** (gallons per hour).
   - **Turnover rate:** Ensure the pump circulates the entire pool volume at least **twice daily**, and run it continuously during and immediately after large parties.
 
 - **Sanitizing & water maintenance:**
