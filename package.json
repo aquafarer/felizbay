@@ -55,7 +55,7 @@
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.2.0",
     "better-auth": "^1.7.3",
-    "drizzle-kit": "^0.31.10",
+    "drizzle-kit": "^0.31.11",
     "drizzle-orm": "^0.45.2",
     "glob": "^13.0.6",
     "gray-matter": "^4.0.3",
