@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: SKU standard
       amount: '48'
-    - title: Tempo di installazione
-      amount: 15-30 min
+    - title: 'Tempo di gonfiaggio'
+      amount: '5-15 min'
     - title: Pressione nominale
       amount: 4-5 PSI
     - title: Garanzia
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Pareti rigide Drop Stitch
-      description: Migliaia di filettature interne bloccano insieme gli strati della parete, quindi la piscina si gonfia con forza come la roccia a 4-5 PSI e mantiene la sua forma una volta riempita.
+      description: 'Migliaia di filettature interne bloccano insieme gli strati della parete, quindi la piscina si gonfia rigidamente alla velocità nominale di 4-5 PSI e mantiene la sua forma una volta riempita.'
       icon: tabler:hexagon
     - title: Configurazione rapida e senza strumenti
       description: Gonfia in pochi minuti con la pompa elettrica inclusa, quindi riempila con un tubo da giardino. Nessuno strumento, nessuna costruzione, nessuna installazione professionale.
       icon: tabler:rocket
     - title: Si ripiega in piccolo
-      description: Scolare, sgonfiare, arrotolare e riporre la piscina in una borsa durante l'inverno. Una piscina a grandezza naturale che sta in un armadio.
+      description: 'Svuota, sgonfia, arrotola e riponi la piscina nella sua borsa durante l''inverno: una piscina a grandezza naturale che si ripiega in dimensioni ridotte per essere riposta al coperto.'
       icon: tabler:package
     - title: Durevole e resistente ai raggi UV
-      description: Il tessuto Drop Stitch in PVC a doppio strato resiste alle forature, all'esposizione ai raggi UV e a un'intera stagione di uso familiare.
+      description: 'Tessuto Drop Stitch in PVC a doppio strato, progettato per resistere alle forature e all''esposizione ai raggi UV durante un''intera stagione di utilizzo in famiglia.'
       icon: tabler:shield
     - title: Pacchetto completo
       description: Ogni piscina viene fornita con una pompa ad aria elettrica, un kit di riparazione e una custodia. Disponibili coperture su misura per i modelli rotondi.
       icon: tabler:box
     - title: Design attento alla sicurezza
-      description: Progettazione di piscine residenziali in riferimento alla norma EN 16582-1 e ASTM F2666, con valvole limitatrici di pressione e pareti rigide stabili. È sempre necessaria la costante supervisione di un adulto.
+      description: 'Progettazione di piscine residenziali con riferimento a EN 16582-1 e ASTM F2666: le informazioni sulla sicurezza specifiche del modello sono fornite nella documentazione del prodotto. È sempre necessaria la costante supervisione di un adulto.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idee per la piscina
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Dalla consegna alla prima nuotata fino al rimessaggio di fine stagione, possedere una piscina Felizbay rimane semplice.
   items:
     - title: Configurazione in pochi minuti
-      description: "Disimballare, gonfiare con la pompa inclusa e riempire: l'installazione completa richiede in genere 15-30 minuti su un terreno solido e pianeggiante."
+      description: 'Disimballare e gonfiare con la pompa inclusa in 5-15 minuti, quindi riempire con un tubo da giardino: il tempo di riempimento varia in base alle dimensioni della piscina e alla fornitura d''acqua.'
       icon: tabler:rocket
     - title: Cura semplice dell'acqua
       description: Le porte standard della pompa filtro da 32/38 mm, i controlli regolari del pH e un coperchio montato sui modelli rotondi mantengono l'acqua pulita.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Quanto tempo richiede la configurazione?
-      description: Il gonfiaggio richiede circa 10 minuti con la pompa ad aria elettrica inclusa; la configurazione completa, compreso il posizionamento e il riempimento, richiede in genere 15-30 minuti.
+      description: 'Il gonfiaggio richiede 5-15 minuti con la pompa ad aria elettrica inclusa a seconda del modello. Il tempo di riempimento varia in base alla capacità della piscina e alla fornitura d''acqua.'
       icon: tabler:clock
       category: all
     - title: Quanto è rigida una piscina Drop Stitch?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Su quali superfici può poggiare la piscina?
-      description: 'Qualsiasi superficie piana e livellata priva di oggetti appuntiti: prato, patio o terrazza. Si consiglia un telo di fondo su superfici ruvide. Verificare che la superficie possa sopportare il peso di una piscina piena.'
+      description: 'Qualsiasi superficie piana e livellata priva di oggetti appuntiti: prato, patio o terrazza. Si consiglia un telo di fondo su superfici ruvide. Una piscina piena è pesante: installala solo su una superficie che ne supporti l''intero peso e fai prima valutare strutturalmente ponti, balconi e tetti sopraelevati.'
       icon: tabler:layout-grid
       category: all
     - title: Come mantengo l'acqua pulita?

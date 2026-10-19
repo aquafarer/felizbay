@@ -9,7 +9,7 @@ Event equipment rental companies, festival producers, and experiential marketing
 
 A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) inflates to a hard, straight-walled structure at its rated 4–5 PSI operating pressure and still folds into a box-truck-friendly package:
 
-- **Fast deploy and strike.** The included 1000W electric pump inflates the hull in 5–15 minutes; full deployment including positioning and filling is typically 15–30 minutes. Teardown reverses it — drain through the high-flow valve, deflate, fold, load.
+- **Fast deploy and strike.** The included 1000W electric pump inflates the hull in 5–15 minutes; full deployment including positioning is typically 15–30 minutes (filling time depends on pool size and water supply). Teardown reverses it — drain through the high-flow valve, deflate, fold, load.
 - **Container-efficient.** Deflated pools ship and store at a small fraction of their inflated volume, so a mixed fleet fits in modest warehouse and truck space.
 - **Clean sightlines.** Straight walls, a neutral exterior, and no external framing photograph well for brand activations and festival backdrops — and accept full-wrap graphics in OEM configurations.
 

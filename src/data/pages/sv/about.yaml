@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Poolsamlingar
       amount: '4'
-    - title: Inställningstid
-      amount: 15-30 min
+    - title: 'Uppblåsningstid'
+      amount: '5-15 min'
     - title: Märktryck
       amount: 4-5 PSI
     - title: Kontakta
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Vår premiumlinje med en modern grå finish och valfritt monterat skydd.
       icon: tabler:circle-dot
     - title: Hot tub SPA pooler
-      description: Fyrasäsongs badtunnamodeller med inbyggda säten och 5 mm isolerad botten.
+      description: 'Modeller med isolerade badtunnor med inbyggda säten och 5 mm isolerad botten — för användning med externa värmare (värmare ingår ej).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Poolsamlingar
-    - value: 15-30 min
-      label: Inställningstid
+    - value: '5-15 min'
+      label: 'Uppblåsningstid'
     - value: 4-5 PSI
       label: Märktryck
 

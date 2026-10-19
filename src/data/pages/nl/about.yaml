@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Zwembadcollecties
       amount: '4'
-    - title: Insteltijd
-      amount: 15-30 min
+    - title: 'Opblaastijd'
+      amount: '5-15 min'
     - title: Nominale druk
       amount: 4-5 PSI
     - title: Contact
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Onze premium lijn met een moderne grijze afwerking en optioneel gemonteerde hoes.
       icon: tabler:circle-dot
     - title: Hot tub SPA-zwembaden
-      description: Vierseizoenen hottubmodellen met ingebouwde zitplaatsen en 5 mm geïsoleerde bodems.
+      description: 'Geïsoleerde hottubmodellen met ingebouwde stoelen en 5 mm geïsoleerde bodems — voor gebruik met externe verwarmingen (verwarming niet inbegrepen).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Zwembadcollecties
-    - value: 15-30 min
-      label: Insteltijd
+    - value: '5-15 min'
+      label: 'Opblaastijd'
     - value: 4-5 PSI
       label: Nominale druk
 

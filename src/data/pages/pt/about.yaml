@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Coleções de piscina
       amount: '4'
-    - title: Tempo de configuração
-      amount: 15-30 min
+    - title: 'Tempo de inflar'
+      amount: '5-15 min'
     - title: Pressão nominal
       amount: 4-5 PSI
     - title: Contato
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Nossa linha premium com acabamento cinza moderno e capa opcional.
       icon: tabler:circle-dot
     - title: Piscinas SPA com banheira de hidromassagem
-      description: Modelos de banheiras de hidromassagem para as quatro estações com assentos embutidos e fundos isolados de 5 mm.
+      description: 'Modelos de banheiras isoladas com assentos embutidos e fundos isolados de 5 mm — para uso com aquecedores externos (aquecedor não incluído).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Coleções de piscina
-    - value: 15-30 min
-      label: Tempo de configuração
+    - value: '5-15 min'
+      label: 'Tempo de inflar'
     - value: 4-5 PSI
       label: Pressão nominal
 

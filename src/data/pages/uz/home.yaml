@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standart SKUlar
       amount: '48'
-    - title: Sozlash vaqti
-      amount: 15-30 min
+    - title: 'Shishirish vaqti'
+      amount: '5-15 min'
     - title: Nominal bosim
       amount: 4-5 PSI
     - title: Kafolat
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Qattiq Drop Stitch devorlari
-      description: Minglab ichki iplar devor qatlamlarini bir-biriga bog'lab turadi, shuning uchun hovuz 4-5 PSI darajasida toshdek qattiq shishiradi va to'ldirilganda shaklini saqlaydi.
+      description: 'Minglab ichki iplar devor qatlamlarini bir-biriga bog''lab turadi, shuning uchun hovuz 4-5 PSI nominalida qattiq shishiradi va to''ldirilganda shaklini saqlaydi.'
       icon: tabler:hexagon
     - title: Tez, asboblarsiz sozlash
       description: Bir necha daqiqada kiritilgan elektr nasos bilan puflang, keyin bog 'shlangi bilan to'ldiring. Asboblar, qurilish yo'q, professional o'rnatish yo'q.
       icon: tabler:rocket
     - title: Kichik paketlar
-      description: Hovuzni to'kib tashlang, o'chiring, o'rang va qishda sumkada saqlang. Shkafga mos keladigan to'liq o'lchamli suzish havzasi.
+      description: 'Hovuzni to''kib tashlang, o''chiring, o''rab oling va qishda o''z sumkasida saqlang - yopiq xonada saqlash uchun kichik hajmdagi to''liq o''lchamli hovuz.'
       icon: tabler:package
     - title: Bardoshli va UV nuriga chidamli
-      description: Ikki qatlamli PVX Drop Stitch mato teshilishlarga, UV ta'siriga va oilaviy foydalanishning to'liq mavsumiga qarshi turadi.
+      description: 'Ikki qavatli PVC drop stitch mato, oilaviy foydalanishning to''liq mavsumi davomida teshilish va UV ta''siriga qarshi turish uchun ishlab chiqilgan.'
       icon: tabler:shield
     - title: Toʻliq toʻplam
       description: Har bir hovuz elektr havo pompasi, ta'mirlash to'plami va saqlash sumkasi bilan birga keladi. Dumaloq modellar uchun o'rnatilgan qopqoqlar mavjud.
       icon: tabler:box
     - title: Xavfsizlik nuqtai nazaridan dizayn
-      description: EN 16582-1 va ASTM F2666 standartlariga mos keladigan turar-joy hovuzining dizayni, bosimni o'chirish klapanlari va barqaror qattiq devorlarga ega. Doimiy kattalar nazorati doimo talab qilinadi.
+      description: 'EN 16582-1 va ASTM F2666 standartlariga mos keladigan turar-joy hovuzining dizayni - modelga oid xavfsizlik ma''lumotlari mahsulot hujjatlarida keltirilgan. Doimiy kattalar nazorati doimo talab qilinadi.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Hovuz g'oyalari
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Yetkazib berishdan tortib, birinchi suzishgacha, mavsum oxirida saqlashgacha, Felizbay hovuziga ega bo'lish oddiy bo'lib qoladi.
   items:
     - title: Bir necha daqiqada sozlash
-      description: Qutidan chiqaring, kiritilgan nasos bilan puflang va to'ldiring - to'liq o'rnatish odatda qattiq, tekis yerda 15-30 daqiqa davom etadi.
+      description: '5-15 daqiqada qutidan chiqarib oling va kiritilgan nasos bilan puflang, keyin bog ''shlangi bilan to''ldiring - to''ldirish vaqti hovuz hajmi va suv ta''minotiga qarab farq qiladi.'
       icon: tabler:rocket
     - title: Oddiy suvni parvarish qilish
       description: Standart 32/38 mm filtr-nasos portlari, muntazam pH tekshiruvlari va dumaloq modellarda o'rnatilgan qopqoq suvni toza saqlaydi.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: O'rnatish qancha vaqt oladi?
-      description: O'rnatilgan elektr havo pompasi bilan shishirish taxminan 10 daqiqa davom etadi; to'liq o'rnatish, shu jumladan joylashtirish va to'ldirish odatda 15-30 minut.
+      description: 'Shamollatish modelga qarab kiritilgan elektr havo pompasi bilan 5-15 daqiqa davom etadi. To''ldirish vaqti hovuz hajmiga va suv ta''minotiga qarab o''zgaradi.'
       icon: tabler:clock
       category: all
     - title: Drop Stitch hovuzi qanchalik qattiq?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Hovuz qanday sirtlarda turishi mumkin?
-      description: O'tkir narsalardan xoli har qanday tekis, tekis sirt - maysazor, veranda yoki pastki. Qo'pol sirtlarda tuproqli varaq tavsiya etiladi. Sirt to'ldirilgan hovuz og'irligiga bardosh bera olishini tekshiring.
+      description: 'O''tkir narsalardan xoli har qanday tekis, tekis sirt - maysazor, veranda yoki pastki. Qo''pol sirtlarda tuproqli varaq tavsiya etiladi. To''ldirilgan hovuz og''ir: faqat to''liq og''irlikni qo''llab-quvvatlaydigan yuzaga o''rnating va birinchi navbatda baland qavatlar, balkonlar va tomlar tuzilmaviy baholanadi.'
       icon: tabler:layout-grid
       category: all
     - title: Qanday qilib suvni toza saqlashim mumkin?

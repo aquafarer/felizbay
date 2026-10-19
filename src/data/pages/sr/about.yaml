@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Kolekcije bazena
       amount: '4'
-    - title: Vreme podešavanja
-      amount: 15-30 min
+    - title: 'Vreme naduvavanja'
+      amount: '5-15 min'
     - title: Nazivni pritisak
       amount: 4-5 PSI
     - title: Kontakt
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Naša premium linija sa modernom sivom završnom obradom i opcionim poklopcem.
       icon: tabler:circle-dot
     - title: SPA bazeni sa hidromasažnom kadom
-      description: Modeli hidromasažne kade za četiri sezone sa ugrađenim sedištima i izolovanim dnom od 5 mm.
+      description: 'Modeli sa izolovanim hidromasažnim kadama sa ugrađenim sedištima i 5 mm izolovana dna — za upotrebu sa spoljnim grejačima (grejač nije uključen).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Kolekcije bazena
-    - value: 15-30 min
-      label: Vreme podešavanja
+    - value: '5-15 min'
+      label: 'Vreme naduvavanja'
     - value: 4-5 PSI
       label: Nazivni pritisak
 

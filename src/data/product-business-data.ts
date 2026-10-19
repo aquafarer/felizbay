@@ -41,7 +41,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
   'hot-tub-square-rect': {
     bestFor: ['families', 'retailers', 'oem'],
     recommendation:
-      'A four-season hot tub that sells beyond the summer pool season. Built-in seats and the 5 mm insulated bottom justify a premium price tier, and seven factory sizes cover solo soakers up to 3 × 2 m party tubs.',
+      'An insulated hot tub that sells beyond the summer pool season when paired with an external heater. Built-in seats and the 5 mm insulated bottom justify a premium price tier, and seven factory sizes cover solo soakers up to 3 × 2 m party tubs.',
     useCase: 'Year-round home spa, wellness and hydrotherapy, glamping and boutique hospitality, vacation rental amenity',
     operatingCost: 'Moderate — heating energy is the main cost; the insulated bottom and a thermal cover keep it down',
     whyBusinessesChooseIt:
@@ -51,7 +51,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
   'hot-tub-round': {
     bestFor: ['families', 'retailers', 'oem'],
     recommendation:
-      'The entry model of the hot tub line. The compact 1.8 m footprint opens sales to apartment balconies and urban courtyards, and the tub doubles as a professional cold plunge bath for the athletic recovery market.',
+      'The entry model of the hot tub line. The compact 1.8 m footprint opens sales to urban courtyards and load-rated balconies, and the tub doubles as a professional cold plunge bath for the athletic recovery market.',
     useCase: 'Balcony and courtyard wellness, cold plunge recovery, compact year-round spa, glamping amenity',
     operatingCost: 'Low to moderate — small water volume heats fast; insulated bottom retains heat between sessions',
     whyBusinessesChooseIt:

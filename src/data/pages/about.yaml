@@ -14,8 +14,8 @@ stats:
   stats:
     - title: Pool collections
       amount: '4'
-    - title: Setup time
-      amount: '15-30 min'
+    - title: Time to inflate
+      amount: '5-15 min'
     - title: Rated pressure
       amount: '4-5 PSI'
     - title: Contact
@@ -37,7 +37,7 @@ features3_what_we_build:
       description: Our premium line with a modern grey finish and optional fitted cover.
       icon: tabler:circle-dot
     - title: Hot tub SPA pools
-      description: Four-season hot tub models with built-in seats and 5 mm insulated bottoms.
+      description: Insulated hot tub models with built-in seats and 5 mm insulated bottoms — for use with external heaters (heater not included).
       icon: tabler:ripple
 
 features3_more:
@@ -149,7 +149,7 @@ global_ops_section:
   stats:
     - value: '4'
       label: 'Pool collections'
-    - value: '15-30 min'
-      label: 'Setup time'
+    - value: '5-15 min'
+      label: 'Time to inflate'
     - value: '4-5 PSI'
       label: 'Rated pressure'

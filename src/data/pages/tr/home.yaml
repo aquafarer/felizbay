@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standart SKU'lar
       amount: '48'
-    - title: Kurulum Süresi
-      amount: 15-30 min
+    - title: 'Şişirme Zamanı'
+      amount: '5-15 min'
     - title: Nominal Basınç
       amount: 4-5 PSI
     - title: Garanti
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Sağlam Drop Stitch Duvarları
-      description: Binlerce iç iplik duvar katmanlarını birbirine kilitler, böylece havuz 4-5 PSI'da kaya gibi sert bir şekilde şişer ve doldurulduğunda şeklini korur.
+      description: 'Binlerce iç diş duvar katmanlarını birbirine kilitler, böylece havuz 4-5 PSI değerinde sert bir şekilde şişer ve doldurulduğunda şeklini korur.'
       icon: tabler:hexagon
     - title: Hızlı, Aletsiz Kurulum
       description: Ürünle birlikte verilen elektrikli pompayla birkaç dakika içinde şişirin, ardından bahçe hortumuyla doldurun. Alet yok, inşaat yok, profesyonel kurulum yok.
       icon: tabler:rocket
     - title: Küçük Paketler
-      description: Havuzu kış boyunca boşaltın, söndürün, toplayın ve bir torbada saklayın. Dolaba sığabilecek tam boy bir yüzme havuzu.
+      description: 'Havuzu boşaltın, söndürün, yuvarlayın ve kış boyunca çantasında saklayın - kapalı alanda depolama için küçük bir şekilde toplanabilen tam boyutlu bir havuz.'
       icon: tabler:package
     - title: Dayanıklı ve UV ışınlarına dayanıklı
-      description: Çift katmanlı PVC Drop Stitch kumaş, delinmelere, UV ışınlarına ve tüm sezon boyunca aile kullanımına karşı dayanıklıdır.
+      description: 'Çift katmanlı PVC drop stitch kumaş, tüm sezon boyunca aile kullanımı boyunca delinmelere ve UV''ye maruz kalmaya karşı dayanıklı olacak şekilde tasarlanmıştır.'
       icon: tabler:shield
     - title: Komple Paket
       description: Her havuz bir elektrikli hava pompası, tamir seti ve saklama çantasıyla birlikte gönderilir. Yuvarlak modeller için gömme kapaklar mevcuttur.
       icon: tabler:box
     - title: Güvenlik Bilincine Sahip Tasarım
-      description: Basınç tahliye vanaları ve sabit sert duvarlarla EN 16582-1 ve ASTM F2666'yı referans alan konut havuzu tasarımı. Sürekli yetişkin gözetimi her zaman gereklidir.
+      description: 'EN 16582-1 ve ASTM F2666''yı referans alan konut havuzu tasarımı — modele özel güvenlik bilgileri ürün belgelerinde verilmektedir. Sürekli yetişkin gözetimi her zaman gereklidir.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Havuz Fikirleri
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Teslimattan ilk yüzmeye ve sezon sonu depolamaya kadar Felizbay havuzuna sahip olmak çok kolay.
   items:
     - title: Dakikalar İçinde Kurulum
-      description: Kutuyu açın, birlikte verilen pompayla şişirin ve doldurun; sert ve düz bir zeminde tam kurulum genellikle 15-30 dakika sürer.
+      description: 'Kutusunu açın ve birlikte verilen pompayla 5-15 dakika içinde şişirin, ardından bahçe hortumuyla doldurun; doldurma süresi havuzun boyutuna ve su kaynağına göre değişir.'
       icon: tabler:rocket
     - title: Basit Su Bakımı
       description: Standart 32/38 mm filtre pompası portları, düzenli pH kontrolleri ve yuvarlak modellerdeki takılı kapak suyu temiz tutar.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Kurulum ne kadar sürer?
-      description: Birlikte verilen elektrikli hava pompasıyla şişirme işlemi yaklaşık 10 dakika sürer; Yerleştirme ve doldurma dahil tam kurulum genellikle 15-30 dakikadır.
+      description: 'Modele bağlı olarak birlikte verilen elektrikli hava pompasıyla şişirme işlemi 5-15 dakika sürer. Doldurma süresi havuz kapasitesine ve su kaynağınıza göre değişir.'
       icon: tabler:clock
       category: all
     - title: Drop Stitch havuzu ne kadar serttir?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Havuz hangi yüzeylerde durabilir?
-      description: Çimenlik, veranda veya teras gibi keskin nesnelerin bulunmadığı herhangi bir düz, düz yüzey. Pürüzlü yüzeylerde zemin örtüsü tavsiye edilir. Yüzeyin dolu havuzun ağırlığını taşıyabildiğini kontrol edin.
+      description: 'Çimenlik, veranda veya teras gibi keskin nesnelerin bulunmadığı herhangi bir düz, düz yüzey. Pürüzlü yüzeylerde zemin örtüsü tavsiye edilir. Dolu bir havuz ağırdır: yalnızca tam ağırlığı destekleyen bir yüzeye monte edin ve öncelikle yükseltilmiş güverte, balkon ve çatıların yapısal olarak değerlendirilmesini sağlayın.'
       icon: tabler:layout-grid
       category: all
     - title: Suyu nasıl temiz tutabilirim?

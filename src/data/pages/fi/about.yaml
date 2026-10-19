@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Allas kokoelmat
       amount: '4'
-    - title: Asennusaika
-      amount: 15-30 min
+    - title: 'Puhallusaika'
+      amount: '5-15 min'
     - title: Nimellispaine
       amount: 4-5 PSI
     - title: Ota yhteyttä
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Premium-sarjamme moderni harmaa viimeistely ja valinnainen asennettu kansi.
       icon: tabler:circle-dot
     - title: Kylpytynnyri SPA-altaat
-      description: Neljän vuodenajan kylpytynnyrimallit, joissa on sisäänrakennetut istuimet ja 5 mm eristetyt pohjat.
+      description: 'Eristetyt kylpytynnyrimallit, joissa on sisäänrakennetut istuimet ja 5 mm eristetyt pohjat — käytettäväksi ulkoisten lämmittimien kanssa (lämmitin ei sisälly toimitukseen).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Allas kokoelmat
-    - value: 15-30 min
-      label: Asennusaika
+    - value: '5-15 min'
+      label: 'Puhallusaika'
     - value: 4-5 PSI
       label: Nimellispaine
 

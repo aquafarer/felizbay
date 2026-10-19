@@ -13,8 +13,8 @@ stats:
   stats:
     - title: אוספי בריכות
       amount: '4'
-    - title: זמן התקנה
-      amount: 15-30 min
+    - title: 'זמן ניפוח'
+      amount: '5-15 min'
     - title: לחץ מדורג
       amount: 4-5 PSI
     - title: מַגָע
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: קו הפרימיום שלנו עם גימור אפור מודרני וכיסוי אופציונלי מצויד.
       icon: tabler:circle-dot
     - title: ג'קוזי בריכות ספא
-      description: דגמי ג'קוזי לארבע עונות עם מושבים מובנים ותחתית מבודדת 5 מ"מ.
+      description: 'דגמי ג''קוזי מבודדים עם מושבים מובנים ותחתית מבודדת 5 mm - לשימוש עם תנורי חימום חיצוניים (מחמם לא כלול).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: אוספי בריכות
-    - value: 15-30 min
-      label: זמן התקנה
+    - value: '5-15 min'
+      label: 'זמן ניפוח'
     - value: 4-5 PSI
       label: לחץ מדורג
 

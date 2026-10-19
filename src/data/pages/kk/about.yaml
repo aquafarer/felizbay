@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Бассейн топтамалары
       amount: '4'
-    - title: Орнату уақыты
-      amount: 15-30 min
+    - title: 'Үрлеу уақыты'
+      amount: '5-15 min'
     - title: Номиналды қысым
       amount: 4-5 PSI
     - title: Байланыс
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Заманауи сұр түсті және қосымша жабдықталған қақпағы бар біздің премиум желісі.
       icon: tabler:circle-dot
     - title: Ыстық ванна СПА бассейндері
-      description: Кіріктірілген отырғыштары мен 5 мм оқшауланған түбі бар төрт маусымдық ванна үлгілері.
+      description: 'Кіріктірілген отырғыштары және 5 mm оқшауланған түбі бар оқшауланған ванна үлгілері — сыртқы жылытқыштармен (жылытқыш қосылмаған) пайдалануға арналған.'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Бассейн топтамалары
-    - value: 15-30 min
-      label: Орнату уақыты
+    - value: '5-15 min'
+      label: 'Үрлеу уақыты'
     - value: 4-5 PSI
       label: Номиналды қысым
 

@@ -2,7 +2,7 @@ origin:
   tagline: 'Our Origin'
   heading: "Built for summer,<br />\n<span class=\"text-sky-600\">engineered to last</span>"
   paragraphs:
-    - 'Felizbay started with a simple frustration: inflatable pools that sagged, leaked, and lasted a single season. We believed a pool could be better — rigid enough to swim laps in, tough enough to survive year after year, and still small enough to store in a closet in winter.'
+    - 'Felizbay started with a simple frustration: inflatable pools that sagged, leaked, and lasted a single season. We believed a pool could be better — rigid enough to swim laps in, tough enough to survive year after year, and still small enough to store indoors in winter.'
     - 'Drop stitch construction — the same technology behind high-pressure inflatable stand-up paddleboards — was the answer. Thousands of internal threads lock the walls rigid under pressure, giving a fabric pool the structure of a hard-sided one.'
     - 'Every Felizbay pool is built around that core: quality materials, tested construction, and honest engineering, at a price a family can justify.'
     - 'Felizbay is designed and operated by <strong>Aquafarer LLC</strong>, USA. Our pools are produced by a long-term manufacturing partner in Qingdao, China, and every unit is 100% pressure-tested before it ships.'
@@ -16,13 +16,13 @@ philosophy:
   cards:
     - emoji: "\U0001F30A"
       title: 'Rigid, Not Saggy'
-      description: 'Drop stitch walls inflate rock-hard and hold their shape at full water pressure. No leaning walls, no sagging water line, no lost depth.'
+      description: 'Drop stitch walls inflate rigid and hold their shape at full water pressure. No leaning walls, no sagging water line, no lost depth.'
     - emoji: "\U0001F527"
       title: 'Built to Last, Not to Replace'
       description: 'The most sustainable pool is the one you do not throw away. UV-resistant, puncture-resistant PVC and quality valves mean seasons of use, not one summer.'
     - emoji: "\U0001F3C6"
       title: 'Summer Made Simple'
-      description: 'Fifteen minutes to set up, ten to fold away. No tools, no frames, no installation crew. Swimming should be the easy part.'
+      description: 'Quick to inflate, ten minutes to fold away. No tools, no frames, no installation crew. Swimming should be the easy part.'
 
 design:
   tagline: 'Design Philosophy'
@@ -38,5 +38,5 @@ design:
       label: 'pressure-tested<br />before packing'
     - value: '4–5'
       label: 'PSI rated<br />working pressure'
-    - value: '15–30'
-      label: 'minute<br />setup'
+    - value: '5–15'
+      label: 'minute<br />inflation'

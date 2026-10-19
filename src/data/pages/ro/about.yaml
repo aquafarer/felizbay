@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Colecții de piscină
       amount: '4'
-    - title: Timp de configurare
-      amount: 15-30 min
+    - title: 'Timp de umflare'
+      amount: '5-15 min'
     - title: Presiune nominală
       amount: 4-5 PSI
     - title: Contact
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Linia noastră premium cu finisaj gri modern și husă opțională montată.
       icon: tabler:circle-dot
     - title: Cadă cu hidromasaj piscine SPA
-      description: Modele de cada cu hidromasaj pentru patru sezoane cu scaune încorporate și fund izolat de 5 mm.
+      description: 'Modele de cada cu hidromasaj izolate cu scaune încorporate și fund izolat de 5 mm — pentru utilizare cu încălzitoare externe (încălzitorul nu este inclus).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Colecții de piscină
-    - value: 15-30 min
-      label: Timp de configurare
+    - value: '5-15 min'
+      label: 'Timp de umflare'
     - value: 4-5 PSI
       label: Presiune nominală
 

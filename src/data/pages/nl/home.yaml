@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standaard SKU's
       amount: '48'
-    - title: Insteltijd
-      amount: 15-30 min
+    - title: 'Opblaastijd'
+      amount: '5-15 min'
     - title: Nominale druk
       amount: 4-5 PSI
     - title: Garantie
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Stijve Drop Stitch-wanden
-      description: Duizenden interne draden houden de wandlagen aan elkaar vast, zodat het zwembad keihard opblaast met 4-5 PSI en zijn vorm behoudt als het gevuld is.
+      description: 'Duizenden interne schroefdraden houden de wandlagen aan elkaar vast, zodat het zwembad stijf opblaast met een nominale snelheid van 4-5 PSI en zijn vorm behoudt wanneer het gevuld is.'
       icon: tabler:hexagon
     - title: Snelle, gereedschapsloze installatie
       description: Binnen enkele minuten opblazen met de meegeleverde elektrische pomp en vervolgens vullen met een tuinslang. Geen gereedschap, geen constructie, geen professionele installatie.
       icon: tabler:rocket
     - title: Klein op te bergen
-      description: Laat het zwembad leeglopen, laat het leeglopen, rol het op en berg het in een zak op in de winter. Een groot zwembad dat in een kast past.
+      description: 'Laat het zwembad leeglopen, laat het leeglopen, rol het op en berg het in de winter op in de zak: een groot zwembad dat klein kan worden opgevouwen voor opslag binnenshuis.'
       icon: tabler:package
     - title: Duurzaam en UV-bestendig
-      description: Dubbellaags PVC-drop-stitch-stof is bestand tegen lekrijden, UV-blootstelling en een volledig seizoen gezinsgebruik.
+      description: 'Dubbellaags PVC drop-stitch-stof, ontworpen om lekrijden en UV-blootstelling te weerstaan ​​gedurende een volledig seizoen gezinsgebruik.'
       icon: tabler:shield
     - title: Compleet pakket
       description: Elk zwembad wordt geleverd met een elektrische luchtpomp, reparatieset en opbergtas. Passende hoezen beschikbaar voor ronde modellen.
       icon: tabler:box
     - title: Veiligheidsbewust ontwerp
-      description: Ontwerp voor een residentieel zwembad volgens EN 16582-1 en ASTM F2666, met overdrukventielen en stabiele stijve wanden. Constant toezicht van een volwassene is altijd vereist.
+      description: 'Ontwerp van residentiële zwembaden met verwijzing naar EN 16582-1 en ASTM F2666 – modelspecifieke veiligheidsinformatie vindt u in de productdocumentatie. Constant toezicht van een volwassene is altijd vereist.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Zwembadideeën
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: 'Van de levering tot de eerste zwembeurt tot de opslag aan het einde van het seizoen: het bezitten van een Felizbay-zwembad blijft eenvoudig.'
   items:
     - title: Installatie in enkele minuten
-      description: 'Uitpakken, opblazen met de meegeleverde pomp en vullen: de volledige installatie duurt doorgaans 15-30 minuten op een stevige, vlakke ondergrond.'
+      description: 'Uitpakken en opblazen met de meegeleverde pomp in 5-15 minuten, daarna vullen met een tuinslang. De vultijd varieert afhankelijk van de grootte van het zwembad en de watertoevoer.'
       icon: tabler:rocket
     - title: Eenvoudige waterverzorging
       description: Standaard filterpomppoorten van 32/38 mm, regelmatige pH-controles en een passend deksel op ronde modellen houden het water schoon.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Hoe lang duurt het instellen?
-      description: Opblazen duurt ongeveer 10 minuten met de meegeleverde elektrische luchtpomp; De volledige installatie, inclusief plaatsing en vullen, duurt doorgaans 15-30 minuten.
+      description: 'Het opblazen duurt 5-15 minuten met de meegeleverde elektrische luchtpomp, afhankelijk van het model. De vultijd is afhankelijk van de zwembadcapaciteit en uw watervoorziening.'
       icon: tabler:clock
       category: all
     - title: Hoe stijf is een drop-stitch-zwembad?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Op welke oppervlakken kan het zwembad staan?
-      description: Elk vlak, horizontaal oppervlak zonder scherpe voorwerpen – gazon, terras of terras. Op ruwe ondergronden wordt een grondzeil aanbevolen. Controleer of het oppervlak het gewicht van een gevuld zwembad kan dragen.
+      description: 'Elk vlak, horizontaal oppervlak zonder scherpe voorwerpen – gazon, terras of terras. Op ruwe ondergronden wordt een grondzeil aanbevolen. Een gevuld zwembad is zwaar: installeer het alleen op een oppervlak dat het volledige gewicht kan dragen, en laat verhoogde terrassen, balkons en daken eerst structureel beoordelen.'
       icon: tabler:layout-grid
       category: all
     - title: Hoe houd ik het water schoon?

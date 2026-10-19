@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standart SKU-lar
       amount: '48'
-    - title: Quraşdırma vaxtı
-      amount: 15-30 min
+    - title: 'Şişirmə vaxtı'
+      amount: '5-15 min'
     - title: Nominal təzyiq
       amount: 4-5 PSI
     - title: Zəmanət
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Sərt Drop Stitch Divarları
-      description: Minlərlə daxili iplər divar təbəqələrini bir-birinə bağlayır, buna görə də hovuz 4-5 PSI-da qaya kimi sərt şəkildə şişirilir və doldurulduqda formasını saxlayır.
+      description: 'Minlərlə daxili iplər divar təbəqələrini bir-birinə bağlayır, beləliklə hovuz 4-5 PSI nominalında sərt şəkildə şişirilir və doldurulduqda formasını saxlayır.'
       icon: tabler:hexagon
     - title: Sürətli, Alətsiz Quraşdırma
       description: Daxil olan elektrik nasosu ilə bir neçə dəqiqə ərzində şişirdin, sonra bağ şlanqı ilə doldurun. Alət yoxdur, tikinti yoxdur, peşəkar quraşdırma yoxdur.
       icon: tabler:rocket
     - title: Paketlər Kiçik
-      description: Hovuzu boşaltın, söndürün, yuvarlayın və qışda bir çantada saxlayın. Şkafa uyğun tam ölçülü hovuz.
+      description: 'Hovuzu boşaltın, söndürün, yuvarlayın və qışda çantasında saxlayın - qapalı saxlama üçün kiçik bir yerə yığılan tam ölçülü hovuz.'
       icon: tabler:package
     - title: Davamlı və UV-Davamlıdır
-      description: İki qatlı PVC Drop Stitch parça deşilmələrə, UV şüalarına və ailənin tam istifadəsinə davamlıdır.
+      description: 'İki qatlı PVC drop stitch parça, ailənin tam mövsümü boyunca deşilmələrə və UV məruz qalmasına müqavimət göstərmək üçün hazırlanmışdır.'
       icon: tabler:shield
     - title: Tam Paket
       description: Hər hovuz elektrik hava nasosu, təmir dəsti və saxlama çantası ilə təchiz olunur. Dəyirmi modellər üçün quraşdırılmış örtüklər mövcuddur.
       icon: tabler:box
     - title: Təhlükəsizlik şüurlu dizayn
-      description: EN 16582-1 və ASTM F2666 standartlarına istinad edən yaşayış hovuzunun dizaynı, təzyiqi azaltma klapanları və sabit sərt divarları ilə. Daimi böyüklərin nəzarəti həmişə tələb olunur.
+      description: 'EN 16582-1 və ASTM F2666 standartlarına istinad edən yaşayış hovuzunun dizaynı — modelə aid təhlükəsizlik məlumatı məhsul sənədlərində verilmişdir. Daimi böyüklərin nəzarəti həmişə tələb olunur.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Hovuz ideyaları
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Çatdırılmadan ilk üzməyə, mövsümün sonunda saxlanmaya qədər Felizbay hovuzuna sahib olmaq sadədir.
   items:
     - title: Dəqiqədə quraşdırma
-      description: Qutudan çıxarın, daxil olan nasosla şişirdin və doldurun — möhkəm, düz zəmində tam quraşdırma adətən 15-30 dəqiqə çəkir.
+      description: 'Qutudan çıxarın və daxil olan nasosla 5-15 dəqiqə ərzində doldurun, sonra bağ şlanqı ilə doldurun — doldurma vaxtı hovuzun ölçüsünə və su təchizatına görə dəyişir.'
       icon: tabler:rocket
     - title: Sadə Su Qulluğu
       description: Standart 32/38 mm filtr-nasos portları, müntəzəm pH yoxlamaları və yuvarlaq modellərdə quraşdırılmış qapaq suyu təmiz saxlayır.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Quraşdırma nə qədər vaxt aparır?
-      description: Daxil edilmiş elektrik hava nasosu ilə şişirmə təxminən 10 dəqiqə çəkir; yerləşdirmə və doldurma daxil olmaqla tam quraşdırma adətən 15-30 dəqiqədir.
+      description: 'Modeldən asılı olaraq daxil olan elektrik hava nasosu ilə şişirmə 5-15 dəqiqə çəkir. Doldurma vaxtı hovuzun tutumu və su təchizatınıza görə dəyişir.'
       icon: tabler:clock
       category: all
     - title: Drop Stitch hovuzu nə qədər sərtdir?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Hovuz hansı səthlərdə dayana bilər?
-      description: Kəskin əşyalar olmayan hər hansı düz, səviyyəli səth - qazon, veranda və ya göyərtə. Kobud səthlərdə torpaq təbəqəsi tövsiyə olunur. Səthin doldurulmuş hovuzun ağırlığını daşıya biləcəyini yoxlayın.
+      description: 'Kəskin əşyalar olmayan hər hansı düz, səviyyəli səth - qazon, veranda və ya göyərtə. Kobud səthlərdə torpaq təbəqəsi tövsiyə olunur. Doldurulmuş hovuz ağırdır: yalnız tam çəkiyə tab gətirən səthə quraşdırın və ilk növbədə yüksək göyərtələr, eyvanlar və dam örtükləri struktur olaraq qiymətləndirilməlidir.'
       icon: tabler:layout-grid
       category: all
     - title: Suyu necə təmiz saxlaya bilərəm?

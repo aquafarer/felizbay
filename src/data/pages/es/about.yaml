@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Colecciones de piscinas
       amount: '4'
-    - title: tiempo de configuración
-      amount: 15-30 min
+    - title: 'Tiempo de inflado'
+      amount: '5-15 min'
     - title: Presión nominal
       amount: 4-5 PSI
     - title: Contacto
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Nuestra línea premium con un moderno acabado gris y cubierta integrada opcional.
       icon: tabler:circle-dot
     - title: Jacuzzi piscinas SPA
-      description: Modelos de spa de cuatro estaciones con asientos incorporados y fondos aislados de 5 mm.
+      description: 'Modelos de jacuzzi aislados con asientos incorporados y fondos aislados de 5 mm, para uso con calentadores externos (calentador no incluido).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Colecciones de piscinas
-    - value: 15-30 min
-      label: tiempo de configuración
+    - value: '5-15 min'
+      label: 'Tiempo de inflado'
     - value: 4-5 PSI
       label: Presión nominal
 

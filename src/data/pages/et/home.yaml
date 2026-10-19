@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standardsed SKU-d
       amount: '48'
-    - title: Seadistamise aeg
-      amount: 15-30 min
+    - title: 'Puhumisaeg'
+      amount: '5-15 min'
     - title: Nimirõhk
       amount: 4-5 PSI
     - title: Garantii
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Jäigad Drop Stitch seinad
-      description: Tuhanded sisekeermed lukustavad seinakihid kokku, nii et bassein paisub kivikõvaks 4–5 PSI juures ja säilitab täitmisel oma kuju.
+      description: 'Tuhanded sisekeermed lukustavad seinakihid kokku, nii et bassein pumbatakse jäigaks 4–5 PSI juures ja säilitab täitmisel oma kuju.'
       icon: tabler:hexagon
     - title: Kiire ja tööriistavaba seadistamine
       description: Täitke kaasasoleva elektripumbaga minutitega, seejärel täitke aiavoolikuga. Ei mingeid tööriistu, ehitust ega professionaalset paigaldust.
       icon: tabler:rocket
     - title: Pakid ära väikesed
-      description: Tühjendage, tühjendage, rullige kokku ja hoidke bassein talvel kotis. Täissuuruses bassein, mis mahub kappi.
+      description: 'Tühjendage, tühjendage, rullige kokku ja hoidke bassein talvel kotis – täissuuruses bassein, mis on siseruumides hoiustamiseks väike.'
       icon: tabler:package
     - title: Vastupidav ja UV-kindel
-      description: Kahekihiline PVC Drop Stitch-kangas talub läbitorkeid, UV-kiirgust ja tervet hooaega peres kasutamiseks.
+      description: 'Kahekihiline PVC drop stitch kangas, mis on konstrueeritud nii, et see talub torke ja UV kokkupuudet terve pere kasutushooaja jooksul.'
       icon: tabler:shield
     - title: Täielik pakett
       description: Iga basseiniga on kaasas elektriline õhupump, remondikomplekt ja hoiukott. Ümmargustele mudelitele on saadaval paigaldatud katted.
       icon: tabler:box
     - title: Ohutustundlik disain
-      description: Elamu basseini disain, mis vastab standarditele EN 16582-1 ja ASTM F2666, rõhualandusventiilide ja stabiilsete jäikade seintega. Alati on vajalik täiskasvanu pidev järelevalve.
+      description: 'Elamu basseini projekt, mis viitab standarditele EN 16582-1 ja ASTM F2666 – mudelispetsiifiline ohutusteave on toodud toote dokumentatsioonis. Alati on vajalik täiskasvanu pidev järelevalve.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Basseini ideed
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Alates tarnimisest kuni esimese ujumiseni kuni hooaja lõpu hoiustamiseni on Felizbay basseini omamine lihtne.
   items:
     - title: Seadistamine minutitega
-      description: Lahutage kast, täitke kaasasoleva pumbaga ja täitke – kindlal tasasel pinnal kulub täielikuks seadistamiseks tavaliselt 15–30 minutit.
+      description: 'Eemaldage kast ja täitke 5–15 minutiga kaasasoleva pumbaga, seejärel täitke aiavoolikuga – täitmisaeg sõltub basseini suurusest ja veevarustusest.'
       icon: tabler:rocket
     - title: Lihtne veehooldus
       description: Standardsed 32/38 mm filtripumba pordid, regulaarne pH kontroll ja ümarate mudelite paigaldatud kate hoiavad vee puhtana.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Kui kaua seadistamine aega võtab?
-      description: Täitmine võtab kaasasoleva elektrilise õhupumbaga umbes 10 minutit; täielik seadistamine, sealhulgas paigutus ja täitmine, kestab tavaliselt 15–30 minutit.
+      description: 'Täitmine võtab olenevalt mudelist kaasasoleva elektrilise õhupumbaga 5-15 minutit. Täitmisaeg sõltub basseini mahust ja veevarust.'
       icon: tabler:clock
       category: all
     - title: Kui jäik on Drop Stitchi bassein?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Millistel pindadel võib bassein seista?
-      description: Iga tasane ja tasane pind, millel pole teravaid esemeid – muru, terrass või terrass. Karedatel pindadel on soovitatav lihvida. Kontrollige, kas pind talub täidetud basseini raskust.
+      description: 'Iga tasane ja tasane pind, millel pole teravaid esemeid – muru, terrass või terrass. Karedatel pindadel on soovitatav lihvida. Täidetud bassein on raske: paigaldage ainult täismassi kandvale pinnale ning laske esmalt hinnata kõrgendatud tekke, rõdusid ja katusi.'
       icon: tabler:layout-grid
       category: all
     - title: Kuidas ma veen puhtana hoian?

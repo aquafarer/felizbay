@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: SKU standard
       amount: '48'
-    - title: Masa Persediaan
-      amount: 15-30 min
+    - title: 'Masa pengembungan'
+      amount: '5-15 min'
     - title: Tekanan Ternilai
       amount: 4-5 PSI
     - title: Waranti
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Dinding Drop Stitch Tegar
-      description: Beribu-ribu benang dalaman mengunci lapisan dinding bersama-sama, jadi kolam mengembang kuat batu pada 4-5 PSI dan mengekalkan bentuknya apabila diisi.
+      description: 'Beribu-ribu benang dalaman mengunci lapisan dinding bersama-sama, jadi kolam mengembang tegar pada nilai 4-5 PSI dan mengekalkan bentuknya apabila diisi.'
       icon: tabler:hexagon
     - title: Persediaan Cepat, Tanpa Alat
       description: Tiup dengan pam elektrik yang disertakan dalam beberapa minit, kemudian isi dengan hos taman. Tiada alat, tiada pembinaan, tiada pemasangan profesional.
       icon: tabler:rocket
     - title: Bungkus Kecil
-      description: Toskan, kempiskan, gulung dan simpan kolam dalam beg sepanjang musim sejuk. Kolam renang bersaiz penuh yang muat di dalam almari.
+      description: 'Toskan, kempiskan, gulung dan simpan kolam di dalam begnya sepanjang musim sejuk — kolam bersaiz penuh yang dibungkus kecil untuk simpanan dalaman.'
       icon: tabler:package
     - title: Tahan Lama & Tahan UV
-      description: Fabrik Drop Stitch PVC dua lapisan tahan tusukan, pendedahan UV dan musim penuh penggunaan keluarga.
+      description: 'Fabrik PVC drop stitch dua lapisan, direka bentuk untuk menahan tusukan dan pendedahan UV sepanjang musim penuh penggunaan keluarga.'
       icon: tabler:shield
     - title: Pakej Lengkap
       description: Setiap kolam dihantar dengan pam udara elektrik, kit pembaikan dan beg penyimpanan. Sarung yang dipasang tersedia untuk model bulat.
       icon: tabler:box
     - title: Reka Bentuk Sedar Keselamatan
-      description: Reka bentuk kolam kediaman merujuk EN 16582-1 dan ASTM F2666, dengan injap pelepas tekanan dan dinding tegar yang stabil. Pengawasan orang dewasa yang berterusan sentiasa diperlukan.
+      description: 'Reka bentuk kolam kediaman merujuk EN 16582-1 dan ASTM F2666 — maklumat keselamatan khusus model disediakan dalam dokumentasi produk. Pengawasan orang dewasa yang berterusan sentiasa diperlukan.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idea Kolam
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Dari penghantaran hingga berenang pertama hingga penyimpanan akhir musim, memiliki kolam Felizbay kekal mudah.
   items:
     - title: Persediaan dalam Minit
-      description: Buka kotak, tiup dengan pam yang disertakan dan isi — persediaan penuh biasanya mengambil masa 15-30 minit di atas tanah yang kukuh dan rata.
+      description: 'Buka kotak dan tiup dengan pam yang disertakan dalam 5-15 minit, kemudian isi dengan hos taman — masa pengisian berbeza mengikut saiz kolam dan bekalan air.'
       icon: tabler:rocket
     - title: Penjagaan Air Mudah
       description: Port pam penapis 32/38 mm standard, pemeriksaan pH biasa dan penutup yang dipasang pada model bulat memastikan air bersih.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Berapa lama masa persediaan?
-      description: Mengembung mengambil masa kira-kira 10 minit dengan pam udara elektrik yang disertakan; persediaan penuh termasuk penempatan dan pengisian biasanya 15-30 minit.
+      description: 'Mengembung mengambil masa 5-15 minit dengan pam udara elektrik yang disertakan bergantung pada model. Masa pengisian berbeza mengikut kapasiti kolam dan bekalan air anda.'
       icon: tabler:clock
       category: all
     - title: Seberapa tegar kolam Drop Stitch?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Apakah permukaan kolam boleh berdiri?
-      description: Mana-mana permukaan rata dan rata tanpa objek tajam - rumput, teres atau geladak. Lembaran tanah disyorkan pada permukaan kasar. Periksa sama ada permukaan boleh menanggung berat kolam yang diisi.
+      description: 'Mana-mana permukaan rata dan rata tanpa objek tajam - rumput, teres atau geladak. Lembaran tanah disyorkan pada permukaan kasar. Kolam yang diisi adalah berat: pasang hanya pada permukaan yang menyokong berat penuh dan mempunyai geladak tinggi, balkoni dan bumbung yang dinilai secara strukturnya terlebih dahulu.'
       icon: tabler:layout-grid
       category: all
     - title: Bagaimanakah saya memastikan air bersih?

@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Szabványos cikkszámok
       amount: '48'
-    - title: Beállítási idő
-      amount: 15-30 min
+    - title: 'Felfújási idő'
+      amount: '5-15 min'
     - title: Névleges nyomás
       amount: 4-5 PSI
     - title: Garancia
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Merev Drop Stitch falak
-      description: Több ezer belső szál rögzíti egymáshoz a falrétegeket, így a medence 4-5 PSI-vel kőkeményen felfújódik, és megtöltéskor megtartja alakját.
+      description: 'Több ezer belső menet rögzíti egymáshoz a falrétegeket, így a medence 4-5 PSI névleges nyomással mereven felfújódik, és megtöltéskor megtartja alakját.'
       icon: tabler:hexagon
     - title: Gyors, szerszámmentes beállítás
       description: Fújja fel a mellékelt elektromos szivattyúval percek alatt, majd töltse fel kerti tömlővel. Nincsenek szerszámok, nincs építés, nincs szakszerű telepítés.
       icon: tabler:rocket
     - title: Kicsit csomagolva
-      description: Engedje le, eressze le, tekerje fel és tárolja a medencét zacskóban télen. Szekrényben elférő teljes méretű medence.
+      description: 'Engedje le, eressze le, tekerje fel, és tárolja a medencét a táskájában télen – egy teljes méretű medence, amely kis méretű beltéri tárolásra alkalmas.'
       icon: tabler:package
     - title: Tartós és UV-álló
-      description: A kétrétegű PVC Drop Stitch anyag ellenáll a szúrásnak, az UV-sugárzásnak és a teljes családi használatra.
+      description: 'Kétrétegű PVC drop stitch szövet, amelyet úgy terveztek, hogy ellenálljon a szúrásoknak és a UV expozíciónak a teljes családi használat során.'
       icon: tabler:shield
     - title: Komplett csomag
       description: Minden medencét elektromos légszivattyúval, javítókészlettel és tárolótáskával szállítunk. Kerek modellekhez felszerelt burkolatok kaphatók.
       icon: tabler:box
     - title: Biztonságtudatos tervezés
-      description: Lakossági medence kialakítása EN 16582-1 és ASTM F2666 szabvány szerint, nyomáscsökkentő szelepekkel és stabil merev falakkal. Állandó felnőtt felügyelet szükséges.
+      description: 'A lakómedencék tervezése az EN 16582-1 és az ASTM F2666 szabványnak megfelelően – a modellspecifikus biztonsági információk a termékdokumentációban találhatók. Állandó felnőtt felügyelet szükséges.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Medence ötletek
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: A szállítástól az első úszáson át a szezon végi tárolásig a Felizbay medence birtoklása egyszerű marad.
   items:
     - title: Beállítás percekben
-      description: Bontsa ki a dobozt, fújja fel a mellékelt pumpával, és töltse fel – a teljes beállítás szilárd, vízszintes talajon általában 15-30 percet vesz igénybe.
+      description: 'Bontsa ki és fújja fel a mellékelt szivattyúval 5-15 perc alatt, majd töltse fel kerti tömlővel – a feltöltési idő a medence méretétől és a vízellátástól függően változik.'
       icon: tabler:rocket
     - title: Egyszerű vízkezelés
       description: A szabványos 32/38 mm-es szűrőszivattyú-csatlakozók, a rendszeres pH-ellenőrzés és a kerek modellek felszerelt burkolata tisztán tartják a vizet.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Mennyi ideig tart a beállítás?
-      description: A felfújás körülbelül 10 percet vesz igénybe a mellékelt elektromos légszivattyúval; a teljes beállítás, beleértve az elhelyezést és a feltöltést, általában 15-30 percet vesz igénybe.
+      description: 'A felfújás 5-15 percet vesz igénybe a mellékelt elektromos légszivattyúval típustól függően. A feltöltési idő a medence kapacitásától és a vízellátástól függően változik.'
       icon: tabler:clock
       category: all
     - title: Mennyire merev a Drop Stitch medence?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Milyen felületeken állhat a medence?
-      description: Bármilyen sík, vízszintes felület, éles tárgyaktól mentes – pázsit, terasz vagy fedélzet. Durva felületeken köszörült lemez használata javasolt. Ellenőrizze, hogy a felület elbírja-e egy feltöltött medence súlyát.
+      description: 'Bármilyen sík, vízszintes felület, éles tárgyaktól mentes – pázsit, terasz vagy fedélzet. Durva felületeken köszörült lemez használata javasolt. A feltöltött medence nehéz: csak olyan felületre szerelje fel, amely elbírja a teljes súlyt, és először vizsgálja meg a megemelt fedélzeteket, erkélyeket és tetőket.'
       icon: tabler:layout-grid
       category: all
     - title: Hogyan tartsam tisztán a vizet?

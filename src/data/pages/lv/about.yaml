@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Baseinu kolekcijas
       amount: '4'
-    - title: Iestatīšanas laiks
-      amount: 15-30 min
+    - title: 'Uzpūšanas laiks'
+      amount: '5-15 min'
     - title: Nominālais spiediens
       amount: 4-5 PSI
     - title: Sazināties
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Mūsu augstākās kvalitātes līnija ar modernu pelēku apdari un pēc izvēles piestiprinātu vāku.
       icon: tabler:circle-dot
     - title: Karstās vannas SPA baseini
-      description: Četru sezonu burbuļvannu modeļi ar iebūvētiem sēdekļiem un 5 mm izolētu dibenu.
+      description: 'Izolēti burbuļvannu modeļi ar iebūvētiem sēdekļiem un 5 mm izolētiem dibeniem — izmantošanai ar ārējiem sildītājiem (sildītājs nav iekļauts komplektā).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Baseinu kolekcijas
-    - value: 15-30 min
-      label: Iestatīšanas laiks
+    - value: '5-15 min'
+      label: 'Uzpūšanas laiks'
     - value: 4-5 PSI
       label: Nominālais spiediens
 

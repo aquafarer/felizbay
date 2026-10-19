@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Hovuz kolleksiyaları
       amount: '4'
-    - title: Quraşdırma vaxtı
-      amount: 15-30 min
+    - title: 'Şişirmə vaxtı'
+      amount: '5-15 min'
     - title: Nominal təzyiq
       amount: 4-5 PSI
     - title: Əlaqə
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Müasir boz rəngə və isteğe bağlı quraşdırılmış örtüyə malik premium xəttimiz.
       icon: tabler:circle-dot
     - title: İsti vanna SPA hovuzları
-      description: Quraşdırılmış oturacaqlar və 5 mm izolyasiya edilmiş dibləri olan dörd mövsüm isti vanna modelləri.
+      description: 'Daxili oturacaqları və 5 mm izolyasiyalı dibləri olan izolyasiya edilmiş isti vanna modelləri - xarici qızdırıcılarla istifadə üçün (qızdırıcı daxil deyil).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Hovuz kolleksiyaları
-    - value: 15-30 min
-      label: Quraşdırma vaxtı
+    - value: '5-15 min'
+      label: 'Şişirmə vaxtı'
     - value: 4-5 PSI
       label: Nominal təzyiq
 

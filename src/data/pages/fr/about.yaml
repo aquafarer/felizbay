@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Collections de piscine
       amount: '4'
-    - title: Temps d'installation
-      amount: 15-30 min
+    - title: 'Temps de gonflage'
+      amount: '5-15 min'
     - title: Pression nominale
       amount: 4-5 PSI
     - title: Contact
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Notre ligne haut de gamme avec une finition grise moderne et une housse ajustée en option.
       icon: tabler:circle-dot
     - title: Piscines spa spa
-      description: Modèles de spas quatre saisons avec sièges intégrés et fonds isolés de 5 mm.
+      description: 'Modèles de spas isolés avec sièges intégrés et fonds isolés de 5 mm — à utiliser avec des radiateurs externes (appareil de chauffage non inclus).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Collections de piscine
-    - value: 15-30 min
-      label: Temps d'installation
+    - value: '5-15 min'
+      label: 'Temps de gonflage'
     - value: 4-5 PSI
       label: Pression nominale
 

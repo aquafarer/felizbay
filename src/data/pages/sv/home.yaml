@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standard SKU:er
       amount: '48'
-    - title: Inställningstid
-      amount: 15-30 min
+    - title: 'Uppblåsningstid'
+      amount: '5-15 min'
     - title: Nominellt tryck
       amount: 4-5 PSI
     - title: Garanti
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Styva Drop Stitch-väggar
-      description: Tusentals invändiga gängor låser ihop vägglagren, så poolen blåser upp stenhårt vid 4-5 PSI och behåller sin form när den fylls.
+      description: 'Tusentals invändiga gängor låser ihop vägglagren, så att poolen blåser upp styvt vid nominella 4-5 PSI och behåller sin form när den fylls.'
       icon: tabler:hexagon
     - title: Snabb, verktygsfri installation
       description: Blås upp med den medföljande elektriska pumpen på några minuter och fyll sedan med en trädgårdsslang. Inga verktyg, ingen konstruktion, ingen professionell installation.
       icon: tabler:rocket
     - title: Packar bort små
-      description: Töm, töm ut luften, rulla ihop och förvara poolen i en påse över vintern. En pool i full storlek som får plats i en garderob.
+      description: 'Töm, töm ut luften, rulla ihop och förvara poolen i sin påse över vintern - en fullstor pool som packar ihop lite för inomhusförvaring.'
       icon: tabler:package
     - title: Hållbar och UV-beständig
-      description: Dubbellager PVC Drop Stitch-tyg motstår punkteringar, UV-exponering och en hel säsong av familjeanvändning.
+      description: 'Dubbellager PVC drop stitch-tyg, konstruerat för att motstå punkteringar och UV-exponering genom en hel säsong av familjeanvändning.'
       icon: tabler:shield
     - title: Komplett paket
       description: Varje pool levereras med en elektrisk luftpump, reparationssats och förvaringsväska. Passade överdrag tillgängliga för runda modeller.
       icon: tabler:box
     - title: Säkerhetsmedveten design
-      description: Bostadspooldesign med hänvisning till EN 16582-1 och ASTM F2666, med övertrycksventiler och stabila styva väggar. Ständig vuxenövervakning krävs alltid.
+      description: 'Bostadspooldesign med hänvisning till EN 16582-1 och ASTM F2666 — modellspecifik säkerhetsinformation finns i produktdokumentationen. Ständig vuxenövervakning krävs alltid.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pool idéer
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Från leverans till första simtur till förvaring vid slutet av säsongen är det enkelt att äga en Felizbay-pool.
   items:
     - title: Installation på några minuter
-      description: Packa upp, blås upp med den medföljande pumpen och fyll på — en fullständig installation tar vanligtvis 15-30 minuter på fast, jämn mark.
+      description: 'Packa upp och blåsa upp med den medföljande pumpen på 5-15 minuter, fyll sedan med en trädgårdsslang – påfyllningstiden varierar med poolstorlek och vattentillförsel.'
       icon: tabler:rocket
     - title: Enkel vattenvård
       description: Standard 32/38 mm filterpumpportar, regelbundna pH-kontroller och ett monterat lock på runda modeller håller vattnet rent.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Hur lång tid tar installationen?
-      description: Uppblåsning tar cirka 10 minuter med den medföljande elektriska luftpumpen; fullständig installation inklusive placering och fyllning är vanligtvis 15-30 minuter.
+      description: 'Uppblåsningen tar 5-15 minuter med den medföljande elektriska luftpumpen beroende på modell. Påfyllningstiden varierar med poolens kapacitet och din vattenförsörjning.'
       icon: tabler:clock
       category: all
     - title: Hur stel är en Drop Stitch-pool?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Vilka ytor kan poolen stå på?
-      description: Alla plana, jämna ytor fria från vassa föremål - gräsmatta, uteplats eller däck. En markduk rekommenderas på grova ytor. Kontrollera att ytan tål vikten av en fylld pool.
+      description: 'Alla plana, jämna ytor fria från vassa föremål - gräsmatta, uteplats eller däck. En markduk rekommenderas på grova ytor. En fylld pool är tung: installera endast på en yta som bär hela vikten och ha förhöjda däck, balkonger och hustak strukturellt bedömda först.'
       icon: tabler:layout-grid
       category: all
     - title: Hur håller jag vattnet rent?

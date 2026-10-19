@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standardowe jednostki SKU
       amount: '48'
-    - title: Czas konfiguracji
-      amount: 15-30 min
+    - title: 'Czas pompowania'
+      amount: '5-15 min'
     - title: Ciśnienie znamionowe
       amount: 4-5 PSI
     - title: Gwarancja
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Sztywne ściany Drop Stitch
-      description: Tysiące wewnętrznych gwintów łączy ze sobą warstwy ścian, dzięki czemu basen napompowuje się do twardości skały przy ciśnieniu 4-5 PSI i zachowuje swój kształt po napełnieniu.
+      description: 'Tysiące wewnętrznych gwintów łączy ze sobą warstwy ścian, dzięki czemu basen napełnia się sztywno przy znamionowym ciśnieniu 4-5 PSI i zachowuje swój kształt po napełnieniu.'
       icon: tabler:hexagon
     - title: Szybka konfiguracja bez użycia narzędzi
       description: Napompuj za pomocą dołączonej pompy elektrycznej w ciągu kilku minut, a następnie napełnij wężem ogrodowym. Bez narzędzi, bez konstrukcji, bez profesjonalnego montażu.
       icon: tabler:rocket
     - title: Pakuje się w małych rozmiarach
-      description: Odcedź, wypuść powietrze, zwiń i przechowuj basen w torbie przez zimę. Pełnowymiarowy basen mieszczący się w szafie.
+      description: 'Odcedź, wypuść powietrze, zwiń i przechowuj basen w torbie przez zimę — pełnowymiarowy basen, który po złożeniu jest niewielki i można go przechowywać w pomieszczeniu.'
       icon: tabler:package
     - title: Trwałe i odporne na promieniowanie UV
-      description: Dwuwarstwowa tkanina Drop Stitch z PVC jest odporna na przebicia, promieniowanie UV i cały sezon rodzinnego użytku.
+      description: 'Dwuwarstwowy materiał PVC drop stitch, zaprojektowany tak, aby był odporny na przebicia i narażenie na działanie UV przez cały sezon rodzinnego użytkowania.'
       icon: tabler:shield
     - title: Kompletny pakiet
       description: Każdy basen jest dostarczany z elektryczną pompą powietrza, zestawem naprawczym i torbą do przechowywania. Do modeli okrągłych dostępne są dopasowane pokrowce.
       icon: tabler:box
     - title: Projekt uwzględniający bezpieczeństwo
-      description: Projekt basenu mieszkalnego zgodny z normami EN 16582-1 i ASTM F2666, z zaworami nadmiarowymi i stabilnymi, sztywnymi ścianami. Zawsze wymagany jest stały nadzór osoby dorosłej.
+      description: 'Projekt basenu mieszkalnego zgodny z normami EN 16582-1 i ASTM F2666 — informacje dotyczące bezpieczeństwa dotyczące konkretnego modelu znajdują się w dokumentacji produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pomysły na basen
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Od dostawy, przez pierwsze pływanie, aż po przechowywanie na koniec sezonu, posiadanie basenu Felizbay pozostaje proste.
   items:
     - title: Konfiguracja w kilka minut
-      description: Rozpakuj, napompuj za pomocą dołączonej pompki i napełnij — pełna konfiguracja zajmuje zwykle 15–30 minut na twardym, równym podłożu.
+      description: 'Rozpakuj i napompuj za pomocą dołączonej pompy w ciągu 5–15 minut, a następnie napełnij wężem ogrodowym — czas napełniania różni się w zależności od wielkości basenu i zaopatrzenia w wodę.'
       icon: tabler:rocket
     - title: Prosta pielęgnacja wody
       description: Standardowe porty pompy filtrującej 32/38 mm, regularne kontrole pH i dopasowana pokrywa w modelach okrągłych utrzymują wodę w czystości.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Jak długo trwa konfiguracja?
-      description: Napompowanie za pomocą dołączonej elektrycznej pompki zajmuje około 10 minut; pełna konfiguracja, w tym umieszczanie i napełnianie, trwa zwykle 15–30 minut.
+      description: 'Napompowanie za pomocą dołączonej elektrycznej pompki zajmuje 5–15 minut, w zależności od modelu. Czas napełniania różni się w zależności od pojemności basenu i zaopatrzenia w wodę.'
       icon: tabler:clock
       category: all
     - title: Jak sztywny jest basen Drop Stitch?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Na jakich powierzchniach może stać basen?
-      description: Jakakolwiek płaska, pozioma powierzchnia wolna od ostrych przedmiotów – trawnik, patio lub taras. Na szorstkich powierzchniach zaleca się użycie podkładu. Sprawdź, czy powierzchnia wytrzyma ciężar napełnionego basenu.
+      description: 'Jakakolwiek płaska, pozioma powierzchnia wolna od ostrych przedmiotów – trawnik, patio lub taras. Na szorstkich powierzchniach zaleca się użycie podkładu. Napełniony basen jest ciężki: instaluj go tylko na powierzchni, która wytrzymuje cały ciężar i najpierw przeprowadź ocenę konstrukcyjną podwyższonych pokładów, balkonów i dachów.'
       icon: tabler:layout-grid
       category: all
     - title: Jak utrzymać czystość wody?

@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Baseino kolekcijos
       amount: '4'
-    - title: Nustatymo laikas
-      amount: 15-30 min
+    - title: 'Pripūtimo laikas'
+      amount: '5-15 min'
     - title: Vardinis slėgis
       amount: 4-5 PSI
     - title: Susisiekite
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Mūsų aukščiausios kokybės linija su modernia pilka apdaila ir pasirenkamu uždėtu dangteliu.
       icon: tabler:circle-dot
     - title: Sūkurinės vonios SPA baseinai
-      description: Keturių sezonų kubilų modeliai su įmontuotomis sėdynėmis ir 5 mm izoliuotu dugnu.
+      description: 'Izoliuotų kubilų modeliai su įmontuotomis sėdynėmis ir 5 mm izoliuotu dugnu – skirti naudoti su išoriniais šildytuvais (šildytuvas neįeina).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Baseino kolekcijos
-    - value: 15-30 min
-      label: Nustatymo laikas
+    - value: '5-15 min'
+      label: 'Pripūtimo laikas'
     - value: 4-5 PSI
       label: Vardinis slėgis
 

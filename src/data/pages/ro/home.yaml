@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: SKU-uri standard
       amount: '48'
-    - title: Ora de configurare
-      amount: 15-30 min
+    - title: 'Timp de umflare'
+      amount: '5-15 min'
     - title: Presiune nominală
       amount: 4-5 PSI
     - title: garanție
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Pereți rigizi Drop Stitch
-      description: Mii de fire interne blochează straturile de perete împreună, astfel încât piscina se umflă tare ca piatra la 4-5 PSI și își păstrează forma atunci când este umplută.
+      description: 'Mii de fire interne blochează straturile de perete împreună, astfel încât piscina se umflă rigid la 4-5 PSI și își păstrează forma atunci când este umplută.'
       icon: tabler:hexagon
     - title: Configurare rapidă, fără instrumente
       description: Umflați cu pompa electrică inclusă în câteva minute, apoi umpleți cu un furtun de grădină. Fără unelte, fără construcție, fără instalare profesională.
       icon: tabler:rocket
     - title: Se ambalează mic
-      description: Scurgeți, dezumflați, rulați și depozitați piscina într-o pungă peste iarnă. O piscină de dimensiuni mari care se potrivește într-un dulap.
+      description: 'Scurgeți, dezumflați, rulați și depozitați piscina în geantă pe timpul iernii - o piscină de dimensiuni mari care se împachetează mic pentru depozitare în interior.'
       icon: tabler:package
     - title: Durabil și rezistent la UV
-      description: Țesătura PVC Drop Stitch cu două straturi rezistă la perforare, la expunerea la UV și la un sezon întreg de utilizare în familie.
+      description: 'Țesătură cu două straturi PVC drop stitch, proiectată pentru a rezista la perforare și la expunerea la UV pe parcursul unui sezon complet de utilizare în familie.'
       icon: tabler:shield
     - title: Pachet complet
       description: Fiecare piscină se livrează cu o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Huse montate disponibile pentru modelele rotunde.
       icon: tabler:box
     - title: Design conștient de siguranță
-      description: Design de piscină rezidențială care face referire la EN 16582-1 și ASTM F2666, cu supape de reducere a presiunii și pereți rigidi stabili. Este întotdeauna necesară supravegherea constantă a unui adult.
+      description: 'Proiectarea piscinei rezidențiale care face referire la EN 16582-1 și ASTM F2666 — informațiile de siguranță specifice modelului sunt furnizate în documentația produsului. Este întotdeauna necesară supravegherea constantă a unui adult.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idei de piscină
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: De la livrare la prima înot până la depozitarea la sfârșitul sezonului, deținerea unei piscine Felizbay rămâne simplă.
   items:
     - title: Configurare în minute
-      description: Despachetați, umflați cu pompa inclusă și umpleți - configurarea completă durează de obicei 15-30 de minute pe un teren ferm și plan.
+      description: 'Despachetați și umflați cu pompa inclusă în 5-15 minute, apoi umpleți cu un furtun de grădină - timpul de umplere variază în funcție de dimensiunea piscinei și de alimentarea cu apă.'
       icon: tabler:rocket
     - title: Îngrijire simplă a apei
       description: Porturile standard pentru pompa de filtru de 32/38 mm, verificări regulate ale pH-ului și un capac montat pe modelele rotunde mențin apa curată.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Cât durează configurarea?
-      description: Umflarea durează aproximativ 10 minute cu pompa de aer electrică inclusă; configurarea completă, inclusiv plasarea și umplerea, durează de obicei 15-30 de minute.
+      description: 'Umflarea durează 5-15 minute cu pompa electrică de aer inclusă în funcție de model. Timpul de umplere variază în funcție de capacitatea piscinei și de alimentarea cu apă.'
       icon: tabler:clock
       category: all
     - title: Cât de rigidă este o piscină Drop Stitch?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Pe ce suprafete poate sta piscina?
-      description: Orice suprafață plană, plană, fără obiecte ascuțite - gazon, terasă sau terasă. Se recomandă o foaie de pământ pe suprafețele aspre. Verificați dacă suprafața poate suporta greutatea unei piscine umplute.
+      description: 'Orice suprafață plană, plană, fără obiecte ascuțite - gazon, terasă sau terasă. Se recomandă o foaie de pământ pe suprafețele aspre. O piscină umplută este grea: instalați numai pe o suprafață care suportă toată greutatea și aveți mai întâi punți, balcoane și acoperișuri înalte evaluate structural.'
       icon: tabler:layout-grid
       category: all
     - title: Cum păstrez apa curată?

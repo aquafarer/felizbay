@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Колекции басейн
       amount: '4'
-    - title: Време за настройка
-      amount: 15-30 min
+    - title: 'Време е за надуване'
+      amount: '5-15 min'
     - title: Номинално налягане
       amount: 4-5 PSI
     - title: Контакт
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Нашата първокласна линия с модерно сиво покритие и опционално монтирано покритие.
       icon: tabler:circle-dot
     - title: Гореща вана СПА басейни
-      description: Четирисезонни модели джакузи с вградени седалки и 5 мм изолирани дъна.
+      description: 'Изолирани модели с гореща вана с вградени седалки и 5 mm изолирани дъна — за използване с външни нагреватели (нагревателят не е включен).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Колекции басейн
-    - value: 15-30 min
-      label: Време за настройка
+    - value: '5-15 min'
+      label: 'Време е за надуване'
     - value: 4-5 PSI
       label: Номинално налягане
 

@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: SKU estándar
       amount: '48'
-    - title: Tiempo de configuración
-      amount: 15-30 min
+    - title: 'Tiempo de inflado'
+      amount: '5-15 min'
     - title: Presión nominal
       amount: 4-5 PSI
     - title: Garantía
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Paredes rígidas Drop Stitch
-      description: Miles de roscas internas unen las capas de la pared, por lo que la piscina se infla con dureza a 4-5 PSI y mantiene su forma cuando se llena.
+      description: 'Miles de roscas internas unen las capas de la pared, por lo que la piscina se infla rígidamente a una velocidad nominal de 4-5 PSI y mantiene su forma cuando se llena.'
       icon: tabler:hexagon
     - title: Configuración rápida y sin herramientas
       description: Infle con la bomba eléctrica incluida en minutos y luego llénelo con una manguera de jardín. Sin herramientas, sin construcción, sin instalación profesional.
       icon: tabler:rocket
     - title: Se guarda en tamaño pequeño
-      description: Escurre, desinfla, enrolla y guarda la piscina en una bolsa durante el invierno. Una piscina de tamaño completo que cabe en un armario.
+      description: 'Drena, desinfla, enrolla y guarda la piscina en su bolsa durante el invierno: una piscina de tamaño completo que se pliega en un tamaño pequeño para guardarla en interiores.'
       icon: tabler:package
     - title: Durable y resistente a los rayos UV
-      description: El tejido Drop Stitch de PVC de doble capa resiste pinchazos, exposición a los rayos UV y una temporada completa de uso familiar.
+      description: 'Tejido PVC drop stitch de doble capa, diseñado para resistir pinchazos y exposición UV durante una temporada completa de uso familiar.'
       icon: tabler:shield
     - title: Paquete completo
       description: Cada piscina se envía con una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Fundas ajustadas disponibles para modelos redondos.
       icon: tabler:box
     - title: Diseño consciente de la seguridad
-      description: Diseño de piscina residencial referenciado a EN 16582-1 y ASTM F2666, con válvulas de alivio de presión y paredes rígidas estables. Siempre se requiere la supervisión constante de un adulto.
+      description: 'Diseño de piscina residencial que hace referencia a EN 16582-1 y ASTM F2666: la información de seguridad específica del modelo se proporciona en la documentación del producto. Siempre se requiere la supervisión constante de un adulto.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ideas para la piscina
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Desde la entrega hasta el primer baño y el almacenamiento al final de la temporada, ser propietario de una piscina Felizbay sigue siendo sencillo.
   items:
     - title: Configuración en minutos
-      description: Desembale, infle con la bomba incluida y llénelo; la instalación completa suele tardar entre 15 y 30 minutos en un terreno firme y nivelado.
+      description: 'Desembale e infle con la bomba incluida en 5 a 15 minutos, luego llénelo con una manguera de jardín; el tiempo de llenado varía según el tamaño de la piscina y el suministro de agua.'
       icon: tabler:rocket
     - title: Cuidado sencillo del agua
       description: Los puertos de bomba de filtrado estándar de 32/38 mm, los controles periódicos del pH y una cubierta ajustada en los modelos redondos mantienen el agua limpia.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: ¿Cuánto tiempo lleva la configuración?
-      description: El inflado tarda unos 10 minutos con la bomba de aire eléctrica incluida; La configuración completa, incluida la colocación y el llenado, suele tardar entre 15 y 30 minutos.
+      description: 'El inflado tarda entre 5 y 15 minutos con la bomba de aire eléctrica incluida, según el modelo. El tiempo de llenado varía según la capacidad de la piscina y su suministro de agua.'
       icon: tabler:clock
       category: all
     - title: ¿Qué tan rígida es una piscina Drop Stitch?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: ¿Sobre qué superficies se puede apoyar la piscina?
-      description: 'Cualquier superficie plana y nivelada libre de objetos punzantes: césped, patio o terraza. Se recomienda una lámina de suelo en superficies rugosas. Compruebe que la superficie pueda soportar el peso de una piscina llena.'
+      description: 'Cualquier superficie plana y nivelada libre de objetos punzantes: césped, patio o terraza. Se recomienda una lámina de suelo en superficies rugosas. Una piscina llena es pesada: instálela solo en una superficie que soporte todo el peso y haga que primero evalúen estructuralmente las plataformas, balcones y techos elevados.'
       icon: tabler:layout-grid
       category: all
     - title: ¿Cómo mantengo el agua limpia?

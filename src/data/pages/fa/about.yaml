@@ -13,8 +13,8 @@ stats:
   stats:
     - title: مجموعه های استخر
       amount: '4'
-    - title: زمان راه اندازی
-      amount: 15-30 min
+    - title: 'زمان باد کردن است'
+      amount: '5-15 min'
     - title: فشار نامی
       amount: 4-5 PSI
     - title: تماس بگیرید
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: خط ممتاز ما با روکش خاکستری مدرن و روکش نصب شده اختیاری.
       icon: tabler:circle-dot
     - title: استخرهای آب گرم SPA
-      description: مدل های جکوزی چهار فصل با صندلی های توکار و کف 5 میلی متری عایق.
+      description: 'مدل‌های جکوزی عایق‌شده با صندلی‌های توکار و کف عایق‌شده 5 mm - برای استفاده با بخاری‌های خارجی (بخاری شامل بخاری نمی‌شود).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: مجموعه های استخر
-    - value: 15-30 min
-      label: زمان راه اندازی
+    - value: '5-15 min'
+      label: 'زمان باد کردن است'
     - value: 4-5 PSI
       label: فشار نامی
 

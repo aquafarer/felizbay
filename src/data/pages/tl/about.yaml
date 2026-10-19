@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Mga koleksyon ng pool
       amount: '4'
-    - title: Oras ng pag-setup
-      amount: 15-30 min
+    - title: 'Oras para i-inflate'
+      amount: '5-15 min'
     - title: Na-rate na presyon
       amount: 4-5 PSI
     - title: Makipag-ugnayan
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Ang aming premium na linya na may modernong gray na finish at opsyonal na fitted na takip.
       icon: tabler:circle-dot
     - title: Mga hot tub na SPA pool
-      description: Four-season hot tub models na may built-in na upuan at 5 mm insulated bottom.
+      description: 'Mga modelo ng insulated hot tub na may mga built-in na upuan at 5 mm na insulated bottom — para gamitin sa mga panlabas na heater (hindi kasama ang heater).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Mga koleksyon ng pool
-    - value: 15-30 min
-      label: Oras ng pag-setup
+    - value: '5-15 min'
+      label: 'Oras para i-inflate'
     - value: 4-5 PSI
       label: Na-rate na presyon
 

@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Medence kollekciók
       amount: '4'
-    - title: Beállítási idő
-      amount: 15-30 min
+    - title: 'Felfújási idő'
+      amount: '5-15 min'
     - title: Névleges nyomás
       amount: 4-5 PSI
     - title: Érintkezés
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Prémium termékcsaládunk modern szürke felülettel és opcionálisan felszerelt burkolattal.
       icon: tabler:circle-dot
     - title: Pezsgőfürdő SPA medencék
-      description: Négy évszakos pezsgőfürdő modellek beépített ülésekkel és 5 mm-es szigetelt fenékkel.
+      description: 'Szigetelt pezsgőfürdő modellek beépített ülésekkel és 5 mm-es szigetelt fenékrészekkel – külső fűtőtestekhez való használatra (a fűtőtest nem tartozék).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Medence kollekciók
-    - value: 15-30 min
-      label: Beállítási idő
+    - value: '5-15 min'
+      label: 'Felfújási idő'
     - value: 4-5 PSI
       label: Névleges nyomás
 

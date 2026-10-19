@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Havuz koleksiyonları
       amount: '4'
-    - title: Kurulum süresi
-      amount: 15-30 min
+    - title: 'Şişirme zamanı'
+      amount: '5-15 min'
     - title: Nominal basınç
       amount: 4-5 PSI
     - title: Temas etmek
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Modern gri kaplamalı ve isteğe bağlı gömme kapaklı premium serimiz.
       icon: tabler:circle-dot
     - title: Sıcak küvet SPA havuzları
-      description: Yerleşik koltuklara ve 5 mm yalıtımlı tabanlara sahip dört mevsim jakuzi modelleri.
+      description: 'Dahili koltuklara ve 5 mm yalıtımlı tabanlara sahip yalıtımlı jakuzi modelleri — harici ısıtıcılarla kullanım için (ısıtıcı dahil değildir).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Havuz koleksiyonları
-    - value: 15-30 min
-      label: Kurulum süresi
+    - value: '5-15 min'
+      label: 'Şişirme zamanı'
     - value: 4-5 PSI
       label: Nominal basınç
 

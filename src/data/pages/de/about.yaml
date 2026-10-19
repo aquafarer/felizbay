@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Pool-Kollektionen
       amount: '4'
-    - title: Rüstzeit
-      amount: 15-30 min
+    - title: 'Aufblasdauer'
+      amount: '5-15 min'
     - title: Nenndruck
       amount: 4-5 PSI
     - title: Kontakt
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Unsere Premium-Linie mit moderner grauer Oberfläche und optionalem Spannbezug.
       icon: tabler:circle-dot
     - title: Whirlpool-SPA-Pools
-      description: Vier-Jahreszeiten-Whirlpool-Modelle mit eingebauten Sitzen und 5 mm isoliertem Boden.
+      description: 'Isolierte Whirlpool-Modelle mit eingebauten Sitzen und 5 mm isoliertem Boden – zur Verwendung mit externen Heizgeräten (Heizgerät nicht im Lieferumfang enthalten).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Pool-Kollektionen
-    - value: 15-30 min
-      label: Rüstzeit
+    - value: '5-15 min'
+      label: 'Aufblasdauer'
     - value: 4-5 PSI
       label: Nenndruck
 

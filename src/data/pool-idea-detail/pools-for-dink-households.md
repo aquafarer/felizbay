@@ -38,7 +38,7 @@ Our [maintenance guide](/guides/inflatable-pool-maintenance) covers the full rou
 
 ## 4. Setup, Travel, and Storage
 
-- **Setup:** the included 1000W electric pump inflates the rigid hull in 5–15 minutes; full setup including positioning and filling is typically 15–30 minutes. See the [setup guide](/guides/inflatable-pool-setup).
+- **Setup:** the included 1000W electric pump inflates the rigid hull in 5–15 minutes; positioning and setup is typically 15–30 minutes, and filling takes longer depending on pool size and water supply. See the [setup guide](/guides/inflatable-pool-setup).
 - **Weekend rhythm:** inflate once for the season and keep it covered between soaks, or inflate on demand for a truly occasional ritual.
 - **Travel and off-season:** deflate, fold, and pack into the storage bag — the packed footprint fits a garage shelf or a large closet, and the patio is fully yours again.
 

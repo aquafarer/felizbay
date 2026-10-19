@@ -25,8 +25,8 @@ stats:
       amount: '4'
     - title: Standard SKUs
       amount: '48'
-    - title: Setup Time
-      amount: '15-30 min'
+    - title: Time to Inflate
+      amount: '5-15 min'
     - title: Rated Pressure
       amount: '4-5 PSI'
     - title: Warranty
@@ -44,22 +44,22 @@ features:
   columns: 2
   items:
     - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rock-hard at 4-5 PSI and keeps its shape when filled.'
+      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rigid at the rated 4-5 PSI and keeps its shape when filled.'
       icon: tabler:hexagon
     - title: Fast, Tool-Free Setup
       description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
       icon: tabler:rocket
     - title: Packs Away Small
-      description: 'Drain, deflate, roll up, and store the pool in a bag over winter. A full-size swimming pool that fits in a closet.'
+      description: 'Drain, deflate, roll up, and store the pool in its bag over winter — a full-size pool that packs down small for indoor storage.'
       icon: tabler:package
     - title: Durable & UV-Resistant
-      description: 'Double-layer PVC drop stitch fabric resists punctures, UV exposure, and a full season of family use.'
+      description: 'Double-layer PVC drop stitch fabric, engineered to resist punctures and UV exposure through a full season of family use.'
       icon: tabler:shield
     - title: Complete Package
       description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
       icon: tabler:box
     - title: Safety-Conscious Design
-      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666, with pressure-relief valves and stable rigid walls. Constant adult supervision is always required.'
+      description: 'Residential pool design referencing EN 16582-1 and ASTM F2666 — model-specific safety information is provided in the product documentation. Constant adult supervision is always required.'
       icon: tabler:shield-check
 
 content_customer_types:
@@ -123,7 +123,7 @@ content_compliance:
   subtitle: 'From delivery to first swim to end-of-season storage, owning a Felizbay pool stays simple.'
   items:
     - title: 'Setup in Minutes'
-      description: 'Unbox, inflate with the included pump, and fill — full setup typically takes 15-30 minutes on firm, level ground.'
+      description: 'Unbox and inflate with the included pump in 5-15 minutes, then fill with a garden hose — filling time varies with pool size and water supply.'
       icon: tabler:rocket
     - title: 'Simple Water Care'
       description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
@@ -166,7 +166,7 @@ faqs:
   columns: 2
   items:
     - title: How long does setup take?
-      description: 'Inflating takes about 10 minutes with the included electric air pump; full setup including placement and filling is typically 15-30 minutes.'
+      description: 'Inflating takes 5-15 minutes with the included electric air pump depending on the model. Filling time varies with pool capacity and your water supply.'
       icon: tabler:clock
       category: all
     - title: How rigid is a drop stitch pool?
@@ -190,7 +190,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: What surfaces can the pool stand on?
-      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. Check that the surface can bear the weight of a filled pool.'
+      description: 'Any flat, level surface free of sharp objects — lawn, patio, or deck. A ground sheet is recommended on rough surfaces. A filled pool is heavy: install only on a surface that supports the full weight, and have elevated decks, balconies, and rooftops structurally assessed first.'
       icon: tabler:layout-grid
       category: all
     - title: How do I keep the water clean?

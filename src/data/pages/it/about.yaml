@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Collezioni di piscine
       amount: '4'
-    - title: Tempo di installazione
-      amount: 15-30 min
+    - title: 'Tempo di gonfiaggio'
+      amount: '5-15 min'
     - title: Pressione nominale
       amount: 4-5 PSI
     - title: Contatto
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: La nostra linea premium con una moderna finitura grigia e copertura attrezzata opzionale.
       icon: tabler:circle-dot
     - title: Piscine SPA con idromassaggio
-      description: Modelli di minipiscine quattro stagioni con sedili integrati e fondo coibentato da 5 mm.
+      description: 'Modelli di vasche idromassaggio isolate con sedili integrati e fondo isolato da 5 mm - da utilizzare con riscaldatori esterni (riscaldatore non incluso).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Collezioni di piscine
-    - value: 15-30 min
-      label: Tempo di installazione
+    - value: '5-15 min'
+      label: 'Tempo di gonfiaggio'
     - value: 4-5 PSI
       label: Pressione nominale
 

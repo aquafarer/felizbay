@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Koleksi kolam renang
       amount: '4'
-    - title: Waktu pengaturan
-      amount: 15-30 min
+    - title: 'Waktu pengembungan'
+      amount: '5-15 min'
     - title: Nilai tekanan
       amount: 4-5 PSI
     - title: Kontak
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Produk premium kami dengan finishing abu-abu modern dan penutup opsional.
       icon: tabler:circle-dot
     - title: Kolam SPA bak mandi air panas
-      description: Model bak mandi air panas empat musim dengan kursi internal dan alas berinsulasi 5 mm.
+      description: 'Model bak mandi air panas berinsulasi dengan tempat duduk internal dan alas berinsulasi 5 mm — untuk digunakan dengan pemanas eksternal (pemanas tidak termasuk).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Koleksi kolam renang
-    - value: 15-30 min
-      label: Waktu pengaturan
+    - value: '5-15 min'
+      label: 'Waktu pengembungan'
     - value: 4-5 PSI
       label: Nilai tekanan
 

@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: SKU Standar
       amount: '48'
-    - title: Waktu Pengaturan
-      amount: 15-30 min
+    - title: 'Waktu pengembungan'
+      amount: '5-15 min'
     - title: Nilai Tekanan
       amount: 4-5 PSI
     - title: Jaminan
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Dinding Drop Stitch Kaku
-      description: Ribuan benang internal mengunci lapisan dinding menjadi satu, sehingga kolam mengembang sekeras batu dengan kecepatan 4-5 PSI dan mempertahankan bentuknya saat diisi.
+      description: 'Ribuan benang internal mengunci lapisan dinding menjadi satu, sehingga kolam mengembang dengan kecepatan 4-5 PSI dan mempertahankan bentuknya saat diisi.'
       icon: tabler:hexagon
     - title: Penyiapan Cepat dan Tanpa Alat
       description: Mengembang dengan pompa listrik yang disertakan dalam hitungan menit, lalu isi dengan selang taman. Tanpa alat, tanpa konstruksi, tanpa instalasi profesional.
       icon: tabler:rocket
     - title: Paket Kecil
-      description: Tiriskan, kempiskan, gulung, dan simpan kolam di dalam tas selama musim dingin. Kolam renang ukuran penuh yang muat di dalam lemari.
+      description: 'Tiriskan, kempiskan, gulung, dan simpan kolam di dalam tasnya selama musim dingin — kolam berukuran penuh yang dikemas kecil untuk penyimpanan di dalam ruangan.'
       icon: tabler:package
     - title: Tahan lama & Tahan UV
-      description: Kain Drop Stitch PVC dua lapis tahan terhadap tusukan, paparan sinar UV, dan penggunaan keluarga selama satu musim penuh.
+      description: 'Kain PVC drop stitch lapis ganda, dirancang untuk tahan terhadap tusukan dan paparan UV selama penggunaan keluarga selama satu musim penuh.'
       icon: tabler:shield
     - title: Paket Lengkap
       description: Setiap kolam dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Penutup terpasang tersedia untuk model bulat.
       icon: tabler:box
     - title: Desain Sadar Keselamatan
-      description: Desain kolam perumahan mengacu pada EN 16582-1 dan ASTM F2666, dengan katup pelepas tekanan dan dinding kaku yang stabil. Pengawasan orang dewasa yang konstan selalu diperlukan.
+      description: 'Referensi desain kolam perumahan EN 16582-1 dan ASTM F2666 — informasi keselamatan khusus model disediakan dalam dokumentasi produk. Pengawasan orang dewasa yang konstan selalu diperlukan.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ide Kolam Renang
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Dari pengiriman hingga renang pertama hingga penyimpanan akhir musim, memiliki kolam Felizbay tetaplah sederhana.
   items:
     - title: Pengaturan dalam hitungan Menit
-      description: Buka kotaknya, kembangkan dengan pompa yang disertakan, dan isi — penyiapan penuh biasanya memerlukan waktu 15-30 menit di permukaan yang kokoh dan rata.
+      description: 'Buka kotak dan kembangkan dengan pompa yang disertakan dalam 5-15 menit, lalu isi dengan selang taman — waktu pengisian bervariasi tergantung ukuran kolam dan persediaan air.'
       icon: tabler:rocket
     - title: Perawatan Air Sederhana
       description: Port pompa filter standar 32/38 mm, pemeriksaan pH rutin, dan penutup terpasang pada model bundar menjaga air tetap bersih.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Berapa lama waktu yang dibutuhkan untuk pengaturan?
-      description: Menggembungkan membutuhkan waktu sekitar 10 menit dengan pompa udara listrik yang disertakan; pengaturan penuh termasuk penempatan dan pengisian biasanya memakan waktu 15-30 menit.
+      description: 'Menggembungkan membutuhkan waktu 5-15 menit dengan pompa udara listrik yang disertakan, tergantung modelnya. Waktu pengisian bervariasi tergantung kapasitas kolam dan persediaan air Anda.'
       icon: tabler:clock
       category: all
     - title: Seberapa kakukah kolam Drop Stitch?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Pada permukaan apa kolam dapat berdiri?
-      description: Permukaan datar dan rata yang bebas dari benda tajam — halaman rumput, teras, atau dek. Lembaran tanah direkomendasikan pada permukaan kasar. Periksa apakah permukaannya mampu menahan beban kolam yang terisi.
+      description: 'Permukaan datar dan rata yang bebas dari benda tajam — halaman rumput, teras, atau dek. Lembaran tanah direkomendasikan pada permukaan kasar. Kolam yang terisi itu berat: pasang hanya pada permukaan yang mampu menopang beban penuh, dan periksa struktur dek, balkon, dan atap yang ditinggikan terlebih dahulu.'
       icon: tabler:layout-grid
       category: all
     - title: Bagaimana cara menjaga air tetap bersih?

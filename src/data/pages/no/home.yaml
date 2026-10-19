@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standard SKUer
       amount: '48'
-    - title: Oppsettstid
-      amount: 15-30 min
+    - title: 'Oppblåsingstid'
+      amount: '5-15 min'
     - title: Nominell trykk
       amount: 4-5 PSI
     - title: Garanti
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Stive Drop Stitch-vegger
-      description: Tusenvis av innvendige gjenger låser vegglagene sammen, så bassenget blåses steinhardt opp med 4-5 PSI og holder formen når det fylles.
+      description: 'Tusenvis av innvendige gjenger låser vegglagene sammen, slik at bassenget blåser opp stivt med karakterene 4-5 PSI og holder formen når det fylles.'
       icon: tabler:hexagon
     - title: Rask, verktøyfri oppsett
       description: Blås opp med den medfølgende elektriske pumpen på minutter, og fyll deretter med en hageslange. Ingen verktøy, ingen konstruksjon, ingen profesjonell installasjon.
       icon: tabler:rocket
     - title: Pakker bort små
-      description: Tøm, tøm ut luften, rull sammen og oppbevar bassenget i en pose over vinteren. Et svømmebasseng i full størrelse som får plass i et skap.
+      description: 'Tøm, tøm ut luften, rull sammen og oppbevar bassenget i posen over vinteren – et basseng i full størrelse som pakker seg ned for innendørs oppbevaring.'
       icon: tabler:package
     - title: Slitesterk og UV-bestandig
-      description: Dobbelt-lags PVC drop stitch-stoff motstår punkteringer, UV-eksponering og en hel sesong med familiebruk.
+      description: 'Dobbeltlags PVC drop stitch-stoff, konstruert for å motstå punkteringer og UV-eksponering gjennom en hel sesong med familiebruk.'
       icon: tabler:shield
     - title: Komplett pakke
       description: Hvert basseng leveres med en elektrisk luftpumpe, reparasjonssett og oppbevaringspose. Tilpassede deksler tilgjengelig for runde modeller.
       icon: tabler:box
     - title: Sikkerhetsbevisst design
-      description: Bassengdesign for boliger med henvisning til EN 16582-1 og ASTM F2666, med trykkavlastningsventiler og stabile stive vegger. Konstant tilsyn av voksne er alltid nødvendig.
+      description: 'Utforming av boligbasseng som refererer til EN 16582-1 og ASTM F2666 — modellspesifikk sikkerhetsinformasjon er gitt i produktdokumentasjonen. Konstant tilsyn av voksne er alltid nødvendig.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Bassengideer
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Fra levering til første svømmetur til lagring i slutten av sesongen, er det enkelt å eie et Felizbay-basseng.
   items:
     - title: Oppsett på minutter
-      description: Pakk ut, blås opp med den medfølgende pumpen, og fyll – fullt oppsett tar vanligvis 15–30 minutter på fast, jevnt underlag.
+      description: 'Pakk ut og fyll opp med den medfølgende pumpen på 5-15 minutter, og fyll deretter med en hageslange - fylletiden varierer med bassengstørrelsen og vanntilførselen.'
       icon: tabler:rocket
     - title: Enkel vannpleie
       description: Standard 32/38 mm filterpumpeporter, regelmessige pH-kontroller og et montert deksel på runde modeller holder vannet rent.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Hvor lang tid tar oppsettet?
-      description: Oppblåsing tar ca. 10 minutter med den medfølgende elektriske luftpumpen; fullt oppsett inkludert plassering og fylling er vanligvis 15-30 minutter.
+      description: 'Oppblåsing tar 5-15 minutter med den medfølgende elektriske luftpumpen avhengig av modell. Påfyllingstiden varierer med bassengkapasiteten og vannforsyningen din.'
       icon: tabler:clock
       category: all
     - title: Hvor stiv er en drop stitch pool?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Hvilke overflater kan bassenget stå på?
-      description: Enhver flat, jevn overflate fri for skarpe gjenstander - plen, uteplass eller dekk. På grove overflater anbefales en bakkeduk. Sjekk at overflaten tåler vekten av et fylt basseng.
+      description: 'Enhver flat, jevn overflate fri for skarpe gjenstander - plen, uteplass eller dekk. På grove overflater anbefales en bakkeduk. Et fylt basseng er tungt: installer kun på en overflate som bærer hele vekten, og ha forhøyede dekk, balkonger og hustak strukturelt vurdert først.'
       icon: tabler:layout-grid
       category: all
     - title: Hvordan holder jeg vannet rent?

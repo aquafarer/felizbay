@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standardní SKU
       amount: '48'
-    - title: Čas nastavení
-      amount: 15-30 min
+    - title: 'Čas nafouknutí'
+      amount: '5-15 min'
     - title: Jmenovitý tlak
       amount: 4-5 PSI
     - title: Záruka
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Pevné stěny Drop Stitch
-      description: Tisíce vnitřních závitů spojují vrstvy stěn dohromady, takže se bazén nafoukne jako skála na 4-5 PSI a po naplnění si zachovává svůj tvar.
+      description: 'Tisíce vnitřních závitů spojují vrstvy stěn dohromady, takže se bazén nafoukne pevně na jmenovitý tlak 4-5 PSI a po naplnění si zachovává svůj tvar.'
       icon: tabler:hexagon
     - title: Rychlé nastavení bez použití nářadí
       description: Nafoukněte přiloženou elektrickou pumpou během několika minut a poté naplňte zahradní hadicí. Žádné nářadí, žádná konstrukce, žádná odborná instalace.
       icon: tabler:rocket
     - title: Malé balení
-      description: Vypusťte, vyfoukněte, srolujte a přes zimu uložte bazén do vaku. Plnohodnotný bazén, který se vejde do skříně.
+      description: 'Vypusťte, vyfoukněte, srolujte a uskladněte bazén přes zimu v tašce – bazén plné velikosti, který se sbalí jako malý pro vnitřní skladování.'
       icon: tabler:package
     - title: Odolné a UV-odolné
-      description: Dvouvrstvá PVC tkanina Drop Stitch odolává propíchnutí, UV záření a celé sezóně rodinného použití.
+      description: 'Dvouvrstvá tkanina PVC drop stitch, navržená tak, aby odolala propíchnutí a vystavení UV po celou sezónu rodinného používání.'
       icon: tabler:shield
     - title: Kompletní balíček
       description: Každý bazén je dodáván s elektrickým vzduchovým čerpadlem, opravnou sadou a úložným vakem. Pro kulaté modely jsou k dispozici namontované kryty.
       icon: tabler:box
     - title: Design s vědomím bezpečnosti
-      description: Návrh obytného bazénu podle EN 16582-1 a ASTM F2666, s přetlakovými ventily a stabilními pevnými stěnami. Vždy je nutný neustálý dohled dospělé osoby.
+      description: 'Návrh obytného bazénu s odkazem na EN 16582-1 a ASTM F2666 – bezpečnostní informace specifické pro daný model jsou uvedeny v dokumentaci produktu. Vždy je nutný neustálý dohled dospělé osoby.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Nápady na bazén
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Od doručení přes první plavání až po uskladnění na konci sezóny je vlastnictví bazénu Felizbay jednoduché.
   items:
     - title: Nastavení v minutách
-      description: Vybalte, nafoukněte přiloženou pumpou a naplňte – úplné nastavení obvykle trvá 15–30 minut na pevném, rovném povrchu.
+      description: 'Vybalte a nafoukněte přiloženou pumpou za 5-15 minut, poté naplňte zahradní hadicí — doba plnění se liší podle velikosti bazénu a dodávky vody.'
       icon: tabler:rocket
     - title: Jednoduchá péče o vodu
       description: Standardní 32/38 mm porty filtračního čerpadla, pravidelné kontroly pH a namontovaný kryt u kulatých modelů udržují vodu čistou.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Jak dlouho trvá nastavení?
-      description: Nafouknutí trvá asi 10 minut přiloženou elektrickou vzduchovou pumpou; úplné nastavení včetně umístění a plnění je obvykle 15-30 minut.
+      description: 'Nafouknutí trvá 5-15 minut s přiloženou elektrickou vzduchovou pumpou v závislosti na modelu. Doba napouštění se liší podle kapacity bazénu a vašeho zásobování vodou.'
       icon: tabler:clock
       category: all
     - title: Jak pevný je bazén Drop Stitch?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Na jakých plochách může bazén stát?
-      description: Jakýkoli plochý, rovný povrch bez ostrých předmětů – trávník, terasa nebo terasa. Na drsné povrchy se doporučuje podkladová deska. Zkontrolujte, zda povrch unese váhu naplněného bazénu.
+      description: 'Jakýkoli plochý, rovný povrch bez ostrých předmětů – trávník, terasa nebo terasa. Na drsné povrchy se doporučuje podkladová deska. Naplněný bazén je těžký: instalujte pouze na povrch, který unese plnou váhu, a nejprve si nechejte vyvýšené terasy, balkony a střechy konstrukčně posoudit.'
       icon: tabler:layout-grid
       category: all
     - title: Jak udržím vodu čistou?

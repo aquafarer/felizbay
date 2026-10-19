@@ -278,7 +278,9 @@ const metadata = merge(
                     </span>
                   )}
                   {card.inStock && (
-                    <span class="text-xs font-medium text-green-600">{t('product.inStock') || 'In stock'}</span>
+                    <span class="text-xs font-medium text-green-600">
+                      {t('product.inStock') || 'Available to order'}
+                    </span>
                   )}
                 </div>
                 <a

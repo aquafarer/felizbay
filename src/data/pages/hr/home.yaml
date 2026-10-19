@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standardni SKU-ovi
       amount: '48'
-    - title: Vrijeme postavljanja
-      amount: 15-30 min
+    - title: 'Vrijeme napuhavanja'
+      amount: '5-15 min'
     - title: Nazivni tlak
       amount: 4-5 PSI
     - title: Jamstvo
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Čvrsti Drop Stitch zidovi
-      description: Tisuće unutarnjih navoja pričvršćuju slojeve zidova zajedno, tako da se bazen napuhava kao kamen pri 4-5 PSI i zadržava svoj oblik kada se napuni.
+      description: 'Tisuće unutarnjih navoja spajaju slojeve zidova zajedno, tako da se bazen čvrsto napuhuje pri nazivnom 4-5 PSI i zadržava svoj oblik kada se napuni.'
       icon: tabler:hexagon
     - title: Brzo postavljanje bez alata
       description: Napuhajte uključenom električnom pumpom za nekoliko minuta, a zatim napunite vrtnim crijevom. Bez alata, bez konstrukcije, bez profesionalne instalacije.
       icon: tabler:rocket
     - title: Pakirajte malo
-      description: Ocijedite, ispuhnite, smotajte i spremite bazen u vrećicu preko zime. Bazen pune veličine koji stane u ormar.
+      description: 'Ispraznite, ispuhnite, smotajte i spremite bazen u torbu preko zime — bazen pune veličine koji je malen za unutarnje skladište.'
       icon: tabler:package
     - title: Izdržljiv i otporan na UV zračenje
-      description: Dvoslojna PVC Drop Stitch tkanina otporna je na probijanje, UV izlaganje i cijelu sezonu obiteljske upotrebe.
+      description: 'Dvoslojna PVC drop stitch tkanina, dizajnirana da bude otporna na probijanje i izloženost UV tijekom cijele sezone obiteljske upotrebe.'
       icon: tabler:shield
     - title: Kompletan paket
       description: Svaki bazen se isporučuje s električnom pumpom za zrak, kompletom za popravak i torbom za pohranu. Uklopljene navlake dostupne za okrugle modele.
       icon: tabler:box
     - title: Dizajn osviješten o sigurnosti
-      description: Dizajn stambenog bazena koji se odnosi na EN 16582-1 i ASTM F2666, s ventilima za smanjenje tlaka i stabilnim krutim stijenkama. Uvijek je potreban stalni nadzor odrasle osobe.
+      description: 'Dizajn stambenog bazena koji se poziva na EN 16582-1 i ASTM F2666 — sigurnosne informacije specifične za model navedene su u dokumentaciji proizvoda. Uvijek je potreban stalni nadzor odrasle osobe.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Ideje za bazene
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Od isporuke preko prvog kupanja do skladištenja na kraju sezone, posjedovanje bazena Felizbay ostaje jednostavno.
   items:
     - title: Postavljanje u nekoliko minuta
-      description: Raspakirajte, napuhajte priloženom pumpom i napunite — potpuno postavljanje obično traje 15-30 minuta na čvrstoj, ravnoj podlozi.
+      description: 'Raspakirajte i napuhajte priloženom pumpom za 5-15 minuta, zatim napunite vrtnim crijevom — vrijeme punjenja ovisi o veličini bazena i opskrbi vodom.'
       icon: tabler:rocket
     - title: Jednostavna njega vode
       description: Standardni 32/38 mm otvori za filtar-pumpu, redovite pH provjere i postavljeni poklopac na okruglim modelima održavaju vodu čistom.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Koliko dugo traje postavljanje?
-      description: Napuhavanje traje oko 10 minuta s uključenom električnom zračnom pumpom; potpuno postavljanje uključujući postavljanje i punjenje obično traje 15-30 minuta.
+      description: 'Napuhavanje traje 5-15 minuta s uključenom električnom zračnom pumpom, ovisno o modelu. Vrijeme punjenja ovisi o kapacitetu bazena i vašoj zalihi vode.'
       icon: tabler:clock
       category: all
     - title: Koliko je krut drop stitch bazen?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Na koje podloge može stajati bazen?
-      description: Bilo koja ravna, ravna površina bez oštrih predmeta - travnjak, terasa ili terasa. Na grubim površinama preporuča se brušenje. Provjerite može li površina podnijeti težinu napunjenog bazena.
+      description: 'Bilo koja ravna, ravna površina bez oštrih predmeta - travnjak, terasa ili terasa. Na grubim površinama preporuča se brušenje. Napunjeni bazen je težak: postavite ga samo na površinu koja može izdržati punu težinu, a uzdignute palube, balkone i krovove najprije strukturno procijenite.'
       icon: tabler:layout-grid
       category: all
     - title: Kako održavam vodu čistom?

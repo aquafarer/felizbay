@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Pool samlinger
       amount: '4'
-    - title: Opsætningstid
-      amount: 15-30 min
+    - title: 'Oppustningstid'
+      amount: '5-15 min'
     - title: Nominelt tryk
       amount: 4-5 PSI
     - title: Kontakte
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Vores premium-serie med en moderne grå finish og valgfrit monteret betræk.
       icon: tabler:circle-dot
     - title: Spabad SPA pools
-      description: Fire-sæsons boblebadsmodeller med indbyggede sæder og 5 mm isoleret bund.
+      description: 'Isolerede boblebadsmodeller med indbyggede sæder og 5 mm isoleret bund — til brug med eksterne varmelegemer (varmelegeme medfølger ikke).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Pool samlinger
-    - value: 15-30 min
-      label: Opsætningstid
+    - value: '5-15 min'
+      label: 'Oppustningstid'
     - value: 4-5 PSI
       label: Nominelt tryk
 

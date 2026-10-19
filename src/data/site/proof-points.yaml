@@ -4,9 +4,9 @@ points:
     label: pressure-tested pools
     detail: Every pool is inflation-tested before it leaves the factory
   - id: setup
-    metric: '15–30'
-    label: minutes to set up
-    detail: One person, one pump, no tools required
+    metric: '5–15'
+    label: minutes to inflate
+    detail: One person, one pump, no tools required; filling time varies with pool size
   - id: storage
     metric: 'UV-resistant'
     label: drop stitch PVC

@@ -13,8 +13,8 @@ stats:
   stats:
     - title: คอลเลกชันสระว่ายน้ำ
       amount: '4'
-    - title: เวลาตั้งค่า
-      amount: 15-30 min
+    - title: 'เวลาสูบลม'
+      amount: '5-15 min'
     - title: จัดอันดับความดัน
       amount: 4-5 PSI
     - title: ติดต่อ
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: กลุ่มผลิตภัณฑ์ระดับพรีเมี่ยมของเรามีพื้นผิวสีเทาทันสมัยและฝาครอบเสริมแบบพอดีตัว
       icon: tabler:circle-dot
     - title: อ่างน้ำร้อน สระสปา
-      description: อ่างน้ำร้อนรุ่นสี่ฤดูพร้อมที่นั่งในตัวและพื้นฉนวนหนา 5 มม.
+      description: 'รุ่นอ่างน้ำร้อนหุ้มฉนวนพร้อมที่นั่งในตัวและพื้นหุ้มฉนวน 5 mm — สำหรับใช้กับเครื่องทำความร้อนภายนอก (ไม่รวมเครื่องทำความร้อน)'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: คอลเลกชันสระว่ายน้ำ
-    - value: 15-30 min
-      label: เวลาตั้งค่า
+    - value: '5-15 min'
+      label: 'เวลาสูบลม'
     - value: 4-5 PSI
       label: จัดอันดับความดัน
 

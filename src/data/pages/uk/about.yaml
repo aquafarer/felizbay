@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Колекції басейнів
       amount: '4'
-    - title: Час налаштування
-      amount: 15-30 min
+    - title: 'Час надування'
+      amount: '5-15 min'
     - title: Номінальний тиск
       amount: 4-5 PSI
     - title: контакт
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Наша лінійка преміум-класу з сучасним сірим оздобленням і додатковою кришкою.
       icon: tabler:circle-dot
     - title: Гідромасажна ванна SPA басейни
-      description: Чотирисезонні моделі джакузі з вбудованими сидіннями та ізольованим дном 5 мм.
+      description: 'Ізольовані моделі гідромасажних ванн із вбудованими сидіннями та ізольованим дном 5 mm — для використання із зовнішніми обігрівачами (нагрівач не входить).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Колекції басейнів
-    - value: 15-30 min
-      label: Час налаштування
+    - value: '5-15 min'
+      label: 'Час надування'
     - value: 4-5 PSI
       label: Номінальний тиск
 

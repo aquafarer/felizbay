@@ -118,7 +118,7 @@ export const POOL_KEY_FEATURES: PoolFeature[] = [
     icon: 'tabler:ruler-2',
     title: 'Sizes for Every Scenario',
     description:
-      'Round, square, and rectangular models from compact 1.5 m personal plunge pools to 10 m commercial pools — with options for built-in seats and 5 mm insulated bottoms that turn them into four-season hot tubs.',
+      'Round, square, and rectangular models from compact 1.5 m personal plunge pools to 10 m commercial pools — with options for built-in seats and 5 mm insulated bottoms that turn them into insulated soaking tubs for use with external heaters.',
   },
   {
     icon: 'tabler:bolt',
@@ -247,7 +247,7 @@ export const poolSeries: PoolCatalogSeries[] = [
     wallOptions: '8 cm / 10 cm / 15 cm',
     sizeRange: 'Diameter 1.8 m / 2.0 m / 2.3 m',
     highlights:
-      'Compact hydrotherapy design, also equipped with built-in seats and a 5 mm insulated thermal bottom base; small footprint, fast heating — suitable for balconies and private courtyards.',
+      'Compact hydrotherapy design, also equipped with built-in seats and a 5 mm insulated thermal bottom base; small footprint, quick warm-up with an external heater (not included) — for courtyards and balconies rated for the filled weight.',
     included: ['Built-in inflatable seats', '5 mm insulated thermal bottom'],
     items: [
       { item: 'RS1808', size: 'Ø 1.8 × 0.8', wall: '8 cm', weightKg: null, fobUsd: 390.29 },

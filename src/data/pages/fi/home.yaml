@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Vakiotuotenumerot
       amount: '48'
-    - title: Asennusaika
-      amount: 15-30 min
+    - title: 'Puhallusaika'
+      amount: '5-15 min'
     - title: Nimellispaine
       amount: 4-5 PSI
     - title: Takuu
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Jäykät Drop Stitch seinät
-      description: Tuhannet sisäkierteet lukitsevat seinäkerrokset yhteen, joten allas täyttyy kivikovaksi 4-5 PSI:llä ja säilyttää muotonsa täytettynä.
+      description: 'Tuhannet sisäkierteet lukitsevat seinäkerrokset yhteen, joten allas täyttyy jäykästi 4-5 PSI:llä ja säilyttää muotonsa täytettäessä.'
       icon: tabler:hexagon
     - title: Nopea, työkaluton asennus
       description: Täytä mukana tulevalla sähköpumpulla muutamassa minuutissa ja täytä sitten puutarhaletkulla. Ei työkaluja, ei rakentamista, ei ammattimaista asennusta.
       icon: tabler:rocket
     - title: Pakkaukset pois pieneksi
-      description: Tyhjennä, tyhjennä, rullaa ja säilytä allas pussissa talven yli. Täysikokoinen uima-allas, joka mahtuu kaappiin.
+      description: 'Tyhjennä, tyhjennä, rullaa ja säilytä allas pussissaan talven yli – täysikokoinen allas, joka pakataan pieneksi sisäsäilytystä varten.'
       icon: tabler:package
     - title: Kestävä ja UV-kestävä
-      description: Kaksikerroksinen PVC Drop Stitch -kangas kestää lävistystä, UV-altistusta ja koko perhekäyttöä.
+      description: 'Kaksikerroksinen PVC drop stitch -kangas, joka on suunniteltu kestämään puhkaisuja ja UV-altistusta koko perhekäytön ajan.'
       icon: tabler:shield
     - title: Täydellinen paketti
       description: Jokaisen uima-altaan mukana toimitetaan sähköinen ilmapumppu, korjaussarja ja säilytyspussi. Pyöreisiin malleihin saatavilla kiinteät kannet.
       icon: tabler:box
     - title: Turvallisuustietoinen suunnittelu
-      description: EN 16582-1- ja ASTM F2666 -standardien mukainen asuinallassuunnittelu, paineenalennusventtiilit ja vakaat jäykät seinät. Jatkuva aikuisen valvonta vaaditaan aina.
+      description: 'Asuin uima-altaan suunnittelu, jossa viitataan standardeihin EN 16582-1 ja ASTM F2666 – mallikohtaiset turvallisuustiedot on annettu tuotedokumentaatiossa. Jatkuva aikuisen valvonta vaaditaan aina.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Allas ideoita
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Felizbay-uima-altaan omistaminen on helppoa toimituksesta ensimmäiseen uintiin kauden lopun säilytykseen.
   items:
     - title: Asennus minuuteissa
-      description: Pura laatikko, täytä mukana tulevalla pumpulla ja täytä – täydellinen asennus kestää tavallisesti 15–30 minuuttia kiinteällä, tasaisella alustalla.
+      description: 'Pura pakkauksesta ja täytä mukana tulevalla pumpulla 5–15 minuutissa, täytä sitten puutarhaletkulla – täyttöaika vaihtelee altaan koon ja vesihuollon mukaan.'
       icon: tabler:rocket
     - title: Yksinkertainen vedenhoito
       description: Tavalliset 32/38 mm:n suodatinpumppuportit, säännölliset pH-tarkastukset ja pyöreissä malleissa asennettu kansi pitävät veden puhtaana.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Kuinka kauan asennus kestää?
-      description: Täyttö kestää noin 10 minuuttia mukana tulevalla sähköpumpulla; täydellinen asennus, mukaan lukien sijoittelu ja täyttö, kestää tyypillisesti 15-30 minuuttia.
+      description: 'Täyttö kestää mallista riippuen 5-15 minuuttia mukana tulevalla sähköpumpulla. Täyttöaika vaihtelee altaan kapasiteetin ja vesihuollon mukaan.'
       icon: tabler:clock
       category: all
     - title: Kuinka jäykkä Drop Stitch-allas on?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Millä pinnoilla allas voi seistä?
-      description: Mikä tahansa tasainen, tasainen pinta, jossa ei ole teräviä esineitä – nurmikko, patio tai kansi. Hiomalevyä suositellaan karkeille pinnoille. Tarkista, että pinta kestää täytetyn altaan painon.
+      description: 'Mikä tahansa tasainen, tasainen pinta, jossa ei ole teräviä esineitä – nurmikko, patio tai kansi. Hiomalevyä suositellaan karkeille pinnoille. Täytetty uima-allas on raskas: asenna vain alustalle, joka kestää täyden painon, ja arvioi ensin kohotetut kannet, parvekkeet ja katot rakenteellisesti.'
       icon: tabler:layout-grid
       category: all
     - title: Miten pidän veden puhtaana?

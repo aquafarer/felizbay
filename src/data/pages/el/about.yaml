@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Συλλογές πισίνας
       amount: '4'
-    - title: Χρόνος ρύθμισης
-      amount: 15-30 min
+    - title: 'Χρόνος φουσκώματος'
+      amount: '5-15 min'
     - title: Ονομαστική πίεση
       amount: 4-5 PSI
     - title: Επαφή
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Η premium σειρά μας με μοντέρνο γκρι φινίρισμα και προαιρετικά τοποθετημένο κάλυμμα.
       icon: tabler:circle-dot
     - title: Υδρομασάζ Πισίνες SPA
-      description: Μοντέλα υδρομασάζ τεσσάρων εποχών με ενσωματωμένα καθίσματα και μονωμένο πάτο 5 mm.
+      description: 'Μοντέλα υδρομασάζ με μόνωση με ενσωματωμένα καθίσματα και μονωμένο πάτο 5 mm — για χρήση με εξωτερικές θερμάστρες (δεν περιλαμβάνεται θερμάστρα).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Συλλογές πισίνας
-    - value: 15-30 min
-      label: Χρόνος ρύθμισης
+    - value: '5-15 min'
+      label: 'Χρόνος φουσκώματος'
     - value: 4-5 PSI
       label: Ονομαστική πίεση
 

@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standard SKU'er
       amount: '48'
-    - title: Opsætningstid
-      amount: 15-30 min
+    - title: 'Oppustningstid'
+      amount: '5-15 min'
     - title: Nominel tryk
       amount: 4-5 PSI
     - title: Garanti
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Stive Drop Stitch-vægge
-      description: Tusindvis af indvendige gevind låser væglagene sammen, så poolen puster sig stenhårdt op med 4-5 PSI og holder formen, når den fyldes.
+      description: 'Tusindvis af indvendige gevind låser væglagene sammen, så poolen puster sig stivt op med de nominelle 4-5 PSI og holder sin form, når den fyldes.'
       icon: tabler:hexagon
     - title: Hurtig, værktøjsfri opsætning
       description: Pust op med den medfølgende elektriske pumpe på få minutter, og fyld derefter med en haveslange. Ingen værktøj, ingen konstruktion, ingen professionel installation.
       icon: tabler:rocket
     - title: Pakker småt væk
-      description: Tøm, tøm luften ud, rul op og opbevar poolen i en pose over vinteren. En swimmingpool i fuld størrelse, der passer i et skab.
+      description: 'Tøm, tøm luften ud, rul op og opbevar poolen i tasken over vinteren - en pool i fuld størrelse, der pakkes ned til indendørs opbevaring.'
       icon: tabler:package
     - title: Holdbar og UV-bestandig
-      description: Dobbelt-lags PVC drop stitch stof modstår punkteringer, UV-eksponering og en hel sæson med familiebrug.
+      description: 'Dobbelt-lags PVC drop stitch stof, konstrueret til at modstå punkteringer og UV-eksponering gennem en hel sæson med familiebrug.'
       icon: tabler:shield
     - title: Komplet pakke
       description: Hver pool leveres med en elektrisk luftpumpe, reparationssæt og opbevaringstaske. Monterede betræk fås til runde modeller.
       icon: tabler:box
     - title: Sikkerhedsbevidst design
-      description: Pooldesign til beboelse, der refererer til EN 16582-1 og ASTM F2666, med overtryksventiler og stabile stive vægge. Konstant voksenopsyn er altid påkrævet.
+      description: 'Pooldesign til beboelse, der refererer til EN 16582-1 og ASTM F2666 — modelspecifik sikkerhedsinformation findes i produktdokumentationen. Konstant voksenopsyn er altid påkrævet.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pool ideer
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Fra levering til første svømmetur til slut-af-sæsonopbevaring forbliver det enkelt at eje en Felizbay-pool.
   items:
     - title: Opsætning på få minutter
-      description: Pak ud, pust op med den medfølgende pumpe og fyld - fuld opsætning tager typisk 15-30 minutter på fast, jævnt underlag.
+      description: 'Pak ud og pust op med den medfølgende pumpe på 5-15 minutter, og fyld derefter med en haveslange - påfyldningstiden varierer med poolstørrelse og vandforsyning.'
       icon: tabler:rocket
     - title: Enkel vandpleje
       description: Standard 32/38 mm filterpumpeporte, regelmæssige pH-kontroller og et monteret dæksel på runde modeller holder vandet rent.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Hvor lang tid tager opsætningen?
-      description: Oppumpning tager cirka 10 minutter med den medfølgende elektriske luftpumpe; fuld opsætning inklusive placering og påfyldning er typisk 15-30 minutter.
+      description: 'Oppumpning tager 5-15 minutter med den medfølgende elektriske luftpumpe afhængig af model. Påfyldningstiden varierer med poolens kapacitet og din vandforsyning.'
       icon: tabler:clock
       category: all
     - title: Hvor stiv er en drop stitch pool?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Hvilke overflader kan poolen stå på?
-      description: Enhver flad, plan overflade fri for skarpe genstande - græsplæne, terrasse eller dæk. En jordplade anbefales på ru overflader. Tjek, at overfladen kan bære vægten af ​​en fyldt pool.
+      description: 'Enhver flad, plan overflade fri for skarpe genstande - græsplæne, terrasse eller dæk. En jordplade anbefales på ru overflader. En fyldt pool er tung: Installer kun på en overflade, der bærer den fulde vægt, og få forhøjede dæk, balkoner og hustage strukturelt vurderet først.'
       icon: tabler:layout-grid
       category: all
     - title: Hvordan holder jeg vandet rent?

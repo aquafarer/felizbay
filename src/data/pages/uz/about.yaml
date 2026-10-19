@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Hovuz kolleksiyalari
       amount: '4'
-    - title: Sozlash vaqti
-      amount: 15-30 min
+    - title: 'Shishirish vaqti'
+      amount: '5-15 min'
     - title: Nominal bosim
       amount: 4-5 PSI
     - title: Aloqa
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Zamonaviy kulrang qoplama va ixtiyoriy o'rnatilgan qopqoq bilan bizning premium liniyamiz.
       icon: tabler:circle-dot
     - title: Issiq vanna SPA basseynlari
-      description: O'rnatilgan o'rindiqlar va 5 mm izolyatsiyalangan tagliklari bo'lgan to'rt mavsumli issiq vannalar modellari.
+      description: 'O''rnatilgan o''rindiqli va 5 mm izolyatsiyalangan taglikka ega izolyatsiyalangan issiq vannalar modellari - tashqi isitgichlar bilan ishlash uchun (isitgich qo''shilmaydi).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Hovuz kolleksiyalari
-    - value: 15-30 min
-      label: Sozlash vaqti
+    - value: '5-15 min'
+      label: 'Shishirish vaqti'
     - value: 4-5 PSI
       label: Nominal bosim
 

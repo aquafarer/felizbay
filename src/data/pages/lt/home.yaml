@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standartiniai SKU
       amount: '48'
-    - title: Sąrankos laikas
-      amount: 15-30 min
+    - title: 'Pripūtimo laikas'
+      amount: '5-15 min'
     - title: Vardinis slėgis
       amount: 4-5 PSI
     - title: Garantija
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Standžiosios Drop Stitch sienos
-      description: Tūkstančiai vidinių sriegių sukabina sienos sluoksnius, todėl baseinas stipriai išsipučia 4–5 PSI slėgiu ir išlaiko formą pripildytas.
+      description: 'Tūkstančiai vidinių sriegių sukabina sienos sluoksnius, todėl baseinas standžiai išsipučia esant vardiniam 4-5 PSI ir išlaiko formą pripildytas.'
       icon: tabler:hexagon
     - title: Greita sąranka be įrankių
       description: Pripūskite naudodami pridedamą elektrinį siurblį per kelias minutes, tada užpildykite sodo žarna. Jokių įrankių, jokių konstrukcijų, jokio profesionalaus montavimo.
       icon: tabler:rocket
     - title: Pakuotės mažos
-      description: Nusausinkite, išleiskite orą, susukite ir žiemą laikykite baseiną maiše. Viso dydžio baseinas, telpantis į spintą.
+      description: 'Ištuštinkite, išleiskite orą, susukite ir žiemą laikykite baseiną maišelyje – viso dydžio baseiną, kuris yra mažas, kad būtų galima laikyti viduje.'
       icon: tabler:package
     - title: Patvarus ir atsparus UV spinduliams
-      description: Dviejų sluoksnių PVC Drop Stitch audinys atsparus pradūrimams, UV spinduliams ir visam šeimos naudojimui.
+      description: 'Dvisluoksnis PVC drop stitch audinys, sukurtas taip, kad būtų atsparus pradūrimams ir UV poveikiui per visą šeimos naudojimo sezoną.'
       icon: tabler:shield
     - title: Pilnas paketas
       description: Kiekviename baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvaliems modeliams yra sumontuoti užvalkalai.
       icon: tabler:box
     - title: Saugumo požiūriu sąmoningas dizainas
-      description: Gyvenamojo baseino dizainas, atitinkantis EN 16582-1 ir ASTM F2666, su slėgio mažinimo vožtuvais ir stabiliomis standžiomis sienomis. Visada reikalinga nuolatinė suaugusiųjų priežiūra.
+      description: 'Gyvenamojo baseino projektas, atitinkantis EN 16582-1 ir ASTM F2666 – konkrečiam modeliui būdinga saugos informacija pateikiama gaminio dokumentacijoje. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Baseino idėjos
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Nuo pristatymo iki pirmojo plaukimo iki saugojimo sezono pabaigoje – turėti Felizbay baseiną yra paprasta.
   items:
     - title: Nustatymas per minutes
-      description: Išimkite dėžę, pripūskite naudodami pridedamą pompą ir užpildykite – pilnas nustatymas paprastai trunka 15–30 minučių ant tvirtos, lygios žemės.
+      description: 'Išpakuokite ir pripūskite naudodami pridedamą pompą per 5–15 minučių, tada užpildykite sodo žarna – užpildymo laikas priklauso nuo baseino dydžio ir vandens tiekimo.'
       icon: tabler:rocket
     - title: Paprasta vandens priežiūra
       description: Standartiniai 32/38 mm filtro siurblio prievadai, reguliarus pH patikrinimas ir apvaliuose modeliuose sumontuotas dangtelis palaiko švarų vandenį.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Kiek laiko trunka sąranka?
-      description: Pripūtimas trunka apie 10 minučių su komplekte esančiu elektriniu oro siurbliu; pilnas nustatymas, įskaitant įdėjimą ir užpildymą, paprastai trunka 15–30 minučių.
+      description: 'Pripūtimas trunka 5-15 minučių su pridedamu elektriniu oro siurbliu, priklausomai nuo modelio. Pildymo laikas priklauso nuo baseino talpos ir vandens tiekimo.'
       icon: tabler:clock
       category: all
     - title: Kiek standus yra „Drop Stitch“ baseinas?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Ant kokių paviršių gali stovėti baseinas?
-      description: Bet koks plokščias, lygus paviršius be aštrių daiktų – veja, terasa ar denis. Ant šiurkščių paviršių rekomenduojamas šlifavimo sluoksnis. Patikrinkite, ar paviršius gali atlaikyti užpildyto baseino svorį.
+      description: 'Bet koks plokščias, lygus paviršius be aštrių daiktų – veja, terasa ar denis. Ant šiurkščių paviršių rekomenduojamas šlifavimo sluoksnis. Užpildytas baseinas yra sunkus: montuokite tik ant paviršiaus, kuris atlaiko visą svorį, ir pirmiausia įvertinkite paaukštintus denius, balkonus ir stogus.'
       icon: tabler:layout-grid
       category: all
     - title: Kaip išlaikyti švarų vandenį?

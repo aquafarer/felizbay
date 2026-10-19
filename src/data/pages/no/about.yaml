@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Bassengsamlinger
       amount: '4'
-    - title: Oppsettstid
-      amount: 15-30 min
+    - title: 'Oppblåsingstid'
+      amount: '5-15 min'
     - title: Nominell trykk
       amount: 4-5 PSI
     - title: Kontakt
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Vår premium linje med en moderne grå finish og valgfritt montert deksel.
       icon: tabler:circle-dot
     - title: Badestamp SPA-bassenger
-      description: Fire-sesongs boblebadmodeller med innebygde seter og 5 mm isolert bunn.
+      description: 'Isolerte boblebadmodeller med innebygde seter og 5 mm isolert bunn — for bruk med eksterne varmeovner (varmeovn ikke inkludert).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Bassengsamlinger
-    - value: 15-30 min
-      label: Oppsettstid
+    - value: '5-15 min'
+      label: 'Oppblåsingstid'
     - value: 4-5 PSI
       label: Nominell trykk
 

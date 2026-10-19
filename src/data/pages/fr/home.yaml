@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: SKU standards
       amount: '48'
-    - title: Temps d'installation
-      amount: 15-30 min
+    - title: 'Temps de gonflage'
+      amount: '5-15 min'
     - title: Pression nominale
       amount: 4-5 PSI
     - title: Garantie
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Murs rigides Drop Stitch
-      description: Des milliers de fils internes verrouillent les couches de parois ensemble, de sorte que la piscine se gonfle très fort à 4-5 PSI et conserve sa forme une fois remplie.
+      description: 'Des milliers de fils internes verrouillent les couches de parois ensemble, de sorte que la piscine se gonfle de manière rigide au taux nominal de 4-5 PSI et conserve sa forme une fois remplie.'
       icon: tabler:hexagon
     - title: Installation rapide et sans outil
       description: Gonflez avec la pompe électrique incluse en quelques minutes, puis remplissez avec un tuyau d'arrosage. Aucun outil, aucune construction, aucune installation professionnelle.
       icon: tabler:rocket
     - title: Se range petit
-      description: Videz, dégonflez, enroulez et rangez la piscine dans un sac pendant l'hiver. Une piscine pleine grandeur qui tient dans un placard.
+      description: 'Videz, dégonflez, enroulez et rangez la piscine dans son sac pendant l''hiver : une piscine pleine grandeur qui se replie petite pour le stockage à l''intérieur.'
       icon: tabler:package
     - title: Durable et résistant aux UV
-      description: Le tissu PVC Drop Stitch double couche résiste aux perforations, à l'exposition aux UV et à une saison complète d'utilisation familiale.
+      description: 'Tissu PVC drop stitch double couche, conçu pour résister aux perforations et à l''exposition au UV pendant une saison complète d''utilisation familiale.'
       icon: tabler:shield
     - title: Forfait complet
       description: Chaque piscine est livrée avec une pompe à air électrique, un kit de réparation et un sac de rangement. Housses ajustées disponibles pour les modèles ronds.
       icon: tabler:box
     - title: Conception soucieuse de la sécurité
-      description: Conception de piscine résidentielle faisant référence aux normes EN 16582-1 et ASTM F2666, avec soupapes de surpression et parois rigides stables. La surveillance constante d'un adulte est toujours requise.
+      description: 'Conception de piscine résidentielle faisant référence aux normes EN 16582-1 et ASTM F2666 — des informations de sécurité spécifiques au modèle sont fournies dans la documentation du produit. La surveillance constante d''un adulte est toujours requise.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Idées de piscine
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: De la livraison à la première baignade en passant par le stockage de fin de saison, posséder une piscine Felizbay reste simple.
   items:
     - title: Configuration en quelques minutes
-      description: "Déballez, gonflez avec la pompe incluse et remplissez : l'installation complète prend généralement 15 à 30 minutes sur un sol ferme et plat."
+      description: 'Déballez et gonflez avec la pompe incluse en 5 à 15 minutes, puis remplissez avec un tuyau d''arrosage — le temps de remplissage varie en fonction de la taille de la piscine et de l''approvisionnement en eau.'
       icon: tabler:rocket
     - title: Entretien simple de l'eau
       description: Des ports de pompe-filtre standard de 32/38 mm, des contrôles réguliers du pH et un couvercle ajusté sur les modèles ronds maintiennent l'eau propre.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Combien de temps prend l'installation ?
-      description: Le gonflage prend environ 10 minutes avec la pompe à air électrique incluse ; la configuration complète, y compris le placement et le remplissage, dure généralement de 15 à 30 minutes.
+      description: 'Le gonflage prend 5 à 15 minutes avec la pompe à air électrique incluse selon le modèle. Le temps de remplissage varie en fonction de la capacité de la piscine et de votre approvisionnement en eau.'
       icon: tabler:clock
       category: all
     - title: Quelle est la rigidité d’une piscine drop stitch ?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Sur quelles surfaces la piscine peut-elle reposer ?
-      description: "Toute surface plane et nivelée exempte d'objets pointus : pelouse, patio ou terrasse. Un tapis de sol est recommandé sur les surfaces rugueuses. Vérifiez que la surface peut supporter le poids d'une piscine remplie."
+      description: 'Toute surface plane et nivelée exempte d''objets pointus : pelouse, patio ou terrasse. Un tapis de sol est recommandé sur les surfaces rugueuses. Une piscine remplie est lourde : installez-la uniquement sur une surface qui supporte tout son poids et faites d''abord évaluer la structure des terrasses, des balcons et des toits surélevés.'
       icon: tabler:layout-grid
       category: all
     - title: Comment garder l’eau propre ?

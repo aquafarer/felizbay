@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standarta SKU
       amount: '48'
-    - title: Iestatīšanas laiks
-      amount: 15-30 min
+    - title: 'Uzpūšanas laiks'
+      amount: '5-15 min'
     - title: Nominālais spiediens
       amount: 4-5 PSI
     - title: Garantija
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Stingras Drop Stitch sienas
-      description: Tūkstošiem iekšējo vītņu savieno sienas slāņus kopā, tāpēc baseins piepūšas 4-5 PSI un saglabā savu formu, kad tas ir piepildīts.
+      description: 'Tūkstošiem iekšējo vītņu savieno sienas slāņus, tāpēc baseins piepūšas stingrs ar nominālo 4-5 PSI un saglabā savu formu, kad tas ir piepildīts.'
       icon: tabler:hexagon
     - title: Ātra iestatīšana bez rīkiem
       description: Piepūšiet ar komplektā iekļauto elektrisko sūkni dažu minūšu laikā, pēc tam piepildiet ar dārza šļūteni. Nav instrumentu, nav konstrukcijas, nav profesionālas uzstādīšanas.
       icon: tabler:rocket
     - title: Pack Away Small
-      description: Iztukšojiet, iztukšojiet, satiniet un uzglabājiet baseinu maisā ziemā. Pilna izmēra peldbaseins, kas iederas skapī.
+      description: 'Iztukšojiet, iztukšojiet, satiniet un uzglabājiet baseinu somā pa ziemu — pilna izmēra baseinu, kas ir mazs, lai uzglabātu iekštelpās.'
       icon: tabler:package
     - title: Izturīgs un UV izturīgs
-      description: Divslāņu PVC Drop Stitch audums ir izturīgs pret caurduršanu, UV iedarbību un visu sezonu ģimenes lietošanai.
+      description: 'Divslāņu PVC drop stitch audums, kas izstrādāts tā, lai tas izturētu caurduršanu un UV iedarbību visas ģimenes lietošanas laikā.'
       icon: tabler:shield
     - title: Pilnīga pakete
       description: Katrs baseins tiek piegādāts ar elektrisko gaisa sūkni, remonta komplektu un uzglabāšanas maisiņu. Apaļajiem modeļiem pieejami iebūvēti vāki.
       icon: tabler:box
     - title: Drošību apzinīgs dizains
-      description: Dzīvojamā baseina dizains, kas atbilst EN 16582-1 un ASTM F2666, ar spiediena samazināšanas vārstiem un stabilām stingrām sienām. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.
+      description: 'Dzīvojamo baseinu dizains, kas atbilst EN 16582-1 un ASTM F2666 — modeļa specifiskā drošības informācija ir sniegta produkta dokumentācijā. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Baseina idejas
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: No piegādes līdz pirmajai peldei līdz sezonas beigām, Felizbay baseina īpašumtiesības paliek vienkārši.
   items:
     - title: Iestatīšana minūtēs
-      description: Izņemiet iepakojumu, piepūšiet ar komplektā iekļauto sūkni un uzpildiet — pilna iestatīšana parasti ilgst 15–30 minūtes uz cietas, līdzenas zemes.
+      description: 'Izņemiet kastīti un piepūšiet ar komplektā iekļauto sūkni 5–15 minūtēs, pēc tam piepildiet ar dārza šļūteni — uzpildes laiks mainās atkarībā no baseina izmēra un ūdens padeves.'
       icon: tabler:rocket
     - title: Vienkārša ūdens kopšana
       description: Standarta 32/38 mm filtra sūkņa pieslēgvietas, regulāras pH pārbaudes un piestiprināts vāks apaļajiem modeļiem nodrošina ūdens tīrību.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Cik ilgi notiek iestatīšana?
-      description: Piepūšana aizņem apmēram 10 minūtes ar komplektā iekļauto elektrisko gaisa sūkni; pilna iestatīšana, ieskaitot ievietošanu un uzpildīšanu, parasti ir 15–30 minūtes.
+      description: 'Piepumpēšana aizņem 5-15 minūtes ar komplektā iekļauto elektrisko gaisa sūkni atkarībā no modeļa. Uzpildīšanas laiks ir atkarīgs no baseina ietilpības un ūdens padeves.'
       icon: tabler:clock
       category: all
     - title: Cik stingrs ir Drop Stitch baseins?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Uz kādām virsmām baseins var stāvēt?
-      description: Jebkura plakana, līdzena virsma bez asiem priekšmetiem — zāliens, terase vai klājs. Uz raupjām virsmām ieteicams izmantot slīpētu loksni. Pārbaudiet, vai virsma var izturēt piepildīta baseina svaru.
+      description: 'Jebkura plakana, līdzena virsma bez asiem priekšmetiem — zāliens, terase vai klājs. Uz raupjām virsmām ieteicams izmantot slīpētu loksni. Piepildīts baseins ir smags: uzstādiet tikai uz virsmas, kas iztur visu svaru, un vispirms ir jānovērtē paaugstināti klāji, balkoni un jumti.'
       icon: tabler:layout-grid
       category: all
     - title: Kā es varu uzturēt ūdeni tīru?

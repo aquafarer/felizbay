@@ -13,8 +13,8 @@ stats:
   stats:
     - title: مجموعات حمامات السباحة
       amount: '4'
-    - title: وقت الإعداد
-      amount: 15-30 min
+    - title: 'وقت النفخ'
+      amount: '5-15 min'
     - title: الضغط المقدر
       amount: 4-5 PSI
     - title: اتصال
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: خطنا المتميز ذو اللون الرمادي الحديث والغطاء الاختياري المجهز.
       icon: tabler:circle-dot
     - title: حوض استحمام ساخن حمامات سبا
-      description: نماذج أحواض استحمام ساخنة صالحة للفصول الأربعة بمقاعد مدمجة وقيعان معزولة بسمك 5 مم.
+      description: 'نماذج أحواض استحمام ساخنة معزولة بمقاعد مدمجة وقيعان معزولة 5 mm - للاستخدام مع السخانات الخارجية (السخان غير متضمن).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: مجموعات حمامات السباحة
-    - value: 15-30 min
-      label: وقت الإعداد
+    - value: '5-15 min'
+      label: 'وقت النفخ'
     - value: 4-5 PSI
       label: الضغط المقدر
 

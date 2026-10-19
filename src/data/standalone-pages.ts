@@ -29,13 +29,13 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Setup and Storage',
-        body: 'Setup takes 15–30 minutes: unroll on firm, level ground, inflate with the included pump, and fill. At season end, drain, clean, dry, deflate, and fold the pool into its carry bag for compact indoor storage.',
+        body: 'Inflating takes 5–15 minutes with the included pump; filling time varies with pool size and water supply. At season end, drain, clean, dry, deflate, and fold the pool into its carry bag for compact indoor storage.',
       },
     ],
     features: [
       { label: 'Rigid Walls', desc: 'Self-supporting drop stitch panels — no frame, no stakes, no tools' },
       { label: 'UV-Resistant PVC', desc: 'Laminated shell with UV stabilizers for seasons of outdoor use' },
-      { label: 'Fast Setup', desc: '15–30 minutes from box to swimming' },
+      { label: 'Fast Setup', desc: '5–15 minutes from box to inflated' },
       { label: 'Compact Storage', desc: 'Folds into a carry bag the size of a large duffel' },
     ],
   },

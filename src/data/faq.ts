@@ -20,7 +20,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-setup-time',
     question: 'How long does it take to set up an inflatable pool?',
     answer:
-      'Inflating takes about 10 minutes with the included electric pump; full setup — positioning, inflating to the rated pressure, and connecting the filter pump — typically takes 15–30 minutes depending on the model. Filling with water takes additional time depending on pool size and your water source. Rectangular pools take slightly longer than round models due to their larger footprint.',
+      'Inflating takes 5–15 minutes with the included electric pump depending on the model; full setup — positioning, inflating to the rated pressure, and connecting the filter pump — typically takes 15–30 minutes. Filling with water takes additional time depending on pool size and your water source. Rectangular pools take slightly longer than round models due to their larger footprint.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: [],

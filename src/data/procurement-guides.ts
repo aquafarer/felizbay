@@ -349,7 +349,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'The Pressure Specification',
         paragraphs: ['Felizbay\'s engineering baseline, applied across the catalog:'],
         bullets: [
-          'Recommended operating pressure: 4–5 PSI — walls are rock-hard and rigid at this range',
+          'Recommended operating pressure: 4–5 PSI — walls are rigid at this range',
           'Factory QC test pressure: 6 PSI — every unit is tested above its operating point',
           'Maximum pressure tolerance: 8 PSI — the structural limit the design must survive',
           'Pressure-relief valve: auto-releases above 6 PSI, protecting against over-inflation and heat expansion',

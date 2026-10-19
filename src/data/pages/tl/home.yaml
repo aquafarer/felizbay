@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Mga karaniwang SKU
       amount: '48'
-    - title: Oras ng Pag-setup
-      amount: 15-30 min
+    - title: 'Oras para i-inflate'
+      amount: '5-15 min'
     - title: Na-rate na Presyon
       amount: 4-5 PSI
     - title: Warranty
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Matibay na Drop Stitch Wall
-      description: Ang libu-libong panloob na mga thread ay nakakandado sa mga layer ng dingding nang magkakasama, kaya ang pool ay nagpapalaki ng matigas na bato sa 4-5 PSI at pinapanatili ang hugis nito kapag napuno.
+      description: 'Ang libu-libong panloob na mga thread ay nakakandado sa mga layer ng dingding nang magkakasama, kaya ang pool ay lumaki nang matibay sa rate na 4-5 PSI at pinapanatili ang hugis nito kapag napuno.'
       icon: tabler:hexagon
     - title: Mabilis, Tool-Free Setup
       description: Palakihin ang kasamang electric pump sa loob ng ilang minuto, pagkatapos ay punuin ng hose sa hardin. Walang mga tool, walang konstruksiyon, walang propesyonal na pag-install.
       icon: tabler:rocket
     - title: Naka-pack na Maliit
-      description: Patuyuin, i-deflate, i-roll up, at itago ang pool sa isang bag sa taglamig. Isang full-size na swimming pool na kasya sa isang closet.
+      description: 'Alisan ng tubig, i-deflate, i-roll up, at itago ang pool sa bag nito sa taglamig - isang full-size na pool na maliit na nakaimpake para sa panloob na imbakan.'
       icon: tabler:package
     - title: Matibay at UV-Resistant
-      description: Ang double-layer na PVC na drop stitch na tela ay lumalaban sa mga pagbutas, pagkakalantad sa UV, at isang buong panahon ng paggamit ng pamilya.
+      description: 'Double-layer na PVC drop stitch na tela, na idinisenyo upang labanan ang mga butas at UV exposure sa buong panahon ng paggamit ng pamilya.'
       icon: tabler:shield
     - title: Kumpletong Package
       description: Ang bawat pool ay nagpapadala ng electric air pump, repair kit, at storage bag. Available ang mga fitted cover para sa mga bilog na modelo.
       icon: tabler:box
     - title: Disenyo na Nakababatid sa Kaligtasan
-      description: Ang disenyo ng residential pool na tumutukoy sa EN 16582-1 at ASTM F2666, na may mga pressure-relief valve at matatag na matibay na pader. Ang patuloy na pangangasiwa ng may sapat na gulang ay palaging kinakailangan.
+      description: 'Ang disenyo ng residential pool na tumutukoy sa EN 16582-1 at ASTM F2666 — ang impormasyon sa kaligtasan na partikular sa modelo ay ibinibigay sa dokumentasyon ng produkto. Ang patuloy na pangangasiwa ng may sapat na gulang ay palaging kinakailangan.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Mga Ideya sa Pool
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Mula sa paghahatid hanggang sa unang paglangoy hanggang sa end-of-season storage, nananatiling simple ang pagmamay-ari ng Felizbay pool.
   items:
     - title: Setup sa Minuto
-      description: I-unbox, i-inflate gamit ang kasamang pump, at punan — ang buong setup ay karaniwang tumatagal ng 15-30 minuto sa matatag at patag na lupa.
+      description: 'I-unbox at i-inflate ang kasamang pump sa loob ng 5-15 minuto, pagkatapos ay punuin ng hose sa hardin — nag-iiba ang oras ng pagpuno sa laki ng pool at supply ng tubig.'
       icon: tabler:rocket
     - title: Simpleng Pangangalaga sa Tubig
       description: Ang mga karaniwang 32/38 mm na filter-pump port, regular na pH check, at isang fitted na takip sa mga bilog na modelo ay nagpapanatili ng malinis na tubig.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Gaano katagal ang setup?
-      description: Ang pagpapalaki ay tumatagal ng humigit-kumulang 10 minuto sa kasamang electric air pump; ang buong setup kasama ang paglalagay at pagpuno ay karaniwang 15-30 minuto.
+      description: 'Ang pagpapalaki ay tumatagal ng 5-15 minuto sa kasamang electric air pump depende sa modelo. Ang oras ng pagpuno ay nag-iiba sa kapasidad ng pool at sa iyong supply ng tubig.'
       icon: tabler:clock
       category: all
     - title: Gaano katigas ang isang drop stitch pool?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Anong mga ibabaw ang maaaring tumayo sa pool?
-      description: Anumang patag, patag na ibabaw na walang matutulis na bagay — damuhan, patio, o deck. Inirerekomenda ang isang ground sheet sa magaspang na ibabaw. Suriin na ang ibabaw ay kayang dalhin ang bigat ng isang punong pool.
+      description: 'Anumang patag, patag na ibabaw na walang matutulis na bagay — damuhan, patio, o deck. Inirerekomenda ang isang ground sheet sa magaspang na ibabaw. Ang punong pool ay mabigat: i-install lang sa ibabaw na sumusuporta sa buong timbang, at may mga matataas na deck, balkonahe, at rooftop na unang nasuri sa istruktura.'
       icon: tabler:layout-grid
       category: all
     - title: Paano ko mapapanatili na malinis ang tubig?

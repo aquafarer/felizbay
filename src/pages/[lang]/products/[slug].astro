@@ -383,7 +383,9 @@ const productCompliance = getProductCompliance(product.category);
                       {t('product.retailPrice') || 'Retail price'}
                     </span>
                     {product.inStock && (
-                      <span class="text-sm font-medium text-green-600">{t('product.inStock') || 'In stock'}</span>
+                      <span class="text-sm font-medium text-green-600">
+                        {t('product.inStock') || 'Available to order'}
+                      </span>
                     )}
                   </div>
                 </div>

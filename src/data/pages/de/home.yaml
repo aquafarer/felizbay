@@ -24,8 +24,8 @@ stats:
       amount: '4'
     - title: Standard-SKUs
       amount: '48'
-    - title: Einrichtungszeit
-      amount: 15-30 min
+    - title: 'Aufblasdauer'
+      amount: '5-15 min'
     - title: Nenndruck
       amount: 4-5 PSI
     - title: Garantie
@@ -42,22 +42,22 @@ features:
   columns: 2
   items:
     - title: Starre Drop-Stitch-Wände
-      description: Tausende Innengewinde verbinden die Wandschichten miteinander, sodass sich der Pool bei 4–5 PSI steinhart aufbläst und im gefüllten Zustand seine Form behält.
+      description: 'Tausende Innengewinde verbinden die Wandschichten miteinander, sodass sich der Pool bei einem Nenndruck von 4–5 PSI stabil aufbläst und seine Form behält, wenn er gefüllt ist.'
       icon: tabler:hexagon
     - title: Schnelle, werkzeuglose Einrichtung
       description: Mit der mitgelieferten Elektropumpe in wenigen Minuten aufpumpen und dann mit einem Gartenschlauch befüllen. Keine Werkzeuge, keine Konstruktion, keine professionelle Installation.
       icon: tabler:rocket
     - title: Klein verpackbar
-      description: Entleeren Sie den Pool, lassen Sie die Luft ab, rollen Sie ihn auf und lagern Sie ihn über den Winter in einer Tasche. Ein großes Schwimmbecken, das in einen Schrank passt.
+      description: 'Entleeren Sie den Pool, lassen Sie die Luft ab, rollen Sie ihn auf und lagern Sie ihn über den Winter in der Tasche – ein vollwertiger Pool, der sich für die Innenaufbewahrung klein zusammenpacken lässt.'
       icon: tabler:package
     - title: Langlebig und UV-beständig
-      description: Das doppellagige PVC-Drop-Stitch-Gewebe ist beständig gegen Durchstiche, UV-Strahlung und eine ganze Saison lang für den Familiengebrauch geeignet.
+      description: 'Doppellagiges PVC-Drop-Stitch-Gewebe, das so konstruiert ist, dass es eine ganze Saison lang im Familienbereich stichfest und UV-Strahlung ausgesetzt ist.'
       icon: tabler:shield
     - title: Komplettpaket
       description: Jeder Pool wird mit einer elektrischen Luftpumpe, einem Reparaturset und einer Aufbewahrungstasche geliefert. Passende Abdeckungen für runde Modelle erhältlich.
       icon: tabler:box
     - title: Sicherheitsbewusstes Design
-      description: Design eines Wohnpools in Anlehnung an EN 16582-1 und ASTM F2666, mit Druckentlastungsventilen und stabilen starren Wänden. Ständige Aufsicht durch Erwachsene ist immer erforderlich.
+      description: 'Design von Wohnpools unter Bezugnahme auf EN 16582-1 und ASTM F2666 – modellspezifische Sicherheitsinformationen finden Sie in der Produktdokumentation. Ständige Aufsicht durch Erwachsene ist immer erforderlich.'
       icon: tabler:shield-check
 content_customer_types:
   tagline: Pool-Ideen
@@ -117,7 +117,7 @@ content_compliance:
   subtitle: Von der Lieferung über das erste Schwimmen bis zur Lagerung am Ende der Saison bleibt der Besitz eines Felizbay-Pools einfach.
   items:
     - title: Einrichtung in wenigen Minuten
-      description: Auspacken, mit der mitgelieferten Pumpe aufpumpen und befüllen – der vollständige Aufbau dauert auf festem, ebenem Untergrund normalerweise 15–30 Minuten.
+      description: 'Auspacken und mit der mitgelieferten Pumpe in 5–15 Minuten aufpumpen, dann mit einem Gartenschlauch füllen – die Füllzeit variiert je nach Poolgröße und Wasserversorgung.'
       icon: tabler:rocket
     - title: Einfache Wasserpflege
       description: Standardmäßige 32/38-mm-Filterpumpenanschlüsse, regelmäßige pH-Kontrollen und eine passende Abdeckung bei runden Modellen halten das Wasser sauber.
@@ -157,7 +157,7 @@ faqs:
   columns: 2
   items:
     - title: Wie lange dauert die Einrichtung?
-      description: Das Aufblasen dauert mit der mitgelieferten elektrischen Luftpumpe etwa 10 Minuten; Der vollständige Aufbau einschließlich Platzierung und Befüllung dauert in der Regel 15 bis 30 Minuten.
+      description: 'Das Aufblasen dauert mit der mitgelieferten elektrischen Luftpumpe je nach Modell 5-15 Minuten. Die Füllzeit hängt von der Poolkapazität und Ihrer Wasserversorgung ab.'
       icon: tabler:clock
       category: all
     - title: Wie steif ist ein Drop-Stitch-Pool?
@@ -181,7 +181,7 @@ faqs:
       icon: tabler:ruler-2
       category: all
     - title: Auf welchen Untergründen kann der Pool stehen?
-      description: Jede flache, ebene Oberfläche ohne scharfe Gegenstände – Rasen, Terrasse oder Deck. Auf rauen Untergründen empfiehlt sich eine Bodenplane. Prüfen Sie, ob die Oberfläche das Gewicht eines gefüllten Beckens tragen kann.
+      description: 'Jede flache, ebene Oberfläche ohne scharfe Gegenstände – Rasen, Terrasse oder Deck. Auf rauen Untergründen empfiehlt sich eine Bodenplane. Ein gefüllter Pool ist schwer: Installieren Sie ihn nur auf einer Oberfläche, die das volle Gewicht tragen kann, und lassen Sie erhöhte Decks, Balkone und Dächer zunächst strukturell beurteilen.'
       icon: tabler:layout-grid
       category: all
     - title: Wie halte ich das Wasser sauber?

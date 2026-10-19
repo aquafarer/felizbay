@@ -13,8 +13,8 @@ stats:
   stats:
     - title: Basseini kollektsioonid
       amount: '4'
-    - title: Seadistamise aeg
-      amount: 15-30 min
+    - title: 'Puhumisaeg'
+      amount: '5-15 min'
     - title: Nimirõhk
       amount: 4-5 PSI
     - title: Võtke ühendust
@@ -35,7 +35,7 @@ features3_what_we_build:
       description: Meie esmaklassiline sari moodsa halli viimistluse ja valikulise paigaldatud kattega.
       icon: tabler:circle-dot
     - title: Mullivann SPA basseinid
-      description: Nelja aastaaja kümblustünnide mudelid sisseehitatud istmete ja 5 mm isoleeritud põhjaga.
+      description: 'Isoleeritud kümblustünnide mudelid, millel on sisseehitatud istmed ja 5 mm isoleeritud põhjad — kasutamiseks välissoojenditega (soojendi ei kuulu komplekti).'
       icon: tabler:ripple
 features3_more:
   columns: 3
@@ -139,8 +139,8 @@ global_ops_section:
   stats:
     - value: '4'
       label: Basseini kollektsioonid
-    - value: 15-30 min
-      label: Seadistamise aeg
+    - value: '5-15 min'
+      label: 'Puhumisaeg'
     - value: 4-5 PSI
       label: Nimirõhk
 

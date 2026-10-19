@@ -27,7 +27,7 @@ const poolArticles: ContentV2Record[] = [
     definition:
       'Drop stitch is a fabric construction where thousands of internal threads connect the top and bottom layers, locking them apart under pressure to create a rigid, self-supporting wall.',
     tldr:
-      'Drop stitch pools inflate rock-hard, keep their shape at full water pressure, and still fold away for winter. Ordinary vinyl pools sag and crease; drop stitch pools stand like hard-sided pools.',
+      'Drop stitch pools inflate rigid, keep their shape at full water pressure, and still fold away for winter. Ordinary vinyl pools sag and crease; drop stitch pools stand like hard-sided pools.',
     problem:
       'Traditional inflatable pools rely on a ring of air that buckles under water pressure — walls lean, the water line sags, and the pool loses usable depth as the season goes on.',
     explanation:
@@ -66,7 +66,7 @@ const poolArticles: ContentV2Record[] = [
     explanation:
       'The frame pool spreads water load across metal tubes; the inflatable pool carries it in tension through the drop stitch walls. Both handle the water — the difference is everything around the water: assembly, portability, winter storage, and what fails after a few seasons (metal and liner seams vs fabric and valves).',
     solution:
-      'For most backyards, the drop stitch inflatable wins on total cost of ownership: no rust, no tools, no frame rails to tear the liner, and a 15–30 minute setup one person can handle alone.',
+      'For most backyards, the drop stitch inflatable wins on total cost of ownership: no rust, no tools, no frame rails to tear the liner, and a 5–15 minute inflation one person can handle alone.',
     recommendation:
       'Choose steel-frame only if you want a semi-permanent installation you will not move or store. Choose drop stitch if you want fast setup, easy winter storage, or plan to relocate the pool.',
     faq: [
