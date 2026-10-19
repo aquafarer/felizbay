@@ -31,11 +31,11 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
   'round-grey-drop-stitch-pool': {
     bestFor: ['families', 'retailers', 'oem'],
     recommendation:
-      'A modern, understated grey pool that ships with a fitted debris cover. The neutral finish suits design-conscious buyers and premium retail lineups, and the included cover adds value at the same price tier.',
+      'A modern, understated grey pool that pairs with an optional fitted debris cover. The neutral finish suits design-conscious buyers and premium retail lineups, and the optional cover adds value at the same price tier.',
     useCase: 'Premium backyard setup, design-conscious buyers, gift and premium retail channels',
-    operatingCost: 'Low — included cover cuts cleaning time and chemical loss between swims',
+    operatingCost: 'Low — the optional fitted cover cuts cleaning time and chemical loss between swims',
     whyBusinessesChooseIt:
-      'Differentiates from the sea of blue pools at retail. The bundled cover improves customer satisfaction scores and reduces support tickets about water care.',
+      'Differentiates from the sea of blue pools at retail. The optional cover improves customer satisfaction scores and reduces support tickets about water care.',
     lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'hot-tub-square-rect': {

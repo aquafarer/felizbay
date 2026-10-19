@@ -138,7 +138,7 @@ export const products: ProductRecord[] = [
     safety_rules: [
       'adult supervision required for children at all times',
       'install on flat, level ground away from sharp objects',
-      'use the fitted cover when the pool is not in use',
+      'cover the pool when not in use — a fitted cover is available as an option',
     ],
     desc: 'Premium round grey inflatable swimming pool with rigid drop stitch walls and optional fitted cover.',
     definition:
