@@ -36,6 +36,12 @@ export interface ProductLd {
   offers?: Record<string, unknown>;
   additionalProperty?: Array<{ '@type': string; name: string; value: string }>;
   aggregateRating?: { ratingValue: number; reviewCount: number; bestRating?: number };
+  /** Series/group identifier (schema.org productGroupID) when the node is a ProductGroup */
+  productGroupId?: string;
+  /** Dimension(s) the variants vary by, e.g. ['https://schema.org/size'] */
+  variesBy?: string[];
+  /** Per-variant Product nodes (no offers — group-level offer only) */
+  hasVariant?: Array<Record<string, unknown>>;
 }
 
 export interface ArticleLd {
@@ -167,7 +173,11 @@ if (type === 'Organization') {
     }),
   };
 } else if (type === 'Product' && product) {
-  const offset = { '@type': 'Product', '@id': product.url ? `${product.url}#product` : undefined };
+  const isGroup = Array.isArray(product.hasVariant) && product.hasVariant.length > 0;
+  const offset = {
+    '@type': isGroup ? 'ProductGroup' : 'Product',
+    '@id': product.url ? `${product.url}#product` : undefined,
+  };
   const mfg = product.manufacturerName
     ? { manufacturer: { '@type': 'Organization', name: product.manufacturerName } }
     : {};
@@ -190,6 +200,9 @@ if (type === 'Organization') {
     name: product.name,
     description: product.description,
     ...(product.sku ? { sku: product.sku } : {}),
+    ...(isGroup && product.productGroupId ? { productGroupID: product.productGroupId } : {}),
+    ...(isGroup && product.variesBy?.length ? { variesBy: product.variesBy } : {}),
+    ...(isGroup ? { hasVariant: product.hasVariant } : {}),
     ...(product.image ? { image: product.image } : {}),
     ...(product.url ? { url: product.url } : {}),
     ...(product.category ? { category: product.category } : {}),

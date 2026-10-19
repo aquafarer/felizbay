@@ -17,6 +17,7 @@ import { SITE } from 'astrowind:config';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 import { products as productRecords } from '~/data/products';
+import { poolSeries } from '~/data/pool-catalog';
 import { guides } from '~/data/guides';
 import { getProductCompliance } from '~/data/product-compliance';
 import { productBusinessData } from '~/data/product-business-data';
@@ -110,6 +111,28 @@ const productExtraData: Record<string, unknown> = {
     name: 'Buy Now',
   },
 };
+
+// ProductGroup (schema.org): express the real series → factory-size structure.
+// Variants carry only verified catalog facts (item number, size, packed weight);
+// no per-variant offers — the group-level Offer is the only published price.
+const SERIES_BY_SLUG: Record<string, string> = {
+  'round-blue-drop-stitch-pool': 'round',
+  'round-grey-drop-stitch-pool': 'round',
+  'rectangular-drop-stitch-pool': 'rect-square',
+  'hot-tub-round': 'hot-tub-round',
+  'hot-tub-square-rect': 'hot-tub-square-rect',
+};
+const catalogSeries = poolSeries.find((s) => s.id === SERIES_BY_SLUG[product.slug]);
+const hasVariant = catalogSeries
+  ? catalogSeries.items.map((it) => ({
+      '@type': 'Product',
+      '@id': `${url}#item-${it.item}`,
+      sku: it.item,
+      name: `${catalogSeries.name} ${it.size} m`,
+      size: `${it.size} m`,
+      ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
+    }))
+  : undefined;
 ---
 
 <ProductLayout metadata={metadata} breadcrumbs={productCrumbs}>
@@ -145,6 +168,13 @@ const productExtraData: Record<string, unknown> = {
           : {}),
       },
       additionalProperty: specEntries.map((s) => ({ '@type': 'PropertyValue', name: s.name, value: s.value })),
+      ...(hasVariant
+        ? {
+            productGroupId: product.sku || catalogSeries?.id,
+            variesBy: ['https://schema.org/size'],
+            hasVariant,
+          }
+        : {}),
     }}
   />
 
