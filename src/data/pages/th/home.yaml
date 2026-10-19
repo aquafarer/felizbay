@@ -2,7 +2,7 @@ hero:
   tagline: สระน้ำเป่าลมแบบ Drop Stitch ระดับพรีเมี่ยม
   title: สร้างความเป็นคุณให้มากขึ้น<br />พื้นที่กลางแจ้ง
   subtitle: |
-    พบกับสระน้ำเป่าลมระดับพรีเมียมที่ออกแบบมาเพื่อการพักผ่อนในสวนหลังบ้าน ความสนุกสนานในครอบครัว และการใช้ชีวิตกลางแจ้ง<br />
+    สระว่ายน้ำระดับพรีเมียมพร้อมผนัง drop-stitch ที่แข็งแรง ซึ่งจะพองตัวได้ภายในไม่กี่นาทีและแพ็คไว้สำหรับฤดูหนาว ออกแบบมาเพื่อการพักผ่อนในสวนหลังบ้านและความสนุกสนานในครอบครัว<br />
     สำรวจขนาดสระว่ายน้ำ เปรียบเทียบคุณลักษณะ และค้นหาขนาดที่เหมาะกับพื้นที่ของคุณ<br />
     ออกแบบและดำเนินการโดย Aquafarer LLC สหรัฐอเมริกา
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: ค้นหาสระน้ำของคุณ
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'สำหรับธุรกิจ'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Felizbay Drop Stitch ในสวนหลังบ้าน
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: คอลเลกชันสระว่ายน้ำ
       amount: '4'
-    - title: SKU มาตรฐาน
-      amount: '48'
+    - title: 'ขนาดสระว่ายน้ำ'
+      amount: 2-10 m
     - title: 'เวลาสูบลม'
       amount: '5-15 min'
     - title: จัดอันดับความดัน
@@ -70,7 +73,7 @@ content_customer_types:
       cta: รับไอเดีย
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: สระว่ายน้ำสำหรับสวนหลังบ้านขนาดเล็ก
-      description: รุ่นทรงกลมและสี่เหลี่ยมขนาดกะทัดรัดที่เหมาะกับพื้นที่กลางแจ้งที่คับแคบโดยไม่ต้องละทิ้งการว่ายน้ำ
+      description: 'รุ่นกลมและสี่เหลี่ยมขนาดกะทัดรัดที่เหมาะกับพื้นที่กลางแจ้งที่คับแคบ - ห้องสำหรับระบายความร้อนและใช้เวลาอาบน้ำสำหรับครอบครัว'
       icon: tabler:layout-grid
       cta: รับไอเดีย
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'เปรียบเทียบคอลเลกชัน'
+  title: 'สี่คอลเลกชัน หนึ่งทางเลือกที่ชัดเจน'
+  subtitle: 'ขนาดและการใช้งานที่ดีที่สุดโดยสรุป — ข้อมูลจำเพาะทั้งหมดแสดงอยู่ในหน้าผลิตภัณฑ์แต่ละหน้า'
+  headers:
+    collection: 'คอลเลกชัน'
+    sizes: 'ขนาด'
+    best_for: 'ดีที่สุดสำหรับ'
+  rows:
+    - collection: 'สระน้ำทรงกลม'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'ว่ายน้ำและเล่นสำหรับครอบครัว — ขนาดที่กว้างที่สุด'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'สระน้ำทรงสี่เหลี่ยม'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'พื้นที่ว่ายน้ำด้านตรงเพื่อการสังสรรค์ที่ใหญ่ขึ้น'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'สปาทรงกลม (อ่างน้ำร้อน)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'ที่นั่งในตัวสำหรับนั่งแช่'
+      href: /products/hot-tub-round
+    - collection: 'สปาทรงสี่เหลี่ยม/สี่เหลี่ยมผืนผ้า (อ่างน้ำร้อน)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'นั่งแช่ในพื้นที่ขนาดกะทัดรัด'
+      href: /products/hot-tub-square-rect
+  note: 'คอลเลกชันทั้งหมด: ผนัง 4–5 PSI drop-stitch, การสูบลม 5–15 นาที, พื้นที่จัดเก็บแบบแพ็คแยก การทำความร้อนและการกรองเป็นแบบภายนอก - เครื่องทำความร้อนและปั๊มกรองจำหน่ายแยกต่างหาก'

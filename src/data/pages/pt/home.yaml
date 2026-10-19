@@ -2,7 +2,7 @@ hero:
   tagline: Piscinas infláveis ​​Drop Stitch Premium
   title: Aproveite melhor o seu espaço ao<br />Ar livre.
   subtitle: |
-    Descubra piscinas infláveis ​​premium projetadas para relaxamento no quintal, diversão em família e vida ao ar livre.<br />
+    Piscinas premium com paredes rígidas drop-stitch que inflam em minutos e podem ser guardadas para o inverno - projetadas para relaxamento no quintal e diversão em família.<br />
     Explore tamanhos de piscinas, compare recursos e encontre o ajuste certo para o seu espaço.<br />
     Projetado e operado pela Aquafarer LLC, EUA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Encontre sua piscina
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Para negócios'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Piscina inflável retangular Felizbay Drop Stitch em um quintal
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Coleções de piscina
       amount: '4'
-    - title: SKUs padrão
-      amount: '48'
+    - title: 'Tamanhos de piscina'
+      amount: 2-10 m
     - title: 'Tempo de inflar'
       amount: '5-15 min'
     - title: Pressão Nominal
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Obtenha ideias
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Piscinas para pequenos quintais
-      description: Modelos compactos redondos e quadrados que se adaptam a espaços exteriores apertados sem abrir mão da natação.
+      description: 'Modelos redondos e quadrados compactos que se adaptam a espaços exteriores apertados — espaço para se refrescar e para tomar água em família.'
       icon: tabler:layout-grid
       cta: Obtenha ideias
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Comparar coleções'
+  title: 'Quatro coleções, uma escolha clara'
+  subtitle: 'Visão geral dos tamanhos e melhores usos — especificações completas estão disponíveis na página de cada produto.'
+  headers:
+    collection: 'Coleção'
+    sizes: 'Tamanhos'
+    best_for: 'Melhor para'
+  rows:
+    - collection: 'Piscinas Redondas'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Natação e brincadeiras em família – a mais ampla gama de tamanhos'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Piscinas Retangulares'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Espaço de natação reto para reuniões maiores'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'SPA redondo (banheira de hidromassagem)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Assentos embutidos para imersão sentada'
+      href: /products/hot-tub-round
+    - collection: 'SPA Quadrado/Reto (Banheira de Hidromassagem)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Imersão sentada em espaços compactos'
+      href: /products/hot-tub-square-rect
+  note: 'Todas as coleções: paredes drop-stitch de 4–5 PSI, inflação de 5–15 min, armazenamento portátil. O aquecimento e a filtragem são externos – os aquecedores e as bombas de filtro são vendidos separadamente.'

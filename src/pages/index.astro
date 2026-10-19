@@ -24,6 +24,7 @@ const page = getPageContent(lang, 'home');
 
 const hero = page.hero ?? {};
 const stats = page.stats ?? {};
+const compareCollections = page.compare_collections ?? {};
 const customerTypes = page.content_customer_types ?? {};
 const features = page.features ?? {};
 const categories = page.content_categories ?? {};
@@ -74,6 +75,57 @@ const metadata = {
     columns={3}
     items={features.items}
   />
+
+  {
+    compareCollections.rows ? (
+      <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
+        <div class="text-center mb-8">
+          {compareCollections.tagline && (
+            <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+              {compareCollections.tagline}
+            </p>
+          )}
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading" set:html={compareCollections.title} />
+          <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
+            {compareCollections.subtitle}
+          </p>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-gray-100 dark:border-slate-700">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gray-50 dark:bg-slate-800/60 text-left">
+                <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">
+                  {compareCollections.headers?.collection}
+                </th>
+                <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">
+                  {compareCollections.headers?.sizes}
+                </th>
+                <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100">
+                  {compareCollections.headers?.best_for}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {compareCollections.rows.map(
+                (row: { collection: string; sizes: string; best_for: string; href: string }) => (
+                  <tr class="border-t border-gray-100 dark:border-slate-700">
+                    <td class="px-4 py-3">
+                      <a class="font-medium text-primary hover:underline" href={row.href}>
+                        {row.collection}
+                      </a>
+                    </td>
+                    <td class="px-4 py-3 text-gray-600 dark:text-slate-300 whitespace-nowrap">{row.sizes}</td>
+                    <td class="px-4 py-3 text-gray-600 dark:text-slate-300">{row.best_for}</td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-center text-sm text-muted dark:text-slate-400">{compareCollections.note}</p>
+      </section>
+    ) : null
+  }
 
   <Features2
     tagline={customerTypes.tagline}

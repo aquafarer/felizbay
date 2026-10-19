@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch uppblåsbara pooler
   title: Gör mer av<br />Ditt utomhusutrymme.
   subtitle: |
-    Upptäck förstklassiga uppblåsbara pooler designade för avkoppling i trädgården, familjeskoj och utomhusliv.<br />
+    Premiumpooler med styva drop-stitch-väggar som blåser upp på några minuter och packar ihop för vintern — designade för avkoppling på bakgården och familjekul.<br />
     Utforska poolstorlekar, jämför funktioner och hitta rätt passform för ditt utrymme.<br />
     Designad och drivs av Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Hitta din pool
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'För företag'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay rektangulär Drop Stitch uppblåsbar pool på en bakgård
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Pool samlingar
       amount: '4'
-    - title: Standard SKU:er
-      amount: '48'
+    - title: 'Poolstorlekar'
+      amount: 2-10 m
     - title: 'Uppblåsningstid'
       amount: '5-15 min'
     - title: Nominellt tryck
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Få idéer
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Pooler för små bakgårdar
-      description: Kompakta runda och fyrkantiga modeller som passar trånga utomhusutrymmen utan att ge upp simningen.
+      description: 'Kompakta runda och fyrkantiga modeller som passar trånga utomhusutrymmen — utrymme för avkylning och familjens vattentid.'
       icon: tabler:layout-grid
       cta: Få idéer
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Jämför samlingar'
+  title: 'Fyra samlingar, ett tydligt val'
+  subtitle: 'Storlekar och bästa användningsområden i ett ögonkast — fullständiga specifikationer finns på varje produktsida.'
+  headers:
+    collection: 'Kollektion'
+    sizes: 'Storlekar'
+    best_for: 'Bäst för'
+  rows:
+    - collection: 'Runda pooler'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Familjesim och lek — det bredaste storleksintervallet'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Rektangulära pooler'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Raksidig simplats för större sammankomster'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Rund SPA (badtunna)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Inbyggda säten för sittande blötläggning'
+      href: /products/hot-tub-round
+    - collection: 'Fyrkantig/rektangulär SPA (badtunna)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Sittande blötläggning i kompakta utrymmen'
+      href: /products/hot-tub-square-rect
+  note: 'Alla kollektioner: 4–5 PSI drop-stitch väggar, 5–15 min uppblåsning, packningsförvaring. Uppvärmning och filtrering är externa — värmare och filterpumpar säljs separat.'

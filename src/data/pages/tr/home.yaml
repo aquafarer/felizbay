@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch Şişme Havuzlar
   title: Dış Mekan Alanınızdan Daha<br />Fazla Yararlanın.
   subtitle: |
-    Arka bahçede rahatlama, aile eğlencesi ve açık havada yaşam için tasarlanmış birinci sınıf şişme havuzları keşfedin.<br />
+    Arka bahçede rahatlama ve aile eğlencesi için tasarlanmış, dakikalar içinde şişen ve kış için toplanabilen sert drop-stitch duvarlara sahip birinci sınıf havuzlar.<br />
     Havuz boyutlarını keşfedin, özellikleri karşılaştırın ve alanınıza en uygun olanı bulun.<br />
     Aquafarer LLC, ABD tarafından tasarlanmış ve işletilmektedir.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Havuzunuzu Bulun
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'İş Amaçlı'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Arka bahçede Felizbay dikdörtgen Drop Stitch şişme yüzme havuzu
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Havuz Koleksiyonları
       amount: '4'
-    - title: Standart SKU'lar
-      amount: '48'
+    - title: 'Havuz Boyutları'
+      amount: 2-10 m
     - title: 'Şişirme Zamanı'
       amount: '5-15 min'
     - title: Nominal Basınç
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Fikir Alın
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Küçük Arka Bahçeler İçin Havuzlar
-      description: Yüzmekten vazgeçmeden dar dış mekanlara uyum sağlayan kompakt yuvarlak ve kare modeller.
+      description: 'Dar dış mekanlara uyum sağlayan kompakt yuvarlak ve kare modeller — serinlemek ve ailenizle su içmek için yer vardır.'
       icon: tabler:layout-grid
       cta: Fikir Alın
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Koleksiyonları Karşılaştır'
+  title: 'Dört Koleksiyon, Tek Net Seçim'
+  subtitle: 'Bir bakışta boyutlar ve en iyi kullanımlar; tüm teknik özellikler her ürün sayfasında mevcuttur.'
+  headers:
+    collection: 'Koleksiyon'
+    sizes: 'Boyutlar'
+    best_for: 'En İyisi'
+  rows:
+    - collection: 'Yuvarlak Havuzlar'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Ailece yüzme ve oyun — en geniş boyut aralığı'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Dikdörtgen Havuzlar'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Daha büyük toplantılar için düz kenarlı yüzme alanı'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Yuvarlak SPA (Jakuzi)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Oturarak ıslanma için yerleşik koltuklar'
+      href: /products/hot-tub-round
+    - collection: 'Kare / Dikdörtgen SPA (Jakuzi)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Kompakt alanlarda oturarak ıslanma'
+      href: /products/hot-tub-square-rect
+  note: 'Tüm koleksiyonlar: 4–5 PSI drop-stitch duvarlar, 5–15 dakika şişirme, paketli depolama. Isıtma ve filtreleme haricidir; ısıtıcılar ve filtre pompaları ayrı satılır.'

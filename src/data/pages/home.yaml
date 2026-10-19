@@ -2,7 +2,7 @@ hero:
   tagline: 'Premium Drop Stitch Inflatable Pools'
   title: 'Make More of Your<br />Outdoor Space.'
   subtitle: |
-    Discover premium inflatable pools designed for backyard relaxation, family fun, and outdoor living.<br />
+    Premium pools with rigid drop-stitch walls that inflate in minutes and pack away for winter — designed for backyard relaxation and family fun.<br />
     Explore pool sizes, compare features, and find the right fit for your space.<br />
     Designed and operated by Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Find Your Pool
       href: /find-your-pool
       icon: tabler:compass
+    - text: For Business
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
@@ -23,8 +26,8 @@ stats:
   stats:
     - title: Pool Collections
       amount: '4'
-    - title: Standard SKUs
-      amount: '48'
+    - title: Pool Sizes
+      amount: 2-10 m
     - title: Time to Inflate
       amount: '5-15 min'
     - title: Rated Pressure
@@ -35,6 +38,33 @@ stats:
       amount: Available
     - title: Contact
       amount: info@felizbay.com
+
+compare_collections:
+  tagline: Compare Collections
+  title: 'Four Collections,<br />One Clear Choice'
+  subtitle: 'Sizes and best uses at a glance — full specifications live on each product page.'
+  headers:
+    collection: Collection
+    sizes: Sizes
+    best_for: Best For
+  rows:
+    - collection: Round Pools
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Family swimming and play — the widest size range'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: Rectangular Pools
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Straight-sided swim space for larger gatherings'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Round SPA (Hot Tub)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Built-in seats for seated soaking'
+      href: /products/hot-tub-round
+    - collection: 'Square / Rect SPA (Hot Tub)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Seated soaking in compact spaces'
+      href: /products/hot-tub-square-rect
+  note: 'All collections: 4–5 PSI drop-stitch walls, 5–15 min inflation, pack-away storage. Heating and filtration are external — heaters and filter pumps are sold separately.'
 
 features:
   id: features
@@ -73,7 +103,7 @@ content_customer_types:
       cta: 'Get Ideas'
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces without giving up the swim.'
+      description: 'Compact round and square models that fit tight outdoor spaces — room for cooling off and family water time.'
       icon: tabler:layout-grid
       cta: 'Get Ideas'
       cta_href: /pool-ideas/pools-for-small-backyards

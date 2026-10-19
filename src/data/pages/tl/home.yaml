@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch Inflatable Pool
   title: Magsamantala sa iyong<br />Espasyo sa labas.
   subtitle: |
-    Tumuklas ng mga premium na inflatable pool na idinisenyo para sa pagpapahinga sa likod-bahay, kasiyahan ng pamilya, at pamumuhay sa labas.<br />
+    Mga premium na pool na may matibay na drop-stitch na pader na pumuputok sa loob ng ilang minuto at nakaimpake para sa taglamig — dinisenyo para sa pagpapahinga sa likod-bahay at kasiyahan ng pamilya.<br />
     I-explore ang mga laki ng pool, ihambing ang mga feature, at hanapin ang tamang akma para sa iyong space.<br />
     Dinisenyo at pinamamahalaan ng Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Hanapin ang Iyong Pool
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Para sa Negosyo'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay rectangular drop stitch inflatable swimming pool sa likod-bahay
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Mga Koleksyon ng Pool
       amount: '4'
-    - title: Mga karaniwang SKU
-      amount: '48'
+    - title: 'Mga Sukat ng Pool'
+      amount: 2-10 m
     - title: 'Oras para i-inflate'
       amount: '5-15 min'
     - title: Na-rate na Presyon
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Kumuha ng mga Ideya
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Mga Pool para sa Maliit na Bakuran
-      description: Mga compact na bilog at parisukat na modelo na umaangkop sa masikip na panlabas na espasyo nang hindi sumusuko sa paglangoy.
+      description: 'Mga compact na bilog at parisukat na modelo na magkasya sa masikip na panlabas na espasyo — lugar para sa paglamig at pampamilyang tubig.'
       icon: tabler:layout-grid
       cta: Kumuha ng mga Ideya
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Ihambing ang Mga Koleksyon'
+  title: 'Apat na Koleksyon, Isang Malinaw na Pagpipilian'
+  subtitle: 'Mga sukat at pinakamahuhusay na gamit sa isang sulyap — ang buong detalye ay makikita sa bawat page ng produkto.'
+  headers:
+    collection: 'Koleksyon'
+    sizes: 'Mga sukat'
+    best_for: 'Pinakamahusay Para sa'
+  rows:
+    - collection: 'Mga Bilog na Pool'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Family swimming at play — ang pinakamalawak na hanay ng laki'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Mga Rectangular Pool'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Straight-sided swim space para sa mas malalaking pagtitipon'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Bilog na SPA (Hot Tub)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Mga built-in na upuan para sa nakaupong pagbabad'
+      href: /products/hot-tub-round
+    - collection: 'Parisukat/Parihaba na SPA (Hot Tub)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Nakaupo na nakababad sa mga compact na espasyo'
+      href: /products/hot-tub-square-rect
+  note: 'Lahat ng koleksyon: 4–5 PSI drop-stitch wall, 5–15 min inflation, pack-away storage. Ang pagpainit at pagsasala ay panlabas — ang mga heater at filter na bomba ay ibinebenta nang hiwalay.'

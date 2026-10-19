@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch opblaasbare zwembaden
   title: Haal meer uit<br />Uw buitenruimte.
   subtitle: |
-    Ontdek premium opblaasbare zwembaden ontworpen voor ontspanning in de achtertuin, gezinsplezier en buitenleven.<br />
+    Premium zwembaden met stevige drop-stitch-wanden die binnen enkele minuten worden opgeblazen en opgeborgen voor de winter - ontworpen voor ontspanning in de achtertuin en gezinsplezier.<br />
     Ontdek zwembadformaten, vergelijk kenmerken en vind de juiste oplossing voor uw ruimte.<br />
     Ontworpen en beheerd door Aquafarer LLC, VS.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Vind uw zwembad
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Voor zaken'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay rechthoekig drop stitch opblaasbaar zwembad in een achtertuin
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Zwembadcollecties
       amount: '4'
-    - title: Standaard SKU's
-      amount: '48'
+    - title: 'Zwembad maten'
+      amount: 2-10 m
     - title: 'Opblaastijd'
       amount: '5-15 min'
     - title: Nominale druk
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Krijg ideeën
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Zwembaden voor kleine achtertuinen
-      description: Compacte ronde en vierkante modellen die passen in krappe buitenruimtes zonder het zwemmen op te geven.
+      description: 'Compacte ronde en vierkante modellen die passen in krappe buitenruimtes – ruimte voor verkoeling en watertijd voor het hele gezin.'
       icon: tabler:layout-grid
       cta: Krijg ideeën
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Vergelijk collecties'
+  title: 'Vier collecties, één duidelijke keuze'
+  subtitle: 'Maten en beste toepassingen in één oogopslag: volledige specificaties staan ​​live op elke productpagina.'
+  headers:
+    collection: 'Collectie'
+    sizes: 'Maten'
+    best_for: 'Beste voor'
+  rows:
+    - collection: 'Ronde zwembaden'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Zwemmen en spelen met het hele gezin — het grootste matenassortiment'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Rechthoekige zwembaden'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Zwemruimte met rechte zijkanten voor grotere bijeenkomsten'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Ronde SPA (bubbelbad)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Ingebouwde stoelen om zittend te genieten'
+      href: /products/hot-tub-round
+    - collection: 'Vierkante/rechthoekige SPA (bubbelbad)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Zittend genieten in compacte ruimtes'
+      href: /products/hot-tub-square-rect
+  note: 'Alle collecties: 4–5 PSI drop-stitch-wanden, 5–15 min. opblazen, opbergruimte. Verwarming en filtratie zijn extern; verwarmingen en filterpompen worden afzonderlijk verkocht.'

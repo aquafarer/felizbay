@@ -2,7 +2,7 @@ hero:
   tagline: استخرهای بادی Drop Stitch درجه یک
   title: از خودتان بیشتر بسازید<br />فضای باز.
   subtitle: |
-    استخرهای بادی ممتاز را کشف کنید که برای آرامش در حیاط خلوت، تفریح ​​خانوادگی و زندگی در فضای باز طراحی شده اند.<br />
+    استخرهای ممتاز با دیوارهای سفت و سخت drop-stitch که در عرض چند دقیقه باد می‌شوند و برای زمستان بسته می‌شوند - برای آرامش در حیاط خلوت و تفریح ​​خانوادگی طراحی شده‌اند.<br />
     اندازه‌های استخر را کاوش کنید، ویژگی‌ها را مقایسه کنید و مناسب فضای خود را بیابید.<br />
     طراحی و اجرا توسط Aquafarer LLC، ایالات متحده آمریکا.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: استخر خود را پیدا کنید
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'برای تجارت'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: استخر بادی Drop Stitch مستطیلی Felizbay در حیاط خلوت
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: مجموعه های استخر
       amount: '4'
-    - title: SKUهای استاندارد
-      amount: '48'
+    - title: 'اندازه های استخر'
+      amount: 2-10 m
     - title: 'زمان باد کردن'
       amount: '5-15 min'
     - title: فشار نامی
@@ -70,7 +73,7 @@ content_customer_types:
       cta: ایده بگیرید
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: استخر برای حیاط خلوت کوچک
-      description: مدل های گرد و مربع جمع و جور که متناسب با فضاهای بیرونی تنگ بدون دست کشیدن از شنا هستند.
+      description: 'مدل های گرد و مربع جمع و جور که متناسب با فضاهای بیرونی تنگ هستند - فضایی برای خنک شدن و زمان آب خانواده.'
       icon: tabler:layout-grid
       cta: ایده بگیرید
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'مقایسه مجموعه ها'
+  title: 'چهار مجموعه، یک انتخاب واضح'
+  subtitle: 'اندازه ها و بهترین کاربردها در یک نگاه - مشخصات کامل در صفحه هر محصول وجود دارد.'
+  headers:
+    collection: 'مجموعه'
+    sizes: 'اندازه ها'
+    best_for: 'بهترین برای'
+  rows:
+    - collection: 'استخرهای گرد'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'شنا و بازی خانوادگی - وسیع ترین محدوده اندازه'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'استخرهای مستطیلی'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'فضای شنای مستقیم برای مجالس بزرگتر'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'اسپای گرد (حوض آب گرم)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'صندلی های تعبیه شده برای خیساندن نشستن'
+      href: /products/hot-tub-round
+    - collection: 'اسپا مربع / مستطیل (حوض آب گرم)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'نشستن در فضاهای فشرده'
+      href: /products/hot-tub-square-rect
+  note: 'همه مجموعه ها: 4 تا 5 دیوار PSI drop-stitch، باد کردن 5 تا 15 دقیقه، ذخیره سازی بسته. گرمایش و فیلتراسیون خارجی هستند - بخاری ها و پمپ های فیلتر جداگانه فروخته می شوند.'

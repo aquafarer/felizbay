@@ -2,7 +2,7 @@ hero:
   tagline: Piscine gonfiabili Premium Drop Stitch
   title: Ottieni di più dal tuo<br />Spazio esterno.
   subtitle: |
-    Scopri le piscine gonfiabili premium progettate per il relax in giardino, il divertimento in famiglia e la vita all'aria aperta.<br />
+    Piscine premium con pareti rigide drop-stitch che si gonfiano in pochi minuti e si ripongono per l'inverno, progettate per il relax in giardino e il divertimento in famiglia.<br />
     Esplora le dimensioni della piscina, confronta le caratteristiche e trova la soluzione giusta per il tuo spazio.<br />
     Progettato e gestito da Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Trova la tua piscina
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Per affari'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Piscina gonfiabile rettangolare Felizbay Drop Stitch in un cortile
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Collezioni di piscine
       amount: '4'
-    - title: SKU standard
-      amount: '48'
+    - title: 'Dimensioni della piscina'
+      amount: 2-10 m
     - title: 'Tempo di gonfiaggio'
       amount: '5-15 min'
     - title: Pressione nominale
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Ottieni idee
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Piscine per piccoli cortili
-      description: Modelli tondi e quadrati compatti che si adattano agli spazi esterni ristretti senza rinunciare al nuoto.
+      description: 'Modelli rotondi e quadrati compatti che si adattano a spazi esterni ristretti: spazio per rinfrescarsi e passare il tempo in acqua con la famiglia.'
       icon: tabler:layout-grid
       cta: Ottieni idee
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Confronta collezioni'
+  title: 'Quattro collezioni, una scelta chiara'
+  subtitle: 'Taglie e usi migliori in breve: le specifiche complete sono disponibili su ogni pagina del prodotto.'
+  headers:
+    collection: 'Collezione'
+    sizes: 'Dimensioni'
+    best_for: 'Ideale per'
+  rows:
+    - collection: 'Piscine rotonde'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Nuoto e gioco per tutta la famiglia: la gamma di taglie più ampia'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Piscine rettangolari'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Spazio per nuotare sui lati diritti per riunioni più grandi'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'SPA rotonda (vasca idromassaggio)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Sedili integrati per l''ammollo seduti'
+      href: /products/hot-tub-round
+    - collection: 'SPA Quadrata/Retta (Vasca Idromassaggio)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Seduti a mollo in spazi compatti'
+      href: /products/hot-tub-square-rect
+  note: 'Tutte le collezioni: pareti drop-stitch da 4–5 PSI, gonfiaggio da 5–15 minuti, stoccaggio a scomparsa. Il riscaldamento e la filtrazione sono esterni: i riscaldatori e le pompe filtro sono venduti separatamente.'

@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch täispuhutavad basseinid
   title: Kasutage oma<br />Väliruumi rohkem.
   subtitle: |
-    Avastage esmaklassilised täispuhutavad basseinid, mis on loodud tagaaias lõõgastumiseks, pere lõbustamiseks ja õues elamiseks.<br />
+    Kõrgetasemelised jäikade drop-stitch seintega basseinid, mis täituvad mõne minutiga ja pakitakse talveks kaasa – loodud tagaaias lõõgastumiseks ja pere lõbutsemiseks.<br />
     Uurige basseini suurusi, võrrelge funktsioone ja leidke oma ruumi jaoks sobiv.<br />
     Projekteeris ja haldab Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Leidke oma bassein
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Ettevõtluse jaoks'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay ristkülikukujuline Drop Stitch täispuhutav bassein tagaaias
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Basseini kollektsioonid
       amount: '4'
-    - title: Standardsed SKU-d
-      amount: '48'
+    - title: 'Basseini suurused'
+      amount: 2-10 m
     - title: 'Puhumisaeg'
       amount: '5-15 min'
     - title: Nimirõhk
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Hankige ideid
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Basseinid väikestele tagaaedadele
-      description: Kompaktsed ümmargused ja kandilised mudelid, mis sobivad kitsastesse väliruumidesse ilma ujumisest loobumata.
+      description: 'Kompaktsed ümmargused ja ruudukujulised mudelid, mis sobivad kitsastesse väliruumidesse – ruumi jahutamiseks ja pere veetmiseks.'
       icon: tabler:layout-grid
       cta: Hankige ideid
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Võrdle kogusid'
+  title: 'Neli kollektsiooni, üks selge valik'
+  subtitle: 'Suurused ja parimad kasutusvõimalused lühidalt – täielikud spetsifikatsioonid on igal tootelehel.'
+  headers:
+    collection: 'Kollektsioon'
+    sizes: 'Suurused'
+    best_for: 'Parim'
+  rows:
+    - collection: 'Ümmargused basseinid'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Pere ujumine ja mängimine — kõige laiem suurusvalik'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Ristkülikukujulised basseinid'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Sirge küljega ujumisruum suuremate kogunemiste jaoks'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Ümar SPA (mullivann)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Sisseehitatud istmed leotamiseks'
+      href: /products/hot-tub-round
+    - collection: 'Ruudukujuline/ristkülik SPA (mullivann)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Istuv leotamine kompaktsetes ruumides'
+      href: /products/hot-tub-square-rect
+  note: 'Kõik kollektsioonid: 4–5 PSI drop-stitch seinad, täitmine 5–15 minutit, pakitav hoiuruum. Küte ja filtreerimine on välised — küttekehad ja filtripumbad müüakse eraldi.'

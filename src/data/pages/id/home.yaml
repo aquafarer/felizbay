@@ -2,7 +2,7 @@ hero:
   tagline: Kolam Tiup Drop Stitch Premium
   title: Maksimalkan Ruang Luar<br />Ruangan Anda.
   subtitle: |
-    Temukan kolam tiup premium yang dirancang untuk relaksasi di halaman belakang, kesenangan keluarga, dan kehidupan di luar ruangan.<br />
+    Kolam renang premium dengan dinding drop-stitch kaku yang dapat mengembang dalam hitungan menit dan dikemas untuk musim dingin — dirancang untuk relaksasi di halaman belakang dan kesenangan keluarga.<br />
     Jelajahi ukuran kolam, bandingkan fiturnya, dan temukan yang paling cocok untuk ruangan Anda.<br />
     Dirancang dan dioperasikan oleh Aquafarer LLC, AS.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Temukan Kolam Anda
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Untuk Bisnis'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Kolam renang tiup Drop Stitch persegi panjang Felizbay di halaman belakang
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Koleksi Kolam Renang
       amount: '4'
-    - title: SKU Standar
-      amount: '48'
+    - title: 'Ukuran Kolam Renang'
+      amount: 2-10 m
     - title: 'Waktu pengembungan'
       amount: '5-15 min'
     - title: Nilai Tekanan
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Dapatkan Ide
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Kolam untuk Halaman Belakang Kecil
-      description: Model bulat dan persegi kompak yang cocok untuk ruang luar yang sempit tanpa harus berhenti berenang.
+      description: 'Model bulat dan persegi ringkas yang sesuai dengan ruang luar ruangan yang sempit — ruang untuk mendinginkan diri dan waktu minum bersama keluarga.'
       icon: tabler:layout-grid
       cta: Dapatkan Ide
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Bandingkan Koleksi'
+  title: 'Empat Koleksi, Satu Pilihan Jelas'
+  subtitle: 'Sekilas tentang ukuran dan kegunaan terbaik — spesifikasi lengkap tersedia di setiap halaman produk.'
+  headers:
+    collection: 'Koleksi'
+    sizes: 'Ukuran'
+    best_for: 'Terbaik Untuk'
+  rows:
+    - collection: 'Kolam Bulat'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Berenang dan bermain bersama keluarga — kisaran ukuran terluas'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Kolam Persegi Panjang'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Ruang renang sisi lurus untuk pertemuan lebih besar'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'SPA Bulat (Kolam Air Panas)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Kursi bawaan untuk berendam sambil duduk'
+      href: /products/hot-tub-round
+    - collection: 'SPA Persegi/Persegi Panjang (Kolam Air Panas)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Duduk berendam di ruang padat'
+      href: /products/hot-tub-square-rect
+  note: 'Semua koleksi: dinding drop-stitch 4–5 PSI, inflasi 5–15 menit, penyimpanan dalam satu paket. Pemanasan dan filtrasi bersifat eksternal — pemanas dan pompa filter dijual terpisah.'

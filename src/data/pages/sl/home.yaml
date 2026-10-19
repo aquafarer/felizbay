@@ -2,7 +2,7 @@ hero:
   tagline: Vrhunski napihljivi bazeni Drop Stitch
   title: Izkoristite več svojega<br />Zunanjega prostora.
   subtitle: |
-    Odkrijte vrhunske napihljive bazene, zasnovane za sprostitev na dvorišču, družinsko zabavo in bivanje na prostem.<br />
+    Vrhunski bazeni s trdimi stenami drop-stitch, ki se napihnejo v nekaj minutah in so pripravljeni za zimo – zasnovani za sprostitev na dvorišču in družinsko zabavo.<br />
     Raziščite velikosti bazenov, primerjajte funkcije in poiščite primernega za svoj prostor.<br />
     Oblikoval in upravlja Aquafarer LLC, ZDA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Poiščite svoj bazen
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Za posel'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay pravokotni napihljivi bazen Drop Stitch na dvorišču
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Zbirke bazenov
       amount: '4'
-    - title: Standardne SKU
-      amount: '48'
+    - title: 'Velikosti bazenov'
+      amount: 2-10 m
     - title: 'Čas za napihovanje'
       amount: '5-15 min'
     - title: Nazivni tlak
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Pridobite ideje
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Bazeni za majhna dvorišča
-      description: Kompaktni okrogli in kvadratni modeli, ki se prilegajo tesnim zunanjim prostorom, ne da bi se odpovedali plavanju.
+      description: 'Kompaktni okrogli in kvadratni modeli, ki se prilegajo ozkim zunanjim prostorom - prostor za ohlajanje in družinski čas za vodo.'
       icon: tabler:layout-grid
       cta: Pridobite ideje
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Primerjaj zbirke'
+  title: 'Štiri zbirke, ena jasna izbira'
+  subtitle: 'Velikosti in najboljše uporabe na prvi pogled — popolne specifikacije so na voljo na vsaki strani izdelka.'
+  headers:
+    collection: 'Kolekcija'
+    sizes: 'Velikosti'
+    best_for: 'Najboljše za'
+  rows:
+    - collection: 'Okrogli bazeni'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Družinsko plavanje in igranje — najširši razpon velikosti'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Pravokotni bazeni'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Ravni plavalni prostor za večja srečanja'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Okrogli SPA (vroča kopel)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Vgrajeni sedeži za sedeče namakanje'
+      href: /products/hot-tub-round
+    - collection: 'Kvadratno/pravokotno SPA (masažna kad)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Sedeče namakanje v strnjenih prostorih'
+      href: /products/hot-tub-square-rect
+  note: 'Vse zbirke: stene 4–5 PSI drop-stitch, 5–15 min napihovanja, skladiščenje v embalaži. Ogrevanje in filtracija sta zunanja — grelniki in filtrske črpalke se prodajajo ločeno.'

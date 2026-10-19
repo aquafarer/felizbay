@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch Şişmə Hovuzları
   title: Xarici məkanınızdan daha çox<br />Istifadə edin.
   subtitle: |
-    Həyətdə istirahət, ailəvi əyləncə və açıq havada yaşamaq üçün nəzərdə tutulmuş yüksək səviyyəli şişmə hovuzları kəşf edin.<br />
+    Bir neçə dəqiqə ərzində şişən və qışa yığılan sərt drop-stitch divarları olan premium hovuzlar həyətdə istirahət və ailəvi əyləncə üçün nəzərdə tutulub.<br />
     Hovuz ölçülərini araşdırın, xüsusiyyətləri müqayisə edin və məkanınıza uyğun olanı tapın.<br />
     Aquafarer MMC, ABŞ tərəfindən dizayn edilmiş və idarə edilmişdir.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Hovuzunuzu tapın
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Biznes üçün'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Həyətdə Felizbay düzbucaqlı Drop Stitch şişmə hovuzu
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Hovuz kolleksiyaları
       amount: '4'
-    - title: Standart SKU-lar
-      amount: '48'
+    - title: 'Hovuz Ölçüləri'
+      amount: 2-10 m
     - title: 'Şişirmə vaxtı'
       amount: '5-15 min'
     - title: Nominal təzyiq
@@ -70,7 +73,7 @@ content_customer_types:
       cta: İdeyalar əldə edin
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Kiçik həyətlər üçün hovuzlar
-      description: Üzməkdən vaz keçmədən dar açıq məkanlara uyğun gələn yığcam dəyirmi və kvadrat modellər.
+      description: 'Dar açıq məkanlara uyğun olan yığcam yuvarlaq və kvadrat modellər — sərinləmək üçün otaq və ailənin su vaxtı.'
       icon: tabler:layout-grid
       cta: İdeyalar əldə edin
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Kolleksiyaları müqayisə edin'
+  title: 'Dörd Kolleksiya, Bir Aydın Seçim'
+  subtitle: 'Ölçülər və ən yaxşı istifadələr bir baxışda — tam spesifikasiyalar hər bir məhsul səhifəsində mövcuddur.'
+  headers:
+    collection: 'Kolleksiya'
+    sizes: 'Ölçülər'
+    best_for: 'Üçün ən yaxşısı'
+  rows:
+    - collection: 'Dairəvi hovuzlar'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Ailə üzgüçülük və oyun - ən geniş ölçü diapazonu'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Düzbucaqlı Hovuzlar'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Daha böyük yığıncaqlar üçün düz tərəfli üzgüçülük sahəsi'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Dəyirmi SPA (Hot Vanna)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Oturarkən islatmaq üçün quraşdırılmış oturacaqlar'
+      href: /products/hot-tub-round
+    - collection: 'Kvadrat/Düzbucaqlı SPA (Hot Vanna)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Kompakt məkanlarda oturmuş islatma'
+      href: /products/hot-tub-square-rect
+  note: 'Bütün kolleksiyalar: 4–5 PSI drop-stitch divarları, 5–15 dəqiqəlik inflyasiya, paketdə saxlama. İstilik və filtrasiya xaricidir — qızdırıcılar və filtr nasosları ayrıca satılır.'

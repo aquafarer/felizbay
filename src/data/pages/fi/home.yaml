@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch puhallettavat altaat
   title: Ota enemmän<br />Irti ulkotilastasi.
   subtitle: |
-    Tutustu huippuluokan puhallettaviin uima-altaisiin, jotka on suunniteltu rentoutumiseen takapihalla, perheen hauskanpitoon ja ulkoiluun.<br />
+    Ensiluokkaiset uima-altaat jäykillä drop-stitch-seinämillä, jotka täyttyvät minuuteissa ja pakkautuvat talveksi – suunniteltu takapihalla rentoutumiseen ja perheen hauskanpitoon.<br />
     Tutustu uima-altaiden kokoihin, vertaile ominaisuuksia ja löydä tilallesi sopiva.<br />
     Suunnittelija ja operoi Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Löydä allas
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Yrityksille'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbayn suorakulmainen Drop Stitch puhallettava uima-allas takapihalla
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Allas kokoelmat
       amount: '4'
-    - title: Vakiotuotenumerot
-      amount: '48'
+    - title: 'Altaan koot'
+      amount: 2-10 m
     - title: 'Puhallusaika'
       amount: '5-15 min'
     - title: Nimellispaine
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Hanki ideoita
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Altaat pienille takapihoille
-      description: Kompaktit pyöreät ja neliömäiset mallit, jotka sopivat ahtaisiin ulkotiloihin luopumatta uinnista.
+      description: 'Kompaktit pyöreät ja neliömäiset mallit, jotka sopivat ahtaisiin ulkotiloihin – tilaa viilentämiseen ja perheen vesiaikaan.'
       icon: tabler:layout-grid
       cta: Hanki ideoita
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Vertaa kokoelmia'
+  title: 'Neljä kokoelmaa, yksi selkeä valinta'
+  subtitle: 'Koot ja parhaat käyttötavat yhdellä silmäyksellä – täydelliset tekniset tiedot ovat jokaisella tuotesivulla.'
+  headers:
+    collection: 'Kokoelma'
+    sizes: 'Koot'
+    best_for: 'Paras'
+  rows:
+    - collection: 'Pyöreät altaat'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Perheuinti ja leikki – laajin kokovalikoima'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Suorakaiteen muotoiset altaat'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Suorasivuinen uimapaikka suurempiin kokoontumisiin'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Pyöreä SPA (kylpytynnyri)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Sisäänrakennetut istuimet liotusta varten'
+      href: /products/hot-tub-round
+    - collection: 'Neliö/suorakulmiomainen SPA (kylpytynnyri)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Istuva liotus kompakteissa tiloissa'
+      href: /products/hot-tub-square-rect
+  note: 'Kaikki kokoelmat: 4–5 PSI drop-stitch seinät, 5–15 minuutin täyttö, pakattava säilytys. Lämmitys ja suodatus ovat ulkoisia – lämmittimet ja suodatinpumput myydään erikseen.'

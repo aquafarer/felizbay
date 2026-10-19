@@ -2,7 +2,7 @@ hero:
   tagline: برك سباحة قابلة للنفخ Drop Stitch فاخرة
   title: تحقيق المزيد من الخاص بك<br />الفضاء الخارجي.
   subtitle: |
-    اكتشف حمامات السباحة القابلة للنفخ المتميزة المصممة للاسترخاء في الفناء الخلفي والمرح العائلي والمعيشة في الهواء الطلق.<br />
+    حمامات سباحة متميزة بجدران drop-stitch صلبة تنتفخ في دقائق وتوضع في مكانها لفصل الشتاء - مصممة للاسترخاء في الفناء الخلفي والمرح العائلي.<br />
     استكشف أحجام حمامات السباحة، وقارن الميزات، واعثر على المقاس المناسب لمساحتك.<br />
     تم تصميمه وتشغيله بواسطة شركة Aquafarer LLC، الولايات المتحدة الأمريكية.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: ابحث عن حمام السباحة الخاص بك
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'للأعمال'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل الشكل من Felizbay في الفناء الخلفي
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: مجموعات البلياردو
       amount: '4'
-    - title: وحدات SKU القياسية
-      amount: '48'
+    - title: 'أحجام حمامات السباحة'
+      amount: 2-10 m
     - title: 'وقت النفخ'
       amount: '5-15 min'
     - title: الضغط المقدر
@@ -70,7 +73,7 @@ content_customer_types:
       cta: احصل على أفكار
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: حمامات سباحة للساحات الخلفية الصغيرة
-      description: نماذج مستديرة ومربعة مدمجة تناسب المساحات الخارجية الضيقة دون التخلي عن السباحة.
+      description: 'موديلات صغيرة مستديرة ومربعة تناسب المساحات الخارجية الضيقة - مساحة للتهدئة وقضاء وقت ممتع مع العائلة.'
       icon: tabler:layout-grid
       cta: احصل على أفكار
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'قارن المجموعات'
+  title: 'أربع مجموعات، خيار واحد واضح'
+  subtitle: 'نظرة سريعة على الأحجام وأفضل الاستخدامات - المواصفات الكاملة موجودة في كل صفحة منتج.'
+  headers:
+    collection: 'مجموعة'
+    sizes: 'الأحجام'
+    best_for: 'أفضل ل'
+  rows:
+    - collection: 'حمامات مستديرة'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'السباحة واللعب العائلي — أكبر نطاق للحجم'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'حمامات سباحة مستطيلة'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'مساحة سباحة مستقيمة الجوانب للتجمعات الكبيرة'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'سبا دائري (حوض استحمام ساخن)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'مقاعد مدمجة للنقع أثناء الجلوس'
+      href: /products/hot-tub-round
+    - collection: 'سبا مربع / مستطيل (حوض استحمام ساخن)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'الجلوس في مساحات صغيرة'
+      href: /products/hot-tub-square-rect
+  note: 'جميع المجموعات: 4-5 جدران PSI drop-stitch، نفخ لمدة 5-15 دقيقة، تخزين معبأ. التدفئة والترشيح خارجيان - تُباع السخانات ومضخات الفلتر بشكل منفصل.'

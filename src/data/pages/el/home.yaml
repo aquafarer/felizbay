@@ -2,7 +2,7 @@ hero:
   tagline: Φουσκωτές πισίνες Premium Drop Stitch
   title: Αξιοποιήστε περισσότερο τον εξωτερικό<br />Σας χώρο.
   subtitle: |
-    Ανακαλύψτε premium φουσκωτές πισίνες σχεδιασμένες για χαλάρωση στην πίσω αυλή, οικογενειακή διασκέδαση και υπαίθρια διαβίωση.<br />
+    Premium πισίνες με άκαμπτους τοίχους drop-stitch που φουσκώνουν μέσα σε λίγα λεπτά και συσκευάζονται για χειμώνα — σχεδιασμένες για χαλάρωση στην πίσω αυλή και οικογενειακή διασκέδαση.<br />
     Εξερευνήστε τα μεγέθη της πισίνας, συγκρίνετε χαρακτηριστικά και βρείτε τη σωστή εφαρμογή για τον χώρο σας.<br />
     Σχεδιάστηκε και λειτουργεί από την Aquafarer LLC, ΗΠΑ.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Βρείτε την πισίνα σας
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Για Επιχειρήσεις'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay ορθογώνια Drop Stitch φουσκωτή πισίνα σε μια πίσω αυλή
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Συλλογές πισίνας
       amount: '4'
-    - title: Τυπικά SKU
-      amount: '48'
+    - title: 'Μεγέθη πισίνας'
+      amount: 2-10 m
     - title: 'Χρόνος φουσκώματος'
       amount: '5-15 min'
     - title: Ονομαστική πίεση
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Λάβετε ιδέες
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Πισίνες για μικρές αυλές
-      description: Συμπαγή στρογγυλά και τετράγωνα μοντέλα που ταιριάζουν σε στενούς εξωτερικούς χώρους χωρίς να εγκαταλείπουν το κολύμπι.
+      description: 'Συμπαγή στρογγυλά και τετράγωνα μοντέλα που ταιριάζουν σε στενούς εξωτερικούς χώρους — χώρος για δροσιά και οικογενειακό νερό.'
       icon: tabler:layout-grid
       cta: Λάβετε ιδέες
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Συγκρίνετε Συλλογές'
+  title: 'Τέσσερις συλλογές, μία καθαρή επιλογή'
+  subtitle: 'Μεγέθη και βέλτιστες χρήσεις με μια ματιά — οι πλήρεις προδιαγραφές ζωντανά σε κάθε σελίδα προϊόντος.'
+  headers:
+    collection: 'Συλλογή'
+    sizes: 'Μεγέθη'
+    best_for: 'Καλύτερο για'
+  rows:
+    - collection: 'Στρογγυλές Πισίνες'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Οικογενειακή κολύμβηση και παιχνίδι — το μεγαλύτερο εύρος μεγεθών'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Ορθογώνιες Πισίνες'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Χώρος κολύμβησης με ευθεία όψη για μεγαλύτερες συγκεντρώσεις'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Στρογγυλό SPA (υδρομασάζ)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Ενσωματωμένα καθίσματα για μούσκεμα καθιστών'
+      href: /products/hot-tub-round
+    - collection: 'Τετράγωνο/Ορθογώνιο SPA (υδρομασάζ)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Καθιστή μούσκεμα σε συμπαγείς χώρους'
+      href: /products/hot-tub-square-rect
+  note: 'Όλες οι συλλογές: τοίχοι 4–5 PSI drop-stitch, φούσκωμα 5–15 λεπτά, αποθήκευση σε πακέτο. Η θέρμανση και το φιλτράρισμα είναι εξωτερικά — οι θερμαντήρες και οι αντλίες φίλτρων πωλούνται χωριστά.'

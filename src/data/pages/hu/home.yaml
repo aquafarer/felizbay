@@ -2,7 +2,7 @@ hero:
   tagline: Prémium Drop Stitch felfújható medencék
   title: Hozzon ki többet<br />Szabadtéri teréből.
   subtitle: |
-    Fedezze fel a prémium felfújható medencéket, amelyeket kerti pihenéshez, családi szórakozáshoz és szabadtéri élethez terveztek.<br />
+    Prémium medencék merev drop-stitch falakkal, amelyek percek alatt felfújódnak, és elpakolódnak télre – kerti pihenésre és családi szórakozásra tervezték.<br />
     Fedezze fel a medenceméreteket, hasonlítsa össze a funkciókat, és találja meg a helyének megfelelőt.<br />
     Tervezője és üzemeltetője az Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Találja meg medencéjét
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Vállalkozásoknak'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay téglalap alakú Drop Stitch felfújható medence egy hátsó udvarban
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Medence gyűjtemények
       amount: '4'
-    - title: Szabványos cikkszámok
-      amount: '48'
+    - title: 'Medence méretek'
+      amount: 2-10 m
     - title: 'Felfújási idő'
       amount: '5-15 min'
     - title: Névleges nyomás
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Ötleteket
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Medencék kis kertekbe
-      description: Kompakt kerek és négyzet alakú modellek, amelyek szűk kültéri helyekre is illeszkednek anélkül, hogy feladnák az úszást.
+      description: 'Kompakt kerek és négyzet alakú modellek, amelyek szűk kültéri helyekre is illeszkednek – hely a lehűléshez és a családi vízi időhöz.'
       icon: tabler:layout-grid
       cta: Ötleteket
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Gyűjtemények összehasonlítása'
+  title: 'Négy kollekció, egy egyértelmű választás'
+  subtitle: 'Méretek és legjobb felhasználási lehetőségek egy pillantásra – a teljes specifikáció minden termékoldalon megtalálható.'
+  headers:
+    collection: 'Kollekció'
+    sizes: 'Méretek'
+    best_for: 'Legjobb erre'
+  rows:
+    - collection: 'Kerek medencék'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Családi úszás és játék – a legszélesebb méretválaszték'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Téglalap alakú medencék'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Egyenes oldalú úszótér nagyobb összejövetelek számára'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Kerek SPA (pezsgőfürdő)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Beépített ülések az ülő áztatáshoz'
+      href: /products/hot-tub-round
+    - collection: 'Négyzet/téglalap SPA (pezsgőfürdő)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Ülő áztatás kompakt helyeken'
+      href: /products/hot-tub-square-rect
+  note: 'Minden kollekció: 4–5 PSI drop-stitch falak, 5–15 perces felfújás, elcsomagolt tárolás. A fűtés és a szűrés külső – a fűtőelemek és a szűrőszivattyúk külön vásárolhatók meg.'

@@ -2,7 +2,7 @@ hero:
   tagline: Aukščiausios kokybės „Drop Stitch“ pripučiami baseinai
   title: Išnaudokite daugiau savo<br />Lauko erdvės.
   subtitle: |
-    Atraskite aukščiausios kokybės pripučiamus baseinus, skirtus poilsiui kieme, šeimos pramogoms ir gyvenimui lauke.<br />
+    Aukščiausios klasės baseinai su tvirtomis drop-stitch sienomis, kurios pripučiamos per kelias minutes ir supakuojamos žiemai – sukurti poilsiui kieme ir šeimos pramogoms.<br />
     Ištirkite baseinų dydžius, palyginkite funkcijas ir raskite tinkamą jūsų erdvei.<br />
     Sukūrė ir eksploatuoja Aquafarer LLC, JAV.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Raskite savo baseiną
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Verslui'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay stačiakampis Drop Stitch pripučiamas baseinas kieme
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Baseino kolekcijos
       amount: '4'
-    - title: Standartiniai SKU
-      amount: '48'
+    - title: 'Baseino dydžiai'
+      amount: 2-10 m
     - title: 'Pripūtimo laikas'
       amount: '5-15 min'
     - title: Vardinis slėgis
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Gaukite idėjų
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Baseinai mažiems kiemams
-      description: Kompaktiški apvalūs ir kvadratiniai modeliai, tinkantys siauroms lauko erdvėms, neatsisakant maudymosi.
+      description: 'Kompaktiški apvalūs ir kvadratiniai modeliai, tinkantys siauroms lauko erdvėms – vieta atsivėsinimui ir šeimos vandens praleidimui.'
       icon: tabler:layout-grid
       cta: Gaukite idėjų
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Palyginkite kolekcijas'
+  title: 'Keturios kolekcijos, vienas aiškus pasirinkimas'
+  subtitle: 'Dydžiai ir geriausias panaudojimas iš pirmo žvilgsnio – visos specifikacijos pateikiamos kiekvieno produkto puslapyje.'
+  headers:
+    collection: 'Kolekcija'
+    sizes: 'Dydžiai'
+    best_for: 'Geriausias'
+  rows:
+    - collection: 'Apvalūs baseinai'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Šeimos plaukimas ir žaidimas – plačiausias dydžių asortimentas'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Stačiakampiai baseinai'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Tiesios pusės plaukimo erdvė didesniems susibūrimams'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Apvalus SPA (kubilas)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Įmontuotos sėdynės, skirtos mirkymui sėdint'
+      href: /products/hot-tub-round
+    - collection: 'Kvadratinis/stačiakampis SPA (kubilas)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Sėdimas mirkymas kompaktiškose erdvėse'
+      href: /products/hot-tub-square-rect
+  note: 'Visos kolekcijos: 4–5 PSI drop-stitch sienos, 5–15 min pripūtimas, sandėliavimas supakuotas. Šildymas ir filtravimas yra išoriniai – šildytuvai ir filtravimo siurbliai parduodami atskirai.'

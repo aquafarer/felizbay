@@ -2,7 +2,7 @@ hero:
   tagline: Премиум Drop Stitch үрленетін бассейндер
   title: Ашық кеңістігіңізді<br />Көбірек пайдаланыңыз.
   subtitle: |
-    Аулада демалуға, отбасылық көңіл көтеруге және ашық ауада өмір сүруге арналған жоғары сапалы үрленетін бассейндерді табыңыз.<br />
+    Қатты drop-stitch қабырғалары бар премиум бассейндер бірнеше минут ішінде үрленіп, қыста жиналады — аулада демалуға және отбасылық көңіл көтеруге арналған.<br />
     Бассейн өлшемдерін зерттеңіз, мүмкіндіктерді салыстырыңыз және кеңістігіңізге сәйкес келетінін табыңыз.<br />
     Aquafarer LLC, АҚШ әзірлеген және басқарған.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Өз бассейніңізді табыңыз
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Бизнеске арналған'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Ауладағы Felizbay тікбұрышты Drop Stitch үрлемелі бассейні
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Бассейн жинақтары
       amount: '4'
-    - title: Стандартты SKU
-      amount: '48'
+    - title: 'Бассейн өлшемдері'
+      amount: 2-10 m
     - title: 'Үрлеу уақыты'
       amount: '5-15 min'
     - title: Номиналды қысым
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Идеяларды алыңыз
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Кішкентай аулаларға арналған бассейндер
-      description: Жүзуден бас тартпай, тар ашық кеңістіктерге сай келетін ықшам дөңгелек және шаршы модельдер.
+      description: 'Тығыз сыртқы кеңістіктерге сай келетін ықшам дөңгелек және төртбұрышты модельдер — салқындату және отбасылық суға арналған бөлме.'
       icon: tabler:layout-grid
       cta: Идеяларды алыңыз
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Жинақтарды салыстыру'
+  title: 'Төрт топтама, бір анық таңдау'
+  subtitle: 'Өлшемдері және ең жақсы пайдаланулары — толық сипаттамалар өнімнің әрбір бетінде көрсетіледі.'
+  headers:
+    collection: 'Топтама'
+    sizes: 'Өлшемдері'
+    best_for: 'Ең жақсысы'
+  rows:
+    - collection: 'Дөңгелек бассейндер'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Отбасылық жүзу және ойын - ең кең ауқым'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Тік бұрышты бассейндер'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Үлкен жиналыстар үшін түзу жүзу кеңістігі'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Дөңгелек СПА (ыстық ванна)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Отырғызу үшін кіріктірілген орындықтар'
+      href: /products/hot-tub-round
+    - collection: 'Шаршы/Тік СПА (Ыстық ванна)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Ықшам кеңістіктерде отыру'
+      href: /products/hot-tub-square-rect
+  note: 'Барлық жинақтар: 4–5 PSI drop-stitch қабырғалары, 5–15 мин инфляция, қаптамада сақтау. Жылыту және сүзу сыртқы болып табылады — жылытқыштар мен сүзгі сорғылары бөлек сатылады.'

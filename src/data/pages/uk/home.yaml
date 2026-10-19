@@ -2,7 +2,7 @@ hero:
   tagline: Надувні басейни преміум-класу Drop Stitch
   title: Використовуйте більше свого<br />Зовнішнього простору.
   subtitle: |
-    Відкрийте для себе надувні басейни преміум-класу, призначені для відпочинку на задньому дворі, сімейного відпочинку та життя на відкритому повітрі.<br />
+    Басейни преміум-класу з жорсткими стінками drop-stitch, які надуваються за лічені хвилини та збираються на зиму — створені для відпочинку у дворі та сімейних розваг.<br />
     Дізнайтеся про розміри басейнів, порівняйте характеристики та знайдіть відповідний варіант для свого простору.<br />
     Розроблено та експлуатується Aquafarer LLC, США.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Знайдіть свій басейн
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Для бізнесу'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Прямокутний надувний басейн Felizbay Drop Stitch у дворі
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Колекції басейнів
       amount: '4'
-    - title: Стандартні SKU
-      amount: '48'
+    - title: 'Розміри басейну'
+      amount: 2-10 m
     - title: 'Час надування'
       amount: '5-15 min'
     - title: Номінальний тиск
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Отримайте ідеї
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Басейни для маленьких подвір'їв
-      description: Компактні круглі та квадратні моделі, які підходять для тісних відкритих просторів, не відмовляючись від плавання.
+      description: 'Компактні круглі та квадратні моделі, які підходять для тісних відкритих просторів — кімната для охолодження та сімейного відпочинку.'
       icon: tabler:layout-grid
       cta: Отримайте ідеї
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Порівняти колекції'
+  title: 'Чотири колекції, один чіткий вибір'
+  subtitle: 'Короткий огляд розмірів і найкращого використання — повні специфікації розміщені на сторінці кожного продукту.'
+  headers:
+    collection: 'Колекція'
+    sizes: 'Розміри'
+    best_for: 'Найкраще для'
+  rows:
+    - collection: 'Круглі басейни'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Сімейне плавання та гра — найширший розмірний ряд'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Прямокутні басейни'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Пряме місце для плавання для великих зібрань'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Кругле СПА (гаряча ванна)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Вбудовані сидіння для сидіння'
+      href: /products/hot-tub-round
+    - collection: 'Квадратне/прямокутне СПА (гідромасажна ванна)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Замочування сидячи в компактних приміщеннях'
+      href: /products/hot-tub-square-rect
+  note: 'Усі колекції: стінки 4–5 PSI drop-stitch, 5–15 хв накачування, зберігання без упаковки. Підігрів і фільтрація зовнішні — обігрівачі і фільтрувальні насоси продаються окремо.'

@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch piepūšamie baseini
   title: Izmantojiet savu āra<br />Telpu vairāk.
   subtitle: |
-    Atklājiet augstākās klases piepūšamos baseinus, kas paredzēti atpūtai pagalmā, ģimenes izklaidei un dzīvošanai brīvā dabā.<br />
+    Augstākās kvalitātes baseini ar stingrām drop-stitch sienām, kas dažu minūšu laikā tiek piepūstas un iesaiņotas ziemai — paredzēti atpūtai pagalmā un ģimenes izklaidei.<br />
     Izpētiet baseinu izmērus, salīdziniet funkcijas un atrodiet savai telpai piemērotāko.<br />
     Projektēja un ekspluatē Aquafarer LLC, ASV.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Atrodiet savu baseinu
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Biznesam'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay taisnstūrveida piepūšamais Drop Stitch peldbaseins pagalmā
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Baseinu kolekcijas
       amount: '4'
-    - title: Standarta SKU
-      amount: '48'
+    - title: 'Baseina izmēri'
+      amount: 2-10 m
     - title: 'Uzpūšanas laiks'
       amount: '5-15 min'
     - title: Nominālais spiediens
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Iegūstiet idejas
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Baseini maziem pagalmiem
-      description: Kompakti apaļi un kvadrātveida modeļi, kas iederas šaurās āra telpās, neatsakoties no peldēšanas.
+      description: 'Kompakti apaļi un kvadrātveida modeļi, kas iederas šaurās āra telpās — telpa atvēsinoties un ģimenes ūdens pavadīšanai.'
       icon: tabler:layout-grid
       cta: Iegūstiet idejas
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Salīdziniet kolekcijas'
+  title: 'Četras kolekcijas, viena skaidra izvēle'
+  subtitle: 'Izmēri un labākie lietojumi īsumā — visas specifikācijas ir pieejamas katrā produkta lapā.'
+  headers:
+    collection: 'Kolekcija'
+    sizes: 'Izmēri'
+    best_for: 'Labākais priekš'
+  rows:
+    - collection: 'Apaļi baseini'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Ģimenes peldēšana un rotaļas — visplašākais izmēru klāsts'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Taisnstūra baseini'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Taisnas malas peldvieta lielākām pulcēšanās vietām'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Apaļš SPA (karstā vanna)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Iebūvēti sēdekļi sēdošai mērcēšanai'
+      href: /products/hot-tub-round
+    - collection: 'Kvadrātveida/taisnā SPA (karstā vanna)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Mērcēšana sēdus stāvoklī kompaktās telpās'
+      href: /products/hot-tub-square-rect
+  note: 'Visas kolekcijas: 4–5 PSI drop-stitch sienas, 5–15 min piepūšana, iesaiņojuma uzglabāšana. Apkure un filtrēšana ir ārējā — sildītāji un filtru sūkņi tiek pārdoti atsevišķi.'

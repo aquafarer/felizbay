@@ -19,6 +19,7 @@ export const VALID_ICON_NAMES = new Set([
   "tabler:brand-whatsapp",
   "tabler:brand-x",
   "tabler:brand-youtube",
+  "tabler:briefcase",
   "tabler:brush",
   "tabler:building",
   "tabler:building-cottage",

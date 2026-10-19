@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch Puflanadigan hovuzlar
   title: Ochiq makoningizdan<br />Ko'proq foydalaning.
   subtitle: |
-    Hovlida dam olish, oilaviy dam olish va ochiq havoda yashash uchun mo'ljallangan yuqori sifatli shishiriladigan basseynlarni kashf eting.<br />
+    Bir necha daqiqada puflanadigan va qish uchun yig‘iladigan qattiq drop-stitch devorlari bo‘lgan premium basseynlar hovlida dam olish va oilaviy dam olish uchun mo‘ljallangan.<br />
     Hovuz oʻlchamlarini oʻrganing, xususiyatlarni taqqoslang va oʻz joyingizga mos keladiganini toping.<br />
     Aquafarer MChJ tomonidan ishlab chiqilgan va boshqariladi, AQSh.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Hovuzingizni toping
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Biznes uchun'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Orqa hovlida Felizbay to'rtburchaklar Drop Stitch shishiriladigan suzish havzasi
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Hovuz kolleksiyalari
       amount: '4'
-    - title: Standart SKUlar
-      amount: '48'
+    - title: 'Hovuz o''lchamlari'
+      amount: 2-10 m
     - title: 'Shishirish vaqti'
       amount: '5-15 min'
     - title: Nominal bosim
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Fikrlarni oling
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Kichik hovlilar uchun hovuzlar
-      description: Suzishdan voz kechmasdan, qattiq ochiq joylarga mos keladigan ixcham yumaloq va kvadrat modellar.
+      description: 'Qattiq tashqi makonlarga mos keladigan ixcham yumaloq va kvadrat modellar - salqinlash uchun xona va oilaviy suv vaqti.'
       icon: tabler:layout-grid
       cta: Fikrlarni oling
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'To''plamlarni solishtiring'
+  title: 'To''rtta to''plam, bitta aniq tanlov'
+  subtitle: 'Bir qarashda o''lchamlar va eng yaxshi foydalanish - to''liq texnik xususiyatlar har bir mahsulot sahifasida mavjud.'
+  headers:
+    collection: 'To''plam'
+    sizes: 'O''lchamlari'
+    best_for: 'Eng yaxshisi uchun'
+  rows:
+    - collection: 'Dumaloq hovuzlar'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Oilaviy suzish va o''yin - eng keng o''lcham oralig''i'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'To''rtburchak hovuzlar'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Kattaroq yig''ilishlar uchun tekis qirrali suzish maydoni'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Dumaloq SPA (issiq vanna)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'O''tirgan holda namlash uchun o''rnatilgan o''rindiqlar'
+      href: /products/hot-tub-round
+    - collection: 'Kvadrat/to‘g‘ri to‘rtburchak SPA (issiq vanna)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Yilni bo''shliqlarda o''tirgan ho''llash'
+      href: /products/hot-tub-square-rect
+  note: 'Barcha to''plamlar: 4–5 PSI drop-stitch devorlari, 5–15 daqiqali inflyatsiya, paketli saqlash. Isitish va filtrlash tashqi - isitgichlar va filtr nasoslari alohida sotiladi.'

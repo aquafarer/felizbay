@@ -2,7 +2,7 @@ hero:
   tagline: Piscine gonflabile Premium Drop Stitch
   title: Faceți mai mult din spațiul dvs. în<br />Aer liber.
   subtitle: |
-    Descoperiți piscine gonflabile premium concepute pentru relaxarea în curte, distracția în familie și viața în aer liber.<br />
+    Piscine premium cu pereți rigidi drop-stitch care se umflă în câteva minute și se împachetează pentru iarnă - concepute pentru relaxarea în curte și distracția în familie.<br />
     Explorați dimensiunile piscinei, comparați caracteristicile și găsiți cea potrivită pentru spațiul dvs.<br />
     Proiectat și operat de Aquafarer LLC, SUA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Găsește-ți piscina
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Pentru afaceri'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Piscina gonflabilă dreptunghiulară Felizbay Drop Stitch într-o curte
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Colecții de piscină
       amount: '4'
-    - title: SKU-uri standard
-      amount: '48'
+    - title: 'Dimensiunile piscinei'
+      amount: 2-10 m
     - title: 'Timp de umflare'
       amount: '5-15 min'
     - title: Presiune nominală
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Obțineți idei
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Piscine pentru curți mici
-      description: Modele compacte rotunde și pătrate care se potrivesc spațiilor exterioare înguste fără a renunța la înot.
+      description: 'Modele compacte rotunde și pătrate care se potrivesc spațiilor exterioare înguste - spațiu pentru răcire și timp de apă în familie.'
       icon: tabler:layout-grid
       cta: Obțineți idei
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Comparați colecții'
+  title: 'Patru colecții, o alegere clară'
+  subtitle: 'Dimensiunile și cele mai bune utilizări dintr-o privire — specificațiile complete sunt disponibile pe pagina fiecărui produs.'
+  headers:
+    collection: 'Colecție'
+    sizes: 'Dimensiuni'
+    best_for: 'Cel mai bun pentru'
+  rows:
+    - collection: 'Piscine rotunde'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Înot și joacă în familie — cea mai largă gamă de dimensiuni'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Piscine dreptunghiulare'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Spațiu de înot cu laturi drepte pentru adunări mai mari'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'SPA rotund (cadă cu hidromasaj)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Scaune încorporate pentru înmuiere'
+      href: /products/hot-tub-round
+    - collection: 'SPA pătrat/dreptunghiular (cadă cu hidromasaj)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Înmuiere așezată în spații compacte'
+      href: /products/hot-tub-square-rect
+  note: 'Toate colecțiile: pereți drop-stitch de 4–5 PSI, umflare 5–15 min, depozitare la pachet. Încălzirea și filtrarea sunt externe - încălzitoarele și pompele de filtru sunt vândute separat.'

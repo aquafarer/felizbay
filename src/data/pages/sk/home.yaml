@@ -2,7 +2,7 @@ hero:
   tagline: Nafukovacie bazény Premium Drop Stitch
   title: Využite viac svojho<br />Vonkajšieho priestoru.
   subtitle: |
-    Objavte prémiové nafukovacie bazény určené na oddych na dvore, rodinnú zábavu a pobyt vonku.<br />
+    Prémiové bazény s pevnými stenami drop-stitch, ktoré sa nafúknu za pár minút a zbalia sa na zimu – určené na oddych na dvore a rodinnú zábavu.<br />
     Preskúmajte veľkosti bazénov, porovnajte funkcie a nájdite to pravé pre váš priestor.<br />
     Navrhnuté a prevádzkované spoločnosťou Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Nájdite svoj bazén
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Pre podnikanie'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Obdĺžnikový nafukovací bazén Felizbay Drop Stitch na dvore
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Bazénové zbierky
       amount: '4'
-    - title: Štandardné SKU
-      amount: '48'
+    - title: 'Veľkosti bazénov'
+      amount: 2-10 m
     - title: 'Čas nafúknutia'
       amount: '5-15 min'
     - title: Menovitý tlak
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Získajte nápady
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Bazény pre malé záhrady
-      description: Kompaktné okrúhle a štvorcové modely, ktoré sa hodia do stiesnených vonkajších priestorov bez toho, aby ste sa vzdali plávania.
+      description: 'Kompaktné okrúhle a štvorcové modely, ktoré sa hodia do stiesnených vonkajších priestorov — priestor na ochladenie a rodinnú zábavu pri vode.'
       icon: tabler:layout-grid
       cta: Získajte nápady
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Porovnajte zbierky'
+  title: 'Štyri kolekcie, jedna jasná voľba'
+  subtitle: 'Veľkosti a najlepšie využitie na prvý pohľad – úplné špecifikácie nájdete na každej stránke produktu.'
+  headers:
+    collection: 'Kolekcia'
+    sizes: 'Veľkosti'
+    best_for: 'Najlepšie pre'
+  rows:
+    - collection: 'Okrúhle bazény'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Rodinné plávanie a hranie — najširší rozsah veľkostí'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Obdĺžnikové bazény'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Priestor na plávanie s rovnými stranami pre väčšie stretnutia'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Okrúhle SPA (vírivka)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Vstavané sedadlá na namáčanie sedadiel'
+      href: /products/hot-tub-round
+    - collection: 'Štvorcové / obdĺžnikové SPA (vírivka)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Sediace namáčanie v kompaktných priestoroch'
+      href: /products/hot-tub-square-rect
+  note: 'Všetky kolekcie: steny 4–5 PSI drop-stitch, 5–15 minút nafukovania, skladovanie po zbalení. Vykurovanie a filtrácia sú externé — ohrievače a filtračné čerpadlá sa predávajú samostatne.'

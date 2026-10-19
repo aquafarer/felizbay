@@ -2,7 +2,7 @@ hero:
   tagline: Premium Drop Stitch oppustelige pools
   title: Få mere ud af dit<br />Udendørs rum.
   subtitle: |
-    Oplev førsteklasses oppustelige pools designet til afslapning i baghaven, familiehygge og udendørsliv.<br />
+    Premium pools med stive drop-stitch-vægge, der puster sig op på få minutter og pakker væk til vinteren - designet til afslapning i baghaven og familiesjov.<br />
     Udforsk poolstørrelser, sammenlign funktioner, og find den rigtige pasform til dit rum.<br />
     Designet og drevet af Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Find din pool
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Til Erhverv'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay rektangulær drop stitch oppustelig swimmingpool i en baghave
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Pool samlinger
       amount: '4'
-    - title: Standard SKU'er
-      amount: '48'
+    - title: 'Pool størrelser'
+      amount: 2-10 m
     - title: 'Oppustningstid'
       amount: '5-15 min'
     - title: Nominel tryk
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Få ideer
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Pools til små baghaver
-      description: Kompakte runde og firkantede modeller, der passer til trange udendørsrum uden at opgive svømmeturen.
+      description: 'Kompakte runde og firkantede modeller, der passer til snævre udendørs rum - plads til afkøling og familievandtid.'
       icon: tabler:layout-grid
       cta: Få ideer
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Sammenlign samlinger'
+  title: 'Fire samlinger, ét klart valg'
+  subtitle: 'Størrelser og bedste anvendelser på et øjeblik - alle specifikationer findes på hver produktside.'
+  headers:
+    collection: 'Kollektion'
+    sizes: 'Størrelser'
+    best_for: 'Bedst til'
+  rows:
+    - collection: 'Runde pools'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Familiesvømning og leg — det bredeste størrelsesområde'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Rektangulære pools'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Ligesidet svømmeplads til større forsamlinger'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Rundt SPA (boblebad)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Indbyggede sæder til siddende iblødsætning'
+      href: /products/hot-tub-round
+    - collection: 'Firkantet/rektangulær SPA (boblebad)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Siddende iblødsætning i kompakte rum'
+      href: /products/hot-tub-square-rect
+  note: 'Alle samlinger: 4–5 PSI drop-stitch-vægge, 5–15 min. oppustning, opbevaring til opbevaring. Opvarmning og filtrering er ekstern - varmelegemer og filterpumper sælges separat.'

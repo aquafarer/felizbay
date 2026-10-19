@@ -2,7 +2,7 @@ hero:
   tagline: Nafukovací bazény Premium Drop Stitch
   title: Využijte více svého<br />Venkovního prostoru.
   subtitle: |
-    Objevte prémiové nafukovací bazény určené pro relaxaci na zahradě, rodinnou zábavu a pobyt venku.<br />
+    Prémiové bazény s pevnými stěnami drop-stitch, které se nafouknou během několika minut a sbalí se na zimu – určené pro relaxaci na zahradě a rodinnou zábavu.<br />
     Prozkoumejte velikosti bazénů, porovnejte funkce a najděte to pravé pro váš prostor.<br />
     Navrženo a provozováno společností Aquafarer LLC, USA.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: Najděte svůj bazén
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'Pro podnikání'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Obdélníkový nafukovací bazén Felizbay Drop Stitch na dvorku
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: Bazénové sbírky
       amount: '4'
-    - title: Standardní SKU
-      amount: '48'
+    - title: 'Velikosti bazénů'
+      amount: 2-10 m
     - title: 'Čas nafouknutí'
       amount: '5-15 min'
     - title: Jmenovitý tlak
@@ -70,7 +73,7 @@ content_customer_types:
       cta: Získejte nápady
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: Bazény pro malé dvorky
-      description: Kompaktní kulaté a hranaté modely, které se hodí do stísněných venkovních prostor, aniž byste museli plavat.
+      description: 'Kompaktní kulaté a čtvercové modely, které se hodí do stísněných venkovních prostor – prostor pro ochlazení a rodinnou vodní zábavu.'
       icon: tabler:layout-grid
       cta: Získejte nápady
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'Porovnejte sbírky'
+  title: 'Čtyři kolekce, jedna jasná volba'
+  subtitle: 'Velikosti a nejlepší použití na první pohled – úplné specifikace najdete na každé stránce produktu.'
+  headers:
+    collection: 'Kolekce'
+    sizes: 'Velikosti'
+    best_for: 'Nejlepší pro'
+  rows:
+    - collection: 'Kulaté bazény'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'Rodinné plavání a hraní — nejširší rozsah velikostí'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'Obdélníkové bazény'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'Rovný plavecký prostor pro větší shromáždění'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'Kulatá SPA (vířivka)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'Vestavěná sedadla pro namáčení sedadel'
+      href: /products/hot-tub-round
+    - collection: 'Čtvercové / obdélníkové SPA (vířivka)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'Sedící namáčení v kompaktních prostorech'
+      href: /products/hot-tub-square-rect
+  note: 'Všechny kolekce: stěny 4–5 PSI drop-stitch, 5–15 minut nafouknutí, skladovatelnost. Topení a filtrace jsou externí — ohřívače a filtrační čerpadla se prodávají samostatně.'

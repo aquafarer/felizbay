@@ -2,7 +2,7 @@ hero:
   tagline: בריכות מתנפחות פרימיום Drop Stitch
   title: עשה יותר משלך<br />שטח חיצוני.
   subtitle: |
-    גלה בריכות מתנפחות מובחרות המיועדות להרגעה בחצר האחורית, כיף משפחתי וחיים בחוץ.<br />
+    בריכות פרימיום עם קירות drop-stitch קשיחים שמתנפחים תוך דקות ונארזות לחורף - מיועדות לרגיעה בחצר האחורית וכיף משפחתי.<br />
     חקור את גדלי הבריכה, השווה תכונות ומצא את ההתאמה המתאימה לחלל שלך.<br />
     עוצב ומופעל על ידי Aquafarer LLC, ארה"ב.
   actions:
@@ -13,6 +13,9 @@ hero:
     - text: מצא את הבריכה שלך
       href: /find-your-pool
       icon: tabler:compass
+    - text: 'לעסקים'
+      href: /for-businesses
+      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.png
     alt: Felizbay מלבנית Drop Stitch בריכת שחייה מתנפחת בחצר אחורית
@@ -22,8 +25,8 @@ stats:
   stats:
     - title: אוספי בריכה
       amount: '4'
-    - title: מק"ט סטנדרטי
-      amount: '48'
+    - title: 'גדלי בריכה'
+      amount: 2-10 m
     - title: 'זמן ניפוח'
       amount: '5-15 min'
     - title: לחץ מדורג
@@ -70,7 +73,7 @@ content_customer_types:
       cta: קבלו רעיונות
       cta_href: /pool-ideas/backyard-pools-for-families
     - title: בריכות לחצרות קטנות
-      description: דגמים עגולים ומרובעים קומפקטיים המתאימים לחללים חיצוניים צמודים מבלי לוותר על השחייה.
+      description: 'דגמים עגולים ומרובעים קומפקטיים המתאימים לחללים חיצוניים צמודים - מקום להתקררות ולזמן מים משפחתי.'
       icon: tabler:layout-grid
       cta: קבלו רעיונות
       cta_href: /pool-ideas/pools-for-small-backyards
@@ -201,3 +204,30 @@ cta:
       href: /find-your-pool
       icon: tabler:compass
 
+
+compare_collections:
+  tagline: 'השווה אוספים'
+  title: 'ארבעה אוספים, בחירה אחת ברורה'
+  subtitle: 'גדלים ושימושים מיטביים במבט חטוף - מפרטים מלאים מופיעים בכל דף מוצר.'
+  headers:
+    collection: 'קולקציה'
+    sizes: 'מידות'
+    best_for: 'הטוב ביותר עבור'
+  rows:
+    - collection: 'בריכות עגולות'
+      sizes: 'Ø 2.0 – 10.0 m'
+      best_for: 'שחייה ומשחק משפחתיים - טווח המידות הרחב ביותר'
+      href: /products/round-blue-drop-stitch-pool
+    - collection: 'בריכות מלבניות'
+      sizes: '2 × 2 m – 6 × 5 m'
+      best_for: 'מרחב שחייה ישר צדדי להתכנסויות גדולות יותר'
+      href: /products/rectangular-drop-stitch-pool
+    - collection: 'ספא עגול (ג''קוזי)'
+      sizes: 'Ø 1.8 – 2.3 m'
+      best_for: 'מושבים מובנים להשרייה בישיבה'
+      href: /products/hot-tub-round
+    - collection: 'ספא מרובע / מלבן (ג''קוזי)'
+      sizes: '1.5 × 1.5 m – 3 × 2 m'
+      best_for: 'השרייה בישיבה בחללים קומפקטיים'
+      href: /products/hot-tub-square-rect
+  note: 'כל הקולקציות: קירות 4-5 PSI drop-stitch, ניפוח של 5-15 דקות, אחסון לארוז. חימום וסינון הם חיצוניים - תנורי חימום ומשאבות מסננים נמכרים בנפרד.'
