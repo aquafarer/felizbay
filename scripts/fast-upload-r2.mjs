@@ -52,6 +52,61 @@ async function uploadFile(filePath, r2Key, contentType) {
   if (!data.success) throw new Error(JSON.stringify(data.errors));
 }
 
+async function deleteObject(r2Key) {
+  const url = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/r2/buckets/${BUCKET}/objects/${encodeURIComponent(r2Key)}`;
+  const res = await fetch(url, {
+    method: 'DELETE',
+    headers: { Authorization: `Bearer ${API_TOKEN}` },
+  });
+  // 404 is fine (already gone); anything else is a real failure.
+  if (!res.ok && res.status !== 404) {
+    const body = await res.text().catch(() => '');
+    throw new Error(`delete ${r2Key}: HTTP ${res.status} ${body.slice(0, 200)}`);
+  }
+}
+
+// Prune stale R2 objects: keys under the synced prefixes that no longer exist
+// in the local public/ tree (e.g. images replaced by a WebP migration). Safety
+// guards: a prefix with ZERO local files is never pruned (broken checkout must
+// not wipe a prefix), and more than MAX_PRUNE stale objects skips the prune
+// with a warning instead of mass-deleting.
+const MAX_PRUNE = 200;
+
+async function pruneStale(existing) {
+  const localKeys = new Set();
+  const prefixHasLocal = new Map();
+  for (const { dir } of ASSET_DIRS) {
+    const files = globSync(`${path.join(PUBLIC_DIR, dir)}/**/*`, { nodir: true });
+    prefixHasLocal.set(dir, files.length > 0);
+    for (const file of files) {
+      localKeys.add(path.relative(PUBLIC_DIR, file).replace(/\\/g, '/'));
+    }
+  }
+  const stale = [];
+  for (const key of existing.keys()) {
+    const dir = ASSET_DIRS.map((d) => d.dir).find((d) => key.startsWith(d + '/'));
+    if (!dir) continue; // outside synced prefixes — never touch
+    if (!prefixHasLocal.get(dir)) continue; // local dir empty — skip prefix
+    if (!localKeys.has(key)) stale.push(key);
+  }
+  if (stale.length === 0) {
+    console.log('[prune] No stale R2 objects');
+    return;
+  }
+  if (stale.length > MAX_PRUNE) {
+    console.warn(
+      `[prune] ${stale.length} stale objects exceed the ${MAX_PRUNE} safety cap — skipping prune. ` +
+        `First 10: ${stale.slice(0, 10).join(', ')}`
+    );
+    return;
+  }
+  console.log(`[prune] Deleting ${stale.length} stale R2 objects:`);
+  for (const key of stale) {
+    process.stdout.write(`  - ${key}\n`);
+    await deleteObject(key);
+  }
+}
+
 // Returns a Map<key, size> of objects already in the bucket. The List API is a
 // B-class operation (cheap, generous free quota).
 async function listExisting() {
@@ -142,6 +197,17 @@ async function main() {
   if (dataFiles.length) {
     const urls = dataFiles.map((f) => ASSET_BASE + '/' + path.relative(PUBLIC_DIR, f).replace(/\\/g, '/'));
     await purgeCache(urls);
+  }
+
+  // Remove R2 objects whose local source no longer exists (e.g. renamed or
+  // migrated images). Best-effort: prune failures never fail the deploy —
+  // stale objects are harmless, a broken upload pipeline is not.
+  if (API_TOKEN) {
+    try {
+      await pruneStale(existing);
+    } catch (e) {
+      console.warn('[prune] failed (stale objects left in place):', e.message || e);
+    }
   }
 }
 
