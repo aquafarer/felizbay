@@ -69,26 +69,34 @@
 
 修复（commit `8be025a`）：页面自身 JS 从提交数据中删除蜜罐字段并清空 DOM 输入框；直接 POST 的真机器人仍被服务端蜜罐拦截。修复上线后重新提交：
 
-| 步骤                    | 结果                                      |
-| ----------------------- | ----------------------------------------- |
-| Turnstile 过码提交      | ✅ 成功                                   |
-| Resend 邮件送达         | ✅ 收到通知邮件（`Reply-To` 为提交人）    |
-| D1 记录                 | ✅ 隐含验证（代码顺序 D1 先插、邮件后发） |
-| Admin 后台记录/CSV 导出 | ⏳ 待 admin 登录问题解决后确认            |
+| 步骤               | 结果                                      |
+| ------------------ | ----------------------------------------- |
+| Turnstile 过码提交 | ✅ 成功                                   |
+| Resend 邮件送达    | ✅ 收到通知邮件（`Reply-To` 为提交人）    |
+| D1 记录            | ✅ 隐含验证（代码顺序 D1 先插、邮件后发） |
+| Admin 后台登录     | ✅ 已恢复                                 |
 
-### 2.2 遗留问题
+### 2.2 www → apex 301 验证（2026-10-21 完成）
 
-- `/login` 登录异常（具体报错待确认），影响 `/keystatic/contact-submissions` 的记录查看与 CSV 导出。
+Cloudflare Redirect Rule 配置后实测：
+
+| 请求                                       | 状态 | Location                                |
+| ------------------------------------------ | ---- | --------------------------------------- |
+| `https://www.felizbay.com/`                | 301  | `https://felizbay.com/`                 |
+| `https://www.felizbay.com/products/specs/` | 301  | `https://felizbay.com/products/specs/`  |
+| `https://www.felizbay.com/de/contact/`     | 301  | `https://felizbay.com/de/contact/`      |
+| `https://www.felizbay.com/api/contact`     | 301  | `https://felizbay.com/api/contact`      |
+| `http://www.felizbay.com/`                 | 301  | `https://felizbay.com/`（单跳，无链式） |
+
+路径通配（`$1`）与 http→https 均正常。
 
 ## 3. 剩余人工操作清单（无本地凭据，需控制台操作）
 
-| 事项                  | 位置                                       | 操作                                                                                                              |
-| --------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| admin 登录排查        | `/login` → Google / 邮箱密码               | 确认报错信息后排查（影响询盘后台查看）                                                                            |
-| www → apex 301        | Cloudflare 控制台 → Rules → Redirect Rules | `www.felizbay.com/*` → `https://felizbay.com/$1`（301）。CF Pages `_redirects` 不支持域名级规则，必须在控制台配置 |
-| R2 旧图清理（可选）   | Cloudflare R2 控制台                       | P6 替换后 15 张旧 PNG/JPG（约 18.5MB）仍在桶中，无引用，可删除                                                    |
-| AI 平台基线轮次       | 各 AI 平台                                 | 按 `docs/ai-visibility-baseline.md` 协议执行第 1 轮人工问答                                                       |
-| `/keystatic` 后台验证 | admin 登录后                               | 确认询盘记录出现、CSV 导出可用                                                                                    |
+| 事项                | 位置                 | 操作                                                           |
+| ------------------- | -------------------- | -------------------------------------------------------------- |
+| R2 旧图清理（可选） | Cloudflare R2 控制台 | P6 替换后 15 张旧 PNG/JPG（约 18.5MB）仍在桶中，无引用，可删除 |
+| AI 平台基线轮次     | 各 AI 平台           | 按 `docs/ai-visibility-baseline.md` 协议执行第 1 轮人工问答    |
+| `/keystatic` 后台   | admin 已可登录       | 查看 `/keystatic/contact-submissions` 询盘记录、测试 CSV 导出  |
 
 ## 4. 复测建议
 
