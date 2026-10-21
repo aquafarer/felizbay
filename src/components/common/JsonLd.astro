@@ -52,6 +52,7 @@ export interface ArticleLd {
   dateModified?: string;
   authorName?: string;
   authorUrl?: string;
+  editorName?: string;
 }
 
 export interface ImageObjectLd {
@@ -250,6 +251,7 @@ if (type === 'Organization') {
       name: article.authorName || authorName,
       ...(article.authorUrl ? { url: article.authorUrl } : {}),
     },
+    ...(article.editorName ? { editor: { '@type': 'Person', name: article.editorName } } : {}),
     publisher: {
       '@type': 'Organization',
       name,
