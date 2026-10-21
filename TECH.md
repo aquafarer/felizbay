@@ -1,8 +1,8 @@
 # Felizbay 网站技术架构文档
 
-> 最后更新: 2026-09-23 (34 语言架构上线: 新增 19 语言种子翻译 + 切换器 4-5列/行, 见 §16; 14 语言泄漏清零进行中, 批量工具链 `tools/` 见 §15; 此前: 14语言×1,721键完全对齐, 3,807 sameAsEn已翻译, 252/252 page YAML已翻译)
-> 项目路径: `D:\Github\official`
-> 在线网址: https://felizbay.com (Cloudflare Pages)
+> 最后更新: 2026-10-21 (P6 WebP 图片迁移: 15 张 >100KB 产品图转 WebP 1600px q82, 18.5MB→0.85MB; 蜜罐误伤修复: Contact.astro 页面 JS 提交前删除 email_confirm 字段, 事故复盘见 docs/technical-audit-2026-10.md §2.1; R2 自动 prune: fast-upload-r2.mjs 每次 deploy 自动清理本地已删除的 R2 对象; www→apex 301: Cloudflare Redirect Rule 单跳路径保留; 完整审计记录见 docs/technical-audit-2026-10.md)
+> 项目路径: `D:\Github\Felizbay`
+> 在线网址: https://felizbay.com (Cloudflare Pages + 5 Workers)
 > 构建命令: `npm run build` → 输出到 `dist/` 目录
 > 部署命令: `npx wrangler pages deploy dist/ --project-name felizbay`
 
@@ -26,6 +26,7 @@
 14. [后台管理系统架构](#14-后台管理系统架构)
 15. [多语言批量编辑工具 (tools/)](#15-多语言批量编辑工具-tools)
 16. [37 语言架构与上架流程](#16-37-语言架构与上架流程)
+17. [图片处理 (WebP + 尺寸注册表)](#17-图片处理-webp--尺寸注册表)
 
 ---
 
@@ -71,7 +72,7 @@
 │   │   └── generated/       # 构建期生成 (gitignored)
 │   │       ├── ui-all.ts    # getUiForLang(lang) — 翻译入口
 │   │       ├── ui/en.ts     # 英语翻译键值对 (自动生成)
-│   │       ├── ui/{lang}.ts # 15 种语言翻译
+│   │       ├── ui/{lang}.ts # 37 语言翻译 (39 个生成文件)
 │   │       ├── pages/*.ts   # 每页一个模块 (~110 个, setPageContentData 注入)
 │   │       ├── site-data.ts # site-* 键 (2.2 MiB, [lang]/ 页面直接 import)
 │   │       ├── page-content.json # 全量载荷 (~6.8 MiB, 仅构建期用, 不进 public/)
@@ -92,7 +93,7 @@
 │   │   ├── ProductLayout.astro
 │   │   └── ...
 │   ├── pages/
-│   │   ├── [lang]/          # 多语言路由 (15 种语言 × 页面数 = ~4650 页面)
+│   │   ├── [lang]/          # 多语言路由 (37 语言, 降级语言 canonical 折叠, 全站 ~645 页面)
 │   │   │   ├── index.astro       # 首页 (每种语言)
 │   │   │   ├── products/
 │   │   │   │   ├── index.astro   # 产品列表
@@ -145,25 +146,27 @@
 `npm run build` 执行以下脚本:
 
 ```
-node scripts/geo-build.mjs              # 1. 构建地理数据 + llms.txt (15 语言)
+node scripts/geo-build.mjs              # 1. 构建地理数据 + llms.txt (37 语言)
   && node scripts/generate-data-json.mjs # 2. 生成 i18n 构建数据 → src/i18n/generated/
      #    page-content.json (~6.8 MiB, 全量) + site-data.ts (2.2 MiB, 仅 site-* 键)
      #    content-v2* 键被排除 (由 src/data/content-v2.ts 直接读 YAML)
      #    page-content.json 绝不写入 public/ (Cloudflare Pages 单文件 ≥25 MiB 会被拒)
   && npx tsx scripts/generate-geo-files.ts # 3. 生成地理文件 (entity.json + llms-full.txt)
-  && node scripts/_gen-uiall.cjs         # 4. 生成 ui-all.ts (合并 15 语言翻译)
+  && node scripts/_gen-uiall.cjs         # 4. 生成 ui-all.ts (合并 37 语言翻译)
   && node scripts/_gen-pages.cjs         # 5. 从 JSON 生成 pages/*.ts 模块 (~110 个)
   && node scripts/gen-icon-svgs.cjs      # 6. 生成图标 SVG
-  && node scripts/generate-image-dimensions.mjs # 7. 解析全站图片宽高 (CLS 修复)
-  && astro build                         # 8. Astro 构建 (生成 ~4650 页面)
-  && node scripts/mirror-root-en.mjs     # 9. 镜像英文根级页面
+  && node scripts/generate-image-dimensions.mjs # 7. 解析全站图片宽高 (image-dimensions.json, CLS 修复)
+  && astro build                         # 8. Astro 构建 (生成 ~645 页面)
+  && node scripts/mirror-root-en.mjs     # 9. 镜像英文根级页面到 /en/
   && node scripts/generate-sitemaps.mjs  # 10. 生成各语言 sitemap
-  && node scripts/validate-dist.mjs      # 11. dist 全量校验门禁 (死链/缺失图片/meta)
-  && node scripts/fold-untranslated-canonical.mjs # 12. 降级语言 canonical 折叠到 EN
-  && node scripts/clean-public-assets.mjs # 13. 清理公共资源
+  && node scripts/generate-merchant-feed.mjs # 11. GMC 商品 Feed (门禁: MDX price×100==checkout unitAmount + 图片存在)
+  && node scripts/validate-dist.mjs      # 12. dist 全量校验门禁 (死链/缺失图片/meta)
+  && node scripts/fold-untranslated-canonical.mjs # 13. 降级语言 canonical 折叠到 EN
+  && node scripts/clean-public-assets.mjs # 14. 清理公共资源
+  && node scripts/generate-ai-corpus.mjs # 15. AI 知识语料 → dist/ai-corpus/*.json + manifest (ai-worker /api/reindex 消费)
 ```
 
-构建结果: 约 **4650 个页面** (15 语言), 输出到 `dist/` 目录。
+构建结果: 约 **645 个页面** (37 语言; 降级语言 EN-fallback + canonical 折叠, 不复制整站), 输出到 `dist/` 目录。
 
 **Astro 7 注意事项**:
 
@@ -181,13 +184,17 @@ node scripts/geo-build.mjs              # 1. 构建地理数据 + llms.txt (15 �
 
 ### 4.1 概述
 
-网站支持 **15 种语言**:
+网站支持 **37 种语言** (i18n-config.json):
+
+- **16 种本地化语言** (含 en): 有完整翻译链 — en, fr, de, es, pt, ar (RTL), it, ru, pl, nl, sv, no, el, fi, da, ... (14 种非英语言 UI 键 ×1,721 完全对齐)
+- **其余语言**: EN-fallback + `fold-untranslated-canonical.mjs` 将 canonical 折叠到 EN 根页 (避免翻译缺口被搜索引擎判为重复/薄内容)
 
 ```
 en: English   fr: Français   de: Deutsch   es: Español
 pt: Português  ar: العربية (RTL)  it: Italiano  ru: Русский
 pl: Polski    nl: Nederlands  sv: Svenska   no: Norsk
 el: Ελληνικά  fi: Suomi     da: Dansk
+(完整 37 语言清单见 src/i18n/generated/i18n-config.json)
 ```
 
 ### 4.2 翻译数据链 (关键路径)
@@ -211,7 +218,7 @@ Header.astro / Footer.astro / 各页面
 2. **`setLang(lang)`** (`src/i18n/config.ts:38`)
    - 将指定语言的翻译数据**原地变异**到共享对象 `_ui` 上
    - 由 `Layout.astro:52` 调用
-   - **⚠️ 存在竞态问题**: 由于 `_ui` 是模块级可变对象, 在 Astro 静态构建的并行渲染中 (`output: 'static'`, 4650 页面), 一个页面的 `setLang()` 可能覆盖另一个页面的数据
+   - **⚠️ 存在竞态问题**: 由于 `_ui` 是模块级可变对象, 在 Astro 静态构建的并行渲染中 (`output: 'static'`, ~645 页面), 一个页面的 `setLang()` 可能覆盖另一个页面的数据
 
 3. **`getPageContent(lang, page)`** (`src/i18n/page-content.ts:13`)
    - 从缓存中获取页面内容数据 (由构建脚本生成)
@@ -278,7 +285,7 @@ localizeHref() (src/i18n/routing.ts): 匹配 LOCALIZED_ROUTES → 添加 /{lang}
 
 1. **`src/data/site/navigation.yaml`** — 添加导航结构 (英文 text + href)
 2. **`src/components/widgets/Header.astro` 和 `Footer.astro` 的 `navTextMap`** — 添加英文 text → 翻译键的映射
-3. **`public/data/i18n-config.json`** — 为所有 15 种语言添加翻译键和对应的翻译文本
+3. **`public/data/i18n-config.json`** — 为所有 37 种语言添加翻译键和对应的翻译文本
 4. **`src/i18n/routing.ts` 的 `LOCALIZED_ROUTES`** — 如果新页面需要语言前缀，注册路由
 
 **具体步骤:**
@@ -374,7 +381,7 @@ product.pageDesc   → (所有语言文件中缺失, 从未被提取脚本生成
 
 产品页面有两种路径:
 
-1. **多语言版本**: `/[lang]/products/[slug].astro` (15 种语言 × 产品数)
+1. **多语言版本**: `/[lang]/products/[slug].astro` (37 种语言 × 产品数)
 2. **英语直连**: `/products/[slug].astro` (无语言前缀, 仅英语)
 
 **产品列表页**:
@@ -426,7 +433,7 @@ products.ts (ProductRecord[], src/data/products.ts)
   └─ 所有字段为英文, 包含: id, name, desc, definition, problem, howItWorks, audience, skill, environment, water_condition, safety_rules, safety_level, region, ai_use_cases, ai_specs, ai_comparison, ai_faq
        ↓
 product-texts.ts (src/data/product-texts.ts, 4096 行 TS 模块)
-  └─ 15 种语言的翻译字典: { locale: { productId: { name, desc, definition, ... } } }
+   └─ 翻译字典 (8 语言种子: fr/de/es/pt/it/ru/pl/ar, 其余语言回退英文)
        ↓
 YAML 文件 (src/data/product-texts/{locale}/{product.id}.yaml) ← 新增
   └─ 每产品每语言的 YAML 文件, 通过后台管理面板编辑, 优先于 TS 模块
@@ -574,7 +581,7 @@ rec (本地化 ProductRecord) → 页面各 section 渲染
                                 ↓
   ┌─────────────────────────────────────────────┐
   │  Astro 静态构建 (output: 'static')           │
-  │  并行渲染 ~4650 个页面                       │
+  │  并行渲染 ~645 个页面                        │
   │  每个页面独立运行 frontmatter script         │
   └─────────────────────────────────────────────┘
                                 ↓
@@ -587,7 +594,7 @@ rec (本地化 ProductRecord) → 页面各 section 渲染
 ### 6.2 关键注意事项
 
 - **Astro `output: 'static'`**: 所有页面在构建时预渲染, 无 SSR
-- **并行渲染竞态**: 4650+ 页面同时渲染, `setLang()` 修改模块级 `_ui` 对象会导致数据竞争
+- **并行渲染竞态**: ~645 页面同时渲染, `setLang()` 修改模块级 `_ui` 对象会导致数据竞争
 - **解决方案**: 所有组件使用 `getUiForLang(locale)` 直接获取翻译, 不依赖 `_ui`
 - **`setLang()` 保留**: `Layout.astro` 仍调用 `setLang()`, 但仅为了向后兼容 (老代码可能仍引用 `ui`)
 
@@ -747,13 +754,21 @@ const target = `/${lang}/solutions/fishing-boat-solutions`;
 | `felizbay-assets` | `ASSETS_R2`   | 静态资产 (图片, 文件)      |
 | `felizbay-data`   | `DATA_BUCKET` | 数据 (AI 索引, 自动化任务) |
 
-### 9.2 资产上传
+### 9.2 资产上传与自动 prune (2026-10)
 
 ```bash
 npm run build:r2   # 或 node scripts/fast-upload-r2.mjs
 ```
 
 上传后的资产通过 `https://assets.felizbay.com/...` 访问。
+
+**自动 prune**: `fast-upload-r2.mjs` 在每次上传后自动清理 R2 中"本地已不存在"的过期对象（覆盖 `data/`、`images/`、`files/` 前缀）。护栏：
+
+- 本地前缀为空 → 跳过该前缀的 prune
+- 过期对象 > 200 个 → 中止 prune 并告警（防止误删事故扩散）
+- prune 失败**不会**使部署失败（仅告警）
+
+验证记录：P6 WebP 迁移后 15 张旧 PNG/JPG 已被自动 prune（404 确认），新 WebP 均 200。见 `docs/technical-audit-2026-10.md` §2.3。
 
 ### 9.3 URL 重写
 
@@ -785,12 +800,12 @@ pull_request →
 ```text
 guard (探测 CLOUDFLARE_API_TOKEN/ACCOUNT_ID → enabled=true|false)
   → npm ci → npm run check → npm run build
-  → node scripts/fast-upload-r2.mjs        (上传资产到 R2)
+  → node scripts/fast-upload-r2.mjs        (上传资产到 R2 + 自动 prune 本地已删除的 R2 对象)
   → npx wrangler pages deploy dist/        (部署 Pages)
   → 注入 CF_PROD_D1_ID 到 workers/*/wrangler.toml
   → wrangler d1 migrations apply (首次) + seed-news.mjs (news 表为空时)
   → wrangler secret bulk (contact: RESEND/Turnstile; admin: better-auth/Google/Turnstile)
-  → npm run deploy:workers                (6 个 Worker 并行部署)
+  → npm run deploy:workers                (5 个 Worker 并行部署)
   → curl purge_cache (清 CDN 缓存)
 ```
 
@@ -825,6 +840,7 @@ guard (探测 CLOUDFLARE_API_TOKEN/ACCOUNT_ID → enabled=true|false)
 用户请求
   ↓
 Cloudflare CDN (全球边缘网络)
+  ├─ www.felizbay.com/* → apex 301 (Dashboard Redirect Rule, 单跳, 路径保留 — 2026-10 配置, 非 _redirects)
   ├─ Pages Functions (_middleware.ts) → 语言检测 / 重定向
   └─ 静态文件 (dist/)
        ├─ / → index.html (英语首页)
@@ -842,16 +858,16 @@ API / 动态请求
 
 ### 10.2 关键限制
 
-| 限制项               | 值                                | 说明                            |
-| -------------------- | --------------------------------- | ------------------------------- |
-| **Workers 编译大小** | **< 3 MB**                        | 每个 Worker 的 JS 必须小于 3MB  |
-| **Pages 部署**       | `npx wrangler pages deploy dist/` | 纯静态, 无 SSR                  |
-| **页面数量**         | ~4,650 页                         | 15 种语言 × 页面数              |
-| **构建时间**         | ~2-3 分钟 (本地实测)              | ~4650 页静态渲染 + GEO 生成     |
-| **Node 版本**        | >= 22.12.0                        | 项目强制要求                    |
-| **包管理**           | npm                               | `npm ci` (CI) / `npm install`   |
-| **静态输出**         | `dist/`                           | `output: 'static'`, 无适配器    |
-| **D1 数据库**        | `Felizbay-db`                     | inquiry/news/rate_limit/auth 表 |
+| 限制项               | 值                                | 说明                             |
+| -------------------- | --------------------------------- | -------------------------------- |
+| **Workers 编译大小** | **< 3 MB**                        | 每个 Worker 的 JS 必须小于 3MB   |
+| **Pages 部署**       | `npx wrangler pages deploy dist/` | 纯静态, 无 SSR                   |
+| **页面数量**         | ~645 页                           | 37 语言, 降级语言 canonical 折叠 |
+| **构建时间**         | ~2-3 分钟 (本地实测)              | ~645 页静态渲染 + GEO 生成       |
+| **Node 版本**        | >= 22.12.0                        | 项目强制要求                     |
+| **包管理**           | npm                               | `npm ci` (CI) / `npm install`    |
+| **静态输出**         | `dist/`                           | `output: 'static'`, 无适配器     |
+| **D1 数据库**        | `Felizbay-db`                     | inquiry/news/rate_limit/auth 表  |
 
 ### 10.3 部署命令
 
@@ -918,7 +934,7 @@ const t = (key: string) => getUiForLang(locale)?.[key] || key;
 
 ### 11.4 缺失翻译键导致页面显示键名
 
-**原因**: UI 生成脚本未提取某翻译键, 所有 15 种语言的 `ui/*.ts` 文件中都缺失。
+**原因**: UI 生成脚本未提取某翻译键, 所有语言的 `ui/*.ts` 文件 (`src/i18n/generated/ui/`) 中都缺失。
 
 **示例**: `product.pageDesc` 在所有 `ui/*.ts` 文件中缺失。
 
@@ -2001,3 +2017,25 @@ RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srp
 - **翻译缓存清理**: `.cache/` 7 个 git 跟踪缓存移除 8,033 条 ja/ko/vi 死键 — page-translate-cache 4,743 / content-v2-bing-cache 1,357 / body-components-cache 1,041 / product-translate-cache 610 / i18n-translate-cache 121 / content-l10n-cache 100 / page-meta-cache 61
 - **残留死引用清理 (2026-10-18)**: `05_ci_gate.py` LOCALES/STRIP_LOCALE 移除 ja (含汉字/假名特判分支); `translate-products.yml` 默认语言 ja→cs; `fill-missing-page-yamls.mjs`/`inject-rib-l10n.mjs` LANGS 移除 ja; `i18n-tool.cjs` 用法示例更新; 历史一次性脚本 (add-missing-labels-csja.mjs、batch-translate.mjs 注释) 保留原样
 - **场景数据 SSoT (2026-10-16, commit `78f1776`)**: pool-ideas 三件套 (`src/data/pool-ideas.ts` + 2 个 MDX) 的尺寸/型号码/壁厚/水深/PSI 全部对齐 `src/data/pool-catalog.ts` (48 型号目录基准); 新增场景数据必须先查目录, 禁止虚构尺寸
+
+---
+
+## 17. 图片处理 (WebP + 尺寸注册表)
+
+### 17.1 WebP 迁移 (P6, 2026-10-21)
+
+`public/images/pools/` 下 15 张 >100KB 产品图已从 PNG/JPG 转为 **WebP (1600px, q82)**: 18.5MB → 0.85MB (**-97%**)。全库 215 处引用 × 97 文件同步替换, 旧图删除后由 R2 自动 prune 清理 (§9.2)。
+
+**效果** (Lighthouse, 产品页): Performance 46 → **67 线上** (84 本地), LCP 15.3s → **3.5s** (1.8s 本地), CLS 0。对比记录见 `docs/technical-audit-2026-10.md` §1.4。
+
+**规则**:
+
+- 新增产品图一律使用 WebP (1600px, q82 起步)
+- `<Image format="webp">` (Astro 组件, Sharp 优化) 与静态 `public/images/**/*.webp` 并存; 本地图片走 `astro:assets`, 远程图片走 Unpic CDN
+- Hero 图 `loading="eager"` + `fetchpriority="high"`
+
+### 17.2 image-dimensions.json (CLS 修复)
+
+`scripts/generate-image-dimensions.mjs` 在每次构建时解析全站图片宽高, 写入 `src/data/site/image-dimensions.json` (**36 条, SSOT**), 由 `vendor/integration/img-dimensions.ts` 在构建期为已知图片注入 `width`/`height` 属性 (防 CLS)。
+
+**规则**: 新增/替换/重命名 `public/images/` 下图片后, 无需手动维护 — 下次 `npm run build` 自动重建; 但**提交前需确认 registry 覆盖所有新图** (运行构建后 git diff 该文件)。

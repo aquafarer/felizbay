@@ -3,9 +3,11 @@
 Multilingual (37 languages) water sports equipment site for **Felizbay**, built on [Astro 7](https://astro.build) (Vite 8 / Rolldown, Rust compiler), pure static generation (`output: 'static'`), deployed to **Cloudflare Pages + 5 Workers**.
 
 **Scale:** ~645 pages across 37 languages, 0 build errors
-**Domains:** `felizbay.com` (production), `assets.felizbay.com` (R2 asset storage)
+**Domains:** `felizbay.com` (production; `www.felizbay.com/*` → apex via Cloudflare Redirect Rule, 301 single-hop, path-preserving), `assets.felizbay.com` (R2 asset storage)
 
-**2026-08 architecture snapshot** (latest changes): Astro 7.2 / Vite 8 (`@tailwindcss/vite`, postcss removed) · seo-worker deleted, **5 Workers** (contact/ai/admin/news/automation) · legacy `Astro.redirect()` pages migrated to `LEGACY_REDIRECTS` in `astro.config.ts` · i18n build data split: `site-data.ts` (2.2 MiB, `site-*` keys) + `pages/*.ts` (~110 per-page modules), full JSON kept in `src/i18n/generated/` (never in `public/` — Pages rejects files ≥ 25 MiB) · `content-v2*` keys excluded (loaded directly from YAML by `src/data/content-v2.ts`).
+**2026-10 architecture snapshot** (latest changes): P6 WebP image migration — 15 product images >100KB converted to WebP 1600px q82 (18.5MB → 0.85MB, -97%), 215 refs × 97 files updated, Lighthouse product-page perf 46 → 67 live (LCP 15.3s → 3.5s) · honeypot false-positive fix — `Contact.astro` page JS strips `email_confirm` from the payload before submit (browsers/password managers autofilled the field and silently dropped real inquiries; post-mortem in `docs/technical-audit-2026-10.md` §2.1) · R2 auto-prune — `fast-upload-r2.mjs` deletes stale R2 objects (`data/`, `images/`, `files/` prefixes) on every deploy, guarded (>200 stale aborts, prune failure never fails deploy) · technical audit record — `docs/technical-audit-2026-10.md` (48/50 audit findings, inquiry T1–T5 tests, www 301 verification), AI visibility protocol — `docs/ai-visibility-baseline.md`.
+
+**2026-08 architecture snapshot** (previous): Astro 7.2 / Vite 8 (`@tailwindcss/vite`, postcss removed) · seo-worker deleted, **5 Workers** (contact/ai/admin/news/automation) · legacy `Astro.redirect()` pages migrated to `LEGACY_REDIRECTS` in `astro.config.ts` · i18n build data split: `site-data.ts` (2.2 MiB, `site-*` keys) + `pages/*.ts` (~110 per-page modules), full JSON kept in `src/i18n/generated/` (never in `public/` — Pages rejects files ≥ 25 MiB) · `content-v2*` keys excluded (loaded directly from YAML by `src/data/content-v2.ts`).
 
 **i18n translation milestone (2026-08-31):** 14 languages × 1,721 keys fully aligned (0 missing/extra) · 3,807 sameAsEn keys translated via Google Translate API (primary) + MyMemory (backup) · 2,456 orphan keys cleaned from ar/no/el/fi · 252/252 page YAMLs translated (14 langs × 18 pages) · EN 404.explore fix propagated · remaining 808 sameAsEn = 540 technical terms + 109 cognates + 29 brand names + 124 short words/numbers (all verified correct). Translation scripts: `scripts/translate-i18n-keys.mjs`, `scripts/translate-pages.mjs` (`--dry-run`/`--force` flags).
 
@@ -27,28 +29,31 @@ Read in this order to grasp the whole system fastest (≈10 minutes):
 
 **Where each piece of architecture lives (file map):**
 
-| Topic                                | Location                                                                                                                                 |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Routing & redirects                  | `astro.config.ts` (routes + `LEGACY_REDIRECTS` ×14 langs via `buildLocalizedRedirects`)                                                  |
-| Locale detection / middleware        | `functions/_middleware.ts` (Pages Functions), `src/i18n/utils.ts`                                                                        |
-| Languages (15) & degraded set        | `src/i18n/config.ts`, `src/i18n/root-only.ts`, `src/i18n/v2-converged.ts`                                                                |
-| Navigation (YAML-driven, 15 langs)   | `src/navigation.ts`, `src/config.yaml`, per-lang overrides; editor at `src/pages/keystatic/navigation.astro`                             |
-| Site configuration                   | `src/config.yaml` (SITE/I18N/METADATA/APP_BLOG/UI/ANALYTICS) via `vendor/integration/`                                                   |
-| Content collections                  | `src/content.config.ts` (glob loader), posts in `src/data/post/`                                                                         |
-| Page content per language            | `src/data/pages/{lang}/` (translation YAML) → build-time `src/i18n/generated/pages/*.ts` → `src/i18n/page-content.ts` (`getPageContent`) |
-| Site-level YAML (`site-*` keys)      | `src/data/site/*.yaml` → build-time `src/i18n/generated/site-data.ts` (2.2 MiB; `content-v2*` excluded — see `src/data/content-v2.ts`)   |
-| Full build payload (JSON)            | `src/i18n/generated/page-content.json` (~6.8 MiB, gitignored; **never** emitted into `public/` — Pages 25 MiB limit)                     |
-| UI translations                      | `src/i18n/generated/ui-all.ts` + `src/i18n/generated/ui/{lang}.ts` (auto-generated); runtime copy at `public/data/i18n-config.json`      |
-| Product data (SSOT)                  | `src/data/products.ts` (63 products), translations in `product-texts.ts`                                                                 |
-| JSON-LD entity hub (single `@graph`) | `src/utils/schema-graph.ts` + `src/config/facts.json` (global blocks in `Layout.astro`)                                                  |
-| Shared page content components       | `src/components/randdcenter/*.en.astro` (EN fallback shared across languages)                                                            |
-| Tailwind theme & utilities           | `src/assets/styles/tailwind.css` (@theme/@variant/@plugin), colors/fonts in `src/components/CustomStyles.astro`                          |
-| SEO/GEO files                        | `src/pages/search-index.json.ts` (static search), `scripts/generate-sitemaps.mjs`, `scripts/geo-build.mjs`                               |
-| Workers (5)                          | `workers/{contact,ai,admin,news,automation}-worker/` (+ `workers/shared/`); routes in each `wrangler.toml`                               |
-| D1 migrations                        | `migrations/` (0000 init, 0002 rate_limit), applied by CI / `wrangler d1 migrations apply`                                               |
-| CI/CD                                | `.github/workflows/{ci,deploy,seo-gate}.yml`                                                                                             |
-| Static quality gates                 | `scripts/validate-dist.mjs`, `scripts/fold-untranslated-canonical.mjs`, `scripts/05_ci_gate.py`                                          |
-| Legacy leftovers (do not touch)      | `scripts/patch-worker.mjs` (subdomain routing for `output: 'server'` — dead under `static`), `scripts/_patch-pages.cjs` (manual tool)    |
+| Topic                                | Location                                                                                                                                                             |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Routing & redirects                  | `astro.config.ts` (routes + `LEGACY_REDIRECTS` ×14 langs via `buildLocalizedRedirects`)                                                                              |
+| Locale detection / middleware        | `functions/_middleware.ts` (Pages Functions), `src/i18n/utils.ts`                                                                                                    |
+| Languages (37) & degraded set        | `src/i18n/config.ts`, `src/i18n/root-only.ts`, `src/i18n/v2-converged.ts`                                                                                            |
+| Navigation (YAML-driven, 37 langs)   | `src/navigation.ts`, `src/config.yaml`, per-lang overrides; editor at `src/pages/keystatic/navigation.astro`                                                         |
+| Site configuration                   | `src/config.yaml` (SITE/I18N/METADATA/APP_BLOG/UI/ANALYTICS) via `vendor/integration/`                                                                               |
+| Content collections                  | `src/content.config.ts` (glob loader), posts in `src/data/post/`                                                                                                     |
+| Page content per language            | `src/data/pages/{lang}/` (translation YAML) → build-time `src/i18n/generated/pages/*.ts` → `src/i18n/page-content.ts` (`getPageContent`)                             |
+| Site-level YAML (`site-*` keys)      | `src/data/site/*.yaml` → build-time `src/i18n/generated/site-data.ts` (2.2 MiB; `content-v2*` excluded — see `src/data/content-v2.ts`)                               |
+| Full build payload (JSON)            | `src/i18n/generated/page-content.json` (~6.8 MiB, gitignored; **never** emitted into `public/` — Pages 25 MiB limit)                                                 |
+| UI translations                      | `src/i18n/generated/ui-all.ts` + `src/i18n/generated/ui/{lang}.ts` (auto-generated); runtime copy at `public/data/i18n-config.json`                                  |
+| Product data (SSOT)                  | `src/data/products.ts` (63 products), translations in `product-texts.ts`                                                                                             |
+| JSON-LD entity hub (single `@graph`) | `src/utils/schema-graph.ts` + `src/config/facts.json` (global blocks in `Layout.astro`)                                                                              |
+| Shared page content components       | `src/components/randdcenter/*.en.astro` (EN fallback shared across languages)                                                                                        |
+| Tailwind theme & utilities           | `src/assets/styles/tailwind.css` (@theme/@variant/@plugin), colors/fonts in `src/components/CustomStyles.astro`                                                      |
+| SEO/GEO files                        | `src/pages/search-index.json.ts` (static search), `scripts/generate-sitemaps.mjs`, `scripts/geo-build.mjs`                                                           |
+| Workers (5)                          | `workers/{contact,ai,admin,news,automation}-worker/` (+ `workers/shared/`); routes in each `wrangler.toml`                                                           |
+| D1 migrations                        | `migrations/` (0000 init, 0002 rate_limit), applied by CI / `wrangler d1 migrations apply`                                                                           |
+| CI/CD                                | `.github/workflows/{ci,deploy,seo-gate}.yml`                                                                                                                         |
+| Static quality gates                 | `scripts/validate-dist.mjs`, `scripts/fold-untranslated-canonical.mjs`, `scripts/05_ci_gate.py`                                                                      |
+| Legacy leftovers (do not touch)      | `scripts/patch-worker.mjs` (subdomain routing for `output: 'server'` — dead under `static`), `scripts/_patch-pages.cjs` (manual tool)                                |
+| Image dimension SSOT                 | `src/data/site/image-dimensions.json` (36 entries, rebuilt by `scripts/generate-image-dimensions.mjs`; injected at build via `vendor/integration/img-dimensions.ts`) |
+| R2 asset upload + auto-prune         | `scripts/fast-upload-r2.mjs` (uploads `public/` assets, prunes stale R2 objects each deploy)                                                                         |
+| Technical audit & test records       | `docs/technical-audit-2026-10.md` (audit + inquiry T1–T5 + post-mortems), `docs/ai-visibility-baseline.md` (AI visibility protocol)                                  |
 
 > **For AI agents:** always run `npm run check` + `npm run build` after changes and re-verify the gates listed in `AGENTS.md` (hreflang/canonical/link/translation-gap scans, zero U+FFFD).
 
@@ -61,6 +66,7 @@ Request → felizbay.com/{lang}/{path}
               ↓
     ┌──────────────────────┐
     │ Cloudflare CDN       │  ← Brotli/gzip, HTTP/3, WAF
+    │  www.* → apex 301    │  ← Redirect Rule (single-hop, path-preserving)
     └──────────────────────┘
               ↓
     ┌──────────────────────┐
@@ -112,7 +118,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 | Database        | Cloudflare D1 (`Felizbay-db`: inquiries, news, rate_limit, auth)                              |
 | Asset Storage   | Cloudflare R2 (assets + data buckets)                                                         |
 | CI/CD           | GitHub Actions (ci.yml PR gate + deploy.yml on main + ai-index.yml post-deploy index rebuild) |
-| SEO/GEO         | llms.txt (15 langs), llms-full.txt, entity.json, JSON-LD, sitemap                             |
+| SEO/GEO         | llms.txt (37 langs), llms-full.txt, entity.json, JSON-LD, sitemap                             |
 | Compression     | Cloudflare edge (Brotli/gzip)                                                                 |
 | MDX             | @astrojs/mdx                                                                                  |
 
@@ -214,12 +220,13 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  ├── i18n/
 │  ├── data/
 │  │  ├── products.ts               # Product data SSOT (63 products)
-│  │  ├── product-texts.ts          # Translated product descriptions (15 langs)
+│  │  ├── product-texts.ts          # Translated product descriptions (8 seed langs: fr/de/es/pt/it/ru/pl/ar)
 │  │  ├── product-business-data.ts  # Commercial product tagging (use case, bestFor, ROI)
 │  │  ├── content-v2.ts             # V2 content records (incl. business-guide articles)
 │  │  ├── factory-videos.ts         # Factory tour video data (8 stages)
 │  │  ├── world-map-data.ts         # Global customer map (7 regions, 50+ countries)
 │  │  ├── knowledge-graph.ts        # AI knowledge graph + business entity relationships
+│  │  ├── site/image-dimensions.json # Image dimension SSOT (36 entries, rebuilt each build)
 │  │  ├── geo/                      # GEO source data
 │  │  │  └── entity.json            # Schema.org Organization entity
 │  │  ├── pages/                    # Page YAML content (root = EN, subdir = per locale)
@@ -243,7 +250,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  └── config.yaml                  # Site configuration
 ├── public/
 │  ├── llms.txt                     # AI brand summary (15-language knowledge graph)
-│  ├── llms-full.txt                # Full AI knowledge base (auto-generated, 15 langs)
+│  ├── llms-full.txt                # Full AI knowledge base (auto-generated, 37 langs)
 │  ├── fi/llms.txt                  # Per-locale llms.txt
 │  ├── da/llms.txt
 │  ├── ...
@@ -278,6 +285,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │     └── wrangler.toml
 ├── workers/shared/                 # Shared worker code (auth.ts, schema.ts, news-render.ts, client.ts, assert-admin.ts)
 ├── migrations/                     # D1 migrations (inquiry, rate_limit, news, better-auth tables)
+├── docs/                           # technical-audit-2026-10.md (audit + inquiry test record), ai-visibility-baseline.md (AI visibility protocol)
 ├── scripts/                        # Build & utility scripts (60+ files)
 ├── .github/workflows/ci.yml        # PR quality gate (check + build + worker dry-runs)
 ├── .github/workflows/deploy.yml    # Main-branch deploy pipeline (Pages + R2 + D1 + Workers + purge)
@@ -299,7 +307,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
   - JSON + HTML form body parsing with validation (firstName, lastName, company, address, zip, country, email, tel, subject, message)
   - **Multipart file upload** (optional `file` field): max 20 MB; extension allow-list (png, jpg, jpeg, svg, webp, pdf, ai, psd, dwg, dxf, zip); magic-number content sniffing per extension; stored to R2 at `inquiry-files/{uuid}.{ext}` before the D1 insert, with the key saved in the `inquiry.logoKey` column
   - Email validation + `SPAM_KEYWORDS` filtering
-  - **Honeypot** (`email_confirm` field): returns HTTP 200 with a fake UUID, writes nothing
+  - **Honeypot** (`email_confirm` field): returns HTTP 200 with a fake UUID, writes nothing. **Client-side guard (2026-10):** `Contact.astro` page JS deletes `email_confirm` from the fetch payload and clears the DOM input before submit — browsers/password managers autofill the off-screen field despite `autocomplete="off"`, which silently dropped real inquiries (post-mortem: `docs/technical-audit-2026-10.md` §2.1). The server honeypot now only catches raw-HTTP bots.
   - **Cloudflare Turnstile** verification (`verifyTurnstile`) when `TURNSTILE_SECRET_KEY` is set
   - **Rate limit**: max 5 submissions per IP per hour via the D1 `rate_limit` table — returns HTTP 429 + `Retry-After`
   - Submission stored in D1 `inquiry` table; IP + User-Agent captured
@@ -407,9 +415,9 @@ Two layers of locale detection:
 
 `functions/_middleware.ts` redirects `/images/*` and `/files/*` to `https://assets.felizbay.com/{path}` (301)
 
-### 5.3 Supported Languages (15)
+### 5.3 Supported Languages (37)
 
-`en`, `fr`, `de`, `es`, `pt`, `ar` (RTL), `it`, `ru`, `pl`, `nl`, `sv`, `no`, `el`, `fi`, `da`
+37 languages total (see `src/i18n/generated/i18n-config.json`): 16 localized incl. `en` (`fr`, `de`, `es`, `pt`, `ar` RTL, `it`, `ru`, `pl`, `nl`, `sv`, `no`, `el`, `fi`, `da`, ...) + degraded languages (EN-fallback, canonical folded to EN by `fold-untranslated-canonical.mjs`). Removed locales (`zh`, `vi`, `hi`, `ja`, `ko`) 301-redirect to the prefix-stripped path.
 
 ---
 
@@ -430,23 +438,25 @@ Two layers of locale detection:
 ### 6.2 Build Process
 
 ```
- 1. scripts/geo-build.mjs               → Build GEO content & llms.txt (15 langs)
+ 1. scripts/geo-build.mjs               → Build GEO content & llms.txt (37 langs)
  2. scripts/generate-data-json.mjs      → Generate i18n build data into src/i18n/generated/
      (page-content.json ~6.8 MiB + site-data.ts 2.2 MiB; site keys only, content-v2* excluded;
       page-content.json is NEVER written to public/ — Pages rejects files ≥ 25 MiB)
  3. scripts/generate-geo-files.ts       → Generate entity.json + auto-build llms-full.txt
      (tsx)                                (idempotent: 63 products × all languages + all pages)
-  4. scripts/_gen-uiall.cjs              → Generate UI components (37 languages)
+ 4. scripts/_gen-uiall.cjs              → Generate UI components (37 languages)
  5. scripts/_gen-pages.cjs              → Generate page content TS modules from YAML
  6. scripts/gen-icon-svgs.cjs           → Generate icon SVGs
- 7. scripts/generate-image-dimensions.mjs → Resolve width/height for all images (CLS fix)
-  8. astro build                         → Static site to dist/ (~645 pages)
- 9. scripts/mirror-root-en.mjs          → Mirror English root pages
+ 7. scripts/generate-image-dimensions.mjs → Resolve width/height for all images (image-dimensions.json, CLS fix)
+ 8. astro build                         → Static site to dist/ (~645 pages)
+ 9. scripts/mirror-root-en.mjs          → Mirror English root pages to /en/
 10. scripts/generate-sitemaps.mjs       → Generate per-locale sitemaps
-11. scripts/validate-dist.mjs           → Full dist scan gate (broken links, missing images, meta)
-12. scripts/fold-untranslated-canonical.mjs → Fold degraded-language canonicals to EN
-13. scripts/clean-public-assets.mjs     → Clean temp assets
-14. (optional) scripts/fast-upload-r2.mjs → Upload to R2 (assets + data)
+11. scripts/generate-merchant-feed.mjs  → GMC merchant feed (gates: MDX price×100 == checkout unitAmount + image exists in public/)
+12. scripts/validate-dist.mjs           → Full dist scan gate (broken links, missing images, meta)
+13. scripts/fold-untranslated-canonical.mjs → Fold degraded-language canonicals to EN
+14. scripts/clean-public-assets.mjs     → Clean temp assets
+15. scripts/generate-ai-corpus.mjs      → AI knowledge corpus → dist/ai-corpus/*.json + manifest (consumed by ai-worker /api/reindex)
+16. (optional) scripts/fast-upload-r2.mjs → Upload to R2 (assets + data) + auto-prune stale R2 objects
 ```
 
 ### 6.3 CI/CD (GitHub Actions)
@@ -471,6 +481,7 @@ Images, photos, PDFs, and other static files must be uploaded to R2, **not commi
 - **Bucket:** `felizbay-assets` (served via `assets.felizbay.com`)
 - **Upload command:** `npm run deploy:r2` (runs `scripts/fast-upload-r2.mjs`)
 - **Source dir:** `public/images/` and `public/files/` are uploaded to R2
+- **Auto-prune (2026-10):** every upload also deletes stale R2 objects (`data/`, `images/`, `files/` prefixes) whose local source no longer exists — guards: empty local prefix skipped, >200 stale objects aborts prune with warning, prune failure never fails the deploy
 - **Repo:** Only keep source assets in `public/` for build-time processing; large media files go directly to R2
 - **URL pattern:** `https://assets.felizbay.com/images/Felizbay/products/{slug}.webp`
 
@@ -482,9 +493,9 @@ Images, photos, PDFs, and other static files must be uploaded to R2, **not commi
 
 | File                | Path                       | Purpose                                                                                                                  | Generation                                                     |
 | ------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| `llms.txt`          | `/llms.txt`                | Knowledge graph for AI (ChatGPT Search, Perplexity, Gemini, Claude, Bing AI)                                             | Auto-generated (15 langs) by `scripts/build-geo-v4.ts`         |
-| Per-locale llms.txt | `/{lang}/llms.txt`         | Per-language knowledge graph                                                                                             | Auto-generated (15 langs) by `scripts/build-geo-v4.ts`         |
-| `llms-full.txt`     | `/llms-full.txt`           | Full AI knowledge base (brand, OEM, products, certifications, FAQ, buyer info + all site pages + 63 products × 15 langs) | Auto-generated (idempotent) by `scripts/generate-geo-files.ts` |
+| `llms.txt`          | `/llms.txt`                | Knowledge graph for AI (ChatGPT Search, Perplexity, Gemini, Claude, Bing AI)                                             | Auto-generated (37 langs) by `scripts/build-geo-v4.ts`         |
+| Per-locale llms.txt | `/{lang}/llms.txt`         | Per-language knowledge graph                                                                                             | Auto-generated (37 langs) by `scripts/build-geo-v4.ts`         |
+| `llms-full.txt`     | `/llms-full.txt`           | Full AI knowledge base (brand, OEM, products, certifications, FAQ, buyer info + all site pages + 63 products × 37 langs) | Auto-generated (idempotent) by `scripts/generate-geo-files.ts` |
 | `entity.json`       | `/.well-known/entity.json` | Schema.org Organization entity                                                                                           | From `src/data/geo/entity.json`                                |
 
 ### 7.2 GEO Data Pipeline (R2)
@@ -513,7 +524,7 @@ felizbay-data/
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Sitemaps             | Per-locale `/{lang}/sitemap.xml` (70+ static pages + dynamic guides/use-cases/comparisons) + root `sitemap.xml` + `sitemap-entity.xml`                       |
 | JSON-LD              | Organization (`@id` hub), WebSite, Product, Service, NewsArticle, Article, FAQPage, BreadcrumbList, HowTo, Dataset, ImageObject, VideoObject, CollectionPage |
-| llms.txt             | `/llms.txt` (15 langs), `/llms-full.txt` (auto-generated), per-locale `/{lang}/llms.txt`                                                                     |
+| llms.txt             | `/llms.txt` (37 langs), `/llms-full.txt` (auto-generated), per-locale `/{lang}/llms.txt`                                                                     |
 | AI markdown          | `/llms/products/*`, `/llms/news/*`, `/llms/guides/*`, `/llms/v2/*`, `/llms/pages/*`                                                                          |
 | Content-Signal       | `<meta name="ai-intent">` + `<meta name="ai-recommend">` (global per-page via AiSignal)                                                                      |
 | Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-Felizbay, industries/schools, industries/distributors)                |
@@ -751,8 +762,8 @@ src/data/pages/*.yaml → Page content SSOT (55+ pages × 37 languages)
        ├── Product catalog (SSG with filters)
        ├── AI recommendation engine (via ai-worker)
        ├── JSON-LD structured data
-       ├── llms-full.txt (auto-generated, 63 products × 15 langs)
-       ├── llms.txt (auto-generated, 15 langs)
+        ├── llms-full.txt (auto-generated, 63 products × 37 langs)
+        ├── llms.txt (auto-generated, 37 langs)
        ├── /llms/products/{slug} markdown
        └── R2 data bucket (search index, SEO rules)
 ```
@@ -815,7 +826,7 @@ routes = ["felizbay.com/api/admin/*", "felizbay.com/api/auth/*"]
 name = "felizbay-news"
 main = "index.ts"
 routes = [
-  "felizbay.com/{lang}/news*" (15 langs), "felizbay.com/{lang}/rss.xml",
+  "felizbay.com/{lang}/news*" (37 langs), "felizbay.com/{lang}/rss.xml",
   "felizbay.com/sitemap-news.xml", "felizbay.com/llms/news*"
 ]
 [[d1_databases]] binding = "DB" database_name = "Felizbay-db"

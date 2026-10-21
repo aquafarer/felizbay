@@ -4,15 +4,16 @@
 > 日常部署只需 push 到 `main`（见 §7），无需重复本指南。
 > 架构背景见 `README.md` §0–6 与 `TECH.md` §7/§10。
 
-## 当前状态（2026-10-16 检查结果）
+## 当前状态（2026-10-21 检查结果：全部完成，本指南留作重搭参考）
 
-| 项目                                | 状态                  | 说明                                                                                        |
-| ----------------------------------- | --------------------- | ------------------------------------------------------------------------------------------- |
-| `felizbay.com` / `www.felizbay.com` | ⚠️ Squarespace 停车页 | 域名 NS 未指向 Cloudflare，显示 "Coming Soon"                                               |
-| `felizbay.pages.dev`                | ❌ 不存在             | Pages 项目未创建                                                                            |
-| GitHub Secrets                      | ❌ 0 个已配置         | CI 只构建不部署（deploy.yml guard 跳过全部 Cloudflare 步骤）                                |
-| 本地 wrangler                       | ❌ 未登录             | 无 `~/.wrangler` 配置                                                                       |
-| admin-worker CMS 目标仓库           | ⚠️ 需确认             | `wrangler.toml` vars 指向 `Felizbay/official`，而代码仓库是 `aquafarer/felizbay`（见 §3.4） |
+| 项目                      | 状态      | 说明                                                                                  |
+| ------------------------- | --------- | ------------------------------------------------------------------------------------- |
+| `felizbay.com`            | ✅ 已上线 | Cloudflare Pages 生产域，~645 页 37 语言                                              |
+| `www.felizbay.com` → apex | ✅ 301    | Cloudflare Dashboard Redirect Rule（单跳、路径保留，见 §2 第 7 步）                   |
+| `assets.felizbay.com`     | ✅ 已上线 | R2 `felizbay-assets` 公开访问 + 每次 deploy 自动 prune 过期对象                       |
+| GitHub Secrets            | ✅ 已配置 | deploy.yml 全流程执行（含 worker secrets 同步 + CDN purge）                           |
+| admin-worker CMS 目标仓库 | ✅ 已确认 | `Felizbay/official`（Keystatic 后台读写正常）                                         |
+| 询盘链路                  | ✅ 已验证 | Turnstile + D1 + Resend 端到端通过（测试记录见 `docs/technical-audit-2026-10.md` §2） |
 
 ---
 
@@ -80,7 +81,8 @@ npx wrangler vectorize create ai-index-v2 --dimensions=1024 --metric=cosine
 3. **Squarespace 切 NS**：域名设置 → Nameservers → Use custom nameservers → 填入 Cloudflare 的两个 NS → 等待 zone Active（几分钟到 48 小时）
 4. **Pages 绑定主域**：Dashboard → Workers & Pages → `felizbay` 项目 → Custom domains → 依次添加 `felizbay.com` 和 `www.felizbay.com`（zone 在同一账户时 Cloudflare 自动建 CNAME → `felizbay.pages.dev`）
 5. **R2 绑定资产子域**：Dashboard → R2 → `felizbay-assets` → Settings → Public access → Connect Domain → `assets.felizbay.com`
-6. **邮件 DNS（Resend 验证时用）**：见 §3.2，验证记录添加到 Cloudflare zone 的 DNS 里
+6. **www → apex 301**：Dashboard → Rules → Redirect Rules → Create rule：When `hostname equals www.felizbay.com` → Dynamic redirect，表达式 `concat("https://felizbay.com", http.request.uri.path)`，状态 301，勾选 Preserve query string。单跳、路径保留（不可用 `_redirects` 实现——Pages 静态文件方式对 dashboard Redirect Rule 场景无必要）。已验证 5 组 URL 全部 301 路径保留（`docs/technical-audit-2026-10.md` §2.2）
+7. **邮件 DNS（Resend 验证时用）**：见 §3.2，验证记录添加到 Cloudflare zone 的 DNS 里
 
 > Workers 的 zone 路由（`routes = [{ pattern = "felizbay.com/api/...", zone_name = "felizbay.com" }]`）在 zone 接入 Cloudflare 后自动生效，无需额外配置。
 
@@ -223,6 +225,7 @@ node scripts/seed-news.mjs   # news 表为空时种子
 ```bash
 curl -s -o /dev/null -w "%{http_code}\n" https://felizbay.pages.dev/                  # 200（默认域，立即可用）
 curl -s -o /dev/null -w "%{http_code}\n" https://felizbay.com/                        # 200 且不再是 Squarespace 停车页
+curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" https://www.felizbay.com/products/specs/   # 301 → https://felizbay.com/products/specs/（www Redirect Rule）
 curl -s -o /dev/null -w "%{http_code}\n" https://felizbay.com/news/                   # 200（news-worker）
 curl -s -o /dev/null -w "%{http_code}\n" https://felizbay.com/rss.xml                 # 200
 curl -s -X POST https://felizbay.com/api/contact -H "Content-Type: application/json" -d '{}'   # 非 526/500 即路由已通
