@@ -63,12 +63,32 @@ export const products: ProductRecord[] = [
       'Compared to ordinary ring-style inflatable pools, the drop stitch rectangular pool keeps flat, rigid walls under water pressure, offers a larger swim area for the same footprint, and survives full summer seasons; compared to a permanent pool it costs a fraction and stores away in winter.',
     ai_faq: [
       {
+        q: 'What sizes are available?',
+        a: 'The rectangular series runs from 2 × 2 × 0.8 m up to 6 × 5 × 1.5 m across 15 factory sizes, with 15, 20, or 50 cm walls. Check the fit table on this page and measure your available area before ordering.',
+      },
+      {
+        q: 'What is included with the pool?',
+        a: 'Each pool ships with a 1000W electric air pump, a full-coverage cover, a repair kit, and a storage bag. Everything needed to inflate and maintain the pool for the season is in the box.',
+      },
+      {
+        q: 'Does it include a filter pump?',
+        a: 'No. The included pump is a 1000W electric air pump for inflation. The pool has a standard 38 mm port that accepts common filter pumps, which are sold separately. A sand filter system is available as an optional add-on for wholesale buyers.',
+      },
+      {
         q: 'How long does setup take?',
-        a: 'About 10 minutes with the included electric air pump, plus the time to fill it with a garden hose.',
+        a: 'About 10 minutes with the included electric air pump to reach rigidity, plus the time to fill it with a garden hose. Site preparation is done before inflation.',
+      },
+      {
+        q: 'What ground preparation is required?',
+        a: 'The pool must stand on a flat, firm, level surface free of sharp objects — lawn, patio, or a deck rated for the filled weight. No sand bed or foundation is needed, but the ground must not slope or shift.',
       },
       {
         q: 'Can it be left out all summer?',
         a: 'Yes. The UV-resistant PVC drop stitch walls are built for full-season outdoor use. A cover is recommended when not in use.',
+      },
+      {
+        q: 'How much water does it need?',
+        a: 'It depends on the size: fill volume scales with the model, and water is filled to the marked fill line rather than the rim. Use the fit table on this page for the estimated volume of each size.',
       },
       {
         q: 'How do I store it in winter?',

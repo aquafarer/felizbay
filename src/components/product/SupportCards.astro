@@ -1,0 +1,59 @@
+---
+/**
+ * Module 09 — delivery, shipping costs, returns, and warranty & support
+ * as four expandable cards (per2.txt §十一).
+ */
+export interface SupportCardItem {
+  title: string;
+  summary: string;
+  details: string[];
+  href?: string;
+  hrefLabel?: string;
+}
+
+interface Props {
+  title: string;
+  cards: SupportCardItem[];
+}
+
+const { title, cards } = Astro.props;
+---
+
+<section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="support">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">{title}</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {
+        cards.map((card) => (
+          <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 open:bg-white dark:open:bg-slate-800 transition-colors">
+            <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none">
+              <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">{card.title}</span>
+              <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                &#9660;
+              </span>
+            </summary>
+            <div class="px-5 pb-4 border-t border-gray-100 dark:border-slate-700 pt-3">
+              <p class="text-sm font-medium text-gray-700 dark:text-slate-300">{card.summary}</p>
+              <ul class="mt-2 space-y-1.5">
+                {card.details.map((d) => (
+                  <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+                    <span class="w-1.5 h-1.5 mt-2 rounded-full bg-sky-500 shrink-0" />
+                    <span>{d}</span>
+                  </li>
+                ))}
+              </ul>
+              {card.href && (
+                <a
+                  href={card.href}
+                  class="mt-3 inline-block text-sm font-medium text-sky-600 dark:text-sky-400 hover:underline"
+                >
+                  {card.hrefLabel || card.href}
+                </a>
+              )}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

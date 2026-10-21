@@ -1,0 +1,40 @@
+---
+/**
+ * Mobile sticky buy bar (per2.txt §十六) — price + Add to Cart fixed at the
+ * bottom of the viewport on small screens. Desktop unaffected.
+ * Rendered only for retail products (sku + price present).
+ */
+interface Props {
+  price: string;
+  priceLabel: string;
+  sku?: string;
+  lang?: string;
+  buyLabel: string;
+}
+
+const { price, priceLabel, sku, lang, buyLabel } = Astro.props;
+const show = Boolean(sku && price);
+---
+
+{
+  show && (
+    <div class="fixed bottom-0 inset-x-0 z-40 md:hidden border-t border-gray-200 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+        <div class="flex-1 min-w-0">
+          <p class="text-lg font-bold leading-tight text-gray-900 dark:text-slate-100">{price}</p>
+          <p class="text-[10px] uppercase tracking-wider text-gray-400 dark:text-slate-500">{priceLabel}</p>
+        </div>
+        <form method="POST" action="/api/checkout" class="shrink-0">
+          <input type="hidden" name="sku" value={sku} />
+          {lang && <input type="hidden" name="lang" value={lang} />}
+          <button
+            type="submit"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white text-sm font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-colors shadow-lg"
+          >
+            {buyLabel}
+          </button>
+        </form>
+      </div>
+    </div>
+  )
+}

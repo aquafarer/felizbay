@@ -29,3 +29,5 @@ public/llms-full.txt
 public/llms.txt
 public/*sitemap*.xml
 public/*/llms.txt
+
+.deveco

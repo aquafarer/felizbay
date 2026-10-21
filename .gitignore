@@ -63,3 +63,5 @@ __pycache__/
 .cache/p0-fix-v2-cache.json
 .cache/subtitle-cache.json
 p1-home-cache
+
+.deveco/

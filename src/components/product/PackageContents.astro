@@ -1,0 +1,91 @@
+---
+/**
+ * Module 06 — what's included, what is required separately, and optional add-ons.
+ * Three explicit groups instead of a flat accessory list; per2.txt §八.
+ */
+export interface PackageOptionalItem {
+  name: string;
+  spec: string;
+  fobUsd: number;
+}
+
+interface Props {
+  title: string;
+  includedTitle: string;
+  requiredTitle: string;
+  optionalTitle: string;
+  included: string[];
+  requiredSeparately: string[];
+  optionalAddOns: PackageOptionalItem[];
+  currencyNote?: string;
+}
+
+const {
+  title,
+  includedTitle,
+  requiredTitle,
+  optionalTitle,
+  included,
+  requiredSeparately,
+  optionalAddOns,
+  currencyNote,
+} = Astro.props;
+---
+
+<section
+  class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+  data-ai-block="package"
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">{title}</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">{includedTitle}</h3>
+        <ul class="space-y-2">
+          {
+            included.map((item) => (
+              <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+                <span class="text-green-600 dark:text-green-400 mt-0.5">&#10003;</span>
+                <span>{item}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">{requiredTitle}</h3>
+        <ul class="space-y-2">
+          {
+            requiredSeparately.length > 0 ? (
+              requiredSeparately.map((item) => (
+                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+                  <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))
+            ) : (
+              <li class="text-sm text-gray-500 dark:text-slate-400">—</li>
+            )
+          }
+        </ul>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">{optionalTitle}</h3>
+        <ul class="space-y-2.5">
+          {
+            optionalAddOns.map((acc) => (
+              <li>
+                <p class="text-sm font-medium text-gray-700 dark:text-slate-300">{acc.name}</p>
+                <p class="text-xs text-gray-500 dark:text-slate-400">
+                  {acc.spec}
+                  {acc.fobUsd ? ` — from $${acc.fobUsd.toFixed(2)} FOB` : ''}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+        {currencyNote && <p class="mt-3 text-[11px] text-gray-400 dark:text-slate-500 leading-snug">{currencyNote}</p>}
+      </div>
+    </div>
+  </div>
+</section>

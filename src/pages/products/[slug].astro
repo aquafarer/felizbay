@@ -17,11 +17,21 @@ import { SITE } from 'astrowind:config';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 import { products as productRecords } from '~/data/products';
-import { poolSeries } from '~/data/pool-catalog';
+import { poolSeries, poolAccessories, PRICE_BASIS_NOTE } from '~/data/pool-catalog';
 import { guides } from '~/data/guides';
 import { getProductCompliance } from '~/data/product-compliance';
 import { productBusinessData } from '~/data/product-business-data';
 import { getProductMentionsJsonLd } from '~/data/knowledge-graph';
+import { RECT_DETAIL } from '~/data/product-page-content';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+import PurchaseAssurance from '~/components/product/PurchaseAssurance.astro';
+import FitGuide from '~/components/product/FitGuide.astro';
+import PackageContents from '~/components/product/PackageContents.astro';
+import SetupStorage from '~/components/product/SetupStorage.astro';
+import ProductFaq from '~/components/product/ProductFaq.astro';
+import SpecTable from '~/components/product/SpecTable.astro';
+import SupportCards from '~/components/product/SupportCards.astro';
+import StickyBuyBar from '~/components/product/StickyBuyBar.astro';
 
 export const prerender = true;
 
@@ -133,6 +143,72 @@ const hasVariant = catalogSeries
       ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
     }))
   : undefined;
+
+// ---- Product detail page V2 (per2.txt 13-module template, rectangular first) ----
+const isDetailV2 = product.slug === 'rectangular-drop-stitch-pool';
+const tEn = (key: string) => getUiForLang('en')?.[key] || key;
+const DETAIL_UI_KEYS = [
+  'product.assuranceIncluded',
+  'product.assuranceDelivery',
+  'product.assuranceWarranty',
+  'product.assuranceSupport',
+  'product.fitTitle',
+  'product.fitRecommended',
+  'product.fitCheck',
+  'product.fitCheckerTitle',
+  'product.selectSize',
+  'product.externalSize',
+  'product.wallLabel',
+  'product.estFillVolume',
+  'product.estFillNote',
+  'product.fobWholesale',
+  'product.requestWholesaleQuote',
+  'product.compareAllSizes',
+  'product.packageTitle',
+  'product.includedInPackage',
+  'product.requiredSeparately',
+  'product.optionalAddOns',
+  'product.setupTitle',
+  'product.specTitle',
+  'product.supportTitle',
+  'product.faqTitle',
+  'product.retailPrice',
+  'product.buyNow',
+];
+const detailUi: Record<string, string> = Object.fromEntries(DETAIL_UI_KEYS.map((k) => [k, tEn(k)]));
+
+const ASSURANCE_ICONS: Record<string, string> = {
+  'product.assuranceIncluded': 'tabler:package',
+  'product.assuranceDelivery': 'tabler:truck',
+  'product.assuranceWarranty': 'tabler:shield-check',
+  'product.assuranceSupport': 'tabler:headset',
+};
+const assuranceItems = isDetailV2
+  ? RECT_DETAIL.assurance.map((a) => ({
+      icon: ASSURANCE_ICONS[a.titleKey] || 'tabler:circle-check',
+      title: detailUi[a.titleKey],
+      text: a.text,
+    }))
+  : [];
+
+const supportCardItems = isDetailV2
+  ? RECT_DETAIL.supportCards.map((c) => ({
+      title: detailUi[c.titleKey] || c.titleKey,
+      summary: c.summary,
+      details: c.details,
+      href: c.href,
+      hrefLabel: c.hrefLabel,
+    }))
+  : [];
+
+const pickSpecs = (labels: string[]) => specRows.filter((s: { label?: string }) => labels.includes(s.label || ''));
+const specGroups = isDetailV2
+  ? [
+      { title: 'Structure', rows: pickSpecs(['Shape', 'Wall material', 'Wall thickness', 'Size range']) },
+      { title: 'Pressure', rows: pickSpecs(['Recommended pressure', 'Maximum pressure tolerance']) },
+      { title: 'Setup', rows: pickSpecs(['Inflation time', 'Included']) },
+    ].filter((g) => g.rows.length > 0)
+  : [];
 ---
 
 <ProductLayout metadata={metadata} breadcrumbs={productCrumbs}>
@@ -477,6 +553,9 @@ const hasVariant = catalogSeries
     </div>
   </section>
 
+  {/* Module 02 — Purchase Assurance (detail V2) */}
+  {isDetailV2 && assuranceItems.length > 0 && <PurchaseAssurance items={assuranceItems} />}
+
   {/* TLDR (AI-crawlable) */}
   {
     rec && (
@@ -499,6 +578,21 @@ const hasVariant = catalogSeries
           </div>
         </div>
       </section>
+    )
+  }
+
+  {/* Module 03+05 — Fit Guide & Size Checker (detail V2) */}
+  {
+    isDetailV2 && catalogSeries && (
+      <FitGuide
+        ui={detailUi}
+        fitIntro={RECT_DETAIL.fitIntro}
+        fitRows={RECT_DETAIL.fitRows}
+        fitNotice={RECT_DETAIL.fitNotice}
+        catalogItems={catalogSeries.items}
+        quoteHref={`/contact?product=${encodeURIComponent(product.title)}`}
+        compareHref="/products/compare"
+      />
     )
   }
 
@@ -596,10 +690,36 @@ const hasVariant = catalogSeries
       </section>
     )
   }
+  {/* Module 06 — Package Contents (detail V2) */}
+  {
+    isDetailV2 && (
+      <PackageContents
+        title={detailUi['product.packageTitle']}
+        includedTitle={detailUi['product.includedInPackage']}
+        requiredTitle={detailUi['product.requiredSeparately']}
+        optionalTitle={detailUi['product.optionalAddOns']}
+        included={RECT_DETAIL.packageIncluded}
+        requiredSeparately={RECT_DETAIL.packageRequired}
+        optionalAddOns={poolAccessories}
+        currencyNote={PRICE_BASIS_NOTE}
+      />
+    )
+  }
+
+  {/* Module 07 — Setup & Storage (detail V2) */}
+  {
+    isDetailV2 && (
+      <SetupStorage
+        title={detailUi['product.setupTitle']}
+        steps={RECT_DETAIL.setupSteps}
+        links={RECT_DETAIL.setupLinks}
+      />
+    )
+  }
 
   {/* FAQ Section */}
   {
-    rec && rec.ai_faq.length > 0 && (
+    rec && rec.ai_faq.length > 0 && !isDetailV2 && (
       <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">
@@ -624,6 +744,9 @@ const hasVariant = catalogSeries
       </section>
     )
   }
+
+  {/* Module 08 — FAQ (detail V2) */}
+  {isDetailV2 && rec && rec.ai_faq.length > 0 && <ProductFaq title={detailUi['product.faqTitle']} faqs={rec.ai_faq} />}
 
   <JsonLd type="FAQPage" faqs={rec?.ai_faq || []} />
 
@@ -678,6 +801,9 @@ const hasVariant = catalogSeries
       </section>
     )
   }
+
+  {/* Module 10 — Full Specifications (detail V2) */}
+  {isDetailV2 && <SpecTable title={detailUi['product.specTitle']} groups={specGroups} />}
 
   {/* Certifications & Compliance */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
@@ -755,6 +881,9 @@ const hasVariant = catalogSeries
       </div>
     </div>
   </section>
+
+  {/* Module 09 — Delivery, Returns & Support (detail V2) */}
+  {isDetailV2 && <SupportCards title={detailUi['product.supportTitle']} cards={supportCardItems} />}
 
   {/* Trust Badges */}
   <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
@@ -910,6 +1039,18 @@ const hasVariant = catalogSeries
       }
     }
   </script>
+
+  {/* Module 16 — Mobile Sticky Buy Bar (detail V2) */}
+  {
+    isDetailV2 && (
+      <StickyBuyBar
+        price={product.price?.amount ? `$${product.price.amount}` : ''}
+        priceLabel={product.sku ? detailUi['product.retailPrice'] : ''}
+        sku={product.sku}
+        buyLabel={detailUi['product.buyNow']}
+      />
+    )
+  }
 
   <ToBlogLink text="Back to Products" />
 </ProductLayout>

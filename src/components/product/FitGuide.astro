@@ -1,0 +1,210 @@
+---
+/**
+ * Module 03 + 05 — fit boundary table plus a factory-size checker
+ * (per2.txt §五/§六). The size selector is intentionally DECOUPLED from the
+ * cart: it only shows the spec and the FOB wholesale price for the selected
+ * factory size, plus inquiry entry points. No SKU ever reaches checkout.
+ *
+ * Fill volume is precomputed server-side (L × W × 80% wall height, in liters)
+ * and embedded as data attributes — the inline script only updates the display.
+ */
+import type { PoolCatalogItem } from '~/data/pool-catalog';
+import type { FitRow } from '~/data/product-page-content';
+
+interface Props {
+  ui: Record<string, string>;
+  fitIntro: string;
+  fitRows: FitRow[];
+  fitNotice: { title: string; text: string };
+  catalogItems: PoolCatalogItem[];
+  quoteHref: string;
+  compareHref: string;
+}
+
+const { ui, fitIntro, fitRows, fitNotice, catalogItems, quoteHref, compareHref } = Astro.props;
+
+/** "2 × 2 × 0.8" → { l: 2, w: 2, h: 0.8 } */
+function parseSize(size: string): { l: number; w: number; h: number } | null {
+  const parts = size.split('×').map((p) => parseFloat(p.trim()));
+  if (parts.length !== 3 || parts.some((n) => Number.isNaN(n))) return null;
+  return { l: parts[0], w: parts[1], h: parts[2] };
+}
+
+interface SizeOption {
+  item: string;
+  label: string;
+  wall: string;
+  fobUsd: number;
+  estLiters: number | null;
+}
+
+const sizeOptions: SizeOption[] = catalogItems
+  .map((it) => {
+    const dims = parseSize(it.size);
+    const estLiters = dims ? Math.round((dims.l * dims.w * (0.8 * dims.h) * 1000) / 10) * 10 : null;
+    return {
+      item: it.item,
+      label: `${it.size} m`,
+      wall: it.wall,
+      fobUsd: it.fobUsd,
+      estLiters,
+    };
+  })
+  .filter((o) => o.estLiters !== null);
+
+const first = sizeOptions[0];
+const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
+const fmtFob = (n: number) => `$${n.toFixed(2)}`;
+---
+
+<section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="fit">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+      {ui['product.fitTitle']}
+    </h2>
+    <p class="mt-3 max-w-3xl text-sm md:text-base text-gray-600 dark:text-slate-400 leading-relaxed">{fitIntro}</p>
+
+    <div class="mt-8 grid lg:grid-cols-2 gap-6">
+      {/* Fit boundary table */}
+      <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-slate-800 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100 w-1/2">
+                {ui['product.fitRecommended']}
+              </th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-100 w-1/2">{ui['product.fitCheck']}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              fitRows.map((row) => (
+                <tr class="border-t border-gray-100 dark:border-slate-700 align-top">
+                  <td class="px-4 py-3 text-gray-700 dark:text-slate-300">
+                    <span class="mr-1.5 text-green-600 dark:text-green-400">&#10003;</span>
+                    {row.recommended}
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400">{row.check}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      {/* Size checker */}
+      <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5 md:p-6">
+        <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100">{ui['product.fitCheckerTitle']}</h3>
+        <label class="mt-4 block">
+          <span class="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-slate-400">
+            {ui['product.selectSize']}
+          </span>
+          <select
+            id="fitg-size"
+            class="mt-1.5 w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-500"
+          >
+            {
+              sizeOptions.map((o) => (
+                <option
+                  value={o.item}
+                  selected={o.item === first?.item}
+                  data-size={o.label}
+                  data-wall={o.wall}
+                  data-fob={o.fobUsd.toFixed(2)}
+                  data-liters={o.estLiters}
+                >
+                  {o.label} — {o.wall}
+                </option>
+              ))
+            }
+          </select>
+        </label>
+
+        <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
+          <div>
+            <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              {ui['product.externalSize']}
+            </dt>
+            <dd id="fitg-size-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {first?.label}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              {ui['product.wallLabel']}
+            </dt>
+            <dd id="fitg-wall-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {first?.wall}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              {ui['product.estFillVolume']}
+            </dt>
+            <dd id="fitg-volume-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {first?.estLiters ? fmtLiters(first.estLiters) : '—'}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              {ui['product.fobWholesale']}
+            </dt>
+            <dd id="fitg-fob-val" class="mt-0.5 text-sm font-semibold text-sky-700 dark:text-sky-400">
+              {first ? fmtFob(first.fobUsd) : '—'}
+            </dd>
+          </div>
+        </dl>
+
+        <p class="mt-3 text-[11px] text-gray-400 dark:text-slate-500 leading-snug">{ui['product.estFillNote']}</p>
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a
+            href={quoteHref}
+            class="inline-flex items-center px-5 py-2.5 bg-sky-600 text-white text-sm font-semibold rounded-full hover:bg-sky-700 transition-colors"
+          >
+            {ui['product.requestWholesaleQuote']}
+          </a>
+          <a
+            href={compareHref}
+            class="inline-flex items-center px-5 py-2.5 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-full hover:bg-white dark:hover:bg-slate-800 transition-colors"
+          >
+            {ui['product.compareAllSizes']}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Elevated / rental notice */}
+    <div
+      class="mt-6 rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 px-5 py-4"
+    >
+      <h3 class="text-sm font-semibold text-amber-900 dark:text-amber-200">{fitNotice.title}</h3>
+      <p class="mt-1 text-sm text-amber-800/90 dark:text-amber-200/80 leading-relaxed">{fitNotice.text}</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const sel = document.getElementById('fitg-size') as HTMLSelectElement | null;
+    const sizeVal = document.getElementById('fitg-size-val');
+    const wallVal = document.getElementById('fitg-wall-val');
+    const volumeVal = document.getElementById('fitg-volume-val');
+    const fobVal = document.getElementById('fitg-fob-val');
+    if (!sel || !sizeVal || !wallVal || !volumeVal || !fobVal) return;
+
+    const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
+
+    const update = () => {
+      const opt = sel.options[sel.selectedIndex] as HTMLOptionElement | undefined;
+      if (!opt) return;
+      sizeVal.textContent = opt.dataset.size ?? '—';
+      wallVal.textContent = opt.dataset.wall ?? '—';
+      const liters = parseFloat(opt.dataset.liters ?? '');
+      volumeVal.textContent = Number.isNaN(liters) ? '—' : fmtLiters(liters);
+      fobVal.textContent = opt.dataset.fob ? `$${opt.dataset.fob}` : '—';
+    };
+
+    sel.addEventListener('change', update);
+  })();
+</script>
