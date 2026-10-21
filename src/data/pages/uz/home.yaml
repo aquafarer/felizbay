@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Orqa hovlida Felizbay to'rtburchaklar Drop Stitch shishiriladigan suzish havzasi
 stats:
   title: Bir qarashda Felizbay
@@ -147,7 +147,7 @@ steps:
       description: Mavsum tugagach, suvni to'kib tashlang, quriting, o'rang va keyingi yozgacha hovuzni sumkasida saqlang.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay dumaloq Drop Stitch shishiriladigan suzish havzasi
 blog_latest:
   title: Hovuz bo'yicha ko'rsatmalar va tushunchalar

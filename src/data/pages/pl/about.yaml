@@ -1,7 +1,7 @@
 hero:
   tagline: O nas
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Nadmuchiwany basen Felizbay
   title: |
     Ułatwienie pływania, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Produkcja pod marką własną z nadrukiem logo i opakowaniami gotowymi do sprzedaży detalicznej.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Prostokątny nadmuchiwany basen Felizbay Drop Stitch
 steps2_values:
   title: Nasze wartości

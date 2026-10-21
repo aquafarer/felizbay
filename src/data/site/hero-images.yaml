@@ -1,17 +1,17 @@
 slides:
-  - image: /images/pools/rectangular-pool-2.png
+  - image: /images/pools/rectangular-pool-2.webp
     label: Rectangular Drop Stitch Pool
     categories:
       - POOL
-  - image: /images/pools/round-blue-pool-1.png
+  - image: /images/pools/round-blue-pool-1.webp
     label: Round Blue Drop Stitch Pool
     categories:
       - POOL
-  - image: /images/pools/round-grey-pool-1.png
+  - image: /images/pools/round-grey-pool-1.webp
     label: Round Grey Drop Stitch Pool
     categories:
       - POOL
-  - image: /images/pools/round-grey-pool-cover-1.png
+  - image: /images/pools/round-grey-pool-cover-1.webp
     label: Round Grey Pool with Cover
     categories:
       - POOL

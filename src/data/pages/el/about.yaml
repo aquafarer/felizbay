@@ -1,7 +1,7 @@
 hero:
   tagline: Σχετικά με εμάς
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Φουσκωτή πισίνα Felizbay
   title: |
     Κάνοντας το κολύμπι απλό, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Κατασκευή ιδιωτικής ετικέτας με εκτύπωση λογότυπου και έτοιμη συσκευασία λιανικής.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay ορθογώνια φουσκωτή πισίνα Drop Stitch
 steps2_values:
   title: Οι αξίες μας

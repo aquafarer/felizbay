@@ -1,7 +1,7 @@
 hero:
   tagline: Over ons
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay opblaasbaar zwembad
   title: |
     Zwemmen eenvoudig maken, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Private-label productie met logo-opdruk en retailklare verpakking.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rechthoekig drop stitch opblaasbaar zwembad
 steps2_values:
   title: Onze waarden

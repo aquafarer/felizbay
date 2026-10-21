@@ -1,7 +1,7 @@
 hero:
   tagline: Chi siamo
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Piscina gonfiabile Felizbay
   title: |
     Rendere il nuoto semplice, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Produzione a marchio privato con stampa del logo e confezione pronta per la vendita al dettaglio.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Piscina gonfiabile Drop Stitch rettangolare Felizbay
 steps2_values:
   title: I nostri valori

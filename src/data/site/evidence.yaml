@@ -27,7 +27,7 @@ case_studies:
     challenge: A 5-resort group needed guest pools for villa terraces with consistent branding, UV-resistant materials for tropical sun, and easy seasonal storage.
     solution: Designed a custom round pool package with UV-stabilized PVC, resort-branded graphics, and a phased delivery schedule with staff setup training.
     result: 180 units delivered across 5 resorts. Repeat order for 2 new properties. 40% reduction in per-unit cost versus previous suppliers.
-    image: /images/pools/round-blue-pool-1.png
+    image: /images/pools/round-blue-pool-1.webp
     tags: [OEM, Pool, Hospitality]
     outcome_metrics:
       - label: Units Delivered
@@ -44,7 +44,7 @@ case_studies:
     challenge: A fast-growing DTC brand needed a complete pool package (pool, pump, cover, repair kit) with premium packaging designed for parcel fulfilment without damage.
     solution: Developed a co-branded product line with proprietary drop-stitch walls for higher rigidity, and retail-ready double-wall corrugated boxes with insert padding. Integrated QR-code warranty registration.
     result: 3-model pool line launched in 75 days. 15,000+ units in first 12 months. 4.8-star average rating. 0.3% damage rate in transit.
-    image: /images/pools/round-grey-pool-1.png
+    image: /images/pools/round-grey-pool-1.webp
     tags: [OEM, Pool, DTC, E-commerce]
     outcome_metrics:
       - label: Models
@@ -106,9 +106,9 @@ deployment_photos:
   - image: /images/pools/rectangular-pool-1.jpg
     caption: Rectangular drop stitch pool set up on a backyard terrace
     context: Residential
-  - image: /images/pools/round-blue-pool-1.png
+  - image: /images/pools/round-blue-pool-1.webp
     caption: Round blue pool ready for a family weekend
     context: Residential
-  - image: /images/pools/round-grey-pool-cover-1.png
+  - image: /images/pools/round-grey-pool-cover-1.webp
     caption: Round pool with protective cover for easy maintenance
     context: Accessories

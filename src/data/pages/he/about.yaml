@@ -1,7 +1,7 @@
 hero:
   tagline: עלינו
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: בריכת שחיה מתנפחת Felizbay
   title: |
     הופכים את השחייה לפשוטה, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: ייצור במותג פרטי עם הדפסת לוגו ואריזה מוכנה לקמעונאית.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: בריכת שחיה מתנפחת מלבנית של חברת Felizbay Drop Stitch
 steps2_values:
   title: הערכים שלנו

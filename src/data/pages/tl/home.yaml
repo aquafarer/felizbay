@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rectangular drop stitch inflatable swimming pool sa likod-bahay
 stats:
   title: Felizbay sa isang Sulyap
@@ -147,7 +147,7 @@ steps:
       description: Kapag natapos na ang season, alisan ng tubig, tuyo, i-roll up, at itago ang pool sa bag nito hanggang sa susunod na tag-araw.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay round Drop Stitch inflatable swimming pool
 blog_latest:
   title: Mga Gabay sa Pool at Mga Insight

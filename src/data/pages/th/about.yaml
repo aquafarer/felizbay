@@ -1,7 +1,7 @@
 hero:
   tagline: เกี่ยวกับเรา
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: สระว่ายน้ำเป่าลม Felizbay
   title: |
     ว่ายน้ำให้เป็นเรื่องง่าย <br />
@@ -51,7 +51,7 @@ features3_more:
       description: การผลิตฉลากส่วนตัวพร้อมการพิมพ์โลโก้และบรรจุภัณฑ์พร้อมขายปลีก
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Drop Stitch
 steps2_values:
   title: ค่านิยมของเรา

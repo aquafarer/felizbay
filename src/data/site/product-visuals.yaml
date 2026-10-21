@@ -1,11 +1,11 @@
 visuals:
   - id: rectangular-drop-stitch-pool
-    image: /images/pools/rectangular-pool-2.png
+    image: /images/pools/rectangular-pool-2.webp
   - id: round-blue-drop-stitch-pool
-    image: /images/pools/round-blue-pool-1.png
+    image: /images/pools/round-blue-pool-1.webp
   - id: round-grey-drop-stitch-pool
-    image: /images/pools/round-grey-pool-1.png
+    image: /images/pools/round-grey-pool-1.webp
   - id: hot-tub-square-rect
-    image: /images/pools/hot-tub-square.png
+    image: /images/pools/hot-tub-square.webp
   - id: hot-tub-round
     image: /images/pools/hot-tub-round.png

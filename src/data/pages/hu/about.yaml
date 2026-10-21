@@ -1,7 +1,7 @@
 hero:
   tagline: Rólunk
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay felfújható medence
   title: |
     Az úszás egyszerűvé tétele, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Magáncímkés gyártás logónyomtatással és kiskereskedelmi csomagolással.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay téglalap alakú Drop Stitch felfújható medence
 steps2_values:
   title: Értékeink

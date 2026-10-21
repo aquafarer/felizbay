@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay מלבנית Drop Stitch בריכת שחייה מתנפחת בחצר אחורית
 stats:
   title: Felizbay במבט חטוף
@@ -147,7 +147,7 @@ steps:
       description: בסיום העונה יש לנקז, לייבש, לגלגל ולאחסן את הבריכה בתיק עד הקיץ הבא.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay בריכת שחיה מתנפחת Drop Stitch עגולה
 blog_latest:
   title: מדריכים ותובנות לבריכה

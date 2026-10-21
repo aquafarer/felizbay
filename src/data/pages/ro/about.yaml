@@ -1,7 +1,7 @@
 hero:
   tagline: Despre noi
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Piscina gonflabila Felizbay
   title: |
     Faceți înotul simplu, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Fabricare cu etichete private cu imprimare de logo și ambalare pregătită pentru vânzarea cu amănuntul.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Piscină gonflabilă dreptunghiulară Felizbay Drop Stitch
 steps2_values:
   title: Valorile noastre

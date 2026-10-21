@@ -224,7 +224,7 @@ jobs:
           echo "$LISTING" | jq -r '.result[]?.key' | head -15
 
           # 3. End-to-end fetch test from this runner (clean network).
-          for path in "images/default.webp" "images/pools/rectangular-pool-2.png"; do
+          for path in "images/default.webp" "images/pools/rectangular-pool-2.webp"; do
             CODE=$(curl -sS -o /tmp/obj.bin -w "%{http_code}" --max-time 30 "https://$DOMAIN/$path")
             SIZE=$(wc -c < /tmp/obj.bin 2>/dev/null || echo 0)
             echo "fetch https://$DOMAIN/$path -> HTTP $CODE ($SIZE bytes)"

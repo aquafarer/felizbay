@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rektangulär Drop Stitch uppblåsbar pool på en bakgård
 stats:
   title: Felizbay i korthet
@@ -147,7 +147,7 @@ steps:
       description: När säsongen är slut, dränera, torka, rulla ihop och förvara poolen i sin påse till nästa sommar.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay rund Drop Stitch uppblåsbar pool
 blog_latest:
   title: Poolguider och insikter

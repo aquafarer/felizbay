@@ -1,7 +1,7 @@
 hero:
   tagline: معلومات عنا
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: حوض سباحة قابل للنفخ في Felizbay
   title: |
     جعل السباحة بسيطة، <br />
@@ -51,7 +51,7 @@ features3_more:
       description: تصنيع الملصقات الخاصة مع طباعة الشعار والتعبئة الجاهزة للبيع بالتجزئة.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل من Felizbay
 steps2_values:
   title: قيمنا

@@ -1,7 +1,7 @@
 hero:
   tagline: Apie mus
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay pripučiamas baseinas
   title: |
     Kad plaukimas būtų paprastas, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Privačių etikečių gamyba su logotipo spausdinimu ir mažmeninei prekybai paruošta pakuotė.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay stačiakampis Drop Stitch pripučiamas baseinas
 steps2_values:
   title: Mūsų vertybės

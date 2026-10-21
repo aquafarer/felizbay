@@ -12,7 +12,7 @@ cases:
       - Round Drop Stitch Pool
       - Rectangular Drop Stitch Pool
       - Fitted Debris Cover
-    image: /images/pools/round-blue-pool-1.png
+    image: /images/pools/round-blue-pool-1.webp
 
   - id: lap-swimming
     title: Lap Swimming & Fitness
@@ -40,4 +40,4 @@ cases:
     products:
       - Full Pool Catalog
       - OEM / ODM Services
-    image: /images/pools/round-grey-pool-1.png
+    image: /images/pools/round-grey-pool-1.webp

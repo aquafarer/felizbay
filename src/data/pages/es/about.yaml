@@ -1,7 +1,7 @@
 hero:
   tagline: Sobre nosotros
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Piscina hinchable Felizbay
   title: |
     Simplificando la natación, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Fabricación de etiquetas privadas con impresión de logotipos y embalajes listos para la venta al por menor.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Piscina hinchable Felizbay rectangular drop stitch
 steps2_values:
   title: Nuestros valores

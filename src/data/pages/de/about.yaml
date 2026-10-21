@@ -1,7 +1,7 @@
 hero:
   tagline: Über uns
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Aufblasbares Felizbay-Schwimmbecken
   title: |
     Schwimmen einfach machen, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Private-Label-Herstellung mit Logodruck und handelsgerechter Verpackung.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rechteckiges aufblasbares Drop-Stitch-Schwimmbecken
 steps2_values:
   title: Unsere Werte

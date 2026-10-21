@@ -1,7 +1,7 @@
 hero:
   tagline: Tentang kami
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Kolam renang tiup Felizbay
   title: |
     Membuat berenang menjadi sederhana, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Manufaktur label pribadi dengan pencetakan logo dan kemasan siap ritel.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Kolam renang tiup Drop Stitch persegi panjang Felizbay
 steps2_values:
   title: Nilai-nilai kita

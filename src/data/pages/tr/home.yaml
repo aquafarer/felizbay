@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Arka bahçede Felizbay dikdörtgen Drop Stitch şişme yüzme havuzu
 stats:
   title: Bir Bakışta Felizbay
@@ -147,7 +147,7 @@ steps:
       description: Sezon bitince havuzu süzün, kurulayın, toplayın ve bir sonraki yaza kadar poşetinde saklayın.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay yuvarlak Drop Stitch şişme yüzme havuzu
 blog_latest:
   title: Havuz Kılavuzları ve Bilgiler

@@ -1,7 +1,7 @@
 hero:
   tagline: O nás
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Nafukovací bazén Felizbay
   title: |
     Zjednodušenie plávania, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Výroba súkromných značiek s potlačou loga a maloobchodným balením.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Obdĺžnikový nafukovací bazén Felizbay Drop Stitch
 steps2_values:
   title: Naše hodnoty

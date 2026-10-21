@@ -1,7 +1,7 @@
 hero:
   tagline: За нас
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Надуваем басейн Felizbay
   title: |
     Опростяване на плуването, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Производство на собствена марка с отпечатване на лого и опаковки, готови за продажба на дребно.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Правоъгълен надуваем басейн Felizbay Drop Stitch
 steps2_values:
   title: Нашите ценности

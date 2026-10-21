@@ -1,7 +1,7 @@
 hero:
   tagline: O nas
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Napihljiv bazen Felizbay
   title: |
     Preprosto plavanje, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Proizvodnja pod lastno blagovno znamko s tiskanjem logotipa in embalažo, pripravljeno za maloprodajo.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay pravokotni napihljivi bazen Drop Stitch
 steps2_values:
   title: Naše vrednote

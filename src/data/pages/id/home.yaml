@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Kolam renang tiup Drop Stitch persegi panjang Felizbay di halaman belakang
 stats:
   title: Sekilas tentang Felizbay
@@ -147,7 +147,7 @@ steps:
       description: Saat musim berakhir, tiriskan, keringkan, gulung, dan simpan kolam di dalam tasnya hingga musim panas mendatang.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Kolam renang tiup Drop Stitch bulat Felizbay
 blog_latest:
   title: Panduan & Wawasan Kolam Renang

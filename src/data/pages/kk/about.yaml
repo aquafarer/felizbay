@@ -1,7 +1,7 @@
 hero:
   tagline: Біз туралы
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay үрлемелі бассейні
   title: |
     Жүзуді қарапайым ету, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Логотипті басып шығару және бөлшек саудаға дайын орамасы бар жеке жапсырма өндірісі.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay тікбұрышты Drop Stitch үрлемелі бассейні
 steps2_values:
   title: Біздің құндылықтарымыз

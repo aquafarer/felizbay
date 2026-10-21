@@ -1,7 +1,7 @@
 hero:
   tagline: Om oss
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay uppblåsbar pool
   title: |
     Gör simningen enkel, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Eget märkestillverkning med logotyptryck och detaljhandelsfärdiga förpackningar.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rektangulär Drop Stitch uppblåsbar pool
 steps2_values:
   title: Våra värderingar

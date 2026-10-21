@@ -1,7 +1,7 @@
 hero:
   tagline: Om os
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay oppustelig swimmingpool
   title: |
     Gør svømning enkel, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Private label-fremstilling med logotryk og detailklar emballage.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rektangulær drop stitch oppustelig swimmingpool
 steps2_values:
   title: Vores værdier

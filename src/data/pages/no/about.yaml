@@ -1,7 +1,7 @@
 hero:
   tagline: Om oss
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay oppblåsbart svømmebasseng
   title: |
     Gjør svømming enkelt, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Produksjon med eget merke med logotrykk og butikkklar emballasje.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rektangulær drop stitch oppblåsbart svømmebasseng
 steps2_values:
   title: Våre verdier

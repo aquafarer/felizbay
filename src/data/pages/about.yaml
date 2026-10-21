@@ -1,7 +1,7 @@
 hero:
   tagline: About us
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay inflatable swimming pool
   title: |
     Making swimming simple, <br />
@@ -54,7 +54,7 @@ features3_more:
       description: Private-label manufacturing with logo printing and retail-ready packaging.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rectangular drop stitch inflatable swimming pool
 
 steps2_values:

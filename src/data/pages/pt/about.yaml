@@ -1,7 +1,7 @@
 hero:
   tagline: Sobre nós
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Piscina inflável Felizbay
   title: |
     Tornando a natação simples, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Fabricação de marca própria com impressão de logotipo e embalagens prontas para varejo.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Piscina inflável retangular Felizbay Drop Stitch
 steps2_values:
   title: Nossos valores

@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay ορθογώνια Drop Stitch φουσκωτή πισίνα σε μια πίσω αυλή
 stats:
   title: Το Felizbay με μια ματιά
@@ -147,7 +147,7 @@ steps:
       description: Όταν τελειώσει η σεζόν, στραγγίστε, στεγνώστε, τυλίξτε και αποθηκεύστε την πισίνα στην τσάντα της μέχρι το επόμενο καλοκαίρι.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay στρογγυλή φουσκωτή πισίνα Drop Stitch
 blog_latest:
   title: Pool Guides & Insights

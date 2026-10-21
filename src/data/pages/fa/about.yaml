@@ -1,7 +1,7 @@
 hero:
   tagline: درباره ما
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: استخر بادی Felizbay
   title: |
     ساده کردن شنا، <br />
@@ -51,7 +51,7 @@ features3_more:
       description: تولید لیبل خصوصی با چاپ آرم و بسته بندی آماده خرده فروشی.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: استخر بادی مستطیلی Felizbay Drop Stitch
 steps2_values:
   title: ارزش های ما

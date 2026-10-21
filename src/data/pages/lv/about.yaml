@@ -1,7 +1,7 @@
 hero:
   tagline: Par mums
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay piepūšamais peldbaseins
   title: |
     Peldēšana ir vienkārša, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Privātu etiķešu ražošana ar logotipa drukāšanu un mazumtirdzniecībai gatavu iepakojumu.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay taisnstūra Drop Stitch piepūšamais peldbaseins
 steps2_values:
   title: Mūsu vērtības

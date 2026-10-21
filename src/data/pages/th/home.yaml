@@ -17,7 +17,7 @@ hero:
       href: /for-businesses
       icon: tabler:briefcase
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Felizbay Drop Stitch ในสวนหลังบ้าน
 stats:
   title: ข้อมูลโดยย่อของFelizbay
@@ -147,7 +147,7 @@ steps:
       description: เมื่อฤดูกาลสิ้นสุดลง ให้สะเด็ดน้ำ ตากให้แห้ง ม้วนตัว และเก็บสระไว้ในกระเป๋าจนถึงฤดูร้อนหน้า
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: สระว่ายน้ำเป่าลม Felizbay Round Drop Stitch
 blog_latest:
   title: คู่มือสระว่ายน้ำและข้อมูลเชิงลึก

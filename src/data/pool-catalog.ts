@@ -166,7 +166,7 @@ export const poolSeries: PoolCatalogSeries[] = [
     highlights:
       'Dense size increments covering over 20 specifications; outstanding resistance to lateral water-pressure expansion; easy installation — ideal for residential backyard leisure and commercial events.',
     included: ['1000W high-power electric air pump', 'Repair kit'],
-    includedImage: '/images/pools/accessories-kit.jpg',
+    includedImage: '/images/pools/accessories-kit.webp',
     items: [
       { item: 'S2005', size: 'Ø 2 × 0.5', wall: '10 cm', weightKg: 18.4, fobUsd: 137.96 },
       { item: 'S3010', size: 'Ø 3 × 1', wall: '15 cm', weightKg: 40, fobUsd: 325.03 },
@@ -202,7 +202,7 @@ export const poolSeries: PoolCatalogSeries[] = [
     highlights:
       'Large models feature 50 cm reinforced extra-thick side walls, supporting tens of tons of lateral water pressure without external metal frames; the pool rim allows comfortable sitting or lounging.',
     included: ['1000W high-power electric air pump', 'Full-coverage dustproof & waterproof cover', 'Repair kit'],
-    includedImage: '/images/pools/accessories-set.png',
+    includedImage: '/images/pools/accessories-set.webp',
     items: [
       { item: 'SR220815', size: '2 × 2 × 0.8', wall: '15 cm', weightKg: null, fobUsd: 285.7 },
       { item: 'SR230815', size: '3 × 2 × 0.8', wall: '15 cm', weightKg: null, fobUsd: 395.39 },
@@ -279,13 +279,13 @@ export const poolAccessories: PoolAccessory[] = [
   {
     name: 'Rechargeable Air Pump',
     spec: 'DC 12–14.4 V, 11.1 V / 6000 mAh battery',
-    image: '/images/pools/rechargeable-air-pump.png',
+    image: '/images/pools/rechargeable-air-pump.webp',
     fobUsd: 87.84,
   },
   {
     name: 'FS-12C Sand Filter Pump',
     spec: '370 W, Ø300 tank + filter base + valve + valve clamp + gauge',
-    image: '/images/pools/sand-filter-fs12c.png',
+    image: '/images/pools/sand-filter-fs12c.webp',
     fobUsd: 174.79,
   },
 ];

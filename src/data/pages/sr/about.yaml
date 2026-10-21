@@ -1,7 +1,7 @@
 hero:
   tagline: O nama
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay bazen na naduvavanje
   title: |
     Učinite plivanje jednostavnim, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Proizvodnja privatne robne marke sa štampanjem logotipa i maloprodajnom ambalažom.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay pravougaoni bazen na naduvavanje Drop Stitch
 steps2_values:
   title: Naše vrednosti

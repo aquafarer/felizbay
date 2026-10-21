@@ -1,7 +1,7 @@
 hero:
   tagline: Tungkol sa amin
   image:
-    src: /images/pools/round-grey-pool-1.png
+    src: /images/pools/round-grey-pool-1.webp
     alt: Felizbay inflatable swimming pool
   title: |
     Ginagawang simple ang paglangoy, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Paggawa ng pribadong label na may pag-print ng logo at packaging na handa sa tingi.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.png
+    src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rectangular Drop Stitch inflatable swimming pool
 steps2_values:
   title: Ang aming mga halaga
