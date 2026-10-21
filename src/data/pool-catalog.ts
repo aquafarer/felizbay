@@ -223,7 +223,7 @@ export const poolSeries: PoolCatalogSeries[] = [
   },
   {
     id: 'hot-tub-square-rect',
-    name: 'Square / Rectangular Constant Temperature SPA Tub',
+    name: 'Square / Rectangular Drop-Stitch Soaking Pool',
     heading: 'Hot Pool/Tub Square/Rectangle — 15/20 cm Wall',
     wallOptions: '15 cm / 20 cm',
     sizeRange: '1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m',
@@ -242,7 +242,7 @@ export const poolSeries: PoolCatalogSeries[] = [
   },
   {
     id: 'hot-tub-round',
-    name: 'Round Constant Temperature SPA Tub',
+    name: 'Round Drop-Stitch Soaking Pool',
     heading: 'Hot Pool/Tub Round — 8/10/15 cm Wall',
     wallOptions: '8 cm / 10 cm / 15 cm',
     sizeRange: 'Diameter 1.8 m / 2.0 m / 2.3 m',

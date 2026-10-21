@@ -31,9 +31,11 @@ const comparisonRows = [
     key: 'price' as const,
     getter: (p: (typeof products)[number]) => {
       if (!p.price?.amount) return '-';
-      return p.price.currency === 'USD' || !p.price.currency
-        ? `$${p.price.amount}`
-        : `${p.price.currency} ${p.price.amount}`;
+      const base =
+        p.price.currency === 'USD' || !p.price.currency
+          ? `$${p.price.amount}`
+          : `${p.price.currency} ${p.price.amount}`;
+      return p.sku ? `${base} retail` : `from ${base} wholesale (FOB)`;
     },
   },
 ];

@@ -122,9 +122,12 @@ const cardData = await Promise.all(
       highlights,
       price: p.price?.amount
         ? p.price?.currency === 'USD'
-          ? `$${p.price.amount}`
+          ? p.sku
+            ? `$${p.price.amount}`
+            : `From $${p.price.amount}`
           : `${p.price?.currency} ${p.price.amount}`
         : '',
+      isRetail: Boolean(p.sku),
       inStock: p.inStock,
       tags: filterTags[p.slug] ?? [],
     };
@@ -273,11 +276,11 @@ const metadata = merge(
                     <span class="text-2xl font-bold text-gray-900 dark:text-slate-100">
                       {card.price}
                       <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 ml-1">
-                        {t('product.retail') || 'Retail'}
+                        {card.isRetail ? t('product.retail') || 'Retail' : 'Wholesale FOB'}
                       </span>
                     </span>
                   )}
-                  {card.inStock && (
+                  {card.isRetail && card.inStock && (
                     <span class="text-xs font-medium text-green-600">
                       {t('product.inStock') || 'Available to order'}
                     </span>

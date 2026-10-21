@@ -107,7 +107,8 @@ const cardData = await Promise.all(
       alt: p.title,
       sizeRange,
       highlights,
-      price: p.price?.amount ? `$${p.price.amount}` : '',
+      price: p.price?.amount ? (p.sku ? `$${p.price.amount}` : `From $${p.price.amount}`) : '',
+      isRetail: Boolean(p.sku),
       inStock: p.inStock,
       tags: filterTags[p.slug] ?? [],
     };
@@ -243,11 +244,13 @@ const metadata = merge(
                     <span class="text-2xl font-bold text-gray-900 dark:text-slate-100">
                       {card.price}
                       <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 ml-1">
-                        Retail
+                        {card.isRetail ? 'Retail' : 'Wholesale FOB'}
                       </span>
                     </span>
                   )}
-                  {card.inStock && <span class="text-xs font-medium text-green-600">Available to order</span>}
+                  {card.isRetail && card.inStock && (
+                    <span class="text-xs font-medium text-green-600">Available to order</span>
+                  )}
                 </div>
                 <a
                   href={card.href}

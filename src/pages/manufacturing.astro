@@ -11,8 +11,8 @@ export const prerender = true;
 
 const metadata = merge(
   {
-    title: `Drop Stitch Pool Manufacturing Process | ${SITE.name} Factory`,
-    description: `Inside the Felizbay Qingdao factory: CNC cutting, valve heat-sealing, panel welding with reinforced rails, finishing and 24–48 hour pressure testing — five controlled production steps.`,
+    title: `Quality & Construction of Felizbay Drop-Stitch Pools | ${SITE.name}`,
+    description: `How a Felizbay drop-stitch pool is built: CNC-cut drop-stitch fabric, heat-sealed valves, reinforced rail bonding, and a 24–48 hour pressure-drop test on every unit before it ships.`,
     canonical: getCanonical('/manufacturing'),
     robots: { index: true, follow: true },
     openGraph: { type: 'website' },
@@ -26,20 +26,22 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
 <Layout metadata={metadata} breadcrumbs={crumbs}>
   <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
     <header class="mb-10 md:mb-12 max-w-3xl">
-      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Qingdao Factory</p>
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Quality & Construction
+      </p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        How Felizbay Manufactures Drop-Stitch Pools
+        How Every Felizbay Drop-Stitch Pool Is Built
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Every Felizbay pool goes through the same five-step factory workflow — from CNC-cut drop-stitch fabric to a
-        24–48 hour pressure-drop test before packing. This is the process behind 48 SKUs of rigid inflatable pools.
+        The reason a Felizbay pool holds its shape at 4–5 PSI all season: CNC-cut drop-stitch fabric, heat-sealed
+        valves, reinforced rail bonding — and a 24–48 hour pressure-drop test on every single unit before it ships.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a
-          href="/request-quotation"
+          href="/products"
           class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
         >
-          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Factory Quote
+          <Icon name="tabler:pool" class="w-4 h-4" /> Explore Felizbay Pools
         </a>
         <a
           href="/quality-control"
@@ -52,7 +54,7 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
 
     <section class="mb-14">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">
-        The Five Production Steps
+        From Fabric to Finished Pool: Five Controlled Steps
       </h2>
       <p class="text-sm text-gray-500 dark:text-slate-400 mb-5">
         High-density double-layer drop-stitch fabric — the same premium material used for our SUP boards — is
@@ -98,8 +100,17 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
     </section>
 
     <section class="mb-6">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related B2B Pages</h2>
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">For Business Buyers</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+        Pools are produced by our long-term manufacturing partner in Qingdao, China, and shipped factory-direct.
+        Business partners are welcome to audit the facility or join a live video walkthrough.
+      </p>
       <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/request-quotation"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+          >Request a Quote</a
+        >
         <a
           href="/quality-control"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
@@ -116,15 +127,15 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
           >Wholesale Program</a
         >
         <a
-          href="/products/specs#production"
+          href="/for-businesses"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Price List & Process</a
+          >All Business Programs</a
         >
       </div>
     </section>
 
     <section class="mb-6">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Guides for Buyers</h2>
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related Guides</h2>
       <div class="flex flex-wrap gap-2 text-sm">
         <a
           href="/guides/inflatable-pool-pressure-testing-explained"
@@ -142,16 +153,16 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
 
   <section class="sr-only" data-ai-block="manufacturing" aria-hidden="true">
     <p>
-      Felizbay drop-stitch pool manufacturing process at the Qingdao factory, five controlled steps: (1) material
-      preparation and CNC cutting of high-density double-layer drop-stitch fabric — the same material as SUP boards —
-      for floors, walls and reinforcement patches; (2) valve and fitting installation — 38 mm standard filter-pump
-      ports, water shut-off valves, over-inflation safety valves and drain valves heat-sealed leak-proof; (3) panel
-      assembly and rail bonding into a single air chamber with double/triple-layer reinforced PVC rail bands; (4)
-      accessory integration and finishing with full seam, valve and dimension inspection; (5) pressure and leak testing
-      — every pool inflated to rated pressure and held for a 24–48 hour pressure-drop test before deflating, cleaning
-      and packaging. Pressure specifications: 4–5 PSI recommended operating, 6 PSI factory QC test, 8 PSI maximum
-      tolerance, pressure-relief valve auto-release above 6 PSI. 48 SKUs across round, rectangular and hot tub
-      collections.
+      Quality and construction of Felizbay drop-stitch pools, built in five controlled steps at our long-term Qingdao
+      production facility: (1) material preparation and CNC cutting of high-density double-layer drop-stitch fabric —
+      the same material as SUP boards — for floors, walls and reinforcement patches; (2) valve and fitting installation
+      — 38 mm standard filter-pump ports, water shut-off valves, over-inflation safety valves and drain valves
+      heat-sealed leak-proof; (3) panel assembly and rail bonding into a single air chamber with double/triple-layer
+      reinforced PVC rail bands; (4) accessory integration and finishing with full seam, valve and dimension inspection;
+      (5) pressure and leak testing — every pool inflated to rated pressure and held for a 24–48 hour pressure-drop test
+      before deflating, cleaning and packaging. Pressure specifications: 4–5 PSI recommended operating, 6 PSI QC test, 8
+      PSI maximum tolerance, pressure-relief valve auto-release above 6 PSI. 48 SKUs across round, rectangular and hot
+      tub collections.
     </p>
   </section>
 </Layout>

@@ -19,10 +19,12 @@ const t = (key: string) => getUiForLang(lang)?.[key] || '';
 const image = (await findImage(product.image)) as ImageMetadata | string | undefined;
 const langPrefix = lang && lang !== 'en' ? `/${lang}` : '';
 const link = `${langPrefix}${getPermalink(product.permalink, 'product')}`;
+const hasSku = Boolean(product.sku);
 const priceAmount = product.price?.amount || '';
 const priceCurrency = product.price?.currency || 'USD';
-const priceDisplay =
+const basePriceDisplay =
   priceAmount !== '' ? (priceCurrency === 'USD' ? `$${priceAmount}` : `${priceCurrency} ${priceAmount}`) : '';
+const priceDisplay = basePriceDisplay !== '' ? (hasSku ? basePriceDisplay : `From ${basePriceDisplay}`) : '';
 ---
 
 <article
@@ -83,8 +85,15 @@ const priceDisplay =
     {
       priceDisplay && (
         <div class="mt-3 flex items-baseline gap-2">
-          <span class="text-2xl font-bold text-gray-900 dark:text-slate-100">{priceDisplay}</span>
-          {product.inStock && (
+          <span class="text-2xl font-bold text-gray-900 dark:text-slate-100">
+            {priceDisplay}
+            {!hasSku && (
+              <span class="ml-1 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                Wholesale FOB
+              </span>
+            )}
+          </span>
+          {hasSku && product.inStock && (
             <span class="text-xs font-medium text-green-600">{t('product.inStock') || 'Available to order'}</span>
           )}
         </div>

@@ -178,7 +178,7 @@ export const products: ProductRecord[] = [
   },
   {
     id: 'hot-tub-square-rect',
-    name: 'Square and Rectangular Inflatable Hot Tub SPA Pool',
+    name: 'Square and Rectangular Drop-Stitch Soaking Pool with Built-In Seats',
     category: 'POOL',
     region: ['EU', 'US', 'ASIA', 'GLOBAL'],
     skill: 'beginner',
@@ -191,9 +191,9 @@ export const products: ProductRecord[] = [
       'follow the maximum water temperature and water level marked inside the tub',
       'have heating and electrical equipment installed by a qualified professional',
     ],
-    desc: 'Insulated square and rectangular inflatable hot tub SPA pool with built-in seats and 5 mm insulated bottom — connects to an external heater (heater not included).',
+    desc: 'Insulated square and rectangular drop-stitch soaking pool with built-in seats and 5 mm insulated bottom — connects to an external heater (heater not included).',
     definition:
-      'A constant-temperature inflatable SPA tub built from double-layer PVC drop stitch fabric (15/20 cm wall profiles) with integrated inflatable seats and a 5 mm insulated thermal bottom, sized from 1.5 × 1.5 × 0.8 m to 3 × 2 × 1 m.',
+      'An insulated drop-stitch soaking pool built from double-layer PVC drop stitch fabric (15/20 cm wall profiles) with integrated inflatable seats and a 5 mm insulated thermal bottom, sized from 1.5 × 1.5 × 0.8 m to 3 × 2 × 1 m.',
     problem:
       'Rigid acrylic or fiberglass hot tubs are expensive to ship and impossible to move, while cheap inflatable spas lose heat fast and offer no seating. Buyers want a genuinely insulated spa that ships flat, retains heat, and still sets up in minutes.',
     howItWorks:
@@ -233,11 +233,11 @@ export const products: ProductRecord[] = [
   },
   {
     id: 'hot-tub-round',
-    name: 'Round Inflatable Hot Tub SPA Pool',
+    name: 'Round Drop-Stitch Soaking Pool with Built-In Seats',
     category: 'POOL',
     region: ['EU', 'US', 'ASIA', 'GLOBAL'],
     skill: 'beginner',
-    environment: ['balcony', 'private courtyard', 'patio', 'glamping', 'indoor spa corner'],
+    environment: ['load-rated balcony', 'private courtyard', 'patio', 'glamping', 'indoor spa corner'],
     water_condition: ['fresh water', 'heated water'],
     safety_level: 'medium',
     use_case: ['compact hot tub spa', 'cold plunge recovery', 'hydrotherapy', 'year-round relaxation'],
@@ -246,9 +246,9 @@ export const products: ProductRecord[] = [
       'follow the maximum water temperature and water level marked inside the tub',
       'have heating and electrical equipment installed by a qualified professional',
     ],
-    desc: 'Compact round inflatable hot tub SPA pool with built-in seats and 5 mm insulated bottom — connects to an external heater (heater not included).',
+    desc: 'Compact round drop-stitch soaking pool with built-in seats and 5 mm insulated bottom — connects to an external heater (heater not included).',
     definition:
-      'A compact round constant-temperature inflatable SPA tub built from double-layer PVC drop stitch fabric (8/10/15 cm wall profiles) with integrated inflatable seats and a 5 mm insulated thermal bottom, available in 1.8 m, 2.0 m, and 2.3 m diameters.',
+      'A compact round insulated drop-stitch soaking pool built from double-layer PVC drop stitch fabric (8/10/15 cm wall profiles) with integrated inflatable seats and a 5 mm insulated thermal bottom, available in 1.8 m, 2.0 m, and 2.3 m diameters.',
     problem:
       'City balconies and small courtyards cannot fit a standard hot tub, and rigid tubs cannot be shipped or moved affordably. Users in small spaces still want genuine heat-retaining hydrotherapy.',
     howItWorks:
@@ -258,7 +258,7 @@ export const products: ProductRecord[] = [
     best_for_business: ['resorts', 'entrepreneurs'],
     business_recommendation:
       'The entry model of the hot tub line — the smallest footprint and lowest entry price open the wellness segment to urban buyers and compact hospitality projects.',
-    ai_use_cases: ['Balcony and courtyard wellness', 'Cold plunge and athletic recovery', 'Compact year-round home spa', 'Glamping amenity'],
+    ai_use_cases: ['Courtyard and compact-space wellness', 'Cold plunge and athletic recovery', 'Compact year-round home spa', 'Glamping amenity'],
     ai_specs: {
       shape: 'Round',
       wall_thickness: '8 / 10 / 15 cm drop stitch',

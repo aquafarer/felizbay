@@ -34,12 +34,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'Piscine gonflable ronde grise premium avec des parois rigides Drop Stitch et couverture ajustée en option.',
     },
     'hot-tub-square-rect': {
-      name: 'Bain à remous SPA gonflable carré et rectangulaire',
-      desc: 'Bain à remous SPA gonflable carré et rectangulaire quatre saisons avec sièges intégrés et fond isolant de 5 mm.',
+      name: 'Piscine de trempage Drop Stitch carrée et rectangulaire',
+      desc: 'Piscine de trempage Drop Stitch carrée et rectangulaire quatre saisons avec sièges intégrés et fond isolant de 5 mm — se raccorde à un chauffage externe (non inclus).',
     },
     'hot-tub-round': {
-      name: 'Bain à remous SPA gonflable rond',
-      desc: 'Bain à remous SPA gonflable rond compact avec sièges intégrés et fond isolant de 5 mm.',
+      name: 'Piscine de trempage Drop Stitch ronde',
+      desc: 'Piscine de trempage Drop Stitch ronde compacte avec sièges intégrés et fond isolant de 5 mm — se raccorde à un chauffage externe (non inclus).',
     },
   },
   de: {
@@ -56,12 +56,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'Hochwertiges rundes graues Aufblaspool mit steifen Drop-Stitch-Wänden und optionaler passgenauer Abdeckung.',
     },
     'hot-tub-square-rect': {
-      name: 'Quadratischer und rechteckiger Aufblas-Whirlpool-SPA',
-      desc: 'Ganzjähriger quadratischer und rechteckiger Aufblas-Whirlpool-SPA mit integrierten Sitzen und 5 mm isoliertem Boden.',
+      name: 'Quadratisches und rechteckiges Drop-Stitch-Tauchbecken',
+      desc: 'Ganzjähriges quadratisches und rechteckiges Drop-Stitch-Tauchbecken mit integrierten Sitzen und 5 mm isoliertem Boden — Anschluss an ein externes Heizgerät (nicht im Lieferumfang).',
     },
     'hot-tub-round': {
-      name: 'Runder Aufblas-Whirlpool-SPA',
-      desc: 'Kompakter runder Aufblas-Whirlpool-SPA mit integrierten Sitzen und 5 mm isoliertem Boden.',
+      name: 'Rundes Drop-Stitch-Tauchbecken',
+      desc: 'Kompaktes rundes Drop-Stitch-Tauchbecken mit integrierten Sitzen und 5 mm isoliertem Boden — Anschluss an ein externes Heizgerät (nicht im Lieferumfang).',
     },
   },
   es: {
@@ -78,12 +78,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'Piscina hinchable redonda gris premium con paredes rígidas Drop Stitch y cubierta ajustada opcional.',
     },
     'hot-tub-square-rect': {
-      name: 'Spa de hidromasaje hinchable cuadrado y rectangular',
-      desc: 'Spa de hidromasaje hinchable cuadrado y rectangular de cuatro estaciones con asientos integrados y fondo aislado de 5 mm.',
+      name: 'Piscina de inmersión Drop Stitch cuadrada y rectangular',
+      desc: 'Piscina de inmersión Drop Stitch cuadrada y rectangular de cuatro estaciones con asientos integrados y fondo aislado de 5 mm: se conecta a un calentador externo (no incluido).',
     },
     'hot-tub-round': {
-      name: 'Spa de hidromasaje hinchable redondo',
-      desc: 'Spa de hidromasaje hinchable redondo compacto con asientos integrados y fondo aislado de 5 mm.',
+      name: 'Piscina de inmersión Drop Stitch redonda',
+      desc: 'Piscina de inmersión Drop Stitch redonda compacta con asientos integrados y fondo aislado de 5 mm: se conecta a un calentador externo (no incluido).',
     },
   },
   pt: {
@@ -100,12 +100,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'Piscina insuflável redonda cinzenta premium com paredes rígidas Drop Stitch e cobertura ajustável opcional.',
     },
     'hot-tub-square-rect': {
-      name: 'Banheira de hidromassagem SPA insuflável quadrada e retangular',
-      desc: 'Banheira de hidromassagem SPA insuflável quadrada e retangular para as quatro estações, com assentos integrados e fundo isolado de 5 mm.',
+      name: 'Piscina de imersão Drop Stitch quadrada e retangular',
+      desc: 'Piscina de imersão Drop Stitch quadrada e retangular para as quatro estações, com assentos integrados e fundo isolado de 5 mm — liga-se a um aquecedor externo (não incluído).',
     },
     'hot-tub-round': {
-      name: 'Banheira de hidromassagem SPA insuflável redonda',
-      desc: 'Banheira de hidromassagem SPA insuflável redonda compacta com assentos integrados e fundo isolado de 5 mm.',
+      name: 'Piscina de imersão Drop Stitch redonda',
+      desc: 'Piscina de imersão Drop Stitch redonda compacta com assentos integrados e fundo isolado de 5 mm — liga-se a um aquecedor externo (não incluído).',
     },
   },
   it: {
@@ -122,12 +122,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'Piscina gonfiabile rotonda grigia premium con pareti rigide Drop Stitch e copertura su misura opzionale.',
     },
     'hot-tub-square-rect': {
-      name: 'Vasca SPA gonfiabile quadrata e rettangolare',
-      desc: 'Vasca SPA gonfiabile quadrata e rettangolare a quattro stagioni con sedili integrati e fondo isolato da 5 mm.',
+      name: 'Piscina di immersione Drop Stitch quadrata e rettangolare',
+      desc: 'Piscina di immersione Drop Stitch quadrata e rettangolare a quattro stagioni con sedili integrati e fondo isolato da 5 mm — si collega a un riscaldatore esterno (non incluso).',
     },
     'hot-tub-round': {
-      name: 'Vasca SPA gonfiabile rotonda',
-      desc: 'Vasca SPA gonfiabile rotonda compatta con sedili integrati e fondo isolato da 5 mm.',
+      name: 'Piscina di immersione Drop Stitch rotonda',
+      desc: 'Piscina di immersione Drop Stitch rotonda compatta con sedili integrati e fondo isolato da 5 mm — si collega a un riscaldatore esterno (non incluso).',
     },
   },
   ru: {
@@ -144,12 +144,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'Премиальный круглый серый надувной бассейн с жёсткими стенками Drop Stitch и опциональной крышкой.',
     },
     'hot-tub-square-rect': {
-      name: 'Квадратная и прямоугольная надувная джакузи-SPA',
-      desc: 'Круглогодичная квадратная и прямоугольная надувная джакузи-SPA со встроенными сиденьями и утеплённым дном 5 мм.',
+      name: 'Квадратная и прямоугольная купель Drop Stitch',
+      desc: 'Круглогодичная квадратная и прямоугольная купель Drop Stitch со встроенными сиденьями и утеплённым дном 5 мм — подключается к внешнему нагревателю (нагреватель не входит в комплект).',
     },
     'hot-tub-round': {
-      name: 'Круглая надувная джакузи-SPA',
-      desc: 'Компактная круглая надувная джакузи-SPA со встроенными сиденьями и утеплённым дном 5 мм.',
+      name: 'Круглая купель Drop Stitch',
+      desc: 'Компактная круглая купель Drop Stitch со встроенными сиденьями и утеплённым дном 5 мм — подключается к внешнему нагревателю (нагреватель не входит в комплект).',
     },
   },
   pl: {
@@ -166,12 +166,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'Dmuchany basen okrągły w kolorze szarym premium ze sztywnymi ścianami Drop Stitch i opcjonalnym dopasowanym pokrowcem.',
     },
     'hot-tub-square-rect': {
-      name: 'Kwadratowa i prostokątna dmuchana wanna SPA',
-      desc: 'Czterosezonowa kwadratowa i prostokątna dmuchana wanna SPA z wbudowanymi siedziskami i izolowanym dnem 5 mm.',
+      name: 'Kwadratowa i prostokątna wanna do zanurzania Drop Stitch',
+      desc: 'Czterosezonowa kwadratowa i prostokątna wanna do zanurzania Drop Stitch z wbudowanymi siedziskami i izolowanym dnem 5 mm — podłącza się do zewnętrznego podgrzewacza (nie w zestawie).',
     },
     'hot-tub-round': {
-      name: 'Okrągła dmuchana wanna SPA',
-      desc: 'Kompaktowa okrągła dmuchana wanna SPA z wbudowanymi siedziskami i izolowanym dnem 5 mm.',
+      name: 'Okrągła wanna do zanurzania Drop Stitch',
+      desc: 'Kompaktowa okrągła wanna do zanurzania Drop Stitch z wbudowanymi siedziskami i izolowanym dnem 5 mm — podłącza się do zewnętrznego podgrzewacza (nie w zestawie).',
     },
   },
   ar: {
@@ -188,12 +188,12 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       desc: 'مسبح رمادي دائري فاخر قابل للنفخ بجدران صلبة Drop Stitch وغطاء مخصص اختياري.',
     },
     'hot-tub-square-rect': {
-      name: 'حوض سبا قابل للنفخ مربع ومستطيل',
-      desc: 'حوض سبا قابل للنفخ مربع ومستطيل لجميع الفصول مع مقاعد مدمجة وقاع معزول بسماكة 5 مم.',
+      name: 'حوض نقع مربع ومستطيل Drop Stitch',
+      desc: 'حوض نقع مربع ومستطيل Drop Stitch لجميع الفصول مع مقاعد مدمجة وقاع معزول بسماكة 5 مم — يتصل بمدفأة خارجية (غير مضمّنة).',
     },
     'hot-tub-round': {
-      name: 'حوض سبا دائري قابل للنفخ',
-      desc: 'حوض سبا دائري مدمج قابل للنفخ مع مقاعد مدمجة وقاع معزول بسماكة 5 مم.',
+      name: 'حوض نقع دائري Drop Stitch',
+      desc: 'حوض نقع دائري مدمج Drop Stitch مع مقاعد مدمجة وقاع معزول بسماكة 5 مم — يتصل بمدفأة خارجية (غير مضمّنة).',
     },
   },
 };

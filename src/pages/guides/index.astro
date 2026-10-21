@@ -13,9 +13,9 @@ export const prerender = true;
 
 const metadata = merge(
   {
-    title: `Procurement & Technical Guides — Drop Stitch Pool Sourcing | ${SITE.name}`,
+    title: `Pool Buying, Setup & Care Guides | ${SITE.name}`,
     description:
-      'B2B guides for drop stitch inflatable pool buyers — choosing a manufacturer, OEM vs ODM, private label, pressure testing and QC, wholesale FOB pricing, and container loading. Written by the Felizbay factory team.',
+      'Guides for inflatable pool owners: choosing the right drop stitch pool, setup, water care, patio and deck safety, and seasonal storage — plus a dedicated section for business and wholesale buyers.',
     canonical: getCanonical('/guides'),
     robots: { index: true, follow: true },
     openGraph: { type: 'website' },
@@ -51,56 +51,19 @@ const formatDate = (iso: string) =>
   <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
     <header class="max-w-3xl">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
-        Knowledge Center
+        Guides &amp; Care
       </p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
-        Procurement & Technical Guides
+        Pool Buying, Setup &amp; Care Guides
       </h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Straight answers for drop stitch pool buyers — sourcing, quality engineering, pricing and logistics, written by
-        the team that manufactures the pools.
+        Straight answers for pool owners: how to choose the right size, set it up safely, keep the water clean, and
+        store it for winter. Business and wholesale buyers have their own section below.
       </p>
     </header>
   </section>
 
   <div class="px-4 md:px-6 pb-16 mx-auto max-w-6xl space-y-14">
-    {
-      clusterOrder.map((cluster) => (
-        <section>
-          <div class="flex items-center gap-3 mb-5">
-            <span class="flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
-              <Icon name={clusterIcons[cluster]} class="w-5 h-5" />
-            </span>
-            <div>
-              <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
-                {GUIDE_CLUSTER_LABELS[cluster]}
-              </h2>
-              <p class="text-sm text-gray-500 dark:text-slate-400">{clusterDescriptions[cluster]}</p>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {clusterGuides(cluster).map((g) => (
-              <a
-                href={`/guides/${g.slug}`}
-                class="group p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:border-primary dark:hover:border-sky-500 hover:shadow-lg transition-all flex flex-col"
-              >
-                <h3 class="text-base font-bold text-gray-900 dark:text-slate-100 mb-2 group-hover:text-primary dark:group-hover:text-sky-400 transition-colors">
-                  {g.title}
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4 flex-1">{g.description}</p>
-                <div class="flex items-center justify-between text-xs text-gray-400 dark:text-slate-500">
-                  <span>{formatDate(g.updateDate)}</span>
-                  <span class="inline-flex items-center gap-1">
-                    <Icon name="tabler:clock" class="w-3.5 h-3.5" /> {g.readMinutes} min
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      ))
-    }
-
     <section>
       <div class="flex items-center gap-3 mb-5">
         <span
@@ -111,11 +74,11 @@ const formatDate = (iso: string) =>
         <div>
           <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">Pool Owner Guides</h2>
           <p class="text-sm text-gray-500 dark:text-slate-400">
-            Setup, care and choosing the right pool — for you and your customers.
+            Buying, setup, water care and storage — everything you need before and after your pool arrives.
           </p>
         </div>
       </div>
-      <div class="grid md:grid-cols-3 gap-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {
           guides.map((g) => (
             <a
@@ -135,32 +98,110 @@ const formatDate = (iso: string) =>
       </div>
     </section>
 
-    <div class="p-8 rounded-2xl bg-gray-900 dark:bg-slate-800 text-center">
-      <h2 class="text-2xl font-bold text-white mb-2">Need answers specific to your order?</h2>
-      <p class="text-gray-300 dark:text-slate-300 mb-6 max-w-xl mx-auto">
-        Every quotation includes itemized FOB pricing, packed weights, carton dimensions and a container loading plan —
-        prepared by our Qingdao factory team.
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span
+          class="flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300"
+        >
+          <Icon name="tabler:building-store" class="w-5 h-5" />
+        </span>
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">For Business Buyers</h2>
+          <p class="text-sm text-gray-500 dark:text-slate-400">
+            Sourcing, quality engineering, pricing and logistics guides for wholesale, private label and OEM/ODM
+            programs.
+          </p>
+        </div>
+      </div>
+      <div class="space-y-10">
+        {
+          clusterOrder.map((cluster) => (
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="flex w-8 h-8 items-center justify-center rounded-lg bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                  <Icon name={clusterIcons[cluster]} class="w-4 h-4" />
+                </span>
+                <div>
+                  <h3 class="text-lg font-bold tracking-tight text-gray-900 dark:text-slate-100">
+                    {GUIDE_CLUSTER_LABELS[cluster]}
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-slate-400">{clusterDescriptions[cluster]}</p>
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {clusterGuides(cluster).map((g) => (
+                  <a
+                    href={`/guides/${g.slug}`}
+                    class="group p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:border-primary dark:hover:border-sky-500 hover:shadow-lg transition-all flex flex-col"
+                  >
+                    <h4 class="text-base font-bold text-gray-900 dark:text-slate-100 mb-2 group-hover:text-primary dark:group-hover:text-sky-400 transition-colors">
+                      {g.title}
+                    </h4>
+                    <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4 flex-1">{g.description}</p>
+                    <div class="flex items-center justify-between text-xs text-gray-400 dark:text-slate-500">
+                      <span>{formatDate(g.updateDate)}</span>
+                      <span class="inline-flex items-center gap-1">
+                        <Icon name="tabler:clock" class="w-3.5 h-3.5" /> {g.readMinutes} min
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="mt-8 p-8 rounded-2xl bg-gray-900 dark:bg-slate-800 text-center">
+        <h3 class="text-xl font-bold text-white mb-2">Need answers specific to your order?</h3>
+        <p class="text-gray-300 dark:text-slate-300 mb-6 max-w-xl mx-auto">
+          Every quotation includes itemized FOB pricing, packed weights, carton dimensions and a container loading plan
+          — prepared by our factory team.
+        </p>
+        <a
+          href="/request-quotation"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Bulk Quote
+        </a>
+      </div>
+    </section>
+
+    <div class="p-8 rounded-2xl bg-sky-50 dark:bg-slate-800/60 border border-sky-100 dark:border-slate-700 text-center">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100 mb-2">Ready to choose your pool?</h2>
+      <p class="text-gray-500 dark:text-slate-400 mb-6 max-w-xl mx-auto">
+        Compare shapes, sizes and features — or let the pool finder narrow it down for your space.
       </p>
-      <a
-        href="/request-quotation"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all text-sm"
-      >
-        <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Bulk Quote
-      </a>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/products"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:pool" class="w-4 h-4" /> Shop Pools
+        </a>
+        <a
+          href="/find-your-pool"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-white dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:compass" class="w-4 h-4" /> Find Your Pool
+        </a>
+      </div>
     </div>
   </div>
 
   <section class="sr-only" data-ai-block="guides-index" aria-hidden="true">
     <p>
-      Felizbay publishes procurement and technical guides for drop stitch inflatable pool buyers: how to choose a drop
-      stitch pool manufacturer (7 evaluation criteria: factory ownership, drop-stitch engineering, pressure-test QC, MOQ
-      and sampling, material compliance, export experience, design confidentiality); OEM vs ODM manufacturing models; a
-      private label buyer's guide (logo printing, custom colors, retail packaging, 20-pc price basis, samples from one
-      piece); inflatable pool pressure testing explained (4-5 PSI operating, 6 PSI QC test, 8 PSI maximum, relief valve
-      above 6 PSI, 24-48 hour pressure-drop test on every unit); wholesale drop stitch pool costs (FOB Qingdao prices
-      from $137.96 to $1,753.74 across round, rectangular and SPA tub series); and container loading planning (packed
-      weights 18.4-250 kg per pool, 20GP vs 40HQ, 5-10% of rigid pool shipping volume). Plus consumer guides on
-      choosing, setting up and maintaining inflatable pools.
+      Felizbay publishes pool buying, setup and care guides for inflatable pool owners: how to choose an inflatable
+      swimming pool (yard size, users, shape, drop stitch construction); what is a drop stitch inflatable pool (internal
+      threads, 4-5 PSI operating, relief valve above 6 PSI, 24-48 hour pressure-drop test); drop stitch vs traditional
+      inflatable pools; inflatable pool setup in 8 steps (15-30 minutes plus filling); water care and maintenance (pH
+      7.2-7.6, chlorine 1-3 ppm, filter 4-8 hours daily, winter storage); how much space you need (footprint plus 50 cm
+      clearance, about 1 tonne of water per cubic meter); placing a pool on a patio or deck (structural assessment
+      required for elevated structures); and inflatable pools for vacation rentals. For business buyers: how to choose a
+      drop stitch pool manufacturer (7 evaluation criteria: factory ownership, drop-stitch engineering, pressure-test
+      QC, MOQ and sampling, material compliance, export experience, design confidentiality); OEM vs ODM manufacturing
+      models; a private label buyer's guide; inflatable pool pressure testing explained; wholesale drop stitch pool
+      costs (FOB Qingdao prices from $137.96 to $1,753.74 across round, rectangular and SPA tub series); and container
+      loading planning (packed weights 18.4-250 kg per pool, 20GP vs 40HQ).
     </p>
   </section>
 </Layout>
