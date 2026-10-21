@@ -341,6 +341,12 @@ const rows = Object.keys(grouped)
         for (const [k, v] of fd.entries()) {
           if (typeof v === 'string') data[k] = v.trim();
         }
+        // Honeypot guard: browsers/password managers may autofill the off-screen
+        // email_confirm field despite autocomplete="off". This page's own JS must
+        // never ship it (server still catches raw-HTTP bots that fill it directly).
+        delete data.email_confirm;
+        const honeypotEl = formEl.querySelector('input[name="email_confirm"]');
+        if (honeypotEl instanceof HTMLInputElement) honeypotEl.value = '';
         const cc = data.tel_countryCode || '';
         if (data.tel) data.tel = `${cc} ${data.tel}`.trim();
         delete data.tel_countryCode;
