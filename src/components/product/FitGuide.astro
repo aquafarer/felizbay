@@ -5,8 +5,9 @@
  * cart: it only shows the spec and the FOB wholesale price for the selected
  * factory size, plus inquiry entry points. No SKU ever reaches checkout.
  *
- * Fill volume is precomputed server-side (L × W × 80% wall height, in liters)
- * and embedded as data attributes — the inline script only updates the display.
+ * Fill volume is precomputed server-side (rect L × W × 80% wall height; round
+ * π r² × 80% wall height, in liters) and embedded as data attributes — the
+ * inline script only updates the display.
  */
 import type { PoolCatalogItem } from '~/data/pool-catalog';
 import type { FitRow } from '~/data/product-page-content';
@@ -23,11 +24,32 @@ interface Props {
 
 const { ui, fitIntro, fitRows, fitNotice, catalogItems, quoteHref, compareHref } = Astro.props;
 
-/** "2 × 2 × 0.8" → { l: 2, w: 2, h: 0.8 } */
-function parseSize(size: string): { l: number; w: number; h: number } | null {
+/** "2 × 2 × 0.8" → { l: 2, w: 2, h: 0.8 }; round "Ø …" sizes return null */
+function parseRectSize(size: string): { l: number; w: number; h: number } | null {
+  if (size.includes('Ø')) return null;
   const parts = size.split('×').map((p) => parseFloat(p.trim()));
   if (parts.length !== 3 || parts.some((n) => Number.isNaN(n))) return null;
   return { l: parts[0], w: parts[1], h: parts[2] };
+}
+
+/** "Ø 2 × 0.5" → { d: 2, h: 0.5 }; rectangular sizes return null */
+function parseRoundSize(size: string): { d: number; h: number } | null {
+  if (!size.includes('Ø')) return null;
+  const parts = size
+    .replace('Ø', '')
+    .split('×')
+    .map((p) => parseFloat(p.trim()));
+  if (parts.length !== 2 || parts.some((n) => Number.isNaN(n))) return null;
+  return { d: parts[0], h: parts[1] };
+}
+
+/** Estimated fill volume in liters (80% wall height), rounded to 10 L */
+function estLitersFor(size: string): number | null {
+  const rect = parseRectSize(size);
+  if (rect) return Math.round((rect.l * rect.w * (0.8 * rect.h) * 1000) / 10) * 10;
+  const round = parseRoundSize(size);
+  if (round) return Math.round((Math.PI * (round.d / 2) ** 2 * (0.8 * round.h) * 1000) / 10) * 10;
+  return null;
 }
 
 interface SizeOption {
@@ -40,8 +62,7 @@ interface SizeOption {
 
 const sizeOptions: SizeOption[] = catalogItems
   .map((it) => {
-    const dims = parseSize(it.size);
-    const estLiters = dims ? Math.round((dims.l * dims.w * (0.8 * dims.h) * 1000) / 10) * 10 : null;
+    const estLiters = estLitersFor(it.size);
     return {
       item: it.item,
       label: `${it.size} m`,

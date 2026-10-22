@@ -22,7 +22,7 @@ import { guides } from '~/data/guides';
 import { getProductCompliance } from '~/data/product-compliance';
 import { productBusinessData } from '~/data/product-business-data';
 import { getProductMentionsJsonLd } from '~/data/knowledge-graph';
-import { RECT_DETAIL } from '~/data/product-page-content';
+import { PRODUCT_PAGE_DETAILS } from '~/data/product-page-content';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 import PurchaseAssurance from '~/components/product/PurchaseAssurance.astro';
 import FitGuide from '~/components/product/FitGuide.astro';
@@ -144,8 +144,9 @@ const hasVariant = catalogSeries
     }))
   : undefined;
 
-// ---- Product detail page V2 (per2.txt 13-module template, rectangular first) ----
-const isDetailV2 = product.slug === 'rectangular-drop-stitch-pool';
+// ---- Product detail page V2 (per2.txt 13-module template, all pool products) ----
+const detailV2 = PRODUCT_PAGE_DETAILS[product.slug];
+const isDetailV2 = detailV2 !== undefined;
 const tEn = (key: string) => getUiForLang('en')?.[key] || key;
 const DETAIL_UI_KEYS = [
   'product.assuranceIncluded',
@@ -183,16 +184,16 @@ const ASSURANCE_ICONS: Record<string, string> = {
   'product.assuranceWarranty': 'tabler:shield-check',
   'product.assuranceSupport': 'tabler:headset',
 };
-const assuranceItems = isDetailV2
-  ? RECT_DETAIL.assurance.map((a) => ({
+const assuranceItems = detailV2
+  ? detailV2.assurance.map((a) => ({
       icon: ASSURANCE_ICONS[a.titleKey] || 'tabler:circle-check',
       title: detailUi[a.titleKey],
       text: a.text,
     }))
   : [];
 
-const supportCardItems = isDetailV2
-  ? RECT_DETAIL.supportCards.map((c) => ({
+const supportCardItems = detailV2
+  ? detailV2.supportCards.map((c) => ({
       title: detailUi[c.titleKey] || c.titleKey,
       summary: c.summary,
       details: c.details,
@@ -202,12 +203,16 @@ const supportCardItems = isDetailV2
   : [];
 
 const pickSpecs = (labels: string[]) => specRows.filter((s: { label?: string }) => labels.includes(s.label || ''));
-const specGroups = isDetailV2
-  ? [
-      { title: 'Structure', rows: pickSpecs(['Shape', 'Wall material', 'Wall thickness', 'Size range']) },
-      { title: 'Pressure', rows: pickSpecs(['Recommended pressure', 'Maximum pressure tolerance']) },
-      { title: 'Setup', rows: pickSpecs(['Inflation time', 'Included']) },
-    ].filter((g) => g.rows.length > 0)
+const SPEC_GROUP_DEFS: { title: string; labels: string[] }[] = [
+  {
+    title: 'Structure',
+    labels: ['Shape', 'Color', 'Wall material', 'Wall thickness', 'Size range', 'Weight range', 'Seats', 'Bottom'],
+  },
+  { title: 'Pressure', labels: ['Recommended pressure', 'Maximum pressure tolerance'] },
+  { title: 'Setup', labels: ['Inflation time', 'Included', 'Compatibility'] },
+];
+const specGroups = detailV2
+  ? SPEC_GROUP_DEFS.map((g) => ({ title: g.title, rows: pickSpecs(g.labels) })).filter((g) => g.rows.length > 0)
   : [];
 ---
 
@@ -583,12 +588,12 @@ const specGroups = isDetailV2
 
   {/* Module 03+05 — Fit Guide & Size Checker (detail V2) */}
   {
-    isDetailV2 && catalogSeries && (
+    detailV2 && catalogSeries && (
       <FitGuide
         ui={detailUi}
-        fitIntro={RECT_DETAIL.fitIntro}
-        fitRows={RECT_DETAIL.fitRows}
-        fitNotice={RECT_DETAIL.fitNotice}
+        fitIntro={detailV2.fitIntro}
+        fitRows={detailV2.fitRows}
+        fitNotice={detailV2.fitNotice}
         catalogItems={catalogSeries.items}
         quoteHref={`/contact?product=${encodeURIComponent(product.title)}`}
         compareHref="/products/compare"
@@ -692,14 +697,14 @@ const specGroups = isDetailV2
   }
   {/* Module 06 — Package Contents (detail V2) */}
   {
-    isDetailV2 && (
+    detailV2 && (
       <PackageContents
         title={detailUi['product.packageTitle']}
         includedTitle={detailUi['product.includedInPackage']}
         requiredTitle={detailUi['product.requiredSeparately']}
         optionalTitle={detailUi['product.optionalAddOns']}
-        included={RECT_DETAIL.packageIncluded}
-        requiredSeparately={RECT_DETAIL.packageRequired}
+        included={detailV2.packageIncluded}
+        requiredSeparately={detailV2.packageRequired}
         optionalAddOns={poolAccessories}
         currencyNote={PRICE_BASIS_NOTE}
       />
@@ -708,12 +713,8 @@ const specGroups = isDetailV2
 
   {/* Module 07 — Setup & Storage (detail V2) */}
   {
-    isDetailV2 && (
-      <SetupStorage
-        title={detailUi['product.setupTitle']}
-        steps={RECT_DETAIL.setupSteps}
-        links={RECT_DETAIL.setupLinks}
-      />
+    detailV2 && (
+      <SetupStorage title={detailUi['product.setupTitle']} steps={detailV2.setupSteps} links={detailV2.setupLinks} />
     )
   }
 

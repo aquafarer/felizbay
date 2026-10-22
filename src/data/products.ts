@@ -141,7 +141,31 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What size options are available?',
-        a: 'Multiple diameters and heights are produced. Custom sizes are available for OEM/ODM partners — contact info@felizbay.com.',
+        a: 'Diameters run from Ø 2 × 0.5 m up to Ø 10 × 1.2 m across 23 factory sizes, with 10 or 15 cm inflated walls. Use the size checker on this page to compare sizes, walls, and estimated fill volumes before ordering.',
+      },
+      {
+        q: 'What is included with the pool?',
+        a: 'Each pool ships with a 1000W electric air pump, a repair kit, and a storage bag.',
+      },
+      {
+        q: 'Does it include a filter pump?',
+        a: 'No. The included pump is a 1000W electric air pump for inflation. Filtration systems are sold separately.',
+      },
+      {
+        q: 'How long does setup take?',
+        a: 'About 10 minutes to inflate with the included electric air pump, plus the time to fill it with a garden hose. Site preparation is done before inflation.',
+      },
+      {
+        q: 'What ground preparation is required?',
+        a: 'The pool must stand on a flat, level surface free of sharp objects — lawn, patio, or a deck rated for the filled weight. No sand bed or foundation is needed.',
+      },
+      {
+        q: 'Can it be left out all summer?',
+        a: 'Yes. The UV-resistant, color-fast surface is built for full summer seasons of outdoor use.',
+      },
+      {
+        q: 'How do I store it in winter?',
+        a: 'Drain the water, deflate, let it dry completely, then fold it flat and store it in the included storage bag in a frost-free place.',
       },
     ],
   },
@@ -193,6 +217,26 @@ export const products: ProductRecord[] = [
       {
         q: 'Can the color be customized?',
         a: 'Yes. Felizbay manufactures pools in custom colors and sizes for OEM/ODM partners — contact info@felizbay.com.',
+      },
+      {
+        q: 'What sizes are available?',
+        a: 'The grey finish is available across the full round series — 23 factory sizes from Ø 2 × 0.5 m up to Ø 10 × 1.2 m, with 10 or 15 cm inflated walls.',
+      },
+      {
+        q: 'What is the difference between the grey and blue round pools?',
+        a: 'Both share the same double-layer drop stitch construction, size range, and 4–5 PSI rigidity. The grey model adds a premium modern finish and an optional fitted cover for design-conscious buyers.',
+      },
+      {
+        q: 'What is included with the pool?',
+        a: 'Each pool ships with a 1000W electric air pump, a repair kit, and a storage bag. The fitted cover is optional.',
+      },
+      {
+        q: 'How long does setup take?',
+        a: 'About 10 minutes to inflate with the included electric air pump, plus filling time. The pool drains, dries, and folds flat for storage.',
+      },
+      {
+        q: 'Can it be left out all summer?',
+        a: 'Yes. The high-pressure drop stitch construction is built for full-season outdoor use. The optional fitted cover is recommended when the pool is not in use.',
       },
     ],
   },
@@ -249,6 +293,22 @@ export const products: ProductRecord[] = [
         q: 'How is it heated?',
         a: 'The standard circulation ports connect to external pool heaters, sand filter pumps, and disinfection systems with quick-connect fittings.',
       },
+      {
+        q: 'Does it include a heater?',
+        a: 'No. Heating and filtration units connect via the standard ports and are sold separately. Every model does include the built-in integrated inflatable seats and the 5 mm insulated thermal bottom as standard.',
+      },
+      {
+        q: 'How long does setup take?',
+        a: 'One person inflates the tub in 5–15 minutes with the 1000W electric pump. Heating and electrical equipment must be installed by a qualified professional.',
+      },
+      {
+        q: 'Can it be moved or stored in the off-season?',
+        a: 'Yes. The tub deflates and folds into compact carton packaging, so it can be relocated seasonally or shipped at a fraction of a rigid tub’s freight cost.',
+      },
+      {
+        q: 'What pressure does it run at?',
+        a: 'The recommended operating pressure is 4–5 PSI. Every tub is factory QC tested at 6 PSI, and the pressure-relief valve auto-releases above 6 PSI (8 PSI maximum tolerance).',
+      },
     ],
   },
   {
@@ -303,6 +363,22 @@ export const products: ProductRecord[] = [
       {
         q: 'Does it fit on a balcony?',
         a: 'The 1.8 m model can fit large balconies and indoor spa corners, but a filled tub is heavy — install only on a structure professionally confirmed to carry the full water load.',
+      },
+      {
+        q: 'Does it include a heater?',
+        a: 'No. The heater is sold separately. The tub connects to heating units, sand filter pumps, inline disinfection, and air bubble massage systems via its standard ports.',
+      },
+      {
+        q: 'What comes standard on every model?',
+        a: 'Built-in integrated inflatable seats and the 5 mm insulated thermal bottom base come standard on all three models.',
+      },
+      {
+        q: 'How long does setup take?',
+        a: '5–15 minutes with the 1000W electric pump. Heating and electrical equipment must be installed by a qualified professional.',
+      },
+      {
+        q: 'Can it be shipped and stored compactly?',
+        a: 'Yes. Like every Felizbay drop stitch product it packs down to a fraction of its inflated size, cutting shipping and storage costs compared with rigid acrylic or fiberglass tubs.',
       },
     ],
   },
