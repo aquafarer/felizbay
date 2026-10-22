@@ -1,16 +1,19 @@
 ---
 /**
- * Module 03 + 05 — fit boundary table plus a factory-size checker
- * (per2.txt §五/§六). The size selector is intentionally DECOUPLED from the
- * cart: it only shows the spec and the FOB wholesale price for the selected
- * factory size, plus inquiry entry points. No SKU ever reaches checkout.
+ * Module 03 + 05 — fit boundary table plus a factory-size checker with an
+ * external-dimension diagram (per2.txt §五/§六, diagram per §二十 item 2).
+ * The size selector is intentionally DECOUPLED from the cart: it only shows
+ * the spec, the FOB wholesale price, and the dimension diagram for the
+ * selected factory size, plus inquiry entry points. No SKU ever reaches
+ * checkout.
  *
- * Fill volume is precomputed server-side (rect L × W × 80% wall height; round
- * π r² × 80% wall height, in liters) and embedded as data attributes — the
- * inline script only updates the display.
+ * Size parsing, fill-volume estimation, and diagram geometry live in
+ * ./diagram.ts — the single source shared by SSR (initial SVG) and the
+ * client-side selector redraw, so the two can never drift apart.
  */
 import type { PoolCatalogItem } from '~/data/pool-catalog';
 import type { FitRow } from '~/data/product-page-content';
+import { diagramInputForSize, estLitersFor, renderSizeDiagramSvg } from './diagram';
 
 interface Props {
   ui: Record<string, string>;
@@ -24,36 +27,9 @@ interface Props {
 
 const { ui, fitIntro, fitRows, fitNotice, catalogItems, quoteHref, compareHref } = Astro.props;
 
-/** "2 × 2 × 0.8" → { l: 2, w: 2, h: 0.8 }; round "Ø …" sizes return null */
-function parseRectSize(size: string): { l: number; w: number; h: number } | null {
-  if (size.includes('Ø')) return null;
-  const parts = size.split('×').map((p) => parseFloat(p.trim()));
-  if (parts.length !== 3 || parts.some((n) => Number.isNaN(n))) return null;
-  return { l: parts[0], w: parts[1], h: parts[2] };
-}
-
-/** "Ø 2 × 0.5" → { d: 2, h: 0.5 }; rectangular sizes return null */
-function parseRoundSize(size: string): { d: number; h: number } | null {
-  if (!size.includes('Ø')) return null;
-  const parts = size
-    .replace('Ø', '')
-    .split('×')
-    .map((p) => parseFloat(p.trim()));
-  if (parts.length !== 2 || parts.some((n) => Number.isNaN(n))) return null;
-  return { d: parts[0], h: parts[1] };
-}
-
-/** Estimated fill volume in liters (80% wall height), rounded to 10 L */
-function estLitersFor(size: string): number | null {
-  const rect = parseRectSize(size);
-  if (rect) return Math.round((rect.l * rect.w * (0.8 * rect.h) * 1000) / 10) * 10;
-  const round = parseRoundSize(size);
-  if (round) return Math.round((Math.PI * (round.d / 2) ** 2 * (0.8 * round.h) * 1000) / 10) * 10;
-  return null;
-}
-
 interface SizeOption {
   item: string;
+  size: string;
   label: string;
   wall: string;
   fobUsd: number;
@@ -65,6 +41,7 @@ const sizeOptions: SizeOption[] = catalogItems
     const estLiters = estLitersFor(it.size);
     return {
       item: it.item,
+      size: it.size,
       label: `${it.size} m`,
       wall: it.wall,
       fobUsd: it.fobUsd,
@@ -76,6 +53,10 @@ const sizeOptions: SizeOption[] = catalogItems
 const first = sizeOptions[0];
 const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
 const fmtFob = (n: number) => `$${n.toFixed(2)}`;
+
+const diagramCaptions = { top: ui['product.diagTopView'], side: ui['product.diagSideView'] };
+const firstDiagramInput = first ? diagramInputForSize(first.size, diagramCaptions) : null;
+const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInput) : '';
 ---
 
 <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="fit">
@@ -140,6 +121,15 @@ const fmtFob = (n: number) => `$${n.toFixed(2)}`;
             }
           </select>
         </label>
+
+        {/* External dimension diagram (per2.txt §二十 item 2) — redrawn by the selector script */}
+        <div
+          id="fitg-diagram"
+          data-cap-top={diagramCaptions.top}
+          data-cap-side={diagramCaptions.side}
+          class="mt-4 mx-auto max-w-md"
+          set:html={firstDiagramSvg}
+        />
 
         <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
           <div>
@@ -206,15 +196,28 @@ const fmtFob = (n: number) => `$${n.toFixed(2)}`;
 </section>
 
 <script>
+  import { diagramInputForSize, renderSizeDiagramSvg } from './diagram';
+
   (() => {
     const sel = document.getElementById('fitg-size') as HTMLSelectElement | null;
     const sizeVal = document.getElementById('fitg-size-val');
     const wallVal = document.getElementById('fitg-wall-val');
     const volumeVal = document.getElementById('fitg-volume-val');
     const fobVal = document.getElementById('fitg-fob-val');
+    const diagram = document.getElementById('fitg-diagram');
     if (!sel || !sizeVal || !wallVal || !volumeVal || !fobVal) return;
 
     const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
+
+    const drawDiagram = (opt: HTMLOptionElement) => {
+      if (!diagram) return;
+      const raw = (opt.dataset.size ?? '').replace(/ m$/, '');
+      const input = diagramInputForSize(raw, {
+        top: diagram.dataset.capTop ?? '',
+        side: diagram.dataset.capSide ?? '',
+      });
+      diagram.innerHTML = input ? renderSizeDiagramSvg(input) : '';
+    };
 
     const update = () => {
       const opt = sel.options[sel.selectedIndex] as HTMLOptionElement | undefined;
@@ -224,6 +227,7 @@ const fmtFob = (n: number) => `$${n.toFixed(2)}`;
       const liters = parseFloat(opt.dataset.liters ?? '');
       volumeVal.textContent = Number.isNaN(liters) ? '—' : fmtLiters(liters);
       fobVal.textContent = opt.dataset.fob ? `$${opt.dataset.fob}` : '—';
+      drawDiagram(opt);
     };
 
     sel.addEventListener('change', update);

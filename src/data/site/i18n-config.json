@@ -180,7 +180,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "de": {
     "v2.problem": "Das Problem",
@@ -363,7 +365,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "pt": {
     "nav.products": "Produtos",
@@ -546,7 +550,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "fr": {
     "v2.problem": "Le problème",
@@ -729,7 +735,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "es": {
     "nav.products": "Productos",
@@ -912,7 +920,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "it": {
     "nav.products": "Prodotti",
@@ -1095,7 +1105,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "ru": {
     "nav.products": "Товары",
@@ -1278,7 +1290,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "pl": {
     "nav.products": "Produkty",
@@ -1461,7 +1475,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "ar": {
     "nav.products": "المنتجات",
@@ -1644,7 +1660,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "nl": {
     "nav.products": "Producten",
@@ -1827,7 +1845,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "sv": {
     "nav.products": "Produkter",
@@ -2010,7 +2030,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "no": {
     "nav.products": "Produkter",
@@ -2193,7 +2215,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "el": {
     "nav.products": "Προϊόντα",
@@ -2376,7 +2400,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "fi": {
     "nav.products": "Tuotteet",
@@ -2559,7 +2585,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "da": {
     "nav.products": "Produkter",
@@ -2742,7 +2770,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "th": {
     "nav.signIn": "เข้าสู่ระบบ",
@@ -2925,7 +2955,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "tr": {
     "nav.signIn": "Giriş Yap",
@@ -3108,7 +3140,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "id": {
     "nav.signIn": "Masuk",
@@ -3291,7 +3325,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "cs": {
     "nav.signIn": "Přihlásit se",
@@ -3474,7 +3510,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "hr": {
     "nav.signIn": "Prijava",
@@ -3657,7 +3695,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "hu": {
     "nav.signIn": "Bejelentkezés",
@@ -3840,7 +3880,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "ro": {
     "nav.signIn": "Autentificare",
@@ -4023,7 +4065,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "sk": {
     "nav.signIn": "Prihlásiť sa",
@@ -4206,7 +4250,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "bg": {
     "nav.signIn": "Вход",
@@ -4389,7 +4435,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "sl": {
     "nav.signIn": "Prijava",
@@ -4572,7 +4620,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "sr": {
     "nav.signIn": "Prijava",
@@ -4755,7 +4805,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "lt": {
     "nav.signIn": "Prisijungti",
@@ -4938,7 +4990,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "lv": {
     "nav.signIn": "Pieteikties",
@@ -5121,7 +5175,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "et": {
     "nav.signIn": "Logi sisse",
@@ -5304,7 +5360,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "he": {
     "nav.signIn": "התחברות",
@@ -5487,7 +5545,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "ms": {
     "nav.signIn": "Log Masuk",
@@ -5670,7 +5730,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "tl": {
     "nav.signIn": "Mag-sign In",
@@ -5853,7 +5915,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "kk": {
     "nav.products": "Өнімдер",
@@ -6036,7 +6100,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "uz": {
     "nav.products": "Mahsulotlar",
@@ -6219,7 +6285,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "uk": {
     "nav.products": "Продукти",
@@ -6402,7 +6470,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "az": {
     "nav.products": "Məhsullar",
@@ -6585,7 +6655,9 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   },
   "fa": {
     "nav.products": "محصولات",
@@ -6768,6 +6840,8 @@
     "product.deliveryCard": "Delivery",
     "product.shippingCard": "Shipping Costs",
     "product.returnsCard": "Returns",
-    "product.warrantyCard": "Warranty & Support"
+    "product.warrantyCard": "Warranty & Support",
+    "product.diagTopView": "Top view",
+    "product.diagSideView": "Side view"
   }
 }
