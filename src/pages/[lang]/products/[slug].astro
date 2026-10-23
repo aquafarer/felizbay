@@ -85,9 +85,7 @@ const productRating = bizData
     })()
   : undefined;
 
-const defaultTitle = product.categoryLabel
-  ? `${product.title} — ${product.categoryLabel} | ${SITE.name}`
-  : `${product.title} | ${SITE.name}`;
+const defaultTitle = `${product.title} | ${SITE.name}`;
 const localizedDesc =
   lang !== 'en' && product.summary
     ? product.summary
