@@ -101,7 +101,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-size-choice',
     question: 'What pool size should I choose?',
     answer:
-      'Round pools suit families and casual swimming in smaller yards. Rectangular pools fit lap swimming and larger groups. Allow at least 1 meter of clear space around the pool, and check your available ground area against the pool dimensions before ordering.',
+      'Round pools suit families and casual swimming in smaller yards. Rectangular pools fit lap swimming and larger groups. Allow at least 50 cm — ideally 1 m — of clear space around the pool, and check your available ground area against the pool dimensions before ordering.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: [],

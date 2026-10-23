@@ -433,7 +433,7 @@ export const procurementGuides: ProcurementGuide[] = [
         paragraphs: [
           'Round pools (10/15 cm wall, Ø 2–10 m): 23 SKUs from $137.96 for the compact Ø 2 × 0.5 m (S2005) through $377.64 for the family-sized Ø 3 × 1.2 m (S3012), $671.10 for the Ø 5 × 1.2 m (S5012), and up to $1,600.58 for the Ø 10 × 1.2 m event model (S10012).',
           'Rectangular pools (15/20/50 cm wall, 2 × 2 × 0.8 m to 6 × 5 × 1.5 m): 15 SKUs from $285.70 (SR220815) to $1,753.74 (SR561550). Wall thickness is the major price driver within a size — the 4 × 3 × 1.2 m rectangle runs $529.31 with 20 cm walls and $1,002.50 with 50 cm reinforced walls.',
-          'SPA tubs: square/rectangular constant-temperature tubs (7 SKUs) from $381.36 to $667.06; round SPA tubs (3 SKUs) from $390.29 to $487.22 — all including built-in seats and the 5 mm insulated thermal bottom.',
+          'SPA tubs: insulated square/rectangular soaking tubs (7 SKUs) from $381.36 to $667.06; round SPA tubs (3 SKUs) from $390.29 to $487.22 — all including built-in seats and the 5 mm insulated thermal bottom; heating units are external and sold separately.',
         ],
       },
       {

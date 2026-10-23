@@ -200,7 +200,7 @@ export const poolSeries: PoolCatalogSeries[] = [
     wallOptions: '15 cm / 20 cm / 50 cm',
     sizeRange: '2 × 2 × 0.8 m – 6 × 5 × 1.5 m',
     highlights:
-      'Large models feature 50 cm reinforced extra-thick side walls, supporting tens of tons of lateral water pressure without external metal frames; the pool rim allows comfortable sitting or lounging.',
+      'Large models feature 50 cm reinforced extra-thick side walls engineered to contain the lateral load of a full pool — water weighs about 1 t per m³ — without external metal frames; the pool rim allows comfortable sitting or lounging.',
     included: ['1000W high-power electric air pump', 'Full-coverage dustproof & waterproof cover', 'Repair kit'],
     includedImage: '/images/pools/accessories-set.webp',
     items: [

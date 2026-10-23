@@ -157,7 +157,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     eyebrow: 'Pool Ideas',
     title: 'Outdoor Soaking & Relaxation',
     intro: [
-      'Not every backyard moment is about swimming. Sometimes the goal is hot water, built-in seats, and the sky above you. Felizbay constant-temperature SPA tubs bring that experience to patios, gardens, and terraces in square, rectangular, and round layouts from 1.5 m up.',
+      'Not every backyard moment is about swimming. Sometimes the goal is hot water, built-in seats, and the sky above you. Felizbay insulated SPA soaking tubs — paired with an external heater, sold separately — bring that experience to patios, gardens, and terraces in square, rectangular, and round layouts from 1.5 m up.',
       'The tubs share the same drop-stitch construction as our pools — rigid walls, 4–5 PSI operating pressure — plus insulated designs with seats, so they hold temperature efficiently and stay in place through four-season use in mild climates.',
     ],
     conditions: [
@@ -176,7 +176,7 @@ export const POOL_IDEAS: PoolIdea[] = [
         reason: 'Square and rectangular tubs from 1.5 × 1.5 m to 3 × 2 m fit against walls and into corners without wasting a centimeter.',
       },
     ],
-    tableNote: 'All SPA sizes below are constant-temperature designs with integrated seating.',
+    tableNote: 'All SPA sizes below are insulated soaking designs with integrated seating; heating units are external and sold separately.',
     safety: [
       'Follow the heater manufacturer\u2019s water-temperature guidance; hot water is unsuitable for small children, pregnancy, and certain medical conditions — consult a doctor if unsure.',
       'Never soak alone under the influence of alcohol or medication that causes drowsiness.',

@@ -29,7 +29,7 @@ export const guides: GuideRecord[] = [
       'Match pool size and shape to your available space and use case, and insist on drop stitch construction with UV-resistant PVC. A quality inflatable pool sets up in under 30 minutes and lasts many seasons.',
     audience: 'Families, homeowners, and first-time pool buyers.',
     steps: [
-      'Measure your available ground area — allow 1 meter of clearance around the pool',
+      'Measure your available ground area — allow at least 50 cm (ideally 1 m) of clearance around the pool',
       'Choose a shape: round for family fun, rectangular for swimming laps',
       'Check the wall height: taller walls hold more water and suit adults',
       'Verify drop stitch construction for rigid, self-supporting walls',
