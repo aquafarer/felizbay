@@ -170,6 +170,7 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
 
         <div class="mt-5 flex flex-wrap gap-3">
           <a
+            id="fitg-quote"
             href={quoteHref}
             class="inline-flex items-center px-5 py-2.5 bg-sky-600 text-white text-sm font-semibold rounded-full hover:bg-sky-700 transition-colors"
           >
@@ -205,6 +206,7 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
     const volumeVal = document.getElementById('fitg-volume-val');
     const fobVal = document.getElementById('fitg-fob-val');
     const diagram = document.getElementById('fitg-diagram');
+    const quoteLink = document.getElementById('fitg-quote');
     if (!sel || !sizeVal || !wallVal || !volumeVal || !fobVal) return;
 
     const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
@@ -219,6 +221,23 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
       diagram.innerHTML = input ? renderSizeDiagramSvg(input) : '';
     };
 
+    // Shareable link: keep the selected factory size in the URL so a copied
+    // link reopens the same configuration (per2.txt §十七.4 / §十九).
+    const syncUrl = (item: string) => {
+      const url = new URL(window.location.href);
+      url.searchParams.set('size', item);
+      history.replaceState(null, '', url);
+    };
+
+    // The quote entry point must carry the selected model so support can
+    // identify the exact configuration without asking (per2.txt §十九).
+    const syncQuoteLink = (item: string) => {
+      if (!(quoteLink instanceof HTMLAnchorElement)) return;
+      const url = new URL(quoteLink.getAttribute('href') || '/', window.location.href);
+      url.searchParams.set('size', item);
+      quoteLink.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+    };
+
     const update = () => {
       const opt = sel.options[sel.selectedIndex] as HTMLOptionElement | undefined;
       if (!opt) return;
@@ -228,7 +247,16 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
       volumeVal.textContent = Number.isNaN(liters) ? '—' : fmtLiters(liters);
       fobVal.textContent = opt.dataset.fob ? `$${opt.dataset.fob}` : '—';
       drawDiagram(opt);
+      syncUrl(opt.value);
+      syncQuoteLink(opt.value);
     };
+
+    // Restore a shared/refreshed selection from ?size=<item code>.
+    const wanted = new URLSearchParams(window.location.search).get('size');
+    if (wanted && Array.from(sel.options).some((o) => o.value === wanted)) {
+      sel.value = wanted;
+    }
+    update();
 
     sel.addEventListener('change', update);
   })();

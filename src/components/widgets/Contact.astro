@@ -304,6 +304,22 @@ const rows = Object.keys(grouped)
 <script is:inline>
   (function () {
     const forms = document.querySelectorAll('form[data-contact-form]');
+
+    // Inbound quote links (/contact?product=…&size=…) prefill the subject with
+    // the product and factory size the visitor selected, so support can
+    // identify the exact model without asking (per2.txt §十九).
+    const prefill = new URLSearchParams(window.location.search);
+    const pfProduct = (prefill.get('product') || '').trim();
+    const pfSize = (prefill.get('size') || '').trim();
+    if (pfProduct) {
+      forms.forEach((formEl) => {
+        const subjectEl = formEl.querySelector('input[name="subject"]');
+        if (subjectEl instanceof HTMLInputElement && !subjectEl.value) {
+          subjectEl.value = pfSize ? pfProduct + ' — model ' + pfSize : pfProduct;
+        }
+      });
+    }
+
     forms.forEach((formEl) => {
       if (!(formEl instanceof HTMLFormElement)) return;
       const statusEl = formEl.querySelector('[data-form-status]');
