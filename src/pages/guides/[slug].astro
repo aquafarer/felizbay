@@ -5,9 +5,11 @@ import Icon from '~/components/ui/Icon.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import ExpertCitation from '~/components/common/ExpertCitation.astro';
 import { SITE } from 'astrowind:config';
-import { getCanonical } from '~/utils/permalinks';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { procurementGuides, GUIDE_CLUSTER_LABELS } from '~/data/procurement-guides';
 import { guides } from '~/data/guides';
+import { findProductsBySlugs } from '~/utils/products';
+import { findImage } from '~/utils/images';
 import facts from '~/config/facts.json';
 import type { MetaData } from '~/types';
 
@@ -41,12 +43,15 @@ interface ArticleView {
   sections: ArticleSectionView[];
   faq: { q: string; a: string }[];
   related: { label: string; href: string }[];
+  relatedProducts: { title: string; href: string; image?: string; price: string }[];
 }
 
 const slug = Astro.params.slug as string;
 
 const procurement = procurementGuides.find((g) => g.slug === slug);
 const consumer = guides.find((g) => g.slug === slug);
+
+const consumerRelatedProductRecords = consumer ? await findProductsBySlugs(consumer.relatedProducts) : [];
 
 function toId(heading: string, index: number): string {
   const base = heading
@@ -78,6 +83,7 @@ if (procurement) {
     })),
     faq: procurement.faq,
     related: procurement.related,
+    relatedProducts: [],
   };
 } else if (consumer) {
   article = {
@@ -102,6 +108,21 @@ if (procurement) {
       { label: 'All Products', href: '/products' },
       { label: 'FAQ', href: '/faq' },
     ],
+    relatedProducts: (
+      await Promise.all(
+        consumer.relatedProducts.map(async (productSlug) => {
+          const prod = consumerRelatedProductRecords.find((r) => r.slug === productSlug);
+          if (!prod) return null;
+          const image = (await findImage(prod.image)) as string | undefined;
+          return {
+            title: prod.title,
+            href: getPermalink(prod.permalink, 'product'),
+            image,
+            price: prod.price?.amount ? (prod.sku ? `$${prod.price.amount}` : `From $${prod.price.amount}`) : '',
+          };
+        })
+      )
+    ).filter((p) => p !== null),
   };
 } else {
   article = {
@@ -118,6 +139,7 @@ if (procurement) {
     sections: [],
     faq: [],
     related: [],
+    relatedProducts: [],
   };
 }
 
@@ -286,6 +308,47 @@ const formatDate = (iso: string) =>
               <Icon name="tabler:file-invoice" class="w-4 h-4" /> Request a Bulk Quote
             </a>
           </div>
+        )
+      }
+
+      {
+        article.relatedProducts.length > 0 && (
+          <section class="mt-12">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-4">
+              Recommended products
+            </h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+              {article.relatedProducts.map((p) => (
+                <a
+                  href={p.href}
+                  class="group flex items-center gap-4 p-3 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 hover:border-primary dark:hover:border-sky-400 transition-colors"
+                >
+                  {p.image ? (
+                    <div class="w-16 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-700 shrink-0">
+                      <img
+                        src={p.image}
+                        alt={p.title}
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ) : (
+                    <div class="w-16 h-16 rounded-lg bg-gray-100 dark:bg-slate-700 shrink-0 flex items-center justify-center text-gray-300 dark:text-slate-600">
+                      <Icon name="tabler:photo" class="w-6 h-6" />
+                    </div>
+                  )}
+                  <div class="min-w-0 flex-1">
+                    <p class="text-sm font-semibold text-gray-900 dark:text-slate-100 leading-snug">{p.title}</p>
+                    {p.price && <p class="mt-0.5 text-xs text-gray-500 dark:text-slate-400">{p.price}</p>}
+                    <p class="mt-1 text-xs font-medium text-primary dark:text-sky-400">View product →</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
         )
       }
 

@@ -5,6 +5,7 @@
 export const VALID_ICON_NAMES = new Set([
   "tabler:adjustments",
   "tabler:arrow-right",
+  "tabler:arrows-diff",
   "tabler:beach",
   "tabler:bolt",
   "tabler:book",
