@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Yilni bo''shliqlarda o''tirgan ho''llash'
       href: /products/hot-tub-square-rect
   note: 'Barcha to''plamlar: 4–5 PSI drop-stitch devorlari, 5–15 daqiqali inflyatsiya, paketli saqlash. Isitish va filtrlash tashqi - isitgichlar va filtr nasoslari alohida sotiladi.'
+
+content_evidence:
+  tagline: 'Why Felizbay'
+  title: 'Why Choose a Felizbay Drop Stitch Pool?'
+  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  items:
+    - title: 'Designed for Outdoor Living'
+      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+      icon: tabler:home
+      cta: 'Browse Pool Ideas'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Compare Real Product Specifications'
+      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+      icon: tabler:table
+      cta: 'View Specifications'
+      cta_href: /products/specs
+    - title: 'Understand Drop Stitch Construction'
+      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+      icon: tabler:hexagon
+      cta: 'Read the Guide'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Choose with Confidence'
+      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+      icon: tabler:shield-check
+      cta: 'Read the FAQ'
+      cta_href: /faq

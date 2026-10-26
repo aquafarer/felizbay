@@ -38,6 +38,7 @@ import ProductFaq from '~/components/product/ProductFaq.astro';
 import SpecTable from '~/components/product/SpecTable.astro';
 import SupportCards from '~/components/product/SupportCards.astro';
 import StickyBuyBar from '~/components/product/StickyBuyBar.astro';
+import WhyThisPool from '~/components/product/WhyThisPool.astro';
 
 export async function getStaticPaths() {
   const paths: { params: { lang: string; slug: string }; props: any }[] = [];
@@ -181,6 +182,15 @@ const DETAIL_UI_KEYS = [
   'product.faqTitle',
   'product.retailPrice',
   'product.buyNow',
+  'product.whyTitle',
+  'product.whyIntro',
+  'product.whyFit1',
+  'product.whyFit2',
+  'product.whyFit3',
+  'product.whyFit4',
+  'product.whyCheck',
+  'product.whyCompare',
+  'product.whyCta',
 ];
 const detailUi: Record<string, string> = Object.fromEntries(DETAIL_UI_KEYS.map((k) => [k, t(k) || k]));
 
@@ -701,6 +711,9 @@ const specGroups = detailV2
       </section>
     )
   }
+
+  {/* Why This Pool (audit §10.2) */}
+  {rec && <WhyThisPool ui={detailUi} compareHref="/products/compare" />}
 
   {/* Module 06 — Package Contents (detail V2) */}
   {

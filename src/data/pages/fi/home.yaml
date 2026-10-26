@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Istuva liotus kompakteissa tiloissa'
       href: /products/hot-tub-square-rect
   note: 'Kaikki kokoelmat: 4–5 PSI drop-stitch seinät, 5–15 minuutin täyttö, pakattava säilytys. Lämmitys ja suodatus ovat ulkoisia – lämmittimet ja suodatinpumput myydään erikseen.'
+
+content_evidence:
+  tagline: 'Miksi Felizbay'
+  title: 'Miksi valita Felizbay Drop Stitch -uima-allas?'
+  subtitle: 'Valitse uima-allas kohteesi, sen käyttötavan ja sinulle tärkeimpien ominaisuuksien perusteella.'
+  items:
+    - title: 'Suunniteltu ulkoiluun'
+      description: 'Tutustu uima-allasvaihtoehtoihin takapihan rentoutumiseen, perheen vesiaikaan, ulkona liottamiseen ja kausiluonteisiin loma-asuntoihin.'
+      icon: tabler:home
+      cta: 'Selaa uima-allasideoita'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Vertaa todellisia tuotespesifikaatioita'
+      description: 'Tarkista mitat, vesikapasiteetti, suositeltu käyttöpaine, lisävarusteet ja asennusvaatimukset ennen valintaa.'
+      icon: tabler:table
+      cta: 'Näytä tekniset tiedot'
+      cta_href: /products/specs
+    - title: 'Ymmärrä Drop Stitch -rakenne'
+      description: 'Opi, miten sisäinen rakenne toimii, mitä se tarkoittaa uima-altaan muodon ja varastoinnin kannalta ja miten tuotteen suorituskyky riippuu oikeasta täyttymisestä ja asennuksesta.'
+      icon: tabler:hexagon
+      cta: 'Lue opas'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Valitse luottavaisin mielin'
+      description: 'Tutustu tuoteoppaisiin, hoito-ohjeisiin, takuutietoihin ja tukeen määrittääksesi, sopiiko Felizbay-allas tarpeisiisi.'
+      icon: tabler:shield-check
+      cta: 'Lue UKK'
+      cta_href: /faq

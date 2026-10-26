@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Sittande blötläggning i kompakta utrymmen'
       href: /products/hot-tub-square-rect
   note: 'Alla kollektioner: 4–5 PSI drop-stitch väggar, 5–15 min uppblåsning, packningsförvaring. Uppvärmning och filtrering är externa — värmare och filterpumpar säljs separat.'
+
+content_evidence:
+  tagline: 'Varför Felizbay'
+  title: 'Varför välja en Felizbay Drop Stitch-pool?'
+  subtitle: 'Välj en pool baserat på ditt utrymme, hur du planerar att använda den och de funktioner som är viktigast för dig.'
+  items:
+    - title: 'Utformad för utomhusliv'
+      description: 'Utforska poolalternativ för avkoppling i trädgården, familjevatten, utomhusbad och säsongsbetonade semesterboenden.'
+      icon: tabler:home
+      cta: 'Bläddra bland poolidéer'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Jämför verkliga produktspecifikationer'
+      description: 'Granska dimensioner, vattenkapacitet, rekommenderat arbetstryck, inkluderade tillbehör och installationskrav innan du väljer.'
+      icon: tabler:table
+      cta: 'Visa specifikationer'
+      cta_href: /products/specs
+    - title: 'Förstå Drop Stitch-konstruktionen'
+      description: 'Lär dig hur den interna strukturen fungerar, vad det innebär för poolform och förvaring, och hur produktprestanda beror på korrekt uppblåsning och installation.'
+      icon: tabler:hexagon
+      cta: 'Läs guiden'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Välj med tillförsikt'
+      description: 'Få tillgång till produkthandböcker, skötselanvisningar, garantiinformation och support för att avgöra om en Felizbay-pool passar dina behov.'
+      icon: tabler:shield-check
+      cta: 'Läs FAQ'
+      cta_href: /faq

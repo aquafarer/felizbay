@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Sedící namáčení v kompaktních prostorech'
       href: /products/hot-tub-square-rect
   note: 'Všechny kolekce: stěny 4–5 PSI drop-stitch, 5–15 minut nafouknutí, skladovatelnost. Topení a filtrace jsou externí — ohřívače a filtrační čerpadla se prodávají samostatně.'
+
+content_evidence:
+  tagline: 'Proč Felizbay'
+  title: 'Proč si vybrat bazén Felizbay Drop Stitch?'
+  subtitle: 'Vyber si bazén podle dostupného prostoru, způsobu jeho využití a funkcí, na kterých ti nejvíce záleží.'
+  items:
+    - title: 'Navrženo pro venkovní bydlení'
+      description: 'Prozkoumej možnosti bazénu pro relaxaci na dvorku, trávení času s rodinou u vody, venkovní namáčení a sezónní rekreační nemovitosti.'
+      icon: tabler:home
+      cta: 'Procházet návrhy bazénů'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Porovnat skutečné specifikace produktu'
+      description: 'Před výběrem zkontrolujte rozměry, kapacitu vody, doporučený provozní tlak, přiložené příslušenství a požadavky na instalaci.'
+      icon: tabler:table
+      cta: 'Zobrazit technické údaje'
+      cta_href: /products/specs
+    - title: 'Porozumět konstrukci Drop Stitch'
+      description: 'Zjistěte, jak funguje vnitřní struktura, co to znamená pro tvar a skladování bazénu a jak výkon produktu závisí na správném nafouknutí a nastavení.'
+      icon: tabler:hexagon
+      cta: 'Přečti si průvodce'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Vybírejte s jistotou'
+      description: 'Získejte přístup k produktovým příručkám, pokynům pro péči, záručním údajům a podpoře, abyste zjistili, zda bazén Felizbay vyhovuje vašim potřebám.'
+      icon: tabler:shield-check
+      cta: 'Číst často kladené otázky'
+      cta_href: /faq

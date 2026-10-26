@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Seduti a mollo in spazi compatti'
       href: /products/hot-tub-square-rect
   note: 'Tutte le collezioni: pareti drop-stitch da 4–5 PSI, gonfiaggio da 5–15 minuti, stoccaggio a scomparsa. Il riscaldamento e la filtrazione sono esterni: i riscaldatori e le pompe filtro sono venduti separatamente.'
+
+content_evidence:
+  tagline: 'Perché Felizbay'
+  title: 'Perché scegliere una piscina Felizbay Drop Stitch?'
+  subtitle: 'Scegli una piscina in base al tuo spazio, a come intendi utilizzarla e alle caratteristiche che ti interessano di più.'
+  items:
+    - title: 'Progettato per la vita all''aria aperta'
+      description: 'Esplora le opzioni della piscina per il relax in cortile, l''acqua in famiglia, l''ammollo all''aperto e le proprietà per le vacanze stagionali.'
+      icon: tabler:home
+      cta: 'Sfoglia le idee per la piscina'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Confronta le specifiche del prodotto reale'
+      description: 'Controllare le dimensioni, la capacità dell''acqua, la pressione di esercizio consigliata, gli accessori inclusi e i requisiti di installazione prima di scegliere.'
+      icon: tabler:table
+      cta: 'Visualizza specifiche'
+      cta_href: /products/specs
+    - title: 'Comprendere la costruzione di Drop Stitch'
+      description: 'Scopri come funziona la struttura interna, cosa significa per la forma e lo stoccaggio della piscina e come le prestazioni del prodotto dipendono dal corretto gonfiaggio e dalla configurazione.'
+      icon: tabler:hexagon
+      cta: 'Leggi la guida'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Scegli con fiducia'
+      description: 'Accedi ai manuali del prodotto, alle istruzioni per la cura, ai dettagli della garanzia e al supporto per determinare se una piscina Felizbay si adatta alle tue esigenze.'
+      icon: tabler:shield-check
+      cta: 'Leggi le domande frequenti'
+      cta_href: /faq

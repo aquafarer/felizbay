@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Moczenie w pozycji siedzącej w niewielkich przestrzeniach'
       href: /products/hot-tub-square-rect
   note: 'Wszystkie kolekcje: ściany drop-stitch 4–5 PSI, nadmuchiwanie 5–15 minut, przechowywanie w opakowaniach jednostkowych. Ogrzewanie i filtracja są zewnętrzne — grzałki i pompy filtrujące są sprzedawane osobno.'
+
+content_evidence:
+  tagline: 'Dlaczego Felizbay'
+  title: 'Dlaczego warto wybrać basen Felizbay Drop Stitch?'
+  subtitle: 'Wybierz basen na podstawie dostępnego miejsca, sposobu, w jaki planujesz z niego korzystać, oraz funkcji, które są dla Ciebie najważniejsze.'
+  items:
+    - title: 'Zaprojektowany do życia na świeżym powietrzu'
+      description: 'Odkryj baseny, które oferują relaks na podwórku, rodzinną wodę, moczenie na świeżym powietrzu i sezonowe wakacje.'
+      icon: tabler:home
+      cta: 'Przeglądaj pomysły na basen'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Porównaj rzeczywiste specyfikacje produktu'
+      description: 'Przed dokonaniem wyboru należy zapoznać się z wymiarami, pojemnością wody, zalecanym ciśnieniem roboczym, dołączonymi akcesoriami i wymaganiami instalacyjnymi.'
+      icon: tabler:table
+      cta: 'Zobacz Specyfikacje'
+      cta_href: /products/specs
+    - title: 'Zrozumienie konstrukcji Drop Stitch'
+      description: 'Dowiedz się, jak działa struktura wewnętrzna, co oznacza dla kształtu i przechowywania basenu oraz w jaki sposób wydajność produktu zależy od prawidłowego napełnienia i konfiguracji.'
+      icon: tabler:hexagon
+      cta: 'Przeczytaj przewodnik'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Wybieraj z pewnością siebie'
+      description: 'Uzyskaj dostęp do instrukcji obsługi, instrukcji konserwacji, szczegółów gwarancji i pomocy technicznej, aby ustalić, czy basen Felizbay odpowiada Twoim potrzebom.'
+      icon: tabler:shield-check
+      cta: 'Przeczytaj FAQ'
+      cta_href: /faq

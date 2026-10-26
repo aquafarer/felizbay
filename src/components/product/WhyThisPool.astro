@@ -1,0 +1,72 @@
+---
+interface Props {
+  ui: Record<string, string>;
+  compareHref: string;
+}
+
+const { ui, compareHref } = Astro.props;
+
+const fitItems = [ui['product.whyFit1'], ui['product.whyFit2'], ui['product.whyFit3'], ui['product.whyFit4']].filter(
+  Boolean
+);
+---
+
+<section
+  class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+  data-ai-block="why-this-pool"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
+      {ui['product.whyTitle']}
+    </h2>
+    {
+      ui['product.whyIntro'] && (
+        <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed mb-5">{ui['product.whyIntro']}</p>
+      )
+    }
+    {
+      fitItems.length > 0 && (
+        <ul class="space-y-2.5">
+          {fitItems.map((item) => (
+            <li class="flex items-start gap-2.5 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+              <svg
+                class="w-5 h-5 text-primary dark:text-blue-400 shrink-0 mt-0.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0-18 0" />
+                <path d="M9 12l2 2l4 -4" />
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    {
+      ui['product.whyCheck'] && (
+        <p class="mt-6 text-sm text-gray-600 dark:text-slate-400 leading-relaxed bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl px-5 py-4">
+          {ui['product.whyCheck']}
+        </p>
+      )
+    }
+    {
+      ui['product.whyCompare'] && (
+        <p class="mt-5 text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{ui['product.whyCompare']}</p>
+      )
+    }
+    <div class="mt-6">
+      <a
+        href={compareHref}
+        class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-white dark:hover:bg-slate-800 transition-colors"
+      >
+        {ui['product.whyCta'] || 'Compare All Models'}
+      </a>
+    </div>
+  </div>
+</section>

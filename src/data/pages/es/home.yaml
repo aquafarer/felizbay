@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Baño sentado en espacios compactos'
       href: /products/hot-tub-square-rect
   note: 'Todas las colecciones: 4 a 5 paredes PSI drop-stitch, inflado de 5 a 15 minutos, almacenamiento plegable. La calefacción y la filtración son externas: los calentadores y las bombas de filtrado se venden por separado.'
+
+content_evidence:
+  tagline: 'Por qué Felizbay'
+  title: '¿Por qué elegir una piscina Felizbay Drop Stitch?'
+  subtitle: 'Elige una piscina en función de tu espacio, cómo planeas usarla y las características que más te importan.'
+  items:
+    - title: 'Diseñado para la vida al aire libre'
+      description: 'Explore las opciones de piscina para relajarse en el patio trasero, disfrutar del agua en familia, sumergirse al aire libre y disfrutar de propiedades vacacionales de temporada.'
+      icon: tabler:home
+      cta: 'Navegar por las ideas de la piscina'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Compare las especificaciones reales del producto'
+      description: 'Revise las dimensiones, la capacidad de agua, la presión de funcionamiento recomendada, los accesorios incluidos y los requisitos de instalación antes de elegir.'
+      icon: tabler:table
+      cta: 'Ver especificaciones'
+      cta_href: /products/specs
+    - title: 'Comprender la construcción de Drop Stitch'
+      description: 'Aprenda cómo funciona la estructura interna, qué significa para la forma y el almacenamiento de la piscina, y cómo el rendimiento del producto depende del inflado y la configuración adecuados.'
+      icon: tabler:hexagon
+      cta: 'Lee la guía'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Elige con confianza'
+      description: 'Acceda a los manuales del producto, las instrucciones de cuidado, los detalles de la garantía y el soporte para ayudar a determinar si una piscina Felizbay se adapta a sus necesidades.'
+      icon: tabler:shield-check
+      cta: 'Lee las preguntas frecuentes'
+      cta_href: /faq

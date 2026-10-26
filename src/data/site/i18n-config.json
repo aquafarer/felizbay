@@ -182,7 +182,17 @@
     "product.returnsCard": "Returns",
     "product.warrantyCard": "Warranty & Support",
     "product.diagTopView": "Top view",
-    "product.diagSideView": "Side view"
+    "product.diagSideView": "Side view",
+    "product.whyTitle": "Why This Pool May Be Right for You",
+    "product.whyIntro": "This Felizbay model may be a good fit if you are looking for:",
+    "product.whyFit1": "A drop-stitch inflatable pool for outdoor use",
+    "product.whyFit2": "A pool size that matches your available space",
+    "product.whyFit3": "A product that can be drained, deflated, and stored when not in use",
+    "product.whyFit4": "A pool with clearly documented dimensions and operating requirements",
+    "product.whyCheck": "Before purchasing, check the recommended installation surface, total filled weight, water capacity, operating pressure, included accessories, and local safety requirements.",
+    "product.whyCompare": "Compare this model with other Felizbay pools to find the option that best matches your intended use.",
+    "product.whyCta": "Compare All Models",
+    "product.buyingGuideLink": "Buying Guide"
   },
   "de": {
     "v2.problem": "Das Problem",
@@ -367,7 +377,17 @@
     "product.returnsCard": "Rückgaben",
     "product.warrantyCard": "Garantie und Support",
     "product.diagTopView": "Ansicht von oben",
-    "product.diagSideView": "Seitenansicht"
+    "product.diagSideView": "Seitenansicht",
+    "product.whyTitle": "Warum dieser Pool möglicherweise das Richtige für Sie ist",
+    "product.whyIntro": "Dieses Felizbay-Modell passt möglicherweise gut zu Ihnen, wenn Sie Folgendes suchen:",
+    "product.whyFit1": "Ein aufblasbarer Drop-Stitch-Pool für den Außenbereich",
+    "product.whyFit2": "Eine Poolgröße, die Ihrem verfügbaren Platz entspricht",
+    "product.whyFit3": "Ein Produkt, das bei Nichtgebrauch entleert, entlüftet und gelagert werden kann",
+    "product.whyFit4": "Ein Pool mit klar dokumentierten Abmessungen und Betriebsanforderungen",
+    "product.whyCheck": "Überprüfen Sie vor dem Kauf die empfohlene Installationsfläche, das Gesamtfüllgewicht, die Wasserkapazität, den Betriebsdruck, das mitgelieferte Zubehör und die lokalen Sicherheitsanforderungen.",
+    "product.whyCompare": "Vergleichen Sie dieses Modell mit anderen Felizbay-Pools, um die Option zu finden, die am besten zu Ihrem Verwendungszweck passt.",
+    "product.whyCta": "Alle Modelle vergleichen",
+    "product.buyingGuideLink": "Kaufratgeber"
   },
   "pt": {
     "nav.products": "Produtos",
@@ -552,7 +572,17 @@
     "product.returnsCard": "Devoluções",
     "product.warrantyCard": "Garantia e suporte",
     "product.diagTopView": "Vista superior",
-    "product.diagSideView": "Vista lateral"
+    "product.diagSideView": "Vista lateral",
+    "product.whyTitle": "Porque é que esta piscina pode ser ideal para si",
+    "product.whyIntro": "Este modelo Felizbay pode ser um bom ajuste se estiver à procura de:",
+    "product.whyFit1": "Uma piscina inflável drop-stitch para uso ao ar livre",
+    "product.whyFit2": "Um tamanho de piscina que corresponda ao seu espaço disponível",
+    "product.whyFit3": "Um produto que pode ser drenado, esvaziado e armazenado quando não estiver em uso",
+    "product.whyFit4": "Uma piscina com dimensões e requisitos operacionais claramente documentados",
+    "product.whyCheck": "Antes de comprar, verifique a superfície de instalação recomendada, o peso total preenchido, a capacidade de água, a pressão de operação, os acessórios incluídos e os requisitos de segurança locais.",
+    "product.whyCompare": "Compare este modelo com outras piscinas Felizbay para encontrar a opção que melhor corresponde ao seu uso pretendido.",
+    "product.whyCta": "Comparar todos os modelos",
+    "product.buyingGuideLink": "Guia de compra"
   },
   "fr": {
     "v2.problem": "Le problème",
@@ -737,7 +767,17 @@
     "product.returnsCard": "Retours",
     "product.warrantyCard": "Garantie et assistance",
     "product.diagTopView": "Vue de dessus",
-    "product.diagSideView": "Vue latérale"
+    "product.diagSideView": "Vue latérale",
+    "product.whyTitle": "Pourquoi cette piscine pourrait vous convenir",
+    "product.whyIntro": "Ce modèle Felizbay peut vous convenir si vous recherchez :",
+    "product.whyFit1": "Une piscine gonflable drop-stitch pour une utilisation en extérieur",
+    "product.whyFit2": "Une taille de piscine qui correspond à votre espace disponible",
+    "product.whyFit3": "Un produit qui peut être égoutté, dégonflé et stocké lorsqu'il n'est pas utilisé",
+    "product.whyFit4": "Une piscine avec des dimensions et des exigences d'exploitation clairement documentées",
+    "product.whyCheck": "Avant d'acheter, vérifiez la surface d'installation recommandée, le poids total rempli, la capacité en eau, la pression de fonctionnement, les accessoires inclus et les exigences de sécurité locales.",
+    "product.whyCompare": "Comparez ce modèle avec d'autres piscines Felizbay pour trouver l'option qui correspond le mieux à votre utilisation prévue.",
+    "product.whyCta": "Comparez tous les modèles",
+    "product.buyingGuideLink": "Guide d’achat"
   },
   "es": {
     "nav.products": "Productos",
@@ -922,7 +962,17 @@
     "product.returnsCard": "Devoluciones",
     "product.warrantyCard": "Garantía y soporte",
     "product.diagTopView": "Vista superior",
-    "product.diagSideView": "Vista lateral"
+    "product.diagSideView": "Vista lateral",
+    "product.whyTitle": "Por qué esta piscina puede ser adecuada para ti",
+    "product.whyIntro": "Este modelo Felizbay puede ser una buena opción si está buscando:",
+    "product.whyFit1": "Una piscina hinchable drop-stitch para uso al aire libre",
+    "product.whyFit2": "Un tamaño de piscina que coincida con tu espacio disponible",
+    "product.whyFit3": "Un producto que se puede drenar, desinflar y almacenar cuando no está en uso",
+    "product.whyFit4": "Una piscina con dimensiones y requisitos operativos claramente documentados",
+    "product.whyCheck": "Antes de comprar, compruebe la superficie de instalación recomendada, el peso total de llenado, la capacidad de agua, la presión de funcionamiento, los accesorios incluidos y los requisitos de seguridad locales.",
+    "product.whyCompare": "Compare este modelo con otras piscinas de Felizbay para encontrar la opción que mejor se adapte a su uso previsto.",
+    "product.whyCta": "Comparar todos los modelos",
+    "product.buyingGuideLink": "Guía para la compra"
   },
   "it": {
     "nav.products": "Prodotti",
@@ -1107,7 +1157,17 @@
     "product.returnsCard": "Ritorni",
     "product.warrantyCard": "Garanzia e supporto",
     "product.diagTopView": "Vista dall'alto",
-    "product.diagSideView": "Vista laterale"
+    "product.diagSideView": "Vista laterale",
+    "product.whyTitle": "Perché questa piscina potrebbe fare al caso tuo",
+    "product.whyIntro": "Questo modello Felizbay può essere una buona soluzione se stai cercando:",
+    "product.whyFit1": "Una piscina gonfiabile drop-stitch per uso esterno",
+    "product.whyFit2": "Una dimensione della piscina che corrisponde allo spazio disponibile",
+    "product.whyFit3": "Un prodotto che può essere drenato, sgonfiato e conservato quando non in uso",
+    "product.whyFit4": "Una piscina con dimensioni e requisiti operativi chiaramente documentati",
+    "product.whyCheck": "Prima dell'acquisto, controllare la superficie di installazione consigliata, il peso totale riempito, la capacità dell'acqua, la pressione di esercizio, gli accessori inclusi e i requisiti di sicurezza locali.",
+    "product.whyCompare": "Confronta questo modello con altre piscine Felizbay per trovare l'opzione che meglio si adatta all'uso previsto.",
+    "product.whyCta": "Confronta tutti i modelli",
+    "product.buyingGuideLink": "Guida agli acquisti"
   },
   "ru": {
     "nav.products": "Товары",
@@ -1292,7 +1352,17 @@
     "product.returnsCard": "Возврат",
     "product.warrantyCard": "Гарантия и поддержка",
     "product.diagTopView": "Вид сверху",
-    "product.diagSideView": "Вид сбоку"
+    "product.diagSideView": "Вид сбоку",
+    "product.whyTitle": "Почему этот бассейн подойдет именно вам",
+    "product.whyIntro": "Эта модель Felizbay может хорошо подойти, если вы ищете:",
+    "product.whyFit1": "Надувной бассейн Drop Stitch для использования на улице",
+    "product.whyFit2": "Размер бассейна, соответствующий вашему свободному пространству",
+    "product.whyFit3": "Продукт, который можно сливать, сдувать и хранить, когда он не используется",
+    "product.whyFit4": "Бассейн с четко задокументированными размерами и эксплуатационными требованиями",
+    "product.whyCheck": "Перед покупкой проверьте рекомендуемую поверхность установки, общий вес заполнения, вместимость по воде, рабочее давление, включенные аксессуары и местные требования безопасности.",
+    "product.whyCompare": "Сравните эту модель с другими пулами Felizbay, чтобы найти вариант, который наилучшим образом соответствует вашему предполагаемому использованию.",
+    "product.whyCta": "Сравнить все модели",
+    "product.buyingGuideLink": "Руководство по покупке"
   },
   "pl": {
     "nav.products": "Produkty",
@@ -1477,7 +1547,17 @@
     "product.returnsCard": "Powroty",
     "product.warrantyCard": "Gwarancja i wsparcie",
     "product.diagTopView": "Widok z góry",
-    "product.diagSideView": "Widok z boku"
+    "product.diagSideView": "Widok z boku",
+    "product.whyTitle": "Dlaczego ten basen może być dla Ciebie odpowiedni",
+    "product.whyIntro": "Ten model Felizbay może być odpowiedni, jeśli szukasz:",
+    "product.whyFit1": "Nadmuchiwany basen drop-stitch do użytku na zewnątrz",
+    "product.whyFit2": "Rozmiar basenu odpowiadający dostępnej przestrzeni",
+    "product.whyFit3": "Produkt, który można opróżnić, spuścić powietrze i przechowywać, gdy nie jest używany",
+    "product.whyFit4": "Basen o jasno udokumentowanych wymiarach i wymaganiach eksploatacyjnych",
+    "product.whyCheck": "Przed zakupem sprawdź zalecaną powierzchnię instalacji, całkowitą masę wypełnienia, pojemność wody, ciśnienie robocze, dołączone akcesoria i lokalne wymagania bezpieczeństwa.",
+    "product.whyCompare": "Porównaj ten model z innymi basenami Felizbay, aby znaleźć opcję, która najlepiej pasuje do zamierzonego zastosowania.",
+    "product.whyCta": "Porównaj wszystkie modele",
+    "product.buyingGuideLink": "Poradnik zakupowy"
   },
   "ar": {
     "nav.products": "المنتجات",
@@ -1662,7 +1742,17 @@
     "product.returnsCard": "المرتجعات",
     "product.warrantyCard": "الضمان والدعم",
     "product.diagTopView": "منظر علوي",
-    "product.diagSideView": "منظر جانبي"
+    "product.diagSideView": "منظر جانبي",
+    "product.whyTitle": "لماذا قد يكون هذا التجمع مناسبًا لك",
+    "product.whyIntro": "قد يكون طراز Felizbay هذا مناسبًا إذا كنت تبحث عن:",
+    "product.whyFit1": "حمام سباحة قابل للنفخ drop-stitch للاستخدام في الهواء الطلق",
+    "product.whyFit2": "حجم حمام السباحة المناسب للمساحة المتاحة لديك",
+    "product.whyFit3": "منتج يمكن تصريفه وتفريغه وتخزينه عندما لا يكون قيد الاستخدام",
+    "product.whyFit4": "تجمع ذو أبعاد ومتطلبات تشغيلية موثقة بوضوح",
+    "product.whyCheck": "قبل الشراء، تحقق من سطح التركيب الموصى به، والوزن الإجمالي الممتلئ، وسعة المياه، وضغط التشغيل، والملحقات المضمنة، ومتطلبات السلامة المحلية.",
+    "product.whyCompare": "قارن هذا الطراز مع حمامات سباحة Felizbay الأخرى للعثور على الخيار الذي يتناسب بشكل أفضل مع الاستخدام المقصود.",
+    "product.whyCta": "مقارنة جميع الموديلات",
+    "product.buyingGuideLink": "دليل الشراء"
   },
   "nl": {
     "nav.products": "Producten",
@@ -1847,7 +1937,17 @@
     "product.returnsCard": "Retouren",
     "product.warrantyCard": "Garantie en ondersteuning",
     "product.diagTopView": "Bovenaanzicht",
-    "product.diagSideView": "Zijaanzicht"
+    "product.diagSideView": "Zijaanzicht",
+    "product.whyTitle": "Waarom dit zwembad misschien iets voor jou is",
+    "product.whyIntro": "Dit Felizbay-model kan een goede pasvorm zijn als u op zoek bent naar:",
+    "product.whyFit1": "Een drop-stitch opblaasbaar zwembad voor buitengebruik",
+    "product.whyFit2": "Een zwembadgrootte die overeenkomt met je beschikbare ruimte",
+    "product.whyFit3": "Een product dat kan worden afgetapt, leeggelaten en opgeslagen wanneer het niet in gebruik is",
+    "product.whyFit4": "Een zwembad met duidelijk gedocumenteerde afmetingen en operationele vereisten",
+    "product.whyCheck": "Controleer vóór de aankoop het aanbevolen installatieoppervlak, het totale gevulde gewicht, de watercapaciteit, de werkdruk, de meegeleverde accessoires en de lokale veiligheidsvereisten.",
+    "product.whyCompare": "Vergelijk dit model met andere Felizbay-zwembaden om de optie te vinden die het beste past bij uw beoogde gebruik.",
+    "product.whyCta": "Alle modellen vergelijken",
+    "product.buyingGuideLink": "Koopgids"
   },
   "sv": {
     "nav.products": "Produkter",
@@ -2032,7 +2132,17 @@
     "product.returnsCard": "Returnerar",
     "product.warrantyCard": "Garanti & Support",
     "product.diagTopView": "Ovanifrån",
-    "product.diagSideView": "Sidovy"
+    "product.diagSideView": "Sidovy",
+    "product.whyTitle": "Varför denna pool kan vara rätt för dig",
+    "product.whyIntro": "Denna Felizbay-modell kan vara en bra passform om du letar efter:",
+    "product.whyFit1": "En drop-stitch uppblåsbar pool för utomhusbruk",
+    "product.whyFit2": "En poolstorlek som matchar ditt lediga utrymme",
+    "product.whyFit3": "En produkt som kan tömmas, lufttömmas och förvaras när den inte används",
+    "product.whyFit4": "En pool med tydligt dokumenterade dimensioner och driftskrav",
+    "product.whyCheck": "Innan du köper, kontrollera den rekommenderade installationsytan, total fylld vikt, vattenkapacitet, drifttryck, inkluderade tillbehör och lokala säkerhetskrav.",
+    "product.whyCompare": "Jämför denna modell med andra Felizbay-pooler för att hitta det alternativ som bäst matchar din avsedda användning.",
+    "product.whyCta": "Jämför alla modeller",
+    "product.buyingGuideLink": "Köpguide"
   },
   "no": {
     "nav.products": "Produkter",
@@ -2217,7 +2327,17 @@
     "product.returnsCard": "Returnerer",
     "product.warrantyCard": "Garanti og støtte",
     "product.diagTopView": "Topp utsikt",
-    "product.diagSideView": "Sidevisning"
+    "product.diagSideView": "Sidevisning",
+    "product.whyTitle": "Hvorfor dette bassenget kan være riktig for deg",
+    "product.whyIntro": "Denne Felizbay-modellen kan være en god match hvis du er ute etter:",
+    "product.whyFit1": "Et oppblåsbart drop-stitch-basseng for utendørs bruk",
+    "product.whyFit2": "En bassengstørrelse som samsvarer med den tilgjengelige plassen din",
+    "product.whyFit3": "Et produkt som kan tømmes, tømmes for luft og lagres når det ikke er i bruk",
+    "product.whyFit4": "Et basseng med tydelig dokumenterte dimensjoner og driftskrav",
+    "product.whyCheck": "Før kjøp, sjekk anbefalt installasjonsflate, total fylt vekt, vannkapasitet, driftstrykk, inkludert tilbehør og lokale sikkerhetskrav.",
+    "product.whyCompare": "Sammenlign denne modellen med andre Felizbay-bassenger for å finne alternativet som passer best til din tiltenkte bruk.",
+    "product.whyCta": "Sammenlign alle modeller",
+    "product.buyingGuideLink": "Kjøpeguide"
   },
   "el": {
     "nav.products": "Προϊόντα",
@@ -2402,7 +2522,17 @@
     "product.returnsCard": "Επιστροφές",
     "product.warrantyCard": "Εγγύηση & Υποστήριξη",
     "product.diagTopView": "Κάτοψη",
-    "product.diagSideView": "Πλαϊνή όψη"
+    "product.diagSideView": "Πλαϊνή όψη",
+    "product.whyTitle": "Γιατί αυτή η πισίνα μπορεί να είναι κατάλληλη για εσάς",
+    "product.whyIntro": "Αυτό το μοντέλο Felizbay μπορεί να είναι κατάλληλο αν ψάχνετε για:",
+    "product.whyFit1": "Μια φουσκωτή πισίνα drop-stitch για εξωτερική χρήση",
+    "product.whyFit2": "Μέγεθος πισίνας που ταιριάζει με τον διαθέσιμο χώρο σας",
+    "product.whyFit3": "Ένα προϊόν που μπορεί να αποστραγγιστεί, να ξεφουσκώσει και να αποθηκευτεί όταν δεν χρησιμοποιείται",
+    "product.whyFit4": "Πισίνα με σαφώς τεκμηριωμένες διαστάσεις και απαιτήσεις λειτουργίας",
+    "product.whyCheck": "Πριν από την αγορά, ελέγξτε τη συνιστώμενη επιφάνεια εγκατάστασης, το συνολικό βάρος πλήρωσης, τη χωρητικότητα νερού, την πίεση λειτουργίας, τα συμπεριλαμβανόμενα εξαρτήματα και τις τοπικές απαιτήσεις ασφάλειας.",
+    "product.whyCompare": "Συγκρίνετε αυτό το μοντέλο με άλλες πισίνες Felizbay για να βρείτε την επιλογή που ταιριάζει καλύτερα στην προβλεπόμενη χρήση σας.",
+    "product.whyCta": "Σύγκριση όλων των μοντέλων",
+    "product.buyingGuideLink": "Οδηγός αγοράς"
   },
   "fi": {
     "nav.products": "Tuotteet",
@@ -2587,7 +2717,17 @@
     "product.returnsCard": "Palauttaa",
     "product.warrantyCard": "Takuu ja tuki",
     "product.diagTopView": "Näkymä ylhäältä",
-    "product.diagSideView": "Sivunäkymä"
+    "product.diagSideView": "Sivunäkymä",
+    "product.whyTitle": "Miksi tämä uima-allas voi olla oikea sinulle",
+    "product.whyIntro": "Tämä Felizbay-malli voi olla sopiva, jos etsit:",
+    "product.whyFit1": "Puhallettava Drop Stitch -uima-allas ulkokäyttöön",
+    "product.whyFit2": "Uima-altaan koko, joka vastaa varattavissa olevaa tilaasi",
+    "product.whyFit3": "Tuote, joka voidaan tyhjentää, tyhjentää ja varastoida, kun sitä ei käytetä",
+    "product.whyFit4": "Uima-allas, jossa on selkeästi dokumentoidut mitat ja toimintavaatimukset",
+    "product.whyCheck": "Tarkista ennen ostamista suositeltu asennuspinta, kokonaispaino, vesitilavuus, käyttöpaine, mukana toimitetut lisävarusteet ja paikalliset turvallisuusvaatimukset.",
+    "product.whyCompare": "Vertaa tätä mallia muihin Felizbay-altaisiin löytääksesi vaihtoehdon, joka sopii parhaiten käyttötarkoitukseesi.",
+    "product.whyCta": "Vertaa kaikkia malleja",
+    "product.buyingGuideLink": "Osto-opas"
   },
   "da": {
     "nav.products": "Produkter",
@@ -2772,7 +2912,17 @@
     "product.returnsCard": "Returnerer",
     "product.warrantyCard": "Garanti & Support",
     "product.diagTopView": "Set ovenfra",
-    "product.diagSideView": "Set fra siden"
+    "product.diagSideView": "Set fra siden",
+    "product.whyTitle": "Hvorfor denne pool kan være det rigtige for dig",
+    "product.whyIntro": "Denne Felizbay model kan være en god pasform, hvis du leder efter:",
+    "product.whyFit1": "En drop-stitch oppustelig pool til udendørs brug",
+    "product.whyFit2": "En poolstørrelse, der matcher din ledige plads",
+    "product.whyFit3": "Et produkt, der kan drænes, tømmes for luft og opbevares, når det ikke er i brug",
+    "product.whyFit4": "En pool med klart dokumenterede dimensioner og driftskrav",
+    "product.whyCheck": "Før du køber, skal du kontrollere den anbefalede installationsoverflade, samlet fyldt vægt, vandkapacitet, driftstryk, inkluderet tilbehør og lokale sikkerhedskrav.",
+    "product.whyCompare": "Sammenlign denne model med andre Felizbay-pools for at finde den mulighed, der passer bedst til din tilsigtede brug.",
+    "product.whyCta": "Sammenlign alle modeller",
+    "product.buyingGuideLink": "Købsguide"
   },
   "th": {
     "nav.signIn": "เข้าสู่ระบบ",
@@ -3512,7 +3662,17 @@
     "product.returnsCard": "Návraty",
     "product.warrantyCard": "Záruka a podpora",
     "product.diagTopView": "Pohled shora",
-    "product.diagSideView": "Boční pohled"
+    "product.diagSideView": "Boční pohled",
+    "product.whyTitle": "Proč je tento bazén pro vás ten pravý",
+    "product.whyIntro": "Tento model Felizbay může být vhodný, pokud hledáte:",
+    "product.whyFit1": "Nafukovací bazén drop-stitch pro venkovní použití",
+    "product.whyFit2": "Velikost bazénu, která odpovídá dostupnému prostoru",
+    "product.whyFit3": "Produkt, který lze vypustit, vyfouknout a skladovat, když se nepoužívá",
+    "product.whyFit4": "Bazén s jasně zdokumentovanými rozměry a provozními požadavky",
+    "product.whyCheck": "Před nákupem zkontrolujte doporučenou instalační plochu, celkovou naplněnou hmotnost, objem vody, provozní tlak, přiložené příslušenství a místní bezpečnostní požadavky.",
+    "product.whyCompare": "Porovnejte tento model s jinými bazény Felizbay a najděte možnost, která nejlépe odpovídá vašemu zamýšlenému použití.",
+    "product.whyCta": "Porovnat všechny modely",
+    "product.buyingGuideLink": "Průvodce nákupem"
   },
   "hr": {
     "nav.signIn": "Prijava",

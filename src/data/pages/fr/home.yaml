@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Trempage assis dans des espaces compacts'
       href: /products/hot-tub-square-rect
   note: 'Toutes les collections : 4 à 5 parois PSI drop-stitch, gonflage de 5 à 15 minutes, rangement pliable. Le chauffage et la filtration sont externes — les réchauffeurs et les pompes de filtration sont vendus séparément.'
+
+content_evidence:
+  tagline: 'Pourquoi Felizbay'
+  title: 'Pourquoi choisir une piscine Felizbay Drop Stitch ?'
+  subtitle: 'Choisissez une piscine en fonction de votre espace, de la façon dont vous prévoyez de l''utiliser et des fonctionnalités qui comptent le plus pour vous.'
+  items:
+    - title: 'Conçu pour la vie en plein air'
+      description: 'Explorez les options de piscine pour la détente dans la cour arrière, le temps d''eau en famille, le trempage en plein air et les propriétés de vacances saisonnières.'
+      icon: tabler:home
+      cta: 'Parcourir les idées de piscines'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Comparer les spécifications des produits réels'
+      description: 'Examinez les dimensions, la capacité en eau, la pression de fonctionnement recommandée, les accessoires inclus et les exigences d''installation avant de choisir.'
+      icon: tabler:table
+      cta: 'Afficher les spécifications'
+      cta_href: /products/specs
+    - title: 'Comprendre la construction Drop Stitch'
+      description: 'Découvrez comment fonctionne la structure interne, ce que cela signifie pour la forme et le stockage de la piscine, et comment les performances du produit dépendent d''un gonflage et d''une configuration appropriés.'
+      icon: tabler:hexagon
+      cta: 'Lire le guide'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Choisissez en toute confiance'
+      description: 'Accédez aux manuels des produits, aux instructions d''entretien, aux détails de la garantie et à l''assistance pour déterminer si une piscine Felizbay répond à vos besoins.'
+      icon: tabler:shield-check
+      cta: 'Lire la FAQ'
+      cta_href: /faq

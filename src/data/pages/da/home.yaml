@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Siddende iblødsætning i kompakte rum'
       href: /products/hot-tub-square-rect
   note: 'Alle samlinger: 4–5 PSI drop-stitch-vægge, 5–15 min. oppustning, opbevaring til opbevaring. Opvarmning og filtrering er ekstern - varmelegemer og filterpumper sælges separat.'
+
+content_evidence:
+  tagline: 'Hvorfor Felizbay'
+  title: 'Hvorfor vælge en Felizbay Drop Stitch Pool?'
+  subtitle: 'Vælg en pool baseret på din plads, hvordan du planlægger at bruge den, og de funktioner, der betyder mest for dig.'
+  items:
+    - title: 'Designet til udendørs brug'
+      description: 'Udforsk poolmuligheder til afslapning i baghaven, familievandtid, udendørs iblødsætning og sæsonbestemte ferieboliger.'
+      icon: tabler:home
+      cta: 'Gennemse poolideer'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Sammenlign ægte produktspecifikationer'
+      description: 'Gennemgå dimensioner, vandkapacitet, anbefalet driftstryk, inkluderet tilbehør og installationskrav, før du vælger.'
+      icon: tabler:table
+      cta: 'Se specifikationer'
+      cta_href: /products/specs
+    - title: 'Forstå Drop Stitch-konstruktion'
+      description: 'Lær, hvordan den interne struktur fungerer, hvad det betyder for poolform og opbevaring, og hvordan produktets ydeevne afhænger af korrekt oppustning og opsætning.'
+      icon: tabler:hexagon
+      cta: 'Læs vejledningen'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Vælg med tillid'
+      description: 'Få adgang til produktmanualer, vedligeholdelsesinstruktioner, garantioplysninger og support for at hjælpe med at afgøre, om en Felizbay-pool passer til dine behov.'
+      icon: tabler:shield-check
+      cta: 'Læs ofte stillede spørgsmål'
+      cta_href: /faq

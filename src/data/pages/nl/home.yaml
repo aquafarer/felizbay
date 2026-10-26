@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Zittend genieten in compacte ruimtes'
       href: /products/hot-tub-square-rect
   note: 'Alle collecties: 4–5 PSI drop-stitch-wanden, 5–15 min. opblazen, opbergruimte. Verwarming en filtratie zijn extern; verwarmingen en filterpompen worden afzonderlijk verkocht.'
+
+content_evidence:
+  tagline: 'Waarom Felizbay'
+  title: 'Waarom kiezen voor een Felizbay Drop Stitch Pool?'
+  subtitle: 'Kies een zwembad op basis van je ruimte, hoe je het wilt gebruiken en de functies die voor jou het belangrijkst zijn.'
+  items:
+    - title: 'Ontworpen voor buitenleven'
+      description: 'Ontdek zwembadopties voor ontspanning in de achtertuin, familiewatertijd, buitenweken en seizoensgebonden vakantiewoningen.'
+      icon: tabler:home
+      cta: 'Blader door poolideeën'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Echte productspecificaties vergelijken'
+      description: 'Beoordeel de afmetingen, de watercapaciteit, de aanbevolen werkdruk, de meegeleverde accessoires en de installatievereisten voordat u een keuze maakt.'
+      icon: tabler:table
+      cta: 'Specificaties bekijken'
+      cta_href: /products/specs
+    - title: 'Drop Stitch-constructie begrijpen'
+      description: 'Leer hoe de interne structuur werkt, wat het betekent voor de vorm en opslag van het zwembad en hoe de productprestaties afhangen van de juiste inflatie en opstelling.'
+      icon: tabler:hexagon
+      cta: 'Lees de gids'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Kies met vertrouwen'
+      description: 'Raadpleeg producthandleidingen, onderhoudsinstructies, garantiedetails en ondersteuning om te bepalen of een Felizbay-zwembad aan uw behoeften voldoet.'
+      icon: tabler:shield-check
+      cta: 'Lees de FAQ'
+      cta_href: /faq

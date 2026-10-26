@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'الجلوس في مساحات صغيرة'
       href: /products/hot-tub-square-rect
   note: 'جميع المجموعات: 4-5 جدران PSI drop-stitch، نفخ لمدة 5-15 دقيقة، تخزين معبأ. التدفئة والترشيح خارجيان - تُباع السخانات ومضخات الفلتر بشكل منفصل.'
+
+content_evidence:
+  tagline: 'لماذا Felizbay'
+  title: 'لماذا تختار حمام سباحة Felizbay Drop Stitch ؟'
+  subtitle: 'اختر حمام سباحة بناءً على المساحة المتاحة لديك، وكيف تخطط لاستخدامه، والميزات التي تهمك أكثر.'
+  items:
+    - title: 'مصمم للمعيشة في الهواء الطلق'
+      description: 'استكشف خيارات حمام السباحة للاسترخاء في الفناء الخلفي، ووقت المياه العائلي، والنقع في الهواء الطلق، وخصائص العطلات الموسمية.'
+      icon: tabler:home
+      cta: 'تصفح أفكار حمامات السباحة'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'مقارنة مواصفات المنتج الحقيقية'
+      description: 'راجع الأبعاد وسعة المياه وضغط التشغيل الموصى به والملحقات المضمنة ومتطلبات التركيب قبل الاختيار.'
+      icon: tabler:table
+      cta: 'عرض المواصفات'
+      cta_href: /products/specs
+    - title: 'فهم بناء Drop Stitch'
+      description: 'تعرف على كيفية عمل الهيكل الداخلي، وما يعنيه لشكل التجمع والتخزين، وكيف يعتمد أداء المنتج على التضخم والإعداد المناسبين.'
+      icon: tabler:hexagon
+      cta: 'إقرأ الدليل'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'اختر بثقة'
+      description: 'يمكنك الوصول إلى أدلة المنتج وتعليمات العناية وتفاصيل الضمان والدعم للمساعدة في تحديد ما إذا كان حمام سباحة Felizbay يناسب احتياجاتك.'
+      icon: tabler:shield-check
+      cta: 'اقرأ الأسئلة الشائعة'
+      cta_href: /faq

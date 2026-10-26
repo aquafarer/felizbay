@@ -30,6 +30,7 @@ import PackageContents from '~/components/product/PackageContents.astro';
 import SetupStorage from '~/components/product/SetupStorage.astro';
 import ProductFaq from '~/components/product/ProductFaq.astro';
 import SpecTable from '~/components/product/SpecTable.astro';
+import WhyThisPool from '~/components/product/WhyThisPool.astro';
 import SupportCards from '~/components/product/SupportCards.astro';
 import StickyBuyBar from '~/components/product/StickyBuyBar.astro';
 
@@ -177,6 +178,15 @@ const DETAIL_UI_KEYS = [
   'product.faqTitle',
   'product.retailPrice',
   'product.buyNow',
+  'product.whyTitle',
+  'product.whyIntro',
+  'product.whyFit1',
+  'product.whyFit2',
+  'product.whyFit3',
+  'product.whyFit4',
+  'product.whyCheck',
+  'product.whyCompare',
+  'product.whyCta',
 ];
 const detailUi: Record<string, string> = Object.fromEntries(DETAIL_UI_KEYS.map((k) => [k, tEn(k)]));
 
@@ -697,6 +707,9 @@ const specGroups = detailV2
       </section>
     )
   }
+  {/* Why This Pool (audit §10.2) */}
+  {rec && <WhyThisPool ui={detailUi} compareHref="/products/compare" />}
+
   {/* Module 06 — Package Contents (detail V2) */}
   {
     detailV2 && (

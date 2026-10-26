@@ -231,3 +231,29 @@ compare_collections:
       best_for: 'Imersão sentada em espaços compactos'
       href: /products/hot-tub-square-rect
   note: 'Todas as coleções: paredes drop-stitch de 4–5 PSI, inflação de 5–15 min, armazenamento portátil. O aquecimento e a filtragem são externos – os aquecedores e as bombas de filtro são vendidos separadamente.'
+
+content_evidence:
+  tagline: 'Por que Felizbay'
+  title: 'Por que escolher uma piscina Felizbay Drop Stitch?'
+  subtitle: 'Escolha uma piscina com base no seu espaço, na forma como planeia usá-la e nas funcionalidades que mais lhe interessam.'
+  items:
+    - title: 'Concebido para a vida ao ar livre'
+      description: 'Explore as opções de piscina para relaxar no quintal, tempo de água em família, imersão ao ar livre e propriedades de férias sazonais.'
+      icon: tabler:home
+      cta: 'Procurar ideias para a piscina'
+      cta_href: /pool-ideas/backyard-pools-for-families
+    - title: 'Comparar especificações reais do produto'
+      description: 'Revise as dimensões, a capacidade de água, a pressão de operação recomendada, os acessórios incluídos e os requisitos de instalação antes de escolher.'
+      icon: tabler:table
+      cta: 'Ver Especificações'
+      cta_href: /products/specs
+    - title: 'Compreender a Construção Drop Stitch'
+      description: 'Saiba como a estrutura interna funciona, o que isso significa para a forma e o armazenamento da piscina e como o desempenho do produto depende da inflação e da configuração adequadas.'
+      icon: tabler:hexagon
+      cta: 'Leia o guia'
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+    - title: 'Escolha com confiança'
+      description: 'Acesse manuais de produtos, instruções de cuidados, detalhes de garantia e suporte para ajudar a determinar se uma piscina Felizbay atende às suas necessidades.'
+      icon: tabler:shield-check
+      cta: 'Leia as Perguntas Frequentes'
+      cta_href: /faq

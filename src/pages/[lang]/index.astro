@@ -33,6 +33,7 @@ const hero = page.hero ?? {};
 const stats = page.stats ?? {};
 const compareCollections = page.compare_collections ?? {};
 const customerTypes = page.content_customer_types ?? {};
+const evidence = page.content_evidence ?? {};
 const features = page.features ?? {};
 const categories = page.content_categories ?? {};
 const workshop = page.content_workshop ?? {};
@@ -42,6 +43,15 @@ const faqs = page.faqs ?? {};
 const cta = page.cta ?? {};
 
 const poolProducts = (await getProducts({ limit: 3 })).map((p) => localizeProductData(p, lang || defaultLang));
+
+const evidenceItems = (evidence.items ?? []).map(
+  (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
+    title: item.title,
+    description: item.description,
+    icon: item.icon,
+    callToAction: item.cta ? { text: item.cta, href: item.cta_href, icon: 'tabler:arrow-right' } : undefined,
+  })
+);
 
 const customerItems = (customerTypes.items ?? []).map(
   (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
@@ -143,6 +153,18 @@ const metadata = {
         <p class="mt-4 text-center text-sm text-muted dark:text-slate-400">{compareCollections.note}</p>
       </section>
     ) : null
+  }
+
+  {
+    evidence.items && evidence.items.length > 0 && (
+      <Features2
+        tagline={evidence.tagline}
+        title={evidence.title}
+        subtitle={evidence.subtitle}
+        columns={4}
+        items={evidenceItems}
+      />
+    )
   }
 
   <Features2
