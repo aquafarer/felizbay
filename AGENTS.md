@@ -73,7 +73,7 @@ scripts/               # Build pipeline + gates (see Build Pipeline below)
 
 ### Redirects
 
-All legacy redirect pages were migrated from `Astro.redirect()` page files (0-byte shells in static mode) to the `LEGACY_REDIRECTS` table in `astro.config.ts`, expanded to all 14 non-en languages by `buildLocalizedRedirects` + the `mirror-root-en` script. Do NOT add new `Astro.redirect()` page files — add entries to `LEGACY_REDIRECTS` instead.
+Locale-removal redirects live in the `redirects` object in `astro.config.ts` (`/zh/`, `/ja/`, `/ko/` → `/` — meta-refresh + noindex shell pages). The former `LEGACY_REDIRECTS` boat-route table and its `buildLocalizedRedirects` expander were removed with the 2026-10 boat-content cleanup — do not reintroduce them. Do NOT add new `Astro.redirect()` page files — add entries to the `redirects` object instead.
 
 ### Path Aliases
 

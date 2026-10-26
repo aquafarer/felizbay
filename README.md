@@ -17,21 +17,21 @@ Multilingual (37 languages) water sports equipment site for **Felizbay**, built 
 
 Read in this order to grasp the whole system fastest (≈10 minutes):
 
-| #   | Read this first        | What you learn                                                                          |
-| --- | ---------------------- | --------------------------------------------------------------------------------------- |
-| 1   | `AGENTS.md`            | Agent operating rules: build/check commands, iron rules (encoding, gates), conventions  |
-| 2   | `TECH.md`              | Full Chinese tech deep-dive: i18n system, product pages, Workers, R2, common pitfalls   |
-| 3   | `README.md` §1–6       | Architecture overview, tech stack, directory map, Workers, routing, build pipeline      |
-| 4   | `README.md` §7–9       | SEO/GEO strategy, content pipeline, navigation system                                   |
-| 5   | `astro.config.ts`      | All routes, redirects (`LEGACY_REDIRECTS`), compressHTML, Vite plugins (yaml, tailwind) |
-| 6   | `src/config.yaml`      | Site-wide configuration (loaded as `astrowind:config` virtual module)                   |
-| 7   | `package.json` scripts | Every pipeline entry point (build, deploy, check, gates)                                |
+| #   | Read this first        | What you learn                                                                                           |
+| --- | ---------------------- | -------------------------------------------------------------------------------------------------------- |
+| 1   | `AGENTS.md`            | Agent operating rules: build/check commands, iron rules (encoding, gates), conventions                   |
+| 2   | `TECH.md`              | Full Chinese tech deep-dive: i18n system, product pages, Workers, R2, common pitfalls                    |
+| 3   | `README.md` §1–6       | Architecture overview, tech stack, directory map, Workers, routing, build pipeline                       |
+| 4   | `README.md` §7–9       | SEO/GEO strategy, content pipeline, navigation system                                                    |
+| 5   | `astro.config.ts`      | All routes, locale-removal redirects (`/zh/`,`/ja/`,`/ko/`), compressHTML, Vite plugins (yaml, tailwind) |
+| 6   | `src/config.yaml`      | Site-wide configuration (loaded as `astrowind:config` virtual module)                                    |
+| 7   | `package.json` scripts | Every pipeline entry point (build, deploy, check, gates)                                                 |
 
 **Where each piece of architecture lives (file map):**
 
 | Topic                                | Location                                                                                                                                                             |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Routing & redirects                  | `astro.config.ts` (routes + `LEGACY_REDIRECTS` ×14 langs via `buildLocalizedRedirects`)                                                                              |
+| Routing & redirects                  | `astro.config.ts` (routes + zh/ja/ko locale-removal redirects in the `redirects` object)                                                                             |
 | Locale detection / middleware        | `functions/_middleware.ts` (Pages Functions), `src/i18n/utils.ts`                                                                                                    |
 | Languages (37) & degraded set        | `src/i18n/config.ts`, `src/i18n/root-only.ts`, `src/i18n/v2-converged.ts`                                                                                            |
 | Navigation (YAML-driven, 37 langs)   | `src/navigation.ts`, `src/config.yaml`, per-lang overrides; editor at `src/pages/keystatic/navigation.astro`                                                         |
@@ -579,7 +579,7 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 | `scripts/fill-missing-i18n-keys.mjs` | Fill missing i18n keys with EN copy (fallback before translation)               | —                      |
 | `scripts/check-translations.mjs`     | Verify i18n key alignment across all 14 languages                               | —                      |
 
-**Translation cache:** `.cache/i18n-translate-cache.json` (gitignored)
+**Translation cache:** `.cache/i18n-translate-cache.json` (git-tracked, in `.cache/`)
 
 **Key rules:** Technical terms (Drop-Stitch/PVC/OEM/ISO/FAQ/WhatsApp/Felizbay) are never translated — kept as-is in all languages. Cognates matching EN (e.g. French "Certifications") are also preserved.
 

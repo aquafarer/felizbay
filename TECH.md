@@ -342,7 +342,7 @@ product.pageDesc   → (所有语言文件中缺失, 从未被提取脚本生成
 | `scripts/fill-missing-i18n-keys.mjs` | 用 EN 副本填充缺失 i18n 键 (翻译前 fallback)            | —                      |
 | `scripts/check-translations.mjs`     | 校验 14 语言 i18n 键对齐                                | —                      |
 
-**翻译缓存:** `.cache/i18n-translate-cache.json` (gitignored)
+**翻译缓存:** `.cache/i18n-translate-cache.json` (git 跟踪, 位于 `.cache/`)
 
 **不翻译规则:** 技术术语 (Drop-Stitch/PVC/OEM/ISO/FAQ/WhatsApp/Felizbay) 所有语言保留原文。同源词 (如法语 "Certifications" = EN "Certifications") 也保留原文——Google Translate 也返回相同值。
 
@@ -1829,6 +1829,8 @@ _patch-pages.cjs → 自动注入 import/setter 到 [lang]/ 页面
 
 日常批量编辑改用 `yaml-set.mjs` (§15.3); dist 产物的英文残留可用全仓 `rg` 扫描替代 i18n-endiff。若未来重新接入新语言, 需重建等价的 UI 键注入/泄漏审计工具。
 
+**船内容翻译缓存二次清理 (2026-10-26 第二轮):** `.cache/` 5 个 git 跟踪缓存移除全部残留船词条 — `product-translate-cache.json` 整文件删除 (6,489 条孤儿缓存, 消费脚本 translate-products.mjs 已于第一轮退役, translate-products.yml 零引用); 4 个活跃缓存 (body-components / i18n-translate / page-meta / content-v2-bing) 以词元级检测共删 9,270 条 (首遍 8,936 + 复合词增量 334), 覆盖德语复合词 (Sportboote/Bootstypen/Bootsfender/Bootssicherheit)、RCD 设计类别、救生衣 (life vest/jacket) 选购指南、潜水包船等船时代内容。误报防护: 挪/丹麦语 -kravene/-prøvene/-lovene 词尾、瑞典语 båda、芬兰语 vene (partiovene 等真船词除外已显式匹配)、阿拉伯语 مقاربة 等以负向断言/词元检测排除; 清理后 token 检测器归零, 宽松正则仅剩 9 处已知词形保留项 (kravene 类, 均为现役泳池/B2B 内容)。教训: 简单 `endsWith`/`startsWith` 前后缀匹配对屈折语复合词既漏报 (德语复合词) 又误报 (kravene), 清理多语言缓存必须用词元级检测 + 逐样本人工复核。
+
 ### 15.3 yaml-set.mjs
 
 spec.json 驱动的通用批量编辑器, 适合"同一改动跨多语言"的场景 (统一措辞、改标题、删字段):
@@ -1876,7 +1878,7 @@ spec.json 驱动的通用批量编辑器, 适合"同一改动跨多语言"的场
 | `src/data/site/languages.yaml`                                     | 切换器注册表 (code/name/locale/textDirection/enabled) — 用户展示顺序, Header 有 `enabled !== false` 过滤; 亦驱动 pageLangs、check 门槛 locales、hreflang enabled 集                                                                                                          |
 | `functions/_middleware.ts`                                         | CF Pages 语言重定向: `LANGUAGES` + `REMOVED_LOCALES` (zh,vi,hi,ja,ko) + `ACCEPT_LANG_MAP` (含 fil→tl, iw→he, in→id 别名) + `LOCALE_MAP` (国家码→语言)                                                                                                                        |
 | `src/config/seo-suppress.json` + `src/config/sitemap-exclude.json` | 22 码 noindex 正则 `^/(?:az\|bg\|et\|fa\|he\|hr\|hu\|id\|kk\|lt\|lv\|ms\|ro\|sk\|sl\|sr\|th\|tl\|tr\|uk\|uz\|zh)(?:/\|$)` (cs 2026-09-27, sv/da/el/no/ru + nl/fi/pl/ar/pt 2026-09-28 毕业移出; ja/ko/vi 2026-10-16 随语言删除移出) — sitemap 从 seo-suppress 派生 (单一来源) |
-| `astro.config.ts`                                                  | `buildLocalizedRedirects` locales — v2/遗留重定向 × 语言前缀                                                                                                                                                                                                                 |
+| `astro.config.ts`                                                  | `redirects` 对象语言下架壳页 (`/zh/`,`/ja/`,`/ko/` → `/`; 旧 `LEGACY_REDIRECTS`/`buildLocalizedRedirects` 已随 2026-10 船内容清理移除)                                                                                                                                       |
 | `scripts/fold-untranslated-canonical.mjs`                          | `LANGS` 列表 (noindex 页自动跳过, 毕业后才实际生效) + `STOPWORDS` 语言检测词条 (cs 2026-09-27、pl 2026-09-28 新增; sv/no/da/nl/fi/pt 原有, el/ru/ar 走 NON_LATIN 正则; ja 2026-09-29 新增 NON_LATIN CJK 正则 — 停用词机制只匹配拉丁 token, 对日文无效)                       |
 | `scripts/generate-geo-files.ts` / `scripts/build-geo-v4.ts`        | llms-full.txt 语言段 + 每语言 llms.txt (`tagline[lang] \|\| tagline.en` 安全回退)                                                                                                                                                                                            |
 
