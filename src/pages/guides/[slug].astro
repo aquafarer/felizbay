@@ -312,6 +312,24 @@ const formatDate = (iso: string) =>
       }
 
       {
+        !isProcurement && (
+          <div class="mt-12 p-6 rounded-2xl bg-sky-50 dark:bg-slate-800/60 border border-sky-100 dark:border-slate-700 text-center">
+            <h2 class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-2">Ready to compare specific models?</h2>
+            <p class="text-gray-500 dark:text-slate-400 text-sm mb-5 max-w-xl mx-auto">
+              Read the full buying guide — collection comparison, scenario recommendations, and a pre-purchase
+              checklist.
+            </p>
+            <a
+              href="/best-drop-stitch-inflatable-pools"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+            >
+              <Icon name="tabler:book" class="w-4 h-4" /> Best Drop Stitch Inflatable Pools — Buying Guide
+            </a>
+          </div>
+        )
+      }
+
+      {
         article.relatedProducts.length > 0 && (
           <section class="mt-12">
             <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-4">

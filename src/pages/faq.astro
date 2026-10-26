@@ -101,5 +101,20 @@ for (const g of [...guides, ...procurementGuides]) guideTitleBySlug[g.slug] = g.
     ))
   }
 
+  <section class="max-w-3xl mx-auto pb-24 px-6">
+    <div class="p-8 rounded-2xl bg-sky-50 dark:bg-slate-800/60 border border-sky-100 dark:border-slate-700 text-center">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100 mb-2">Still comparing models?</h2>
+      <p class="text-gray-500 dark:text-slate-400 mb-6 max-w-xl mx-auto">
+        Read the full buying guide — collection comparison, scenario recommendations, and a pre-purchase checklist.
+      </p>
+      <a
+        href="/best-drop-stitch-inflatable-pools"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+      >
+        Best Drop Stitch Inflatable Pools — Buying Guide
+      </a>
+    </div>
+  </section>
+
   <JsonLd type="FAQPage" faqs={faqs.map((f) => ({ q: f.question, a: f.answer }))} />
 </Layout>
