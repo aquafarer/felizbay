@@ -2,17 +2,14 @@ name: SEO / GEO 闸门
 
 # 三层防护：
 #   1. PR 时跑构建后闸门（05_ci_gate.py）—— 拦住新增的空壳页、语言串台、箭头污染
-#   2. 每周定时跑品牌定位一致性（07_positioning_check.py）
-#   （注：04_verify_cloudflare_robots.py 与 01_audit_site.py 未入库，
-#    对应定时任务一并移除；脚本恢复后再加回 cloudflare-robots / live-audit job）
+#   （注：04_verify_cloudflare_robots.py、01_audit_site.py、07_positioning_check.py 未入库，
+#    对应定时任务一并移除；脚本恢复后再加回 cloudflare-robots / live-audit / positioning job）
 
 on:
   pull_request:
     branches: [main]
   push:
     branches: [main]
-  schedule:
-    - cron: '0 2 * * 1'   # 每周一 02:00 UTC（北京时间 10:00）
   workflow_dispatch:
 
 jobs:
@@ -73,18 +70,3 @@ jobs:
               repo: context.repo.repo,
               body: '## SEO / GEO 闸门结果\n\n' + body,
             });
-
-  positioning-gate:
-    name: 品牌定位一致性检查（07）
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
-        with:
-          python-version: '3.12'
-      - name: 检查三条产品线落地页 / OEM-ODM 主路径 / 首页必需词 / schema 统一 / 禁用表述
-        run: python3 scripts/07_positioning_check.py --strict --base https://felizbay.com
-        # 画像：RIB Boats, Inflatable Boats, SUP Boards Manufacturer & OEM/ODM Solution
-        # 阻断项（19 项清单）→ exit 1；告警（5 项）仅提示
