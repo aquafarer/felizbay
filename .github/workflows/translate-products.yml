@@ -8,9 +8,9 @@ on:
         required: true
         default: 'cs'
       mode:
-        description: 'What to translate: productTexts | content | content-all | content-refine | refine | page-meta | body-components'
+        description: 'What to translate: content | content-all | content-refine | page-meta | body-components'
         required: true
-        default: 'productTexts'
+        default: 'content'
 
 permissions:
   contents: write
@@ -27,14 +27,6 @@ jobs:
           node-version: 22
 
       # These scripts use only node builtins (fs/path/url/fetch) — no npm install needed.
-      - name: Translate productTexts for ${{ github.event.inputs.lang }}
-        if: github.event.inputs.mode == 'productTexts'
-        run: node scripts/translate-products.mjs --lang=${{ github.event.inputs.lang }}
-
-      - name: Inject RIB titles/summaries into product-l10n
-        if: github.event.inputs.mode == 'productTexts'
-        run: node scripts/inject-rib-l10n.mjs
-
       - name: Translate product MDX content for ${{ github.event.inputs.lang }}
         if: github.event.inputs.mode == 'content'
         run: node scripts/translate-content-l10n.mjs --lang=${{ github.event.inputs.lang }}
@@ -46,10 +38,6 @@ jobs:
       - name: Refine partial content translations for ${{ github.event.inputs.lang }}
         if: github.event.inputs.mode == 'content-refine'
         run: node scripts/translate-content-l10n.mjs --lang=${{ github.event.inputs.lang }} --refine
-
-      - name: Refine fallback fields for ${{ github.event.inputs.lang }}
-        if: github.event.inputs.mode == 'refine'
-        run: node scripts/translate-products.mjs --lang=${{ github.event.inputs.lang }} --refine
 
       - name: Translate page META blocks (${{ github.event.inputs.lang }})
         if: github.event.inputs.mode == 'page-meta' && github.event.inputs.lang != 'all'

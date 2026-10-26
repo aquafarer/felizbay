@@ -107,7 +107,7 @@ jobs:
         run: |
           code=$(curl -sS -o /tmp/ask.json -w '%{http_code}' -X POST "https://felizbay.com/api/ask" \
             -H "Content-Type: application/json" \
-            -d '{"question":"What boats does Felizbay manufacture?"}')
+            -d '{"question":"What pools does Felizbay manufacture?"}')
           echo "[ask] HTTP $code: $(head -c 500 /tmp/ask.json)"
           answer=$(jq -r '.answer // empty' /tmp/ask.json)
           if [ "$code" != "200" ] || [ -z "$answer" ]; then

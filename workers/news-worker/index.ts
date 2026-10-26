@@ -138,7 +138,7 @@ ${extraHead}
 </header>
 ${body}
 <footer>
-  <p>© ${new Date().getFullYear()} Felizbay — Inflatable boats, RIBs, SUP boards & kayaks. <a href="${langRoot(lang)}">${escapeHtml('Visit felizbay.com')}</a></p>
+  <p>© ${new Date().getFullYear()} Felizbay — Drop stitch inflatable pools & spa pools. <a href="${langRoot(lang)}">${escapeHtml('Visit felizbay.com')}</a></p>
 </footer>
 </div>
 </body>

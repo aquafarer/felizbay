@@ -25,7 +25,6 @@
     "deploy:worker-news": "npx wrangler deploy -c workers/news-worker/wrangler.toml",
     "deploy:worker-automation": "npx wrangler deploy -c workers/automation-worker/wrangler.toml",
     "deploy:workers": "node scripts/deploy-workers.mjs",
-    "seo:pipeline": "node scripts/seo-pipeline.mjs",
     "geo:build": "node scripts/geo-build.mjs",
     "ai:corpus": "node scripts/generate-ai-corpus.mjs",
     "ai:seed": "node scripts/seed-vectorize.mjs",

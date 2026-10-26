@@ -9,7 +9,7 @@ Multilingual (37 languages) water sports equipment site for **Felizbay**, built 
 
 **2026-08 architecture snapshot** (previous): Astro 7.2 / Vite 8 (`@tailwindcss/vite`, postcss removed) · seo-worker deleted, **5 Workers** (contact/ai/admin/news/automation) · legacy `Astro.redirect()` pages migrated to `LEGACY_REDIRECTS` in `astro.config.ts` · i18n build data split: `site-data.ts` (2.2 MiB, `site-*` keys) + `pages/*.ts` (~110 per-page modules), full JSON kept in `src/i18n/generated/` (never in `public/` — Pages rejects files ≥ 25 MiB) · `content-v2*` keys excluded (loaded directly from YAML by `src/data/content-v2.ts`).
 
-**i18n translation milestone (2026-08-31):** 14 languages × 1,721 keys fully aligned (0 missing/extra) · 3,807 sameAsEn keys translated via Google Translate API (primary) + MyMemory (backup) · 2,456 orphan keys cleaned from ar/no/el/fi · 252/252 page YAMLs translated (14 langs × 18 pages) · EN 404.explore fix propagated · remaining 808 sameAsEn = 540 technical terms + 109 cognates + 29 brand names + 124 short words/numbers (all verified correct). Translation scripts: `scripts/translate-i18n-keys.mjs`, `scripts/translate-pages.mjs` (`--dry-run`/`--force` flags).
+**i18n translation milestone (2026-08-31):** 14 languages × 1,721 keys fully aligned (0 missing/extra) · 3,807 sameAsEn keys translated via Google Translate API (primary) + MyMemory (backup) · 2,456 orphan keys cleaned from ar/no/el/fi · 252/252 page YAMLs translated (14 langs × 18 pages) · EN 404.explore fix propagated · remaining 808 sameAsEn = 540 technical terms + 109 cognates + 29 brand names + 124 short words/numbers (all verified correct). Translation scripts: `scripts/translate-i18n-keys.mjs` (`--dry-run`/`--force` flags).
 
 ---
 
@@ -138,13 +138,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  │  │  ├── Felizbay.astro     # Felizbay entity page
 │  │  │  │  └── team.astro          # Team entity (founder, leadership, 6 profiles)
 │  │  │  ├── brand-story.astro      # Brand story
-│  │  │  ├── brand-marine-expertise.astro # Marine engineering expertise
 │  │  │  ├── brand-global-presence.astro  # Global presence
-│  │  │  ├── brand-why-Felizbay.astro    # Why Felizbay (legacy)
-│  │  │  ├── why-Felizbay.astro          # Why Felizbay (3-pillar brand page)
-│  │  │  ├── industries/
-│  │  │  │  ├── schools.astro             # School equipment solutions
-│  │  │  │  └── distributors.astro        # Distributor partnership program
 │  │  │  ├── certifications.astro   # CE, ISO 9001, UKCA, BSCI, REACH, safety
 │  │  │  ├── partners.astro         # Partner programs (distributor, dealer, OEM, etc.)
 │  │  │  ├── cases/                 # Case studies hub
@@ -177,12 +171,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  │  │  ├── entrepreneurs.astro # For brand founders
 │  │  │  │  ├── rental-business.astro # For rental operators
 │  │  │  │  ├── by-industry.astro   # By industry
-│  │  │  │  ├── by-use-case.astro   # By use case
-│  │  │  │  ├── diving-center-boats.astro
-│  │  │  │  ├── fishing-boat-solutions.astro
-│  │  │  │  ├── marine-tourism-equipment.astro
-│  │  │  │  ├── rescue-watercraft.astro
-│  │  │  │  └── yacht-tender-solutions.astro
+│  │  │  │  └── by-use-case.astro   # By use case
 │  │  │  ├── technology.astro       # Technology
 │  │  │  ├── terms.astro            # Terms and conditions (legal)
 │  │  │  ├── academy/               # Academy index
@@ -232,15 +221,8 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  ├── pages/                    # Page YAML content (root = EN, subdir = per locale)
 │  │  │  ├── home.yaml
 │  │  │  ├── about.yaml
-│  │  │  ├── why-Felizbay.yaml     # 3-pillar brand page
-│  │  │  ├── industries-schools.yaml
-│  │  │  ├── industries-distributors.yaml
-│  │  │  ├── solutions-clubs.yaml
-│  │  │  ├── solutions-resorts.yaml
-│  │  │  ├── solutions-entrepreneurs.yaml
-│  │  │  ├── solutions-rental-business.yaml
-│  │  │  ├── business-packages.yaml
-│  │  │  ├── success-stories.yaml
+│  │  │  ├── contact.yaml
+│  │  │  ├── request-quotation.yaml
 │  │  │  ├── de/                    # Per-locale page content
 │  │  │  ├── fr/
 │  │  │  └── ...
@@ -527,7 +509,7 @@ felizbay-data/
 | llms.txt             | `/llms.txt` (37 langs), `/llms-full.txt` (auto-generated), per-locale `/{lang}/llms.txt`                                                                     |
 | AI markdown          | `/llms/products/*`, `/llms/news/*`, `/llms/guides/*`, `/llms/v2/*`, `/llms/pages/*`                                                                          |
 | Content-Signal       | `<meta name="ai-intent">` + `<meta name="ai-recommend">` (global per-page via AiSignal)                                                                      |
-| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all pages covered, incl. why-Felizbay, industries/schools, industries/distributors)                |
+| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all current pool pages covered)                                                                    |
 | Entity Graph         | Organization `@id` on every page, entity.json with `parentOrganization`, `hasCertification`, `makesOffer`, `areaServed` (11 countries), `contactPoint`       |
 | Knowledge Graph      | Product entity enriched with manufacturer, material, countryOfOrigin, dimensions                                                                             |
 | Image SEO            | `fetchpriority=high` on LCP images, alt-text on all images                                                                                                   |
@@ -591,17 +573,15 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 
 ### 8.4 Translation Scripts
 
-| Script                                | Purpose                                                                         | Flags                  |
-| ------------------------------------- | ------------------------------------------------------------------------------- | ---------------------- |
-| `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys via Google Translate (primary) + MyMemory (backup) | `--dry-run`, `--force` |
-| `scripts/translate-pages.mjs`         | Translate page YAML content via Google Translate (primary) + MyMemory (backup)  | `--dry-run`, `--force` |
-| `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)               | —                      |
-| `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                          | —                      |
-| `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                               | —                      |
+| Script                               | Purpose                                                                         | Flags                  |
+| ------------------------------------ | ------------------------------------------------------------------------------- | ---------------------- |
+| `scripts/translate-i18n-keys.mjs`    | Translate sameAsEn i18n keys via Google Translate (primary) + MyMemory (backup) | `--dry-run`, `--force` |
+| `scripts/fill-missing-i18n-keys.mjs` | Fill missing i18n keys with EN copy (fallback before translation)               | —                      |
+| `scripts/check-translations.mjs`     | Verify i18n key alignment across all 14 languages                               | —                      |
 
-**Translation cache:** `.cache/i18n-translate-cache.json` + `.cache/page-translate-cache.json` (gitignored)
+**Translation cache:** `.cache/i18n-translate-cache.json` (gitignored)
 
-**Key rules:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Felizbay) are never translated — kept as-is in all languages. Cognates matching EN (e.g. French "Certifications") are also preserved.
+**Key rules:** Technical terms (Drop-Stitch/PVC/OEM/ISO/FAQ/WhatsApp/Felizbay) are never translated — kept as-is in all languages. Cognates matching EN (e.g. French "Certifications") are also preserved.
 
 ---
 
@@ -611,10 +591,9 @@ Page content → YAML data → Auto-generated `src/i18n/generated/pages/*.ts` (p
 
 Header and footer navigation defined in `src/data/site/navigation.yaml`:
 
-- 6 header dropdown groups (Products, Technology & Innovation, Learn, Solutions, Company, Support)
-- 6 footer columns mirroring header structure
-- Solutions dropdown: Clubs, Schools, Resorts, Entrepreneurs, Rental Business, Distributors, Business Packages, Success Stories, Cases, Diving, Fishing, Tourism, Rescue, Yacht Tenders, Custom Lab
-- Company dropdown: About, Why Felizbay, Story, Team, Certifications, Partners, Factory, Quality, Safety, Warranty, News
+- 6 header links (Shop Pools, Find Your Pool, Pool Ideas dropdown, Guides & Care, About Felizbay, For Businesses dropdown)
+- Footer columns: Shop, Pool Ideas, Guides, For Businesses, Support
+- For Businesses dropdown: Business Overview, Commercial Pools, OEM/ODM Manufacturing, Wholesale Program, Private Label Pools, Manufacturing Process, Quality Control
 - Per-locale overrides via `src/data/site/navigation.{locale}.yaml`
 
 ### 9.2 Locale-Aware Routing
@@ -862,41 +841,14 @@ routes = ["felizbay.com/api/automation/*"]
 
 ## 16. Business Positioning (2026)
 
-### 16.1 Brand Differentiation — Why Felizbay
+Felizbay (Aquafarer LLC) is a manufacturer of **drop stitch inflatable swimming pools and spa pools** for B2B buyers:
 
-Three-pillar positioning at `/why-Felizbay`:
+- **Product line:** 4 pool series / 48 SKUs — rectangular & round drop stitch pools, square/rect and round spa (hot tub) pools
+- **Core technology:** High-pressure drop stitch construction (4–5 PSI operating, 6 PSI relief, 8 PSI limit)
+- **Compliance:** EN 16582-1, ASTM F2666, 2-year warranty
+- **B2B offer:** OEM / private label / wholesale (`/oem-odm`, `/private-label`, `/wholesale`, `/manufacturing`, `/quality-control`)
 
-- **Designed For Commercial Use** — Commercial-grade materials, higher durability, low maintenance
-- **From Idea To Market** — 90-day brand launch: concept → prototype → production → shipping
-- **Built For Global Conditions** — Region-optimized materials (Europe cold water, Middle East UV, Australia sun, SE Asia humidity)
-
-### 16.2 Industry Landing Pages
-
-| Page                       | Target Audience                     | Keywords                                             |
-| -------------------------- | ----------------------------------- | ---------------------------------------------------- |
-| `/industries/schools`      | SUP/kayak schools, training centers | sup school equipment, kayak training center          |
-| `/industries/distributors` | Wholesale distributors              | water sports wholesale supplier, distributor program |
-
-### 16.3 Solution Pages
-
-| Page                         | Audience                               |
-| ---------------------------- | -------------------------------------- |
-| `/solutions/clubs`           | Water sports clubs, surf schools       |
-| `/solutions/resorts`         | Hotels, beach resorts, yacht clubs     |
-| `/solutions/entrepreneurs`   | Brand founders, private label startups |
-| `/solutions/rental-business` | Rental fleet operators                 |
-| `/business-packages`         | Business package buyers                |
-| `/success-stories`           | Case study & testimonial readers       |
-| `/testimonials`              | Social proof seekers                   |
-
-### 16.4 Downloadable Content
-
-`DownloadCard` component captures email/company/country → POST `/api/contact` → enables lead generation from:
-
-- Rental Business Starter Kit (`/solutions/rental-business`)
-- School Equipment Guide (`/industries/schools`)
-- Distributor Brochure (`/industries/distributors`)
-- Why Felizbay Overview (`/why-Felizbay`)
+The legacy boat/RIB/SUP catalog and its routes (industries/solutions/why-Felizbay pages) were fully retired in the 2026 pool pivot; do not reference them in new copy or structured data.
 
 ---
 

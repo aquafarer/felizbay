@@ -89,7 +89,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'Criterion 5: Material Compliance',
         paragraphs: [
           'Pool fabric must survive UV exposure, chlorine chemistry and years of flexing. Ask for the material specification sheet: fabric weight, lamination layers, UV stabilizers and chemical compliance. For markets in the EU, REACH compliance is a legal requirement — request the declaration and keep it on file.',
-          'Felizbay pools are built from REACH-compliant, UV-resistant, double-layer drop-stitch PVC — the same premium material used for high-pressure SUP boards — and the compliance documents are available to buyers on request.',
+          'Felizbay pools are built from REACH-compliant, UV-resistant, double-layer drop-stitch PVC, and the compliance documents are available to buyers on request.',
         ],
       },
       {

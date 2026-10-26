@@ -26,8 +26,8 @@ export function localizePath(path: string, lang: string): string {
 }
 
 /**
- * Slug-aware variant of localizePath. The /use-cases/ section was removed with
- * the boat catalog, so this now simply delegates to localizePath. Kept as a
+ * Slug-aware variant of localizePath. The /use-cases/ section was removed, so
+ * this now simply delegates to localizePath. Kept as a
  * separate export so existing call sites (Layout, Header) stay unchanged.
  */
 export function localizeUseCasePath(path: string, lang: string): string {

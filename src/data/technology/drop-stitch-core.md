@@ -2,7 +2,7 @@
 publishDate: 2025-01-01
 title: Drop-Stitch Core Construction
 summary: Thousands of internal polyester threads connect top and bottom layers, creating a rigid inflatable structure at 12-15 PSI.
-description: Drop-stitch core is the foundational technology behind Felizbay inflatable SUP boards and kayaks. It provides rigid-body performance from an inflatable platform.
+description: Drop-stitch core is the foundational technology behind Felizbay inflatable pools. It provides rigid-wall performance from an inflatable structure.
 category: materials
 tags:
   - drop-stitch

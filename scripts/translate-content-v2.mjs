@@ -44,19 +44,15 @@ const FILTER_LANG = argOf('lang');
 const FORCE = process.argv.includes('--force');
 const DRY_RUN = process.argv.includes('--dry-run');
 
-// --- placeholder protection (superset of translate-pages-bing) --------------
+// --- placeholder protection ------------------------------------------------
 const PROTECT_PATTERNS = [
   /<\/?[a-zA-Z][^>]*>/g, // inline HTML tags
   /https?:\/\/[^\s<>"']+/g, // URLs
   /\bFelizbay\b/g,
-  /\bRIB\b/g,
-  /\bRIBs\b/g,
   /\bCE\b/g,
-  /\bSOLAS\b/g,
   /\bISO\b/g,
   /\bBSCI\b/g,
   /\bREACH\b/g,
-  /\bUSCG\b/g,
   /\bFDA\b/g,
   /\bEMA\b/g,
   /\bOEM\b/g,
@@ -85,24 +81,10 @@ const PROTECT_PATTERNS = [
   /\bCIF\b/g,
   /\bDDP\b/g,
   /\bNDA\b/g,
-  /\bCSM\b/g,
-  /\bPFD\b/g,
-  /\bPFDs\b/g,
-  /\bRCD\b/g,
   /\bSGS\b/g,
   /\bTÜV\b/g,
-  /\bHypalon\b/gi,
-  /\bValmex\b/gi,
-  /\bORCA\b/gi,
   /\bDrop-Stitch\b/gi,
   /\bdrop-stitch\b/g,
-  /\bAirDeck\b/g,
-  /\bKaBoat\b/g,
-  /\bSup\b/g,
-  /\bSUP\b/g,
-  /\bSUPs\b/g,
-  /\biSUP\b/g,
-  /\biSUPs\b/g,
   /\bB2B\b/g,
   /\bROI\b/g,
   /\$\d[\d,]*(?:\.\d+)?/g, // $8,000 / $25-40 amounts

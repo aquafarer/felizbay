@@ -97,12 +97,10 @@
 │   │   │   ├── index.astro       # 首页 (每种语言)
 │   │   │   ├── products/
 │   │   │   │   ├── index.astro   # 产品列表
-│   │   │   │   ├── [slug].astro  # 产品详情
-│   │   │   │   └── compare.astro # 产品对比
-│   │   │   ├── industries/       # 行业 Landing Pages (2026)
-│   │   │   │   ├── schools.astro      # SUP/皮划艇学校方案
-│   │   │   │   └── distributors.astro # 经销商合作方案
-│   │   │   ├── why-Felizbay.astro # 品牌差异化 (3 支柱: commercial / idea-to-market / global)
+│   │   │   │   └── [slug].astro  # 产品详情
+│   │   │   ├── faq.astro         # FAQ 页
+│   │   │   ├── search.astro      # 站内搜索
+│   │   │   ├── disclaimer.astro / privacy.astro / terms.astro  # 法律页
 │   │   │   ├── factory/
 │   │   │   │   ├── index.astro       # 工厂总览
 │   │   │   │   ├── capacity.astro    # 生产能力
@@ -222,7 +220,7 @@ Header.astro / Footer.astro / 各页面
 
 3. **`getPageContent(lang, page)`** (`src/i18n/page-content.ts:13`)
    - 从缓存中获取页面内容数据 (由构建脚本生成)
-   - 用于页面级内容 (about, commercial-workboats 等)
+   - 用于页面级内容 (about, contact, request-quotation 等)
 
 4. **`getLangFromUrl(url)`** (`src/i18n/utils.ts:3`)
    - 从 URL 路径中提取语言代码
@@ -317,8 +315,7 @@ localizeHref() (src/i18n/routing.ts): 匹配 LOCALIZED_ROUTES → 添加 /{lang}
 翻译键使用点号分隔的层级命名:
 
 ```
-nav.products       → "Products" / "Productos" / "Produkte" ...
-nav.ribBoats       → "RIB Boats" / "Barcos RIB" ...
+nav.products       → "Shop Pools" / "Piscines" / "Pools" ...
 home.resources.buyersCenter → "Buyers Center"
 product.pageDesc   → (所有语言文件中缺失, 从未被提取脚本生成)
 ```
@@ -339,17 +336,15 @@ product.pageDesc   → (所有语言文件中缺失, 从未被提取脚本生成
 
 **翻译脚本:**
 
-| 脚本                                  | 用途                                                    | 标志                   |
-| ------------------------------------- | ------------------------------------------------------- | ---------------------- |
-| `scripts/translate-i18n-keys.mjs`     | 翻译 sameAsEn i18n 键 (Google Translate主 + MyMemory备) | `--dry-run`, `--force` |
-| `scripts/translate-pages.mjs`         | 翻译 page YAML 内容 (Google Translate主 + MyMemory备)   | `--dry-run`, `--force` |
-| `scripts/fill-missing-i18n-keys.mjs`  | 用 EN 副本填充缺失 i18n 键 (翻译前 fallback)            | —                      |
-| `scripts/fill-missing-page-yamls.mjs` | 用 EN 副本创建缺失 page YAML                            | —                      |
-| `scripts/check-translations.mjs`      | 校验 14 语言 i18n 键对齐                                | —                      |
+| 脚本                                 | 用途                                                    | 标志                   |
+| ------------------------------------ | ------------------------------------------------------- | ---------------------- |
+| `scripts/translate-i18n-keys.mjs`    | 翻译 sameAsEn i18n 键 (Google Translate主 + MyMemory备) | `--dry-run`, `--force` |
+| `scripts/fill-missing-i18n-keys.mjs` | 用 EN 副本填充缺失 i18n 键 (翻译前 fallback)            | —                      |
+| `scripts/check-translations.mjs`     | 校验 14 语言 i18n 键对齐                                | —                      |
 
-**翻译缓存:** `.cache/i18n-translate-cache.json` + `.cache/page-translate-cache.json` (gitignored)
+**翻译缓存:** `.cache/i18n-translate-cache.json` (gitignored)
 
-**不翻译规则:** 技术术语 (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Felizbay) 所有语言保留原文。同源词 (如法语 "Certifications" = EN "Certifications") 也保留原文——Google Translate 也返回相同值。
+**不翻译规则:** 技术术语 (Drop-Stitch/PVC/OEM/ISO/FAQ/WhatsApp/Felizbay) 所有语言保留原文。同源词 (如法语 "Certifications" = EN "Certifications") 也保留原文——Google Translate 也返回相同值。
 
 ---
 
@@ -362,7 +357,7 @@ product.pageDesc   → (所有语言文件中缺失, 从未被提取脚本生成
 **A. 结构化数据** (`src/data/products.ts`):
 
 - TypeScript 数组 `ProductRecord[]`
-- 包含 ~40 个产品 (RIB, 充气船, SUP, 配件)
+- 包含 5 个产品记录 (矩形/圆形/灰色圆形 Drop Stitch 泳池 + 方形/圆形 SPA 泳池, 覆盖 4 系列 48 SKU)
 - 字段: `id`, `name`, `category`, `desc`, `definition`, `specs`, `faq` 等
 - 所有字段为**英语**, 无翻译
 
@@ -708,40 +703,11 @@ Cloudflare Pages 自带的中间件, 在请求到达静态文件之前执行:
 
 **用途**: 中间件中的 `I18N_EXCLUDED` 列表定义了哪些路径不需要执行语言检测和重定向。
 
-**根级路径 vs 本地化路径**:
+当前列表 (`functions/_middleware.ts`): `/api`, `/keystatic`, `/admin`, `/login`, `/internal`, `/images`, `/assets`, `/favicon`, `/llms`。带扩展名的 URL（静态资源）也直接放行 (`hasExtension()`)。
 
-| 路径                                 | 行为                                                                                     |
-| ------------------------------------ | ---------------------------------------------------------------------------------------- |
-| `/solutions-diving-center-boats/`    | 在 `I18N_EXCLUDED` 中 → 直接返回根级 Astro 页面                                          |
-| `/en/solutions-diving-center-boats/` | **不在** `I18N_EXCLUDED` 中 → 需要对应 `[lang]/solutions-diving-center-boats.astro` 页面 |
+**根级路径 vs 本地化路径**: 不在排除列表中的无扩展名路径会按 cookie / Accept-Language 判定语言并重定向到 `/{lang}/...`；因此任何根级英文页面都必须有对应的 `[lang]/` 路由（或镜像，见 `mirror-root-en.mjs`），否则本地化 URL 会 404。
 
-**常见问题 — 404 路由问题**:
-
-导航链接使用 `/{lang}/solutions-fishing-boat-solutions`（带语言前缀），但如果 `[lang]/` 下没有对应的 Astro 页面路由，Cloudflare Pages 会返回 404。
-
-**解决模式**:
-
-1. 在 `src/pages/` 下创建根级 `.astro` 页面（英语直接展示，加入 `I18N_EXCLUDED`）
-2. 在 `src/pages/[lang]/` 下创建同名的 Astro 页面，重定向到实际的本地化页面路径
-3. 重定向 HTML 使用 `<meta http-equiv="refresh">` + `<link rel="canonical">`，搜索引擎能正确索引目标页面
-
-**示例** — `/en/solutions-fishing-boat-solutions` → `/en/solutions/fishing-boat-solutions`:
-
-```astro
----
-const lang = Astro.params.lang || 'en';
-const target = `/${lang}/solutions/fishing-boat-solutions`;
----
-
-<!doctype html>
-<title>Redirecting to: {target}</title>
-<meta http-equiv="refresh" content={`0;url=${target}`} />
-<meta name="robots" content="noindex" />
-<link rel="canonical" href={`https://felizbay.com${target}`} />
-<body>
-  <a href={target}>Redirecting to {target}</a>
-</body>
-```
+**历史模式 (已退役)**: 船时代的 `solutions-*` / `industries-*` 根级页面曾用「根级页面 + `I18N_EXCLUDED` + `[lang]/` 重定向壳 (`<meta http-equiv="refresh">` + `noindex` + canonical)」处理本地化 404。这些路由已在 2026 泳池转型中全部下线，新增页面请勿复用该模式——直接走系统路由表（见 §导航）。
 
 ---
 
@@ -1024,6 +990,8 @@ Set-Content -Path file.astro -Value $newContent
 - 验证中文/日文等非英语页面导航显示
 
 ### 11.11 页面 404 — 根级页面存在但 `/{lang}/` 路由缺失
+
+**(历史记录 — `solutions-*` 路由已在 2026 泳池转型中全部下线，本节仅作排查模式参考)**
 
 **场景**: 根级页面 `/solutions-fishing-boat-solutions` 正常访问 (200)，但导航指向 `/{lang}/solutions-fishing-boat-solutions` 返回 404。
 
@@ -1354,24 +1322,16 @@ applier (`tools/i18n-apply.mjs`) 开发中实际踩过的坑:
 3. 在 `src/data/site/sections.ts` 添加条目
 4. → 自动生成：HTML 页面、`/llms/pages/{slug}`、llms.txt、站点地图
 
-**新 Solutions 页面 (带多语言):**
+**新多语言页面 (通用模式, Solutions/Industries 时代已退役):**
 
-1. 在 `src/data/pages/solutions-{slug}.yaml` 创建 YAML 数据（hero, solution_offerings, benefits, cta）
-2. 在 `src/pages/solutions/{slug}.astro` 创建根级页面（使用 `getPageContent('en', 'solutions-{slug}')`）
-3. 在 `src/pages/[lang]/solutions/{slug}.astro` 创建本地化页面（15 语言, `getStaticPaths`）
-4. 在 `src/i18n/routing.ts` 的 `LOCALIZED_ROUTES` 中添加路径
-5. 在 `src/lib/geo-seo/intent.ts` 添加 `aboutMap` + `intentRules` 条目
-6. 在 `src/data/site/navigation.yaml` 添加导航项
-7. → 自动构建: 15 语言 HTML 页面, JSON-LD, ai-intent meta, llms.txt
+> 2026-10-26 起船时代的 `solutions-*` / `industries-*` 数据驱动页面模式已随路由全部下线。新增多语言页面请参照 `[lang]/faq.astro` 的现行模式（页面级 YAML/TS 数据 + `getStaticPaths` × 37 语言）。
 
-**新 Industries Landing Pages (行业页面):**
-与 Solutions 页面相同的数据驱动模式，URL 路径为 `/industries/{slug}`:
-
-1. 创建 `src/data/pages/industries-{slug}.yaml` (数据)
-2. 创建 `src/pages/industries/{slug}.astro` (根级)
-3. 创建 `src/pages/[lang]/industries/{slug}.astro` (本地化)
-4. 注册 routing.ts + intent.ts
-5. 示例: `industries-schools.yaml` → `/industries/schools`
+1. 在 `src/data/pages/{slug}.yaml` 创建 YAML 数据（hero, benefits, cta）
+2. 在 `src/pages/{slug}.astro` 创建根级页面（使用 `getPageContent('en', '{slug}')`）
+3. 在 `src/pages/[lang]/{slug}.astro` 创建本地化页面（`getStaticPaths`）
+4. 在 `src/lib/geo-seo/intent.ts` 添加 `aboutMap` + `intentRules` 条目
+5. 在 `src/data/site/navigation.yaml` 添加导航项
+6. → 自动构建: 37 语言 HTML 页面, JSON-LD, ai-intent meta, llms.txt
 
 ### 12.9 代码检查
 
@@ -1846,56 +1806,36 @@ _patch-pages.cjs → 自动注入 import/setter 到 [lang]/ 页面
 
 ### 15.1 工具清单
 
-| 脚本                   | 用途                                          | 用法                                       |
-| ---------------------- | --------------------------------------------- | ------------------------------------------ |
-| `i18n-audit.mjs`       | 全站 EN 泄漏审计 → `tools/_work/audit.json`   | `node tools/i18n-audit.mjs [base.yaml]`    |
-| `i18n-apply.mjs`       | 按翻译表批量替换页面 YAML                     | `node tools/i18n-apply.mjs <base> [--dry]` |
-| `yaml-set.mjs`         | 通用批量 set/delete (spec.json 驱动)          | `node tools/yaml-set.mjs <spec> [--dry]`   |
-| `i18n-endiff.mjs`      | dist 产物 h1/title 英文残留扫描               | `node tools/i18n-endiff.mjs`               |
-| `i18n-verify-home.mjs` | 14 语言首页译文完整性验证                     | `node tools/i18n-verify-home.mjs`          |
-| `i18n-wordcount.mjs`   | 页面字数统计 (SEO 索引阈值校验)               | `node tools/i18n-wordcount.mjs <route...>` |
-| `ui-seed.mjs`          | 新语言导航 UI 键种子注入 i18n-config.json     | `node tools/ui-seed.mjs <lang>`            |
-| `page-seed.mjs`        | EN 页面 YAML 复制到语言目录 (门槛文件/预翻译) | `node tools/page-seed.mjs <lang> <page>…`  |
+| 脚本                 | 用途                                          | 用法                                       |
+| -------------------- | --------------------------------------------- | ------------------------------------------ |
+| `yaml-set.mjs`       | 通用批量 set/delete (spec.json 驱动)          | `node tools/yaml-set.mjs <spec> [--dry]`   |
+| `page-seed.mjs`      | EN 页面 YAML 复制到语言目录 (门槛文件/预翻译) | `node tools/page-seed.mjs <lang> <page>…`  |
+| `i18n-wordcount.mjs` | 页面字数统计 (SEO 索引阈值校验)               | `node tools/i18n-wordcount.mjs <route...>` |
 
 目录约定:
 
-- `tools/l10n/` — 翻译表 (`<base>.<lang>.json`), i18n-apply 的输入, 随仓库提交
-- `tools/_work/` — 运行产物 (audit.json、临时 spec), 自带 `.gitignore` 全忽略, 不提交
+- `tools/_work/` — 运行产物 (临时 spec), 自带 `.gitignore` 全忽略, 不提交
 
-### 15.2 标准工作流 (修复一个页面的泄漏)
+### 15.2 已退役工作流 (2026-10-26, 历史参考)
+
+船内容清理中删除了 `tools/l10n/` 翻译表目录 (443 个船时代文件) 及 `i18n-audit.mjs` / `i18n-apply.mjs` / `i18n-endiff.mjs` / `i18n-verify-home.mjs` / `ui-seed.mjs`, 原有的「泄漏审计 → 翻译表 → 批量替换」管线随之退役:
 
 ```
 1. node tools/i18n-audit.mjs <base>.yaml      # 生成泄漏清单 (fr 为规范序列)
-2. 人工翻译 → tools/l10n/<base>.<lang>.json   # { "yaml路径": "译文", ... }
-3. node tools/i18n-apply.mjs <base> --dry     # 预览计数
-4. node tools/i18n-apply.mjs <base>           # 应用 + 重读校验
-5. git diff --stat 校验 +N/−N == 替换数; grep 剩余 EN → 手工补漏 (见 11.21)
-6. node tools/i18n-audit.mjs <base>.yaml      # 复扫, 期望 0
+2. 人工翻译 → tools/l10n/<base>.<lang>.json
+3. node tools/i18n-apply.mjs <base> [--dry]   # 引号感知替换 + 重读校验
+4. node tools/i18n-audit.mjs <base>.yaml      # 复扫, 期望 0
 ```
 
-### 15.3 i18n-audit.mjs
+日常批量编辑改用 `yaml-set.mjs` (§15.3); dist 产物的英文残留可用全仓 `rg` 扫描替代 i18n-endiff。若未来重新接入新语言, 需重建等价的 UI 键注入/泄漏审计工具。
 
-- 扫描 `src/data/pages/<lang>/*.yaml`, 与 EN 源逐路径对比, 值完全相等且不命中 NOISE_KEY 的计为泄漏
-- 输出 `tools/_work/audit.json`: `perLang[lang][file]` 与 `perFile[file][lang]` 双索引, 每条 `{ path, v }`
-- NOISE_KEY 排除键: icon/href/link/url/src/alt/file/image/cta_href/amount/logo/video/photo/email/phone/whatsapp/sku/code/id/source/address/company/color/badge/location/imageAlt/slug (机器字段, 见 11.23)
-- LANGS 现为 36 个非英语言 (14 既有 + 19 新增 + 6 扩充 − 3 删除, 见 §16.6); 无语言目录的语言自动 0 泄漏
-- 当前基线: 7,438 (2026-09-23, 14 语言口径, solutions-watersports + solutions-offshore-energy 清零后); 19 新语言的 home 清零后, about/contact/news 为有意 EN 副本 (预期泄漏队列, 见 §16)
-
-### 15.4 i18n-apply.mjs
-
-- 读取 `tools/_work/audit.json` + `tools/l10n/<base>.<lang>.json`, 对源 YAML 做引号感知的原始文本替换 (见 11.17/11.21)
-- 字面块 (`|`) 多行值: 解析值的 `\n` 在原始文本中是 `\n+缩进`, 用缩进感知正则定位、按同缩进回写 (home.yaml hero.subtitle / blog_latest.information 即此情形); 折叠块 (`>`) 与流式多行安全跳过 (计数不匹配 → skip)
-- 规范序列: `leaks.fr || Object.values(leaks)[0]`; 当前值 ≠ EN 的路径跳过 (保留既有译文, 如 de "Flottenpreis anfordern")
-- 每文件替换后 `YAML.parse` 重读 + JSON deep-equal 校验; `--dry` 只打印计数不落盘
-- 遗漏教训: 语言独有 EN 值不在 fr 规范集内会漏替换 → 复扫 + 手工补 (见 11.21)
-
-### 15.5 yaml-set.mjs
+### 15.3 yaml-set.mjs
 
 spec.json 驱动的通用批量编辑器, 适合"同一改动跨多语言"的场景 (统一措辞、改标题、删字段):
 
 ```json
 {
-  "base": "solutions-watersports",
+  "base": "home",
   "langs": ["sv", "no"],
   "set": { "hero.tagline": "value" },
   "setPerLang": { "fr": { "hero.title": "Titre" } },
@@ -1911,9 +1851,9 @@ spec.json 驱动的通用批量编辑器, 适合"同一改动跨多语言"的场
 - 每文件写前 full reparse + JSON deep-equal 对照期望树, 不一致即回滚不落盘
 - 结构性块增删 (数组整块、新 section): 复制本脚本引擎写一次性脚本, 用后弃置 (不入 tools/)
 
-### 15.6 维护规则
+### 15.4 维护规则
 
-- **页面结构变更时**: 同步更新受影响的 tools/ 脚本、`tools/l10n/` 表, 并在 TECH.md 对应小节记录变更
+- **页面结构变更时**: 同步更新受影响的 tools/ 脚本, 并在 TECH.md 对应小节记录变更
 - **一次性脚本不入仓库**: 历史累计 ~478 个临时脚本不迁移 — 只有可复用、经实战验证的工具才进 tools/
 - **路径定位**: 全部脚本用 repo-relative `import.meta.url` 推导 ROOT, 不硬编码绝对路径
 - **代码风格**: `tools/*.mjs` 不在 `.prettierignore` 内, 受 prettier/eslint 约束 — 提交前 `npx prettier --write "tools/*.mjs"` + `npx eslint "tools/*.mjs"`
@@ -1940,9 +1880,11 @@ spec.json 驱动的通用批量编辑器, 适合"同一改动跨多语言"的场
 | `scripts/fold-untranslated-canonical.mjs`                          | `LANGS` 列表 (noindex 页自动跳过, 毕业后才实际生效) + `STOPWORDS` 语言检测词条 (cs 2026-09-27、pl 2026-09-28 新增; sv/no/da/nl/fi/pt 原有, el/ru/ar 走 NON_LATIN 正则; ja 2026-09-29 新增 NON_LATIN CJK 正则 — 停用词机制只匹配拉丁 token, 对日文无效)                       |
 | `scripts/generate-geo-files.ts` / `scripts/build-geo-v4.ts`        | llms-full.txt 语言段 + 每语言 llms.txt (`tagline[lang] \|\| tagline.en` 安全回退)                                                                                                                                                                                            |
 
-其他固定列表: `Layout.astro` `FULLY_LOCALIZED=['en','de','fr','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt']` (hreflang 背书门槛, 16 语言; ja 2026-09-29 毕业加入、2026-10-16 随语言删除移出) 与 `RTL_LANGS={'ar','he'}`; `generate-sitemaps.mjs` hreflang alternates `['fr','de','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt']`; `generate-ai-corpus.mjs` LANGS (16 语言全含, 无 ja); `tools/i18n-verify-home.mjs` / `tools/i18n-wordcount.mjs` 语言清单 (含全部毕业语言)。
+其他固定列表: `Layout.astro` `FULLY_LOCALIZED=['en','de','fr','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt']` (hreflang 背书门槛, 16 语言; ja 2026-09-29 毕业加入、2026-10-16 随语言删除移出) 与 `RTL_LANGS={'ar','he'}`; `generate-sitemaps.mjs` hreflang alternates `['fr','de','es','it','cs','sv','da','el','no','ru','nl','fi','pl','ar','pt']`; `generate-ai-corpus.mjs` LANGS (16 语言全含, 无 ja); `tools/i18n-wordcount.mjs` 语言清单 (含全部毕业语言)。
 
 ### 16.2 新语言种子构成 (每语言 4 件事)
+
+> **2026-10-26 注意**: `tools/l10n/`、`ui-seed.mjs`、`i18n-audit.mjs`、`i18n-apply.mjs` 已随船内容清理删除 (§15.2)。以下为历史流程记录; 重新接入新语言时需先重建等价的 UI 键注入与泄漏审计工具 (或手工编辑 `i18n-config.json`)。
 
 1. **导航 UI 键**: `tools/l10n/ui.<lang>.json` (~84 键 = Header navTextMap 全部 `nav.*`/`cta.*` + `header.language` + `search.*`×3) → `node tools/ui-seed.mjs <lang>` 注入 `src/data/site/i18n-config.json` (100% 覆盖必需键否则中止; 表键必须在 EN 字典内, 防拼写错误)
 2. **config**: `src/config.<lang>.yaml` (模板 `config.fr.yaml`) — 翻译 metadata (title/description/keywords 自然本地化)、`openGraph.locale`、`siteSettings` (he 需 `textDirection: rtl`)
@@ -1984,7 +1926,7 @@ RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srp
 
 ### 16.4 语言毕业清单 (graduation checklist)
 
-新语言深度翻译完成、准备进入索引时, 逐项执行:
+新语言深度翻译完成、准备进入索引时, 逐项执行 (第 1 项涉及的工具已于 2026-10-26 删除, 见 §16.2 注意; 需重建等价工具或全仓 `rg` 扫描替代):
 
 > 2026-09-27: cs 首个执行本清单 (解除 noindex、进入 sitemap/hreflang、fold STOPWORDS 生效; checkGraphNodes 0 WARN)。
 > 2026-09-28: sv/da/el/no/ru 第二批执行 (残留 EN 翻译 161 文件 781 处后毕业; el/ru 无 STOPWORDS 需求 — NON_LATIN 正则覆盖; audit 0 泄漏)。
@@ -1996,7 +1938,7 @@ RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srp
 3. 加入 `Layout.astro` `FULLY_LOCALIZED` (hreflang 背书) + `scripts/generate-sitemaps.mjs` LANGS
 4. 在 `scripts/fold-untranslated-canonical.mjs` 添加该语言 STOPWORDS 词条 (拉丁字母语言; CJK/泰文/希伯来文经 NON_LATIN 正则或天然低命中自动豁免)
 5. 加入 `scripts/generate-ai-corpus.mjs` LANGS
-6. 扩展 `tools/i18n-verify-home.mjs` / `tools/i18n-wordcount.mjs` 的语言清单
+6. 扩展 `tools/i18n-wordcount.mjs` 的语言清单
 7. 更新本节状态表 (graduated 列 + 日期), 并核查 checkGraphNodes WARN 清零
 
 ### 16.5 运行注意

@@ -307,9 +307,6 @@ const specGroups = detailV2
         ...(product.ai_specs?.weight || rec?.ai_specs?.weight
           ? [{ '@type': 'PropertyValue', name: 'Weight', value: product.ai_specs?.weight || rec?.ai_specs?.weight }]
           : []),
-        ...(product.ai_specs?.hull || rec?.ai_specs?.hull
-          ? [{ '@type': 'PropertyValue', name: 'Hull', value: product.ai_specs?.hull || rec?.ai_specs?.hull }]
-          : []),
         ...(product.ai_specs?.capacity || rec?.ai_specs?.capacity
           ? [
               {

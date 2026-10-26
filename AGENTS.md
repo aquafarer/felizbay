@@ -194,15 +194,13 @@ Admin reads submissions at `/keystatic/contact-submissions` — the page fetches
 
 **Status:** 14 languages × 1,721 keys fully aligned (0 missing/extra). 3,807 sameAsEn keys translated. 2,456 orphan keys cleaned. 252/252 page YAMLs translated. Remaining 808 sameAsEn = verified correct (540 technical terms + 109 cognates + 29 brand names + 124 short words).
 
-| Script                                | Purpose                                                                  | Flags                  |
-| ------------------------------------- | ------------------------------------------------------------------------ | ---------------------- |
-| `scripts/translate-i18n-keys.mjs`     | Translate sameAsEn i18n keys (Google Translate primary, MyMemory backup) | `--dry-run`, `--force` |
-| `scripts/translate-pages.mjs`         | Translate page YAML content (Google Translate primary, MyMemory backup)  | `--dry-run`, `--force` |
-| `scripts/fill-missing-i18n-keys.mjs`  | Fill missing i18n keys with EN copy (fallback before translation)        | —                      |
-| `scripts/fill-missing-page-yamls.mjs` | Create missing page YAMLs from EN copy                                   | —                      |
-| `scripts/check-translations.mjs`      | Verify i18n key alignment across all 14 languages                        | —                      |
+| Script                               | Purpose                                                                  | Flags                  |
+| ------------------------------------ | ------------------------------------------------------------------------ | ---------------------- |
+| `scripts/translate-i18n-keys.mjs`    | Translate sameAsEn i18n keys (Google Translate primary, MyMemory backup) | `--dry-run`, `--force` |
+| `scripts/fill-missing-i18n-keys.mjs` | Fill missing i18n keys with EN copy (fallback before translation)        | —                      |
+| `scripts/check-translations.mjs`     | Verify i18n key alignment across all 14 languages                        | —                      |
 
-**Do NOT translate:** Technical terms (Drop-Stitch/Hypalon/PVC/RIB/SUP/OEM/ISO/FAQ/WhatsApp/Felizbay) stay as-is in all languages. Cognates matching EN are also preserved.
+**Do NOT translate:** Technical terms (Drop-Stitch/PVC/OEM/ISO/FAQ/WhatsApp/Felizbay) stay as-is in all languages. Cognates matching EN are also preserved.
 
 ## Iron Rule — Encoding / Garbled Text
 

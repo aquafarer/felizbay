@@ -15,21 +15,14 @@ const MYMEMORY_URL = 'https://api.mymemory.translated.net/get';
 const RATE_MS = 1000;
 
 const PRESERVE_PATTERNS = [
-  /\bRIB\b/g,
   /\bCE\b/g,
-  /\bSOLAS\b/g,
   /\bHP\b/g,
   /\bEVA\b/g,
   /\bUV\b/g,
   /\bPVC\b/g,
   /\bCNC\b/g,
-  /\bHypalon\b/gi,
-  /\bValmex\b/gi,
-  /\bORCA\b/gi,
   /\bDrop-Stitch\b/gi,
   /\bdrop-stitch\b/g,
-  /\bAirDeck\b/g,
-  /\bKaBoat\b/g,
   /\bFelizbay\b/g,
   /\bAQHB\b/g,
   /\bAQMT\b/g,

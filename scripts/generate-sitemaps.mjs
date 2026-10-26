@@ -128,7 +128,6 @@ const TYPE_BY_PREFIX = [
   ['/solutions/', 'service'],
   ['/oem-odm-manufacturer', 'service'],
   ['/Felizbay-story', 'brand'],
-  ['/marine-industry', 'industry'],
   ['/contact', 'service'],
   ['/warranty', 'support'],
   ['/custom', 'service'],
@@ -202,12 +201,8 @@ const AI_TOP_SECTIONS = [
   '/engineering-perfection/',
   '/design-powerhouse/',
   '/engineering-team/',
-  '/marine-industry/',
   '/solutions/by-industry/',
   '/solutions/by-use-case/',
-  '/use-cases/search-and-rescue/',
-  '/use-cases/disaster-relief/',
-  '/use-cases/commercial-workboats/',
 ];
 
 function main() {

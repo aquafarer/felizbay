@@ -2,7 +2,7 @@
 /**
  * scripts/translate-body-components.mjs
  *
- * 翻译正文组件（src/components/{legal,research,randdcenter,marine-industry,technology}/
+ * 翻译正文组件（src/components/{legal,research,randdcenter,technology}/
  * <name>.{de,en}.astro）到缺失的 GRAD 语言，生成 <name>.<lang>.astro，并扩展对应
  * 页面（src/pages/[lang]/...）的 import 块与 Body map（磁盘组件驱动，幂等可重跑）。
  *
@@ -77,28 +77,20 @@ const LANG_CAP = {
 // 数字范围在前（组合优先于裸数字），其后为 META 同款术语表，最后裸数字兜底
 const PRESERVE_PATTERNS = [
   /\d[\d.,]*\s*[–—-]\s*\d[\d.,]*/g,
-  /\bRIB\b/g,
   /\bCE\b/g,
-  /\bSOLAS\b/g,
   /\bHP\b/g,
   /\bUV\b/g,
   /\bPVC\b/g,
   /\bCNC\b/g,
-  /\bHypalon\b/gi,
   /\bDrop-Stitch\b/gi,
   /\bdrop-stitch\b/g,
   /\bFelizbay\b/g,
   /\bISO\b/g,
   /\bPSI\b/g,
   /\bFRP\b/g,
-  /\bCSM\b/g,
   /\bDTEX\b/g,
-  /\bRCD\b/g,
-  /\bHIN\b/g,
-  /\bWIN\b/g,
   /\bOEM\b/g,
   /\bODM\b/g,
-  /\bSUP\b/g,
   /\bGMT\b/g,
   /\b\d+HP\b/g,
   /\b\d+L\b/g,
@@ -224,9 +216,6 @@ const UNITS = new Set([
   'LDPE',
   'FRP',
   'GRP',
-  'CSM',
-  'RIB',
-  'SUP',
   'OEM',
   'ODM',
   'UV',
@@ -682,7 +671,7 @@ function discoverPages() {
   for (const file of walk(PAGES_DIR)) {
     const src = fs.readFileSync(file, 'utf8');
     const importRe = new RegExp(
-      `import (\\w+) from '~\\/components\\/(legal|research|randdcenter|marine-industry|technology)\\/([a-z0-9-]+)\\.([a-z]{2})\\.astro';`,
+      `import (\\w+) from '~\\/components\\/(legal|research|randdcenter|technology)\\/([a-z0-9-]+)\\.([a-z]{2})\\.astro';`,
       'g'
     );
     let m;
