@@ -25,12 +25,12 @@ const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
     currency: 'usd',
     image: '/images/pools/round-grey-pool-1.webp',
   },
-  'FZ-POOL-RECT': {
-    name: 'Rectangular Inflatable Drop Stitch Swimming Pool',
-    slug: 'rectangular-drop-stitch-pool',
+  'FZ-SPA-RND': {
+    name: 'Round Drop-Stitch Soaking Pool with Built-In Seats',
+    slug: 'hot-tub-round',
     unitAmount: 49900,
     currency: 'usd',
-    image: '/images/pools/rectangular-pool-2.webp',
+    image: '/images/pools/hot-tub-round.png',
   },
 };
 
