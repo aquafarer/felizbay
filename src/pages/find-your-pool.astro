@@ -5,13 +5,24 @@ import Icon from '~/components/ui/Icon.astro';
 import { SITE } from 'astrowind:config';
 import type { MetaData } from '~/types';
 
+interface FitOption {
+  /** Round diameter in meters */
+  d?: number;
+  /** Rectangular length in meters */
+  l?: number;
+  /** Rectangular width in meters */
+  w?: number;
+}
+
 interface PoolSetup {
   title: string;
   description: string;
   sizes: string;
   products: string;
+  shopHref: string;
   ideaHref?: string;
   tags: string[];
+  opts: FitOption[];
 }
 
 const setups: PoolSetup[] = [
@@ -20,8 +31,10 @@ const setups: PoolSetup[] = [
     description: 'Knee-to-waist-deep play space for kids with rigid drop-stitch walls. Fills fast, heats easily.',
     sizes: 'Ø 3 – 4 m round, 1 – 1.2 m wall',
     products: 'Classic Round Pool',
+    shopHref: '/products/round-blue-drop-stitch-pool',
     ideaHref: '/pool-ideas/backyard-pools-for-families',
     tags: ['use-play', 'space-medium', 'who-family'],
+    opts: [{ d: 3 }, { d: 4 }],
   },
   {
     title: 'Compact Plunge Pool',
@@ -29,8 +42,10 @@ const setups: PoolSetup[] = [
       'The smallest true pool we make — fits a side yard or small patio corner, still rigid and deep enough to cool off in.',
     sizes: 'Ø 2 × 0.5 m round',
     products: 'Classic Round Pool (S2005)',
+    shopHref: '/products/round-blue-drop-stitch-pool',
     ideaHref: '/pool-ideas/pools-for-small-backyards',
     tags: ['use-play', 'space-compact', 'who-family'],
+    opts: [{ d: 2 }],
   },
   {
     title: 'Backyard Swim Pool',
@@ -38,8 +53,10 @@ const setups: PoolSetup[] = [
       'Real swimming depth with rigid drop-stitch walls. The everyday family pool that packs away in autumn.',
     sizes: 'Ø 5 – 6 m round or 4 × 3 m rectangular',
     products: 'Round & Rectangular Pools',
+    shopHref: '/products',
     ideaHref: '/pool-ideas/backyard-pools-for-families',
     tags: ['use-play', 'space-large', 'who-family'],
+    opts: [{ d: 5 }, { d: 6 }, { l: 4, w: 3 }],
   },
   {
     title: 'Patio Soaking Tub',
@@ -47,16 +64,20 @@ const setups: PoolSetup[] = [
       'Built-in seats, a 5 mm insulated thermal bottom, and a footprint that fits the smallest courtyard. Pairs with an external heater (sold separately).',
     sizes: '1.5 × 1.5 m square or Ø 1.8 m round',
     products: 'SPA Tubs (SS / RS Series)',
+    shopHref: '/products/hot-tub-square-rect',
     ideaHref: '/pool-ideas/outdoor-soaking-pools',
     tags: ['use-soak', 'space-compact', 'who-adults'],
+    opts: [{ l: 1.5, w: 1.5 }, { d: 1.8 }],
   },
   {
     title: 'Garden Soaking Tub',
     description: 'A full soaking spa for the household — insulated, seated, and sized for a normal garden corner.',
     sizes: 'Ø 2.0 – 2.3 m round or 3 × 2 m square',
     products: 'SPA Tubs (SS / RS Series)',
+    shopHref: '/products/hot-tub-round',
     ideaHref: '/pool-ideas/outdoor-soaking-pools',
     tags: ['use-soak', 'space-medium', 'who-adults'],
+    opts: [{ d: 2 }, { d: 2.3 }, { l: 3, w: 2 }],
   },
   {
     title: 'Gathering Pool',
@@ -64,8 +85,10 @@ const setups: PoolSetup[] = [
       'The centerpiece for parties and reunions — swim-area sizes with reinforced seams and a pressure-relief valve.',
     sizes: 'Ø 6 – 10 m round or 6 × 5 m rectangular',
     products: 'Large Round & Rectangular',
+    shopHref: '/products',
     ideaHref: '/pool-ideas/large-pools-for-family-gatherings',
     tags: ['use-entertain', 'space-large', 'who-mixed'],
+    opts: [{ d: 6 }, { d: 8 }, { d: 10 }, { l: 6, w: 5 }],
   },
   {
     title: 'Guest Amenity Pool',
@@ -73,8 +96,10 @@ const setups: PoolSetup[] = [
       'A booking magnet for vacation rentals — inflates in minutes with the included pump, drains at season end, no construction.',
     sizes: 'Ø 4 – 5 m round typical',
     products: 'Round & Rectangular Pools',
+    shopHref: '/products',
     ideaHref: '/pool-ideas/pools-for-vacation-rentals',
     tags: ['use-entertain', 'space-medium', 'who-mixed'],
+    opts: [{ d: 4 }, { d: 5 }],
   },
   {
     title: 'Cabin Soaking Tub',
@@ -82,8 +107,10 @@ const setups: PoolSetup[] = [
       'The signature glamping moment: a woodside soaking tub for cabin decks and boutique hospitality sites.',
     sizes: 'Ø 1.8 – 2.3 m round',
     products: 'Round SPA Tub (RS Series)',
+    shopHref: '/products/hot-tub-round',
     ideaHref: '/pool-ideas/pools-for-glamping-and-hospitality',
     tags: ['use-soak', 'space-medium', 'who-mixed'],
+    opts: [{ d: 1.8 }, { d: 2.3 }],
   },
   {
     title: 'Cold Plunge Tub',
@@ -91,16 +118,20 @@ const setups: PoolSetup[] = [
       'A rigid, insulated recovery tub for cold-water immersion routines — seats built in, cover on between sessions.',
     sizes: 'Ø 1.8 – 2.3 m round or 2 × 2 m square',
     products: 'SPA Tubs (RS / SS Series)',
+    shopHref: '/products/hot-tub-round',
     ideaHref: '/pool-ideas/cold-plunge-and-recovery-pools',
     tags: ['use-soak', 'space-compact', 'who-adults'],
+    opts: [{ d: 1.8 }, { d: 2.3 }, { l: 2, w: 2 }],
   },
   {
     title: "Couple's Courtyard Soak",
     description: 'A design-led two-person retreat for patios and courtyards — low water volume, simple weekly care.',
     sizes: '2.1 × 1.6 m or Ø 1.8 – 2 m',
     products: 'SPA Tubs (SS / RS Series)',
+    shopHref: '/products/hot-tub-square-rect',
     ideaHref: '/pool-ideas/pools-for-dink-households',
     tags: ['use-soak', 'space-medium', 'who-adults'],
+    opts: [{ l: 2.1, w: 1.6 }, { d: 1.8 }, { d: 2 }],
   },
   {
     title: 'Water Fitness Pool',
@@ -108,8 +139,10 @@ const setups: PoolSetup[] = [
       'Wide, stable, waist-deep water for water aerobics, stretching, and active family play — no lap-pool footprint.',
     sizes: 'Ø 4 – 5 m round or 3 × 2 m rectangular',
     products: 'Round & Rectangular Pools',
+    shopHref: '/products',
     ideaHref: '/pool-ideas/pools-for-water-fitness-and-recreation',
     tags: ['use-play', 'space-medium', 'who-adults'],
+    opts: [{ d: 4 }, { d: 5 }, { l: 3, w: 2 }],
   },
   {
     title: 'Pet Splash Pool',
@@ -117,8 +150,10 @@ const setups: PoolSetup[] = [
       'Rigid drop-stitch walls built from the same fabric as our family pools — a supervised summer cool-down for dogs.',
     sizes: 'Ø 2 – 3 m round',
     products: 'Classic Round Pool',
+    shopHref: '/products/round-blue-drop-stitch-pool',
     ideaHref: '/pool-ideas/pools-for-pet-families',
     tags: ['use-play', 'space-medium', 'who-family'],
+    opts: [{ d: 2 }, { d: 3 }],
   },
   {
     title: 'Event & Rental Pool',
@@ -126,8 +161,10 @@ const setups: PoolSetup[] = [
       'A fleet-ready water feature for festivals, brand activations, and rentals — fast deploy, fast strike, packs flat.',
     sizes: 'Ø 4 – 6 m round typical',
     products: 'Large Round & Rectangular',
+    shopHref: '/products',
     ideaHref: '/pool-ideas/pools-for-rental-and-event-operators',
     tags: ['use-entertain', 'space-large', 'who-mixed'],
+    opts: [{ d: 4 }, { d: 5 }, { d: 6 }],
   },
   {
     title: 'Hospitality Plunge',
@@ -135,14 +172,28 @@ const setups: PoolSetup[] = [
       'A suite-terrace or courtyard soak for boutique hotels and estates — non-invasive install, standard cartridge filtration.',
     sizes: '1.8 × 1.8 m to 3 × 2 m',
     products: 'SPA Tubs (SS Series)',
+    shopHref: '/products/hot-tub-square-rect',
     ideaHref: '/pool-ideas/pools-for-boutique-hotels-and-luxury-estates',
     tags: ['use-entertain', 'space-medium', 'who-mixed'],
+    opts: [
+      { l: 1.8, w: 1.8 },
+      { l: 3, w: 2 },
+    ],
   },
 ];
 
-const questions: Array<{ label: string; filters: Array<{ id: string; text: string }> }> = [
+const questions: Array<{ label: string; filter: string; filters: Array<{ id: string; text: string }> }> = [
+  {
+    label: 'Where will it be installed?',
+    filter: 'info',
+    filters: [
+      { id: 'install-ground', text: 'Ground level (lawn, patio)' },
+      { id: 'install-raised', text: 'Raised deck or balcony' },
+    ],
+  },
   {
     label: 'What will you use it for?',
+    filter: 'tag',
     filters: [
       { id: 'use-play', text: 'Swim & Play' },
       { id: 'use-soak', text: 'Relax & Soak' },
@@ -151,6 +202,7 @@ const questions: Array<{ label: string; filters: Array<{ id: string; text: strin
   },
   {
     label: 'How much flat space do you have?',
+    filter: 'tag',
     filters: [
       { id: 'space-compact', text: 'Compact (under 3 m)' },
       { id: 'space-medium', text: 'Medium (3 – 5 m)' },
@@ -158,11 +210,29 @@ const questions: Array<{ label: string; filters: Array<{ id: string; text: strin
     ],
   },
   {
+    label: 'Do you need heating or massage?',
+    filter: 'info',
+    filters: [
+      { id: 'climate-none', text: 'No — ambient water' },
+      { id: 'climate-heating', text: 'Heated soaking' },
+      { id: 'climate-massage', text: 'Massage jets' },
+    ],
+  },
+  {
     label: 'Who is it mainly for?',
+    filter: 'tag',
     filters: [
       { id: 'who-family', text: 'Kids & Family' },
       { id: 'who-adults', text: 'Adults' },
       { id: 'who-mixed', text: 'Guests / Mixed' },
+    ],
+  },
+  {
+    label: 'Personal use or business project?',
+    filter: 'info',
+    filters: [
+      { id: 'purpose-personal', text: 'Personal / family use' },
+      { id: 'purpose-business', text: 'Business or rental project' },
     ],
   },
 ];
@@ -170,7 +240,7 @@ const questions: Array<{ label: string; filters: Array<{ id: string; text: strin
 const metadata = merge(
   {
     title: `Find Your Pool | ${SITE.name}`,
-    description: `Answer three quick questions — use, space, and who's swimming — and find the right Felizbay inflatable pool size and model for your backyard.`,
+    description: `Answer a few quick questions — installation, use, space, and who's swimming — and find the right Felizbay inflatable pool size and model for your backyard.`,
     openGraph: { type: 'website' },
   },
   {}
@@ -183,15 +253,16 @@ const metadata = merge(
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Pool Finder</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Find Your Pool</h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Three questions. One clear recommendation. Sizes come straight from the Felizbay factory catalog.
+        A few quick questions. One clear recommendation — and an honest “no match” when nothing fits. Sizes come
+        straight from the Felizbay factory catalog.
       </p>
     </header>
 
     <!-- Questions -->
-    <div class="mb-10 space-y-5" data-finder>
+    <div class="mb-8 space-y-5" data-finder>
       {
         questions.map((q) => (
-          <div class="text-center" data-question={q.label}>
+          <div class="text-center" data-question={q.label} data-filter={q.filter}>
             <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">{q.label}</p>
             <div class="flex flex-wrap items-center justify-center gap-2">
               {q.filters.map((f) => (
@@ -207,6 +278,62 @@ const metadata = merge(
           </div>
         ))
       }
+
+      <!-- Exact measurements (takes priority over the size buckets) -->
+      <div class="text-center" data-question="Exact flat area available" data-filter="dim">
+        <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+          Exact flat area available <span class="font-normal text-gray-400 dark:text-slate-500"
+            >(optional — takes priority over the buckets above)</span
+          >
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <label for="finder-len" class="sr-only">Available length in meters</label>
+          <input
+            id="finder-len"
+            type="number"
+            min="0"
+            max="30"
+            step="0.1"
+            inputmode="decimal"
+            placeholder="Length m"
+            data-dim-l
+            class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          />
+          <span class="text-sm text-gray-400 dark:text-slate-500">×</span>
+          <label for="finder-wid" class="sr-only">Available width in meters</label>
+          <input
+            id="finder-wid"
+            type="number"
+            min="0"
+            max="30"
+            step="0.1"
+            inputmode="decimal"
+            placeholder="Width m"
+            data-dim-w
+            class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          />
+        </div>
+        <p class="mt-2 text-xs text-gray-400 dark:text-slate-500">
+          Measure the flat area the pool itself can occupy — keep at least 50 cm (ideally 1 m) of walkway outside it.
+        </p>
+      </div>
+
+      <!-- Delivery country -->
+      <div class="text-center" data-question="Delivery country" data-filter="info">
+        <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+          Delivery country <span class="font-normal text-gray-400 dark:text-slate-500">(optional)</span>
+        </p>
+        <label for="finder-country" class="sr-only">Delivery country</label>
+        <input
+          id="finder-country"
+          type="text"
+          maxlength="60"
+          placeholder="e.g. Germany"
+          data-country
+          class="w-56 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+        />
+      </div>
+
       <div class="text-center">
         <button
           type="button"
@@ -219,6 +346,36 @@ const metadata = merge(
       </div>
     </div>
 
+    <!-- Contextual notices (installation limits, heating/massage, business, delivery) -->
+    <div class="mb-8 space-y-3 empty:hidden" data-finder-notices aria-live="polite"></div>
+
+    <!-- No-match panel -->
+    <div
+      class="hidden mb-8 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 md:p-8 text-center"
+      data-finder-nomatch
+    >
+      <h2 class="text-lg font-semibold font-heading dark:text-slate-100" data-nomatch-title>
+        No standard model matches your answers
+      </h2>
+      <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto" data-nomatch-text>
+        Try relaxing a filter — or contact us and we'll point you to the right model.
+      </p>
+      <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+        >
+          Ask us for a recommendation
+        </a>
+        <a
+          href="/products"
+          class="inline-flex items-center justify-center px-5 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+        >
+          Browse all products
+        </a>
+      </div>
+    </div>
+
     <!-- Result cards -->
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-setup-grid>
       {
@@ -226,6 +383,7 @@ const metadata = merge(
           <article
             class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
             data-tags={s.tags.join(' ')}
+            data-opts={JSON.stringify(s.opts)}
           >
             <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
             <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
@@ -245,7 +403,7 @@ const metadata = merge(
             </dl>
             <div class="mt-5 flex items-center gap-3">
               <a
-                href="/products"
+                href={s.shopHref}
                 class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
               >
                 Shop this setup
@@ -265,7 +423,7 @@ const metadata = merge(
     </div>
 
     <p class="mt-6 text-center text-sm text-gray-400 dark:text-slate-500" data-finder-hint>
-      Tip: answer all three questions for the tightest match — or browse everything in the shop.
+      Tip: exact measurements give the tightest match — or browse everything in the shop.
     </p>
 
     <!-- How to measure -->
@@ -310,21 +468,175 @@ const metadata = merge(
 
   <script>
     (function () {
+      interface FitOption {
+        d?: number;
+        l?: number;
+        w?: number;
+      }
+
       const grid = document.querySelector<HTMLElement>('[data-setup-grid]');
       const chips = document.querySelectorAll<HTMLElement>('[data-answer]');
       const reset = document.querySelector<HTMLElement>('[data-finder-reset]');
+      const notices = document.querySelector<HTMLElement>('[data-finder-notices]');
+      const noMatch = document.querySelector<HTMLElement>('[data-finder-nomatch]');
+      const noMatchTitle = document.querySelector<HTMLElement>('[data-nomatch-title]');
+      const noMatchText = document.querySelector<HTMLElement>('[data-nomatch-text]');
+      const lenEl = document.querySelector<HTMLInputElement>('[data-dim-l]');
+      const widEl = document.querySelector<HTMLInputElement>('[data-dim-w]');
+      const countryEl = document.querySelector<HTMLInputElement>('[data-country]');
       if (!grid) return;
       const container: HTMLElement = grid;
+
       const active: Record<string, string> = {};
-      function apply(): void {
-        const groups = Object.keys(active).filter((g) => active[g]);
-        const cards = Array.from(container.children) as HTMLElement[];
-        for (const card of cards) {
-          const tags = (card.getAttribute('data-tags') || '').split(' ');
-          const show = groups.every((g) => tags.includes(active[g]));
-          card.style.display = show ? '' : 'none';
+
+      function parseDim(el: HTMLInputElement | null): number {
+        if (!el) return NaN;
+        const v = parseFloat(el.value);
+        return isFinite(v) && v > 0 ? v : NaN;
+      }
+
+      function usingDims(): boolean {
+        return !isNaN(parseDim(lenEl)) && !isNaN(parseDim(widEl));
+      }
+
+      function optFits(o: FitOption, L: number, W: number): boolean {
+        if (typeof o.d === 'number') return o.d <= L && o.d <= W;
+        if (typeof o.l === 'number' && typeof o.w === 'number') {
+          return (o.l <= L && o.w <= W) || (o.w <= L && o.l <= W);
+        }
+        return true;
+      }
+
+      function parseOpts(card: HTMLElement): FitOption[] {
+        try {
+          return JSON.parse(card.getAttribute('data-opts') || '[]') as FitOption[];
+        } catch {
+          return [];
         }
       }
+
+      function cardFitsDims(card: HTMLElement, L: number, W: number): boolean {
+        const opts = parseOpts(card);
+        return opts.some((o) => optFits(o, L, W));
+      }
+
+      function makeBanner(tone: 'amber' | 'sky', text: string, link?: { href: string; label: string }): HTMLElement {
+        const wrap = document.createElement('div');
+        wrap.className =
+          tone === 'amber'
+            ? 'rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 px-5 py-4 text-sm leading-relaxed text-amber-900 dark:text-amber-200'
+            : 'rounded-xl border border-sky-200 dark:border-sky-900/50 bg-sky-50 dark:bg-sky-950/30 px-5 py-4 text-sm leading-relaxed text-sky-900 dark:text-sky-200';
+        const p = document.createElement('p');
+        p.textContent = text;
+        wrap.appendChild(p);
+        if (link) {
+          const a = document.createElement('a');
+          a.href = link.href;
+          a.textContent = link.label;
+          a.className = 'mt-1.5 inline-block font-semibold underline underline-offset-2';
+          wrap.appendChild(a);
+        }
+        return wrap;
+      }
+
+      function renderNotices(): void {
+        if (!notices) return;
+        notices.replaceChildren();
+        const info: Record<string, string> = {};
+        for (const key of Object.keys(active)) {
+          const el = document.querySelector<HTMLElement>(`[data-question="${key}"][data-filter="info"]`);
+          if (el) info[key] = active[key];
+        }
+        if (info['Where will it be installed?'] === 'install-raised') {
+          notices.appendChild(
+            makeBanner(
+              'amber',
+              'Raised installation needs structural sign-off. A filled pool weighs roughly 1 t per m³ of water — have your deck or balcony rated by a professional and plan for drainage before ordering. Do not order without that confirmation.'
+            )
+          );
+        }
+        if (info['Do you need heating or massage?'] === 'climate-massage') {
+          notices.appendChild(
+            makeBanner(
+              'amber',
+              'None of our models include massage jets. Our spa tubs are for still-water soaking, optionally paired with an external heater (sold separately). If massage jets are essential, we are not the right fit.'
+            )
+          );
+        }
+        if (info['Do you need heating or massage?'] === 'climate-heating') {
+          notices.appendChild(
+            makeBanner(
+              'sky',
+              'About heating: our spa tubs have insulated walls and a thermal bottom but no built-in heater. They pair with an external heater, sold separately — see each product page for what is included.'
+            )
+          );
+        }
+        if (info['Personal use or business project?'] === 'purpose-business') {
+          notices.appendChild(
+            makeBanner(
+              'sky',
+              'Buying for a business? Wholesale terms, MOQ and project/OEM options are covered on our business page.',
+              {
+                href: '/for-businesses',
+                label: 'Business & wholesale →',
+              }
+            )
+          );
+        }
+        if (countryEl && countryEl.value.trim()) {
+          const c = countryEl.value.trim();
+          notices.appendChild(
+            makeBanner(
+              'sky',
+              `Before ordering, confirm delivery to ${c}. Delivery availability and shipping cost are confirmed per order — send us your delivery address and we will confirm before you commit.`,
+              { href: '/contact', label: 'Confirm delivery →' }
+            )
+          );
+        }
+      }
+
+      function apply(): void {
+        const dims = usingDims();
+        const L = parseDim(lenEl);
+        const W = parseDim(widEl);
+        const tagGroups = Object.keys(active).filter((g) => {
+          const el = document.querySelector<HTMLElement>(`[data-question="${g}"]`);
+          return el !== null && el.getAttribute('data-filter') === 'tag';
+        });
+        const cards = Array.from(container.children) as HTMLElement[];
+        let visible = 0;
+        for (const card of cards) {
+          const tags = (card.getAttribute('data-tags') || '').split(' ');
+          let show: boolean;
+          if (dims) {
+            show = cardFitsDims(card, L, W);
+          } else {
+            show = tagGroups.every((g) => tags.includes(active[g]));
+          }
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        }
+        const hasInput = dims || tagGroups.length > 0;
+        if (noMatch) {
+          if (visible === 0 && hasInput) {
+            if (noMatchTitle) {
+              noMatchTitle.textContent = dims
+                ? 'No standard model fits this space'
+                : 'No standard model matches your answers';
+            }
+            if (noMatchText) {
+              noMatchText.textContent = dims
+                ? `Our smallest footprints start around 1.5 × 1.5 m, and none of the recommended sizes fit ${L} × ${W} m. Adjust your measurements, browse the catalog, or ask us about custom OEM sizes.`
+                : 'Try relaxing a filter — or contact us and we will point you to the right model.';
+            }
+            noMatch.classList.remove('hidden');
+          } else {
+            noMatch.classList.add('hidden');
+          }
+        }
+        renderNotices();
+      }
+
       function setChip(chip: HTMLElement, on: boolean): void {
         chip.classList.toggle('bg-primary', on);
         chip.classList.toggle('text-white', on);
@@ -332,6 +644,7 @@ const metadata = merge(
         chip.classList.toggle('dark:bg-blue-500', on);
         chip.classList.toggle('dark:border-blue-500', on);
       }
+
       chips.forEach((chip) => {
         chip.addEventListener('click', () => {
           const groupEl = chip.closest('[data-question]');
@@ -348,10 +661,19 @@ const metadata = merge(
           apply();
         });
       });
+
+      [lenEl, widEl].forEach((el) => {
+        el?.addEventListener('input', apply);
+      });
+      countryEl?.addEventListener('input', apply);
+
       if (reset) {
         reset.addEventListener('click', () => {
           for (const key of Object.keys(active)) delete active[key];
           chips.forEach((chip) => setChip(chip, false));
+          if (lenEl) lenEl.value = '';
+          if (widEl) widEl.value = '';
+          if (countryEl) countryEl.value = '';
           apply();
         });
       }
