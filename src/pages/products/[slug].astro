@@ -30,7 +30,6 @@ import PackageContents from '~/components/product/PackageContents.astro';
 import SetupStorage from '~/components/product/SetupStorage.astro';
 import ProductFaq from '~/components/product/ProductFaq.astro';
 import SpecTable from '~/components/product/SpecTable.astro';
-import WhyThisPool from '~/components/product/WhyThisPool.astro';
 import SupportCards from '~/components/product/SupportCards.astro';
 import StickyBuyBar from '~/components/product/StickyBuyBar.astro';
 
@@ -183,15 +182,6 @@ const DETAIL_UI_KEYS = [
   'product.faqTitle',
   'product.retailPrice',
   'product.buyNow',
-  'product.whyTitle',
-  'product.whyIntro',
-  'product.whyFit1',
-  'product.whyFit2',
-  'product.whyFit3',
-  'product.whyFit4',
-  'product.whyCheck',
-  'product.whyCompare',
-  'product.whyCta',
 ];
 const detailUi: Record<string, string> = Object.fromEntries(DETAIL_UI_KEYS.map((k) => [k, tEn(k)]));
 
@@ -630,66 +620,13 @@ const specGroups = detailV2
       >
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
-            Business Fit
+            Product Definition
           </span>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
             Who is it for?
           </h2>
           {rec.audience && (
             <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed capitalize">{rec.audience}</p>
-          )}
-          {rec && productBusinessData[rec.id] && (
-            <div class="mt-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-5">
-              <p class="text-sm font-semibold text-orange-800 dark:text-orange-300 mb-3">Best For Your Business</p>
-              <div class="flex flex-wrap gap-2 mb-3">
-                {productBusinessData[rec.id].bestFor.includes('families') && (
-                  <span class="inline-block text-xs font-medium bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full">
-                    Families
-                  </span>
-                )}
-                {productBusinessData[rec.id].bestFor.includes('retailers') && (
-                  <span class="inline-block text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 px-3 py-1 rounded-full">
-                    Retailers
-                  </span>
-                )}
-                {productBusinessData[rec.id].bestFor.includes('oem') && (
-                  <span class="inline-block text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-3 py-1 rounded-full">
-                    OEM
-                  </span>
-                )}
-              </div>
-              <p class="text-sm text-orange-700 dark:text-orange-400 leading-relaxed">
-                {productBusinessData[rec.id].recommendation}
-              </p>
-              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Use Case
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].useCase}</p>
-                </div>
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Operating Cost
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].operatingCost}</p>
-                </div>
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Expected Lifespan
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].lifespan}</p>
-                </div>
-                <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
-                  <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
-                    Why Businesses Choose It
-                  </p>
-                  <p class="text-sm text-gray-700 dark:text-slate-300">
-                    {productBusinessData[rec.id].whyBusinessesChooseIt}
-                  </p>
-                </div>
-              </div>
-            </div>
           )}
         </div>
       </section>
@@ -715,9 +652,6 @@ const specGroups = detailV2
       </section>
     )
   }
-  {/* Why This Pool (audit §10.2) */}
-  {rec && <WhyThisPool ui={detailUi} compareHref="/products/compare" />}
-
   {/* Module 06 — Package Contents (detail V2) */}
   {
     detailV2 && (
@@ -974,6 +908,61 @@ const specGroups = detailV2
         Beyond the standard retail range, this product line is also produced for vacation rentals, glamping sites,
         retailers, and brand partners — including custom sizes, OEM/ODM adaptations, and private-label programs.
       </p>
+      {
+        rec && productBusinessData[rec.id] && (
+          <div class="mt-6 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-5">
+            <p class="text-sm font-semibold text-orange-800 dark:text-orange-300 mb-3">Best For Your Business</p>
+            <div class="flex flex-wrap gap-2 mb-3">
+              {productBusinessData[rec.id].bestFor.includes('families') && (
+                <span class="inline-block text-xs font-medium bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full">
+                  Families
+                </span>
+              )}
+              {productBusinessData[rec.id].bestFor.includes('retailers') && (
+                <span class="inline-block text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 px-3 py-1 rounded-full">
+                  Retailers
+                </span>
+              )}
+              {productBusinessData[rec.id].bestFor.includes('oem') && (
+                <span class="inline-block text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-3 py-1 rounded-full">
+                  OEM
+                </span>
+              )}
+            </div>
+            <p class="text-sm text-orange-700 dark:text-orange-400 leading-relaxed">
+              {productBusinessData[rec.id].recommendation}
+            </p>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
+                <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
+                  Use Case
+                </p>
+                <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].useCase}</p>
+              </div>
+              <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
+                <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
+                  Operating Cost
+                </p>
+                <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].operatingCost}</p>
+              </div>
+              <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
+                <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
+                  Expected Lifespan
+                </p>
+                <p class="text-sm text-gray-700 dark:text-slate-300">{productBusinessData[rec.id].lifespan}</p>
+              </div>
+              <div class="bg-white/70 dark:bg-slate-800/70 rounded-lg p-3">
+                <p class="text-xs font-semibold text-orange-700 dark:text-orange-400 uppercase tracking-wider mb-1">
+                  Why Businesses Choose It
+                </p>
+                <p class="text-sm text-gray-700 dark:text-slate-300">
+                  {productBusinessData[rec.id].whyBusinessesChooseIt}
+                </p>
+              </div>
+            </div>
+          </div>
+        )
+      }
       <div class="mt-6 flex flex-wrap gap-4">
         <a
           href="/for-businesses"
