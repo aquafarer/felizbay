@@ -23,9 +23,16 @@ interface Props {
   catalogItems: PoolCatalogItem[];
   quoteHref: string;
   compareHref: string;
+  /** Retail product (Stripe SKU): the checker becomes fit-reference only —
+   *  no FOB wholesale price is shown next to the retail buy path, and the
+   *  retail-set notice clarifies the cart is not driven by this selector. */
+  retailSku?: string;
+  /** Link to the wholesale price list shown in the retail-set notice */
+  wholesaleHref?: string;
 }
 
-const { ui, fitIntro, fitRows, fitNotice, catalogItems, quoteHref, compareHref } = Astro.props;
+const { ui, fitIntro, fitRows, fitNotice, catalogItems, quoteHref, compareHref, retailSku, wholesaleHref } =
+  Astro.props;
 
 interface SizeOption {
   item: string;
@@ -121,7 +128,7 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
                   selected={o.item === first?.item}
                   data-size={o.label}
                   data-wall={o.wall}
-                  data-fob={o.fobUsd.toFixed(2)}
+                  data-fob={retailSku ? undefined : o.fobUsd.toFixed(2)}
                   data-liters={o.estLiters}
                   data-internal={o.internal ?? ''}
                 >
@@ -131,6 +138,22 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
             }
           </select>
         </label>
+
+        {
+          retailSku && (
+            <div class="mt-3 rounded-lg border border-sky-200 dark:border-sky-900/50 bg-sky-50 dark:bg-sky-950/30 px-4 py-3">
+              <p class="text-xs leading-relaxed text-sky-900 dark:text-sky-200">
+                These are factory sizes for fit reference. The online purchase is the fixed retail set (SKU{' '}
+                <span class="font-mono font-semibold">{retailSku}</span>) — selecting a size here does not change the
+                cart. Wholesale FOB pricing for factory sizes is on the{' '}
+                <a href={wholesaleHref || '/products/specs'} class="font-semibold underline">
+                  wholesale price list
+                </a>
+                .
+              </p>
+            </div>
+          )
+        }
 
         {/* External dimension diagram (per2.txt §二十 item 2) — redrawn by the selector script */}
         <div
@@ -174,14 +197,18 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
               {first?.estLiters ? fmtLiters(first.estLiters) : '—'}
             </dd>
           </div>
-          <div>
-            <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
-              {ui['product.fobWholesale']}
-            </dt>
-            <dd id="fitg-fob-val" class="mt-0.5 text-sm font-semibold text-sky-700 dark:text-sky-400">
-              {first ? fmtFob(first.fobUsd) : '—'}
-            </dd>
-          </div>
+          {
+            !retailSku && (
+              <div>
+                <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                  {ui['product.fobWholesale']}
+                </dt>
+                <dd id="fitg-fob-val" class="mt-0.5 text-sm font-semibold text-sky-700 dark:text-sky-400">
+                  {first ? fmtFob(first.fobUsd) : '—'}
+                </dd>
+              </div>
+            )
+          }
         </dl>
 
         <p class="mt-3 text-[11px] text-gray-400 dark:text-slate-500 leading-snug">{ui['product.estFillNote']}</p>
@@ -223,10 +250,11 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
     const internalVal = document.getElementById('fitg-internal-val');
     const wallVal = document.getElementById('fitg-wall-val');
     const volumeVal = document.getElementById('fitg-volume-val');
+    // Absent on retail product pages (fit-reference mode, no FOB row rendered).
     const fobVal = document.getElementById('fitg-fob-val');
     const diagram = document.getElementById('fitg-diagram');
     const quoteLink = document.getElementById('fitg-quote');
-    if (!sel || !sizeVal || !internalVal || !wallVal || !volumeVal || !fobVal) return;
+    if (!sel || !sizeVal || !internalVal || !wallVal || !volumeVal) return;
 
     const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
 
@@ -265,7 +293,7 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
       wallVal.textContent = opt.dataset.wall ?? '—';
       const liters = parseFloat(opt.dataset.liters ?? '');
       volumeVal.textContent = Number.isNaN(liters) ? '—' : fmtLiters(liters);
-      fobVal.textContent = opt.dataset.fob ? `$${opt.dataset.fob}` : '—';
+      if (fobVal) fobVal.textContent = opt.dataset.fob ? `$${opt.dataset.fob}` : '—';
       drawDiagram(opt);
       syncUrl(opt.value);
       syncQuoteLink(opt.value);

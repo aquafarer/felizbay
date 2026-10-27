@@ -57,7 +57,11 @@ const priceDisplay = basePriceDisplay !== '' ? (hasSku ? basePriceDisplay : `Fro
     >
     </div>
     {
-      !hasSku && (
+      hasSku ? (
+        <span class="absolute top-4 left-4 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider rounded-md bg-green-600/95 text-white shadow-sm">
+          Retail · Single-piece purchase
+        </span>
+      ) : (
         <span class="absolute top-4 left-4 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider rounded-md bg-sky-600/95 text-white shadow-sm">
           Wholesale · project orders
         </span>

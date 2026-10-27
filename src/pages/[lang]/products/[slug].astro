@@ -683,6 +683,8 @@ const specGroups = detailV2
         catalogItems={catalogSeries.items}
         quoteHref={`/${lang}/contact?product=${encodeURIComponent(product.title)}`}
         compareHref="/products/compare"
+        retailSku={product.sku || undefined}
+        wholesaleHref={`${langPrefix}/products/specs`}
       />
     )
   }
@@ -720,7 +722,12 @@ const specGroups = detailV2
         included={detailV2.packageIncluded}
         requiredSeparately={detailV2.packageRequired}
         optionalAddOns={poolAccessories}
-        currencyNote={PRICE_BASIS_NOTE}
+        showFob={!product.sku}
+        currencyNote={
+          product.sku
+            ? 'Individual availability and pricing on request — contact us for single-piece options.'
+            : PRICE_BASIS_NOTE
+        }
       />
     )
   }

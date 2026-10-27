@@ -18,6 +18,9 @@ interface Props {
   requiredSeparately: string[];
   optionalAddOns: PackageOptionalItem[];
   currencyNote?: string;
+  /** false on retail product pages: wholesale FOB starting prices must not
+   *  appear next to a single-piece retail purchase path. */
+  showFob?: boolean;
 }
 
 const {
@@ -29,6 +32,7 @@ const {
   requiredSeparately,
   optionalAddOns,
   currencyNote,
+  showFob = true,
 } = Astro.props;
 ---
 
@@ -78,7 +82,7 @@ const {
                 <p class="text-sm font-medium text-gray-700 dark:text-slate-300">{acc.name}</p>
                 <p class="text-xs text-gray-500 dark:text-slate-400">
                   {acc.spec}
-                  {acc.fobUsd ? ` — from $${acc.fobUsd.toFixed(2)} FOB` : ''}
+                  {showFob && acc.fobUsd ? ` — from $${acc.fobUsd.toFixed(2)} FOB` : ''}
                 </p>
               </li>
             ))
