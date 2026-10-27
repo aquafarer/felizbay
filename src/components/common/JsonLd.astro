@@ -44,6 +44,13 @@ export interface ProductLd {
   hasVariant?: Array<Record<string, unknown>>;
 }
 
+export interface ArticleMentionLd {
+  name: string;
+  url: string;
+  /** Defaults to 'Product'; use 'ProductGroup' when the target page publishes a group node. */
+  typeName?: string;
+}
+
 export interface ArticleLd {
   headline: string;
   description: string;
@@ -53,6 +60,8 @@ export interface ArticleLd {
   authorName?: string;
   authorUrl?: string;
   editorName?: string;
+  /** Things genuinely referenced by the article body (scenario pages to products, JSON-LD audit section 7). */
+  mentions?: ArticleMentionLd[];
 }
 
 export interface ImageObjectLd {
@@ -252,6 +261,16 @@ if (type === 'Organization') {
       ...(article.authorUrl ? { url: article.authorUrl } : {}),
     },
     ...(article.editorName ? { editor: { '@type': 'Person', name: article.editorName } } : {}),
+    ...(article.mentions && article.mentions.length
+      ? {
+          mentions: article.mentions.map((p) => ({
+            '@type': p.typeName || 'Product',
+            '@id': `${p.url}#product`,
+            name: p.name,
+            url: p.url,
+          })),
+        }
+      : {}),
     publisher: {
       '@type': 'Organization',
       name,

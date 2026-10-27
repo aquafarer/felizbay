@@ -45,6 +45,18 @@ const matchCards = idea.matches.map((m) => {
 
 const otherIdeas = POOL_IDEAS.filter((i) => i.slug !== idea.slug);
 
+// Products genuinely linked on this page ("Retail models" links) — exposed as
+// Article.mentions so the scenario page references the products it recommends.
+// Only products that actually appear on the page are included (JSON-LD audit §七),
+// and the @type/@id match the ProductGroup node each product page publishes.
+const mentionedProducts = Array.from(
+  new Map(
+    idea.matches
+      .flatMap((m) => seriesProductPages[m.series] ?? [])
+      .map((l) => [l.href, { name: l.label, url: `${SITE.site}${l.href}/`, typeName: 'ProductGroup' }])
+  ).values()
+);
+
 const detailEntry = await getEntry('pool-idea-detail', idea.slug);
 const detailRendered = detailEntry ? await render(detailEntry) : undefined;
 const DetailContent = detailRendered?.Content;
@@ -77,6 +89,7 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
       datePublished: '2026-10-17',
       dateModified: '2026-10-17',
       authorName: 'Felizbay Team',
+      mentions: mentionedProducts,
     }}
     data={{ url: `${SITE.site}/pool-ideas/${idea.slug}` }}
   />
