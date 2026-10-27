@@ -16,24 +16,6 @@ hero:
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: استخر بادی Drop Stitch مستطیلی Felizbay در حیاط خلوت
-stats:
-  title: Felizbay در یک نگاه
-  columns: 4
-  stats:
-    - title: مجموعه های استخر
-      amount: '4'
-    - title: 'اندازه های استخر'
-      amount: 2-10 m
-    - title: 'زمان باد کردن'
-      amount: '5-15 min'
-    - title: فشار نامی
-      amount: 4-5 PSI
-    - title: گارانتی
-      amount: 2-Year Limited
-    - title: اندازه های سفارشی
-      amount: Available
-    - title: تماس بگیرید
-      amount: info@felizbay.com
 features:
   id: features
   tagline: تکنولوژی Drop Stitch

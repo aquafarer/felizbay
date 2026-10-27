@@ -17,25 +17,6 @@ hero:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
 
-stats:
-  title: Felizbay at a Glance
-  columns: 4
-  stats:
-    - title: Pool Collections
-      amount: '4'
-    - title: Pool Sizes
-      amount: 2-10 m
-    - title: Time to Inflate
-      amount: '5-15 min'
-    - title: Rated Pressure
-      amount: '4-5 PSI'
-    - title: Warranty
-      amount: 2-Year Limited
-    - title: Custom Sizes
-      amount: Available
-    - title: Contact
-      amount: info@felizbay.com
-
 compare_collections:
   tagline: Compare Collections
   title: 'Two Collections,<br />One Clear Choice'

@@ -4,7 +4,6 @@ export const prerender = true;
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import HeroCarousel from '~/components/widgets/HeroCarousel.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -14,6 +13,7 @@ import Icon from '~/components/ui/Icon.astro';
 import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
 import { POOL_IDEAS, findPoolIdea, type PoolIdea } from '~/data/pool-ideas';
+import { CUSTOMER_CASES } from '~/data/customer-cases';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/home.ts';
 import { getUiForLang } from '~/i18n/generated/ui-all';
@@ -25,7 +25,6 @@ setPageContentData(__pageData);
 const page = getPageContent(lang, 'home');
 
 const hero = page.hero ?? {};
-const stats = page.stats ?? {};
 const compareCollections = page.compare_collections ?? {};
 const customerTypes = page.content_customer_types ?? {};
 const features = page.features ?? {};
@@ -82,8 +81,6 @@ const metadata = {
       </Hero>
     ) : null
   }
-
-  <Stats title={stats.title} stats={stats.stats} />
 
   <Features2
     id={features.id}
@@ -247,6 +244,60 @@ const metadata = {
   />
 
   <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
+
+  <!-- Customer stories -->
+  {
+    CUSTOMER_CASES.length > 0 && (
+      <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
+        <div class="text-center mb-8">
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+            Customer Stories
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading">Real Pools in Real Backyards</h2>
+          <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
+            How Felizbay owners set up, swim, and store their pools through the season.
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {CUSTOMER_CASES.map((customerCase) => (
+            <figure class="flex flex-col rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-lg transition-shadow">
+              <img
+                src={customerCase.photo}
+                alt={customerCase.photoAlt}
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="600"
+                class="aspect-[4/3] w-full object-cover"
+              />
+              <figcaption class="flex flex-1 flex-col p-5">
+                <blockquote class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-slate-300">
+                  “{customerCase.story}”
+                </blockquote>
+                <div class="mt-auto border-t border-gray-100 dark:border-slate-800 pt-4">
+                  <p class="text-base font-semibold text-gray-900 dark:text-slate-100">
+                    {customerCase.name}
+                    {customerCase.draft && (
+                      <span
+                        class="ml-2 rounded-full bg-amber-100 px-2 py-0.5 align-middle text-[10px] font-bold uppercase tracking-wide text-amber-700"
+                        title="Draft — sample story to be replaced with a verified customer case"
+                      >
+                        Sample
+                      </span>
+                    )}
+                  </p>
+                  <p class="mt-0.5 text-sm text-gray-500 dark:text-slate-400">{customerCase.location}</p>
+                  <p class="mt-2 text-xs font-medium text-primary dark:text-blue-400">
+                    {customerCase.pool} · {customerCase.size}
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    )
+  }
 
   {cta.title ? <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} /> : null}
 </Layout>

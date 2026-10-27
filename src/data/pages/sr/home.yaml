@@ -16,24 +16,6 @@ hero:
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay pravougaoni bazen na naduvavanje Drop Stitch u dvorištu
-stats:
-  title: Felizbay na prvi pogled
-  columns: 4
-  stats:
-    - title: Pool Collections
-      amount: '4'
-    - title: Veličine bazena
-      amount: 2-10 m
-    - title: 'Vreme naduvavanja'
-      amount: '5-15 min'
-    - title: Nazivni pritisak
-      amount: 4-5 PSI
-    - title: Garancija
-      amount: 2-Year Limited
-    - title: Prilagođene veličine
-      amount: Available
-    - title: Kontakt
-      amount: info@felizbay.com
 features:
   id: features
   tagline: Drop Stitch tehnologija
