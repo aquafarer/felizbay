@@ -13,9 +13,6 @@ hero:
     - text: Havuzunuzu Bulun
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'İş Amaçlı'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Arka bahçede Felizbay dikdörtgen Drop Stitch şişme yüzme havuzu
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Havuz Fikirleri
   title: İçin Doğru Havuz<br />Sizin Alanınız
   subtitle: Doğru havuzu seçmek için gerçek kurulumlar, gerçek boyutlar ve dürüst rehberlik.
-  items:
-    - title: Aileler için Arka Bahçe Havuzları
-      description: Arka bahçede ailece geçirilecek yazlar için alan planlaması, gerçek kullanılabilir boyutlar ve kolay bakım.
-      icon: tabler:home
-      cta: Fikir Alın
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Küçük Arka Bahçeler İçin Havuzlar
-      description: 'Dar dış mekanlara uyum sağlayan kompakt yuvarlak ve kare modeller — serinlemek ve ailenizle su içmek için yer vardır.'
-      icon: tabler:layout-grid
-      cta: Fikir Alın
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Toplantılar için Büyük Havuzlar
-      description: Yaz günlerinde tüm mürettebat için gerçek yüzme alanına sahip büyük dikdörtgen havuzlar.
-      icon: tabler:users
-      cta: Fikir Alın
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Açık Havada Islanma ve Rahatlama
-      description: Evde günlük dinlenmeler için yerleşik koltuklara ve yalıtımlı tabanlara sahip SPA küvetleri.
-      icon: tabler:ripple
-      cta: Fikir Alın
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Kiralık Tatil Havuzları
-      description: Hızlı bir şekilde kurulan ve sezon dışında depolanan sezonluk bir misafir ikramı.
-      icon: tabler:beach
-      cta: Fikir Alın
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping ve Konaklama
-      description: Farklı açık hava konaklamaları - glamping alanları, butik mülkler ve etkinlik mekanları.
-      icon: tabler:tent
-      cta: Fikir Alın
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Alışveriş Havuzları
   title: Havuzlarımızı Keşfedin
   subtitle: Arka bahçeniz veya dış mekanınız için doğru havuzu bulmak için şekilleri, boyutları ve özellikleri karşılaştırın.
-content_workshop:
-  isReversed: true
-  tagline: İşletmeler için
-  title: İş Havuzları,<br />Fazla
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay iş ortaklarına</h3>
-  items:
-    - title: Kiralık Tatil Evleri ve Konaklama
-      description: Kiralık tatil evleri, glamping siteleri ve butik mülkler için sezonluk misafir olanakları — kurulumu hızlı, bakımı kolay, saklaması basit.
-    - title: Perakende ve Marka Ortakları
-      description: Bahçe merkezleri, havuz mağazaları ve çevrimiçi mağazalar için toptan satış programları ve perakende satışa hazır Drop Stitch havuzları.
-    - title: Özel ve Özel Etiket
-      description: Üretim ortaklarımız tarafından oluşturulan markalar için özel boyutlar, renkler, kapaklar, logo baskısı ve perakende ambalajlar.
 content_compliance:
   tagline: Bakım ve Güvenlik
   title: Sahip Olmak Kolay,<br />Sevmek Kolay
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Koleksiyonları Karşılaştır'
-  title: 'Dört Koleksiyon, Tek Net Seçim'
+  title: 'İki Koleksiyon, Tek Net Seçim'
   subtitle: 'Bir bakışta boyutlar ve en iyi kullanımlar; tüm teknik özellikler her ürün sayfasında mevcuttur.'
   headers:
     collection: 'Koleksiyon'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Daha büyük toplantılar için düz kenarlı yüzme alanı'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Yuvarlak SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Oturarak ıslanma için yerleşik koltuklar'
-      href: /products/hot-tub-round
-    - collection: 'Kare / Dikdörtgen SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Kompakt alanlarda oturarak ıslanma'
-      href: /products/hot-tub-square-rect
   note: 'Tüm koleksiyonlar: 4–5 PSI drop-stitch duvarlar, 5–15 dakika şişirme, paketli depolama. Isıtma ve filtreleme haricidir; ısıtıcılar ve filtre pompaları ayrı satılır.'
 
 content_evidence:

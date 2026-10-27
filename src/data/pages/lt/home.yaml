@@ -13,9 +13,6 @@ hero:
     - text: Raskite savo baseiną
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Verslui'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay stačiakampis Drop Stitch pripučiamas baseinas kieme
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Baseino idėjos
   title: Tinkamas baseinas<br />Jūsų Erdvė
   subtitle: Tikri nustatymai, tikri dydžiai ir sąžiningi nurodymai, kaip pasirinkti tinkamą baseiną.
-  items:
-    - title: Kieme baseinai šeimoms
-      description: Erdvės planavimas, realūs naudingi dydžiai ir lengva priežiūra šeimos vasaroms kieme.
-      icon: tabler:home
-      cta: Gaukite idėjų
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Baseinai mažiems kiemams
-      description: 'Kompaktiški apvalūs ir kvadratiniai modeliai, tinkantys siauroms lauko erdvėms – vieta atsivėsinimui ir šeimos vandens praleidimui.'
-      icon: tabler:layout-grid
-      cta: Gaukite idėjų
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Dideli baseinai susibūrimams
-      description: Dideli stačiakampiai baseinai su tikra vieta maudytis visai įgulai vasaros dienomis.
-      icon: tabler:users
-      cta: Gaukite idėjų
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Maudymasis ir atsipalaidavimas lauke
-      description: SPA kubilai su įmontuotomis sėdynėmis ir izoliuotu dugnu kasdieniam vėjui namuose.
-      icon: tabler:ripple
-      cta: Gaukite idėjų
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Baseinai nuomai atostogoms
-      description: Sezoninis svečių patogumas, kuris greitai paruošiamas ir ne sezono metu pasilieka.
-      icon: tabler:beach
-      cta: Gaukite idėjų
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping ir svetingumas
-      description: Išskirtinės viešnagės lauke – puošnios aikštelės, parduotuvėlės ir renginių vietos.
-      icon: tabler:tent
-      cta: Gaukite idėjų
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Parduotuvė baseinai
   title: Naršykite mūsų baseinus
   subtitle: Palyginkite formas, dydžius ir funkcijas, kad rastumėte tinkamą baseiną savo kieme ar lauko erdvei.
-content_workshop:
-  isReversed: true
-  tagline: Įmonėms
-  title: Baseinai verslui,<br />Taip pat
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay verslo partneriams</h3>
-  items:
-    - title: Nuoma atostogoms ir svetingumas
-      description: Sezoniniai svečių patogumai, skirti išsinuomoti atostogas, lankytinas vietas ir butiko patalpas – greitai įdiegti, lengvai prižiūrėti, paprasta laikyti.
-    - title: Mažmeninės prekybos ir prekės ženklo partneriai
-      description: Didmeninės programos ir mažmeninei prekybai paruošti „Drop Stitch“ baseinai sodo centrams, baseinų parduotuvėms ir internetinėms parduotuvėms.
-    - title: Individuali ir privati ​​etiketė
-      description: Individualūs dydžiai, spalvos, viršeliai, logotipų spausdinimas ir prekinių ženklų pakuotės – sukūrė mūsų gamybos partneriai.
 content_compliance:
   tagline: Priežiūra ir sauga
   title: Lengva turėti,<br />Lengva mylėti
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Palyginkite kolekcijas'
-  title: 'Keturios kolekcijos, vienas aiškus pasirinkimas'
+  title: 'Dvi kolekcijos, vienas aiškus pasirinkimas'
   subtitle: 'Dydžiai ir geriausias panaudojimas iš pirmo žvilgsnio – visos specifikacijos pateikiamos kiekvieno produkto puslapyje.'
   headers:
     collection: 'Kolekcija'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Tiesios pusės plaukimo erdvė didesniems susibūrimams'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Apvalus SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Įmontuotos sėdynės, skirtos mirkymui sėdint'
-      href: /products/hot-tub-round
-    - collection: 'Kvadratinis/stačiakampis SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Sėdimas mirkymas kompaktiškose erdvėse'
-      href: /products/hot-tub-square-rect
   note: 'Visos kolekcijos: 4–5 PSI drop-stitch sienos, 5–15 min pripūtimas, sandėliavimas supakuotas. Šildymas ir filtravimas yra išoriniai – šildytuvai ir filtravimo siurbliai parduodami atskirai.'
 
 content_evidence:

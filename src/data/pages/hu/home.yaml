@@ -13,9 +13,6 @@ hero:
     - text: Találja meg medencéjét
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Vállalkozásoknak'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay téglalap alakú Drop Stitch felfújható medence egy hátsó udvarban
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Medence ötletek
   title: A megfelelő medence<br />A te tered
   subtitle: Valódi beállítások, valós méretek és őszinte útmutatás a megfelelő medence kiválasztásához.
-  items:
-    - title: Háztáji medencék családoknak
-      description: Helytervezés, valós használható méretek és egyszerű karbantartás a családi nyarakhoz a kertben.
-      icon: tabler:home
-      cta: Ötleteket
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Medencék kis kertekbe
-      description: 'Kompakt kerek és négyzet alakú modellek, amelyek szűk kültéri helyekre is illeszkednek – hely a lehűléshez és a családi vízi időhöz.'
-      icon: tabler:layout-grid
-      cta: Ötleteket
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Nagy medencék összejövetelekhez
-      description: Nagy téglalap alakú medencék igazi úszótérrel a nyári napokon az egész legénység számára.
-      icon: tabler:users
-      cta: Ötleteket
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Szabadtéri áztatás és relaxáció
-      description: SPA kádak beépített ülőfelülettel és szigetelt fenékkel a mindennapi otthoni széllökésekhez.
-      icon: tabler:ripple
-      cta: Ötleteket
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Medence nyaralók számára
-      description: Szezonális vendégfelszerelés, amely gyorsan elkészül, és holtszezonban el is tárolható.
-      icon: tabler:beach
-      cta: Ötleteket
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping és vendéglátás
-      description: Megkülönböztető szabadtéri üdülés – látványos helyek, butikok és rendezvények helyszínei.
-      icon: tabler:tent
-      cta: Ötleteket
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Vásároljon medencéket
   title: Fedezze fel medencéinket
   subtitle: Hasonlítsa össze a formákat, méreteket és jellemzőket, hogy megtalálja a megfelelő medencét kertjében vagy kültéri helyiségében.
-content_workshop:
-  isReversed: true
-  tagline: Vállalkozásoknak
-  title: Üzleti medencék,<br />Is
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay üzleti partnereknek</h3>
-  items:
-    - title: Nyaralás és vendéglátás
-      description: Szezonális vendégszolgáltatások nyaralókhoz, kilátóhelyekhez és butik ingatlanokhoz – gyorsan telepíthető, könnyen karbantartható, egyszerűen tárolható.
-    - title: Kiskereskedelmi és márkapartnerek
-      description: Nagykereskedelmi programok és kiskereskedelmi használatra kész Drop Stitch medencék kertészeti központok, medenceboltok és online áruházak számára.
-    - title: Egyedi és privát címke
-      description: Egyedi méretek, színek, borítók, logónyomtatás és kiskereskedelmi csomagolás márkák számára – gyártópartnereink által.
 content_compliance:
   tagline: Gondozás és biztonság
   title: Könnyen birtokolható,<br />Könnyű Szeretni
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Gyűjtemények összehasonlítása'
-  title: 'Négy kollekció, egy egyértelmű választás'
+  title: 'Két kollekció, egy egyértelmű választás'
   subtitle: 'Méretek és legjobb felhasználási lehetőségek egy pillantásra – a teljes specifikáció minden termékoldalon megtalálható.'
   headers:
     collection: 'Kollekció'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Egyenes oldalú úszótér nagyobb összejövetelek számára'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Kerek SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Beépített ülések az ülő áztatáshoz'
-      href: /products/hot-tub-round
-    - collection: 'Négyzet/téglalap SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Ülő áztatás kompakt helyeken'
-      href: /products/hot-tub-square-rect
   note: 'Minden kollekció: 4–5 PSI drop-stitch falak, 5–15 perces felfújás, elcsomagolt tárolás. A fűtés és a szűrés külső – a fűtőelemek és a szűrőszivattyúk külön vásárolhatók meg.'
 
 content_evidence:

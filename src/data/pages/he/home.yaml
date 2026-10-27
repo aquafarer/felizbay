@@ -13,9 +13,6 @@ hero:
     - text: מצא את הבריכה שלך
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'לעסקים'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay מלבנית Drop Stitch בריכת שחייה מתנפחת בחצר אחורית
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: רעיונות לבריכה
   title: הבריכה הנכונה עבור<br />המרחב שלך
   subtitle: הגדרות אמיתיות, גדלים אמיתיים והדרכה כנה לבחירת הבריכה הנכונה.
-  items:
-    - title: בריכות למשפחות בחצר האחורית
-      description: תכנון חלל, גדלים שמישים אמיתיים ותחזוקה קלה לקיץ משפחתי בחצר האחורית.
-      icon: tabler:home
-      cta: קבלו רעיונות
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: בריכות לחצרות קטנות
-      description: 'דגמים עגולים ומרובעים קומפקטיים המתאימים לחללים חיצוניים צמודים - מקום להתקררות ולזמן מים משפחתי.'
-      icon: tabler:layout-grid
-      cta: קבלו רעיונות
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: בריכות גדולות להתכנסויות
-      description: בריכות מלבניות גדולות עם מרחב שחייה אמיתי לכל הצוות בימי הקיץ.
-      icon: tabler:users
-      cta: קבלו רעיונות
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: השרייה והרפיה בחוץ
-      description: אמבטיות ספא ​​עם מושבים מובנים ותחתית מבודדת להרגעות יומיומיות בבית.
-      icon: tabler:ripple
-      cta: קבלו רעיונות
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: בריכות להשכרות נופש
-      description: אבזור אורחים עונתי שמתקבע מהר ומאחסן מחוץ לעונה.
-      icon: tabler:beach
-      cta: קבלו רעיונות
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: גלמפינג ואירוח
-      description: שהייה חיצונית ייחודית - אתרי גלמפינג, נכסי בוטיק ומקומות אירועים.
-      icon: tabler:tent
-      cta: קבלו רעיונות
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: חנות בריכות
   title: חקור את הבריכות שלנו
   subtitle: השווה צורות, גדלים ותכונות כדי למצוא את הבריכה המתאימה לחצר האחורית או לחלל החיצוני שלך.
-content_workshop:
-  isReversed: true
-  tagline: לעסקים
-  title: בריכות לעסקים,<br />גַם
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay לשותפים עסקיים</h3>
-  items:
-    - title: השכרת נופש ואירוח
-      description: שירותים עונתיים לאורחים עבור השכרות נופש, אתרי גלמפינג ונכסי בוטיק - מהיר לפריסה, קל לתחזוקה, פשוט לאחסון.
-    - title: שותפי קמעונאות ומותגים
-      description: תוכניות סיטונאיות ובריכות Drop Stitch מוכנות לקמעונאות למרכזי גנים, חנויות בריכות וחנויות מקוונות.
-    - title: מותג מותאם אישית & פרטי
-      description: גדלים מותאמים אישית, צבעים, כריכות, הדפסת לוגו ואריזות קמעונאיות למותגים - שנבנו על ידי שותפי הייצור שלנו.
 content_compliance:
   tagline: טיפול ובטיחות
   title: קל לבעלות,<br />קל לאהוב
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'השווה אוספים'
-  title: 'ארבעה אוספים, בחירה אחת ברורה'
+  title: 'שני אוספים, בחירה אחת ברורה'
   subtitle: 'גדלים ושימושים מיטביים במבט חטוף - מפרטים מלאים מופיעים בכל דף מוצר.'
   headers:
     collection: 'קולקציה'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'מרחב שחייה ישר צדדי להתכנסויות גדולות יותר'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'ספא עגול'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'מושבים מובנים להשרייה בישיבה'
-      href: /products/hot-tub-round
-    - collection: 'ספא מרובע / מלבן'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'השרייה בישיבה בחללים קומפקטיים'
-      href: /products/hot-tub-square-rect
   note: 'כל הקולקציות: קירות 4-5 PSI drop-stitch, ניפוח של 5-15 דקות, אחסון לארוז. חימום וסינון הם חיצוניים - תנורי חימום ומשאבות מסננים נמכרים בנפרד.'
 
 content_evidence:

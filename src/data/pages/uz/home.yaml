@@ -13,9 +13,6 @@ hero:
     - text: Hovuzingizni toping
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Biznes uchun'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Orqa hovlida Felizbay to'rtburchaklar Drop Stitch shishiriladigan suzish havzasi
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Hovuz g'oyalari
   title: To'g'ri basseyn<br />Sizning makoningiz
   subtitle: Haqiqiy sozlamalar, haqiqiy o'lchamlar va to'g'ri hovuzni tanlash bo'yicha halol ko'rsatmalar.
-  items:
-    - title: Oilalar uchun hovli hovuzlari
-      description: Kosmosni rejalashtirish, haqiqiy foydalanish mumkin bo'lgan o'lchamlar va hovlida oilaviy yoz uchun oson parvarishlash.
-      icon: tabler:home
-      cta: Fikrlarni oling
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Kichik hovlilar uchun hovuzlar
-      description: 'Qattiq tashqi makonlarga mos keladigan ixcham yumaloq va kvadrat modellar - salqinlash uchun xona va oilaviy suv vaqti.'
-      icon: tabler:layout-grid
-      cta: Fikrlarni oling
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Yig'ilishlar uchun katta hovuzlar
-      description: Yoz kunlarida butun ekipaj uchun haqiqiy suzish maydoni bo'lgan katta to'rtburchaklar hovuzlar.
-      icon: tabler:users
-      cta: Fikrlarni oling
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Ochiq havoda namlash va dam olish
-      description: Uyda har kuni shamollash uchun o'rnatilgan o'rindiqli va izolyatsiyalangan tagliklari bo'lgan SPA vannalari.
-      icon: tabler:ripple
-      cta: Fikrlarni oling
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Dam olish uchun ijaraga olingan basseynlar
-      description: Tez o'rnatiladigan va mavsumdan tashqari saqlanadigan mavsumiy mehmonlar uchun qulaylik.
-      icon: tabler:beach
-      cta: Fikrlarni oling
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping va mehmondo'stlik
-      description: O'ziga xos ochiq turar joy - glamping saytlari, butiklar va tadbirlar o'tkaziladigan joylar.
-      icon: tabler:tent
-      cta: Fikrlarni oling
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Do'konlar basseynlari
   title: Hovuzlarimizni o'rganing
   subtitle: Orqa hovlingiz yoki tashqi makoningiz uchun to'g'ri hovuzni topish uchun shakllar, o'lchamlar va xususiyatlarni solishtiring.
-content_workshop:
-  isReversed: true
-  tagline: Korxonalar uchun
-  title: Biznes uchun basseynlar,<br />ham
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay biznes hamkorlari uchun</h3>
-  items:
-    - title: Dam olish uchun ijara va mehmondo'stlik
-      description: Dam olish maskanlari, glamping saytlari va butik ob'ektlari uchun mavsumiy mehmonlar uchun qulayliklar - tez o'rnatish, parvarish qilish oson, saqlash oson.
-    - title: Chakana savdo va brend hamkorlari
-      description: Bog 'markazlari, basseyn do'konlari va onlayn-do'konlar uchun ulgurji dasturlar va chakana savdoga tayyor Drop Stitch hovuzlari.
-    - title: Maxsus va shaxsiy yorliq
-      description: Ishlab chiqarish bo'yicha hamkorlarimiz tomonidan ishlab chiqarilgan o'lchamlar, ranglar, qopqoqlar, logotip chop etish va brendlar uchun chakana qadoqlash.
 content_compliance:
   tagline: Xizmat va xavfsizlik
   title: Oson egalik qilish,<br />Sevish oson
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'To''plamlarni solishtiring'
-  title: 'To''rtta to''plam, bitta aniq tanlov'
+  title: 'Ikki to''plam, bitta aniq tanlov'
   subtitle: 'Bir qarashda o''lchamlar va eng yaxshi foydalanish - to''liq texnik xususiyatlar har bir mahsulot sahifasida mavjud.'
   headers:
     collection: 'To''plam'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Kattaroq yig''ilishlar uchun tekis qirrali suzish maydoni'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Dumaloq SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'O''tirgan holda namlash uchun o''rnatilgan o''rindiqlar'
-      href: /products/hot-tub-round
-    - collection: 'Kvadrat/to‘g‘ri to‘rtburchak SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Yilni bo''shliqlarda o''tirgan ho''llash'
-      href: /products/hot-tub-square-rect
   note: 'Barcha to''plamlar: 4–5 PSI drop-stitch devorlari, 5–15 daqiqali inflyatsiya, paketli saqlash. Isitish va filtrlash tashqi - isitgichlar va filtr nasoslari alohida sotiladi.'
 
 content_evidence:

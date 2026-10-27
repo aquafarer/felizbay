@@ -13,9 +13,6 @@ hero:
     - text: ابحث عن حمام السباحة الخاص بك
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'للأعمال'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: حمام سباحة Drop Stitch قابل للنفخ مستطيل الشكل من Felizbay في الفناء الخلفي
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: أفكار تجمع
   title: المسبح المناسب ل<br />المساحة الخاصة بك
   subtitle: إعدادات حقيقية وأحجام حقيقية وإرشادات صادقة لاختيار حمام السباحة المناسب.
-  items:
-    - title: حمامات الفناء الخلفي للعائلات
-      description: تخطيط المساحة، والأحجام الحقيقية القابلة للاستخدام، وسهولة الصيانة لفصل الصيف العائلي في الفناء الخلفي.
-      icon: tabler:home
-      cta: احصل على أفكار
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: حمامات سباحة للساحات الخلفية الصغيرة
-      description: 'موديلات صغيرة مستديرة ومربعة تناسب المساحات الخارجية الضيقة - مساحة للتهدئة وقضاء وقت ممتع مع العائلة.'
-      icon: tabler:layout-grid
-      cta: احصل على أفكار
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: حمامات سباحة كبيرة للتجمعات
-      description: حمامات سباحة كبيرة مستطيلة الشكل مع مساحة حقيقية للسباحة لجميع أفراد الطاقم في أيام الصيف.
-      icon: tabler:users
-      cta: احصل على أفكار
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: الغطس والاسترخاء في الهواء الطلق
-      description: أحواض سبا بمقاعد مدمجة وقيعان معزولة للاسترخاء اليومي في المنزل.
-      icon: tabler:ripple
-      cta: احصل على أفكار
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: حمامات للإيجار لقضاء العطلات
-      description: وسيلة راحة موسمية للضيوف يتم إعدادها بسرعة وتخزينها بعيدًا في غير موسمها.
-      icon: tabler:beach
-      cta: احصل على أفكار
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: تخييم والضيافة
-      description: إقامات مميزة في الهواء الطلق - مواقع تخييم وعقارات بوتيكية وأماكن لإقامة الفعاليات.
-      icon: tabler:tent
-      cta: احصل على أفكار
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: تسوق حمامات السباحة
   title: استكشف حمامات السباحة لدينا
   subtitle: قارن الأشكال والأحجام والميزات للعثور على حمام السباحة المناسب للفناء الخلفي أو المساحة الخارجية.
-content_workshop:
-  isReversed: true
-  tagline: للشركات
-  title: حمامات سباحة للأعمال،<br />أيضاً
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay لشركاء الأعمال</h3>
-  items:
-    - title: إيجارات العطلات والضيافة
-      description: وسائل الراحة الموسمية للضيوف للإيجارات أثناء العطلات، والمواقع الفاخرة، وعقارات البوتيك - سريعة النشر، وسهلة الصيانة، وسهلة التخزين.
-    - title: شركاء البيع بالتجزئة والعلامات التجارية
-      description: برامج البيع بالجملة وحمامات Drop Stitch الجاهزة للبيع بالتجزئة لمراكز الحدائق ومحلات حمامات السباحة والمتاجر عبر الإنترنت.
-    - title: تسمية مخصصة وخاصة
-      description: أحجام وألوان وأغلفة مخصصة وطباعة الشعار وتغليف التجزئة للعلامات التجارية - تم تصميمها بواسطة شركائنا في التصنيع.
 content_compliance:
   tagline: الرعاية والسلامة
   title: سهل التملك،<br />من السهل أن تحب
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'قارن المجموعات'
-  title: 'أربع مجموعات، خيار واحد واضح'
+  title: 'مجموعتان، خيار واحد واضح'
   subtitle: 'نظرة سريعة على الأحجام وأفضل الاستخدامات - المواصفات الكاملة موجودة في كل صفحة منتج.'
   headers:
     collection: 'مجموعة'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'مساحة سباحة مستقيمة الجوانب للتجمعات الكبيرة'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'سبا دائري'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'مقاعد مدمجة للنقع أثناء الجلوس'
-      href: /products/hot-tub-round
-    - collection: 'سبا مربع / مستطيل'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'الجلوس في مساحات صغيرة'
-      href: /products/hot-tub-square-rect
   note: 'جميع المجموعات: 4-5 جدران PSI drop-stitch، نفخ لمدة 5-15 دقيقة، تخزين معبأ. التدفئة والترشيح خارجيان - تُباع السخانات ومضخات الفلتر بشكل منفصل.'
 
 content_evidence:

@@ -13,9 +13,6 @@ hero:
     - text: Find Your Pool
       href: /find-your-pool
       icon: tabler:compass
-    - text: For Business
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
@@ -41,7 +38,7 @@ stats:
 
 compare_collections:
   tagline: Compare Collections
-  title: 'Four Collections,<br />One Clear Choice'
+  title: 'Two Collections,<br />One Clear Choice'
   subtitle: 'Sizes and best uses at a glance — full specifications live on each product page.'
   headers:
     collection: Collection
@@ -56,14 +53,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Straight-sided swim space for larger gatherings'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Round SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Built-in seats for seated soaking'
-      href: /products/hot-tub-round
-    - collection: 'Square / Rect SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Seated soaking in compact spaces'
-      href: /products/hot-tub-square-rect
   note: 'All collections: 4–5 PSI drop-stitch walls, 5–15 min inflation, pack-away storage. Heating and filtration are external — heaters and filter pumps are sold separately.'
 
 features:
@@ -96,56 +85,11 @@ content_customer_types:
   tagline: Pool Ideas
   title: 'The Right Pool for<br />Your Space'
   subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
-  items:
-    - title: 'Backyard Pools for Families'
-      description: 'Space planning, real usable sizes, and easy maintenance for family summers in the backyard.'
-      icon: tabler:home
-      cta: 'Get Ideas'
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Pools for Small Backyards'
-      description: 'Compact round and square models that fit tight outdoor spaces — room for cooling off and family water time.'
-      icon: tabler:layout-grid
-      cta: 'Get Ideas'
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: 'Large Pools for Gatherings'
-      description: 'Big rectangular pools with real swim space for the whole crew on summer days.'
-      icon: tabler:users
-      cta: 'Get Ideas'
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: 'Outdoor Soaking & Relaxation'
-      description: 'SPA tubs with built-in seats and insulated bottoms for daily wind-downs at home.'
-      icon: tabler:ripple
-      cta: 'Get Ideas'
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: 'Pools for Vacation Rentals'
-      description: 'A seasonal guest amenity that sets up fast and stores away in the off-season.'
-      icon: tabler:beach
-      cta: 'Get Ideas'
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: 'Glamping & Hospitality'
-      description: 'Distinctive outdoor stays — glamping sites, boutique properties, and event venues.'
-      icon: tabler:tent
-      cta: 'Get Ideas'
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 
 content_categories:
   tagline: Shop Pools
   title: 'Explore Our Pools'
   subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
-
-content_workshop:
-  isReversed: true
-  tagline: For Businesses
-  title: 'Pools for Business,<br />Too'
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for business partners</h3>
-  items:
-    - title: 'Vacation Rentals & Hospitality'
-      description: 'Seasonal guest amenities for vacation rentals, glamping sites, and boutique properties — fast to deploy, easy to maintain, simple to store.'
-    - title: 'Retail & Brand Partners'
-      description: 'Wholesale programs and retail-ready drop stitch pools for garden centers, pool shops, and online stores.'
-    - title: 'Custom & Private Label'
-      description: 'Custom sizes, colors, covers, logo printing, and retail packaging for brands — built by our manufacturing partners.'
 
 content_compliance:
   tagline: Care & Safety
@@ -216,7 +160,7 @@ faqs:
       icon: tabler:box
       category: all
     - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats. Custom sizes are available for business partners.'
+      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats.'
       icon: tabler:ruler-2
       category: all
     - title: What surfaces can the pool stand on?

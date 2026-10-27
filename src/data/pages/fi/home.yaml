@@ -13,9 +13,6 @@ hero:
     - text: Löydä allas
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Yrityksille'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbayn suorakulmainen Drop Stitch puhallettava uima-allas takapihalla
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Allas ideoita
   title: Oikea allas<br />Sinun tilasi
   subtitle: Todelliset asetukset, todelliset koot ja rehellinen opastus oikean altaan valinnassa.
-  items:
-    - title: Takapiha-altaat perheille
-      description: Tilasuunnittelua, oikeita käyttökokoja ja helppoa huoltoa takapihalla perheen kesään.
-      icon: tabler:home
-      cta: Hanki ideoita
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Altaat pienille takapihoille
-      description: 'Kompaktit pyöreät ja neliömäiset mallit, jotka sopivat ahtaisiin ulkotiloihin – tilaa viilentämiseen ja perheen vesiaikaan.'
-      icon: tabler:layout-grid
-      cta: Hanki ideoita
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Suuret uima-altaat kokoontumisiin
-      description: Isot suorakaiteen muotoiset uima-altaat, joissa on todellista uimatilaa koko miehistölle kesäpäivinä.
-      icon: tabler:users
-      cta: Hanki ideoita
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Liotus ja rentoutuminen ulkona
-      description: SPA-altaat, joissa on sisäänrakennetut istuimet ja eristetyt pohjat päivittäiseen uinumiseen kotona.
-      icon: tabler:ripple
-      cta: Hanki ideoita
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Uima-altaat loma-asunnoille
-      description: Kausiluonteinen vieraspalvelu, joka valmistuu nopeasti ja säilyy sesongin ulkopuolella.
-      icon: tabler:beach
-      cta: Hanki ideoita
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping & Hospitality
-      description: Omalaatuisia ulkoilumajoituksia – loistokohteita, putiikkeja ja tapahtumapaikkoja.
-      icon: tabler:tent
-      cta: Hanki ideoita
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Osta altaat
   title: Tutustu altaihimme
   subtitle: Vertaile muotoja, kokoja ja ominaisuuksia löytääksesi oikean uima-altaan takapihallesi tai ulkotilaan.
-content_workshop:
-  isReversed: true
-  tagline: Yrityksille
-  title: Uima-altaat yrityksille,<br />Liian
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay liikekumppaneille</h3>
-  items:
-    - title: Loma-asunnot ja vieraanvaraisuus
-      description: Sesonkiajan mukavuudet loma-asunnoille, käyntikohteille ja putiikkeille – nopea ottaa käyttöön, helppo ylläpitää, helppo säilyttää.
-    - title: Vähittäismyynti- ja brändikumppanit
-      description: Tukkuohjelmat ja vähittäismyyntivalmiit Drop Stitch-altaat puutarhakeskuksiin, allaskauppoihin ja verkkokauppoihin.
-    - title: Mukautettu ja yksityinen etiketti
-      description: Räätälöidyt koot, värit, kannet, logopainatus ja vähittäismyyntipakkaukset tuotemerkeille – valmistuskumppanimme rakentamia.
 content_compliance:
   tagline: Huolto ja turvallisuus
   title: Helppo omistaa,<br />Helppo rakastaa
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Vertaa kokoelmia'
-  title: 'Neljä kokoelmaa, yksi selkeä valinta'
+  title: 'Kaksi kokoelmaa, yksi selkeä valinta'
   subtitle: 'Koot ja parhaat käyttötavat yhdellä silmäyksellä – täydelliset tekniset tiedot ovat jokaisella tuotesivulla.'
   headers:
     collection: 'Kokoelma'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Suorasivuinen uimapaikka suurempiin kokoontumisiin'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Pyöreä SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Sisäänrakennetut istuimet liotusta varten'
-      href: /products/hot-tub-round
-    - collection: 'Neliö/suorakulmiomainen SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Istuva liotus kompakteissa tiloissa'
-      href: /products/hot-tub-square-rect
   note: 'Kaikki kokoelmat: 4–5 PSI drop-stitch seinät, 5–15 minuutin täyttö, pakattava säilytys. Lämmitys ja suodatus ovat ulkoisia – lämmittimet ja suodatinpumput myydään erikseen.'
 
 content_evidence:

@@ -13,9 +13,6 @@ hero:
     - text: Намерете своя басейн
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'За Бизнес'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Правоъгълен надуваем плувен басейн Felizbay Drop Stitch в задния двор
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Идеи за басейн
   title: Правилният басейн за<br />Вашето пространство
   subtitle: Реални настройки, реални размери и честни насоки за избор на правилния басейн.
-  items:
-    - title: Басейни в задния двор за семейства
-      description: Планиране на пространството, реални използваеми размери и лесна поддръжка за семейни лета в задния двор.
-      icon: tabler:home
-      cta: Вземете идеи
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Басейни за малки дворове
-      description: 'Компактни кръгли и квадратни модели, които пасват на тесни външни пространства — място за разхлаждане и семейно време на вода.'
-      icon: tabler:layout-grid
-      cta: Вземете идеи
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Големи басейни за събирания
-      description: Големи правоъгълни басейни с истинско пространство за плуване за целия екипаж през летните дни.
-      icon: tabler:users
-      cta: Вземете идеи
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Накисване и релаксация на открито
-      description: СПА вани с вградени седалки и изолирани дъна за ежедневно отпускане у дома.
-      icon: tabler:ripple
-      cta: Вземете идеи
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Басейни за ваканционни наеми
-      description: Сезонно удобство за гости, което се настройва бързо и се съхранява извън сезона.
-      icon: tabler:beach
-      cta: Вземете идеи
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Глемпинг и хотелиерство
-      description: Отличителни престои на открито — места за глемпинг, бутикови имоти и места за събития.
-      icon: tabler:tent
-      cta: Вземете идеи
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Магазин Басейни
   title: Разгледайте нашите басейни
   subtitle: Сравнете форми, размери и характеристики, за да намерите правилния басейн за вашия двор или открито пространство.
-content_workshop:
-  isReversed: true
-  tagline: За бизнеса
-  title: Пулове за бизнес,<br />също
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay за бизнес партньори</h3>
-  items:
-    - title: Ваканционни имоти под наем и хотелиерство
-      description: Сезонни удобства за гости за ваканционни наеми, места за глемпинг и бутикови имоти — бързо разгръщане, лесно за поддръжка, лесно за съхранение.
-    - title: Партньори за търговия на дребно и марка
-      description: Програми за търговия на едро и готови за продажба на дребно Drop Stitch басейни за градински центрове, магазини за басейни и онлайн магазини.
-    - title: Персонализиран и частен етикет
-      description: Персонализирани размери, цветове, корици, отпечатване на лого и опаковки за търговия на дребно за марки — създадени от нашите партньори производители.
 content_compliance:
   tagline: Грижи и безопасност
   title: Лесен за притежаване,<br />Лесен за обичане
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Сравнете колекции'
-  title: 'Четири колекции, един ясен избор'
+  title: 'Две колекции, един ясен избор'
   subtitle: 'Размери и най-добри употреби с един поглед — пълните спецификации са налични на страницата на всеки продукт.'
   headers:
     collection: 'Колекция'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Правостранно пространство за плуване за по-големи събирания'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Кръгъл СПА'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Вградени седалки за накисване в седнало положение'
-      href: /products/hot-tub-round
-    - collection: 'Квадратно/правоъгълно СПА'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Накисване в седнало положение в компактни пространства'
-      href: /products/hot-tub-square-rect
   note: 'Всички колекции: 4–5 PSI drop-stitch стени, 5–15 минути надуване, съхранение на опаковката. Отоплението и филтрацията са външни - нагревателите и филтърните помпи се продават отделно.'
 
 content_evidence:

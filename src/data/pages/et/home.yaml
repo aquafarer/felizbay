@@ -13,9 +13,6 @@ hero:
     - text: Leidke oma bassein
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Ettevõtluse jaoks'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay ristkülikukujuline Drop Stitch täispuhutav bassein tagaaias
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Basseini ideed
   title: Õige bassein<br />Sinu ruum
   subtitle: Tõelised seadistused, tegelikud suurused ja ausad juhised õige basseini valimiseks.
-  items:
-    - title: Tagahoovibasseinid peredele
-      description: Ruumiplaneerimine, reaalsed kasutatavad suurused ja lihtne hooldamine peresuvedeks tagahoovis.
-      icon: tabler:home
-      cta: Hankige ideid
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Basseinid väikestele tagaaedadele
-      description: 'Kompaktsed ümmargused ja ruudukujulised mudelid, mis sobivad kitsastesse väliruumidesse – ruumi jahutamiseks ja pere veetmiseks.'
-      icon: tabler:layout-grid
-      cta: Hankige ideid
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Suured basseinid koosviibimisteks
-      description: Suured ristkülikukujulised basseinid tõelise ujumisruumiga suvepäevadel kogu meeskonnale.
-      icon: tabler:users
-      cta: Hankige ideid
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Õues leotamine ja lõõgastumine
-      description: Sisseehitatud istmete ja isoleeritud põhjaga SPA-vannid igapäevaseks tuulde puhumiseks kodus.
-      icon: tabler:ripple
-      cta: Hankige ideid
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Basseinid puhkuseks üürimiseks
-      description: Hooajaline mugavus külalistele, mis valmib kiiresti ja säilib väljaspool hooaega.
-      icon: tabler:beach
-      cta: Hankige ideid
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping ja külalislahkus
-      description: Omanäolised väljas viibimised – vaatamisväärsused, butiigid ja ürituste toimumiskohad.
-      icon: tabler:tent
-      cta: Hankige ideid
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Ostke basseinid
   title: Tutvuge meie basseinidega
   subtitle: Võrrelge kujusid, suurusi ja funktsioone, et leida oma tagahoovi või väliruumi jaoks õige bassein.
-content_workshop:
-  isReversed: true
-  tagline: Ettevõtete jaoks
-  title: Basseinid ettevõtetele,<br />Ka
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay äripartneritele</h3>
-  items:
-    - title: Puhkuserent ja külalislahkus
-      description: Hooajalised külalistele mõeldud mugavused puhkuseks üürimiseks, külastuskohtadeks ja butiikpindadeks – kiire kasutuselevõtt, lihtne hooldada, lihtne hoiustada.
-    - title: Jaemüügi- ja brändipartnerid
-      description: Hulgimüügiprogrammid ja jaemüügiks valmis Drop Stitch-basseinid aianduskeskustele, basseinipoodidele ja veebipoodidele.
-    - title: Kohandatud ja privaatne silt
-      description: Kohandatud suurused, värvid, kaaned, logo trükkimine ja jaemüügipakendid brändidele – meie tootmispartnerite poolt.
 content_compliance:
   tagline: Hooldus ja ohutus
   title: Lihtne omada,<br />Lihtne armastada
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Võrdle kogusid'
-  title: 'Neli kollektsiooni, üks selge valik'
+  title: 'Kaks kollektsiooni, üks selge valik'
   subtitle: 'Suurused ja parimad kasutusvõimalused lühidalt – täielikud spetsifikatsioonid on igal tootelehel.'
   headers:
     collection: 'Kollektsioon'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Sirge küljega ujumisruum suuremate kogunemiste jaoks'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Ümar SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Sisseehitatud istmed leotamiseks'
-      href: /products/hot-tub-round
-    - collection: 'Ruudukujuline/ristkülik SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Istuv leotamine kompaktsetes ruumides'
-      href: /products/hot-tub-square-rect
   note: 'Kõik kollektsioonid: 4–5 PSI drop-stitch seinad, täitmine 5–15 minutit, pakitav hoiuruum. Küte ja filtreerimine on välised — küttekehad ja filtripumbad müüakse eraldi.'
 
 content_evidence:

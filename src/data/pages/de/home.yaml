@@ -13,9 +13,6 @@ hero:
     - text: Finden Sie Ihren Pool
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Für Unternehmen'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rechteckiges aufblasbares Drop-Stitch-Schwimmbecken in einem Hinterhof
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Pool-Ideen
   title: Der richtige Pool für<br />Dein Raum
   subtitle: Echte Aufbauten, echte Größen und ehrliche Beratung zur Auswahl des richtigen Pools.
-  items:
-    - title: Hinterhofpools für Familien
-      description: Raumplanung, echte Nutzgrößen und einfache Wartung für Familiensommer im Hinterhof.
-      icon: tabler:home
-      cta: Holen Sie sich Ideen
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Pools für kleine Hinterhöfe
-      description: 'Kompakte runde und quadratische Modelle, die in enge Außenbereiche passen – Platz zum Abkühlen und für die Zeit mit der Familie im Wasser.'
-      icon: tabler:layout-grid
-      cta: Holen Sie sich Ideen
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Große Pools für Zusammenkünfte
-      description: Große rechteckige Pools mit echtem Schwimmbereich für die gesamte Crew an Sommertagen.
-      icon: tabler:users
-      cta: Holen Sie sich Ideen
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Einweichen und Entspannen im Freien
-      description: Whirlpools mit integrierten Sitzen und isoliertem Boden für die tägliche Entspannung zu Hause.
-      icon: tabler:ripple
-      cta: Holen Sie sich Ideen
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Pools für Ferienvermietungen
-      description: Eine saisonale Annehmlichkeit für Gäste, die schnell aufgebaut und in der Nebensaison verstaut werden kann.
-      icon: tabler:beach
-      cta: Holen Sie sich Ideen
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping und Gastfreundschaft
-      description: Unverwechselbare Outdoor-Aufenthalte – Glamping-Plätze, Boutique-Unterkünfte und Veranstaltungsorte.
-      icon: tabler:tent
-      cta: Holen Sie sich Ideen
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Shop-Pools
   title: Entdecken Sie unsere Pools
   subtitle: Vergleichen Sie Formen, Größen und Funktionen, um den richtigen Pool für Ihren Garten oder Außenbereich zu finden.
-content_workshop:
-  isReversed: true
-  tagline: Für Unternehmen
-  title: Pools für Unternehmen,<br />Zu
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay für Geschäftspartner</h3>
-  items:
-    - title: Ferienwohnungen und Gastgewerbe
-      description: Saisonale Gästeausstattung für Ferienunterkünfte, Glamping-Plätze und Boutique-Immobilien – schnell einsetzbar, einfach zu warten, einfach zu lagern.
-    - title: Einzelhandels- und Markenpartner
-      description: Großhandelsprogramme und einzelhandelsfertige Drop-Stitch-Pools für Gartencenter, Pool-Shops und Online-Shops.
-    - title: Kundenspezifische und private Marke
-      description: Kundenspezifische Größen, Farben, Umschläge, Logodruck und Einzelhandelsverpackungen für Marken – hergestellt von unseren Produktionspartnern.
 content_compliance:
   tagline: Pflege und Sicherheit
   title: Einfach zu besitzen,<br />Leicht zu lieben
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Sammlungen vergleichen'
-  title: 'Vier Kollektionen, eine klare Wahl'
+  title: 'Zwei Kollektionen, eine klare Wahl'
   subtitle: 'Größen und optimale Einsatzmöglichkeiten auf einen Blick – vollständige Spezifikationen finden Sie auf jeder Produktseite.'
   headers:
     collection: 'Kollektion'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Gerader Schwimmbereich für größere Versammlungen'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Rundes SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Eingebaute Sitze zum Sitzen im Sitzen'
-      href: /products/hot-tub-round
-    - collection: 'Quadratisches/rechteckiges SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Sitzendes Einweichen in kompakten Räumen'
-      href: /products/hot-tub-square-rect
   note: 'Alle Kollektionen: 4–5 PSI drop-stitch-Wände, 5–15 Minuten Aufblasen, verstaubare Lagerung. Heizung und Filterung erfolgen extern – Heizungen und Filterpumpen sind separat erhältlich.'
 
 content_evidence:

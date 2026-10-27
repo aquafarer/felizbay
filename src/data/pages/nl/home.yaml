@@ -13,9 +13,6 @@ hero:
     - text: Vind uw zwembad
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Voor zaken'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rechthoekig drop stitch opblaasbaar zwembad in een achtertuin
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Zwembadideeën
   title: Het juiste zwembad voor<br />Jouw ruimte
   subtitle: Echte opstellingen, echte maten en eerlijke begeleiding bij het kiezen van het juiste zwembad.
-  items:
-    - title: Achtertuinzwembaden voor gezinnen
-      description: Ruimteplanning, echte bruikbare afmetingen en eenvoudig onderhoud voor gezinszomers in de achtertuin.
-      icon: tabler:home
-      cta: Krijg ideeën
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Zwembaden voor kleine achtertuinen
-      description: 'Compacte ronde en vierkante modellen die passen in krappe buitenruimtes – ruimte voor verkoeling en watertijd voor het hele gezin.'
-      icon: tabler:layout-grid
-      cta: Krijg ideeën
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Grote zwembaden voor bijeenkomsten
-      description: Grote rechthoekige zwembaden met echte zwemruimte voor de hele bemanning op zomerdagen.
-      icon: tabler:users
-      cta: Krijg ideeën
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Buiten genieten en ontspannen
-      description: SPA-baden met ingebouwde stoelen en geïsoleerde bodems voor de dagelijkse ontspanning thuis.
-      icon: tabler:ripple
-      cta: Krijg ideeën
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Zwembaden voor vakantiewoningen
-      description: Een seizoensgebonden gastenvoorziening die snel klaar is en buiten het seizoen kan worden opgeborgen.
-      icon: tabler:beach
-      cta: Krijg ideeën
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping en gastvrijheid
-      description: 'Onderscheidende buitenverblijven: glampinglocaties, boetiekhotels en evenementenlocaties.'
-      icon: tabler:tent
-      cta: Krijg ideeën
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Winkel zwembaden
   title: Ontdek onze zwembaden
   subtitle: Vergelijk vormen, maten en kenmerken om het juiste zwembad voor uw achtertuin of buitenruimte te vinden.
-content_workshop:
-  isReversed: true
-  tagline: Voor bedrijven
-  title: Zwembaden voor bedrijven,<br />Te
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay voor zakenpartners</h3>
-  items:
-    - title: Vakantiewoningen en gastvrijheid
-      description: Seizoensgebonden gastenvoorzieningen voor vakantiewoningen, glampings en boetiekaccommodaties – snel in gebruik, gemakkelijk te onderhouden en eenvoudig op te slaan.
-    - title: Retail- en merkpartners
-      description: Groothandelprogramma's en kant-en-klare drop-stitch-zwembaden voor tuincentra, zwembadwinkels en online winkels.
-    - title: Aangepast en privélabel
-      description: Aangepaste formaten, kleuren, omslagen, logobedrukking en retailverpakkingen voor merken – gebouwd door onze productiepartners.
 content_compliance:
   tagline: Zorg en veiligheid
   title: Gemakkelijk te bezitten,<br />Makkelijk om lief te hebben
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Vergelijk collecties'
-  title: 'Vier collecties, één duidelijke keuze'
+  title: 'Twee collecties, één duidelijke keuze'
   subtitle: 'Maten en beste toepassingen in één oogopslag: volledige specificaties staan ​​live op elke productpagina.'
   headers:
     collection: 'Collectie'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Zwemruimte met rechte zijkanten voor grotere bijeenkomsten'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Ronde SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Ingebouwde stoelen om zittend te genieten'
-      href: /products/hot-tub-round
-    - collection: 'Vierkante/rechthoekige SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Zittend genieten in compacte ruimtes'
-      href: /products/hot-tub-square-rect
   note: 'Alle collecties: 4–5 PSI drop-stitch-wanden, 5–15 min. opblazen, opbergruimte. Verwarming en filtratie zijn extern; verwarmingen en filterpompen worden afzonderlijk verkocht.'
 
 content_evidence:

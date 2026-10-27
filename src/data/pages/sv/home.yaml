@@ -13,9 +13,6 @@ hero:
     - text: Hitta din pool
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'För företag'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rektangulär Drop Stitch uppblåsbar pool på en bakgård
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Pool idéer
   title: Rätt pool för<br />Ditt utrymme
   subtitle: Riktiga inställningar, riktiga storlekar och ärlig vägledning för att välja rätt pool.
-  items:
-    - title: Bakgårdspooler för familjer
-      description: Utrymmesplanering, riktiga användbara storlekar och enkelt underhåll för familjesomrar på bakgården.
-      icon: tabler:home
-      cta: Få idéer
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Pooler för små bakgårdar
-      description: 'Kompakta runda och fyrkantiga modeller som passar trånga utomhusutrymmen — utrymme för avkylning och familjens vattentid.'
-      icon: tabler:layout-grid
-      cta: Få idéer
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Stora pooler för sammankomster
-      description: Stora rektangulära pooler med riktigt badutrymme för hela besättningen på sommardagar.
-      icon: tabler:users
-      cta: Få idéer
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Utomhus blötläggning & avkoppling
-      description: SPA-badkar med inbyggda säten och isolerad botten för dagliga varv i hemmet.
-      icon: tabler:ripple
-      cta: Få idéer
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Pooler för semesterbostäder
-      description: En säsongsbetonad gästbekvämlighet som ställs in snabbt och lagras under lågsäsong.
-      icon: tabler:beach
-      cta: Få idéer
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping & gästfrihet
-      description: Distinkt utomhusvistelse – glampingplatser, boutiquefastigheter och evenemangslokaler.
-      icon: tabler:tent
-      cta: Få idéer
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Shoppa pooler
   title: Utforska våra pooler
   subtitle: Jämför former, storlekar och funktioner för att hitta rätt pool för din bakgård eller utomhus.
-content_workshop:
-  isReversed: true
-  tagline: För företag
-  title: Pooler för företag,<br />För
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay för affärspartners</h3>
-  items:
-    - title: Semesterbostäder och gästfrihet
-      description: Säsongsbetonade gästbekvämligheter för semesterbostäder, glampingplatser och boutiquefastigheter – snabba att installera, lätta att underhålla, lätta att förvara.
-    - title: Retail & Brand Partners
-      description: Grossistprogram och detaljhandelsklara Drop Stitch-pooler för trädgårdscenter, poolbutiker och onlinebutiker.
-    - title: Custom & Private Label
-      description: Anpassade storlekar, färger, omslag, logotyptryck och detaljhandelsförpackningar för varumärken – byggda av våra tillverkningspartners.
 content_compliance:
   tagline: Vård & Säkerhet
   title: Lätt att äga,<br />Lätt att älska
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Jämför samlingar'
-  title: 'Fyra samlingar, ett tydligt val'
+  title: 'Två samlingar, ett tydligt val'
   subtitle: 'Storlekar och bästa användningsområden i ett ögonkast — fullständiga specifikationer finns på varje produktsida.'
   headers:
     collection: 'Kollektion'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Raksidig simplats för större sammankomster'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Rund SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Inbyggda säten för sittande blötläggning'
-      href: /products/hot-tub-round
-    - collection: 'Fyrkantig/rektangulär SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Sittande blötläggning i kompakta utrymmen'
-      href: /products/hot-tub-square-rect
   note: 'Alla kollektioner: 4–5 PSI drop-stitch väggar, 5–15 min uppblåsning, packningsförvaring. Uppvärmning och filtrering är externa — värmare och filterpumpar säljs separat.'
 
 content_evidence:

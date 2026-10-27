@@ -13,9 +13,6 @@ hero:
     - text: ค้นหาสระน้ำของคุณ
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'สำหรับธุรกิจ'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: สระว่ายน้ำเป่าลมทรงสี่เหลี่ยม Felizbay Drop Stitch ในสวนหลังบ้าน
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: ไอเดียสระว่ายน้ำ
   title: สระน้ำที่เหมาะสมสำหรับ<br />พื้นที่ของคุณ
   subtitle: การตั้งค่าจริง ขนาดจริง และคำแนะนำที่ซื่อสัตย์ในการเลือกสระว่ายน้ำที่เหมาะสม
-  items:
-    - title: สระว่ายน้ำหลังบ้านสำหรับครอบครัว
-      description: การวางแผนพื้นที่ ขนาดใช้งานได้จริง และการบำรุงรักษาง่ายสำหรับฤดูร้อนของครอบครัวในสวนหลังบ้าน
-      icon: tabler:home
-      cta: รับไอเดีย
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: สระว่ายน้ำสำหรับสวนหลังบ้านขนาดเล็ก
-      description: 'รุ่นกลมและสี่เหลี่ยมขนาดกะทัดรัดที่เหมาะกับพื้นที่กลางแจ้งที่คับแคบ - ห้องสำหรับระบายความร้อนและใช้เวลาอาบน้ำสำหรับครอบครัว'
-      icon: tabler:layout-grid
-      cta: รับไอเดีย
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: สระน้ำขนาดใหญ่สำหรับการชุมนุม
-      description: สระว่ายน้ำทรงสี่เหลี่ยมขนาดใหญ่พร้อมพื้นที่ว่ายน้ำที่แท้จริงสำหรับลูกเรือทั้งหมดในวันฤดูร้อน
-      icon: tabler:users
-      cta: รับไอเดีย
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: การแช่น้ำกลางแจ้งและการพักผ่อน
-      description: อ่างสปาพร้อมที่นั่งในตัวและพื้นฉนวนกันความร้อนสำหรับการพักผ่อนที่บ้านทุกวัน
-      icon: tabler:ripple
-      cta: รับไอเดีย
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: สระว่ายน้ำสำหรับการเช่าวันหยุด
-      description: สิ่งอำนวยความสะดวกสำหรับแขกตามฤดูกาลที่จัดเตรียมไว้อย่างรวดเร็วและจัดเก็บไว้ในช่วงนอกฤดูกาล
-      icon: tabler:beach
-      cta: รับไอเดีย
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: แกลมปิ้งและการต้อนรับ
-      description: การเข้าพักกลางแจ้งที่โดดเด่น ไม่ว่าจะเป็นสถานที่ตั้งแคมป์ ที่พักบูติก และสถานที่จัดกิจกรรม
-      icon: tabler:tent
-      cta: รับไอเดีย
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: ร้านค้าสระว่ายน้ำ
   title: สำรวจสระน้ำของเรา
   subtitle: เปรียบเทียบรูปทรง ขนาด และคุณลักษณะต่างๆ เพื่อค้นหาสระว่ายน้ำที่เหมาะสมสำหรับสวนหลังบ้านหรือพื้นที่กลางแจ้งของคุณ
-content_workshop:
-  isReversed: true
-  tagline: สำหรับธุรกิจ
-  title: สระว่ายน้ำสำหรับธุรกิจ<br />ด้วย
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay สำหรับพันธมิตรทางธุรกิจ</h3>
-  items:
-    - title: ที่พักให้เช่าและการต้อนรับ
-      description: สิ่งอำนวยความสะดวกสำหรับผู้เข้าพักตามฤดูกาลสำหรับที่พักให้เช่า สถานที่ตั้งแคมป์ และที่พักสไตล์บูติก — ปรับใช้ได้รวดเร็ว บำรุงรักษาง่าย และจัดเก็บง่าย
-    - title: พันธมิตรค้าปลีกและแบรนด์
-      description: โปรแกรมขายส่งและสระ Drop Stitch พร้อมขายปลีกสำหรับศูนย์สวน ร้านค้าสระน้ำ และร้านค้าออนไลน์
-    - title: ป้ายกำกับที่กำหนดเองและส่วนตัว
-      description: ขนาด สี ปก การพิมพ์โลโก้ และบรรจุภัณฑ์ขายปลีกที่กำหนดเองสำหรับแบรนด์ต่างๆ — สร้างโดยพันธมิตรการผลิตของเรา
 content_compliance:
   tagline: การดูแลและความปลอดภัย
   title: เป็นเจ้าของได้ง่ายๆ<br />รักง่าย
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'เปรียบเทียบคอลเลกชัน'
-  title: 'สี่คอลเลกชัน หนึ่งทางเลือกที่ชัดเจน'
+  title: 'สองคอลเลกชัน หนึ่งทางเลือกที่ชัดเจน'
   subtitle: 'ขนาดและการใช้งานที่ดีที่สุดโดยสรุป — ข้อมูลจำเพาะทั้งหมดแสดงอยู่ในหน้าผลิตภัณฑ์แต่ละหน้า'
   headers:
     collection: 'คอลเลกชัน'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'พื้นที่ว่ายน้ำด้านตรงเพื่อการสังสรรค์ที่ใหญ่ขึ้น'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'สปาทรงกลม'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'ที่นั่งในตัวสำหรับนั่งแช่'
-      href: /products/hot-tub-round
-    - collection: 'สปาทรงสี่เหลี่ยม/สี่เหลี่ยมผืนผ้า'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'นั่งแช่ในพื้นที่ขนาดกะทัดรัด'
-      href: /products/hot-tub-square-rect
   note: 'คอลเลกชันทั้งหมด: ผนัง 4–5 PSI drop-stitch, การสูบลม 5–15 นาที, พื้นที่จัดเก็บแบบแพ็คแยก การทำความร้อนและการกรองเป็นแบบภายนอก - เครื่องทำความร้อนและปั๊มกรองจำหน่ายแยกต่างหาก'
 
 content_evidence:

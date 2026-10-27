@@ -13,9 +13,6 @@ hero:
     - text: استخر خود را پیدا کنید
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'برای تجارت'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: استخر بادی Drop Stitch مستطیلی Felizbay در حیاط خلوت
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: ایده های استخر
   title: استخر مناسب برای<br />فضای شما
   subtitle: تنظیمات واقعی، اندازه های واقعی و راهنمایی صادقانه برای انتخاب استخر مناسب.
-  items:
-    - title: استخرهای حیاط خلوت برای خانواده ها
-      description: برنامه ریزی فضا، اندازه های قابل استفاده واقعی، و نگهداری آسان برای تابستان های خانوادگی در حیاط خلوت.
-      icon: tabler:home
-      cta: ایده بگیرید
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: استخر برای حیاط خلوت کوچک
-      description: 'مدل های گرد و مربع جمع و جور که متناسب با فضاهای بیرونی تنگ هستند - فضایی برای خنک شدن و زمان آب خانواده.'
-      icon: tabler:layout-grid
-      cta: ایده بگیرید
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: استخرهای بزرگ برای تجمع
-      description: استخرهای مستطیلی بزرگ با فضای واقعی شنا برای کل خدمه در روزهای تابستان.
-      icon: tabler:users
-      cta: ایده بگیرید
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: خیساندن و آرامش در فضای باز
-      description: وان آبگرم با صندلی های توکار و کف عایق برای باد کردن روزانه در خانه.
-      icon: tabler:ripple
-      cta: ایده بگیرید
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: استخر برای اجاره تعطیلات
-      description: امکانات رفاهی فصلی برای مهمانان که سریع راه اندازی می شود و در خارج از فصل ذخیره می شود.
-      icon: tabler:beach
-      cta: ایده بگیرید
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: گلمپینگ و مهمان نوازی
-      description: اقامت‌های متمایز در فضای باز - مکان‌های دیدنی، دارایی‌های بوتیک، و مکان‌های برگزاری رویداد.
-      icon: tabler:tent
-      cta: ایده بگیرید
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: استخرهای فروشگاهی
   title: استخرهای ما را کاوش کنید
   subtitle: شکل‌ها، اندازه‌ها و ویژگی‌ها را با هم مقایسه کنید تا استخر مناسب برای حیاط خلوت یا فضای بیرونی خود پیدا کنید.
-content_workshop:
-  isReversed: true
-  tagline: برای مشاغل
-  title: استخر برای تجارت،<br />همینطور
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay برای شرکای تجاری</h3>
-  items:
-    - title: اجاره تعطیلات و مهمان نوازی
-      description: امکانات رفاهی مهمان فصلی برای اجاره تعطیلات، مکان‌های پرطرفدار، و دارایی‌های بوتیک - به‌کارگیری سریع، نگهداری آسان، ذخیره‌سازی ساده.
-    - title: خرده فروشی و شرکای برند
-      description: برنامه های عمده فروشی و استخرهای Drop Stitch آماده خرده فروشی برای مراکز باغ، فروشگاه های استخر و فروشگاه های آنلاین.
-    - title: برچسب سفارشی و خصوصی
-      description: اندازه‌ها، رنگ‌ها، روکش‌ها، چاپ آرم و بسته‌بندی خرده‌فروشی برای برندها - ساخته شده توسط شرکای تولیدی ما.
 content_compliance:
   tagline: مراقبت و ایمنی
   title: داشتن آسان،<br />دوست داشتن آسان
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'مقایسه مجموعه ها'
-  title: 'چهار مجموعه، یک انتخاب واضح'
+  title: 'دو مجموعه، یک انتخاب واضح'
   subtitle: 'اندازه ها و بهترین کاربردها در یک نگاه - مشخصات کامل در صفحه هر محصول وجود دارد.'
   headers:
     collection: 'مجموعه'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'فضای شنای مستقیم برای مجالس بزرگتر'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'اسپای گرد'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'صندلی های تعبیه شده برای خیساندن نشستن'
-      href: /products/hot-tub-round
-    - collection: 'اسپا مربع / مستطیل'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'نشستن در فضاهای فشرده'
-      href: /products/hot-tub-square-rect
   note: 'همه مجموعه ها: 4 تا 5 دیوار PSI drop-stitch، باد کردن 5 تا 15 دقیقه، ذخیره سازی بسته. گرمایش و فیلتراسیون خارجی هستند - بخاری ها و پمپ های فیلتر جداگانه فروخته می شوند.'
 
 content_evidence:

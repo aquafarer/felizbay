@@ -13,9 +13,6 @@ hero:
     - text: Znajdź swój basen
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Dla Biznesu'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Prostokątny nadmuchiwany basen Felizbay Drop Stitch na podwórku
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Pomysły na basen
   title: Właściwy basen dla<br />Twoja przestrzeń
   subtitle: Prawdziwe konfiguracje, prawdziwe rozmiary i uczciwe wskazówki dotyczące wyboru odpowiedniego basenu.
-  items:
-    - title: Baseny przydomowe dla rodzin
-      description: Planowanie przestrzeni, rzeczywiste rozmiary użytkowe i łatwa konserwacja na rodzinne wakacje na podwórku.
-      icon: tabler:home
-      cta: Zdobądź pomysły
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Baseny dla małych podwórek
-      description: 'Kompaktowe, okrągłe i kwadratowe modele, które pasują do ciasnych przestrzeni zewnętrznych — miejsce do ochłodzenia się i spędzania czasu z rodziną nad wodą.'
-      icon: tabler:layout-grid
-      cta: Zdobądź pomysły
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Duże baseny na spotkania
-      description: Duże prostokątne baseny z prawdziwą przestrzenią do pływania dla całej załogi w letnie dni.
-      icon: tabler:users
-      cta: Zdobądź pomysły
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Moczenie i relaks na świeżym powietrzu
-      description: Wanny SPA z wbudowanymi siedziskami i izolowanym dnem do codziennego odpoczynku w domu.
-      icon: tabler:ripple
-      cta: Zdobądź pomysły
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Baseny do wynajęcia na wakacje
-      description: Sezonowe udogodnienie dla gości, które można szybko rozłożyć i przechowywać poza sezonem.
-      icon: tabler:beach
-      cta: Zdobądź pomysły
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping i hotelarstwo
-      description: Wyjątkowe pobyty na świeżym powietrzu — glampingi, obiekty butikowe i miejsca wydarzeń.
-      icon: tabler:tent
-      cta: Zdobądź pomysły
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Kup baseny
   title: Poznaj nasze baseny
   subtitle: Porównaj kształty, rozmiary i funkcje, aby znaleźć odpowiedni basen do swojego ogrodu lub przestrzeni na zewnątrz.
-content_workshop:
-  isReversed: true
-  tagline: Dla firm
-  title: Baseny dla Biznesu,<br />Zbyt
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay dla partnerów biznesowych</h3>
-  items:
-    - title: Wynajem wakacyjny i hotelarstwo
-      description: Sezonowe udogodnienia dla gości do wynajmu wakacyjnego, obiektów typu glamping i obiektów butikowych — szybkie we wdrażaniu, łatwe w utrzymaniu i proste w przechowywaniu.
-    - title: Partnerzy handlowi i marki
-      description: Programy hurtowe i gotowe do sprzedaży detalicznej baseny Drop Stitch dla centrów ogrodniczych, sklepów basenowych i sklepów internetowych.
-    - title: Etykieta niestandardowa i prywatna
-      description: Niestandardowe rozmiary, kolory, okładki, drukowanie logo i opakowania detaliczne dla marek — tworzone przez naszych partnerów produkcyjnych.
 content_compliance:
   tagline: Opieka i bezpieczeństwo
   title: Łatwy w posiadaniu,<br />Łatwo kochać
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Porównaj kolekcje'
-  title: 'Cztery kolekcje, jeden oczywisty wybór'
+  title: 'Dwie kolekcje, jeden oczywisty wybór'
   subtitle: 'Przegląd rozmiarów i najlepszych zastosowań — pełna specyfikacja znajduje się na każdej stronie produktu.'
   headers:
     collection: 'Kolekcja'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Prosta przestrzeń do pływania dla większych zgromadzeń'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Okrągłe SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Wbudowane siedziska umożliwiające moczenie się w pozycji siedzącej'
-      href: /products/hot-tub-round
-    - collection: 'Kwadratowe/prostokątne SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Moczenie w pozycji siedzącej w niewielkich przestrzeniach'
-      href: /products/hot-tub-square-rect
   note: 'Wszystkie kolekcje: ściany drop-stitch 4–5 PSI, nadmuchiwanie 5–15 minut, przechowywanie w opakowaniach jednostkowych. Ogrzewanie i filtracja są zewnętrzne — grzałki i pompy filtrujące są sprzedawane osobno.'
 
 content_evidence:

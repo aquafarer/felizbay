@@ -13,9 +13,6 @@ hero:
     - text: Найдите свой бассейн
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Для бизнеса'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Прямоугольный надувной бассейн Felizbay Drop Stitch на заднем дворе
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Идеи для бассейна
   title: Правильный бассейн для<br />Ваше пространство
   subtitle: Реальные настройки, реальные размеры и честное руководство по выбору правильного пула.
-  items:
-    - title: Бассейны на заднем дворе для семей
-      description: Планировка пространства, реальные полезные размеры и простота обслуживания для семейного отдыха на заднем дворе.
-      icon: tabler:home
-      cta: Получить идеи
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Бассейны для небольших дворов
-      description: 'Компактные круглые и квадратные модели, подходящие для ограниченного пространства на открытом воздухе — место для охлаждения и семейного времяпрепровождения в воде.'
-      icon: tabler:layout-grid
-      cta: Получить идеи
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Большие бассейны для встреч
-      description: Большие прямоугольные бассейны с настоящим пространством для купания всей команды в летние дни.
-      icon: tabler:users
-      cta: Получить идеи
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Купание и релаксация на открытом воздухе
-      description: СПА-ванны со встроенными сиденьями и изолированным дном для ежедневного освежения дома.
-      icon: tabler:ripple
-      cta: Получить идеи
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Бассейны для аренды на время отпуска
-      description: Сезонный аксессуар для гостей, который быстро готовится и хранится в межсезонье.
-      icon: tabler:beach
-      cta: Получить идеи
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Глэмпинг и гостиничный бизнес
-      description: Уникальный отдых на свежем воздухе — места для глэмпинга, бутики и площадки для проведения мероприятий.
-      icon: tabler:tent
-      cta: Получить идеи
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Магазин бассейнов
   title: Исследуйте наши бассейны
   subtitle: Сравните формы, размеры и особенности, чтобы найти подходящий бассейн для вашего двора или открытого пространства.
-content_workshop:
-  isReversed: true
-  tagline: Для бизнеса
-  title: Бассейны для бизнеса,<br />Слишком
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay для деловых партнеров</h3>
-  items:
-    - title: Аренда на время отпуска и гостиничный бизнес
-      description: Сезонные удобства для гостей при аренде на время отпуска, местах для глэмпинга и бутик-отелях — быстро развертываются, просты в обслуживании и просто хранятся.
-    - title: Розничные и брендовые партнеры
-      description: Оптовые программы и готовые к продаже бассейны Drop Stitch для садовых центров, магазинов бассейнов и интернет-магазинов.
-    - title: Индивидуальная и частная марка
-      description: Нестандартные размеры, цвета, обложки, печать логотипов и розничная упаковка для брендов, созданная нашими партнерами-производителями.
 content_compliance:
   tagline: Уход и безопасность
   title: Легко владеть,<br />Легко любить
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Сравнить коллекции'
-  title: 'Четыре коллекции, один очевидный выбор'
+  title: 'Две коллекции, один очевидный выбор'
   subtitle: 'Краткий обзор размеров и вариантов использования — полные характеристики можно найти на каждой странице продукта.'
   headers:
     collection: 'Коллекция'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Плавательное пространство с прямыми стенками для больших компаний'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Круглый СПА'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Встроенные сиденья для купания сидя.'
-      href: /products/hot-tub-round
-    - collection: 'Квадратный/прямой СПА'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Сидящее купание в компактных помещениях'
-      href: /products/hot-tub-square-rect
   note: 'Все коллекции: 4–5 стенок PSI drop-stitch, надувание 5–15 минут, складное хранение. Нагрев и фильтрация внешние — нагреватели и фильтр-насосы продаются отдельно.'
 
 content_evidence:

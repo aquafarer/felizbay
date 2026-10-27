@@ -13,9 +13,6 @@ hero:
     - text: Trova la tua piscina
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Per affari'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Piscina gonfiabile rettangolare Felizbay Drop Stitch in un cortile
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Idee per la piscina
   title: La Piscina Giusta per<br />Il tuo spazio
   subtitle: Configurazioni reali, dimensioni reali e guida onesta per scegliere la piscina giusta.
-  items:
-    - title: Piscine da giardino per famiglie
-      description: Pianificazione dello spazio, dimensioni reali utilizzabili e facile manutenzione per le estati in famiglia in giardino.
-      icon: tabler:home
-      cta: Ottieni idee
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Piscine per piccoli cortili
-      description: 'Modelli rotondi e quadrati compatti che si adattano a spazi esterni ristretti: spazio per rinfrescarsi e passare il tempo in acqua con la famiglia.'
-      icon: tabler:layout-grid
-      cta: Ottieni idee
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Grandi piscine per riunioni
-      description: Grandi piscine rettangolari con vero spazio per nuotare per tutto l'equipaggio nelle giornate estive.
-      icon: tabler:users
-      cta: Ottieni idee
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Ammollo e relax all'aperto
-      description: Vasche SPA con sedili integrati e fondo isolato per il relax quotidiano a casa.
-      icon: tabler:ripple
-      cta: Ottieni idee
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Piscine per case vacanze
-      description: Un servizio stagionale per gli ospiti che si installa velocemente e si ripone in bassa stagione.
-      icon: tabler:beach
-      cta: Ottieni idee
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping e ospitalità
-      description: "Soggiorni all'aperto distintivi: glamping, boutique e luoghi per eventi."
-      icon: tabler:tent
-      cta: Ottieni idee
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Acquista piscine
   title: Esplora le nostre piscine
   subtitle: Confronta forme, dimensioni e caratteristiche per trovare la piscina giusta per il tuo giardino o spazio esterno.
-content_workshop:
-  isReversed: true
-  tagline: Per le imprese
-  title: Piscine per le Imprese,<br />Pure
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay per i partner commerciali</h3>
-  items:
-    - title: Case vacanze e ospitalità
-      description: 'Servizi stagionali per gli ospiti per case vacanze, glamping e boutique: veloci da implementare, facili da mantenere, semplici da riporre.'
-    - title: Partner di vendita al dettaglio e di marca
-      description: Programmi all'ingrosso e piscine Drop Stitch pronte per la vendita al dettaglio per garden center, negozi di piscine e negozi online.
-    - title: Etichetta personalizzata e privata
-      description: Dimensioni, colori, copertine, stampa di loghi e imballaggi per la vendita al dettaglio personalizzati per i marchi, realizzati dai nostri partner di produzione.
 content_compliance:
   tagline: Cura e sicurezza
   title: Facile da possedere,<br />Facile da amare
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Confronta collezioni'
-  title: 'Quattro collezioni, una scelta chiara'
+  title: 'Due collezioni, una scelta chiara'
   subtitle: 'Taglie e usi migliori in breve: le specifiche complete sono disponibili su ogni pagina del prodotto.'
   headers:
     collection: 'Collezione'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Spazio per nuotare sui lati diritti per riunioni più grandi'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'SPA rotonda'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Sedili integrati per l''ammollo seduti'
-      href: /products/hot-tub-round
-    - collection: 'SPA Quadrata/Retta'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Seduti a mollo in spazi compatti'
-      href: /products/hot-tub-square-rect
   note: 'Tutte le collezioni: pareti drop-stitch da 4–5 PSI, gonfiaggio da 5–15 minuti, stoccaggio a scomparsa. Il riscaldamento e la filtrazione sono esterni: i riscaldatori e le pompe filtro sono venduti separatamente.'
 
 content_evidence:

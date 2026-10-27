@@ -13,9 +13,6 @@ hero:
     - text: Găsește-ți piscina
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Pentru afaceri'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Piscina gonflabilă dreptunghiulară Felizbay Drop Stitch într-o curte
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Idei de piscină
   title: Piscina potrivită pentru<br />Spațiul tău
   subtitle: Configurații reale, dimensiuni reale și îndrumări sincere pentru alegerea piscinei potrivite.
-  items:
-    - title: Piscine din curte pentru familii
-      description: Planificarea spațiului, dimensiuni reale utile și întreținere ușoară pentru verile de familie în curtea din spate.
-      icon: tabler:home
-      cta: Obțineți idei
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Piscine pentru curți mici
-      description: 'Modele compacte rotunde și pătrate care se potrivesc spațiilor exterioare înguste - spațiu pentru răcire și timp de apă în familie.'
-      icon: tabler:layout-grid
-      cta: Obțineți idei
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Piscine mari pentru adunări
-      description: Piscine dreptunghiulare mari cu spațiu real de înot pentru întregul echipaj în zilele de vară.
-      icon: tabler:users
-      cta: Obțineți idei
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Înmuiere în aer liber și relaxare
-      description: Căzi SPA cu scaune încorporate și fund izolat pentru relaxare zilnică acasă.
-      icon: tabler:ripple
-      cta: Obțineți idei
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Piscine pentru inchirieri de vacanta
-      description: O facilități sezoniere pentru oaspeți care se instalează rapid și se depozitează în afara sezonului.
-      icon: tabler:beach
-      cta: Obțineți idei
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping și ospitalitate
-      description: Sejururi distincte în aer liber — site-uri de glamping, proprietăți tip boutique și locații pentru evenimente.
-      icon: tabler:tent
-      cta: Obțineți idei
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Piscine de magazin
   title: Explorați piscinele noastre
   subtitle: Comparați formele, dimensiunile și caracteristicile pentru a găsi piscina potrivită pentru curtea din spate sau spațiul în aer liber.
-content_workshop:
-  isReversed: true
-  tagline: Pentru afaceri
-  title: piscine pentru afaceri,<br />Prea
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay pentru partenerii de afaceri</h3>
-  items:
-    - title: Închirieri de vacanță și ospitalitate
-      description: Facilități sezoniere pentru oaspeți pentru închirieri de vacanță, site-uri de lux și proprietăți tip boutique — rapid de implementat, ușor de întreținut, simplu de depozitat.
-    - title: Retail & Brand Partners
-      description: Programe de vânzare cu ridicata și piscine Drop Stitch gata de vânzare cu amănuntul pentru centre de grădinărit, magazine de piscină și magazine online.
-    - title: Etichetă personalizată și privată
-      description: Dimensiuni, culori, coperți personalizate, imprimare sigle și ambalaje de vânzare cu amănuntul pentru mărci — construite de partenerii noștri de producție.
 content_compliance:
   tagline: Îngrijire și siguranță
   title: Ușor de deținut,<br />Ușor de iubit
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Comparați colecții'
-  title: 'Patru colecții, o alegere clară'
+  title: 'Două colecții, o alegere clară'
   subtitle: 'Dimensiunile și cele mai bune utilizări dintr-o privire — specificațiile complete sunt disponibile pe pagina fiecărui produs.'
   headers:
     collection: 'Colecție'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Spațiu de înot cu laturi drepte pentru adunări mai mari'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'SPA rotund'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Scaune încorporate pentru înmuiere'
-      href: /products/hot-tub-round
-    - collection: 'SPA pătrat/dreptunghiular'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Înmuiere așezată în spații compacte'
-      href: /products/hot-tub-square-rect
   note: 'Toate colecțiile: pereți drop-stitch de 4–5 PSI, umflare 5–15 min, depozitare la pachet. Încălzirea și filtrarea sunt externe - încălzitoarele și pompele de filtru sunt vândute separat.'
 
 content_evidence:

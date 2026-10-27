@@ -13,9 +13,6 @@ hero:
     - text: Najděte svůj bazén
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Pro podnikání'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Obdélníkový nafukovací bazén Felizbay Drop Stitch na dvorku
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Nápady na bazén
   title: Správný bazén pro<br />Váš prostor
   subtitle: Skutečná nastavení, skutečné velikosti a poctivé rady pro výběr správného bazénu.
-  items:
-    - title: Bazény na dvorku pro rodiny
-      description: Plánování prostoru, skutečné použitelné velikosti a snadná údržba pro rodinná léta na zahradě.
-      icon: tabler:home
-      cta: Získejte nápady
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Bazény pro malé dvorky
-      description: 'Kompaktní kulaté a čtvercové modely, které se hodí do stísněných venkovních prostor – prostor pro ochlazení a rodinnou vodní zábavu.'
-      icon: tabler:layout-grid
-      cta: Získejte nápady
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Velké bazény pro shromáždění
-      description: Velké obdélníkové bazény se skutečným plaveckým prostorem pro celou posádku v letních dnech.
-      icon: tabler:users
-      cta: Získejte nápady
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Venkovní namáčení a relaxace
-      description: SPA vany s vestavěnými sedadly a izolovaným dnem pro každodenní odpočinek doma.
-      icon: tabler:ripple
-      cta: Získejte nápady
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Bazény pro rekreační pronájmy
-      description: Vybavení pro sezónní hosty, které se rychle zařídí a mimo sezónu se uloží.
-      icon: tabler:beach
-      cta: Získejte nápady
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping a pohostinství
-      description: Charakteristické venkovní pobyty – místa glampingu, butiky a místa konání akcí.
-      icon: tabler:tent
-      cta: Získejte nápady
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Obchod Pools
   title: Prozkoumejte naše bazény
   subtitle: Porovnejte tvary, velikosti a vlastnosti a najděte ten správný bazén pro váš dvorek nebo venkovní prostor.
-content_workshop:
-  isReversed: true
-  tagline: Pro firmy
-  title: Bazény pro firmy,<br />Příliš
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay pro obchodní partnery</h3>
-  items:
-    - title: Rekreační pronájmy a pohostinství
-      description: Sezónní vybavení pro hosty pro rekreační pronájmy, glampingy a butiky – rychlé nasazení, snadná údržba, jednoduché skladování.
-    - title: Maloobchodní a značkoví partneři
-      description: Velkoobchodní programy a maloobchodní bazény Drop Stitch pro zahradní centra, obchody s bazény a online obchody.
-    - title: Custom & Private Label
-      description: Vlastní velikosti, barvy, obaly, tisk loga a maloobchodní balení pro značky – vytvořené našimi výrobními partnery.
 content_compliance:
   tagline: Péče a bezpečnost
   title: Snadné vlastnictví,<br />Snadno milovat
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Porovnejte sbírky'
-  title: 'Čtyři kolekce, jedna jasná volba'
+  title: 'Dvě kolekce, jedna jasná volba'
   subtitle: 'Velikosti a nejlepší použití na první pohled – úplné specifikace najdete na každé stránce produktu.'
   headers:
     collection: 'Kolekce'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Rovný plavecký prostor pro větší shromáždění'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Kulatá SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Vestavěná sedadla pro namáčení sedadel'
-      href: /products/hot-tub-round
-    - collection: 'Čtvercové / obdélníkové SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Sedící namáčení v kompaktních prostorech'
-      href: /products/hot-tub-square-rect
   note: 'Všechny kolekce: stěny 4–5 PSI drop-stitch, 5–15 minut nafouknutí, skladovatelnost. Topení a filtrace jsou externí — ohřívače a filtrační čerpadla se prodávají samostatně.'
 
 content_evidence:

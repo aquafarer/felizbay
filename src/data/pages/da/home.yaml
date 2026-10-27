@@ -13,9 +13,6 @@ hero:
     - text: Find din pool
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Til Erhverv'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rektangulær drop stitch oppustelig swimmingpool i en baghave
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Pool ideer
   title: Den rigtige pool til<br />Dit rum
   subtitle: Rigtige opsætninger, rigtige størrelser og ærlig vejledning til at vælge den rigtige pool.
-  items:
-    - title: Baggårdspools for familier
-      description: Pladsplanlægning, rigtige brugbare størrelser og nem vedligeholdelse til familiesommere i baghaven.
-      icon: tabler:home
-      cta: Få ideer
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Pools til små baghaver
-      description: 'Kompakte runde og firkantede modeller, der passer til snævre udendørs rum - plads til afkøling og familievandtid.'
-      icon: tabler:layout-grid
-      cta: Få ideer
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Store pools til forsamlinger
-      description: Store rektangulære pools med rigtig svømmeplads til hele besætningen på sommerdage.
-      icon: tabler:users
-      cta: Få ideer
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Udendørs iblødsætning og afslapning
-      description: SPA-baljer med indbyggede sæder og isoleret bund til daglige nedslapninger i hjemmet.
-      icon: tabler:ripple
-      cta: Få ideer
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Pools til ferieudlejning
-      description: En sæsonbestemt gæstefaciliteter, der sætter sig hurtigt op og opbevares i lavsæsonen.
-      icon: tabler:beach
-      cta: Få ideer
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping & gæstfrihed
-      description: Karakteristiske udendørs ophold - glampingsteder, boutiqueejendomme og begivenhedssteder.
-      icon: tabler:tent
-      cta: Få ideer
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Shop Pools
   title: Udforsk vores pools
   subtitle: Sammenlign former, størrelser og funktioner for at finde den rigtige pool til din baghave eller udendørs.
-content_workshop:
-  isReversed: true
-  tagline: For virksomheder
-  title: Puljer for erhvervslivet,<br />Også
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay for forretningspartnere</h3>
-  items:
-    - title: Ferieudlejning og gæstfrihed
-      description: Sæsonbestemte gæstefaciliteter til ferieudlejning, glampingpladser og boutiqueejendomme - hurtig at implementere, nem at vedligeholde, nem at opbevare.
-    - title: Retail & Brand Partnere
-      description: Engrosprogrammer og detailklare Drop Stitch-pools til havecentre, poolbutikker og onlinebutikker.
-    - title: Custom & Private Label
-      description: Brugerdefinerede størrelser, farver, omslag, logotryk og detailemballage til mærker - bygget af vores produktionspartnere.
 content_compliance:
   tagline: Pleje & Sikkerhed
   title: Nem at eje,<br />Nem at elske
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Sammenlign samlinger'
-  title: 'Fire samlinger, ét klart valg'
+  title: 'To samlinger, ét klart valg'
   subtitle: 'Størrelser og bedste anvendelser på et øjeblik - alle specifikationer findes på hver produktside.'
   headers:
     collection: 'Kollektion'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ligesidet svømmeplads til større forsamlinger'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Rundt SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Indbyggede sæder til siddende iblødsætning'
-      href: /products/hot-tub-round
-    - collection: 'Firkantet/rektangulær SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Siddende iblødsætning i kompakte rum'
-      href: /products/hot-tub-square-rect
   note: 'Alle samlinger: 4–5 PSI drop-stitch-vægge, 5–15 min. oppustning, opbevaring til opbevaring. Opvarmning og filtrering er ekstern - varmelegemer og filterpumper sælges separat.'
 
 content_evidence:

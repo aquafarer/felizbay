@@ -13,9 +13,6 @@ hero:
     - text: Βρείτε την πισίνα σας
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Για Επιχειρήσεις'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay ορθογώνια Drop Stitch φουσκωτή πισίνα σε μια πίσω αυλή
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Ιδέες για πισίνα
   title: Η σωστή πισίνα για<br />Ο χώρος σας
   subtitle: Πραγματικές ρυθμίσεις, πραγματικά μεγέθη και ειλικρινής καθοδήγηση για την επιλογή της σωστής πισίνας.
-  items:
-    - title: Πισίνες πίσω αυλής για οικογένειες
-      description: Χωροταξικός σχεδιασμός, πραγματικά χρησιμοποιήσιμα μεγέθη και εύκολη συντήρηση για οικογενειακά καλοκαίρια στην πίσω αυλή.
-      icon: tabler:home
-      cta: Λάβετε ιδέες
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Πισίνες για μικρές αυλές
-      description: 'Συμπαγή στρογγυλά και τετράγωνα μοντέλα που ταιριάζουν σε στενούς εξωτερικούς χώρους — χώρος για δροσιά και οικογενειακό νερό.'
-      icon: tabler:layout-grid
-      cta: Λάβετε ιδέες
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Μεγάλες πισίνες για συγκεντρώσεις
-      description: Μεγάλες ορθογώνιες πισίνες με πραγματικό χώρο κολύμβησης για όλο το πλήρωμα τις καλοκαιρινές μέρες.
-      icon: tabler:users
-      cta: Λάβετε ιδέες
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Υπαίθρια Διασκέδαση & Χαλάρωση
-      description: Μπανιέρες SPA με ενσωματωμένα καθίσματα και μονωμένο πάτο για καθημερινή αναρρίχηση στο σπίτι.
-      icon: tabler:ripple
-      cta: Λάβετε ιδέες
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Πισίνες για ενοικιάσεις διακοπών
-      description: Μια εποχική ανέσεις επισκεπτών που στήνεται γρήγορα και αποθηκεύεται εκτός εποχής.
-      icon: tabler:beach
-      cta: Λάβετε ιδέες
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping & Hospitality
-      description: Ξεχωριστές υπαίθριες διαμονές — τοποθεσίες με γκλάμ, μπουτίκ και χώρους εκδηλώσεων.
-      icon: tabler:tent
-      cta: Λάβετε ιδέες
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Πισίνες καταστημάτων
   title: Εξερευνήστε τις πισίνες μας
   subtitle: Συγκρίνετε σχήματα, μεγέθη και χαρακτηριστικά για να βρείτε τη σωστή πισίνα για την αυλή ή τον εξωτερικό σας χώρο.
-content_workshop:
-  isReversed: true
-  tagline: Για Επιχειρήσεις
-  title: Πισίνες για Επιχειρήσεις,<br />Πολύ
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay για επιχειρηματικούς εταίρους</h3>
-  items:
-    - title: Ενοικιάσεις διακοπών και φιλοξενίας
-      description: Εποχικές ανέσεις επισκεπτών για ενοικιάσεις διακοπών, τοποθεσίες με λάμπινγκ και μπουτίκ — γρήγορη ανάπτυξη, εύκολη συντήρηση, απλή αποθήκευση.
-    - title: Συνεργάτες λιανικής & επωνυμίας
-      description: Προγράμματα χονδρικής και πισίνες Drop Stitch έτοιμες για λιανική πώληση για κέντρα κήπου, καταστήματα πισίνας και ηλεκτρονικά καταστήματα.
-    - title: Προσαρμοσμένη & Ιδιωτική ετικέτα
-      description: Προσαρμοσμένα μεγέθη, χρώματα, εξώφυλλα, εκτύπωση λογότυπων και συσκευασίες λιανικής για επωνυμίες — κατασκευασμένες από τους κατασκευαστές μας συνεργάτες.
 content_compliance:
   tagline: Φροντίδα & Ασφάλεια
   title: Εύκολο στην κατοχή,<br />Εύκολο να αγαπάς
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Συγκρίνετε Συλλογές'
-  title: 'Τέσσερις συλλογές, μία καθαρή επιλογή'
+  title: 'Δύο συλλογές, μία καθαρή επιλογή'
   subtitle: 'Μεγέθη και βέλτιστες χρήσεις με μια ματιά — οι πλήρεις προδιαγραφές ζωντανά σε κάθε σελίδα προϊόντος.'
   headers:
     collection: 'Συλλογή'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Χώρος κολύμβησης με ευθεία όψη για μεγαλύτερες συγκεντρώσεις'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Στρογγυλό SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Ενσωματωμένα καθίσματα για μούσκεμα καθιστών'
-      href: /products/hot-tub-round
-    - collection: 'Τετράγωνο/Ορθογώνιο SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Καθιστή μούσκεμα σε συμπαγείς χώρους'
-      href: /products/hot-tub-square-rect
   note: 'Όλες οι συλλογές: τοίχοι 4–5 PSI drop-stitch, φούσκωμα 5–15 λεπτά, αποθήκευση σε πακέτο. Η θέρμανση και το φιλτράρισμα είναι εξωτερικά — οι θερμαντήρες και οι αντλίες φίλτρων πωλούνται χωριστά.'
 
 content_evidence:

@@ -13,9 +13,6 @@ hero:
     - text: Cari Kolam Anda
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Untuk Perniagaan'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Kolam renang kembung Drop Stitch segi empat tepat Felizbay di belakang rumah
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Idea Kolam
   title: Kolam yang Tepat untuk<br />Ruang Anda
   subtitle: Persediaan sebenar, saiz sebenar dan panduan jujur ​​untuk memilih kumpulan yang betul.
-  items:
-    - title: Kolam Belakang Rumah untuk Keluarga
-      description: Perancangan ruang, saiz sebenar yang boleh digunakan dan penyelenggaraan yang mudah untuk musim panas keluarga di belakang rumah.
-      icon: tabler:home
-      cta: Dapatkan Idea
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Kolam untuk Halaman Belakang Kecil
-      description: 'Model bulat dan persegi padat yang sesuai dengan ruang luar yang ketat — ruang untuk menyejukkan badan dan masa air bersama keluarga.'
-      icon: tabler:layout-grid
-      cta: Dapatkan Idea
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Kolam Besar untuk Perhimpunan
-      description: Kolam renang segi empat tepat yang besar dengan ruang berenang sebenar untuk seluruh kru pada hari musim panas.
-      icon: tabler:users
-      cta: Dapatkan Idea
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Berendam & Bersantai di Luar
-      description: Tab SPA dengan tempat duduk terbina dalam dan bahagian bawah berpenebat untuk angin harian di rumah.
-      icon: tabler:ripple
-      cta: Dapatkan Idea
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Kolam untuk Sewaan Percutian
-      description: Kemudahan tetamu bermusim yang disediakan dengan pantas dan disimpan di luar musim.
-      icon: tabler:beach
-      cta: Dapatkan Idea
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping & Hospitaliti
-      description: Penginapan luar yang tersendiri — tapak glamping, hartanah butik dan tempat acara.
-      icon: tabler:tent
-      cta: Dapatkan Idea
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Kolam Kedai
   title: Terokai Kolam Kami
   subtitle: Bandingkan bentuk, saiz dan ciri untuk mencari kolam yang sesuai untuk halaman belakang atau ruang luar anda.
-content_workshop:
-  isReversed: true
-  tagline: Untuk Perniagaan
-  title: Kolam untuk Perniagaan,<br />Juga
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay untuk rakan kongsi perniagaan</h3>
-  items:
-    - title: Sewaan Percutian & Hospitaliti
-      description: Kemudahan tetamu bermusim untuk sewaan percutian, tapak glamping dan hartanah butik — cepat digunakan, mudah diselenggara, mudah disimpan.
-    - title: Rakan Kongsi Runcit & Jenama
-      description: Program borong dan kolam Drop Stitch sedia runcit untuk pusat taman, kedai kolam dan kedai dalam talian.
-    - title: Label Tersuai & Peribadi
-      description: Saiz tersuai, warna, penutup, percetakan logo dan pembungkusan runcit untuk jenama — dibina oleh rakan kongsi pembuatan kami.
 content_compliance:
   tagline: Penjagaan & Keselamatan
   title: Mudah dimiliki,<br />Mudah Dicintai
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Bandingkan Koleksi'
-  title: 'Empat Koleksi, Satu Pilihan Jelas'
+  title: 'Dua Koleksi, Satu Pilihan Jelas'
   subtitle: 'Saiz dan kegunaan terbaik sepintas lalu — spesifikasi penuh disiarkan pada setiap halaman produk.'
   headers:
     collection: 'Koleksi'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ruang berenang sebelah lurus untuk perhimpunan yang lebih besar'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'SPA Bulat'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Tempat duduk terbina dalam untuk rendaman duduk'
-      href: /products/hot-tub-round
-    - collection: 'SPA Segi Empat Sama/Segi Empat Tepat'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Duduk berendam dalam ruang padat'
-      href: /products/hot-tub-square-rect
   note: 'Semua koleksi: dinding 4–5 PSI drop-stitch, inflasi 5–15 min, storan bungkus. Pemanasan dan penapisan adalah luaran — pemanas dan pam penapis dijual secara berasingan.'
 
 content_evidence:

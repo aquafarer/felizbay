@@ -13,9 +13,6 @@ hero:
     - text: Pronađite svoj bazen
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Za posao'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay pravokutni Drop Stitch bazen na napuhavanje u dvorištu
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Ideje za bazene
   title: Pravi bazen za<br />Vaš prostor
   subtitle: Prave postavke, stvarne veličine i poštene upute za odabir pravog bazena.
-  items:
-    - title: Bazeni u dvorištu za obitelji
-      description: Planiranje prostora, stvarne korisne veličine i jednostavno održavanje za obiteljska ljeta u dvorištu.
-      icon: tabler:home
-      cta: Dođite do ideja
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Bazeni za mala dvorišta
-      description: 'Kompaktni okrugli i četvrtasti modeli koji odgovaraju uskim vanjskim prostorima — prostor za hlađenje i obiteljsko vrijeme u vodi.'
-      icon: tabler:layout-grid
-      cta: Dođite do ideja
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Veliki bazeni za okupljanja
-      description: Veliki pravokutni bazeni s pravim prostorom za kupanje cijele ekipe u ljetnim danima.
-      icon: tabler:users
-      cta: Dođite do ideja
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Kupanje i opuštanje na otvorenom
-      description: SPA kade s ugrađenim sjedalima i izoliranim dnom za svakodnevno opuštanje kod kuće.
-      icon: tabler:ripple
-      cta: Dođite do ideja
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Bazeni za najam za odmor
-      description: Sezonski sadržaj za goste koji se brzo postavlja i sprema izvan sezone.
-      icon: tabler:beach
-      cta: Dođite do ideja
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping i ugostiteljstvo
-      description: Prepoznatljiv boravak na otvorenom — mjesta za glamping, butici i mjesta za događanja.
-      icon: tabler:tent
-      cta: Dođite do ideja
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Trgovina bazenima
   title: Istražite naše bazene
   subtitle: Usporedite oblike, veličine i karakteristike kako biste pronašli pravi bazen za svoje dvorište ili vanjski prostor.
-content_workshop:
-  isReversed: true
-  tagline: Za tvrtke
-  title: Pools for Business,<br />Također
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay za poslovne partnere</h3>
-  items:
-    - title: Iznajmljivanje za odmor i ugostiteljstvo
-      description: Sezonski sadržaji za goste za iznajmljivanje na odmoru, mjesta za glamping i butik posjede — brzi za postavljanje, jednostavni za održavanje, jednostavni za spremanje.
-    - title: Maloprodajni i robni partneri
-      description: Veleprodajni programi i Drop Stitch bazeni spremni za maloprodaju za vrtne centre, trgovine bazenima i internetske trgovine.
-    - title: Prilagođena i privatna marka
-      description: Prilagođene veličine, boje, naslovnice, ispis logotipa i maloprodajna pakiranja za robne marke — izradili su ih naši proizvodni partneri.
 content_compliance:
   tagline: Njega i sigurnost
   title: Jednostavan za posjedovanje,<br />Lako za voljeti
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Usporedite zbirke'
-  title: 'Četiri kolekcije, jedan jasan izbor'
+  title: 'Dvije kolekcije, jedan jasan izbor'
   subtitle: 'Veličine i najbolje upotrebe na prvi pogled — potpune specifikacije dostupne su na svakoj stranici proizvoda.'
   headers:
     collection: 'Kolekcija'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ravni prostor za kupanje za veća okupljanja'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Okrugli SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Ugrađena sjedala za sjedeće namakanje'
-      href: /products/hot-tub-round
-    - collection: 'Square/Rect SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Sjedeće namakanje u zbijenim prostorima'
-      href: /products/hot-tub-square-rect
   note: 'Sve kolekcije: 4–5 PSI drop-stitch zidovi, 5–15 min napuhavanja, skladištenje bez pakiranja. Grijanje i filtracija su vanjski — grijači i filter pumpe prodaju se zasebno.'
 
 content_evidence:

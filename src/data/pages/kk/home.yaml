@@ -13,9 +13,6 @@ hero:
     - text: Өз бассейніңізді табыңыз
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Бизнеске арналған'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Ауладағы Felizbay тікбұрышты Drop Stitch үрлемелі бассейні
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Бассейн идеялары
   title: Дұрыс бассейн<br />Сіздің кеңістігіңіз
   subtitle: Нақты орнатулар, нақты өлшемдер және дұрыс пулды таңдауға арналған шынайы нұсқаулар.
-  items:
-    - title: Отбасыларға арналған ауладағы бассейндер
-      description: Кеңістікті жоспарлау, нақты қолдануға болатын өлшемдер және артқы аулада отбасылық жазда оңай техникалық қызмет көрсету.
-      icon: tabler:home
-      cta: Идеяларды алыңыз
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Кішкентай аулаларға арналған бассейндер
-      description: 'Тығыз сыртқы кеңістіктерге сай келетін ықшам дөңгелек және төртбұрышты модельдер — салқындату және отбасылық суға арналған бөлме.'
-      icon: tabler:layout-grid
-      cta: Идеяларды алыңыз
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Жиналыстарға арналған үлкен бассейндер
-      description: Жазғы күндері бүкіл экипаж үшін жүзу кеңістігі бар үлкен төртбұрышты бассейндер.
-      icon: tabler:users
-      cta: Идеяларды алыңыз
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Сыртта сулану және релаксация
-      description: Кіріктірілген отырғыштары мен оқшауланған түбі бар СПА ванналары үйде күнделікті демалуға арналған.
-      icon: tabler:ripple
-      cta: Идеяларды алыңыз
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Демалыстарды жалға алуға арналған бассейндер
-      description: Жылдам орнатылатын және маусымаралық уақытта сақтайтын маусымдық қонақтарға арналған ыңғайлылық.
-      icon: tabler:beach
-      cta: Идеяларды алыңыз
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Глампинг және қонақжайлылық
-      description: Ерекше ашық ауада тұру - глампинг алаңдары, бутик объектілері және іс-шаралар өткізу орындары.
-      icon: tabler:tent
-      cta: Идеяларды алыңыз
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Дүкен бассейндері
   title: Біздің бассейндерімізді зерттеңіз
   subtitle: Аулаға немесе сыртқы кеңістікке сәйкес бассейнді табу үшін пішіндерді, өлшемдерді және мүмкіндіктерді салыстырыңыз.
-content_workshop:
-  isReversed: true
-  tagline: Бизнеске арналған
-  title: Бизнеске арналған бассейндер,<br />Сондай-ақ
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Іскерлік серіктестерге арналған Felizbay</h3>
-  items:
-    - title: Демалыстарды жалға беру және қонақжайлылық
-      description: Демалыстарды жалға алу, глампинг алаңдары және бутик қасиеттеріне арналған маусымдық ыңғайлылықтар — орналастыру жылдам, техникалық қызмет көрсету оңай, сақтау оңай.
-    - title: Бөлшек сауда және бренд серіктестері
-      description: Көтерме бағдарламалар және бақша орталықтарына, бассейн дүкендеріне және интернет-дүкендерге арналған бөлшек саудаға дайын Drop Stitch бассейндері.
-    - title: Арнаулы және жеке белгі
-      description: Таңдамалы өлшемдер, түстер, мұқабалар, логотипті басып шығару және брендтерге арналған бөлшек орам – біздің өндірістік серіктестеріміз жасаған.
 content_compliance:
   tagline: Күтім және қауіпсіздік
   title: Меншікке оңай,<br />Сүйу оңай
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Жинақтарды салыстыру'
-  title: 'Төрт топтама, бір анық таңдау'
+  title: 'Екі топтама, бір анық таңдау'
   subtitle: 'Өлшемдері және ең жақсы пайдаланулары — толық сипаттамалар өнімнің әрбір бетінде көрсетіледі.'
   headers:
     collection: 'Топтама'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Үлкен жиналыстар үшін түзу жүзу кеңістігі'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Дөңгелек СПА'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Отырғызу үшін кіріктірілген орындықтар'
-      href: /products/hot-tub-round
-    - collection: 'Шаршы/Тік СПА'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Ықшам кеңістіктерде отыру'
-      href: /products/hot-tub-square-rect
   note: 'Барлық жинақтар: 4–5 PSI drop-stitch қабырғалары, 5–15 мин инфляция, қаптамада сақтау. Жылыту және сүзу сыртқы болып табылады — жылытқыштар мен сүзгі сорғылары бөлек сатылады.'
 
 content_evidence:

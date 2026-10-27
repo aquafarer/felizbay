@@ -13,9 +13,6 @@ hero:
     - text: Hanapin ang Iyong Pool
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Para sa Negosyo'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rectangular drop stitch inflatable swimming pool sa likod-bahay
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Mga Ideya sa Pool
   title: Ang Tamang Pool para sa<br />Ang iyong Space
   subtitle: Mga totoong setup, totoong laki, at tapat na gabay para sa pagpili ng tamang pool.
-  items:
-    - title: Mga Pool sa Likod para sa mga Pamilya
-      description: Pagpaplano ng espasyo, tunay na magagamit na mga sukat, at madaling pagpapanatili para sa mga tag-araw ng pamilya sa likod-bahay.
-      icon: tabler:home
-      cta: Kumuha ng mga Ideya
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Mga Pool para sa Maliit na Bakuran
-      description: 'Mga compact na bilog at parisukat na modelo na magkasya sa masikip na panlabas na espasyo — lugar para sa paglamig at pampamilyang tubig.'
-      icon: tabler:layout-grid
-      cta: Kumuha ng mga Ideya
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Malaking Pool para sa mga Pagtitipon
-      description: Malaking parihabang pool na may tunay na swimming space para sa buong crew sa mga araw ng tag-araw.
-      icon: tabler:users
-      cta: Kumuha ng mga Ideya
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Panlabas na Pagbababad at Pagpapahinga
-      description: Mga SPA tub na may built-in na upuan at insulated bottom para sa araw-araw na wind-down sa bahay.
-      icon: tabler:ripple
-      cta: Kumuha ng mga Ideya
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Mga Pool para sa Vacation Rental
-      description: Isang pana-panahong amenity ng bisita na mabilis na nagse-set up at nag-iimbak sa labas ng panahon.
-      icon: tabler:beach
-      cta: Kumuha ng mga Ideya
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping at Hospitality
-      description: Mga natatanging panlabas na pananatili — mga glamping site, boutique property, at lugar ng kaganapan.
-      icon: tabler:tent
-      cta: Kumuha ng mga Ideya
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Mamili ng Pool
   title: Galugarin ang Aming Mga Pool
   subtitle: Ihambing ang mga hugis, sukat, at feature para mahanap ang tamang pool para sa iyong likod-bahay o panlabas na espasyo.
-content_workshop:
-  isReversed: true
-  tagline: Para sa mga Negosyo
-  title: Pool para sa Negosyo,<br />masyadong
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay para sa mga kasosyo sa negosyo</h3>
-  items:
-    - title: Mga Renta sa Bakasyon at Hospitality
-      description: Mga pana-panahong amenity ng bisita para sa mga pinaparentahang bakasyunan, glamping site, at boutique property — mabilis i-deploy, madaling mapanatili, simpleng iimbak.
-    - title: Mga Kasosyo sa Pagtitingi at Brand
-      description: Mga wholesale program at retail-ready na drop stitch pool para sa mga garden center, pool shop, at online na tindahan.
-    - title: Custom at Pribadong Label
-      description: Mga custom na laki, kulay, cover, pag-print ng logo, at retail packaging para sa mga brand — na binuo ng aming mga kasosyo sa pagmamanupaktura.
 content_compliance:
   tagline: Pangangalaga at Kaligtasan
   title: Madaling pagmamay-ari,<br />Madaling Magmahal
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Ihambing ang Mga Koleksyon'
-  title: 'Apat na Koleksyon, Isang Malinaw na Pagpipilian'
+  title: 'Dalawang Koleksyon, Isang Malinaw na Pagpipilian'
   subtitle: 'Mga sukat at pinakamahuhusay na gamit sa isang sulyap — ang buong detalye ay makikita sa bawat page ng produkto.'
   headers:
     collection: 'Koleksyon'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Straight-sided swim space para sa mas malalaking pagtitipon'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Bilog na SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Mga built-in na upuan para sa nakaupong pagbabad'
-      href: /products/hot-tub-round
-    - collection: 'Parisukat/Parihaba na SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Nakaupo na nakababad sa mga compact na espasyo'
-      href: /products/hot-tub-square-rect
   note: 'Lahat ng koleksyon: 4–5 PSI drop-stitch wall, 5–15 min inflation, pack-away storage. Ang pagpainit at pagsasala ay panlabas — ang mga heater at filter na bomba ay ibinebenta nang hiwalay.'
 
 content_evidence:

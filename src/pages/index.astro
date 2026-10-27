@@ -12,6 +12,7 @@ import ProductCard from '~/components/widgets/ProductCard.astro';
 import Icon from '~/components/ui/Icon.astro';
 import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
+import { POOL_IDEAS, findPoolIdea, type PoolIdea } from '~/data/pool-ideas';
 import { getPageContent, setPageContentData } from '~/i18n/page-content';
 import __pageData from '~/i18n/generated/pages/home.ts';
 import { getUiForLang } from '~/i18n/generated/ui-all';
@@ -28,22 +29,27 @@ const compareCollections = page.compare_collections ?? {};
 const customerTypes = page.content_customer_types ?? {};
 const features = page.features ?? {};
 const categories = page.content_categories ?? {};
-const workshop = page.content_workshop ?? {};
-const compliance = page.content_compliance ?? {};
 const steps = page.steps ?? {};
+const compliance = page.content_compliance ?? {};
 const faqs = page.faqs ?? {};
 const cta = page.cta ?? {};
 
-const poolProducts = await getProducts({ limit: 3 });
+// Homepage is consumer-facing: only retail (single-piece purchase) products appear here.
+const poolProducts = (await getProducts()).filter((p) => p.sku).slice(0, 3);
 
-const customerItems = (customerTypes.items ?? []).map(
-  (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
-    title: item.title,
-    description: item.description,
-    icon: item.icon,
-    callToAction: item.cta ? { text: item.cta, href: item.cta_href, icon: 'tabler:arrow-right' } : undefined,
-  })
-);
+// Consumer scenario showcase — photos and copy from the pool-ideas scenario pages.
+const scenarioSlugs = [
+  'large-pools-for-family-gatherings',
+  'pools-for-water-fitness-and-recreation',
+  'pools-for-pet-families',
+  'cold-plunge-and-recovery-pools',
+  'pools-for-dink-households',
+  'townhome-and-compact-yard-pools',
+  'pools-for-retirees-and-empty-nesters',
+];
+const scenarioCards: PoolIdea[] = scenarioSlugs
+  .map((slug) => findPoolIdea(slug))
+  .filter((idea): idea is PoolIdea => Boolean(idea && idea.image));
 
 const metadata = {
   title: `Premium Drop Stitch Inflatable Pools | ${SITE.name}`,
@@ -127,13 +133,63 @@ const metadata = {
     ) : null
   }
 
-  <Features2
-    tagline={customerTypes.tagline}
-    title={customerTypes.title}
-    subtitle={customerTypes.subtitle}
-    columns={3}
-    items={customerItems}
-  />
+  <!-- Scenario showcase (consumer pool ideas with photos) -->
+  <section class="px-4 py-12 sm:px-6 mx-auto max-w-6xl">
+    <div class="text-center mb-8">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        {customerTypes.tagline || 'Pool Ideas'}
+      </p>
+      <h2
+        class="text-3xl md:text-4xl font-bold tracking-tight font-heading"
+        set:html={customerTypes.title || 'The Right Pool for Your Space'}
+      />
+      <p class="mt-3 text-xl text-muted dark:text-slate-400 font-medium max-w-2xl mx-auto">
+        {customerTypes.subtitle || ''}
+      </p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        scenarioCards.map((idea) => (
+          <a
+            href={`/pool-ideas/${idea.slug}`}
+            class="group block rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-lg transition-shadow"
+          >
+            <div class="overflow-hidden">
+              <img
+                src={idea.image}
+                alt={idea.imageAlt ?? idea.title}
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="600"
+                class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100">{idea.navTitle}</h3>
+              <p class="mt-1 text-sm text-gray-500 dark:text-slate-400 line-clamp-2">{idea.intro[0]}</p>
+              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary dark:text-blue-400">
+                Explore this setup
+                <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+              </span>
+            </div>
+          </a>
+        ))
+      }
+      <a
+        href="/pool-ideas"
+        class="group flex flex-col items-center justify-center text-center p-6 rounded-2xl bg-gray-900 dark:bg-slate-800 text-white hover:bg-gray-800 dark:hover:bg-slate-700 transition-colors"
+      >
+        <Icon name="tabler:pool" class="w-8 h-8 mb-3" />
+        <span class="text-base font-semibold">All Pool Ideas</span>
+        <span class="mt-1 text-sm text-gray-300 dark:text-slate-300">Browse every backyard scenario</span>
+        <span class="mt-3 inline-flex items-center gap-1 text-xs font-medium text-gray-200 dark:text-slate-200">
+          View all {POOL_IDEAS.length}
+          <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+        </span>
+      </a>
+    </div>
+  </section>
 
   <!-- Product highlights -->
   {
@@ -179,39 +235,6 @@ const metadata = {
   />
 
   <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
-
-  <!-- For Businesses band -->
-  {
-    workshop.title ? (
-      <section class="px-4 py-12 sm:px-6 mx-auto max-w-7xl bg-gray-50/50 dark:bg-slate-900/40 rounded-3xl">
-        <div class="text-center max-w-3xl mx-auto mb-10">
-          {workshop.tagline && (
-            <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
-              {workshop.tagline}
-            </p>
-          )}
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-heading" set:html={workshop.title} />
-        </div>
-        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {(workshop.items ?? []).map((item: { title: string; description: string }) => (
-            <div class="p-6 rounded-2xl bg-white dark:bg-slate-800/60 border border-gray-100 dark:border-slate-700">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100">{item.title}</h3>
-              <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
-            </div>
-          ))}
-        </div>
-        <div class="mt-8 text-center">
-          <a
-            href="/for-businesses"
-            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
-          >
-            Explore Business Solutions
-            <Icon name="tabler:arrow-right" class="w-4 h-4" />
-          </a>
-        </div>
-      </section>
-    ) : null
-  }
 
   {cta.title ? <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions ?? []} /> : null}
 </Layout>

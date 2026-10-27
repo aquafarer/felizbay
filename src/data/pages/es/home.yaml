@@ -13,9 +13,6 @@ hero:
     - text: Encuentra tu piscina
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Para negocios'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Piscina inflable rectangular Felizbay drop stitch en un patio trasero
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Ideas para la piscina
   title: La piscina adecuada para<br />Tu espacio
   subtitle: Configuraciones reales, tamaños reales y orientación honesta para elegir la piscina adecuada.
-  items:
-    - title: Piscinas en el patio trasero para familias
-      description: Planificación del espacio, tamaños reales utilizables y fácil mantenimiento para los veranos familiares en el patio trasero.
-      icon: tabler:home
-      cta: Obtener ideas
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Piscinas para patios traseros pequeños
-      description: 'Modelos compactos redondos y cuadrados que se adaptan a espacios exteriores reducidos: espacio para refrescarse y pasar tiempo en familia con el agua.'
-      icon: tabler:layout-grid
-      cta: Obtener ideas
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Grandes piscinas para reuniones
-      description: Grandes piscinas rectangulares con espacio real para nadar para toda la tripulación en los días de verano.
-      icon: tabler:users
-      cta: Obtener ideas
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Remojo y relajación al aire libre
-      description: Bañeras SPA con asientos incorporados y fondos aislados para el descanso diario en casa.
-      icon: tabler:ripple
-      cta: Obtener ideas
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Piscinas para alquileres vacacionales
-      description: Un servicio de temporada para huéspedes que se instala rápidamente y se almacena fuera de temporada.
-      icon: tabler:beach
-      cta: Obtener ideas
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping y hospitalidad
-      description: 'Estancias al aire libre distintivas: sitios de glamping, propiedades boutique y lugares para eventos.'
-      icon: tabler:tent
-      cta: Obtener ideas
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Comprar piscinas
   title: Explora nuestras piscinas
   subtitle: Compare formas, tamaños y características para encontrar la piscina adecuada para su patio trasero o espacio al aire libre.
-content_workshop:
-  isReversed: true
-  tagline: Para empresas
-  title: Piscinas para Negocios,<br />También
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay para socios comerciales</h3>
-  items:
-    - title: Alquileres vacacionales y hostelería
-      description: 'Servicios de temporada para huéspedes para alquileres vacacionales, sitios de glamping y propiedades boutique: rápidos de implementar, fáciles de mantener y fáciles de almacenar.'
-    - title: Socios minoristas y de marca
-      description: Programas mayoristas y piscinas Drop Stitch listas para la venta minorista para centros de jardinería, tiendas de piscinas y tiendas en línea.
-    - title: Etiqueta personalizada y privada
-      description: Tamaños, colores, cubiertas, impresión de logotipos y empaques minoristas personalizados para marcas, creados por nuestros socios de fabricación.
 content_compliance:
   tagline: Cuidado y seguridad
   title: fácil de poseer,<br />fácil de amar
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Comparar colecciones'
-  title: 'Cuatro colecciones, una elección clara'
+  title: 'Dos colecciones, una elección clara'
   subtitle: 'Tamaños y mejores usos de un vistazo: las especificaciones completas se encuentran en la página de cada producto.'
   headers:
     collection: 'Colección'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Espacio de baño de lados rectos para reuniones más grandes'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'SPA Redondo'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Asientos incorporados para sumergirse sentado'
-      href: /products/hot-tub-round
-    - collection: 'SPA Cuadrado/Rectangular'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Baño sentado en espacios compactos'
-      href: /products/hot-tub-square-rect
   note: 'Todas las colecciones: 4 a 5 paredes PSI drop-stitch, inflado de 5 a 15 minutos, almacenamiento plegable. La calefacción y la filtración son externas: los calentadores y las bombas de filtrado se venden por separado.'
 
 content_evidence:

@@ -13,9 +13,6 @@ hero:
     - text: Atrodiet savu baseinu
       href: /find-your-pool
       icon: tabler:compass
-    - text: 'Biznesam'
-      href: /for-businesses
-      icon: tabler:briefcase
   image:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay taisnstūrveida piepūšamais Drop Stitch peldbaseins pagalmā
@@ -66,54 +63,10 @@ content_customer_types:
   tagline: Baseina idejas
   title: Piemērots baseins<br />Jūsu telpa
   subtitle: Īsti iestatījumi, reāli izmēri un godīgi norādījumi pareizā baseina izvēlē.
-  items:
-    - title: Piemājas baseini ģimenēm
-      description: Telpas plānošana, reāli izmantojami izmēri un vienkārša apkope ģimenes vasarām pagalmā.
-      icon: tabler:home
-      cta: Iegūstiet idejas
-      cta_href: /pool-ideas/backyard-pools-for-families
-    - title: Baseini maziem pagalmiem
-      description: 'Kompakti apaļi un kvadrātveida modeļi, kas iederas šaurās āra telpās — telpa atvēsinoties un ģimenes ūdens pavadīšanai.'
-      icon: tabler:layout-grid
-      cta: Iegūstiet idejas
-      cta_href: /pool-ideas/pools-for-small-backyards
-    - title: Lieli baseini pulcēšanās vietām
-      description: Lieli taisnstūra baseini ar reālu peldvietu visai komandai vasaras dienās.
-      icon: tabler:users
-      cta: Iegūstiet idejas
-      cta_href: /pool-ideas/large-pools-for-family-gatherings
-    - title: Mērcēšana un relaksācija ārā
-      description: SPA kubli ar iebūvētiem sēdekļiem un izolētiem dibeniem ikdienas vējiem mājās.
-      icon: tabler:ripple
-      cta: Iegūstiet idejas
-      cta_href: /pool-ideas/outdoor-soaking-pools
-    - title: Baseini īrei brīvdienām
-      description: Sezonas viesu ērtības, kas ātri izveidojas un tiek uzglabātas ārpus sezonas.
-      icon: tabler:beach
-      cta: Iegūstiet idejas
-      cta_href: /pool-ideas/pools-for-vacation-rentals
-    - title: Glamping un viesmīlība
-      description: Atšķirīgas uzturēšanās brīvā dabā — apskates vietas, modes preču veikali un pasākumu norises vietas.
-      icon: tabler:tent
-      cta: Iegūstiet idejas
-      cta_href: /pool-ideas/pools-for-glamping-and-hospitality
 content_categories:
   tagline: Veikals baseini
   title: Izpētiet mūsu baseinus
   subtitle: Salīdziniet formas, izmērus un funkcijas, lai atrastu savam pagalmam vai āra telpai piemērotāko baseinu.
-content_workshop:
-  isReversed: true
-  tagline: Uzņēmumiem
-  title: Baseini biznesam,<br />Arī
-  content: |
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Felizbay biznesa partneriem</h3>
-  items:
-    - title: Īre brīvdienām un viesmīlība
-      description: Sezonas viesu ērtības īrei brīvdienām, apskates vietām un modes preču veikaliem — ātri izvietojamas, viegli uzturamas, vienkārši uzglabājamas.
-    - title: Mazumtirdzniecības un zīmolu partneri
-      description: Vairumtirdzniecības programmas un mazumtirdzniecībai gatavi Drop Stitch baseini dārzu centriem, baseinu veikaliem un tiešsaistes veikaliem.
-    - title: Pielāgota un privāta etiķete
-      description: Pielāgoti izmēri, krāsas, vāki, logotipu drukāšana un mazumtirdzniecības iepakojumi zīmoliem — to izstrādājuši mūsu ražošanas partneri.
 content_compliance:
   tagline: Aprūpe un drošība
   title: Viegli iegūt īpašumā,<br />Viegli mīlēt
@@ -207,7 +160,7 @@ cta:
 
 compare_collections:
   tagline: 'Salīdziniet kolekcijas'
-  title: 'Četras kolekcijas, viena skaidra izvēle'
+  title: 'Divas kolekcijas, viena skaidra izvēle'
   subtitle: 'Izmēri un labākie lietojumi īsumā — visas specifikācijas ir pieejamas katrā produkta lapā.'
   headers:
     collection: 'Kolekcija'
@@ -222,14 +175,6 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Taisnas malas peldvieta lielākām pulcēšanās vietām'
       href: /products/rectangular-drop-stitch-pool
-    - collection: 'Apaļš SPA'
-      sizes: 'Ø 1.8 – 2.3 m'
-      best_for: 'Iebūvēti sēdekļi sēdošai mērcēšanai'
-      href: /products/hot-tub-round
-    - collection: 'Kvadrātveida/taisnā SPA'
-      sizes: '1.5 × 1.5 m – 3 × 2 m'
-      best_for: 'Mērcēšana sēdus stāvoklī kompaktās telpās'
-      href: /products/hot-tub-square-rect
   note: 'Visas kolekcijas: 4–5 PSI drop-stitch sienas, 5–15 min piepūšana, iesaiņojuma uzglabāšana. Apkure un filtrēšana ir ārējā — sildītāji un filtru sūkņi tiek pārdoti atsevišķi.'
 
 content_evidence:
