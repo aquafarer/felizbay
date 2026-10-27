@@ -21,6 +21,10 @@ const SITEMAPS = [
 ];
 const EXCLUDE_EXACT = new Set(['/brand/', '/v2/']);
 const MOJIBAKE = /\uFFFD|u\{2014\}|镥|—\?/;
+// Raw i18n key leak (audit 4 §6.2): visible text must not contain unresolved
+// translation keys like "product.deliveryCard". Key namespaces mirror src/data/site/i18n-config.json.
+const RAW_KEY_RE =
+  /(?:^|[\s"'>(])((?:product|nav|chat|faq|404|search|checkout|cta|about|home|header|blog|tw)\.[a-zA-Z][a-zA-Z0-9]*(?:\.[a-zA-Z0-9]+)+)(?=[\s"'<)&.,;:!?]|$)/;
 
 const errors = [];
 const warnings = [];
@@ -90,6 +94,14 @@ function main() {
     }
     if (title && MOJIBAKE.test(title)) errors.push(`mojibake in <title>: ${rel} — ${title.slice(0, 80)}`);
     if (desc && MOJIBAKE.test(desc)) errors.push(`mojibake in description: ${rel}`);
+    // Raw translation-key leak check: scan visible text only (strip script/style/tags),
+    // since bundled JS legitimately references key names for lookups.
+    const visibleText = html
+      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ');
+    const keyMatch = RAW_KEY_RE.exec(visibleText);
+    if (keyMatch) errors.push(`raw i18n key leak: ${rel} — ${keyMatch[1]}`);
   }
 
   console.log(`[validate-dist] checked ${locCount} sitemap URLs (${SITEMAPS.length} sitemaps) + ${checked} pages`);
