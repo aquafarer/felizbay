@@ -9,7 +9,7 @@ Dogs feel summer heat far more than people do, and a backyard splash spot is one
 
 The difference is wall construction. A soft air-ring pool is a single envelope of thin vinyl — a claw catch or an over-excited leap can tear it. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) bonds thousands of internal vertical threads between two outer layers of PVC, so the whole structure inflates to a hard, low-stretch surface at its rated 4–5 PSI operating pressure. There is no sagging outer skin to catch claws, and the firm rim does not fold under a dog scrambling over the side.
 
-> **Be clear about the limits:** no inflatable pool is chew-proof. Drop-stitch construction resists normal clawing, stepping, and splashing far better than vinyl — but persistent, aggressive chewing will eventually damage any fabric product. Supervision is part of the setup.
+> **Be clear about the limits:** no inflatable pool is chew-proof. Drop-stitch construction resists normal clawing, stepping, and splashing — but persistent, aggressive chewing will eventually damage any fabric product. Supervision is part of the setup.
 
 ## 2. Choosing a Size and Wall Height
 

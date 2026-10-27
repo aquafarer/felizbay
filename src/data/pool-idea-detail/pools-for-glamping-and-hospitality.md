@@ -27,7 +27,7 @@ Glamping resort amenities experience continuous, back-to-back usage from diverse
   Utilizing tens of thousands of internal polyester threads sealed within multi-layer UV-resistant PVC, Felizbay pools withstand high bather loads, sun exposure, and variable weather without sagging or losing pressure.
 
 - **Rigid structural stability:**
-  Unlike standard soft-sided inflatables, guests can safely sit on the reinforced side walls or lean back against the perimeter without causing water spillage or structural deformation.
+  Unlike standard soft-sided inflatables, the high-pressure drop-stitch walls stay flat and rigid at rated pressure, keeping the pool stable and spill-free under continuous guest use.
 
 ## 3. Commercial Cleaning & Turnover Efficiency
 

@@ -164,6 +164,7 @@ const DETAIL_UI_KEYS = [
   'product.fitCheckerTitle',
   'product.selectSize',
   'product.externalSize',
+  'product.internalSize',
   'product.wallLabel',
   'product.estFillVolume',
   'product.estFillNote',
@@ -179,6 +180,10 @@ const DETAIL_UI_KEYS = [
   'product.setupTitle',
   'product.specTitle',
   'product.supportTitle',
+  'product.deliveryCard',
+  'product.shippingCard',
+  'product.returnsCard',
+  'product.warrantyCard',
   'product.faqTitle',
   'product.retailPrice',
   'product.buyNow',
@@ -522,7 +527,9 @@ const specGroups = detailV2
                         : `${product.price.currency ?? ''} ${product.price.amount}`}
                     </span>
                     <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                      {product.sku ? t('product.retailPrice') || 'Retail price' : 'Wholesale FOB price'}
+                      {product.sku
+                        ? `${t('product.retailPrice') || 'Retail price'} — SKU ${product.sku}`
+                        : 'Wholesale FOB price'}
                     </span>
                     {product.inStock && (
                       <span class="text-sm font-medium text-green-600">

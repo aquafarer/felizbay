@@ -43,12 +43,12 @@ export const standalonePages: StandalonePage[] = [
     slug: 'oem-odm-pools',
     title: 'OEM / ODM Pool Manufacturing',
     description:
-      'Custom inflatable pool manufacturing from Felizbay: custom sizes, colors, logos, covers, and packaging, produced in our own factory and shipped factory-direct worldwide.',
+      'Custom inflatable pool manufacturing from Felizbay: custom sizes, colors, logos, covers, and packaging, produced with our Qingdao manufacturing partner and shipped factory-direct worldwide.',
     pageType: 'service',
     sections: [
       {
         heading: 'Custom Sizes and Shapes',
-        body: 'We manufacture pools in custom diameters, wall heights, and rectangular footprints to fit your market. From compact patio pools to full-size family swim pools, dimensions are built to your specification.',
+        body: 'Pools are manufactured in custom diameters, wall heights, and rectangular footprints to fit your market. From compact patio pools to full-size family swim pools, dimensions are built to your specification.',
       },
       {
         heading: 'Branding and Packaging',
@@ -60,7 +60,7 @@ export const standalonePages: StandalonePage[] = [
       },
       {
         heading: 'Factory-Direct Logistics',
-        body: 'We ship directly from our factory to your warehouse or port. Wholesale pricing scales with volume, and repeat orders keep consistent quality across seasons.',
+        body: 'We ship directly from the factory to your warehouse or port. Wholesale pricing scales with volume, and repeat orders keep consistent quality across seasons.',
       },
     ],
     features: [

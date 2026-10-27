@@ -68,7 +68,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What is included with the pool?',
-        a: 'Each pool ships with a 1000W electric air pump, a full-coverage cover, a repair kit, and a storage bag. Everything needed to inflate and maintain the pool for the season is in the box.',
+        a: 'Each pool ships with a 1000W electric air pump, a full-coverage cover, a repair kit, and a storage bag. Everything needed to inflate the pool is in the box; filter pumps are sold separately.',
       },
       {
         q: 'Does it include a filter pump?',
@@ -216,7 +216,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'Can the color be customized?',
-        a: 'Yes. Felizbay manufactures pools in custom colors and sizes for OEM/ODM partners — contact info@felizbay.com.',
+        a: 'Yes. Pools are manufactured in custom colors and sizes for OEM/ODM partners — contact info@felizbay.com.',
       },
       {
         q: 'What sizes are available?',

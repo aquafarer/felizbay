@@ -41,7 +41,7 @@ export const businessEntities: BusinessEntity[] = [
     type: 'Service',
     name: 'OEM / ODM Pool Manufacturing',
     description:
-      'Custom inflatable pool manufacturing: custom sizes, colors, covers, logos, and packaging from our own factory.',
+      'Custom inflatable pool manufacturing: custom sizes, colors, covers, logos, and packaging, produced with our Qingdao manufacturing partner.',
     url: `${siteUrl}/contact`,
     audience: ['Brand Owners', 'Importers'],
     offers: ['Custom Sizes', 'Custom Colors', 'Private Label', 'Custom Packaging'],

@@ -106,7 +106,7 @@ export const POOL_KEY_FEATURES: PoolFeature[] = [
     icon: 'tabler:shield-check',
     title: 'Rock-Solid Rigidity',
     description:
-      'At the standard 4–5 PSI operating pressure the drop-stitch walls form a flat, firm surface that resists collapsing or inward buckling — users can lean against or sit directly on the pool rim.',
+      'At the standard 4–5 PSI operating pressure the drop-stitch walls form a flat, firm surface that resists collapsing or inward buckling.',
   },
   {
     icon: 'tabler:box',

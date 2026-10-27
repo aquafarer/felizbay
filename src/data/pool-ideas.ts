@@ -43,7 +43,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Backyard Pools for Families',
     intro: [
       'A family pool has to survive summer holidays, birthday parties, and daily after-school splashing — while still being safe for mixed ages and easy for parents to manage. Felizbay drop-stitch pools give you rigid, full-size swimming at a fraction of the cost and commitment of a built-in pool.',
-      'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rock-solid at 4–5 PSI: children can lean on the rim, and the pool keeps its shape all season. When summer ends, it drains, folds, and stores in a storage bag.',
+      'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rigid at 4–5 PSI and the pool keeps its shape all season. When summer ends, it drains, folds, and stores in a storage bag.',
     ],
     conditions: [
       'A flat, load-bearing surface of about 3 × 3 m or larger (lawn, patio, or deck rated for the water weight)',
@@ -121,7 +121,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A family of five relaxing in a large round Felizbay drop-stitch pool on a wooden deck during a summer BBQ gathering.',
     intro: [
-      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Felizbay\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m high and rims strong enough to sit on.',
+      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Felizbay\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m high.',
       'Despite the size, the pool inflates in minutes with the included 1000W electric pump, then fills from an ordinary garden hose — no crane, no excavation, no permits for permanent structures in most areas (always confirm local rules). Filling time depends on your water supply.',
     ],
     conditions: [
@@ -323,7 +323,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A man doing a cold plunge recovery session in a round grey Felizbay tub inside a home garage gym.',
     intro: [
-      'Cold-water immersion has become a staple recovery routine for athletes and fitness enthusiasts. A dedicated plunge vessel needs rigid walls you can brace against, insulation to slow warming, and a compact footprint that fits a garage gym or a shaded patio corner — exactly what Felizbay drop-stitch tubs are built for.',
+      'Cold-water immersion has become a staple recovery routine for athletes and fitness enthusiasts. A dedicated plunge vessel needs rigid walls, insulation to slow warming, and a compact footprint that fits a garage gym or a shaded patio corner — exactly what Felizbay drop-stitch tubs are built for.',
       'The same 4–5 PSI rigid construction used across our pools, plus the 5 mm insulated thermal bottom on SPA tubs, holds cold water steadily. Add ice, or pair the tub with external water-chilling equipment — the line is designed to work with heating and spa therapy units.',
     ],
     conditions: [
@@ -487,7 +487,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A retired couple enjoying a warm soak in a round Felizbay pool in a flower-filled garden at golden hour.',
     intro: [
       'When the yard quiets down, a pool stops being a playground and becomes a daily comfort — a cool soak on a warm afternoon, gentle movement for stiff joints, and a magnet for visiting grandchildren. The catch is that permanent pools demand heavy upkeep that nobody wants in retirement.',
-      'Felizbay drop-stitch pools split the difference: rigid walls with a stable rim, built-in seats for getting in and out, small water volumes that stay fresh with minutes of weekly care, and a pool that folds away entirely when the season ends.',
+      'Felizbay drop-stitch pools split the difference: rigid walls with a stable rim, built-in seats for getting in and out, small water volumes that are quick to care for, and a pool that folds away entirely when the season ends.',
     ],
     conditions: [
       'A level, step-free patch of patio or garden from about 1.8 × 1.8 m with a clear, non-slip access path',
@@ -530,7 +530,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A large commercial Felizbay pool deployed at an outdoor festival site with sand-filter equipment and an operator checking water circulation.',
     intro: [
-      'Summer festivals, brand activations, pop-up beach clubs, and community events all want one thing: a water feature guests remember. Rigid pools are too heavy to tour, and toy inflatables rarely survive a second weekend. Felizbay commercial drop-stitch pools bridge the gap — rock-solid at 4–5 PSI, quick to deploy and strike, and packed small enough to stack in a box truck.',
+      'Summer festivals, brand activations, pop-up beach clubs, and community events all want one thing: a water feature guests remember. Rigid pools are too heavy to tour, and toy inflatables rarely survive a second weekend. Felizbay commercial drop-stitch pools bridge the gap — firm and stable when inflated, quick to deploy and strike, and packed small enough to stack in a box truck.',
       'The same platform scales from a single VIP plunge to a Ø 10 m centerpiece, with OEM/ODM options for branded fleet builds.',
     ],
     conditions: [
@@ -571,7 +571,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A round Felizbay soaking pool integrated into the private courtyard terrace of a boutique hotel suite.',
     intro: [
       'A private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete into existing structures means structural work, months of disruption, and permits — Felizbay drop-stitch soaking pools deliver the same photogenic experience with a non-invasive setup — a small team inflates the pool in minutes with the included pump, then fills it from the existing water supply.',
-      'For properties, the line supports commercial projects: custom sizes and colorways, quiet filtration setups, and OEM/ODM production through our Qingdao manufacturing partner.',
+      'For properties, the line supports commercial projects: custom sizes and colorways, standard cartridge filtration, and OEM/ODM production through our Qingdao manufacturing partner.',
     ],
     conditions: [
       'Structural sign-off from a licensed engineer for any elevated terrace, balcony, or deck placement',

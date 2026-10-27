@@ -13,7 +13,7 @@
  */
 import type { PoolCatalogItem } from '~/data/pool-catalog';
 import type { FitRow } from '~/data/product-page-content';
-import { diagramInputForSize, estLitersFor, renderSizeDiagramSvg } from './diagram';
+import { diagramInputForSize, estLitersFor, internalSizeFor, renderSizeDiagramSvg } from './diagram';
 
 interface Props {
   ui: Record<string, string>;
@@ -34,11 +34,19 @@ interface SizeOption {
   wall: string;
   fobUsd: number;
   estLiters: number | null;
+  internal: string | null;
 }
+
+/** "15 cm" → 15; "10 / 15 cm" → 10 (first value, most conservative) */
+const wallCmOf = (wall: string): number | undefined => {
+  const first = parseFloat(wall);
+  return Number.isNaN(first) ? undefined : first;
+};
 
 const sizeOptions: SizeOption[] = catalogItems
   .map((it) => {
-    const estLiters = estLitersFor(it.size);
+    const wallCm = wallCmOf(it.wall);
+    const estLiters = estLitersFor(it.size, wallCm);
     return {
       item: it.item,
       size: it.size,
@@ -46,6 +54,7 @@ const sizeOptions: SizeOption[] = catalogItems
       wall: it.wall,
       fobUsd: it.fobUsd,
       estLiters,
+      internal: internalSizeFor(it.size, wallCm),
     };
   })
   .filter((o) => o.estLiters !== null);
@@ -114,6 +123,7 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
                   data-wall={o.wall}
                   data-fob={o.fobUsd.toFixed(2)}
                   data-liters={o.estLiters}
+                  data-internal={o.internal ?? ''}
                 >
                   {o.label} — {o.wall}
                 </option>
@@ -138,6 +148,14 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
             </dt>
             <dd id="fitg-size-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
               {first?.label}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              {ui['product.internalSize']}
+            </dt>
+            <dd id="fitg-internal-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+              {first?.internal || '—'}
             </dd>
           </div>
           <div>
@@ -202,12 +220,13 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
   (() => {
     const sel = document.getElementById('fitg-size') as HTMLSelectElement | null;
     const sizeVal = document.getElementById('fitg-size-val');
+    const internalVal = document.getElementById('fitg-internal-val');
     const wallVal = document.getElementById('fitg-wall-val');
     const volumeVal = document.getElementById('fitg-volume-val');
     const fobVal = document.getElementById('fitg-fob-val');
     const diagram = document.getElementById('fitg-diagram');
     const quoteLink = document.getElementById('fitg-quote');
-    if (!sel || !sizeVal || !wallVal || !volumeVal || !fobVal) return;
+    if (!sel || !sizeVal || !internalVal || !wallVal || !volumeVal || !fobVal) return;
 
     const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
 
@@ -242,6 +261,7 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
       const opt = sel.options[sel.selectedIndex] as HTMLOptionElement | undefined;
       if (!opt) return;
       sizeVal.textContent = opt.dataset.size ?? '—';
+      internalVal.textContent = opt.dataset.internal || '—';
       wallVal.textContent = opt.dataset.wall ?? '—';
       const liters = parseFloat(opt.dataset.liters ?? '');
       volumeVal.textContent = Number.isNaN(liters) ? '—' : fmtLiters(liters);

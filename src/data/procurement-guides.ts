@@ -81,7 +81,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Criterion 4: MOQ and Sampling Policy',
         paragraphs: [
-          'A confident manufacturer lets you prove quality before you commit volume. Felizbay manufactures pre-production samples from a single piece, and its standard price list is based on 20 pcs per item — a deliberately low barrier that lets importers test a market without betting on a full container.',
+          'A confident manufacturer lets you prove quality before you commit volume. Felizbay supplies pre-production samples from a single piece, and its standard price list is based on 20 pcs per item — a deliberately low barrier that lets importers test a market without betting on a full container.',
           'Be wary of suppliers who demand large first orders with no sample stage, or who quote one MOQ in the first email and a different one after you engage. Written, itemized MOQ and pricing terms are a basic test of supplier professionalism.',
         ],
       },
@@ -122,7 +122,7 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'The Bottom Line',
         paragraphs: [
           'Choose the manufacturer who welcomes your inspection, quotes precise engineering numbers, tests every unit and lets you start small. That combination — verifiable quality plus low entry risk — is worth more than any unit-price discount.',
-          'Felizbay manufactures drop stitch pools at its own Qingdao facility, pressure-drop tests every unit for 24–48 hours, ships samples from one piece and prices standard items on a 20-pc basis, FOB Qingdao. Send an RFQ and hold us to every criterion on this list.',
+          'Felizbay offers drop stitch pools manufactured at its long-term Qingdao manufacturing partner, pressure-drop tests every unit for 24–48 hours, ships samples from one piece and prices standard items on a 20-pc basis, FOB Qingdao. Send an RFQ and hold us to every criterion on this list.',
         ],
       },
     ],
@@ -182,7 +182,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'What OEM Looks Like in Practice',
         paragraphs: [
-          'A typical Felizbay OEM project runs in five steps: you send drawings or target specs; we confirm dimensions, wall thickness (10/15/20/50 cm), materials and branding, then quote FOB Qingdao with MOQ and lead time; a pre-production sample is manufactured and pressure-tested for your approval; mass production runs at our Qingdao factory with inline seam and valve inspection; and every unit passes a 24–48 hour pressure-drop test before container loading.',
+          'A typical Felizbay OEM project runs in five steps: you send drawings or target specs; we confirm dimensions, wall thickness (10/15/20/50 cm), materials and branding, then quote FOB Qingdao with MOQ and lead time; a pre-production sample is manufactured and pressure-tested for your approval; mass production runs at our Qingdao manufacturing partner with inline seam and valve inspection; and every unit passes a 24–48 hour pressure-drop test before container loading.',
           'Customization can cover everything from pool dimensions and fabric colorways to logo printing, fitted covers, built-in seats, 5 mm insulated bottoms, valve placement and retail packaging.',
         ],
       },

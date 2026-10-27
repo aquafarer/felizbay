@@ -38,7 +38,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-water-capacity',
     question: 'How much water does an inflatable pool hold?',
     answer:
-      'It depends on the model and fill level. Our round pools typically hold 1,500–5,000 liters at 80% fill; rectangular pools hold more. Always place the pool on ground that can support the combined weight of pool plus water before filling.',
+      'It depends on the model, size, and fill level. Each product page has a size checker that shows the estimated fill volume for every factory size — check the exact figure for your pool there before filling. Always place the pool on ground that can support the combined weight of pool plus water before filling.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: ['how-much-space-do-you-need-for-an-inflatable-pool'],
@@ -110,9 +110,9 @@ export const faqs: FaqRecord[] = [
     id: 'pool-with-cover',
     question: 'Do pools come with a cover?',
     answer:
-      'Our round grey pool ships with a fitted debris cover included. Covers for other models are available as accessories. A cover keeps out leaves and insects, reduces evaporation, and helps maintain water temperature.',
+      'Rectangular pools ship with a full-coverage dustproof and waterproof cover included. Round pools ship with the pump and repair kit, and a fitted cover is available as an optional accessory. A cover keeps out leaves and insects, reduces evaporation, and helps maintain water temperature.',
     category: 'product',
-    relatedProducts: ['round-grey-drop-stitch-pool'],
+    relatedProducts: ['rectangular-drop-stitch-pool'],
     relatedGuides: [],
   },
   {
@@ -146,7 +146,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-oem',
     question: 'Do you offer OEM/ODM services?',
     answer:
-      'Yes. We offer custom sizes, colors, logos, covers, and packaging for businesses. Our factory handles everything from minor branding changes to fully custom pool designs. Minimum order quantities apply — contact us for details.',
+      'Yes. We offer custom sizes, colors, logos, covers, and packaging for businesses. Our manufacturing partner in Qingdao handles everything from minor branding changes to fully custom pool designs. Minimum order quantities apply — contact us for details.',
     category: 'ordering',
     relatedProducts: [],
     relatedGuides: ['oem-vs-odm-inflatable-pools', 'private-label-inflatable-pool-buyers-guide'],
@@ -173,7 +173,7 @@ export const faqs: FaqRecord[] = [
     id: 'company-model',
     question: 'Is Felizbay a trading company or a manufacturer?',
     answer:
-      'Felizbay is a brand company with its own manufacturing base. We design and produce every pool in our own facility and ship factory-direct worldwide. No middlemen — every order goes straight from our production line to you.',
+      'Felizbay is a water-sports brand founded in 2012 and operated by Aquafarer LLC. We design every pool in-house and manufacture with our long-term manufacturing partner in Qingdao, China, shipping factory-direct worldwide.',
     category: 'ordering',
     relatedProducts: [],
     relatedGuides: ['how-to-choose-a-drop-stitch-pool-manufacturer'],
@@ -209,7 +209,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-factory-location',
     question: 'Where is the Felizbay factory located?',
     answer:
-      'Our production facility is in Qingdao, China — one of the world\u2019s largest hubs for inflatable and water-sports manufacturing. Buyers are welcome to audit the factory in person or join a live video walkthrough of the production and pressure-test areas.',
+      'Felizbay pools are manufactured in Qingdao, China — one of the world\u2019s largest hubs for inflatable and water-sports manufacturing. Buyers are welcome to audit the facility in person or join a live video walkthrough of the production and pressure-test areas.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: ['how-to-choose-a-drop-stitch-pool-manufacturer'],
@@ -218,7 +218,7 @@ export const faqs: FaqRecord[] = [
     id: 'sourcing-custom-packaging',
     question: 'Can you produce custom retail packaging?',
     answer:
-      'Yes. We manufacture printed cartons, color boxes and mailer packaging sized for garden-retail shelves or e-commerce parcel networks, plus manuals and hang tags under your brand. Packed weight and carton dimensions are tuned to your logistics.',
+      'Yes. Printed cartons, color boxes and mailer packaging are produced to your specification — sized for garden-retail shelves or e-commerce parcel networks, plus manuals and hang tags under your brand. Packed weight and carton dimensions are tuned to your logistics.',
     category: 'sourcing',
     relatedProducts: [],
     relatedGuides: ['private-label-inflatable-pool-buyers-guide'],

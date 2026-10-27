@@ -29,7 +29,7 @@ When hosting family gatherings, weight capacity and water volume are crucial con
   - **Spacious family pools (4–6+ people or parties):** Hold 3,000 to 6,000+ liters. Thanks to the structural rigidity of the drop-stitch material, the side walls will not sag, buckle, or bulge even when filled to capacity.
 
 - **Multi-person experience:**
-  - Drop-stitch construction incorporates thousands of high-tensile polyester threads connecting the top and bottom layers, creating an exceptionally rigid structure when inflated to the rated operating pressure. Adults can comfortably lean against the pool edge without causing water overflow or structural collapse, making it ideal for multi-person summer gatherings.
+  - Drop-stitch construction incorporates thousands of high-tensile polyester threads connecting the top and bottom layers, creating an exceptionally rigid structure when inflated to the rated operating pressure — the pool keeps its shape and holds its water line during multi-person summer gatherings.
 
 ## 3. Quick & Easy Setup Guide
 

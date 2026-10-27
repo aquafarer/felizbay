@@ -138,14 +138,14 @@ export const guides: GuideRecord[] = [
       'Outer layers: two sheets of reinforced, UV-stabilized PVC form the wall surfaces',
       'Internal threads: thousands of fine polyester threads connect the layers at fixed intervals',
       'Air chamber: inflating the chamber to 4–5 PSI pulls the layers taut against the threads, locking the wall flat',
-      'Rigid result: the wall becomes stiff enough to lean on or sit on, like a hard-sided pool',
+      'Rigid result: the wall becomes stiff and flat like a hard-sided pool',
       'Safety margin: rated maximum pressure is 8 PSI, with a relief valve that auto-releases above 6 PSI',
       'Storage: open the valves, let the fabric relax, and the whole pool folds into a storage bag',
     ],
     faq: [
       {
         q: 'Is a drop stitch pool really rigid?',
-        a: 'Yes. At the rated 4–5 PSI operating pressure the walls form a flat, firm surface that resists collapsing or inward buckling — users can lean against or sit on the pool rim.',
+        a: 'Yes. At the rated 4–5 PSI operating pressure the walls form a flat, firm surface that resists collapsing or inward buckling.',
       },
       {
         q: 'Does drop stitch make the pool heavier?',

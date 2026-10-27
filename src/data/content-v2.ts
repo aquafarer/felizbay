@@ -39,7 +39,7 @@ const poolArticles: ContentV2Record[] = [
     faq: [
       {
         q: 'How hard do the walls get?',
-        a: 'At rated pressure a drop stitch wall is rigid enough to lean on — comparable to a hard-sided pool wall, unlike soft vinyl rings.',
+        a: 'At rated pressure a drop stitch wall is rigid and drum-firm — comparable to a hard-sided pool wall, unlike soft vinyl rings.',
       },
       {
         q: 'Does drop stitch puncture easily?',
@@ -93,7 +93,7 @@ const poolArticles: ContentV2Record[] = [
     definition:
       'Pool water care is the cycle of filtration, chemical balancing, debris removal, and covering that keeps water safe and extends the time between water changes.',
     tldr:
-      'Run the filter daily, keep chlorine at 1–3 ppm and pH at 7.2–7.6, skim debris, and cover the pool when idle. That is the whole routine — ten minutes a day.',
+      'Run the filter daily, keep chlorine at 1–3 ppm and pH at 7.2–7.6, skim debris, and cover the pool when idle. That is the whole routine.',
     problem:
       'Without a routine, pool water turns green within days: algae bloom, the pool needs a full drain and scrub, and the season loses weeks of swim time.',
     explanation:
@@ -101,7 +101,7 @@ const poolArticles: ContentV2Record[] = [
     solution:
       'Felizbay pools fit standard cartridge filter pumps. Establish the routine on day one: filter 4–8 hours daily, test 2–3 times a week, dose with a floating dispenser, skim daily, cover between swims.',
     recommendation:
-      'Buy a basic test kit and a cover with your pool — together they cost less than one unnecessary water change and prevent 90% of water problems.',
+      'Buy a basic test kit and a cover with your pool — both cost less than one unnecessary water change and stop most water problems before they start.',
     faq: [
       {
         q: 'How often do I change the water?',

@@ -60,6 +60,7 @@ const SUPPORT_CARDS_BASE: SupportCard[] = [
     summary: 'Retail orders ship to the address entered at checkout.',
     details: [
       'Single-piece online purchase is fulfilled by direct shipping.',
+      'In-stock orders ship within 2–3 business days.',
       'A dispatch confirmation with tracking is sent by email after checkout.',
       'Delivery time depends on your destination and is shown by the carrier after dispatch.',
     ],

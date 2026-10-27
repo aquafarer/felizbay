@@ -60,7 +60,7 @@ Soaking pools are generally more cost-effective and lower-maintenance than tradi
 Keeping your private soaking pool crystal clear requires minimal time when following a routine:
 
 1. **Cover immediately after use:** Always secure a fitted thermo-reflective cover right after soaking to lock in temperature, cut evaporation, and keep out windborne dust or leaves.
-2. **Run quiet filtration:** Set your cartridge filter pump on a timer for 2 to 4 hours daily during low-noise hours (such as early morning) to maintain water clarity without disrupting evening peace.
+2. **Filtration on a timer:** Set your cartridge filter pump on a timer for 2 to 4 hours daily at times that suit your household to maintain water clarity.
 3. **Gentle sanitization:** Use a floating tablet dispenser with mild chlorine or bromine spa tablets to keep water pristine with minimal chemical odor.
 
 Bring luxury, serenity, and minimalist elegance to your backyard space with a Felizbay outdoor soaking pool — your personal home getaway all summer long.

@@ -40,12 +40,48 @@ export function parseRoundSize(size: string): { d: number; h: number } | null {
   return { d: parts[0], h: parts[1] };
 }
 
-/** Estimated fill volume in liters (80% wall height), rounded to 10 L */
-export function estLitersFor(size: string): number | null {
+/**
+ * Estimated fill volume in liters, rounded to 10 L.
+ *
+ * Catalog sizes are EXTERNAL dimensions, so the wall thickness is subtracted
+ * twice (both sides) before the floor area is computed — otherwise the walls'
+ * own footprint would be counted as water. Fill level is estimated at 80% of
+ * the wall height; the actual fill line is marked inside each pool.
+ */
+export function estLitersFor(size: string, wallCm?: number): number | null {
+  const t = wallCm && wallCm > 0 ? wallCm / 100 : 0;
   const rect = parseRectSize(size);
-  if (rect) return Math.round((rect.l * rect.w * (0.8 * rect.h) * 1000) / 10) * 10;
+  if (rect) {
+    const l = Math.max(0, rect.l - 2 * t);
+    const w = Math.max(0, rect.w - 2 * t);
+    return Math.round((l * w * (0.8 * rect.h) * 1000) / 10) * 10;
+  }
   const round = parseRoundSize(size);
-  if (round) return Math.round((Math.PI * (round.d / 2) ** 2 * (0.8 * round.h) * 1000) / 10) * 10;
+  if (round) {
+    const d = Math.max(0, round.d - 2 * t);
+    return Math.round((Math.PI * (d / 2) ** 2 * (0.8 * round.h) * 1000) / 10) * 10;
+  }
+  return null;
+}
+
+/**
+ * Usable internal dimensions as a display string (walls subtracted):
+ * rect "≈ 1.7 × 1.7 m", round "≈ Ø 1.7 m". Returns null for unparseable sizes.
+ */
+export function internalSizeFor(size: string, wallCm?: number): string | null {
+  const t = wallCm && wallCm > 0 ? wallCm / 100 : 0;
+  const fmt = (n: number) => Math.round(n * 100) / 100;
+  const rect = parseRectSize(size);
+  if (rect) {
+    const l = Math.max(0, rect.l - 2 * t);
+    const w = Math.max(0, rect.w - 2 * t);
+    return `≈ ${fmt(l)} × ${fmt(w)} m`;
+  }
+  const round = parseRoundSize(size);
+  if (round) {
+    const d = Math.max(0, round.d - 2 * t);
+    return `≈ Ø ${fmt(d)} m`;
+  }
   return null;
 }
 

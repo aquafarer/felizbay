@@ -3,7 +3,7 @@ title: 'Cold Plunge & Recovery Pools: A Practical Home Setup Guide'
 description: 'Vessel selection, cooling strategies, water hygiene, and health disclaimers for cold-water immersion with drop-stitch tubs.'
 ---
 
-Cold-water immersion (CWI) has moved from locker-room folklore to a mainstream recovery routine. But a dedicated plunge needs more than a stock tank: walls rigid enough to brace against, insulation to slow warming, a cover to keep debris out between sessions, and a footprint that fits a garage gym or a shaded patio corner. This guide covers how to build that setup with drop-stitch tubs — and where the honest limits are.
+Cold-water immersion (CWI) has moved from locker-room folklore to a mainstream recovery routine. But a dedicated plunge needs more than a stock tank: rigid walls, insulation to slow warming, a cover to keep debris out between sessions, and a footprint that fits a garage gym or a shaded patio corner. This guide covers how to build that setup with drop-stitch tubs — and where the honest limits are.
 
 ## 1. Why Drop-Stitch Works for Cold Plunge
 
