@@ -16,6 +16,8 @@ const {
   id,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const hasVisualSlot = Astro.slots.has('visual');
 ---
 
 <section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
@@ -75,7 +77,14 @@ const {
         class="intersect-once intersect-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
       >
         {
-          image && (
+          hasVisualSlot && (
+            <div class="relative m-auto max-w-5xl">
+              <slot name="visual" />
+            </div>
+          )
+        }
+        {
+          !hasVisualSlot && image && (
             <div class="relative m-auto max-w-5xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />

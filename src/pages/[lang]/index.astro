@@ -3,6 +3,7 @@ export const prerender = true;
 
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import HeroCarousel from '~/components/widgets/HeroCarousel.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
@@ -58,9 +59,18 @@ const scenarioSlugs = [
   'townhome-and-compact-yard-pools',
   'pools-for-retirees-and-empty-nesters',
 ];
-const scenarioCards: PoolIdea[] = scenarioSlugs
+const scenarioCards = scenarioSlugs
   .map((slug) => findPoolIdea(slug))
-  .filter((idea): idea is PoolIdea => Boolean(idea && idea.image));
+  .filter((idea): idea is PoolIdea & { image: string } => Boolean(idea && idea.image));
+
+// Hero visual: auto-rotating carousel of the 7 consumer scenario photos, each linking to its pool-ideas page.
+const heroSlides = scenarioCards.map((idea) => ({
+  src: idea.image,
+  alt: idea.imageAlt ?? idea.title,
+  title: idea.navTitle,
+  kicker: 'Pool Idea',
+  href: `/pool-ideas/${idea.slug}`,
+}));
 
 const evidenceItems = (evidence.items ?? []).map(
   (item: { title: string; description: string; icon?: string; cta?: string; cta_href?: string }) => ({
@@ -97,8 +107,10 @@ const metadata = {
         title={hero.title}
         subtitle={hero.subtitle}
         actions={hero.actions}
-        image={hero.image}
-      />
+        image={heroSlides.length === 0 ? hero.image : undefined}
+      >
+        {heroSlides.length > 0 && <HeroCarousel slot="visual" slides={heroSlides} />}
+      </Hero>
     ) : null
   }
 
