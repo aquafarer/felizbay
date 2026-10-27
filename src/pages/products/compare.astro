@@ -1,15 +1,21 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
 import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
 
 const metadata = {
   title: `Compare Drop Stitch Inflatable Pools | ${SITE.name}`,
   description:
-    'Compare Felizbay drop stitch inflatable swimming pools side by side — size, capacity, wall material, pressure, setup time, and price.',
+    'Compare Felizbay retail drop stitch inflatable pools side by side — shape, wall material, pressure, setup time, and single-piece retail price. Wholesale and project pools are listed separately.',
 };
 
 const products = await getProducts();
+// Channel split: the comparison table carries same-caliber retail prices only;
+// wholesale-only products (no checkout SKU) get a separate business section and
+// are never price-compared against retail prices (audit 2026-10-27 §二/§四.5).
+const retailProducts = products.filter((p) => p.sku);
+const wholesaleProducts = products.filter((p) => !p.sku);
 
 const specGetter = (label: string) => {
   return (p: (typeof products)[number]) => {
@@ -28,15 +34,13 @@ const comparisonRows = [
   { label: 'Setup Time', key: 'setup' as const, getter: specGetter('setup') },
   { label: 'Included', key: 'included' as const, getter: specGetter('included') },
   {
-    label: 'Price',
+    label: 'Retail Price',
     key: 'price' as const,
     getter: (p: (typeof products)[number]) => {
       if (!p.price?.amount) return '-';
-      const base =
-        p.price.currency === 'USD' || !p.price.currency
-          ? `$${p.price.amount}`
-          : `${p.price.currency} ${p.price.amount}`;
-      return p.sku ? `${base} retail` : `from ${base} wholesale (FOB)`;
+      return p.price.currency === 'USD' || !p.price.currency
+        ? `$${p.price.amount} retail`
+        : `${p.price.currency} ${p.price.amount} retail`;
     },
   },
 ];
@@ -47,7 +51,8 @@ const comparisonRows = [
     <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
     <h1 class="mt-4 text-4xl font-semibold text-gray-900">Compare Drop Stitch Inflatable Pools</h1>
     <p class="mt-4 text-lg text-gray-500">
-      Compare all Felizbay drop stitch pools side by side to find the right inflatable swimming pool for your backyard.
+      Compare Felizbay drop stitch pools side by side to find the right inflatable swimming pool for your backyard. All
+      prices in this table are single-piece online retail prices — every model listed here can be purchased directly.
     </p>
 
     <div class="mt-12 overflow-x-auto">
@@ -59,7 +64,7 @@ const comparisonRows = [
               >Specification</th
             >
             {
-              products.map((p) => (
+              retailProducts.map((p) => (
                 <th class="px-4 py-3 text-center font-semibold text-gray-900 border-b-2 border-gray-200 min-w-[120px]">
                   <div class="text-xs uppercase tracking-wider text-gray-500 mb-1">{p.categoryLabel}</div>
                   <a href={`/products/${p.slug}`} class="hover:text-sky-600">
@@ -80,7 +85,7 @@ const comparisonRows = [
                 >
                   {row.label}
                 </td>
-                {products.map((p) => {
+                {retailProducts.map((p) => {
                   const value = row.getter ? row.getter(p) : (p as any)[row.key];
                   return <td class="px-4 py-3 text-center text-gray-600 border-b border-gray-200">{value || '-'}</td>;
                 })}
@@ -93,7 +98,7 @@ const comparisonRows = [
 
     <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
       {
-        products.map((p) => (
+        retailProducts.map((p) => (
           <a
             href={`/products/${p.slug}`}
             class="block p-4 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow text-center"
@@ -107,11 +112,40 @@ const comparisonRows = [
       }
     </div>
 
+    {
+      wholesaleProducts.length > 0 && (
+        <section class="mt-16 pt-12 border-t border-gray-200" id="wholesale" data-channel="wholesale">
+          <h2 class="text-2xl md:text-3xl font-semibold text-gray-900">Wholesale & Project Pools</h2>
+          <p class="mt-3 text-base text-gray-500 max-w-3xl leading-relaxed">
+            The collections below are produced for business buyers — soaking tubs for vacation rentals, glamping sites,
+            and hospitality projects. Prices are wholesale FOB (FOB Qingdao, price basis 20 pcs per item); these models
+            are not available as single-piece retail purchases, so they are listed separately instead of being compared
+            against retail prices above.
+          </p>
+          <div class="mt-8 grid md:grid-cols-2 gap-4">
+            {wholesaleProducts.map((p) => (
+              <ProductCard product={p} showMeta={false} />
+            ))}
+          </div>
+          <a
+            href="/products/specs"
+            class="mt-6 inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors"
+          >
+            Factory sizes &amp; wholesale price list →
+          </a>
+        </section>
+      )
+    }
+
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
-        Felizbay product comparison table covering {products.length} products across {
-          ['pool'].filter((c) => products.some((p) => p.category === c)).length
-        } categories. Compare shape, color, wall material, pressure, and price.
+        Felizbay retail product comparison table covering {retailProducts.length} single-piece retail pools across
+        {['pool'].filter((c) => retailProducts.some((p) => p.category === c)).length}
+        categories. Compare shape, color, wall material, pressure, and retail price.
+        {
+          wholesaleProducts.length > 0 &&
+            ` ${wholesaleProducts.length} wholesale-only collections (FOB Qingdao, price basis 20 pcs per item) are listed in a separate business section and are not price-compared against retail products.`
+        }
       </p>
     </section>
   </section>
