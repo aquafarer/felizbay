@@ -48,7 +48,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     conditions: [
       'A flat, load-bearing surface of about 3 × 3 m or larger (lawn, patio, or deck rated for the water weight)',
       'Backyards where a permanent pool is impossible, not allowed, or too expensive',
-      'Families who want a real swimming depth (up to 1.5 m) without construction',
+      'Families who want real swimming depth without construction — walls up to 1.5 m high hold chest-deep water for most swimmers',
       'Parents who can supervise actively whenever the pool is in use — inflatable pools require the same supervision as any pool',
     ],
     matches: [
@@ -121,8 +121,8 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A family of five relaxing in a large round Felizbay drop-stitch pool on a wooden deck during a summer BBQ gathering.',
     intro: [
-      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Felizbay\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m of real swimming depth and rims strong enough to sit on.',
-      'Despite the size, setup stays measured in minutes-to-an-hour with a 1000W electric pump — no crane, no excavation, no permits for permanent structures in most areas (always confirm local rules).',
+      'Reunions, block parties, long summer weekends — when the whole family shows up, a small splash pool is not enough. Felizbay\u2019s largest drop-stitch pools reach 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m high and rims strong enough to sit on.',
+      'Despite the size, the pool inflates in minutes with the included 1000W electric pump, then fills from an ordinary garden hose — no crane, no excavation, no permits for permanent structures in most areas (always confirm local rules). Filling time depends on your water supply.',
     ],
     conditions: [
       'Open lawn or hardstanding from roughly 5 × 5 m to 11 × 11 m',
@@ -195,7 +195,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A family of three enjoying a round Felizbay inflatable pool on the rooftop terrace of a city vacation rental.',
     intro: [
-      'A pool is one of the strongest booking magnets a vacation rental can add — and one of the hardest. Felizbay drop-stitch pools were made for this gap: a genuine swimming pool that installs in under an hour, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
+      'A pool is one of the strongest booking magnets a vacation rental can add — and one of the hardest. Felizbay drop-stitch pools were made for this gap: a genuine swimming pool that inflates in minutes with the included pump, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
       'Rigid 4–5 PSI walls and reinforced seams stand up to guest traffic, and the pressure-relief valve keeps over-enthusiastic inflation from doing damage.',
     ],
     conditions: [
@@ -407,7 +407,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A family doing water exercises and splash games in a spacious round Felizbay pool on a sunny backyard lawn.',
     intro: [
       'Water aerobics, standing stretches, resistance walking, and family splash games turn a pool into a summer fitness platform. What matters for movement is usable floor area and stable, vertical walls — soft ring pools lose interior space to sloped sides and slosh over the rim during active play.',
-      'Felizbay drop-stitch pools keep their shape at 4–5 PSI: straight 90-degree walls, a flat stable floor, and rims firm enough to grip for balance work — a wide, stable platform for low-impact movement at a fraction of an in-ground pool\u2019s cost.',
+      'Felizbay drop-stitch pools keep their shape at 4–5 PSI: straight 90-degree walls and a flat stable floor — a wide, stable platform for low-impact movement at a fraction of an in-ground pool\u2019s cost.',
     ],
     conditions: [
       'A footprint from about 3 × 2 m with at least 1 m of clear, non-slip walkway around the pool',
@@ -487,7 +487,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A retired couple enjoying a warm soak in a round Felizbay pool in a flower-filled garden at golden hour.',
     intro: [
       'When the yard quiets down, a pool stops being a playground and becomes a daily comfort — a cool soak on a warm afternoon, gentle movement for stiff joints, and a magnet for visiting grandchildren. The catch is that permanent pools demand heavy upkeep that nobody wants in retirement.',
-      'Felizbay drop-stitch pools split the difference: rigid walls with a rim you can sit on while stepping in, small water volumes that stay fresh with minutes of weekly care, and a pool that folds away entirely when the season ends.',
+      'Felizbay drop-stitch pools split the difference: rigid walls with a stable rim, built-in seats for getting in and out, small water volumes that stay fresh with minutes of weekly care, and a pool that folds away entirely when the season ends.',
     ],
     conditions: [
       'A level, step-free patch of patio or garden from about 1.8 × 1.8 m with a clear, non-slip access path',
@@ -511,9 +511,9 @@ export const POOL_IDEAS: PoolIdea[] = [
       },
     ],
     tableNote:
-      'Prioritize entry comfort: the 0.8 m rim of the SPA tubs gives a stable sitting edge, plus a clear path with no hoses to step over.',
+      'Prioritize entry comfort: the SPA tubs have built-in seats for getting in and out, plus a clear path with no hoses to step over.',
     safety: [
-      'Enter and exit slowly using the rim and seats; wet surfaces are slippery — keep a non-slip mat at the entry point.',
+      'Enter and exit slowly using the built-in seats, not the rim; wet surfaces are slippery — keep a non-slip mat at the entry point.',
       'Avoid long solo soaks, especially in heated water; follow heater temperature guidance and consult a doctor where relevant.',
       'Inflatable pools are not anti-drowning devices — visiting children need continuous, undistracted adult supervision.',
       'Cover, empty, or block the pool when it is not supervised.',
@@ -570,7 +570,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A round Felizbay soaking pool integrated into the private courtyard terrace of a boutique hotel suite.',
     intro: [
-      'A private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete into existing structures means structural work, months of disruption, and permits — Felizbay drop-stitch soaking pools deliver the same photogenic experience with a non-invasive install a small team completes in under an hour.',
+      'A private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete into existing structures means structural work, months of disruption, and permits — Felizbay drop-stitch soaking pools deliver the same photogenic experience with a non-invasive setup — a small team inflates the pool in minutes with the included pump, then fills it from the existing water supply.',
       'For properties, the line supports commercial projects: custom sizes and colorways, quiet filtration setups, and OEM/ODM production through our Qingdao manufacturing partner.',
     ],
     conditions: [

@@ -10,7 +10,7 @@ Water is a uniquely forgiving exercise medium: buoyancy unloads joints while res
 Three things matter for exercise and active play:
 
 - **Usable floor area.** Sloped, sagging ring-pool walls steal interior space and wobble underfoot. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) at its rated 4–5 PSI operating pressure holds straight 90-degree walls and a flat floor, so the footprint you measure is the floor you get.
-- **Stable reference points.** A firm rim lets you grip for balance work, supported leg lifts, and safe entry and exit.
+- **Stable reference points.** Straight vertical walls and a flat, even floor keep the water line and workout area predictable during movement.
 - **Real depth.** Waist-deep water (roughly 0.6–1.0 m) suits walking and most standing exercises; chest-deep (up to 1.2–1.5 m) adds buoyancy for jogging and suspended moves.
 
 ## 2. Sizing the Workout Zone

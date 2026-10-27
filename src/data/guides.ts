@@ -130,7 +130,7 @@ export const guides: GuideRecord[] = [
       'A plain-English explanation of drop stitch construction — how thousands of internal threads make an inflatable pool wall rigid enough to swim against.',
     tldr: 'Drop stitch fabric joins two outer PVC layers with thousands of internal threads. Inflated to 4–5 PSI, those threads lock the walls flat and rigid — closer to a hard-sided pool than a toy ring pool — yet the pool still deflates and folds for storage.',
     problem:
-      'Most people have only seen ring-style or soft-sided inflatable pools that sag, bulge, and collapse. That experience makes it hard to believe an inflatable pool can hold a firm, straight wall at 1.5 meters of water depth.',
+      'Most people have only seen ring-style or soft-sided inflatable pools that sag, bulge, and collapse. That experience makes it hard to believe an inflatable pool can hold a firm, straight wall 1.5 meters high.',
     solution:
       'Drop stitch construction limits how far the walls can expand: thousands of internal threads turn pressure into stiffness, so the fabric becomes a rigid panel instead of a balloon. Felizbay pools operate at 4–5 PSI with a pressure-relief valve that releases above 6 PSI, and every unit passes a 24–48 hour pressure-drop test before it ships.',
     audience: 'First-time buyers comparing pool types.',
@@ -305,7 +305,7 @@ export const guides: GuideRecord[] = [
     title: 'Are Inflatable Pools Suitable for Vacation Rentals?',
     description:
       'What rental hosts should check before adding a drop stitch pool or SPA tub — guests, regulations, insurance, maintenance, and safety.',
-    tldr: 'Yes, for many properties — with conditions. A drop stitch pool installs in under an hour and stores off-season, but as a host you must handle guest supervision rules, local pool regulations, insurance disclosure, and daily water care. A family pool used by unsupervised rental guests is a liability, not an amenity.',
+    tldr: 'Yes, for many properties — with conditions. A drop stitch pool inflates in minutes with the included pump and stores off-season, but as a host you must handle guest supervision rules, local pool regulations, insurance disclosure, and daily water care. A family pool used by unsupervised rental guests is a liability, not an amenity.',
     problem:
       'A pool boosts bookings, so hosts buy one, list it, and only then meet the hard questions: barrier rules for rental properties, insurance wording, water quality between turnovers, and what happens when guests ignore supervision rules.',
     solution:

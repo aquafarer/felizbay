@@ -3,7 +3,7 @@ title: 'Pools for Boutique Hotels & Luxury Estates: Non-Invasive Plunge Amenitie
 description: 'Structural assessment, quiet water care, guest safety, and B2B custom sourcing for suite-terrace and courtyard soaking pools.'
 ---
 
-In boutique hospitality, a private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete plunge pools into existing structures means structural work, months of disruption, and permitting — often on terraces that were never engineered to carry one. Drop-stitch soaking pools deliver the guest experience with a non-invasive install a small team completes in under an hour.
+In boutique hospitality, a private plunge on a suite terrace or in a villa courtyard is the amenity that sells the stay. Retrofitting concrete plunge pools into existing structures means structural work, months of disruption, and permitting — often on terraces that were never engineered to carry one. Drop-stitch soaking pools deliver the guest experience with a non-invasive setup — a small team inflates the pool in minutes with the included pump, then fills it from the existing water supply.
 
 ## 1. The Guest Experience, Without the Construction
 

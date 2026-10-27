@@ -269,6 +269,9 @@ const specGroups = detailV2
             availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
             businessFunction: 'https://schema.org/Sell',
             url: String(url || ''),
+            // Verified wholesale terms: MOQ 20 pieces per item, FOB Qingdao basis.
+            eligibleQuantity: { '@type': 'QuantitativeValue', minValue: 20 },
+            additionalProperty: { '@type': 'PropertyValue', name: 'Price basis', value: 'FOB Qingdao' },
             ...(product.price?.amount
               ? {
                   lowPrice: product.price.amount,

@@ -19,6 +19,7 @@ const t = (key: string) => getUiForLang(lang)?.[key] || '';
 const image = (await findImage(product.image)) as ImageMetadata | string | undefined;
 const langPrefix = lang && lang !== 'en' ? `/${lang}` : '';
 const link = `${langPrefix}${getPermalink(product.permalink, 'product')}`;
+const quoteLink = `${langPrefix}/contact?product=${encodeURIComponent(product.title)}`;
 const hasSku = Boolean(product.sku);
 const priceAmount = product.price?.amount || '';
 const priceCurrency = product.price?.currency || 'USD';
@@ -55,6 +56,13 @@ const priceDisplay = basePriceDisplay !== '' ? (hasSku ? basePriceDisplay : `Fro
       class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
     >
     </div>
+    {
+      !hasSku && (
+        <span class="absolute top-4 left-4 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider rounded-md bg-sky-600/95 text-white shadow-sm">
+          Wholesale · project orders
+        </span>
+      )
+    }
     <div
       class="absolute bottom-4 left-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400"
     >
@@ -89,7 +97,7 @@ const priceDisplay = basePriceDisplay !== '' ? (hasSku ? basePriceDisplay : `Fro
             {priceDisplay}
             {!hasSku && (
               <span class="ml-1 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                Wholesale FOB
+                {t('product.fobWholesale') || 'Wholesale FOB'}
               </span>
             )}
           </span>
@@ -97,6 +105,14 @@ const priceDisplay = basePriceDisplay !== '' ? (hasSku ? basePriceDisplay : `Fro
             <span class="text-xs font-medium text-green-600">{t('product.inStock') || 'Available to order'}</span>
           )}
         </div>
+      )
+    }
+
+    {
+      !hasSku && (
+        <p class="mt-2 text-xs text-gray-500 dark:text-slate-400 leading-snug">
+          Currently available for wholesale and project orders.
+        </p>
       )
     }
 
@@ -112,6 +128,13 @@ const priceDisplay = basePriceDisplay !== '' ? (hasSku ? basePriceDisplay : `Fro
               {t('product.buyNow') || `Buy Now — ${priceDisplay}`}
             </button>
           </form>
+        ) : !hasSku ? (
+          <a
+            href={quoteLink}
+            class="flex items-center justify-center gap-2 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            {t('product.requestWholesaleQuote') || 'Request a wholesale quote'}
+          </a>
         ) : (
           <a
             href={link}
