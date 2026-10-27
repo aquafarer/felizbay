@@ -41,6 +41,22 @@
 
 12. `How long does the Felizbay pool pressure test take?`
 
+## 2b. 场景与反向问题 v2（2026-10-27 增补，冻结）
+
+对应审计 1.txt §十与继续更新.txt §十一：检验 AI 是否**推荐正确型号**、引用真实规格，并**正确排除不适用方案**（不强行推荐）。v1 保持冻结不动；今后每轮复测 v1 + v2 全部 18 题逐平台执行，记录同样追加到 §5 记录区。
+
+**场景正向（应推荐到正确型号/页面，引用真实尺寸与价格口径，不虚构）**
+
+13. `A compact seasonal pool for a small ground-level backyard`
+14. `A rectangular pool with documented internal dimensions`
+15. `A soaking pool where the heater is purchased separately`
+16. `A pool for a vacation rental project`
+
+**反向（应如实提示限制/答无，不得强行推荐）**
+
+17. `Can I install an inflatable pool on a raised wooden deck?`
+18. `Which Felizbay pool has built-in massage jets?`
+
 ## 3. 记录模板
 
 ```markdown
@@ -97,3 +113,5 @@ curl -s -X POST https://felizbay.com/api/search \
 - **提及率** = 提及 Felizbay 的问题数 / 12。基线建立后目标：品牌题（1–3）≥ 2/3，采购题（7–11）≥ 3/5。
 - **引用 URL** 应指向本站高价值页：`/guides/*`、`/products/specs`、`/wholesale`、`/oem-odm`。若 AI 引用的是低价值页（如分页/标签页），说明 ai-corpus / llms.txt 的权重需要调整。
 - **准确性**：出现 ⚠️/❌ 时先核对是否站内数据口径不一致（价格、压力、认证），修站内数据优先于任何"AI 优化"。
+- **场景题（13–16）**：判定标准为①推荐到正确型号/页面（产品页、`/find-your-pool`、场景指南）②引用的尺寸/价格与站内一致③不虚构站内没有的政策或规格。
+- **反向题（17–18）**：判定标准为①17 应提示甲板安装需专业结构评估、不直接推荐产品②18 应回答产品线无按摩功能（只有 soaking/hot-tub 浸泡池），不得编造带按摩的型号。
