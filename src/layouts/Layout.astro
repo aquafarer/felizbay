@@ -26,6 +26,34 @@ import { defaultLang, setLang } from '~/i18n/config';
 import { getLangFromUrl, removeLang, localizeUseCasePath } from '~/i18n/utils';
 import { isRootOnlyRoute as isRootOnlyRouteFn } from '~/i18n/root-only';
 import facts from '~/config/facts.json';
+// Preload the Inter variable subsets so the webfont is ready before first paint.
+// Without preload, font-display: swap fires after FCP and forces a full-page
+// relayout (measured: 3 full Layouts, ~1.2s of mobile TBT on product pages).
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2';
+import interLatinExt from '@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2';
+import interCyrillic from '@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2';
+import interGreek from '@fontsource-variable/inter/files/inter-greek-wght-normal.woff2';
+const FONT_SUBSET_BY_LANG: Record<string, string> = {
+  cs: interLatinExt,
+  hr: interLatinExt,
+  hu: interLatinExt,
+  lt: interLatinExt,
+  lv: interLatinExt,
+  pl: interLatinExt,
+  ro: interLatinExt,
+  sk: interLatinExt,
+  sl: interLatinExt,
+  sq: interLatinExt,
+  tr: interLatinExt,
+  az: interLatinExt,
+  et: interLatinExt,
+  bg: interCyrillic,
+  kk: interCyrillic,
+  ru: interCyrillic,
+  sr: interCyrillic,
+  uk: interCyrillic,
+  el: interGreek,
+};
 // P1-D：只为完整本地化并毕业的语言背书（cs 2026-09-27、sv/da/el/no/ru 2026-09-28、nl/fi/pl/ar/pt 2026-09-28、ja 2026-09-29 毕业，清单见 TECH.md §16.4），其余语言整体 noindex（见 seo-suppress.json）
 const FULLY_LOCALIZED = [
   'en',
@@ -70,6 +98,11 @@ const language = currentLang;
 setLang(currentLang);
 const RTL_LANGS = new Set(['ar', 'he', 'fa']);
 const textDirection = RTL_LANGS.has(language) ? 'rtl' : defaultTextDir || 'ltr';
+const fontPreloads: string[] = [interLatin];
+const langSubset = FONT_SUBSET_BY_LANG[language];
+if (langSubset && langSubset !== interLatin && !fontPreloads.includes(langSubset)) {
+  fontPreloads.push(langSubset);
+}
 
 // Root-only routes have no localized versions. Emitting per-locale
 // `<link rel="alternate" hreflang>` for them would produce dead URLs.
@@ -86,6 +119,7 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
     <Metadata {...metadata} seoSettings={seo} />
     <Analytics id={seo.googleAnalyticsId} />
     <CloudflareAnalytics />
+    {fontPreloads.map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://assets.felizbay.com" crossorigin />
