@@ -43,6 +43,22 @@
 
 遗留可选项：TBT ~1s（首页 780ms / 产品页 ~1s），来源为前端 JS 执行，属后续独立优化项。
 
+### 1.4 TBT/LCP 整改（2026-10-28 完成，commit `756c26b`）
+
+上表遗留项经 Chrome trace 取证后修正归因并修复：
+
+- **产品页 TBT 2310ms（本地 Lighthouse 移动端复测）**：非 JS 执行（Script Evaluation 仅 230ms），真凶为 `Inter Variable` 字体 `font-display: swap` 在 FCP 后触发 3 次全页 Layout（180/640/405ms）。修复：`Layout.astro` 预加载 woff2 子集（latin 恒定 + 按语言 latin-ext/cyrillic/greek），字体先于首绘就位。
+- **首页 LCP 7.6s**：hero 首图 441KB JPG（pool-ideas 11 张共 3.1MB 未压缩）。修复：转 WebP 1280px q75（3.1MB → 1.4MB，首图 441KB → 201KB）。
+
+| 指标（Lighthouse 移动端，本地） | 整改前            | 整改后                       |
+| ------------------------------- | ----------------- | ---------------------------- |
+| 首页 perf / LCP / TBT           | 54 / 7.6s / 900ms | 76–91 / 1.1–2.2s / 260–930ms |
+| 产品页 perf / TBT               | 69 / 2310ms       | 74–75 / 510–840ms            |
+
+线上实测（2026-10-28）：首页 perf 81（TBT 600ms / LCP 2.5s / CLS 0）；产品页 perf 67（TBT 970ms / LCP 3.5s / CLS 0）。线上与本地差距主要来自 `/images/*` → `assets.felizbay.com` 的 301（Cloudflare 面板 Redirect Rule，仓库外配置，LCP 图多 1 个 RTT）及真实网络延迟；CWV 以 Search Console 真实用户数据为准。
+
+View Transitions 保留：对照实验显示禁用 ClientRouter 仅省 ~110ms TBT，不值得牺牲 UX。剩余首页 TBT 为 hero 图解码 + 初始 Layout 的固有成本。
+
 ## 2. Contact 表单询盘测试结果（2026-10-21）
 
 对 `https://felizbay.com/api/contact`（contact-worker）执行分层线上测试：
