@@ -11,6 +11,7 @@ export const ROOT_ONLY_ROUTES = [
   '/products/compare',
   '/request-quotation',
   '/ai-answer-center',
+  '/returns-and-warranty',
 ];
 
 export function isRootOnlyRoute(pathWithoutLang: string): boolean {
