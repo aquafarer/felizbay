@@ -9,6 +9,7 @@ import CustomStyles from '~/components/CustomStyles.astro';
 import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import Analytics from '~/components/common/Analytics.astro';
+import CloudflareAnalytics from '~/components/common/CloudflareAnalytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 import AIChat from '~/components/widgets/AIChat.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
@@ -84,6 +85,7 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
     <ApplyColorMode />
     <Metadata {...metadata} seoSettings={seo} />
     <Analytics id={seo.googleAnalyticsId} />
+    <CloudflareAnalytics />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://assets.felizbay.com" crossorigin />

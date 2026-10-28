@@ -47,6 +47,8 @@ jobs:
         env:
           # Public site key (safe to embed) — rendered into contact form & login.
           PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
+          # Cloudflare Web Analytics beacon token (safe to embed, no cookies).
+          PUBLIC_CF_ANALYTICS_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN }}
 
       - name: Upload assets to R2
         if: steps.guard.outputs.enabled == 'true'

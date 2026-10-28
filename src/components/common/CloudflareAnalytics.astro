@@ -1,0 +1,20 @@
+---
+// Cloudflare Web Analytics beacon — renders only when PUBLIC_CF_ANALYTICS_TOKEN is set.
+// The token is injected at build time by CI from the GitHub secret CF_ANALYTICS_TOKEN
+// (same pattern as PUBLIC_TURNSTILE_SITE_KEY). No cookies, no consent banner needed.
+const token = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN as string | undefined) || '';
+---
+
+{
+  token && (
+    <>
+      <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={`{"token": "${token}"}`}
+      />
+    </>
+  )
+}
