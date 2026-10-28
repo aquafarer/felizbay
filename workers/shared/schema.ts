@@ -110,8 +110,10 @@ export const inquiry = sqliteTable('inquiry', {
   country: text('country').notNull().default(''),
   email: text('email').notNull(),
   whatsapp: text('whatsapp').notNull().default(''),
-  businessType: text('business_type').notNull().default('other'), // InquiryBusinessType
-  quantity: text('quantity').notNull().default('unsure'), // InquiryQuantity
+  businessType: text('business_type').notNull().default('other'), // inquiry type: retail/wholesale/oem/support/other
+  quantity: text('quantity').notNull().default('unsure'), // order volume select value
+  productInterest: text('product_interest').notNull().default(''),
+  customization: text('customization').notNull().default(''),
   requirements: text('requirements').notNull().default(''),
   subject: text('subject').notNull().default(''),
   message: text('message').notNull().default(''),

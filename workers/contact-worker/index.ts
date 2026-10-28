@@ -159,9 +159,40 @@ function sanitize(value: unknown, maxLen = 2000): string {
   return result.trim().slice(0, maxLen);
 }
 
+// Inquiry routing (⑤): retail / wholesale / OEM / after-sales support. The
+// select's value is whitelisted; anything else (legacy senders, empty) degrades
+// to 'other' so the D1 column never carries free-form junk.
+const INQUIRY_TYPES = ['retail', 'wholesale', 'oem', 'support'] as const;
+type InquiryType = (typeof INQUIRY_TYPES)[number] | 'other';
+
+function normalizeInquiryType(value: string): InquiryType {
+  return (INQUIRY_TYPES as readonly string[]).includes(value) ? (value as InquiryType) : 'other';
+}
+
+const EMAIL_TYPE_TAG: Record<InquiryType, string> = {
+  retail: 'RETAIL',
+  wholesale: 'WHOLESALE',
+  oem: 'OEM',
+  support: 'SUPPORT',
+  other: 'CONTACT',
+};
+
 interface ParsedSubmission {
   fields: Record<
-    'firstName' | 'lastName' | 'companyName' | 'address' | 'zip' | 'country' | 'email' | 'tel' | 'subject' | 'message',
+    | 'firstName'
+    | 'lastName'
+    | 'companyName'
+    | 'address'
+    | 'zip'
+    | 'country'
+    | 'email'
+    | 'tel'
+    | 'inquiryType'
+    | 'orderVolume'
+    | 'productInterest'
+    | 'customization'
+    | 'subject'
+    | 'message',
     string
   >;
   locale: string;
@@ -206,6 +237,10 @@ async function parseSubmission(request: Request): Promise<ParsedSubmission | nul
       country: s(raw.country, 100),
       email: s(raw.email, 200),
       tel: s(raw.tel, 60),
+      inquiryType: s(raw.inquiryType, 40),
+      orderVolume: s(raw.orderVolume, 40),
+      productInterest: s(raw.productInterest, 100),
+      customization: s(raw.customization, 100),
       subject: s(raw.subject, 200),
       message: s(raw.message, 4000),
     },
@@ -313,6 +348,7 @@ export default {
 
     const receivedAt = new Date();
     const id = crypto.randomUUID();
+    const inquiryType = normalizeInquiryType(fields.inquiryType);
 
     // Persist to D1 — the single source of truth for the admin Submissions page.
     try {
@@ -323,8 +359,10 @@ export default {
         country: fields.country,
         email: fields.email.toLowerCase(),
         whatsapp: fields.tel,
-        businessType: 'other',
-        quantity: 'unsure',
+        businessType: inquiryType,
+        quantity: fields.orderVolume || 'unsure',
+        productInterest: fields.productInterest,
+        customization: fields.customization,
         requirements: fields.message,
         subject: fields.subject,
         message: fields.message,
@@ -348,7 +386,7 @@ export default {
       const from = `${fromName} <${env.CONTACT_FROM_EMAIL}>`;
       const replyTo = `${fields.firstName} ${fields.lastName} <${fields.email}>`;
 
-      const subject = `[Contact] ${fields.subject || '(no subject)'} — ${fields.firstName} ${fields.lastName}`;
+      const subject = `[Contact·${EMAIL_TYPE_TAG[inquiryType]}] ${fields.subject || '(no subject)'} — ${fields.firstName} ${fields.lastName}`;
       const attachmentLine = logoKey ? `<p><strong>Attachment:</strong> stored (open in admin Submissions)</p>` : '';
       const html = `<div style="font-family:sans-serif;max-width:640px;margin:0 auto">
         <h2>New contact form submission</h2>

@@ -9,9 +9,9 @@ contact_form:
   submit_button: שלח פניה ← קבל הצעת מחיר
   success_message: תוֹדָה! ההודעה שלך נחתה בתיבת הדואר הנכנס שלנו. אנו נשיב תוך יום עסקים אחד.
   error_message: משהו השתבש בשליחת ההודעה שלך. אנא נסה שוב או שלח לנו דוא"ל ישירות.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'אנטי ספאם: אנא פתור את הדברים הבאים'
+    label: "אנטי ספאם: אנא פתור את הדברים הבאים"
   fields:
     - name: firstName
       label: שֵׁם פְּרַטִי
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: שֵׁם מִשׁפָּחָה
       row: 1
+    - name: inquiryType
+      label: סוג הפנייה
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: במה נוגעת הפנייה שלך?
+        - value: retail
+          label: הזמנה מקוונת של בריכה אחת (קמעונאות)
+        - value: wholesale
+          label: הזמנה סיטונאית / בכמות גדולה (B2B)
+        - value: oem
+          label: התאמה אישית OEM/ODM
+        - value: support
+          label: תמיכה לאחר מכירה ואחריות
     - name: companyName
       label: שם החברה
-      row: 2
+      row: 3
     - name: address
       label: כְּתוֹבֶת
-      row: 3
+      row: 4
     - name: zip
       label: מיקוד / מיקוד
-      row: 4
+      row: 5
     - name: country
       label: מְדִינָה
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: אֶלֶקטרוֹנִי
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: טל
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: נפח הזמנות משוער
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: בחר את הנפח המשוער שלך...
+        - value: 1-unit
+          label: יחידה אחת — בריכה אחת (הזמנה קמעונאית מקוונת)
         - value: sample
           label: דוגמאות / אבות טיפוס בלבד
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ יחידות (תמחור נפח)
     - name: customization
       label: דרושה התאמה אישית?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: בחר סוג התאמה אישית...
         - value: none
           label: מוצר סטנדרטי (ללא התאמה אישית)
@@ -74,29 +91,31 @@ contact_form:
           label: לא בטוח - צריך התייעצות
     - name: productInterest
       label: מאגר עניין
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: בחר סוג בריכה...
         - value: all
           label: כל הבריכות / קטלוג מלא
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: ג'קוזי נייד — עגול
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: ג'קוזי / Swim Spa — מרובע
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: נוֹשֵׂא
-      row: 9
+      row: 10
     - name: message
       label: הוֹדָעָה
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: צור קשר עם Felizbay
   address: felizbay.com
   zoom: 15
-

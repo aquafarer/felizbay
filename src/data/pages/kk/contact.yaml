@@ -9,9 +9,9 @@ contact_form:
   submit_button: Сұрау жіберу → Баға алу
   success_message: Рахмет! Сіздің хабарламаңыз біздің кіріс жәшігімізге түсті. Біз бір жұмыс күні ішінде жауап береміз.
   error_message: Хабарыңызды жіберу кезінде бірдеңе дұрыс болмады. Қайталап көріңіз немесе бізге тікелей электрондық хат жіберіңіз.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Спамға қарсы: мынаны шешіңіз'
+    label: "Спамға қарсы: мынаны шешіңіз"
   fields:
     - name: firstName
       label: Аты
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Фамилия
       row: 1
+    - name: inquiryType
+      label: Сұрау түрі
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Сұрауыңыз неде?
+        - value: retail
+          label: Бір бассейнге онлайн тапсырыс (бөлшек сауда)
+        - value: wholesale
+          label: Көтерме / жаппай тапсырыс (B2B)
+        - value: oem
+          label: OEM/ODM бейімдеу
+        - value: support
+          label: Сатылымнан кейінгі қолдау және кепілдік
     - name: companyName
       label: Компания атауы
-      row: 2
+      row: 3
     - name: address
       label: Мекенжай
-      row: 3
+      row: 4
     - name: zip
       label: Пошталық индекс
-      row: 4
+      row: 5
     - name: country
       label: Ел
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: Электрондық пошта
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: ТЕЛ
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Болжалды тапсырыс көлемі
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Болжалды көлемді таңдаңыз...
+        - value: 1-unit
+          label: 1 дана — бір бассейн (онлайн бөлшек тапсырыс)
         - value: sample
           label: Үлгілер/тек прототиптер
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ бірлік (көлемдік баға)
     - name: customization
       label: Теңшеу қажет пе?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Теңшеу түрін таңдаңыз...
         - value: none
           label: Стандартты өнім (теңшеу жоқ)
@@ -74,29 +91,31 @@ contact_form:
           label: Сенімсіз - кеңес қажет
     - name: productInterest
       label: Қызығушылықтар пулы
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Бассейн түрін таңдаңыз...
         - value: all
           label: Барлық бассейндер / Толық каталог
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Жылжымалы джакузи — Дөңгелек
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Джакузі / Swim Spa — Төртбұрышты
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Тақырып
-      row: 9
+      row: 10
     - name: message
       label: Хабарлама
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Felizbayға хабарласыңыз
   address: felizbay.com
   zoom: 15
-

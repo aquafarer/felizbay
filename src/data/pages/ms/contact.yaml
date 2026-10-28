@@ -9,9 +9,9 @@ contact_form:
   submit_button: Hantar Pertanyaan → Dapatkan Sebut Harga
   success_message: Terima kasih! Mesej anda telah sampai di peti masuk kami. Kami akan membalas dalam masa satu hari bekerja.
   error_message: Kesilapan telah berlaku semasa menghantar mesej anda. Sila cuba lagi atau e-mel terus kepada kami.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: sila selesaikan perkara berikut'
+    label: "Anti-spam: sila selesaikan perkara berikut"
   fields:
     - name: firstName
       label: Nama Pertama
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Nama Akhir
       row: 1
+    - name: inquiryType
+      label: Jenis Pertanyaan
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Apakah pertanyaan anda berkaitan?
+        - value: retail
+          label: Pesanan dalam talian satu kolam (ritail)
+        - value: wholesale
+          label: Pesanan borong / pukal (B2B)
+        - value: oem
+          label: Penyesuaian OEM/ODM
+        - value: support
+          label: Sokongan selepas jualan dan waranti
     - name: companyName
       label: Nama Syarikat
-      row: 2
+      row: 3
     - name: address
       label: Alamat
-      row: 3
+      row: 4
     - name: zip
       label: Poskod / Poskod
-      row: 4
+      row: 5
     - name: country
       label: Negara
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: e-mel
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Anggaran Jumlah Pesanan
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pilih anggaran volum anda...
+        - value: 1-unit
+          label: 1 unit — satu kolam (pesanan ritail dalam talian)
         - value: sample
           label: Sampel / Prototaip sahaja
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ unit (Harga volum)
     - name: customization
       label: Penyesuaian Diperlukan?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pilih jenis penyesuaian...
         - value: none
           label: Produk standard (tiada penyesuaian)
@@ -74,29 +91,31 @@ contact_form:
           label: Tidak pasti - memerlukan perundingan
     - name: productInterest
       label: Kumpulan Kepentingan
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pilih jenis kolam...
         - value: all
           label: Semua kolam / Katalog penuh
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Kolam air panas mudah alih — Bulat
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Kolam air panas / Swim Spa — Segi empat
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Subjek
-      row: 9
+      row: 10
     - name: message
       label: Mesej
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Hubungi Felizbay
   address: felizbay.com
   zoom: 15
-

@@ -9,9 +9,9 @@ contact_form:
   submit_button: Wyślij zapytanie → Uzyskaj wycenę
   success_message: Dzięki! Twoja wiadomość wylądowała w naszej skrzynce odbiorczej. Odpowiemy w ciągu jednego dnia roboczego.
   error_message: Coś poszło nie tak podczas wysyłania Twojej wiadomości. Spróbuj ponownie lub napisz do nas bezpośrednio.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Ochrona przed spamem: proszę rozwiązać następujące problemy'
+    label: "Ochrona przed spamem: proszę rozwiązać następujące problemy"
   fields:
     - name: firstName
       label: Imię
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Nazwisko
       row: 1
+    - name: inquiryType
+      label: Typ zapytania
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Czego dotyczy Twoje zapytanie?
+        - value: retail
+          label: Zamówienie online jednego basenu (detal)
+        - value: wholesale
+          label: Zamówienie hurtowe / w dużych ilościach (B2B)
+        - value: oem
+          label: Dostosowanie OEM/ODM
+        - value: support
+          label: Obsługa posprzedażowa i gwarancja
     - name: companyName
       label: Nazwa firmy
-      row: 2
+      row: 3
     - name: address
       label: Adres
-      row: 3
+      row: 4
     - name: zip
       label: Kod pocztowy
-      row: 4
+      row: 5
     - name: country
       label: Kraj
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Szacowana wielkość zamówienia
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Wybierz szacunkową objętość...
+        - value: 1-unit
+          label: 1 szt. — jeden basen (zamówienie detaliczne online)
         - value: sample
           label: Tylko próbki/prototypy
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Ponad 500 jednostek (ceny zbiorcze)
     - name: customization
       label: Potrzebne dostosowanie?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Wybierz typ dostosowania...
         - value: none
           label: Produkt standardowy (bez personalizacji)
@@ -74,29 +91,31 @@ contact_form:
           label: Nie jestem pewien – potrzebna konsultacja
     - name: productInterest
       label: Pula zainteresowań
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Wybierz typ basenu...
         - value: all
           label: Wszystkie baseny / Pełny katalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Przenośne jacuzzi — Okrągłe
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Jacuzzi / Swim Spa — Kwadratowe
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Temat
-      row: 9
+      row: 10
     - name: message
       label: Wiadomość
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Skontaktuj się z Felizbayem
   address: felizbay.com
   zoom: 15
-

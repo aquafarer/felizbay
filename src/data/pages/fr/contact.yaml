@@ -9,9 +9,9 @@ contact_form:
   submit_button: Envoyer une demande → Obtenir un devis
   success_message: Merci! Votre message a atterri dans notre boîte de réception. Nous vous répondrons dans un délai d'un jour ouvrable.
   error_message: Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer ou envoyez-nous un e-mail directement.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam : veuillez résoudre les problèmes suivants'
+    label: "Anti-spam : veuillez résoudre les problèmes suivants"
   fields:
     - name: firstName
       label: Prénom
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Nom de famille
       row: 1
+    - name: inquiryType
+      label: Type de demande
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Quel est l'objet de votre demande ?
+        - value: retail
+          label: Commande en ligne d'une piscine unique (détail)
+        - value: wholesale
+          label: Commande de gros / en vrac (B2B)
+        - value: oem
+          label: Personnalisation OEM/ODM
+        - value: support
+          label: Service après-vente et garantie
     - name: companyName
       label: Nom de l'entreprise
-      row: 2
+      row: 3
     - name: address
       label: Adresse
-      row: 3
+      row: 4
     - name: zip
       label: Zip / code postal
-      row: 4
+      row: 5
     - name: country
       label: Pays
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TÉL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Volume de commande estimé
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Sélectionnez votre volume estimé...
+        - value: 1-unit
+          label: 1 unité — une seule piscine (commande en ligne au détail)
         - value: sample
           label: Échantillons / Prototypes uniquement
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Plus de 500 unités (tarification au volume)
     - name: customization
       label: Personnalisation nécessaire ?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Sélectionnez le type de personnalisation...
         - value: none
           label: Produit standard (pas de personnalisation)
@@ -74,29 +91,31 @@ contact_form:
           label: Je ne suis pas sûr – besoin de consultation
     - name: productInterest
       label: Bassin d’intérêt
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Sélectionnez le type de piscine...
         - value: all
           label: Toutes les piscines / Catalogue complet
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Spa portable — Rond
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Spa / Swim Spa — Carré
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Sujet
-      row: 9
+      row: 10
     - name: message
       label: Message
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Contacter Felizbay
   address: felizbay.com
   zoom: 15
-

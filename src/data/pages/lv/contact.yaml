@@ -9,9 +9,9 @@ contact_form:
   submit_button: Sūtīt pieprasījumu → Saņemt piedāvājumu
   success_message: Paldies! Jūsu ziņojums ir nonācis mūsu iesūtnē. Mēs atbildēsim vienas darba dienas laikā.
   error_message: Nosūtot ziņojumu, radās kļūda. Lūdzu, mēģiniet vēlreiz vai rakstiet mums tieši.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: lūdzu, atrisiniet tālāk norādīto'
+    label: "Anti-spam: lūdzu, atrisiniet tālāk norādīto"
   fields:
     - name: firstName
       label: Vārds
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Uzvārds
       row: 1
+    - name: inquiryType
+      label: Pieprasījuma veids
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Par ko ir jūsu pieprasījums?
+        - value: retail
+          label: Viena baseina pasūtījums tiešsaistē (mazumtirdzniecība)
+        - value: wholesale
+          label: Vairumtirdzniecības / lielapjoma pasūtījums (B2B)
+        - value: oem
+          label: OEM/ODM pielāgošana
+        - value: support
+          label: Atbalsts pēc pārdošanas un garantija
     - name: companyName
       label: Uzņēmuma nosaukums
-      row: 2
+      row: 3
     - name: address
       label: Adrese
-      row: 3
+      row: 4
     - name: zip
       label: Pasta indekss
-      row: 4
+      row: 5
     - name: country
       label: Valsts
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-pasts
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Paredzamais pasūtījumu apjoms
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Atlasiet aptuveno apjomu...
+        - value: 1-unit
+          label: 1 gab. — viens baseins (tiešsaistes mazumtirdzniecības pasūtījums)
         - value: sample
           label: Tikai paraugi/prototipi
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Vairāk nekā 500 vienību (apjoma cena)
     - name: customization
       label: Nepieciešama pielāgošana?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Izvēlieties pielāgošanas veidu...
         - value: none
           label: Standarta produkts (bez pielāgošanas)
@@ -74,29 +91,31 @@ contact_form:
           label: Neesat pārliecināts - nepieciešama konsultācija
     - name: productInterest
       label: Interešu fonds
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Izvēlieties baseina veidu...
         - value: all
           label: Visi baseini / Pilns katalogs
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Pārvietojams hidromasāžas baseins — Apaļš
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Hidromasāžas vanna / Swim Spa — Kvadrātveida
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Priekšmets
-      row: 9
+      row: 10
     - name: message
       label: Ziņojums
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Sazinieties ar Felizbaju
   address: felizbay.com
   zoom: 15
-

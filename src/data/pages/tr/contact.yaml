@@ -9,9 +9,9 @@ contact_form:
   submit_button: Talep Gönder → Teklif Al
   success_message: Teşekkürler! Mesajınız gelen kutumuza ulaştı. Bir iş günü içinde cevap vereceğiz.
   error_message: Mesajınızı gönderirken bir şeyler ters gitti. Lütfen tekrar deneyin veya doğrudan bize e-posta gönderin.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Spam önleme: lütfen aşağıdakileri çözün'
+    label: "Spam önleme: lütfen aşağıdakileri çözün"
   fields:
     - name: firstName
       label: İlk adı
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Soy isim
       row: 1
+    - name: inquiryType
+      label: Talep Türü
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Talebiniz ne hakkında?
+        - value: retail
+          label: Tek havuz online siparişi (perakende)
+        - value: wholesale
+          label: Toptan / toplu sipariş (B2B)
+        - value: oem
+          label: OEM/ODM özelleştirmesi
+        - value: support
+          label: Satış sonrası destek ve garanti
     - name: companyName
       label: Firma Adı
-      row: 2
+      row: 3
     - name: address
       label: Adres
-      row: 3
+      row: 4
     - name: zip
       label: Posta Kodu / Posta Kodu
-      row: 4
+      row: 5
     - name: country
       label: Ülke
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-posta
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Tahmini Sipariş Hacmi
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Tahmini hacminizi seçin...
+        - value: 1-unit
+          label: 1 adet — tek havuz (online perakende siparişi)
         - value: sample
           label: Yalnızca numuneler / Prototipler
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ birim (Toplu fiyatlandırma)
     - name: customization
       label: Özelleştirme Gerekli mi?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Özelleştirme türünü seçin...
         - value: none
           label: Standart ürün (özelleştirme yok)
@@ -74,29 +91,31 @@ contact_form:
           label: Emin değilim — danışmaya ihtiyacım var
     - name: productInterest
       label: İlgi Havuzu
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Havuz tipini seçin...
         - value: all
           label: Tüm havuzlar / Tam katalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Taşınabilir jakuzi — Yuvarlak
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Jakuzi / Swim Spa — Kare
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Ders
-      row: 9
+      row: 10
     - name: message
       label: Mesaj
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Felizbay ile iletişime geçin
   address: felizbay.com
   zoom: 15
-

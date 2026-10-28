@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Last Name
       row: 1
+    - name: inquiryType
+      label: Inquiry Type
+      row: 2
+      type: select
+      options:
+        - value: ''
+          label: What is your inquiry about?
+        - value: retail
+          label: Single-pool online order (retail)
+        - value: wholesale
+          label: Wholesale / bulk order (B2B)
+        - value: oem
+          label: OEM / ODM customization
+        - value: support
+          label: After-sales support & warranty
     - name: companyName
       label: Company Name
-      row: 2
+      row: 3
     - name: address
       label: Address
-      row: 3
+      row: 4
     - name: zip
       label: Zip / Postal Code
-      row: 4
+      row: 5
     - name: country
       label: Country
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Estimated Order Volume
-      row: 6
+      row: 7
       type: select
       options:
         - value: ''
           label: Select your estimated volume...
+        - value: 1-unit
+          label: 1 unit — single pool (online retail order)
         - value: sample
           label: Samples / Prototypes only
         - value: '5-10'
@@ -59,7 +76,7 @@ contact_form:
           label: 500+ units (Volume pricing)
     - name: customization
       label: Customization Needed?
-      row: 7
+      row: 8
       type: select
       options:
         - value: ''
@@ -74,29 +91,31 @@ contact_form:
           label: Not sure — need consultation
     - name: productInterest
       label: Pool of Interest
-      row: 8
+      row: 9
       type: select
       options:
         - value: ''
           label: Select pool type...
         - value: all
           label: All pools / Full catalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Portable Hot Tub — Round
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool (wholesale)
+        - value: hot-tub-square-rect
+          label: Hot Tub / Swim Spa — Square (wholesale)
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Subject
-      row: 9
+      row: 10
     - name: message
       label: Message
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:

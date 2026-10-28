@@ -9,9 +9,9 @@ contact_form:
   submit_button: Siųsti užklausą → Gaukite pasiūlymą
   success_message: Ačiū! Jūsų žinutė pateko į mūsų pašto dėžutę. Atsakysime per vieną darbo dieną.
   error_message: Siunčiant pranešimą įvyko klaida. Bandykite dar kartą arba parašykite mums tiesiogiai el. paštu.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: išspręskite šiuos klausimus'
+    label: "Anti-spam: išspręskite šiuos klausimus"
   fields:
     - name: firstName
       label: Vardas
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Pavardė
       row: 1
+    - name: inquiryType
+      label: Užklausos tipas
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Apie ką jūsų užklausa?
+        - value: retail
+          label: Vieno baseino užsakymas internetu (mažmeninė prekyba)
+        - value: wholesale
+          label: Didmeninis / didelis užsakymas (B2B)
+        - value: oem
+          label: OEM/ODM pritaikymas
+        - value: support
+          label: Pagalba po pardavimo ir garantija
     - name: companyName
       label: Įmonės pavadinimas
-      row: 2
+      row: 3
     - name: address
       label: Adresas
-      row: 3
+      row: 4
     - name: zip
       label: Pašto kodas
-      row: 4
+      row: 5
     - name: country
       label: Šalis
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: paštas
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Numatomas užsakymų kiekis
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pasirinkite numatomą garsumą...
+        - value: 1-unit
+          label: 1 vnt. — vienas baseinas (internetinis mažmeninis užsakymas)
         - value: sample
           label: Tik pavyzdžiai / prototipai
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Daugiau nei 500 vienetų (tūrinė kainodara)
     - name: customization
       label: Reikia pritaikymo?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pasirinkite tinkinimo tipą...
         - value: none
           label: Standartinis produktas (be pritaikymo)
@@ -74,29 +91,31 @@ contact_form:
           label: Nežinau - reikia konsultacijos
     - name: productInterest
       label: Interesų baseinas
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pasirinkite baseino tipą...
         - value: all
           label: Visi baseinai / Visas katalogas
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Kilnojamas hidromasažinis baseinas — Apvalus
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Hidromasažinė vonia / Swim Spa — Kvadratinis
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Tema
-      row: 9
+      row: 10
     - name: message
       label: Pranešimas
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Susisiekite su Felizbay
   address: felizbay.com
   zoom: 15
-

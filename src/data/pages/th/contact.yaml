@@ -9,9 +9,9 @@ contact_form:
   submit_button: ส่งคำถาม → รับใบเสนอราคา
   success_message: ขอบคุณ! ข้อความของคุณเข้าสู่กล่องจดหมายของเราแล้ว เราจะตอบกลับภายในหนึ่งวันทำการ
   error_message: เกิดข้อผิดพลาดในการส่งข้อความของคุณ โปรดลองอีกครั้งหรือส่งอีเมลถึงเราโดยตรง
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'ป้องกันสแปม: โปรดแก้ไขปัญหาต่อไปนี้'
+    label: "ป้องกันสแปม: โปรดแก้ไขปัญหาต่อไปนี้"
   fields:
     - name: firstName
       label: ชื่อ
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: นามสกุล
       row: 1
+    - name: inquiryType
+      label: ประเภทการสอบถาม
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: การสอบถามของคุณเกี่ยวกับอะไร?
+        - value: retail
+          label: สั่งซื้อออนไลน์สระน้ำเดี่ยว (ขายปลีก)
+        - value: wholesale
+          label: สั่งซื้อขายส่ง / จำนวนมาก (B2B)
+        - value: oem
+          label: การปรับแต่ง OEM/ODM
+        - value: support
+          label: การสนับสนุนหลังการขายและการรับประกัน
     - name: companyName
       label: ชื่อบริษัท
-      row: 2
+      row: 3
     - name: address
       label: ที่อยู่
-      row: 3
+      row: 4
     - name: zip
       label: รหัสไปรษณีย์
-      row: 4
+      row: 5
     - name: country
       label: ประเทศ
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: อีเมล
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: โทร
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: ปริมาณการสั่งซื้อโดยประมาณ
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: เลือกปริมาณโดยประมาณของคุณ...
+        - value: 1-unit
+          label: 1 ชิ้น — สระน้ำเดี่ยว (คำสั่งซื้อปลีกออนไลน์)
         - value: sample
           label: ตัวอย่าง/ต้นแบบเท่านั้น
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ หน่วย (ราคาตามปริมาณ)
     - name: customization
       label: จำเป็นต้องปรับแต่งไหม?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: เลือกประเภทการปรับแต่ง...
         - value: none
           label: สินค้ามาตรฐาน (ไม่มีการปรับแต่ง)
@@ -74,29 +91,31 @@ contact_form:
           label: ไม่แน่ใจ — ต้องการคำปรึกษา
     - name: productInterest
       label: แหล่งรวมความสนใจ
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: เลือกประเภทสระน้ำ...
         - value: all
           label: พูลทั้งหมด / แค็ตตาล็อกฉบับเต็ม
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: อ่างน้ำอุ่นพกพา — ทรงกลม
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: อ่างน้ำอุ่น / Swim Spa — ทรงสี่เหลี่ยม
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: เรื่อง
-      row: 9
+      row: 10
     - name: message
       label: ข้อความ
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: ติดต่อFelizbay
   address: felizbay.com
   zoom: 15
-

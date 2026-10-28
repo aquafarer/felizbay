@@ -165,7 +165,10 @@ const rows = Object.keys(grouped)
               );
             }
             return (
-              <div class={`grid grid-cols-1 sm:grid-cols-${row.length} gap-4`}>
+              <div
+                class={`grid grid-cols-1 sm:grid-cols-${row.length} gap-4`}
+                data-fields={row.map((f) => f.name).join(' ')}
+              >
                 {row.map((f) => {
                   if (f.withCountryCode) {
                     return (
@@ -317,6 +320,32 @@ const rows = Object.keys(grouped)
         if (subjectEl instanceof HTMLInputElement && !subjectEl.value) {
           subjectEl.value = pfSize ? pfProduct + ' — model ' + pfSize : pfProduct;
         }
+        // Quote links (?product=…) only come from wholesale-only cards (retail
+        // uses the Buy Now checkout), so they pre-route the inquiry type.
+        const typeEl = formEl.querySelector('select[name="inquiryType"]');
+        if (typeEl instanceof HTMLSelectElement && !typeEl.value) {
+          typeEl.value = 'wholesale';
+          applyInquiryTypeVisibility(formEl);
+        }
+      });
+    }
+
+    // Inquiry-type routing (⑤): the B2B volume/customization selects are only
+    // relevant for wholesale / OEM inquiries — retail and support submitters
+    // don't see them, and stale selections are cleared before submit.
+    function applyInquiryTypeVisibility(formEl) {
+      const typeEl = formEl.querySelector('select[name="inquiryType"]');
+      if (!(typeEl instanceof HTMLSelectElement)) return;
+      const showB2B = typeEl.value === '' || typeEl.value === 'wholesale' || typeEl.value === 'oem';
+      formEl.querySelectorAll('[data-fields]').forEach((rowEl) => {
+        const names = (rowEl.getAttribute('data-fields') || '').split(/\s+/);
+        if (!names.includes('orderVolume') && !names.includes('customization')) return;
+        rowEl.classList.toggle('hidden', !showB2B);
+        if (!showB2B) {
+          rowEl.querySelectorAll('select').forEach((sel) => {
+            if (sel instanceof HTMLSelectElement) sel.value = '';
+          });
+        }
       });
     }
 
@@ -327,6 +356,11 @@ const rows = Object.keys(grouped)
       const errorMsg = formEl.dataset.errorMessage || 'Something went wrong.';
       const consentEl = formEl.querySelector('[data-consent]');
       const consentErrorEl = formEl.querySelector('[data-consent-error]');
+      const typeSelectEl = formEl.querySelector('select[name="inquiryType"]');
+      if (typeSelectEl instanceof HTMLSelectElement) {
+        typeSelectEl.addEventListener('change', () => applyInquiryTypeVisibility(formEl));
+        applyInquiryTypeVisibility(formEl);
+      }
 
       formEl.addEventListener('submit', async (e) => {
         e.preventDefault();

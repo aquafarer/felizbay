@@ -9,9 +9,9 @@ contact_form:
   submit_button: Anfrage senden → Angebot einholen
   success_message: Danke! Ihre Nachricht ist in unserem Posteingang gelandet. Wir werden innerhalb eines Werktages antworten.
   error_message: Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder senden Sie uns direkt eine E-Mail.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-Spam: Bitte lösen Sie Folgendes'
+    label: "Anti-Spam: Bitte lösen Sie Folgendes"
   fields:
     - name: firstName
       label: Vorname
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Nachname
       row: 1
+    - name: inquiryType
+      label: Art der Anfrage
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Worum geht es bei Ihrer Anfrage?
+        - value: retail
+          label: Einzelpool-Onlinebestellung (Einzelhandel)
+        - value: wholesale
+          label: Großhandels- / Großbestellung (B2B)
+        - value: oem
+          label: OEM/ODM-Anpassung
+        - value: support
+          label: Kundendienst & Garantie
     - name: companyName
       label: Name der Firma
-      row: 2
+      row: 3
     - name: address
       label: Adresse
-      row: 3
+      row: 4
     - name: zip
       label: Postleitzahl
-      row: 4
+      row: 5
     - name: country
       label: Land
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Geschätztes Bestellvolumen
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Wählen Sie Ihr geschätztes Volumen...
+        - value: 1-unit
+          label: 1 Einheit — einzelner Pool (Online-Einzelhandelsbestellung)
         - value: sample
           label: Nur Muster/Prototypen
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ Einheiten (Mengenpreis)
     - name: customization
       label: Anpassung erforderlich?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Wählen Sie den Anpassungstyp aus...
         - value: none
           label: Standardprodukt (keine Anpassung)
@@ -74,29 +91,31 @@ contact_form:
           label: Ich bin mir nicht sicher – brauche Beratung
     - name: productInterest
       label: Interessenpool
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pooltyp auswählen...
         - value: all
           label: Alle Pools / Kompletter Katalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Tragbarer Whirlpool — Rund
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Whirlpool / Swim Spa — Quadratisch
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Thema
-      row: 9
+      row: 10
     - name: message
       label: Nachricht
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Kontaktieren Sie Felizbay
   address: felizbay.com
   zoom: 15
-

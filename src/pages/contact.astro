@@ -30,8 +30,10 @@ const fields = (form.fields ?? []).map((f: any) => {
   if (trans) {
     return {
       ...f,
-      label: t(trans.label, f.label),
-      placeholder: t(trans.placeholder, f.placeholder ?? ''),
+      // contact-form-text.yaml covers en/fr/de/es/pt — the per-language page
+      // YAML label wins over the EN fallback for every other locale (⑤ fix).
+      label: trans.label?.[lang] || f.label || trans.label?.en || f.label,
+      placeholder: trans.placeholder?.[lang] || f.placeholder || trans.placeholder?.en || '',
     };
   }
   return f;

@@ -9,9 +9,9 @@ contact_form:
   submit_button: Invia richiesta → Richiedi un preventivo
   success_message: Grazie! Il tuo messaggio è arrivato nella nostra casella di posta. Risponderemo entro un giorno lavorativo.
   error_message: Qualcosa è andato storto durante l'invio del tuo messaggio. Riprova o inviaci direttamente un'e-mail.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: risolvere quanto segue'
+    label: "Anti-spam: risolvere quanto segue"
   fields:
     - name: firstName
       label: Nome di battesimo
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Cognome
       row: 1
+    - name: inquiryType
+      label: Tipo di richiesta
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Qual è l'oggetto della tua richiesta?
+        - value: retail
+          label: Ordine online di una singola piscina (dettaglio)
+        - value: wholesale
+          label: Ordine all'ingrosso / di grandi quantità (B2B)
+        - value: oem
+          label: Personalizzazione OEM/ODM
+        - value: support
+          label: Assistenza post-vendita e garanzia
     - name: companyName
       label: Nome dell'azienda
-      row: 2
+      row: 3
     - name: address
       label: Indirizzo
-      row: 3
+      row: 4
     - name: zip
       label: Zip / Codice postale
-      row: 4
+      row: 5
     - name: country
       label: Paese
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Volume degli ordini stimato
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Seleziona il volume stimato...
+        - value: 1-unit
+          label: 1 unità — una singola piscina (ordine al dettaglio online)
         - value: sample
           label: Solo campioni/prototipi
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Oltre 500 unità (prezzi a volume)
     - name: customization
       label: Personalizzazione necessaria?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Seleziona il tipo di personalizzazione...
         - value: none
           label: Prodotto standard (nessuna personalizzazione)
@@ -71,32 +88,34 @@ contact_form:
         - value: full
           label: OEM completo (dimensioni, colore, grafica, confezione)
         - value: consultation
-          label: 'Non sono sicuro: ho bisogno di una consulenza'
+          label: "Non sono sicuro: ho bisogno di una consulenza"
     - name: productInterest
       label: Gruppo di interesse
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Seleziona il tipo di piscina...
         - value: all
           label: Tutte le piscine / Catalogo completo
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Vasca idromassaggio portatile — Rotonda
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Vasca / Swim Spa — Quadrata
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Soggetto
-      row: 9
+      row: 10
     - name: message
       label: Messaggio
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Contatta Felizbay
   address: felizbay.com
   zoom: 15
-

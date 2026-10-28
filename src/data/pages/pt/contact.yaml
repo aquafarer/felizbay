@@ -9,9 +9,9 @@ contact_form:
   submit_button: Enviar consulta → Obter um orçamento
   success_message: Obrigado! Sua mensagem chegou em nossa caixa de entrada. Responderemos dentro de um dia útil.
   error_message: Algo deu errado ao enviar sua mensagem. Por favor, tente novamente ou envie-nos um e-mail diretamente.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: resolva o seguinte'
+    label: "Anti-spam: resolva o seguinte"
   fields:
     - name: firstName
       label: Primeiro nome
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Sobrenome
       row: 1
+    - name: inquiryType
+      label: Tipo de consulta
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Qual é o assunto da sua consulta?
+        - value: retail
+          label: Pedido online de uma única piscina (varejo)
+        - value: wholesale
+          label: Pedido por atacado / em grande quantidade (B2B)
+        - value: oem
+          label: Personalização OEM/ODM
+        - value: support
+          label: Suporte pós-venda e garantia
     - name: companyName
       label: nome da empresa
-      row: 2
+      row: 3
     - name: address
       label: Endereço
-      row: 3
+      row: 4
     - name: zip
       label: CEP / Código Postal
-      row: 4
+      row: 5
     - name: country
       label: País
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TELEFONE
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Volume estimado do pedido
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selecione seu volume estimado...
+        - value: 1-unit
+          label: 1 unidade — uma única piscina (pedido de varejo online)
         - value: sample
           label: Apenas amostras/protótipos
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Mais de 500 unidades (preço por volume)
     - name: customization
       label: Personalização necessária?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selecione o tipo de personalização...
         - value: none
           label: Produto padrão (sem personalização)
@@ -74,29 +91,31 @@ contact_form:
           label: Não tenho certeza – preciso de consulta
     - name: productInterest
       label: Conjunto de interesse
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selecione o tipo de piscina...
         - value: all
           label: Todas as piscinas / Catálogo completo
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Banheira portátil — Redonda
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Banheira / Swim Spa — Quadrada
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Assunto
-      row: 9
+      row: 10
     - name: message
       label: Mensagem
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Contato Felizbay
   address: felizbay. com
   zoom: 15
-

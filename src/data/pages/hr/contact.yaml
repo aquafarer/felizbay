@@ -9,9 +9,9 @@ contact_form:
   submit_button: Pošaljite upit → Zatražite ponudu
   success_message: Hvala! Vaša poruka je stigla u naš inbox. Odgovorit ćemo u roku od jednog radnog dana.
   error_message: Nešto nije u redu prilikom slanja vaše poruke. Pokušajte ponovno ili nam izravno pošaljite e-poruku.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Zaštita od spama: riješite sljedeće'
+    label: "Zaštita od spama: riješite sljedeće"
   fields:
     - name: firstName
       label: Ime
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Prezime
       row: 1
+    - name: inquiryType
+      label: Vrsta upita
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: O čemu se radi u vašem upitu?
+        - value: retail
+          label: Online narudžba jednog bazena (maloprodaja)
+        - value: wholesale
+          label: Veleprodajna / velika narudžba (B2B)
+        - value: oem
+          label: OEM/ODM prilagodba
+        - value: support
+          label: Podrška nakon prodaje i jamstvo
     - name: companyName
       label: Naziv tvrtke
-      row: 2
+      row: 3
     - name: address
       label: Adresa
-      row: 3
+      row: 4
     - name: zip
       label: Poštanski broj
-      row: 4
+      row: 5
     - name: country
       label: Zemlja
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Procijenjeni opseg narudžbe
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Odaberite svoju procijenjenu količinu...
+        - value: 1-unit
+          label: 1 kom — jedan bazen (online maloprodajna narudžba)
         - value: sample
           label: Samo uzorci / prototipovi
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ jedinica (količinska cijena)
     - name: customization
       label: Potrebna prilagodba?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Odaberite vrstu prilagodbe...
         - value: none
           label: Standardni proizvod (bez prilagodbe)
@@ -74,29 +91,31 @@ contact_form:
           label: Nisam siguran — potrebna je konzultacija
     - name: productInterest
       label: Bazen interesa
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Odaberite vrstu bazena...
         - value: all
           label: Svi bazeni / Cijeli katalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Prijenosni jacuzzi — Okrugli
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Jacuzzi / Swim Spa — Kvadratni
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Predmet
-      row: 9
+      row: 10
     - name: message
       label: Poruka
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Kontaktirajte Felizbay
   address: felizbay.com
   zoom: 15
-

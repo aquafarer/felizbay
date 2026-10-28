@@ -9,9 +9,9 @@ contact_form:
   submit_button: أرسل استفسار → احصل على عرض أسعار
   success_message: شكرًا! لقد وصلت رسالتك إلى صندوق البريد الوارد لدينا. سوف نقوم بالرد خلال يوم عمل واحد.
   error_message: حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى أو مراسلتنا عبر البريد الإلكتروني مباشرة.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'مكافحة البريد العشوائي: الرجاء حل ما يلي'
+    label: "مكافحة البريد العشوائي: الرجاء حل ما يلي"
   fields:
     - name: firstName
       label: الاسم الأول
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: اسم العائلة
       row: 1
+    - name: inquiryType
+      label: نوع الاستفسار
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: ما موضوع استفسارك؟
+        - value: retail
+          label: طلب عبر الإنترنت لمسبح واحد (تجزئة)
+        - value: wholesale
+          label: طلب بالجملة / بكميات كبيرة (B2B)
+        - value: oem
+          label: تخصيص OEM/ODM
+        - value: support
+          label: دعم ما بعد البيع والضمان
     - name: companyName
       label: اسم الشركة
-      row: 2
+      row: 3
     - name: address
       label: عنوان
-      row: 3
+      row: 4
     - name: zip
       label: الرمز البريدي / الرمز البريدي
-      row: 4
+      row: 5
     - name: country
       label: دولة
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: بريد إلكتروني
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: هاتف
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: حجم الطلب المقدر
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: حدد الحجم المقدر...
+        - value: 1-unit
+          label: قطعة واحدة — مسبح واحد (طلب تجزئة عبر الإنترنت)
         - value: sample
           label: عينات/نماذج أولية فقط
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: أكثر من 500 وحدة (تسعير الحجم)
     - name: customization
       label: التخصيص مطلوب؟
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: حدد نوع التخصيص...
         - value: none
           label: المنتج القياسي (بدون تخصيص)
@@ -74,29 +91,31 @@ contact_form:
           label: لست متأكدا - بحاجة إلى التشاور
     - name: productInterest
       label: تجمع الاهتمام
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: اختر نوع المسبح...
         - value: all
           label: جميع حمامات السباحة / كتالوج كامل
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: حوض استحمام ساخن محمول — دائري
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: حوض استحمام / Swim Spa — مربع
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: موضوع
-      row: 9
+      row: 10
     - name: message
       label: رسالة
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: تواصل مع Felizbay
   address: felizbay.com
   zoom: 15
-

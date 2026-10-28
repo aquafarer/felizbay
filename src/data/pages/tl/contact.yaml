@@ -9,9 +9,9 @@ contact_form:
   submit_button: Magpadala ng Pagtatanong → Kumuha ng Quote
   success_message: Salamat! Ang iyong mensahe ay nakarating sa aming inbox. Sasagot kami sa loob ng isang araw ng negosyo.
   error_message: Nagkaproblema sa pagpapadala ng iyong mensahe. Pakisubukang muli o direktang mag-email sa amin.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: mangyaring lutasin ang sumusunod'
+    label: "Anti-spam: mangyaring lutasin ang sumusunod"
   fields:
     - name: firstName
       label: Unang Pangalan
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Apelyido
       row: 1
+    - name: inquiryType
+      label: Uri ng Tanong
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Ano ang tungkol sa iyong tanong?
+        - value: retail
+          label: Online order ng isang pool (retail)
+        - value: wholesale
+          label: Wholesale / malaking order (B2B)
+        - value: oem
+          label: Pag-customize ng OEM/ODM
+        - value: support
+          label: Suporta pagkatapos ng benta at warranty
     - name: companyName
       label: Pangalan ng Kumpanya
-      row: 2
+      row: 3
     - name: address
       label: Address
-      row: 3
+      row: 4
     - name: zip
       label: Zip / Postal Code
-      row: 4
+      row: 5
     - name: country
       label: Bansa
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Tinantyang Dami ng Order
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Piliin ang iyong tinantyang dami...
+        - value: 1-unit
+          label: 1 piraso — isang pool (online retail order)
         - value: sample
           label: Mga Sample / Prototype lamang
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ units (Volume pricing)
     - name: customization
       label: Kailangan ang Customization?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pumili ng uri ng pagpapasadya...
         - value: none
           label: Karaniwang produkto (walang pag-customize)
@@ -74,29 +91,31 @@ contact_form:
           label: Hindi sigurado - kailangan ng konsultasyon
     - name: productInterest
       label: Pool ng Interes
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Pumili ng uri ng pool...
         - value: all
           label: Lahat ng pool / Buong catalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Portable hot tub — Bilog
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Hot tub / Swim Spa — Kwadrado
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Paksa
-      row: 9
+      row: 10
     - name: message
       label: Mensahe
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Makipag-ugnayan kay Felizbay
   address: felizbay.com
   zoom: 15
-

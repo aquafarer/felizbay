@@ -9,9 +9,9 @@ contact_form:
   submit_button: Trimiteți întrebarea → Obțineți o cotație
   success_message: Mulţumesc! Mesajul dvs. a ajuns în căsuța noastră de e-mail. Vă vom răspunde în termen de o zi lucrătoare.
   error_message: A apărut o eroare la trimiterea mesajului dvs. Vă rugăm să încercați din nou sau să ne trimiteți un e-mail direct.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: vă rugăm să rezolvați următoarele'
+    label: "Anti-spam: vă rugăm să rezolvați următoarele"
   fields:
     - name: firstName
       label: Prenume
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Nume
       row: 1
+    - name: inquiryType
+      label: Tipul solicitării
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Cu ce privește solicitarea dumneavoastră?
+        - value: retail
+          label: Comandă online pentru o singură piscină (cu amănuntul)
+        - value: wholesale
+          label: Comandă en-gros / în vrac (B2B)
+        - value: oem
+          label: Personalizare OEM/ODM
+        - value: support
+          label: Asistență post-vânzare și garanție
     - name: companyName
       label: Numele companiei
-      row: 2
+      row: 3
     - name: address
       label: Adresa
-      row: 3
+      row: 4
     - name: zip
       label: Zip / Cod Poştal
-      row: 4
+      row: 5
     - name: country
       label: Ţară
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Volumul estimat al comenzii
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selectați volumul estimat...
+        - value: 1-unit
+          label: 1 buc. — o singură piscină (comandă online cu amănuntul)
         - value: sample
           label: Numai mostre/prototipuri
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Peste 500 de unități (preț pentru volum)
     - name: customization
       label: Personalizare necesară?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selectați tipul de personalizare...
         - value: none
           label: Produs standard (fără personalizare)
@@ -74,29 +91,31 @@ contact_form:
           label: Nu sunt sigur - trebuie consultat
     - name: productInterest
       label: Fondul de interes
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selectați tipul de piscină...
         - value: all
           label: Toate piscinele / Catalog complet
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Cadă portabilă cu hidromasaj — Rotundă
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Cadă / Swim Spa — Pătrată
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Subiect
-      row: 9
+      row: 10
     - name: message
       label: Mesaj
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Contactați Felizbay
   address: felizbay.com
   zoom: 15
-

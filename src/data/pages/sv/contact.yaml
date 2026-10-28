@@ -9,9 +9,9 @@ contact_form:
   submit_button: Skicka förfrågan → Få en offert
   success_message: Tack! Ditt meddelande har hamnat i vår inkorg. Vi kommer att svara inom en arbetsdag.
   error_message: Något gick fel när ditt meddelande skickades. Försök igen eller maila oss direkt.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: lösa följande'
+    label: "Anti-spam: lösa följande"
   fields:
     - name: firstName
       label: Förnamn
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Efternamn
       row: 1
+    - name: inquiryType
+      label: Typ av förfrågan
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Vad gäller din förfrågan?
+        - value: retail
+          label: Onlinebeställning av en pool (detaljhandel)
+        - value: wholesale
+          label: Grossist- / bulkorder (B2B)
+        - value: oem
+          label: OEM/ODM-anpassning
+        - value: support
+          label: Kundservice och garanti
     - name: companyName
       label: Företagsnamn
-      row: 2
+      row: 3
     - name: address
       label: Adress
-      row: 3
+      row: 4
     - name: zip
       label: Postnummer
-      row: 4
+      row: 5
     - name: country
       label: Land
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-post
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Beräknad ordervolym
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Välj din beräknade volym...
+        - value: 1-unit
+          label: 1 st — en pool (online detaljhandelsorder)
         - value: sample
           label: Endast prover/prototyper
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ enheter (volymprissättning)
     - name: customization
       label: Behövs anpassning?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Välj anpassningstyp...
         - value: none
           label: Standardprodukt (ingen anpassning)
@@ -74,29 +91,31 @@ contact_form:
           label: Inte säker - behöver konsultation
     - name: productInterest
       label: Intressepool
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Välj pooltyp...
         - value: all
           label: Alla pooler / Fullständig katalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Portabelt spabad — Runt
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Spabad / Swim Spa — Fyrkantigt
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Ämne
-      row: 9
+      row: 10
     - name: message
       label: Meddelande
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Kontakta Felizbay
   address: felizbay.com
   zoom: 15
-

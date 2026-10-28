@@ -9,9 +9,9 @@ contact_form:
   submit_button: Stuur een aanvraag → Ontvang een offerte
   success_message: Bedankt! Uw bericht is in onze inbox beland. Wij zullen binnen één werkdag antwoorden.
   error_message: Er is iets misgegaan bij het verzenden van uw bericht. Probeer het opnieuw of stuur ons direct een e-mail.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: los het volgende op'
+    label: "Anti-spam: los het volgende op"
   fields:
     - name: firstName
       label: Voornaam
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Achternaam
       row: 1
+    - name: inquiryType
+      label: Type aanvraag
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Waar gaat uw aanvraag over?
+        - value: retail
+          label: Online bestelling van één zwembad (retail)
+        - value: wholesale
+          label: Groothandels- / bulkbestelling (B2B)
+        - value: oem
+          label: OEM/ODM-aanpassing
+        - value: support
+          label: After-sales ondersteuning & garantie
     - name: companyName
       label: Bedrijfsnaam
-      row: 2
+      row: 3
     - name: address
       label: Adres
-      row: 3
+      row: 4
     - name: zip
       label: Postcode
-      row: 4
+      row: 5
     - name: country
       label: Land
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Geschat ordervolume
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selecteer uw geschatte volume...
+        - value: 1-unit
+          label: 1 stuk — één zwembad (online retailbestelling)
         - value: sample
           label: Alleen monsters/prototypes
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ eenheden (volumeprijzen)
     - name: customization
       label: Maatwerk nodig?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Aanpassingstype selecteren...
         - value: none
           label: Standaardproduct (geen maatwerk)
@@ -74,29 +91,31 @@ contact_form:
           label: Ik weet het niet zeker - overleg nodig
     - name: productInterest
       label: Pool van interesse
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Selecteer zwembadtype...
         - value: all
           label: Alle zwembaden / Volledige catalogus
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Draagbaar bubbelbad — Rond
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Bubbelbad / Swim Spa — Vierkant
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Onderwerp
-      row: 9
+      row: 10
     - name: message
       label: Bericht
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Neem contact op met Felizbay
   address: felizbay.com
   zoom: 15
-

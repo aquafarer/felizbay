@@ -162,6 +162,19 @@ fields:
       de: ''
       es: ''
       pt: ''
+  - name: inquiryType
+    label:
+      en: Inquiry Type
+      fr: Type de demande
+      de: Art der Anfrage
+      es: Tipo de consulta
+      pt: Tipo de consulta
+    placeholder:
+      en: ''
+      fr: ''
+      de: ''
+      es: ''
+      pt: ''
   - name: orderVolume
     label:
       en: Estimated Order Volume

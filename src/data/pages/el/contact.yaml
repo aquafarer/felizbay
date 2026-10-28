@@ -9,9 +9,9 @@ contact_form:
   submit_button: Αποστολή ερωτήματος → Λάβετε προσφορά
   success_message: Ευχαριστώ! Το μήνυμά σας έφτασε στα εισερχόμενά μας. Θα απαντήσουμε εντός μιας εργάσιμης ημέρας.
   error_message: Παρουσιάστηκε κάποιο πρόβλημα κατά την αποστολή του μηνύματός σας. Δοκιμάστε ξανά ή στείλτε μας email απευθείας.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: λύστε τα παρακάτω'
+    label: "Anti-spam: λύστε τα παρακάτω"
   fields:
     - name: firstName
       label: Ονομα
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Επώνυμο
       row: 1
+    - name: inquiryType
+      label: Τύπος αιτήματος
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Σε τι αφορά το αίτημά σας;
+        - value: retail
+          label: Διαδικτυακή παραγγελία μίας πισίνας (λιανική)
+        - value: wholesale
+          label: Χονδρική / μαζική παραγγελία (B2B)
+        - value: oem
+          label: Προσαρμογή OEM/ODM
+        - value: support
+          label: Μεταπωλητική υποστήριξη και εγγύηση
     - name: companyName
       label: Όνομα εταιρείας
-      row: 2
+      row: 3
     - name: address
       label: Διεύθυνση
-      row: 3
+      row: 4
     - name: zip
       label: Ταχυδρομικός Κώδικας
-      row: 4
+      row: 5
     - name: country
       label: Χώρα
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: ΤΗΛ
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Εκτιμώμενος όγκος παραγγελιών
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Επιλέξτε τον εκτιμώμενο όγκο σας...
+        - value: 1-unit
+          label: 1 τεμ. — μία πισίνα (διαδικτυακή λιανική παραγγελία)
         - value: sample
           label: Δείγματα / Πρωτότυπα μόνο
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ μονάδες (τιμολόγηση όγκου)
     - name: customization
       label: Απαιτείται προσαρμογή;
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Επιλέξτε τύπο προσαρμογής...
         - value: none
           label: Τυπικό προϊόν (χωρίς προσαρμογή)
@@ -74,29 +91,31 @@ contact_form:
           label: Δεν είμαι σίγουρος - χρειάζεται διαβούλευση
     - name: productInterest
       label: Δεξαμενή Ενδιαφέροντος
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Επιλέξτε τύπο πισίνας...
         - value: all
           label: Όλες οι πισίνες / Πλήρης κατάλογος
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Φορητό τζακούζι — Στρογγυλό
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Τζακούζι / Swim Spa — Τετράγωνο
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Θέμα
-      row: 9
+      row: 10
     - name: message
       label: Μήνυμα
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Επικοινωνήστε με το Felizbay
   address: felizbay.com
   zoom: 15
-

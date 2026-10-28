@@ -9,9 +9,9 @@ contact_form:
   submit_button: Lähetä kysely → Pyydä tarjous
   success_message: Kiitos! Viestisi on päätynyt postilaatikkoomme. Vastaamme yhden arkipäivän kuluessa.
   error_message: Jotain meni pieleen viestisi lähettämisessä. Yritä uudelleen tai lähetä meille sähköpostia.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Roskapostin esto: ratkaise seuraavat asiat'
+    label: "Roskapostin esto: ratkaise seuraavat asiat"
   fields:
     - name: firstName
       label: Etunimi
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Sukunimi
       row: 1
+    - name: inquiryType
+      label: Kyselyn tyyppi
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Mistä asiakyselysi koskee?
+        - value: retail
+          label: Yhden altaan tilaus verkossa (vähittäismyynti)
+        - value: wholesale
+          label: Tukkutilaus / suurtilaus (B2B)
+        - value: oem
+          label: OEM/ODM-mukautus
+        - value: support
+          label: Myynnin jälkeinen tuki ja takuu
     - name: companyName
       label: Yrityksen nimi
-      row: 2
+      row: 3
     - name: address
       label: Osoite
-      row: 3
+      row: 4
     - name: zip
       label: Postinumero
-      row: 4
+      row: 5
     - name: country
       label: Maa
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: Sähköposti
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: PUH
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Arvioitu tilausmäärä
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Valitse arvioitu äänenvoimakkuus...
+        - value: 1-unit
+          label: 1 kpl — yksi allas (verkkovähittäistilaus)
         - value: sample
           label: Vain näytteet / prototyypit
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: Yli 500 yksikköä (määrähinta)
     - name: customization
       label: Tarvitaanko mukauttamista?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Valitse mukautustyyppi...
         - value: none
           label: Vakiotuote (ei mukauttamista)
@@ -74,29 +91,31 @@ contact_form:
           label: Etkö ole varma - tarvitsee konsultaatiota
     - name: productInterest
       label: Kiinnostuksen kohde
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Valitse allastyyppi...
         - value: all
           label: Kaikki uima-altaat / Täysi luettelo
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Kannettava poreamme — Pyöreä
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Poreamme / Swim Spa — Neliö
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Aihe
-      row: 9
+      row: 10
     - name: message
       label: Viesti
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Ota yhteyttä Felizbayyn
   address: felizbay.com
   zoom: 15
-

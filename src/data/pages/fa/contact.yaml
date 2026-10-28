@@ -9,9 +9,9 @@ contact_form:
   submit_button: ارسال استعلام → دریافت قیمت
   success_message: با تشکر پیام شما در صندوق ورودی ما قرار گرفت. ما ظرف یک روز کاری پاسخ خواهیم داد.
   error_message: هنگام ارسال پیام شما مشکلی پیش آمد. لطفاً دوباره امتحان کنید یا مستقیماً به ما ایمیل بزنید.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'ضد اسپم: لطفا موارد زیر را حل کنید'
+    label: "ضد اسپم: لطفا موارد زیر را حل کنید"
   fields:
     - name: firstName
       label: نام
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: نام خانوادگی
       row: 1
+    - name: inquiryType
+      label: نوع درخواست
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: درخواست شما درباره چیست؟
+        - value: retail
+          label: سفارش آنلاین یک استخر (خرده‌فروشی)
+        - value: wholesale
+          label: سفارش عمده / کلی (B2B)
+        - value: oem
+          label: سفارشی‌سازی OEM/ODM
+        - value: support
+          label: پشتیبانی پس از فروش و گارانتی
     - name: companyName
       label: نام شرکت
-      row: 2
+      row: 3
     - name: address
       label: آدرس
-      row: 3
+      row: 4
     - name: zip
       label: کد پستی / کد پستی
-      row: 4
+      row: 5
     - name: country
       label: کشور
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: ایمیل
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: تلفن
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: حجم تخمینی سفارش
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: حجم تخمینی خود را انتخاب کنید...
+        - value: 1-unit
+          label: ۱ عدد — یک استخر (سفارش خرده‌فروشی آنلاین)
         - value: sample
           label: فقط نمونه ها / نمونه های اولیه
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ واحد (قیمت حجمی)
     - name: customization
       label: سفارشی سازی مورد نیاز است؟
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: انتخاب نوع سفارشی سازی...
         - value: none
           label: محصول استاندارد (بدون سفارشی سازی)
@@ -74,29 +91,31 @@ contact_form:
           label: مطمئن نیستم - نیاز به مشاوره دارید
     - name: productInterest
       label: استخر مورد علاقه
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: انتخاب نوع استخر...
         - value: all
           label: همه استخرها / کاتالوگ کامل
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: جکوزی قابل حمل — گرد
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: جکوزی / Swim Spa — مربع
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: موضوع
-      row: 9
+      row: 10
     - name: message
       label: پیام
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: با Felizbay تماس بگیرید
   address: felizbay.com
   zoom: 15
-

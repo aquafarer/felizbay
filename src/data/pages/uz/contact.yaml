@@ -9,9 +9,9 @@ contact_form:
   submit_button: So'rov yuboring → Narx oling
   success_message: Rahmat! Sizning xabaringiz pochta qutimizga tushdi. Biz bir ish kuni ichida javob beramiz.
   error_message: Xabarni yuborishda nimadir xato ketdi. Iltimos, qayta urinib ko'ring yoki bizga to'g'ridan-to'g'ri elektron pochta orqali yuboring.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: iltimos, quyidagilarni hal qiling'
+    label: "Anti-spam: iltimos, quyidagilarni hal qiling"
   fields:
     - name: firstName
       label: Ism
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Familiya
       row: 1
+    - name: inquiryType
+      label: So'rov turi
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: So'rovingiz nima haqida?
+        - value: retail
+          label: Bitta basseyn uchun onlayn buyurtma (chakana savdo)
+        - value: wholesale
+          label: Ulgurji / ko'p miqdordagi buyurtma (B2B)
+        - value: oem
+          label: OEM/ODM moslashtirish
+        - value: support
+          label: Sotuvdan keyingi qo'llab-quvvatlash va kafolat
     - name: companyName
       label: Shirkat nomi
-      row: 2
+      row: 3
     - name: address
       label: Manzil
-      row: 3
+      row: 4
     - name: zip
       label: Pochta / pochta indeksi
-      row: 4
+      row: 5
     - name: country
       label: Mamlakat
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Taxminiy buyurtma hajmi
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Taxminiy hajmni tanlang...
+        - value: 1-unit
+          label: 1 dona — bitta basseyn (onlayn chakana buyurtma)
         - value: sample
           label: Namunalar/faqat prototiplar
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ birlik (Hajm narxi)
     - name: customization
       label: Moslashtirish kerakmi?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Moslashtirish turini tanlang...
         - value: none
           label: Standart mahsulot (sozlash yo'q)
@@ -74,29 +91,31 @@ contact_form:
           label: Ishonchim komil emas - maslahat kerak
     - name: productInterest
       label: Qiziqishlar hovuzi
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Hovuz turini tanlang...
         - value: all
           label: Barcha hovuzlar / To'liq katalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Ko'chiriladigan jakuzi — Yumaloq
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Jakuzi / Swim Spa — Kvadrat
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Mavzu
-      row: 9
+      row: 10
     - name: message
       label: Xabar
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Felizbay bilan bog'laning
   address: felizbay.com
   zoom: 15
-

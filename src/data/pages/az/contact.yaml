@@ -9,9 +9,9 @@ contact_form:
   submit_button: Sorğu göndər → Təklif alın
   success_message: Təşəkkürlər! Mesajınız inboxumuza düşdü. Biz bir iş günü ərzində cavab verəcəyik.
   error_message: Mesajınızı göndərərkən xəta baş verdi. Lütfən, yenidən cəhd edin və ya birbaşa bizə e-poçt göndərin.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: lütfən, aşağıdakıları həll edin'
+    label: "Anti-spam: lütfən, aşağıdakıları həll edin"
   fields:
     - name: firstName
       label: Ad
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Soyadı
       row: 1
+    - name: inquiryType
+      label: Sorğunun növü
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Sorğunuz nə ilə bağlıdır?
+        - value: retail
+          label: Bir hovuz üçün onlayn sifariş (pərakəndə)
+        - value: wholesale
+          label: Topdan / külli miqdarda sifariş (B2B)
+        - value: oem
+          label: OEM/ODM fərdiləşdirməsi
+        - value: support
+          label: Satışdan sonrakı dəstək və zəmanət
     - name: companyName
       label: Şirkət Adı
-      row: 2
+      row: 3
     - name: address
       label: Ünvan
-      row: 3
+      row: 4
     - name: zip
       label: Poçt / Poçt Kodu
-      row: 4
+      row: 5
     - name: country
       label: ölkə
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-poçt
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Təxmini Sifariş Həcmi
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Təxmini həcminizi seçin...
+        - value: 1-unit
+          label: 1 ədəd — bir hovuz (onlayn pərakəndə sifariş)
         - value: sample
           label: Yalnız nümunələr / Prototiplər
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ kontur (həcmi qiymət)
     - name: customization
       label: Fərdiləşdirmə tələb olunur?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Fərdiləşdirmə növünü seçin...
         - value: none
           label: Standart məhsul (fərdiləşdirmə yoxdur)
@@ -74,29 +91,31 @@ contact_form:
           label: Əmin deyiləm - məsləhət lazımdır
     - name: productInterest
       label: Maraq Hovuzu
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Hovuz növünü seçin...
         - value: all
           label: Bütün hovuzlar / Tam kataloq
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Daşınan jakuzi — Dəyirmi
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Jakuzi / Swim Spa — Kvadrat
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Mövzu
-      row: 9
+      row: 10
     - name: message
       label: Mesaj
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Felizbayla əlaqə saxlayın
   address: felizbay.com
   zoom: 15
-

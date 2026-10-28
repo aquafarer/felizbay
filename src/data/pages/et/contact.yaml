@@ -9,9 +9,9 @@ contact_form:
   submit_button: Saada päring → Küsi pakkumist
   success_message: Aitäh! Teie sõnum jõudis meie postkasti. Vastame ühe tööpäeva jooksul.
   error_message: Midagi läks teie sõnumi saatmisel valesti. Proovige uuesti või saatke meile otse e-kiri.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Rämpspostitõrje: palun lahendage järgmine'
+    label: "Rämpspostitõrje: palun lahendage järgmine"
   fields:
     - name: firstName
       label: Eesnimi
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Perekonnanimi
       row: 1
+    - name: inquiryType
+      label: Päringu tüüp
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Millega teie päring seotud on?
+        - value: retail
+          label: Ühe basseini tellimus veebis (jaemüük)
+        - value: wholesale
+          label: Hulgi- / suurtellimus (B2B)
+        - value: oem
+          label: OEM/ODM kohandamine
+        - value: support
+          label: Müügijärgne tugi ja garantii
     - name: companyName
       label: Ettevõtte nimi
-      row: 2
+      row: 3
     - name: address
       label: Aadress
-      row: 3
+      row: 4
     - name: zip
       label: Postiindeks
-      row: 4
+      row: 5
     - name: country
       label: Riik
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-post
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Hinnanguline tellimuste maht
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Valige oma hinnanguline helitugevus...
+        - value: 1-unit
+          label: 1 tk — üks bassein (veebijae ost)
         - value: sample
           label: Ainult näidised/prototüübid
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ ühikut (mahuhinnakujundus)
     - name: customization
       label: Kas vajate kohandamist?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Valige kohandamise tüüp...
         - value: none
           label: Standardtoode (ilma kohandamiseta)
@@ -74,29 +91,31 @@ contact_form:
           label: Pole kindel - vajan konsultatsiooni
     - name: productInterest
       label: Huvikogum
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Valige basseini tüüp...
         - value: all
           label: Kõik basseinid / Täielik kataloog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Kaasaskantav mullivann — Ümmargune
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Mullivann / Swim Spa — Ruudukujuline
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Teema
-      row: 9
+      row: 10
     - name: message
       label: Sõnum
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Võtke Felizbayga ühendust
   address: felizbay.com
   zoom: 15
-

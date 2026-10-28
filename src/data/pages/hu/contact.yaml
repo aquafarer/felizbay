@@ -9,9 +9,9 @@ contact_form:
   submit_button: Kérdés küldése → Kérjen árajánlatot
   success_message: Köszönöm! Üzenete beérkezett a postafiókunkba. Egy munkanapon belül válaszolunk.
   error_message: Hiba történt az üzenet elküldésekor. Kérjük, próbálja újra, vagy írjon nekünk közvetlenül.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: kérjük, oldja meg a következőt'
+    label: "Anti-spam: kérjük, oldja meg a következőt"
   fields:
     - name: firstName
       label: Keresztnév
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Vezetéknév
       row: 1
+    - name: inquiryType
+      label: Kérés típusa
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Mivel kapcsolatos a kérése?
+        - value: retail
+          label: Egy medence online megrendelése (kiskereskedelem)
+        - value: wholesale
+          label: Nagykereskedelmi / tömeges rendelés (B2B)
+        - value: oem
+          label: OEM/ODM testreszabás
+        - value: support
+          label: Értékesítés utáni támogatás és garancia
     - name: companyName
       label: Cégnév
-      row: 2
+      row: 3
     - name: address
       label: Cím
-      row: 3
+      row: 4
     - name: zip
       label: Irányítószám
-      row: 4
+      row: 5
     - name: country
       label: Ország
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: Email
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Becsült rendelési mennyiség
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Válassza ki a becsült mennyiséget...
+        - value: 1-unit
+          label: 1 db — egy medence (online kiskereskedelmi rendelés)
         - value: sample
           label: Csak minták / prototípusok
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ egység (mennyiségárak)
     - name: customization
       label: Testreszabás szükséges?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Válassza ki a testreszabási típust...
         - value: none
           label: Standard termék (nincs testreszabás)
@@ -74,29 +91,31 @@ contact_form:
           label: Nem biztos – konzultációra van szükség
     - name: productInterest
       label: Érdeklődési kör
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Válassza ki a medence típusát...
         - value: all
           label: Minden medence / Teljes katalógus
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Hordozható jakuzzi — Kerek
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Jakuzzi / Swim Spa — Négyzetes
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Téma
-      row: 9
+      row: 10
     - name: message
       label: Üzenet
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Forduljon Felizbayhoz
   address: felizbay.com
   zoom: 15
-

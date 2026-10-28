@@ -9,9 +9,9 @@ contact_form:
   submit_button: Надіслати запит → Отримати пропозицію
   success_message: дякую Ваше повідомлення надійшло до нашої поштової скриньки. Ми відповімо протягом одного робочого дня.
   error_message: Під час надсилання повідомлення сталася помилка. Спробуйте ще раз або напишіть нам напряму.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Антиспам: вирішіть наступне'
+    label: "Антиспам: вирішіть наступне"
   fields:
     - name: firstName
       label: Ім'я
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Прізвище
       row: 1
+    - name: inquiryType
+      label: Тип звернення
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Про що ваше звернення?
+        - value: retail
+          label: Онлайн-замовлення одного басейну (роздріб)
+        - value: wholesale
+          label: Оптове / масове замовлення (B2B)
+        - value: oem
+          label: Кастомізація OEM/ODM
+        - value: support
+          label: Післяпродажна підтримка та гарантія
     - name: companyName
       label: Назва компанії
-      row: 2
+      row: 3
     - name: address
       label: Адреса
-      row: 3
+      row: 4
     - name: zip
       label: Поштовий індекс
-      row: 4
+      row: 5
     - name: country
       label: Країна
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: Електронна пошта
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: ТЕЛ
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Орієнтовний обсяг замовлення
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Виберіть приблизний обсяг...
+        - value: 1-unit
+          label: 1 шт. — один басейн (онлайн-роздрібне замовлення)
         - value: sample
           label: Лише зразки/прототипи
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ одиниць (об’ємна ціна)
     - name: customization
       label: Потрібна настройка?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Виберіть тип налаштування...
         - value: none
           label: Стандартний продукт (без налаштування)
@@ -74,29 +91,31 @@ contact_form:
           label: Не впевнений — потрібна консультація
     - name: productInterest
       label: Пул інтересів
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Виберіть тип басейну...
         - value: all
           label: Всі басейни / Повний каталог
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Портативне джакузі — Кругле
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Джакузі / Swim Spa — Квадратне
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Тема
-      row: 9
+      row: 10
     - name: message
       label: повідомлення
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Зв'яжіться з Felizbay
   address: felizbay.com
   zoom: 15
-

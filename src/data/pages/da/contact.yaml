@@ -9,9 +9,9 @@ contact_form:
   submit_button: Send forespørgsel → Få et tilbud
   success_message: Tak! Din besked er landet i vores indbakke. Vi svarer inden for en hverdag.
   error_message: Noget gik galt med at sende din besked. Prøv venligst igen eller send os en e-mail direkte.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: løs venligst følgende'
+    label: "Anti-spam: løs venligst følgende"
   fields:
     - name: firstName
       label: Fornavn
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Efternavn
       row: 1
+    - name: inquiryType
+      label: Type af henvendelse
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Hvad handler din henvendelse om?
+        - value: retail
+          label: Onlinebestilling af én pool (detailhandel)
+        - value: wholesale
+          label: Engros- / stordre (B2B)
+        - value: oem
+          label: OEM/ODM-tilpasning
+        - value: support
+          label: Kundeservice og garanti
     - name: companyName
       label: Firmanavn
-      row: 2
+      row: 3
     - name: address
       label: Adresse
-      row: 3
+      row: 4
     - name: zip
       label: Postnummer
-      row: 4
+      row: 5
     - name: country
       label: Land
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TLF
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Estimeret ordrevolumen
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Vælg din estimerede mængde...
+        - value: 1-unit
+          label: 1 stk. — én pool (online detailhandelsordre)
         - value: sample
           label: Kun prøver/prototyper
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ enheder (volumenpris)
     - name: customization
       label: Brug for tilpasning?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Vælg tilpasningstype...
         - value: none
           label: Standardprodukt (ingen tilpasning)
@@ -74,29 +91,31 @@ contact_form:
           label: Ikke sikker - har brug for konsultation
     - name: productInterest
       label: Interessepulje
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Vælg pooltype...
         - value: all
           label: Alle pools / Fuldt katalog
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Transportabelt spabad — Rundt
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Spabad / Swim Spa — Firkantet
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Emne
-      row: 9
+      row: 10
     - name: message
       label: Besked
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Kontakt Felizbay
   address: felizbay.com
   zoom: 15
-

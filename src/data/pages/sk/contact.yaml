@@ -9,9 +9,9 @@ contact_form:
   submit_button: Odoslať dopyt → Získať cenovú ponuku
   success_message: Ďakujem! Vaša správa pristála v našej doručenej pošte. Odpovieme do jedného pracovného dňa.
   error_message: Pri odosielaní vašej správy sa vyskytla chyba. Skúste to znova alebo nám napíšte priamo.
-  default_country_code: '+1'
+  default_country_code: "+1"
   captcha:
-    label: 'Anti-spam: prosím vyriešte nasledovné'
+    label: "Anti-spam: prosím vyriešte nasledovné"
   fields:
     - name: firstName
       label: Krstné meno
@@ -19,36 +19,53 @@ contact_form:
     - name: lastName
       label: Priezvisko
       row: 1
+    - name: inquiryType
+      label: Typ dopytu
+      row: 2
+      type: select
+      options:
+        - value: ""
+          label: Čoho sa týka váš dopyt?
+        - value: retail
+          label: Online objednávka jedného bazéna (maloobchod)
+        - value: wholesale
+          label: Veľkoobchodná / hromadná objednávka (B2B)
+        - value: oem
+          label: Prispôsobenie OEM/ODM
+        - value: support
+          label: Popredajná podpora a záruka
     - name: companyName
       label: Názov spoločnosti
-      row: 2
+      row: 3
     - name: address
       label: Adresa
-      row: 3
+      row: 4
     - name: zip
       label: PSČ
-      row: 4
+      row: 5
     - name: country
       label: Krajina
-      row: 4
+      row: 5
       type: select
       optionsKey: countries
     - name: email
       label: E-mail
-      row: 5
+      row: 6
       type: email
     - name: tel
       label: TEL
-      row: 5
+      row: 6
       type: tel
       withCountryCode: true
     - name: orderVolume
       label: Odhadovaný objem objednávky
-      row: 6
+      row: 7
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Vyberte odhadovaný objem...
+        - value: 1-unit
+          label: 1 ks — jeden bazén (online maloobchodná objednávka)
         - value: sample
           label: Len vzorky / prototypy
         - value: 5-10
@@ -59,10 +76,10 @@ contact_form:
           label: 500+ jednotiek (množstevná cena)
     - name: customization
       label: Je potrebné prispôsobenie?
-      row: 7
+      row: 8
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Vyberte typ prispôsobenia...
         - value: none
           label: Štandardný produkt (bez prispôsobenia)
@@ -74,29 +91,31 @@ contact_form:
           label: Nie ste si istí – potrebujete konzultáciu
     - name: productInterest
       label: Fond záujmov
-      row: 8
+      row: 9
       type: select
       options:
-        - value: ''
+        - value: ""
           label: Vyberte typ bazéna...
         - value: all
           label: Všetky bazény / Kompletný katalóg
-        - value: rectangular
-          label: Rectangular Drop Stitch Pool
         - value: round-blue
           label: Round Drop Stitch Pool (Blue)
         - value: round-grey
           label: Round Drop Stitch Pool (Grey)
-        - value: cover
-          label: Round Pool with Cover
+        - value: hot-tub-round
+          label: Prenosná vírivka — Okrúhla
+        - value: rectangular
+          label: Rectangular Drop Stitch Pool
+        - value: hot-tub-square-rect
+          label: Vírivka / Swim Spa — Štvorcová
         - value: oem
           label: OEM / Custom Pool
     - name: subject
       label: Predmet
-      row: 9
+      row: 10
     - name: message
       label: Správa
-      row: 10
+      row: 11
       type: textarea
       rows: 6
 features2_other_ways:
@@ -126,4 +145,3 @@ map:
   subtitle: Kontaktujte Felizbay
   address: felizbay.com
   zoom: 15
-
