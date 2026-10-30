@@ -292,7 +292,7 @@ const faqSchema = JSON.stringify({
       {
         brandCards.map((card: any) => (
           <a
-            href={`/${lang}${card.link}/`}
+            href={`/${lang}${card.link.replace(/\/+$/, '')}/`}
             class="p-6 rounded-xl bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 hover:shadow-md transition-shadow"
           >
             <h3 class="text-lg font-bold">{card.title}</h3>

@@ -28,6 +28,7 @@ import { PRODUCT_CONTENT_L10N } from '~/lib/product-content-l10n';
 import { marked } from 'marked';
 import { guides } from '~/data/guides';
 import { languages, defaultLang } from '~/i18n/config';
+import { localizeHref } from '~/i18n/routing';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 import { PRODUCT_PAGE_DETAILS } from '~/data/product-page-content';
 import PurchaseAssurance from '~/components/product/PurchaseAssurance.astro';
@@ -216,7 +217,7 @@ const supportCardItems = detailV2
 const setupLinksL10n = detailV2
   ? detailV2.setupLinks.map((l) => ({
       label: l.label,
-      href: l.href.startsWith('/') ? `/${lang}${l.href}` : l.href,
+      href: l.href.startsWith('/') ? localizeHref(l.href, lang) : l.href,
     }))
   : [];
 
@@ -684,7 +685,7 @@ const specGroups = detailV2
         quoteHref={`/${lang}/contact/?product=${encodeURIComponent(product.title)}`}
         compareHref="/products/compare/"
         retailSku={product.sku || undefined}
-        wholesaleHref={`${langPrefix}/products/specs/`}
+        wholesaleHref={localizeHref('/products/specs/', lang)}
       />
     )
   }
@@ -955,7 +956,7 @@ const specGroups = detailV2
           <div class="grid md:grid-cols-3 gap-4">
             {relatedGuides.map((g) => (
               <a
-                href={`/${lang}/guides/${g.slug}/`}
+                href={localizeHref(`/guides/${g.slug}/`, lang)}
                 class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
               >
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
@@ -988,14 +989,14 @@ const specGroups = detailV2
       </p>
       <div class="mt-6 flex flex-wrap gap-4">
         <a
-          href={`${langPrefix}/for-businesses/`}
+          href={localizeHref('/for-businesses/', lang)}
           class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
         >
           {t('product.exploreBusiness') || 'Explore business solutions'}
           <Icon name="tabler:arrow-right" class="w-4 h-4" />
         </a>
         <a
-          href={`${langPrefix}/products/specs/`}
+          href={localizeHref('/products/specs/', lang)}
           class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-700 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
         >
           <Icon name="tabler:table" class="w-4 h-4" />
