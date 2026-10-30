@@ -134,6 +134,25 @@ const SERIES_BY_SLUG: Record<string, string> = {
   'hot-tub-square-rect': 'hot-tub-square-rect',
 };
 const catalogSeries = poolSeries.find((s) => s.id === SERIES_BY_SLUG[product.slug]);
+
+// Factory photos that picture the exact catalog size (QA #8: the FitGuide
+// size checker shows the real photo of the selected size when one exists).
+// Dimensions come from src/data/site/image-dimensions.json (build SSOT).
+// Add per-size photos here as factory assets arrive (audit item ②).
+const ITEM_PHOTOS: Record<string, { src: string; alt: string; w: number; h: number }> = {
+  S2005: {
+    src: '/images/pools/round-pool-s2005.webp',
+    alt: 'Round pool S2005 — Ø 2 × 0.5 m factory photo',
+    w: 762,
+    h: 425,
+  },
+  SR220815: {
+    src: '/images/pools/rectangular-pool-sr220815.webp',
+    alt: 'Rectangular pool SR220815 — 2 × 2 × 0.8 m factory photo',
+    w: 711,
+    h: 470,
+  },
+};
 const hasVariant = catalogSeries
   ? catalogSeries.items.map((it) => ({
       '@type': 'Product',
@@ -610,6 +629,7 @@ const specGroups = detailV2
         compareHref="/products/compare/"
         retailSku={product.sku || undefined}
         wholesaleHref="/products/specs/"
+        itemPhotos={ITEM_PHOTOS}
       />
     )
   }

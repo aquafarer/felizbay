@@ -29,9 +29,14 @@ interface Props {
   retailSku?: string;
   /** Link to the wholesale price list shown in the retail-set notice */
   wholesaleHref?: string;
+  /** Factory photos keyed by catalog item number — when the selected size has
+   *  a photo, the checker shows the real product photo of that exact size
+   *  (QA #8: size switch syncs specs and imagery). Sizes without a photo keep
+   *  the dimension diagram only. */
+  itemPhotos?: Record<string, { src: string; alt: string; w: number; h: number }>;
 }
 
-const { ui, fitIntro, fitRows, fitNotice, catalogItems, quoteHref, compareHref, retailSku, wholesaleHref } =
+const { ui, fitIntro, fitRows, fitNotice, catalogItems, quoteHref, compareHref, retailSku, wholesaleHref, itemPhotos } =
   Astro.props;
 
 interface SizeOption {
@@ -160,9 +165,23 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
           id="fitg-diagram"
           data-cap-top={diagramCaptions.top}
           data-cap-side={diagramCaptions.side}
+          data-photos={JSON.stringify(itemPhotos ?? {})}
           class="mt-4 mx-auto max-w-md"
           set:html={firstDiagramSvg}
         />
+
+        {/* Factory photo of the selected size (shown only when one exists) */}
+        {
+          itemPhotos && Object.keys(itemPhotos).length > 0 && (
+            <div
+              id="fitg-photo"
+              class="mt-4 hidden overflow-hidden rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900"
+            >
+              <img id="fitg-photo-img" alt="" class="w-full h-auto" loading="lazy" decoding="async" />
+            </div>
+          )
+        }
+        <p id="fitg-photo-cap" class="mt-1.5 hidden text-[11px] text-gray-400 dark:text-slate-500"></p>
 
         <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
           <div>
@@ -254,6 +273,9 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
     const fobVal = document.getElementById('fitg-fob-val');
     const diagram = document.getElementById('fitg-diagram');
     const quoteLink = document.getElementById('fitg-quote');
+    const photoWrap = document.getElementById('fitg-photo');
+    const photoImg = document.getElementById('fitg-photo-img') as HTMLImageElement | null;
+    const photoCap = document.getElementById('fitg-photo-cap');
     if (!sel || !sizeVal || !internalVal || !wallVal || !volumeVal) return;
 
     const fmtLiters = (n: number) => `≈ ${n.toLocaleString('en-US')} L`;
@@ -285,6 +307,37 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
       quoteLink.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
     };
 
+    // Factory photo registry for the selected size, parsed once (QA #8).
+    let photos: Record<string, { src: string; alt: string; w: number; h: number }>;
+    try {
+      photos = JSON.parse(diagram?.dataset.photos ?? '{}');
+    } catch {
+      photos = {};
+    }
+
+    // Show the factory photo of the selected size when one is published.
+    const showPhoto = (item: string) => {
+      if (!photoWrap || !photoImg || !photoCap) return;
+      const photo = photos[item];
+      if (photo && photo.src) {
+        if (photo.w && photo.h) {
+          photoImg.setAttribute('width', String(photo.w));
+          photoImg.setAttribute('height', String(photo.h));
+        } else {
+          photoImg.removeAttribute('width');
+          photoImg.removeAttribute('height');
+        }
+        photoImg.src = photo.src;
+        photoImg.alt = photo.alt || '';
+        photoCap.textContent = photo.alt || '';
+        photoWrap.classList.remove('hidden');
+        photoCap.classList.remove('hidden');
+      } else {
+        photoWrap.classList.add('hidden');
+        photoCap.classList.add('hidden');
+      }
+    };
+
     const update = () => {
       const opt = sel.options[sel.selectedIndex] as HTMLOptionElement | undefined;
       if (!opt) return;
@@ -295,6 +348,7 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
       volumeVal.textContent = Number.isNaN(liters) ? '—' : fmtLiters(liters);
       if (fobVal) fobVal.textContent = opt.dataset.fob ? `$${opt.dataset.fob}` : '—';
       drawDiagram(opt);
+      showPhoto(opt.value);
       syncUrl(opt.value);
       syncQuoteLink(opt.value);
     };
