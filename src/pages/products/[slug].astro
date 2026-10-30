@@ -32,6 +32,7 @@ import ProductFaq from '~/components/product/ProductFaq.astro';
 import SpecTable from '~/components/product/SpecTable.astro';
 import SupportCards from '~/components/product/SupportCards.astro';
 import StickyBuyBar from '~/components/product/StickyBuyBar.astro';
+import { CHECKOUT_ENABLED } from '~/data/site/checkout';
 
 export const prerender = true;
 
@@ -542,7 +543,7 @@ const specGroups = detailV2
           {/* CTA Buttons */}
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
             {
-              product.sku && product.price?.amount ? (
+              product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
                 <form method="POST" action="/api/checkout" class="flex-1">
                   <input type="hidden" name="sku" value={product.sku} />
                   <button
@@ -992,13 +993,19 @@ const specGroups = detailV2
   {/* Final CTA */}
   <section class="bg-gray-900 dark:bg-slate-800">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-18 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">Order Your {product.title} Today</h2>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+        {CHECKOUT_ENABLED ? `Order Your ${product.title} Today` : `Get Your ${product.title}`}
+      </h2>
       <p class="text-lg text-white/70 mb-8 max-w-xl mx-auto">
-        Buy online with secure Stripe checkout, or contact our team for custom sizes and OEM orders.
+        {
+          CHECKOUT_ENABLED
+            ? 'Buy online with secure Stripe checkout, or contact our team for custom sizes and OEM orders.'
+            : 'Contact our team for pricing, custom sizes, and OEM orders — we reply within one business day.'
+        }
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
         {
-          product.sku && product.price?.amount ? (
+          product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
             <form method="POST" action="/api/checkout">
               <input type="hidden" name="sku" value={product.sku} />
               <button
@@ -1062,7 +1069,7 @@ const specGroups = detailV2
 
   {/* Module 16 — Mobile Sticky Buy Bar (detail V2) */}
   {
-    isDetailV2 && (
+    isDetailV2 && CHECKOUT_ENABLED && (
       <StickyBuyBar
         price={product.price?.amount ? `$${product.price.amount}` : ''}
         priceLabel={product.sku ? detailUi['product.retailPrice'] : ''}

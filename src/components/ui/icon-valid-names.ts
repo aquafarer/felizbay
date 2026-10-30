@@ -45,6 +45,7 @@ export const VALID_ICON_NAMES = new Set([
   "tabler:gauge",
   "tabler:headset",
   "tabler:heart",
+  "tabler:help-circle",
   "tabler:hexagon",
   "tabler:home",
   "tabler:info-square",

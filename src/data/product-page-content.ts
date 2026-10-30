@@ -57,19 +57,19 @@ export interface ProductPageDetail {
 const SUPPORT_CARDS_BASE: SupportCard[] = [
   {
     titleKey: 'product.deliveryCard',
-    summary: 'Retail orders ship to the address entered at checkout.',
+    summary: 'Retail orders ship directly to your address.',
     details: [
-      'Single-piece online purchase is fulfilled by direct shipping.',
+      'Single-piece orders are fulfilled by direct shipping.',
       'In-stock orders ship within 2–3 business days.',
-      'A dispatch confirmation with tracking is sent by email after checkout.',
+      'A dispatch confirmation with tracking is sent by email once your order ships.',
       'Delivery time depends on your destination and is shown by the carrier after dispatch.',
     ],
   },
   {
     titleKey: 'product.shippingCard',
-    summary: 'Shipping cost and options are shown at checkout before you pay.',
+    summary: 'Shipping cost and options are confirmed with you before you pay.',
     details: [
-      'The exact shipping cost for your address is calculated during checkout.',
+      'The exact shipping cost for your address is confirmed before payment.',
       'Some remote destinations may not be serviceable — you will be notified if your order cannot ship.',
     ],
   },
@@ -80,6 +80,8 @@ const SUPPORT_CARDS_BASE: SupportCard[] = [
       'Contact info@felizbay.com with your order reference before returning anything.',
       'Return shipping costs and conditions are confirmed case by case depending on the destination.',
     ],
+    href: '/returns-and-warranty/',
+    hrefLabel: 'Returns & Warranty policy',
   },
   {
     titleKey: 'product.warrantyCard',
@@ -89,6 +91,8 @@ const SUPPORT_CARDS_BASE: SupportCard[] = [
       'It does not cover punctures from external objects, improper pressure, or normal wear.',
       'Warranty requests: info@felizbay.com with your order reference and photos.',
     ],
+    href: '/support/',
+    hrefLabel: 'Support Center',
   },
 ];
 

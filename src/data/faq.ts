@@ -137,7 +137,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-pricing',
     question: 'How much do Felizbay pools cost?',
     answer:
-      'Each product page shows the current price with a Buy Now button, so you can order directly online with secure Stripe checkout. Wholesale pricing is available for bulk orders — contact info@felizbay.com for details.',
+      'Each product page lists the recommended retail price. To order, send us a message through the contact page or email info@felizbay.com and we will confirm availability, shipping, and final pricing for your location. Wholesale pricing is available for bulk orders.',
     category: 'ordering',
     relatedProducts: ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'],
     relatedGuides: [],

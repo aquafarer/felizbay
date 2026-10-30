@@ -39,6 +39,7 @@ import ProductFaq from '~/components/product/ProductFaq.astro';
 import SpecTable from '~/components/product/SpecTable.astro';
 import SupportCards from '~/components/product/SupportCards.astro';
 import StickyBuyBar from '~/components/product/StickyBuyBar.astro';
+import { CHECKOUT_ENABLED } from '~/data/site/checkout';
 
 export async function getStaticPaths() {
   const paths: { params: { lang: string; slug: string }; props: any }[] = [];
@@ -573,7 +574,7 @@ const specGroups = detailV2
           {/* CTA Buttons */}
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
             {
-              product.sku && product.price?.amount ? (
+              product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
                 <form method="POST" action="/api/checkout" class="flex-1">
                   <input type="hidden" name="sku" value={product.sku} />
                   <input type="hidden" name="lang" value={lang} />
@@ -1015,7 +1016,7 @@ const specGroups = detailV2
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
         {
-          product.sku && product.price?.amount ? (
+          product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
             <form method="POST" action="/api/checkout">
               <input type="hidden" name="sku" value={product.sku} />
               <input type="hidden" name="lang" value={lang} />
@@ -1083,7 +1084,7 @@ const specGroups = detailV2
 
   {/* Module 16 — Mobile Sticky Buy Bar (detail V2) */}
   {
-    isDetailV2 && (
+    isDetailV2 && CHECKOUT_ENABLED && (
       <StickyBuyBar
         price={product.price?.amount ? `$${product.price.amount}` : ''}
         priceLabel={product.sku ? detailUi['product.retailPrice'] : ''}

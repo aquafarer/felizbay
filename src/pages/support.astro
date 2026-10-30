@@ -1,0 +1,247 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Customer Support Center — ${SITE.name}`,
+  description: `Felizbay support center: pool setup and installation guides, water care and maintenance, troubleshooting, warranty and returns, order help, and direct contact for drop stitch inflatable pool owners.`,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Support' }];
+
+const quickLinks = [
+  {
+    icon: 'tabler:tool',
+    title: 'Setup & Installation',
+    description: 'Unbox to full setup in 8 steps — site prep, inflation, and filling.',
+    href: '/guides/inflatable-pool-setup/',
+    cta: 'Setup guide',
+  },
+  {
+    icon: 'tabler:droplet',
+    title: 'Water Care & Maintenance',
+    description: 'Keep the water clean and the fabric in top condition all season.',
+    href: '/guides/inflatable-pool-maintenance/',
+    cta: 'Care guide',
+  },
+  {
+    icon: 'tabler:shield-check',
+    title: 'Warranty & Returns',
+    description: '30-day returns and the 2-year limited warranty against manufacturing defects.',
+    href: '/returns-and-warranty/',
+    cta: 'Policy details',
+  },
+  {
+    icon: 'tabler:help-circle',
+    title: 'Frequently Asked Questions',
+    description: 'Sizing, setup, water care, shipping, and ordering — answered.',
+    href: '/faq/',
+    cta: 'Browse FAQ',
+  },
+  {
+    icon: 'tabler:ruler',
+    title: 'Find the Right Size',
+    description: 'Not sure which pool fits your space? Answer a few questions and compare models.',
+    href: '/find-your-pool/',
+    cta: 'Pool finder',
+  },
+  {
+    icon: 'tabler:message-circle',
+    title: 'Contact Our Team',
+    description: 'Email info@felizbay.com — we reply within one business day.',
+    href: '/contact/',
+    cta: 'Contact us',
+  },
+];
+
+const gettingStarted = [
+  { title: 'How to Choose an Inflatable Swimming Pool', href: '/guides/how-to-choose-inflatable-pool/' },
+  { title: 'What Is a Drop Stitch Inflatable Pool?', href: '/guides/what-is-a-drop-stitch-inflatable-pool/' },
+  { title: 'How Much Space Do You Need?', href: '/guides/how-much-space-do-you-need-for-an-inflatable-pool/' },
+  { title: 'Placing a Pool on a Patio or Deck', href: '/guides/placing-an-inflatable-pool-on-a-patio/' },
+  { title: 'Inflatable Pool Setup in 8 Steps', href: '/guides/inflatable-pool-setup/' },
+];
+
+const careAndTroubleshooting = [
+  { title: 'Water Care & Maintenance Guide', href: '/guides/inflatable-pool-maintenance/' },
+  {
+    title: 'Drop Stitch vs. Traditional Inflatable Pools',
+    href: '/guides/drop-stitch-vs-traditional-inflatable-pools/',
+  },
+  { title: 'Pressure Testing Explained', href: '/guides/inflatable-pool-pressure-testing-explained/' },
+];
+
+const businessSupport = [
+  { title: 'Choosing a Drop Stitch Pool Manufacturer', href: '/guides/how-to-choose-a-drop-stitch-pool-manufacturer/' },
+  { title: 'OEM vs. ODM Inflatable Pools', href: '/guides/oem-vs-odm-inflatable-pools/' },
+  { title: 'Wholesale Program', href: '/wholesale/' },
+  { title: 'Container Loading Guide', href: '/guides/inflatable-pool-container-loading-guide/' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta name="ai-intent" content="support,customer-care,inflatable-pool-help,pool-troubleshooting" />
+
+  {/* Hero */}
+  <section class="px-4 pt-16 pb-10 sm:px-6 mx-auto max-w-4xl text-center" data-ai-block="support-hero">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Customer Care</span>
+    <h1 class="mt-4 font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">Support Center</h1>
+    <p class="mt-6 text-lg text-gray-500 dark:text-slate-400 max-w-2xl mx-auto">
+      Setup help, water care, troubleshooting, warranty, and order questions for your Felizbay drop stitch pool — all in
+      one place. Can't find what you need? Email
+      <a href="mailto:info@felizbay.com" class="text-sky-600 dark:text-sky-400 font-medium hover:underline"
+        >info@felizbay.com</a
+      >
+      and we reply within one business day.
+    </p>
+  </section>
+
+  {/* Quick help cards */}
+  <section class="px-4 pb-16 sm:px-6 mx-auto max-w-7xl" data-ai-block="support-quick-links">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        quickLinks.map((c) => (
+          <a
+            href={c.href}
+            class="group flex flex-col rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all"
+          >
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400">
+              <Icon name={c.icon} class="w-6 h-6" />
+            </span>
+            <h2 class="mt-4 text-lg font-semibold text-gray-900 dark:text-slate-100">{c.title}</h2>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 flex-1">{c.description}</p>
+            <span class="mt-4 text-sm font-medium text-sky-600 dark:text-sky-400 group-hover:underline">{c.cta} →</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  {/* Topic sections */}
+  <section class="px-4 pb-16 sm:px-6 mx-auto max-w-7xl grid gap-10 lg:grid-cols-3" data-ai-block="support-topics">
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-5 flex items-center gap-2">
+        <Icon name="tabler:rocket" class="w-5 h-5 text-sky-600 dark:text-sky-400" />
+        Getting Started
+      </h2>
+      <ul class="space-y-3">
+        {
+          gettingStarted.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
+              >
+                {l.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-5 flex items-center gap-2">
+        <Icon name="tabler:settings" class="w-5 h-5 text-sky-600 dark:text-sky-400" />
+        Care & Troubleshooting
+      </h2>
+      <ul class="space-y-3">
+        {
+          careAndTroubleshooting.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
+              >
+                {l.title}
+              </a>
+            </li>
+          ))
+        }
+        <li class="text-sm text-gray-500 dark:text-slate-500">
+          Every pool ships with a repair kit. Spare parts — valves, patches, pumps, covers — stay available for the life
+          of the product: email
+          <a href="mailto:info@felizbay.com" class="text-sky-600 dark:text-sky-400 hover:underline">info@felizbay.com</a
+          >.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-5 flex items-center gap-2">
+        <Icon name="tabler:building-store" class="w-5 h-5 text-sky-600 dark:text-sky-400" />
+        Business & OEM Support
+      </h2>
+      <ul class="space-y-3">
+        {
+          businessSupport.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
+              >
+                {l.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  {/* Orders & warranty summary */}
+  <section
+    class="bg-gray-50 dark:bg-slate-900 border-y border-gray-100 dark:border-slate-800"
+    data-ai-block="support-orders"
+  >
+    <div class="px-4 py-14 sm:px-6 mx-auto max-w-7xl grid gap-8 md:grid-cols-3">
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-3">Orders & Shipping</h2>
+        <p class="text-sm text-gray-500 dark:text-slate-400">
+          In-stock orders ship within 2–3 business days. A dispatch confirmation with tracking is sent by email once
+          your order ships. For order questions, email us with your order reference.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-3">Returns</h2>
+        <p class="text-sm text-gray-500 dark:text-slate-400">
+          Unused pools can be returned within 30 days of delivery in original packaging. Defective or incorrect items
+          ship back at our cost.
+          <a href="/returns-and-warranty/" class="text-sky-600 dark:text-sky-400 hover:underline">Full policy →</a>
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-3">Warranty</h2>
+        <p class="text-sm text-gray-500 dark:text-slate-400">
+          2-year limited warranty on manufacturing defects — seams, valves, and drop-stitch fabric. Claims are answered
+          within one business day.
+          <a href="/returns-and-warranty/#warranty" class="text-sky-600 dark:text-sky-400 hover:underline"
+            >Warranty details →</a
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Final CTA */}
+  <section class="px-4 py-16 sm:px-6 mx-auto max-w-3xl text-center" data-ai-block="support-cta">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">Still need help?</h2>
+    <p class="mt-4 text-gray-500 dark:text-slate-400">
+      Send us your question, order reference, or photos of the issue — our support team replies within one business day.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="/contact/"
+        class="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg text-sm"
+      >
+        <Icon name="tabler:message-circle" class="w-5 h-5" />
+        Contact Support
+      </a>
+      <a
+        href="mailto:info@felizbay.com"
+        class="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+      >
+        <Icon name="tabler:mail" class="w-5 h-5" />
+        info@felizbay.com
+      </a>
+    </div>
+  </section>
+</Layout>

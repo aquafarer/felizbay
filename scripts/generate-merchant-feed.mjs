@@ -31,6 +31,14 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const BASE = 'https://felizbay.com';
 
+/** Read CHECKOUT_ENABLED from src/data/site/checkout.ts (same flag the UI imports). */
+function readCheckoutEnabled() {
+  const src = readFileSync(path.join(ROOT, 'src/data/site/checkout.ts'), 'utf8');
+  const m = src.match(/export const CHECKOUT_ENABLED = (true|false);/);
+  if (!m) throw new Error('Failed to parse CHECKOUT_ENABLED from src/data/site/checkout.ts');
+  return m[1] === 'true';
+}
+
 /** Parse PRODUCT_CATALOG from functions/api/checkout.ts (single eligibility source). */
 function parseCheckoutCatalog() {
   const src = readFileSync(path.join(ROOT, 'functions/api/checkout.ts'), 'utf8');
@@ -89,6 +97,26 @@ const xmlEscape = (s) =>
     .replace(/'/g, '&apos;');
 
 const catalog = parseCheckoutCatalog();
+
+// Checkout disabled → nothing is purchasable online → emit an empty (but valid)
+// feed so Google Merchant Center drops the items instead of serving buyable
+// listings that land on pages without a working checkout.
+if (!readCheckoutEnabled()) {
+  const emptyFeed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Felizbay Products</title>
+    <link>${BASE}/</link>
+    <description>Felizbay retail product feed — empty while online checkout is disabled.</description>
+  </channel>
+</rss>
+`;
+  mkdirSync(DIST, { recursive: true });
+  writeFileSync(path.join(DIST, 'merchant-feed.xml'), emptyFeed, 'utf8');
+  console.log('[merchant-feed] CHECKOUT_ENABLED=false — wrote empty dist/merchant-feed.xml (0 items)');
+  process.exit(0);
+}
+
 const errors = [];
 const warnings = [];
 const items = [];
