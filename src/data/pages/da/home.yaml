@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Pool ideer
   title: Den rigtige pool til<br />Dit rum
   subtitle: Rigtige opsætninger, rigtige størrelser og ærlig vejledning til at vælge den rigtige pool.
+  idea_kicker: 'Poolidé'
+  explore_label: 'Udforsk denne løsning'
+  all_title: 'Alle poolideer'
+  all_subtitle: 'Udforsk alle havescenarier'
+  view_all_label: 'Se alle'
 content_categories:
   tagline: Shop Pools
   title: Udforsk vores pools
   subtitle: Sammenlign former, størrelser og funktioner for at finde den rigtige pool til din baghave eller udendørs.
+  view_all: 'Se alle pools'
 content_compliance:
   tagline: Pleje & Sikkerhed
   title: Nem at eje,<br />Nem at elske
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Læs ofte stillede spørgsmål'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Kundehistorier'
+  title: 'Ægte pools i ægte haver'
+  subtitle: 'Hvordan Felizbay-ejere opsætter, bruger og opbevarer deres pools gennem sæsonen.'

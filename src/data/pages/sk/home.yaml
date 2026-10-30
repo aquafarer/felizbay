@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Nápady na bazén
   title: Ten správny bazén pre<br />Váš priestor
   subtitle: Skutočné nastavenia, skutočné veľkosti a poctivé poradenstvo pri výbere správneho bazéna.
+  idea_kicker: 'Nápad na bazén'
+  explore_label: 'Preskúmajte toto riešenie'
+  all_title: 'Všetky nápady na bazén'
+  all_subtitle: 'Prehliadajte všetky záhradné scenáre'
+  view_all_label: 'Zobraziť všetko'
 content_categories:
   tagline: Obchod Pools
   title: Preskúmajte naše bazény
   subtitle: Porovnajte tvary, veľkosti a vlastnosti, aby ste našli ten správny bazén pre váš dvor alebo vonkajší priestor.
+  view_all: 'Zobraziť všetky bazény'
 content_compliance:
   tagline: Starostlivosť a bezpečnosť
   title: Jednoduché vlastnenie,<br />Ľahké milovať
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Všetky kolekcie: steny 4–5 PSI drop-stitch, 5–15 minút nafukovania, skladovanie po zbalení. Vykurovanie a filtrácia sú externé — ohrievače a filtračné čerpadlá sa predávajú samostatne.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Prečo Felizbay'
+  title: 'Prečo si vybrať bazén Felizbay Drop Stitch?'
+  subtitle: 'Vyberte bazén podľa vášho priestoru, spôsobu plánovaného používania a funkcií, ktoré sú pre vás najdôležitejšie.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Navrhnuté pre život vonku'
+      description: 'Preskúmajte možnosti bazénov na oddych v záhrade, rodinné chvíle vo vode, vonkajšie relaxačné kúpele a sezónne rekreačné nehnuteľnosti.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Prehliadnuť nápady na bazény'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Porovnajte skutočné špecifikácie produktov'
+      description: 'Pred výberom si skontrolujte rozmery, kapacitu vody, odporúčaný pracovný tlak, zahrnuté príslušenstvo a požiadavky na inštaláciu.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Zobraziť špecifikácie'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Pochopte konštrukciu Drop Stitch'
+      description: 'Zistite, ako funguje vnútorná štruktúra, čo znamená pre tvar a skladovanie bazéna a ako závisí výkon produktu od správneho nafúknutia a inštalácie.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Prečítať sprievodcu'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Vyberte si s istotou'
+      description: 'Získajte prístup k manuálom produktov, pokynom na starostlivosť, detailom záruky a podpore, aby ste zistili, či vám bazén Felizbay vyhovuje.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Prečítať časté otázky'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Príbehy zákazníkov'
+  title: 'Skutočné bazény v skutočných záhradách'
+  subtitle: 'Ako majitelia Felizbay inštalujú, používajú a uskladňujú svoje bazény počas sezóny.'

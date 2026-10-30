@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Ideas para la piscina
   title: La piscina adecuada para<br />Tu espacio
   subtitle: Configuraciones reales, tamaños reales y orientación honesta para elegir la piscina adecuada.
+  idea_kicker: 'Idea para la piscina'
+  explore_label: 'Explorar esta instalación'
+  all_title: 'Todas las ideas para la piscina'
+  all_subtitle: 'Explora todos los escenarios de jardín'
+  view_all_label: 'Ver todo'
 content_categories:
   tagline: Comprar piscinas
   title: Explora nuestras piscinas
   subtitle: Compare formas, tamaños y características para encontrar la piscina adecuada para su patio trasero o espacio al aire libre.
+  view_all: 'Ver todas las piscinas'
 content_compliance:
   tagline: Cuidado y seguridad
   title: fácil de poseer,<br />fácil de amar
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Lee las preguntas frecuentes'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Historias de clientes'
+  title: 'Piscinas reales en jardines reales'
+  subtitle: 'Cómo los propietarios de Felizbay montan, usan y guardan sus piscinas durante la temporada.'

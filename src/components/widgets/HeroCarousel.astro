@@ -13,9 +13,11 @@ interface Props {
   slides: HeroCarouselSlide[];
   intervalMs?: number;
   label?: string;
+  /** Slide CTA text, localized by the calling page */
+  ctaLabel?: string;
 }
 
-const { slides, intervalMs = 6000, label = 'Featured pool ideas' } = Astro.props;
+const { slides, intervalMs = 6000, label = 'Featured pool ideas', ctaLabel = 'Explore this setup' } = Astro.props;
 const hasControls = slides.length > 1;
 ---
 
@@ -64,7 +66,7 @@ const hasControls = slides.length > 1;
               {slide.title}
             </p>
             <span class="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-white/90 transition-colors group-hover:text-white">
-              Explore this setup
+              {ctaLabel}
               <Icon name="tabler:arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </span>
           </div>

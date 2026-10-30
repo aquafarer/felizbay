@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Ideje za bazen
   title: Pravi bazen za<br />Vaš prostor
   subtitle: Prave postavke, prave veličine i iskrena uputstva za odabir pravog bazena.
+  idea_kicker: 'Ideja za bazen'
+  explore_label: 'Istražite ovaj raspored'
+  all_title: 'Sve ideje za bazene'
+  all_subtitle: 'Pregledajte sve scenarije dvorišta'
+  view_all_label: 'Prikaži sve'
 content_categories:
   tagline: Shop Pools
   title: Istražite naše bazene
   subtitle: Uporedite oblike, veličine i karakteristike da biste pronašli pravi bazen za svoje dvorište ili otvoreni prostor.
+  view_all: 'Prikaži sve bazene'
 content_compliance:
   tagline: Briga i bezbednost
   title: Lako za posedovanje,<br />Lako voleti
@@ -161,27 +167,32 @@ compare_collections:
 
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Zašto Felizbay'
+  title: 'Zašto izabrati Felizbay Drop Stitch bazen?'
+  subtitle: 'Izaberite bazen prema raspoloživom prostoru, načinu na koji planirate da ga koristite i funkcijama koje su vam najvažnije.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Dizajnirano za život na otvorenom'
+      description: 'Istražite opcije bazena za odmor u dvorištu, porodično vreme u vodi, kupanje na otvorenom i sezonske odmorišta.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Pogledajte ideje za bazene'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Uporedite stvarne specifikacije proizvoda'
+      description: 'Pre izbora pregledajte dimenzije, kapacitet vode, preporučeni radni pritisak, uključene dodatke i zahteve za postavljanje.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Pogledajte specifikacije'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Razumite Drop Stitch konstrukciju'
+      description: 'Saznajte kako radi unutrašnja struktura, šta znači za oblik i skladištenje bazena i kako performanse proizvoda zavise od pravilnog naduvavanja i postavljanja.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Pročitajte vodič'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Izaberite sa poverenjem'
+      description: 'Pristupite uputstvima za proizvode, instrukcijama za održavanje, detaljima garancije i podršci kako biste utvrdili da li vam odgovara Felizbay bazen.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Pročitajte česta pitanja'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Priče kupaca'
+  title: 'Pravi bazeni u pravim dvorištima'
+  subtitle: 'Kako vlasnici Felizbayja postavljaju, koriste i skladište svoje bazene tokom sezone.'

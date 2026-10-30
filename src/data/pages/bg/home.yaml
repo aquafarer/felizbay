@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Идеи за басейн
   title: Правилният басейн за<br />Вашето пространство
   subtitle: Реални настройки, реални размери и честни насоки за избор на правилния басейн.
+  idea_kicker: 'Идея за басейн'
+  explore_label: 'Разгледайте тази подредба'
+  all_title: 'Всички идеи за басейни'
+  all_subtitle: 'Разгледайте всички сценарии за дворове'
+  view_all_label: 'Вижте всички'
 content_categories:
   tagline: Магазин Басейни
   title: Разгледайте нашите басейни
   subtitle: Сравнете форми, размери и характеристики, за да намерите правилния басейн за вашия двор или открито пространство.
+  view_all: 'Вижте всички басейни'
 content_compliance:
   tagline: Грижи и безопасност
   title: Лесен за притежаване,<br />Лесен за обичане
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Всички колекции: 4–5 PSI drop-stitch стени, 5–15 минути надуване, съхранение на опаковката. Отоплението и филтрацията са външни - нагревателите и филтърните помпи се продават отделно.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Защо Felizbay'
+  title: 'Защо да изберете басейн Felizbay Drop Stitch?'
+  subtitle: 'Изберете басейн според наличното пространство, начина, по който планирате да го използвате, и функциите, които са най-важни за вас.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Създаден за живот на открито'
+      description: 'Разгледайте възможности за басейни за отдих в двора, семейно време във водата, къпане на открито и сезонни ваканционни имоти.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Разгледайте идеите за басейни'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Сравнете реалните спецификации на продуктите'
+      description: 'Прегледайте размерите, капацитета на водата, препоръчаното работно налягане, включените аксесоари и изискванията за инсталация, преди да изберете.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Вижте спецификациите'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Разберете конструкцията Drop Stitch'
+      description: 'Научете как работи вътрешната структура, какво означава тя за формата и съхранението на басейна и как производителността зависи от правилното надуване и монтаж.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Прочетете ръководството'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Изберете с увереност'
+      description: 'Получете достъп до ръководствата за продукти, инструкциите за поддръжка, гаранционните условия и поддръжката, за да прецените дали басейн Felizbay отговаря на нуждите ви.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Прочетете често задаваните въпроси'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Истории на клиенти'
+  title: 'Истински басейни в истински дворове'
+  subtitle: 'Как собствениците на Felizbay монтират, използват и съхраняват басейните си през сезона.'

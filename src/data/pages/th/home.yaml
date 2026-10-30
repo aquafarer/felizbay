@@ -45,10 +45,16 @@ content_customer_types:
   tagline: ไอเดียสระว่ายน้ำ
   title: สระน้ำที่เหมาะสมสำหรับ<br />พื้นที่ของคุณ
   subtitle: การตั้งค่าจริง ขนาดจริง และคำแนะนำที่ซื่อสัตย์ในการเลือกสระว่ายน้ำที่เหมาะสม
+  idea_kicker: 'ไอเดียสระน้ำ'
+  explore_label: 'ดูการจัดวางนี้'
+  all_title: 'ไอเดียสระน้ำทั้งหมด'
+  all_subtitle: 'เลือกชมทุกสไตล์พื้นที่หลังบ้าน'
+  view_all_label: 'ดูทั้งหมด'
 content_categories:
   tagline: ร้านค้าสระว่ายน้ำ
   title: สำรวจสระน้ำของเรา
   subtitle: เปรียบเทียบรูปทรง ขนาด และคุณลักษณะต่างๆ เพื่อค้นหาสระว่ายน้ำที่เหมาะสมสำหรับสวนหลังบ้านหรือพื้นที่กลางแจ้งของคุณ
+  view_all: 'ดูสระน้ำทั้งหมด'
 content_compliance:
   tagline: การดูแลและความปลอดภัย
   title: เป็นเจ้าของได้ง่ายๆ<br />รักง่าย
@@ -160,27 +166,32 @@ compare_collections:
   note: 'คอลเลกชันทั้งหมด: ผนัง 4–5 PSI drop-stitch, การสูบลม 5–15 นาที, พื้นที่จัดเก็บแบบแพ็คแยก การทำความร้อนและการกรองเป็นแบบภายนอก - เครื่องทำความร้อนและปั๊มกรองจำหน่ายแยกต่างหาก'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'ทำไมต้อง Felizbay'
+  title: 'ทำไมต้องเลือกสระน้ำ Drop Stitch ของ Felizbay?'
+  subtitle: 'เลือกสระน้ำตามพื้นที่ของคุณ แผนการใช้งาน และฟีเจอร์ที่สำคัญที่สุดสำหรับคุณ'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'ออกแบบเพื่อการใช้ชีวิตกลางแจ้ง'
+      description: 'สำรวจตัวเลือกสระน้ำสำหรับพักผ่อนในสวนหลังบ้าน กิจกรรมน้ำสำหรับครอบครัว การแช่น้ำกลางแจ้ง และบ้านพักตากอากาศตามฤดูกาล'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'ดูไอเดียสระน้ำ'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'เปรียบเทียบสเปกสินค้าจริง'
+      description: 'ตรวจสอบขนาด ความจุน้ำ แรงดันใช้งานที่แนะนำ อุปกรณ์ที่รวมมา และข้อกำหนดการติดตั้งก่อนตัดสินใจ'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'ดูสเปก'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'เข้าใจโครงสร้าง Drop Stitch'
+      description: 'เรียนรู้ว่าโครงสร้างภายในทำงานอย่างไร ส่งผลต่อรูปทรงและการจัดเก็บอย่างไร และประสิทธิภาพของสินค้าขึ้นอยู่กับการสูบลมและการติดตั้งที่ถูกต้องอย่างไร'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'อ่านคู่มือ'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'เลือกอย่างมั่นใจ'
+      description: 'เข้าถึงคู่มือสินค้า คำแนะนำการดูแล รายละเอียดการรับประกัน และฝ่ายสนับสนุน เพื่อช่วยพิจารณาว่าสระน้ำ Felizbay เหมาะกับความต้องการของคุณหรือไม่'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'อ่านคำถามที่พบบ่อย'
       cta_href: /faq
+
+content_stories:
+  tagline: 'เรื่องราวจากลูกค้า'
+  title: 'สระน้ำจริงในสวนหลังบ้านจริง'
+  subtitle: 'เจ้าของ Felizbay ติดตั้ง ใช้งาน และเก็บสระน้ำอย่างไรตลอดฤดูกาล'

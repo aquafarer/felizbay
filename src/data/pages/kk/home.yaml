@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Бассейн идеялары
   title: Дұрыс бассейн<br />Сіздің кеңістігіңіз
   subtitle: Нақты орнатулар, нақты өлшемдер және дұрыс пулды таңдауға арналған шынайы нұсқаулар.
+  idea_kicker: 'Бассейн идеясы'
+  explore_label: 'Бұл орналастыруды қараңыз'
+  all_title: 'Барлық бассейн идеялары'
+  all_subtitle: 'Барлық аула сценарийлерін шолыңыз'
+  view_all_label: 'Барлығын көру'
 content_categories:
   tagline: Дүкен бассейндері
   title: Біздің бассейндерімізді зерттеңіз
   subtitle: Аулаға немесе сыртқы кеңістікке сәйкес бассейнді табу үшін пішіндерді, өлшемдерді және мүмкіндіктерді салыстырыңыз.
+  view_all: 'Барлық бассейндерді көру'
 content_compliance:
   tagline: Күтім және қауіпсіздік
   title: Меншікке оңай,<br />Сүйу оңай
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Барлық жинақтар: 4–5 PSI drop-stitch қабырғалары, 5–15 мин инфляция, қаптамада сақтау. Жылыту және сүзу сыртқы болып табылады — жылытқыштар мен сүзгі сорғылары бөлек сатылады.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Неліктен Felizbay'
+  title: 'Felizbay Drop Stitch бассейнін неге таңдау керек?'
+  subtitle: 'Бассейнді қолда бар кеңістігіңізге, оны қалай пайдалануды жоспарлағаныңызға және сіз үшін ең маңызды функцияларға қарай таңдаңыз.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Дала өміріне арналған'
+      description: 'Аулада демалыс, отбасымен су шомылу, далада шомылу және маусымдық демалыс үйлері үшін бассейн нұсқаларын қараңыз.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Бассейн идеяларын шолу'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Нақты өнім сипаттамаларын салыстырыңыз'
+      description: 'Таңдау жасамас бұрын өлшемдерді, су сыйымдылығын, ұсынылатын жұмыс қысымын, кіретін аксессуарларды және орнату талаптарын қараңыз.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Сипаттамаларды көру'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Drop Stitch құрылымын түсініңіз'
+      description: 'Ішкі құрылым қалай жұмыс істейтінін, оның бассейн пішіні мен сақтауға қандай мағына беретінін және өнім сапасы дұрыс үрлеу мен орнатуға қалай тәуелді екенін біліңіз.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Нұсқаулықты оқу'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Сеніммен таңдаңыз'
+      description: 'Felizbay бассейні қажеттіліктеріңізге сәйкес келетінін анықтау үшін өнім нұсқаулықтарына, күту нұсқауларына, кепілдік мәліметтеріне және қолдауға қол жеткізіңіз.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'FAQ оқу'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Тұтынушылардың әңгімелері'
+  title: 'Нақты аулалардағы нақты бассейндер'
+  subtitle: 'Felizbay иелері бассейндерін маусым бойы қалай орнатады, пайдаланады және сақтайды.'

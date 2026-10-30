@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Medence ötletek
   title: A megfelelő medence<br />A te tered
   subtitle: Valódi beállítások, valós méretek és őszinte útmutatás a megfelelő medence kiválasztásához.
+  idea_kicker: 'Medenceötlet'
+  explore_label: 'Fedezze fel ezt a megoldást'
+  all_title: 'Összes medenceötlet'
+  all_subtitle: 'Tekintse meg az összes kerti megoldást'
+  view_all_label: 'Összes megtekintése'
 content_categories:
   tagline: Vásároljon medencéket
   title: Fedezze fel medencéinket
   subtitle: Hasonlítsa össze a formákat, méreteket és jellemzőket, hogy megtalálja a megfelelő medencét kertjében vagy kültéri helyiségében.
+  view_all: 'Összes medence megtekintése'
 content_compliance:
   tagline: Gondozás és biztonság
   title: Könnyen birtokolható,<br />Könnyű Szeretni
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Minden kollekció: 4–5 PSI drop-stitch falak, 5–15 perces felfújás, elcsomagolt tárolás. A fűtés és a szűrés külső – a fűtőelemek és a szűrőszivattyúk külön vásárolhatók meg.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Miért Felizbay'
+  title: 'Miért válasszon Felizbay Drop Stitch medencét?'
+  subtitle: 'Válasszon medencét a rendelkezésre álló hely, a tervezett használat és az Ön számára legfontosabb funkciók alapján.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Szabadtéri élethez tervezve'
+      description: 'Fedezze fel a medencelehetőségeket kerti pihenéshez, családi vízi időtöltéshez, szabadtéri áztatáshoz és szezonális nyaralókhoz.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Medenceötletek böngészése'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Valódi termékspecifikációk összehasonlítása'
+      description: 'Tekintse át a méreteket, a vízkapacitást, az ajánlott üzemi nyomást, a mellékelt kiegészítőket és a telepítési követelményeket, mielőtt dönt.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Specifikációk megtekintése'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Ismerje meg a Drop Stitch szerkezetet'
+      description: 'Tudja meg, hogyan működik a belső szerkezet, mit jelent a medence alakja és tárolása szempontjából, valamint hogyan függ a termék teljesítménye a megfelelő felfújástól és beállítástól.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Olvassa el az útmutatót'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Válasszon magabiztosan'
+      description: 'Érje el a termékkézikönyveket, a karbantartási utasításokat, a garancia részleteit és a támogatást, hogy eldönthesse, megfelelő-e Önnek egy Felizbay medence.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Olvassa el a GYIK-et'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Ügyféltörténetek'
+  title: 'Valódi medencék valódi kertekben'
+  subtitle: 'Hogyan állítják fel, használják és tárolják Felizbay-tulajdonosok a medencéjüket a szezon alatt.'

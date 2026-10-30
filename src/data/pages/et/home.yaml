@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Basseini ideed
   title: Õige bassein<br />Sinu ruum
   subtitle: Tõelised seadistused, tegelikud suurused ja ausad juhised õige basseini valimiseks.
+  idea_kicker: 'Basseiniidee'
+  explore_label: 'Vaata seda lahendust'
+  all_title: 'Kõik basseiniideed'
+  all_subtitle: 'Sirvi kõiki tagaaia stsenaariume'
+  view_all_label: 'Vaata kõiki'
 content_categories:
   tagline: Ostke basseinid
   title: Tutvuge meie basseinidega
   subtitle: Võrrelge kujusid, suurusi ja funktsioone, et leida oma tagahoovi või väliruumi jaoks õige bassein.
+  view_all: 'Vaata kõiki basseine'
 content_compliance:
   tagline: Hooldus ja ohutus
   title: Lihtne omada,<br />Lihtne armastada
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Kõik kollektsioonid: 4–5 PSI drop-stitch seinad, täitmine 5–15 minutit, pakitav hoiuruum. Küte ja filtreerimine on välised — küttekehad ja filtripumbad müüakse eraldi.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Miks Felizbay'
+  title: 'Miks valida Felizbay Drop Stitch bassein?'
+  subtitle: 'Valige bassein vastavalt oma ruumile, plaanitavale kasutusele ja teie jaoks kõige olulisematele omadustele.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Loodud elamiseks õues'
+      description: 'Avastage basseinivõimalusi tagaaia lõõgastuseks, pere veega veetmiseks, õues lebumiseks ja hooajalisteks puhkekeskusteks.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Sirvi basseiniideid'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Võrrelge tegelikke tootespetsifikatsioone'
+      description: 'Enne valimist vaadake üle mõõtmed, veemaht, soovitatud töörõhk, kaasasolev lisavarustus ja paigaldusnõuded.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Vaata spetsifikatsioone'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Mõistke Drop Stitch ehitust'
+      description: 'Tutvuge, kuidas sisemine struktuur töötab, mida see tähendab basseini kuju ja ladustamise jaoks ning kuidas sõltub toote jõudlus õigest puhumisest ja paigaldusest.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Loe juhendit'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Valige kindlalt'
+      description: 'Pöörduge tootejuhendite, hooldusjuhiste, garantiitingimuste ja toe poole, et selgitada välja, kas Felizbay bassein teile sobib.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Loe KKK-d'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Klientide lood'
+  title: 'Päris basseinid päris tagaaedades'
+  subtitle: 'Kuidas Felizbay omanikud paigaldavad, kasutavad ja hoiavad oma basseine hooaja vältel.'

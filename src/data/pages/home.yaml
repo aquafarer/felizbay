@@ -66,11 +66,22 @@ content_customer_types:
   tagline: Pool Ideas
   title: 'The Right Pool for<br />Your Space'
   subtitle: 'Real setups, real sizes, and honest guidance for choosing the right pool.'
+  idea_kicker: 'Pool Idea'
+  explore_label: 'Explore this setup'
+  all_title: 'All Pool Ideas'
+  all_subtitle: 'Browse every backyard scenario'
+  view_all_label: 'View all'
 
 content_categories:
   tagline: Shop Pools
   title: 'Explore Our Pools'
   subtitle: 'Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.'
+  view_all: 'View All Pools'
+
+content_stories:
+  tagline: 'Customer Stories'
+  title: 'Real Pools in Real Backyards'
+  subtitle: 'How Felizbay owners set up, swim, and store their pools through the season.'
 
 content_compliance:
   tagline: Care & Safety

@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Ide Kolam Renang
   title: Kolam yang Tepat untuk<br />Ruang Anda
   subtitle: Pengaturan nyata, ukuran nyata, dan panduan jujur ​​​​untuk memilih kolam yang tepat.
+  idea_kicker: 'Ide Kolam'
+  explore_label: 'Jelajahi pengaturan ini'
+  all_title: 'Semua Ide Kolam'
+  all_subtitle: 'Jelajahi setiap skenario halaman belakang'
+  view_all_label: 'Lihat semua'
 content_categories:
   tagline: Kolam Toko
   title: Jelajahi Kolam Renang Kami
   subtitle: Bandingkan bentuk, ukuran, dan fitur untuk menemukan kolam yang tepat untuk halaman belakang atau ruang luar ruangan Anda.
+  view_all: 'Lihat Semua Kolam'
 content_compliance:
   tagline: Perawatan & Keamanan
   title: Mudah untuk Dimiliki,<br />Mudah untuk Mencintai
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Semua koleksi: dinding drop-stitch 4–5 PSI, inflasi 5–15 menit, penyimpanan dalam satu paket. Pemanasan dan filtrasi bersifat eksternal — pemanas dan pompa filter dijual terpisah.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Mengapa Felizbay'
+  title: 'Mengapa Memilih Kolam Drop Stitch Felizbay?'
+  subtitle: 'Pilihlah kolam berdasarkan ruang yang Anda miliki, cara Anda berencana menggunakannya, dan fitur yang paling penting bagi Anda.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Dirancang untuk Kehidupan Luar Ruangan'
+      description: 'Jelajahi opsi kolam untuk relaksasi di halaman belakang, waktu bersama keluarga di air, berendam di luar ruangan, dan properti liburan musiman.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Jelajahi Ide Kolam'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Bandingkan Spesifikasi Produk Nyata'
+      description: 'Tinjau dimensi, kapasitas air, tekanan operasi yang direkomendasikan, aksesori yang disertakan, dan persyaratan pemasangan sebelum memilih.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Lihat Spesifikasi'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Pahami Konstruksi Drop Stitch'
+      description: 'Pelajari bagaimana struktur internal bekerja, apa artinya bagi bentuk dan penyimpanan kolam, serta bagaimana kinerja produk bergantung pada penggelembungan dan pemasangan yang benar.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Baca Panduannya'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Pilih dengan Percaya Diri'
+      description: 'Akses manual produk, instruksi perawatan, detail garansi, dan dukungan untuk membantu menentukan apakah kolam Felizbay sesuai dengan kebutuhan Anda.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Baca FAQ'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Kisah Pelanggan'
+  title: 'Kolam Nyata di Halaman Belakang Nyata'
+  subtitle: 'Bagaimana pemilik Felizbay memasang, menggunakan, dan menyimpan kolam mereka sepanjang musim.'

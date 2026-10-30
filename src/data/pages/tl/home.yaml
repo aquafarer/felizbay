@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Mga Ideya sa Pool
   title: Ang Tamang Pool para sa<br />Ang iyong Space
   subtitle: Mga totoong setup, totoong laki, at tapat na gabay para sa pagpili ng tamang pool.
+  idea_kicker: 'Ideya ng Pool'
+  explore_label: 'Tuklasin ang setup na ito'
+  all_title: 'Lahat ng Ideya ng Pool'
+  all_subtitle: 'Tuklasin ang lahat ng senaryo ng bakuran'
+  view_all_label: 'Tingnan lahat'
 content_categories:
   tagline: Mamili ng Pool
   title: Galugarin ang Aming Mga Pool
   subtitle: Ihambing ang mga hugis, sukat, at feature para mahanap ang tamang pool para sa iyong likod-bahay o panlabas na espasyo.
+  view_all: 'Tingnan Lahat ng Pool'
 content_compliance:
   tagline: Pangangalaga at Kaligtasan
   title: Madaling pagmamay-ari,<br />Madaling Magmahal
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Lahat ng koleksyon: 4–5 PSI drop-stitch wall, 5–15 min inflation, pack-away storage. Ang pagpainit at pagsasala ay panlabas — ang mga heater at filter na bomba ay ibinebenta nang hiwalay.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Bakit Felizbay'
+  title: 'Bakit Pumili ng Felizbay Drop Stitch Pool?'
+  subtitle: 'Pumili ng pool batay sa iyong espasyo, kung paano mo ito balak gamitin, at ang mga feature na pinakamahalaga sa iyo.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Dinisenyo para sa Pamumuhay sa Labas'
+      description: 'Tuklasin ang mga opsyon ng pool para sa pag-relax sa bakuran, oras ng pamilya sa tubig, paglalango sa labas, at mga seasonal na vacation property.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Tingnan ang mga Ideya ng Pool'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Ikumpara ang Totoong Spec ng Produkto'
+      description: 'Suriin ang mga sukat, kapasidad ng tubig, inirerekomendang operating pressure, kasamang accessories, at mga kinakailangan sa pag-install bago pumili.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Tingnan ang mga Specification'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Unawain ang Drop Stitch Construction'
+      description: 'Alamin kung paano gumagana ang internal na istraktura, ano ang ibig sabihin nito sa hugis at imbakan ng pool, at kung paano nakadepende ang performance ng produkto sa tamang pagpapalaki at pag-setup.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Basahin ang Gabay'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Pumili nang may Kumpiyansa'
+      description: 'I-access ang mga manwal ng produkto, mga tagubilin sa pag-aalaga, detalye ng warranty, at suporta para matukoy kung ang Felizbay pool ay angkop sa iyong mga pangangailangan.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Basahin ang FAQ'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Kuwento ng mga Customer'
+  title: 'Totoong Pool sa Totoong Bakuran'
+  subtitle: 'Kung paano nagse-set up, lumalangoy at nag-iimbak ng kanilang mga pool ang mga may-ari ng Felizbay sa buong season.'

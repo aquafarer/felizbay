@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Allas ideoita
   title: Oikea allas<br />Sinun tilasi
   subtitle: Todelliset asetukset, todelliset koot ja rehellinen opastus oikean altaan valinnassa.
+  idea_kicker: 'Allasidea'
+  explore_label: 'Tutustu tähän toteutukseen'
+  all_title: 'Kaikki allasideat'
+  all_subtitle: 'Selaa kaikkia pihaskenaarioita'
+  view_all_label: 'Näytä kaikki'
 content_categories:
   tagline: Osta altaat
   title: Tutustu altaihimme
   subtitle: Vertaile muotoja, kokoja ja ominaisuuksia löytääksesi oikean uima-altaan takapihallesi tai ulkotilaan.
+  view_all: 'Näytä kaikki altaat'
 content_compliance:
   tagline: Huolto ja turvallisuus
   title: Helppo omistaa,<br />Helppo rakastaa
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Lue UKK'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Asiakastarinat'
+  title: 'Oikeita altaita oikeissa pihoissa'
+  subtitle: 'Miten Felizbay-omistajat pystyttävät, käyttävät ja säilyttävät allastaan kauden ajan.'

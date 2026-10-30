@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Bassengideer
   title: Rett basseng for<br />Din plass
   subtitle: Ekte oppsett, ekte størrelser og ærlig veiledning for å velge riktig basseng.
+  idea_kicker: 'Bassengidé'
+  explore_label: 'Utforsk denne løsningen'
+  all_title: 'Alle bassengideer'
+  all_subtitle: 'Utforsk alle hagescenarier'
+  view_all_label: 'Se alle'
 content_categories:
   tagline: Handle bassenger
   title: Utforsk bassengene våre
   subtitle: Sammenlign former, størrelser og funksjoner for å finne det riktige bassenget for din bakgård eller uteplass.
+  view_all: 'Se alle bassenger'
 content_compliance:
   tagline: Omsorg og sikkerhet
   title: Lett å eie,<br />Lett å elske
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Les vanlige spørsmål'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Kundehistorier'
+  title: 'Ekte bassenger i ekte hager'
+  subtitle: 'Hvordan Felizbay-eiere setter opp, bruker og oppbevarer bassengene sine gjennom sesongen.'

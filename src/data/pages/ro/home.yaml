@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Idei de piscină
   title: Piscina potrivită pentru<br />Spațiul tău
   subtitle: Configurații reale, dimensiuni reale și îndrumări sincere pentru alegerea piscinei potrivite.
+  idea_kicker: 'Idei de piscină'
+  explore_label: 'Explorează acest aranjament'
+  all_title: 'Toate ideile de piscină'
+  all_subtitle: 'Răsfoiește toate scenariile de curte'
+  view_all_label: 'Vezi tot'
 content_categories:
   tagline: Piscine de magazin
   title: Explorați piscinele noastre
   subtitle: Comparați formele, dimensiunile și caracteristicile pentru a găsi piscina potrivită pentru curtea din spate sau spațiul în aer liber.
+  view_all: 'Vezi toate piscinele'
 content_compliance:
   tagline: Îngrijire și siguranță
   title: Ușor de deținut,<br />Ușor de iubit
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Toate colecțiile: pereți drop-stitch de 4–5 PSI, umflare 5–15 min, depozitare la pachet. Încălzirea și filtrarea sunt externe - încălzitoarele și pompele de filtru sunt vândute separat.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'De ce Felizbay'
+  title: 'De ce să alegeți o piscină Drop Stitch Felizbay?'
+  subtitle: 'Alegeți o piscină în funcție de spațiul disponibil, modul în care intenționați să o folosiți și caracteristicile cele mai importante pentru dumneavoastră.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Proiectat pentru viața în aer liber'
+      description: 'Explorați opțiuni de piscine pentru relaxare în curte, momente de apă în familie, îmbăiere în aer liber și proprietăți de vacanță sezoniere.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Răsfoiți ideile de piscine'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Comparați specificațiile reale ale produselor'
+      description: 'Verificați dimensiunile, capacitatea de apă, presiunea de operare recomandată, accesoriile incluse și cerințele de instalare înainte de a alege.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Vezi specificațiile'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Înțelegeți construcția Drop Stitch'
+      description: 'Aflați cum funcționează structura internă, ce înseamnă pentru forma și depozarea piscinei și cum depinde performanța produsului de umflare și instalarea corectă.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Citiți ghidul'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Alegeți cu încredere'
+      description: 'Accesați manualele produselor, instrucțiunile de îngrijire, detaliile garanției și asistența pentru a stabili dacă o piscină Felizbay vi se potrivește.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Citiți întrebările frecvente'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Povești ale clienților'
+  title: 'Piscini reale în curți reale'
+  subtitle: 'Cum instalează, folosesc și depozitează proprietarii Felizbay piscinele pe parcursul sezonului.'

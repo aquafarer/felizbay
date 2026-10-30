@@ -45,10 +45,16 @@ content_customer_types:
   tagline: أفكار تجمع
   title: المسبح المناسب ل<br />المساحة الخاصة بك
   subtitle: إعدادات حقيقية وأحجام حقيقية وإرشادات صادقة لاختيار حمام السباحة المناسب.
+  idea_kicker: 'فكرة مسبح'
+  explore_label: 'استكشف هذا التصميم'
+  all_title: 'جميع أفكار المسابح'
+  all_subtitle: 'تصفح جميع سيناريوهات الحدائق'
+  view_all_label: 'عرض الكل'
 content_categories:
   tagline: تسوق حمامات السباحة
   title: استكشف حمامات السباحة لدينا
   subtitle: قارن الأشكال والأحجام والميزات للعثور على حمام السباحة المناسب للفناء الخلفي أو المساحة الخارجية.
+  view_all: 'عرض جميع المسابح'
 content_compliance:
   tagline: الرعاية والسلامة
   title: سهل التملك،<br />من السهل أن تحب
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'اقرأ الأسئلة الشائعة'
       cta_href: /faq
+
+content_stories:
+  tagline: 'قصص العملاء'
+  title: 'مسابح حقيقية في حدائق حقيقية'
+  subtitle: 'كيف يقوم مالكو Felizbay بتركيب مسابحهم والسباحة فيها وتخزينها طوال الموسم.'

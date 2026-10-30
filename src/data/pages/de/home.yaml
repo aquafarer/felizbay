@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Pool-Ideen
   title: Der richtige Pool für<br />Dein Raum
   subtitle: Echte Aufbauten, echte Größen und ehrliche Beratung zur Auswahl des richtigen Pools.
+  idea_kicker: 'Pool-Idee'
+  explore_label: 'Diesen Aufbau entdecken'
+  all_title: 'Alle Pool-Ideen'
+  all_subtitle: 'Alle Gartenszenarien entdecken'
+  view_all_label: 'Alle ansehen'
 content_categories:
   tagline: Shop-Pools
   title: Entdecken Sie unsere Pools
   subtitle: Vergleichen Sie Formen, Größen und Funktionen, um den richtigen Pool für Ihren Garten oder Außenbereich zu finden.
+  view_all: 'Alle Pools ansehen'
 content_compliance:
   tagline: Pflege und Sicherheit
   title: Einfach zu besitzen,<br />Leicht zu lieben
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Häufige Fragen'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Kundenstimmen'
+  title: 'Echte Pools in echten Gärten'
+  subtitle: 'Wie Felizbay-Besitzer ihre Pools aufbauen, benutzen und über die Saison lagern.'

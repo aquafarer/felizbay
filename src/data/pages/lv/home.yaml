@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Baseina idejas
   title: Piemērots baseins<br />Jūsu telpa
   subtitle: Īsti iestatījumi, reāli izmēri un godīgi norādījumi pareizā baseina izvēlē.
+  idea_kicker: 'Baseina ideja'
+  explore_label: 'Apskatiet šo iekārtojumu'
+  all_title: 'Visas baseina idejas'
+  all_subtitle: 'Pārlūkojiet visus pagalma scenārijus'
+  view_all_label: 'Skatīt visu'
 content_categories:
   tagline: Veikals baseini
   title: Izpētiet mūsu baseinus
   subtitle: Salīdziniet formas, izmērus un funkcijas, lai atrastu savam pagalmam vai āra telpai piemērotāko baseinu.
+  view_all: 'Skatīt visus baseinus'
 content_compliance:
   tagline: Aprūpe un drošība
   title: Viegli iegūt īpašumā,<br />Viegli mīlēt
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Visas kolekcijas: 4–5 PSI drop-stitch sienas, 5–15 min piepūšana, iesaiņojuma uzglabāšana. Apkure un filtrēšana ir ārējā — sildītāji un filtru sūkņi tiek pārdoti atsevišķi.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Kāpēc Felizbay'
+  title: 'Kāpēc izvēlēties Felizbay Drop Stitch baseinu?'
+  subtitle: 'Izvēlieties baseinu atbilstoši jūsu telpai, plānotajai lietošanai un funkcijām, kas jums ir svarīgākās.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Radīts dzīvošanai ārā'
+      description: 'Atklājiet baseinu iespējas atpūtai pagalmā, ģimenes laikam ūdenī, mērcēšanai ārā un sezonālām atpūtas vietām.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Pārlūkot baseina idejas'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Salīdziniet reālās produkta specifikācijas'
+      description: 'Pirms izvēles pārbaudiet izmērus, ūdens tilpumu, ieteikto darba spiedienu, iekļautos piederumus un uzstādīšanas prasības.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Skatīt specifikācijas'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Izprotiet Drop Stitch konstrukciju'
+      description: 'Uzziniet, kā darbojas iekšējā struktūra, ko tas nozīmē baseina formai un uzglabāšanai un kā produkta veiktspēja atkarīga no pareizas uzpūšanas un uzstādīšanas.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Lasīt ceļvedi'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Izvēlieties ar pārliecību'
+      description: 'Izmantojiet produktu rokasgrāmatas, kopšanas instrukcijas, garantijas informāciju un atbalstu, lai noskaidrotu, vai Felizbay baseins atbilst jūsu vajadzībām.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Lasīt BUJ'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Klientu stāsti'
+  title: 'Īsti baseini īstos pagalmos'
+  subtitle: 'Kā Felizbay īpašnieki uzstāda, izmanto un glabā savus baseinus visas sezonas garumā.'

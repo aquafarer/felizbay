@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Zwembadideeën
   title: Het juiste zwembad voor<br />Jouw ruimte
   subtitle: Echte opstellingen, echte maten en eerlijke begeleiding bij het kiezen van het juiste zwembad.
+  idea_kicker: 'Zwembadidee'
+  explore_label: 'Bekijk deze opstelling'
+  all_title: 'Alle zwembadideeën'
+  all_subtitle: 'Ontdek alle tuinscenario’s'
+  view_all_label: 'Alles bekijken'
 content_categories:
   tagline: Winkel zwembaden
   title: Ontdek onze zwembaden
   subtitle: Vergelijk vormen, maten en kenmerken om het juiste zwembad voor uw achtertuin of buitenruimte te vinden.
+  view_all: 'Alle zwembaden bekijken'
 content_compliance:
   tagline: Zorg en veiligheid
   title: Gemakkelijk te bezitten,<br />Makkelijk om lief te hebben
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Lees de FAQ'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Klantverhalen'
+  title: 'Echte zwembaden in echte tuinen'
+  subtitle: 'Hoe Felizbay-eigenaren hun zwembad opzetten, gebruiken en bewaren gedurende het seizoen.'

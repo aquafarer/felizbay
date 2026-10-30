@@ -45,10 +45,16 @@ content_customer_types:
   tagline: ایده های استخر
   title: استخر مناسب برای<br />فضای شما
   subtitle: تنظیمات واقعی، اندازه های واقعی و راهنمایی صادقانه برای انتخاب استخر مناسب.
+  idea_kicker: 'ایده استخر'
+  explore_label: 'این چیدمان را ببینید'
+  all_title: 'همه ایده‌های استخر'
+  all_subtitle: 'همه سناریوهای حیاط خلوت را مرور کنید'
+  view_all_label: 'مشاهده همه'
 content_categories:
   tagline: استخرهای فروشگاهی
   title: استخرهای ما را کاوش کنید
   subtitle: شکل‌ها، اندازه‌ها و ویژگی‌ها را با هم مقایسه کنید تا استخر مناسب برای حیاط خلوت یا فضای بیرونی خود پیدا کنید.
+  view_all: 'مشاهده همه استخرها'
 content_compliance:
   tagline: مراقبت و ایمنی
   title: داشتن آسان،<br />دوست داشتن آسان
@@ -160,27 +166,32 @@ compare_collections:
   note: 'همه مجموعه ها: 4 تا 5 دیوار PSI drop-stitch، باد کردن 5 تا 15 دقیقه، ذخیره سازی بسته. گرمایش و فیلتراسیون خارجی هستند - بخاری ها و پمپ های فیلتر جداگانه فروخته می شوند.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'چرا Felizbay'
+  title: 'چرا استخر Drop Stitch Felizbay را انتخاب کنیم؟'
+  subtitle: 'استخر را بر اساس فضای موجود، نحوه استفاده برنامه‌ریزی‌شده و ویژگی‌هایی که برایتان مهم‌تر است انتخاب کنید.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'طراحی‌شده برای زندگی در فضای باز'
+      description: 'گزینه‌های استخر برای استراحت در حیاط، وقت‌گذرانی آبی خانوادگی، خیساندن در فضای باز و املاک تفریحی فصلی را کاوش کنید.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'مرور ایده‌های استخر'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'مقایسه مشخصات واقعی محصولات'
+      description: 'قبل از انتخاب، ابعاد، ظرفیت آب، فشار کار توصیه‌شده، لوازم همراه و الزامات نصب را بررسی کنید.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'مشاهده مشخصات'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'درک ساختار Drop Stitch'
+      description: 'ببینید ساختار داخلی چگونه کار می‌کند، برای شکل و نگهداری استخر چه معنایی دارد و عملکرد محصول چگونه به باد کردن و نصب صحیح بستگی دارد.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'خواندن راهنما'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'با اطمینان انتخاب کنید'
+      description: 'به راهنماهای محصول، دستورالعمل‌های نگهداری، جزئیات گارانتی و پشتیبانی دسترسی داشته باشید تا تشخیص دهید استخر Felizbay با نیازهایتان سازگار است یا نه.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'خواندن سوالات متداول'
       cta_href: /faq
+
+content_stories:
+  tagline: 'تجربه مشتریان'
+  title: 'استخرهای واقعی در حیاط‌های واقعی'
+  subtitle: 'مالکان Felizbay چگونه استخر خود را در طول فصل نصب، استفاده و نگهداری می‌کنند.'

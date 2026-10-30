@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Nápady na bazén
   title: Správný bazén pro<br />Váš prostor
   subtitle: Skutečná nastavení, skutečné velikosti a poctivé rady pro výběr správného bazénu.
+  idea_kicker: 'Nápad na bazén'
+  explore_label: 'Prozkoumat toto řešení'
+  all_title: 'Všechny nápady na bazén'
+  all_subtitle: 'Procházejte všechny scénáře zahrady'
+  view_all_label: 'Zobrazit vše'
 content_categories:
   tagline: Obchod Pools
   title: Prozkoumejte naše bazény
   subtitle: Porovnejte tvary, velikosti a vlastnosti a najděte ten správný bazén pro váš dvorek nebo venkovní prostor.
+  view_all: 'Zobrazit všechny bazény'
 content_compliance:
   tagline: Péče a bezpečnost
   title: Snadné vlastnictví,<br />Snadno milovat
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Číst často kladené otázky'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Příběhy zákazníků'
+  title: 'Skutečné bazény ve skutečných zahradách'
+  subtitle: 'Jak majitelé Felizbay staví, používají a ukládají své bazény během sezóny.'

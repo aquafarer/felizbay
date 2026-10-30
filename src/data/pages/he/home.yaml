@@ -45,10 +45,16 @@ content_customer_types:
   tagline: רעיונות לבריכה
   title: הבריכה הנכונה עבור<br />המרחב שלך
   subtitle: הגדרות אמיתיות, גדלים אמיתיים והדרכה כנה לבחירת הבריכה הנכונה.
+  idea_kicker: 'רעיון לבריכה'
+  explore_label: 'גלו את העיצוב הזה'
+  all_title: 'כל הרעיונות לבריכות'
+  all_subtitle: 'עיינו בכל תרחישי החצר'
+  view_all_label: 'הצג הכול'
 content_categories:
   tagline: חנות בריכות
   title: חקור את הבריכות שלנו
   subtitle: השווה צורות, גדלים ותכונות כדי למצוא את הבריכה המתאימה לחצר האחורית או לחלל החיצוני שלך.
+  view_all: 'הצג את כל הבריכות'
 content_compliance:
   tagline: טיפול ובטיחות
   title: קל לבעלות,<br />קל לאהוב
@@ -160,27 +166,32 @@ compare_collections:
   note: 'כל הקולקציות: קירות 4-5 PSI drop-stitch, ניפוח של 5-15 דקות, אחסון לארוז. חימום וסינון הם חיצוניים - תנורי חימום ומשאבות מסננים נמכרים בנפרד.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'למה Felizbay'
+  title: 'למה לבחור בבריכת Drop Stitch של Felizbay?'
+  subtitle: 'בחרו בריכה לפי השטח שלכם, אופן השימוש המתוכנן והתכונות שהכי חשובות לכם.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'מעוצב לחיים בחוץ'
+      description: 'גלו אפשרויות בריכה לרגיעה בחצר, זמן מים משפחתי, רביצה בחוץ ונכסי נופש עונתיים.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'עיינו ברעיונות לבריכות'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'השוו מפרטי מוצר אמיתיים'
+      description: 'בדקו ממדים, קיבולת מים, לחץ עבודה מומלץ, אביזרים כלולים ודרישות התקנה לפני שאתם בוחרים.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'צפו במפרט'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'הבינו את מבנה ה-Drop Stitch'
+      description: 'למדו כיצד המבנה הפנימי פועל, מה המשמעות שלו לצורת הבריכה ולאחסון, וכיצד ביצועי המוצר תלויים בניפוח ובהתקנה נכונים.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'קראו את המדריך'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'בחרו בביטחון'
+      description: 'גשו למדריכי מוצר, הוראות טיפול, פרטי אחריות ותמיכה שיעזרו לכם להחליט אם בריכת Felizbay מתאימה לצרכים שלכם.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'קראו את השאלות הנפוצות'
       cta_href: /faq
+
+content_stories:
+  tagline: 'סיפורי לקוחות'
+  title: 'בריכות אמיתיות בחצרות אמיתיות'
+  subtitle: 'איך בעלי Felizbay מקימים, שוחים ומאחסנים את הבריכות שלהם לאורך העונה.'

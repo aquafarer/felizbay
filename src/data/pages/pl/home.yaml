@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Pomysły na basen
   title: Właściwy basen dla<br />Twoja przestrzeń
   subtitle: Prawdziwe konfiguracje, prawdziwe rozmiary i uczciwe wskazówki dotyczące wyboru odpowiedniego basenu.
+  idea_kicker: 'Pomysł na basen'
+  explore_label: 'Zobacz tę aranżację'
+  all_title: 'Wszystkie pomysły na basen'
+  all_subtitle: 'Przejrzyj wszystkie scenariusze ogrodowe'
+  view_all_label: 'Zobacz wszystkie'
 content_categories:
   tagline: Kup baseny
   title: Poznaj nasze baseny
   subtitle: Porównaj kształty, rozmiary i funkcje, aby znaleźć odpowiedni basen do swojego ogrodu lub przestrzeni na zewnątrz.
+  view_all: 'Zobacz wszystkie baseny'
 content_compliance:
   tagline: Opieka i bezpieczeństwo
   title: Łatwy w posiadaniu,<br />Łatwo kochać
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Przeczytaj FAQ'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Historie klientów'
+  title: 'Prawdziwe baseny w prawdziwych ogrodach'
+  subtitle: 'Jak właściciele Felizbay rozstawiają, używają i przechowują swoje baseny w ciągu sezonu.'

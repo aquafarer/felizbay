@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Pool idéer
   title: Rätt pool för<br />Ditt utrymme
   subtitle: Riktiga inställningar, riktiga storlekar och ärlig vägledning för att välja rätt pool.
+  idea_kicker: 'Poolidé'
+  explore_label: 'Utforska den här uppsättningen'
+  all_title: 'Alla poolidéer'
+  all_subtitle: 'Utforska alla trädgårdsscenarier'
+  view_all_label: 'Visa alla'
 content_categories:
   tagline: Shoppa pooler
   title: Utforska våra pooler
   subtitle: Jämför former, storlekar och funktioner för att hitta rätt pool för din bakgård eller utomhus.
+  view_all: 'Visa alla pooler'
 content_compliance:
   tagline: Vård & Säkerhet
   title: Lätt att äga,<br />Lätt att älska
@@ -184,3 +190,8 @@ content_evidence:
       icon: tabler:shield-check
       cta: 'Läs FAQ'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Kundberättelser'
+  title: 'Riktiga pooler i riktiga trädgårdar'
+  subtitle: 'Hur Felizbay-ägare ställer upp, badar och förvarar sina pooler under säsongen.'

@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Hovuz ideyaları
   title: Üçün Doğru Hovuz<br />Sizin Məkanınız
   subtitle: Həqiqi quraşdırmalar, real ölçülər və düzgün hovuz seçmək üçün dürüst rəhbərlik.
+  idea_kicker: 'Hovuz ideyası'
+  explore_label: 'Bu düzənişi kəşf edin'
+  all_title: 'Bütün hovuz ideyaları'
+  all_subtitle: 'Bütün arxa həyət ssenarilərinə nəzər yetirin'
+  view_all_label: 'Hamısına bax'
 content_categories:
   tagline: Mağaza hovuzları
   title: Hovuzlarımızı kəşf edin
   subtitle: Həyətiniz və ya açıq məkanınız üçün düzgün hovuzu tapmaq üçün formaları, ölçüləri və xüsusiyyətləri müqayisə edin.
+  view_all: 'Bütün hovuzlara bax'
 content_compliance:
   tagline: Qulluq və Təhlükəsizlik
   title: Sahibi olmaq asan,<br />Sevmək asan
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Bütün kolleksiyalar: 4–5 PSI drop-stitch divarları, 5–15 dəqiqəlik inflyasiya, paketdə saxlama. İstilik və filtrasiya xaricidir — qızdırıcılar və filtr nasosları ayrıca satılır.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Niyə Felizbay'
+  title: 'Niyə Felizbay Drop Stitch hovuzu seçməlisiniz?'
+  subtitle: 'Hovuzu mövcud yerinizə, ondan istifadə planınıza və sizin üçün ən vacib xüsusiyyətlərə görə seçin.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Açıq havada yaşamaq üçün dizayn edilib'
+      description: 'Arxa həyətdə istirahət, ailə ilə su vaxtı, açıq havada çimmə və mövsümi tətil obyektləri üçün hovuz variantlarını kəşf edin.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Hovuz ideyalarına baxın'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Gerçək məhsul spesifikasiyalarını müqayisə edin'
+      description: 'Seçməzdən əvvəl ölçüləri, su həcmini, tövsiyə olunan iş təzyiqini, daxil olan aksesuarları və quraşdırma tələblərini nəzərdən keçirin.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Spesifikasiyalara bax'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Drop Stitch konstruksiyasını anlayın'
+      description: 'Daxili strukturun necə işlədiyini, hovuzun forması və saxlanması üçün nə demək olduğunu və məhsul performansının düzgün şişirmə və quraşdırmadan necə asılı olduğunu öyrənin.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Bələdçini oxuyun'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Əminliklə seçin'
+      description: 'Felizbay hovuzunun ehtiyaclarınıza uyğun olub olmadığını müəyyən etmək üçün məhsul təlimatlarına, qulluq göstərişlərinə, zəmanət detallarına və dəstəyə çıxış əldə edin.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'FAQ oxuyun'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Müştəri hekayələri'
+  title: 'Gerçək həyətlərdə gerçək hovuzlar'
+  subtitle: 'Felizbay sahibləri hovuzlarını mövsüm boyu necə quraşdırır, istifadə edir və saxlayırlar.'

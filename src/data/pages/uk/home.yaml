@@ -45,10 +45,16 @@ content_customer_types:
   tagline: Ідеї ​​басейну
   title: Правильний басейн для<br />Ваш простір
   subtitle: Реальні налаштування, реальні розміри та чесні поради щодо вибору правильного басейну.
+  idea_kicker: 'Ідея басейну'
+  explore_label: 'Дізнайтеся більше про цей варіант'
+  all_title: 'Усі ідеї басейнів'
+  all_subtitle: 'Перегляньте всі сценарії для двору'
+  view_all_label: 'Переглянути всі'
 content_categories:
   tagline: Магазин Басейни
   title: Дослідіть наші басейни
   subtitle: Порівняйте форми, розміри та особливості, щоб знайти правильний басейн для свого подвір’я чи відкритого простору.
+  view_all: 'Переглянути всі басейни'
 content_compliance:
   tagline: Догляд і безпека
   title: Легко володіти,<br />Легко любити
@@ -160,27 +166,32 @@ compare_collections:
   note: 'Усі колекції: стінки 4–5 PSI drop-stitch, 5–15 хв накачування, зберігання без упаковки. Підігрів і фільтрація зовнішні — обігрівачі і фільтрувальні насоси продаються окремо.'
 
 content_evidence:
-  tagline: 'Why Felizbay'
-  title: 'Why Choose a Felizbay Drop Stitch Pool?'
-  subtitle: 'Choose a pool based on your space, how you plan to use it, and the features that matter most to you.'
+  tagline: 'Чому Felizbay'
+  title: 'Чому варто обрати басейн Felizbay Drop Stitch?'
+  subtitle: 'Оберіть басейн відповідно до вашого простору, планованого використання та функцій, які для вас найважливіші.'
   items:
-    - title: 'Designed for Outdoor Living'
-      description: 'Explore pool options for backyard relaxation, family water time, outdoor soaking, and seasonal vacation properties.'
+    - title: 'Створено для життя на відкритому повітрі'
+      description: 'Дослідіть варіанти басейнів для відпочинку у дворі, сімейного часу у воді, купання на відкритому повітрі та сезонних ваканційних помешкань.'
       icon: tabler:home
-      cta: 'Browse Pool Ideas'
+      cta: 'Перегляньте ідеї басейнів'
       cta_href: /pool-ideas/backyard-pools-for-families
-    - title: 'Compare Real Product Specifications'
-      description: 'Review dimensions, water capacity, recommended operating pressure, included accessories, and installation requirements before choosing.'
+    - title: 'Порівняйте реальні специфікації продуктів'
+      description: 'Перед вибором перевірте розміри, об''єм води, рекомендований робочий тиск, комплект аксесуарів і вимоги до встановлення.'
       icon: tabler:table
-      cta: 'View Specifications'
+      cta: 'Переглянути специфікації'
       cta_href: /products/specs
-    - title: 'Understand Drop Stitch Construction'
-      description: 'Learn how the internal structure works, what it means for pool shape and storage, and how product performance depends on proper inflation and setup.'
+    - title: 'Зрозумійте конструкцію Drop Stitch'
+      description: 'Дізнайтеся, як працює внутрішня структура, що це означає для форми та зберігання басейну і як продуктивність залежить від правильного надування та встановлення.'
       icon: tabler:hexagon
-      cta: 'Read the Guide'
+      cta: 'Прочитайте посібник'
       cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
-    - title: 'Choose with Confidence'
-      description: 'Access product manuals, care instructions, warranty details, and support to help determine whether a Felizbay pool fits your needs.'
+    - title: 'Обирайте впевнено'
+      description: 'Отримайте доступ до посібників із продукції, інструкцій із догляду, деталей гарантії та підтримки, щоб визначити, чи підходить вам басейн Felizbay.'
       icon: tabler:shield-check
-      cta: 'Read the FAQ'
+      cta: 'Прочитайте поширені запитання'
       cta_href: /faq
+
+content_stories:
+  tagline: 'Історії клієнтів'
+  title: 'Справжні басейни у справжніх дворах'
+  subtitle: 'Як власники Felizbay встановлюють, використовують і зберігають свої басейни протягом сезону.'
