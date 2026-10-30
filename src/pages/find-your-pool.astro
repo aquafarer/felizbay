@@ -253,8 +253,8 @@ const metadata = merge(
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Pool Finder</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Find Your Pool</h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        A few quick questions. One clear recommendation — and an honest “no match” when nothing fits. Sizes come
-        straight from the Felizbay factory catalog.
+        A few quick questions. One clear recommendation with the reason it fits — and an honest “no match” when nothing
+        does. Sizes come straight from the Felizbay factory catalog.
       </p>
     </header>
 
@@ -387,6 +387,10 @@ const metadata = merge(
           >
             <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
             <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
+            <p
+              class="mt-3 hidden rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/50 px-3 py-2 text-xs leading-relaxed text-sky-900 dark:text-sky-200"
+              data-why
+            />
             <dl class="mt-4 space-y-2 text-sm">
               <div>
                 <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
@@ -551,7 +555,11 @@ const metadata = merge(
           notices.appendChild(
             makeBanner(
               'amber',
-              'Raised installation needs structural sign-off. A filled pool weighs roughly 1 t per m³ of water — have your deck or balcony rated by a professional and plan for drainage before ordering. Do not order without that confirmation.'
+              'Raised installation needs structural sign-off before you order. A filled pool weighs roughly 1 t per m³ of water — even a small pool concentrates several tonnes in a few square meters. Have your deck or balcony rated by a professional and plan for drainage first. Do not order without that confirmation.',
+              {
+                href: '/guides/how-much-does-a-filled-inflatable-pool-weigh/',
+                label: 'See filled-weight math by size →',
+              }
             )
           );
         }
@@ -595,6 +603,61 @@ const metadata = merge(
         }
       }
 
+      const TAG_TEXT: Record<string, string> = {
+        'use-play': 'swim & play use',
+        'use-soak': 'relax & soak use',
+        'use-entertain': 'entertaining guests',
+        'who-family': 'kids & family',
+        'who-adults': 'adults',
+        'who-mixed': 'mixed guests',
+        'space-compact': 'compact space',
+        'space-medium': 'medium space',
+        'space-large': 'large space',
+      };
+
+      const INSTALL_TEXT: Record<string, string> = {
+        'install-ground': 'ground-level install',
+        'install-raised': 'raised install — engineer sign-off required',
+      };
+
+      function optLabel(o: FitOption): string {
+        if (typeof o.d === 'number') return `Ø ${o.d} m footprint`;
+        if (typeof o.l === 'number' && typeof o.w === 'number') return `${o.l} × ${o.w} m footprint`;
+        return '';
+      }
+
+      function renderWhy(
+        card: HTMLElement,
+        show: boolean,
+        dims: boolean,
+        L: number,
+        W: number,
+        tagGroups: string[]
+      ): void {
+        const why = card.querySelector<HTMLElement>('[data-why]');
+        if (!why) return;
+        const parts: string[] = [];
+        if (show && dims) {
+          const fits = parseOpts(card)
+            .filter((o) => optFits(o, L, W))
+            .map(optLabel)
+            .filter(Boolean);
+          if (fits.length > 0) parts.push(`${fits.slice(0, 2).join(' or ')} fits your ${L} × ${W} m space`);
+        }
+        for (const g of tagGroups) {
+          const t = TAG_TEXT[active[g]];
+          if (t) parts.push(t);
+        }
+        const install = active['Where will it be installed?'];
+        if (install && INSTALL_TEXT[install]) parts.push(INSTALL_TEXT[install]);
+        if (show && parts.length > 0) {
+          why.textContent = `Why it fits: ${parts.join(' · ')}`;
+          why.classList.remove('hidden');
+        } else {
+          why.classList.add('hidden');
+        }
+      }
+
       function apply(): void {
         const dims = usingDims();
         const L = parseDim(lenEl);
@@ -614,6 +677,7 @@ const metadata = merge(
             show = tagGroups.every((g) => tags.includes(active[g]));
           }
           card.style.display = show ? '' : 'none';
+          renderWhy(card, show, dims, L, W, tagGroups);
           if (show) visible++;
         }
         const hasInput = dims || tagGroups.length > 0;
