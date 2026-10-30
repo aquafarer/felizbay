@@ -1,10 +1,27 @@
 ---
+import { getLangFromUrl } from '~/i18n/utils';
+import { defaultLang } from '~/i18n/config';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
 export interface Props {
   position?: 'bottom-right' | 'bottom-left';
   title?: string;
 }
 
-const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.props;
+const { position = 'bottom-right' } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = (key: string) => getUiForLang(lang || defaultLang)?.[key] || '';
+
+const chatTitle = t('ai.title');
+const subtitle = t('ai.subtitle');
+const welcome = t('ai.welcome');
+const placeholder = t('ai.placeholder');
+const openChatLabel = t('ai.openChat');
+const closeLabel = t('ai.close');
+const thinkingText = t('ai.thinking');
+const sourcesLabel = t('ai.sources');
+const errorText = t('ai.error');
+const networkErrorText = t('ai.networkError');
 ---
 
 <div
@@ -17,7 +34,7 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
   <button
     id="ai-chat-toggle"
     class="flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:scale-105 transition-transform"
-    aria-label="Open AI chat"
+    aria-label={openChatLabel}
     type="button"
   >
     <svg
@@ -38,7 +55,7 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
     id="ai-chat-panel"
     class="hidden flex-col bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl w-80 max-w-[calc(100vw-2rem)] overflow-hidden"
     role="dialog"
-    aria-label={title}
+    aria-label={chatTitle}
   >
     <!-- Header -->
     <div class="flex items-center px-4 py-3 gap-3 bg-blue-600 text-white">
@@ -56,12 +73,10 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
         </svg>
       </div>
       <div class="flex-1 min-w-0">
-        <div class="font-semibold text-sm">{title}</div>
-        <div class="text-xs text-white/80">
-          Tell me your backyard size, budget & family needs — I will suggest the right pool
-        </div>
+        <div class="font-semibold text-sm">{chatTitle}</div>
+        <div class="text-xs text-white/80">{subtitle}</div>
       </div>
-      <button id="ai-chat-close" class="text-white/80 hover:text-white" type="button" aria-label="Close">
+      <button id="ai-chat-close" class="text-white/80 hover:text-white" type="button" aria-label={closeLabel}>
         <svg
           class="w-5 h-5"
           viewBox="0 0 24 24"
@@ -81,30 +96,29 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 hover:bg-sky-100 transition-colors"
-        data-hint="I have a small backyard. Which inflatable pool size fits my family of four?">Small backyard</button
+        data-hint={t('ai.hint1q')}>{t('ai.hint1')}</button
       >
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors"
-        data-hint="I need a family pool for weekend summer fun with my wife and two kids.">Family pool</button
+        data-hint={t('ai.hint2q')}>{t('ai.hint2')}</button
       >
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 transition-colors"
-        data-hint="How do I keep inflatable pool water clean and safe all season?">Water care</button
+        data-hint={t('ai.hint3q')}>{t('ai.hint3')}</button
       >
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition-colors"
-        data-hint="Which inflatable pool is best for a small backyard?">Compare products</button
+        data-hint={t('ai.hint4q')}>{t('ai.hint4')}</button
       >
     </div>
 
     <!-- Messages -->
     <div id="ai-chat-messages" class="flex-1 overflow-y-auto max-h-72 p-4 space-y-3 min-h-[180px]">
       <div class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 p-3 rounded-lg text-sm">
-        Tell me your backyard size, budget, and family needs — I will recommend pools, setup tips, and water care
-        advice.
+        {welcome}
       </div>
     </div>
 
@@ -114,7 +128,7 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
         <input
           id="ai-chat-input"
           type="text"
-          placeholder="Type your question..."
+          placeholder={placeholder}
           class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
@@ -139,7 +153,7 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
   </div>
 </div>
 
-<script is:inline>
+<script is:inline define:vars={{ thinkingText, sourcesLabel, errorText, networkErrorText }}>
   (function () {
     const toggle = document.getElementById('ai-chat-toggle');
     const panel = document.getElementById('ai-chat-panel');
@@ -201,7 +215,7 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
       const div = document.createElement('div');
       div.id = 'ai-typing';
       div.className = 'bg-gray-100 dark:bg-gray-900 text-gray-500 p-3 rounded-lg text-sm mr-8';
-      div.textContent = 'Thinking...';
+      div.textContent = thinkingText;
       messages.appendChild(div);
       messages.scrollTop = messages.scrollHeight;
     }
@@ -216,7 +230,7 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
       const div = document.createElement('div');
       div.className = 'text-xs text-gray-400 mt-1 px-1';
       div.textContent =
-        'Sources: ' +
+        sourcesLabel +
         sources
           .map(function (s) {
             return s.title;
@@ -254,11 +268,11 @@ const { position = 'bottom-right', title = 'Felizbay Pool Advisor AI' } = Astro.
           history.push({ role: 'assistant', content: data.answer });
           addSources(data.matches || data.sources);
         } else {
-          addMessage("Sorry, I couldn't process that request.", false);
+          addMessage(errorText, false);
         }
       } catch {
         removeTyping();
-        addMessage('Network error. Please try again.', false);
+        addMessage(networkErrorText, false);
       } finally {
         sendBtn.disabled = false;
       }
