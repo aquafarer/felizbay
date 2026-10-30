@@ -97,15 +97,15 @@ brand_hub_subtitle: Temui koleksi kolam renang kembung kami yang dibina dengan t
 brand_hub_cards:
   - title: Kolam Segiempat
     desc: Kolam Drop Stitch segi empat tepat bersaiz keluarga dengan dinding tegar dan kawasan berenang maksimum.
-    link: /products
+    link: /products/
     link_label: Lihat kolam →
   - title: Kolam Biru Bulat
     desc: Kolam bulat klasik dalam warna biru terang — persediaan pantas, pembinaan tegar, ketahanan sepanjang musim.
-    link: /products
+    link: /products/
     link_label: Lihat kolam →
   - title: Kolam Kelabu Bulat
     desc: Kolam renang kelabu premium dengan penutup dipasang pilihan untuk penampilan belakang rumah moden.
-    link: /products
+    link: /products/
     link_label: Lihat kolam →
 production_section:
   tagline: Kecemerlangan Pengeluaran

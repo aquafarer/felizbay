@@ -97,15 +97,15 @@ brand_hub_subtitle: Odkryj nasze kolekcje nadmuchiwanych basenów zbudowanych w 
 brand_hub_cards:
   - title: Baseny prostokątne
     desc: Rodzinne prostokątne baseny Drop Stitch ze sztywnymi ścianami i maksymalną powierzchnią do pływania.
-    link: /products
+    link: /products/
     link_label: Zobacz baseny →
   - title: Okrągłe niebieskie baseny
     desc: Klasyczny okrągły basen w żywym niebieskim kolorze — szybki montaż, sztywna konstrukcja, trwałość przez cały sezon.
-    link: /products
+    link: /products/
     link_label: Zobacz baseny →
   - title: Okrągłe szare baseny
     desc: Szare baseny premium z opcjonalnymi dopasowanymi pokrywami zapewniającymi nowoczesny wygląd podwórka.
-    link: /products
+    link: /products/
     link_label: Zobacz baseny →
 production_section:
   tagline: Doskonałość produkcji

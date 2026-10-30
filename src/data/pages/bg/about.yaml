@@ -97,15 +97,15 @@ brand_hub_subtitle: Открийте нашите колекции надува�
 brand_hub_cards:
   - title: Правоъгълни басейни
     desc: Правоъгълни Drop Stitch басейни със семеен размер с твърди стени и максимална площ за плуване.
-    link: /products
+    link: /products/
     link_label: Вижте басейни →
   - title: Кръгли сини басейни
     desc: Класическият кръгъл басейн в ярко синьо — бърза настройка, здрава конструкция, издръжливост през целия сезон.
-    link: /products
+    link: /products/
     link_label: Вижте басейни →
   - title: Кръгли сиви басейни
     desc: Първокласни сиви басейни с опционални монтирани капаци за модерен вид на задния двор.
-    link: /products
+    link: /products/
     link_label: Вижте басейни →
 production_section:
   tagline: Отлично производство

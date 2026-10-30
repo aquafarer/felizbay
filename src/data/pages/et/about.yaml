@@ -97,15 +97,15 @@ brand_hub_subtitle: Avastage meie täispuhutavate basseinide kollektsioonid, mis
 brand_hub_cards:
   - title: Ristkülikukujulised basseinid
     desc: Pere suuruses ristkülikukujulised Drop Stitch basseinid jäikade seinte ja maksimaalse ujumisalaga.
-    link: /products
+    link: /products/
     link_label: Vaata basseine →
   - title: Ümmargused sinised basseinid
     desc: Klassikaline ümmargune erksassinine bassein – kiire seadistamine, jäik konstruktsioon, hooajaline vastupidavus.
-    link: /products
+    link: /products/
     link_label: Vaata basseine →
   - title: Ümmargused hallid basseinid
     desc: Esmaklassilised hallid basseinid koos lisavarustusse kuuluvate katetega, mis tagavad moodsa tagahoovi ilme.
-    link: /products
+    link: /products/
     link_label: Vaata basseine →
 production_section:
   tagline: Tootmise tipptase

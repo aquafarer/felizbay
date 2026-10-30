@@ -97,15 +97,15 @@ brand_hub_subtitle: Descoperiți colecțiile noastre de piscine gonflabile const
 brand_hub_cards:
   - title: Piscine dreptunghiulare
     desc: Piscine Drop Stitch dreptunghiulare de dimensiuni familiale, cu pereți rigizi și zonă maximă de înot.
-    link: /products
+    link: /products/
     link_label: Vizualizați piscine →
   - title: Piscine albastre rotunde
     desc: Piscina clasică rotundă în albastru vibrant — configurare rapidă, construcție rigidă, durabilitate pe tot parcursul sezonului.
-    link: /products
+    link: /products/
     link_label: Vizualizați piscine →
   - title: Piscine rotunde gri
     desc: Piscine gri premium cu capace montate opționale pentru un aspect modern de curte.
-    link: /products
+    link: /products/
     link_label: Vizualizați piscine →
 production_section:
   tagline: Excelență în producție

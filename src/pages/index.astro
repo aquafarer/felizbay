@@ -58,7 +58,7 @@ const heroSlides = scenarioCards.map((idea) => ({
   alt: idea.imageAlt ?? idea.title,
   title: idea.navTitle,
   kicker: customerTypes.idea_kicker || 'Pool Idea',
-  href: `/pool-ideas/${idea.slug}`,
+  href: `/pool-ideas/${idea.slug}/`,
 }));
 
 const metadata = {
@@ -167,7 +167,7 @@ const metadata = {
       {
         scenarioCards.map((idea) => (
           <a
-            href={`/pool-ideas/${idea.slug}`}
+            href={`/pool-ideas/${idea.slug}/`}
             class="group block rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-lg transition-shadow"
           >
             <div class="overflow-hidden">
@@ -193,7 +193,7 @@ const metadata = {
         ))
       }
       <a
-        href="/pool-ideas"
+        href="/pool-ideas/"
         class="group flex flex-col items-center justify-center text-center p-6 rounded-2xl bg-gray-900 dark:bg-slate-800 text-white hover:bg-gray-800 dark:hover:bg-slate-700 transition-colors"
       >
         <Icon name="tabler:pool" class="w-8 h-8 mb-3" />
@@ -232,7 +232,7 @@ const metadata = {
         </div>
         <div class="mt-8 text-center">
           <a
-            href="/products"
+            href="/products/"
             class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
           >
             <Icon name="tabler:pool" class="w-4 h-4" />

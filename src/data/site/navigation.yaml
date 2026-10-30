@@ -4,46 +4,46 @@ header:
       href: 'mailto:info@felizbay.com'
   links:
     - text: Shop Pools
-      href: /products
+      href: /products/
     - text: Find Your Pool
-      href: /find-your-pool
+      href: /find-your-pool/
     - text: Pool Ideas
       links:
         - text: Backyard Pools for Families
-          href: /pool-ideas/backyard-pools-for-families
+          href: /pool-ideas/backyard-pools-for-families/
         - text: Pools for Small Backyards
-          href: /pool-ideas/pools-for-small-backyards
+          href: /pool-ideas/pools-for-small-backyards/
         - text: Large Pools for Family Gatherings
-          href: /pool-ideas/large-pools-for-family-gatherings
+          href: /pool-ideas/large-pools-for-family-gatherings/
         - text: Outdoor Soaking & Relaxation
-          href: /pool-ideas/outdoor-soaking-pools
+          href: /pool-ideas/outdoor-soaking-pools/
         - text: Pools for Vacation Rentals
-          href: /pool-ideas/pools-for-vacation-rentals
+          href: /pool-ideas/pools-for-vacation-rentals/
         - text: Pools for Glamping & Hospitality
-          href: /pool-ideas/pools-for-glamping-and-hospitality
+          href: /pool-ideas/pools-for-glamping-and-hospitality/
     - text: Guides & Care
-      href: /guides
+      href: /guides/
     - text: About Felizbay
-      href: /about
+      href: /about/
     - text: For Businesses
       links:
         - text: Business Overview
-          href: /for-businesses
+          href: /for-businesses/
         - text: Commercial Pools
-          href: /commercial-pools
+          href: /commercial-pools/
         - text: OEM / ODM Manufacturing
-          href: /oem-odm
+          href: /oem-odm/
         - text: Wholesale Program
-          href: /wholesale
+          href: /wholesale/
         - text: Private Label Pools
-          href: /private-label
+          href: /private-label/
         - text: Manufacturing Process
-          href: /manufacturing
+          href: /manufacturing/
         - text: Quality Control
-          href: /quality-control
+          href: /quality-control/
   actions:
     - text: 'Shop Pools'
-      href: '/products'
+      href: '/products/'
       variant: 'primary'
 
 footer:
@@ -51,61 +51,61 @@ footer:
     - title: Shop
       links:
         - text: All Inflatable Swimming Pools
-          href: /products
+          href: /products/
         - text: Find Your Pool
-          href: /find-your-pool
+          href: /find-your-pool/
         - text: Pool Specs & FOB Price List
-          href: /products/specs
+          href: /products/specs/
         - text: Compare Models
-          href: /products/compare
+          href: /products/compare/
     - title: Pool Ideas
       links:
         - text: Backyard Pools for Families
-          href: /pool-ideas/backyard-pools-for-families
+          href: /pool-ideas/backyard-pools-for-families/
         - text: Pools for Small Backyards
-          href: /pool-ideas/pools-for-small-backyards
+          href: /pool-ideas/pools-for-small-backyards/
         - text: Large Pools for Gatherings
-          href: /pool-ideas/large-pools-for-family-gatherings
+          href: /pool-ideas/large-pools-for-family-gatherings/
         - text: Outdoor Soaking & Relaxation
-          href: /pool-ideas/outdoor-soaking-pools
+          href: /pool-ideas/outdoor-soaking-pools/
         - text: Pools for Vacation Rentals
-          href: /pool-ideas/pools-for-vacation-rentals
+          href: /pool-ideas/pools-for-vacation-rentals/
         - text: Pools for Glamping & Hospitality
-          href: /pool-ideas/pools-for-glamping-and-hospitality
+          href: /pool-ideas/pools-for-glamping-and-hospitality/
     - title: For Businesses
       links:
         - text: Business Overview
-          href: /for-businesses
+          href: /for-businesses/
         - text: OEM / ODM Manufacturing
-          href: /oem-odm
+          href: /oem-odm/
         - text: Wholesale Program
-          href: /wholesale
+          href: /wholesale/
         - text: Private Label Pools
-          href: /private-label
+          href: /private-label/
         - text: Commercial Pools
-          href: /commercial-pools
+          href: /commercial-pools/
         - text: Manufacturing Process
-          href: /manufacturing
+          href: /manufacturing/
         - text: Quality Control
-          href: /quality-control
+          href: /quality-control/
     - title: Company
       links:
         - text: About Felizbay
-          href: /about
+          href: /about/
         - text: Guides & Care
-          href: /guides
+          href: /guides/
         - text: FAQ
-          href: /faq
+          href: /faq/
         - text: Contact
-          href: /contact
+          href: /contact/
         - text: Request a Quote
-          href: /request-quotation
+          href: /request-quotation/
   secondaryLinks:
     - text: Terms
-      href: /terms
+      href: /terms/
     - text: Privacy Policy
-      href: /privacy
+      href: /privacy/
     - text: Returns & Warranty
-      href: /returns-and-warranty
+      href: /returns-and-warranty/
   socialLinks: []
   footNote: 'Premium drop stitch inflatable pools by Felizbay. Designed and operated by Aquafarer LLC, USA.'

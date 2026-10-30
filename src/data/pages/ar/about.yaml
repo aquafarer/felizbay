@@ -97,15 +97,15 @@ brand_hub_subtitle: اكتشف مجموعات حمامات السباحة الق
 brand_hub_cards:
   - title: حمامات سباحة مستطيلة
     desc: برك Drop Stitch مستطيلة بحجم عائلي بجدران صلبة وأقصى مساحة للسباحة.
-    link: /products
+    link: /products/
     link_label: عرض حمامات السباحة →
   - title: حمامات مستديرة زرقاء
     desc: حمام السباحة الدائري الكلاسيكي باللون الأزرق النابض بالحياة - إعداد سريع، وبنية صلبة، ومتانة طوال الموسم.
-    link: /products
+    link: /products/
     link_label: عرض حمامات السباحة →
   - title: حمامات مستديرة رمادية
     desc: حمامات سباحة باللون الرمادي الفاخر مع أغطية اختيارية مناسبة لإضفاء مظهر عصري على الفناء الخلفي.
-    link: /products
+    link: /products/
     link_label: عرض حمامات السباحة →
 production_section:
   tagline: التميز في الإنتاج

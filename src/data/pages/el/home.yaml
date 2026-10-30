@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Πισίνες καταστημάτων
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Βρείτε την πισίνα σας
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Πισίνες καταστημάτων
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Βρείτε την πισίνα σας
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Στρογγυλές Πισίνες'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Οικογενειακή κολύμβηση και παιχνίδι — το μεγαλύτερο εύρος μεγεθών'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Ορθογώνιες Πισίνες'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Χώρος κολύμβησης με ευθεία όψη για μεγαλύτερες συγκεντρώσεις'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Όλες οι συλλογές: τοίχοι 4–5 PSI drop-stitch, φούσκωμα 5–15 λεπτά, αποθήκευση σε πακέτο. Η θέρμανση και το φιλτράρισμα είναι εξωτερικά — οι θερμαντήρες και οι αντλίες φίλτρων πωλούνται χωριστά.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Εξερευνήστε τις επιλογές πισίνας για χαλάρωση στην πίσω αυλή, οικογενειακό χρόνο στο νερό, υπαίθριο μούλιασμα και εποχιακές ιδιοκτησίες διακοπών.'
       icon: tabler:home
       cta: 'Περιήγηση ιδεών για πισίνα'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Σύγκριση πραγματικών προδιαγραφών προϊόντος'
       description: 'Ελέγξτε τις διαστάσεις, τη χωρητικότητα νερού, τη συνιστώμενη πίεση λειτουργίας, τα συμπεριλαμβανόμενα εξαρτήματα και τις απαιτήσεις εγκατάστασης πριν από την επιλογή.'
       icon: tabler:table
       cta: 'Προβολή προδιαγραφών'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Κατανόηση της κατασκευής Drop Stitch'
       description: 'Μάθετε πώς λειτουργεί η εσωτερική δομή, τι σημαίνει για το σχήμα και την αποθήκευση της πισίνας και πώς η απόδοση του προϊόντος εξαρτάται από τη σωστή διόγκωση και ρύθμιση.'
       icon: tabler:hexagon
       cta: 'Διαβάστε τον οδηγό'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Επιλέξτε με σιγουριά'
       description: 'Αποκτήστε πρόσβαση σε εγχειρίδια προϊόντων, οδηγίες φροντίδας, λεπτομέρειες εγγύησης και υποστήριξη για να καθορίσετε εάν μια πισίνα Felizbay ταιριάζει στις ανάγκες σας.'
       icon: tabler:shield-check
       cta: 'Διαβάστε τις Συχνές Ερωτήσεις'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Ιστορίες πελατών'

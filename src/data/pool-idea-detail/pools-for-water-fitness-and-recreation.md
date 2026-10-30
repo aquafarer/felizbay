@@ -9,7 +9,7 @@ Water is a uniquely forgiving exercise medium: buoyancy unloads joints while res
 
 Three things matter for exercise and active play:
 
-- **Usable floor area.** Sloped, sagging ring-pool walls steal interior space and wobble underfoot. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) at its rated 4–5 PSI operating pressure holds straight 90-degree walls and a flat floor, so the footprint you measure is the floor you get.
+- **Usable floor area.** Sloped, sagging ring-pool walls steal interior space and wobble underfoot. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) at its rated 4–5 PSI operating pressure holds straight 90-degree walls and a flat floor, so the footprint you measure is the floor you get.
 - **Stable reference points.** Straight vertical walls and a flat, even floor keep the water line and workout area predictable during movement.
 - **Real depth.** Waist-deep water (roughly 0.6–1.0 m) suits walking and most standing exercises; chest-deep (up to 1.2–1.5 m) adds buoyancy for jogging and suspended moves.
 
@@ -34,7 +34,7 @@ Sweat, sunscreen, and outdoor dust raise the organic load quickly:
 - **Keep sanitizer consistent.** A floating dispenser with slow-dissolving tablets maintains levels; shock after heavy use and refresh small volumes when clarity drops.
 - **Cover between sessions** to keep debris and heat out.
 
-Full details are in the [maintenance guide](/guides/inflatable-pool-maintenance).
+Full details are in the [maintenance guide](/guides/inflatable-pool-maintenance/).
 
 ## 4. Honest Usage Limits
 
@@ -46,4 +46,4 @@ Full details are in the [maintenance guide](/guides/inflatable-pool-maintenance)
 
 ## 5. A Summer of Movement
 
-Because setup takes one person 15–30 minutes with the included 1000W pump ([setup guide](/guides/inflatable-pool-setup)), many households keep a routine simple: inflate for the season, run morning sessions before the day heats up, and drain when the movement season ends. Browse the [shop](/products) for the full size ladder, or answer three questions in [Find Your Pool](/find-your-pool).
+Because setup takes one person 15–30 minutes with the included 1000W pump ([setup guide](/guides/inflatable-pool-setup/)), many households keep a routine simple: inflate for the season, run morning sessions before the day heats up, and drain when the movement season ends. Browse the [shop](/products/) for the full size ladder, or answer three questions in [Find Your Pool](/find-your-pool/).

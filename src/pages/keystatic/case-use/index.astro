@@ -71,7 +71,7 @@ if (token) {
       <p class="mt-1 text-sm text-gray-500">{rows.length} case uses total</p>
     </div>
     <a
-      href="/keystatic/case-use/new"
+      href="/keystatic/case-use/new/"
       class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">+ New Case Use</a
     >
   </div>
@@ -115,7 +115,7 @@ if (token) {
             <tr class="hover:bg-gray-50 dark:hover:bg-gray-900/50">
               <td class="px-4 py-3">
                 <a
-                  href={`/keystatic/case-use/${encodeURIComponent(row.name)}`}
+                  href={`/keystatic/case-use/${encodeURIComponent(row.name)}/`}
                   class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
                 >
                   {row.title}

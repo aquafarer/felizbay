@@ -14,7 +14,7 @@ const pages = PAGES;
         <p class="mt-1 text-sm text-gray-500">{pages.length} pages total</p>
       </div>
       <a
-        href="/keystatic/pages/new"
+        href="/keystatic/pages/new/"
         class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">+ New Page</a
       >
     </div>
@@ -31,7 +31,7 @@ const pages = PAGES;
     {
       pages.map((page) => (
         <a
-          href={`/keystatic/pages/${page.slug}`}
+          href={`/keystatic/pages/${page.slug}/`}
           class="block rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 hover:border-blue-400 transition"
         >
           <div class="flex items-center justify-between">

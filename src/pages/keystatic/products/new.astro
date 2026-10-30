@@ -21,7 +21,7 @@ const initial = {
 
 <AdminLayout title="New Product" active="products">
   <div class="mb-6">
-    <a href="/keystatic/products" class="text-sm text-gray-500 hover:underline"> ?Back to Products list</a>
+    <a href="/keystatic/products/" class="text-sm text-gray-500 hover:underline"> ?Back to Products list</a>
     <h1 class="mt-2 text-2xl font-semibold">New Product</h1>
   </div>
   <ProductForm mode="create" initial={initial} />
@@ -161,7 +161,7 @@ const initial = {
           }
           window.__adminToast?.('Created, redirecting...', 'success');
           setTimeout(() => {
-            window.location.href = '/keystatic/products';
+            window.location.href = '/keystatic/products/';
           }, 600);
         } catch {
           window.__adminToast?.('Network error', 'error');

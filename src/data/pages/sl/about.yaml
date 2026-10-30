@@ -97,15 +97,15 @@ brand_hub_subtitle: Odkrijte naše kolekcije napihljivih bazenov, izdelanih s te
 brand_hub_cards:
   - title: Pravokotni bazeni
     desc: Pravokotni bazeni Drop Stitch družinske velikosti s togimi stenami in največjo plavalno površino.
-    link: /products
+    link: /products/
     link_label: Ogled bazenov →
   - title: Okrogli modri bazeni
     desc: Klasičen okrogel bazen v živahni modri barvi — hitra postavitev, trdna konstrukcija, vzdržljivost skozi celo sezono.
-    link: /products
+    link: /products/
     link_label: Ogled bazenov →
   - title: Okrogli sivi bazeni
     desc: Vrhunski sivi bazeni z opcijskimi vgrajenimi pokrovi za sodoben videz dvorišča.
-    link: /products
+    link: /products/
     link_label: Ogled bazenov →
 production_section:
   tagline: Proizvodna odličnost

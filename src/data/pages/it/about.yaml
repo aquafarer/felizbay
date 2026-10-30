@@ -97,15 +97,15 @@ brand_hub_subtitle: Scopri le nostre collezioni di piscine gonfiabili realizzate
 brand_hub_cards:
   - title: Piscine rettangolari
     desc: Piscine Drop Stitch rettangolari per famiglie con pareti rigide e massima area di nuoto.
-    link: /products
+    link: /products/
     link_label: Visualizza le piscine →
   - title: Piscine blu rotonde
     desc: 'La classica piscina rotonda in un blu vibrante: installazione rapida, costruzione rigida, durata per tutta la stagione.'
-    link: /products
+    link: /products/
     link_label: Visualizza le piscine →
   - title: Piscine grigie rotonde
     desc: Piscine grigie premium con coperture su misura opzionali per un look moderno da giardino.
-    link: /products
+    link: /products/
     link_label: Visualizza le piscine →
 production_section:
   tagline: Eccellenza produttiva

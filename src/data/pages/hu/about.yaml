@@ -97,15 +97,15 @@ brand_hub_subtitle: Fedezze fel a nagynyomású Drop Stitch technológiával ké
 brand_hub_cards:
   - title: Téglalap alakú medencék
     desc: Családi méretű téglalap alakú Drop Stitch medencék merev falakkal és maximális úszófelülettel.
-    link: /products
+    link: /products/
     link_label: Medence megtekintése →
   - title: Kerek kék medencék
     desc: Klasszikus kerek medence élénk kék színben – gyors beállítás, merev felépítés, egész szezonban tartó tartósság.
-    link: /products
+    link: /products/
     link_label: Medence megtekintése →
   - title: Kerek szürke medencék
     desc: Prémium szürke medencék opcionálisan felszerelt burkolatokkal a modern kerti megjelenésért.
-    link: /products
+    link: /products/
     link_label: Medence megtekintése →
 production_section:
   tagline: Termelési Kiválóság

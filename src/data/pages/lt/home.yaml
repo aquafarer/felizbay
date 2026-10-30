@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Parduotuvė baseinai
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Raskite savo baseiną
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Parduotuvė baseinai
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Raskite savo baseiną
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Apvalūs baseinai'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Šeimos plaukimas ir žaidimas – plačiausias dydžių asortimentas'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Stačiakampiai baseinai'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Tiesios pusės plaukimo erdvė didesniems susibūrimams'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Visos kolekcijos: 4–5 PSI drop-stitch sienos, 5–15 min pripūtimas, sandėliavimas supakuotas. Šildymas ir filtravimas yra išoriniai – šildytuvai ir filtravimo siurbliai parduodami atskirai.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Atraskite baseino parinktis poilsiui kieme, šeimos laikui vandenyje, mirkimui lauke ir sezoninėms poilsio vietoms.'
       icon: tabler:home
       cta: 'Peržiūrėti baseino idėjas'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Palyginkite realias produkto specifikacijas'
       description: 'Prieš rinkdamiesi peržiūrėkite išmatavimus, vandens talpą, rekomenduojamą darbinį slėgį, pridedamus priedus ir montavimo reikalavimus.'
       icon: tabler:table
       cta: 'Peržiūrėti specifikacijas'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Supraskite Drop Stitch konstrukciją'
       description: 'Sužinokite, kaip veikia vidinė struktūra, ką tai reiškia baseino formai ir saugojimui bei kaip produkto našumas priklauso nuo tinkamo pripūtimo ir įrengimo.'
       icon: tabler:hexagon
       cta: 'Skaityti vadovą'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Rinkitės užtikrintai'
       description: 'Naudokitės produkto vadovais, priežiūros instrukcijomis, garantijos informacija ir pagalba, kad nustatytumėte, ar Felizbay baseinas atitinka jūsų poreikius.'
       icon: tabler:shield-check
       cta: 'Skaityti DUK'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Klientų istorijos'

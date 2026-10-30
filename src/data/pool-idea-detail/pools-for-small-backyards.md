@@ -11,12 +11,12 @@ This guide focuses on critical considerations for small-space pool installation 
 
 In a small backyard, every centimeter counts.
 
-- **Straight walls vs. sloped inflation:** Traditional vinyl inflatable pools feature outward-sloping walls that waste valuable yard space while offering less interior room. Felizbay's high-pressure [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool) creates vertical, ultra-rigid side walls.
+- **Straight walls vs. sloped inflation:** Traditional vinyl inflatable pools feature outward-sloping walls that waste valuable yard space while offering less interior room. Felizbay's high-pressure [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool/) creates vertical, ultra-rigid side walls.
 - **Compact footprint, maximum space:** The exterior footprint translates almost directly into usable interior water area, allowing you to fit a comfortable soaking pool into narrow yards, side courts, or compact patios.
 
 ## 2. Maintenance Clearance & Operational Space
 
-Measuring only the pool itself is a common pitfall in small-space planning — our [space planning guide](/guides/how-much-space-do-you-need-for-an-inflatable-pool) covers this in depth. Always account for access and maintenance clearance:
+Measuring only the pool itself is a common pitfall in small-space planning — our [space planning guide](/guides/how-much-space-do-you-need-for-an-inflatable-pool/) covers this in depth. Always account for access and maintenance clearance:
 
 - **The 0.5 to 1 meter perimeter rule:** Maintain at least 0.5 to 1 meter of open clearance around the pool perimeter. This space is essential for:
   - Safe entry and exit without stepping directly against walls or fences.

@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Obchod Pools
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Najděte svůj bazén
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Obchod Pools
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Najděte svůj bazén
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Kulaté bazény'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Rodinné plavání a hraní — nejširší rozsah velikostí'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Obdélníkové bazény'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Rovný plavecký prostor pro větší shromáždění'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Všechny kolekce: stěny 4–5 PSI drop-stitch, 5–15 minut nafouknutí, skladovatelnost. Topení a filtrace jsou externí — ohřívače a filtrační čerpadla se prodávají samostatně.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Prozkoumej možnosti bazénu pro relaxaci na dvorku, trávení času s rodinou u vody, venkovní namáčení a sezónní rekreační nemovitosti.'
       icon: tabler:home
       cta: 'Procházet návrhy bazénů'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Porovnat skutečné specifikace produktu'
       description: 'Před výběrem zkontrolujte rozměry, kapacitu vody, doporučený provozní tlak, přiložené příslušenství a požadavky na instalaci.'
       icon: tabler:table
       cta: 'Zobrazit technické údaje'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Porozumět konstrukci Drop Stitch'
       description: 'Zjistěte, jak funguje vnitřní struktura, co to znamená pro tvar a skladování bazénu a jak výkon produktu závisí na správném nafouknutí a nastavení.'
       icon: tabler:hexagon
       cta: 'Přečti si průvodce'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Vybírejte s jistotou'
       description: 'Získejte přístup k produktovým příručkám, pokynům pro péči, záručním údajům a podpoře, abyste zjistili, zda bazén Felizbay vyhovuje vašim potřebám.'
       icon: tabler:shield-check
       cta: 'Číst často kladené otázky'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Příběhy zákazníků'

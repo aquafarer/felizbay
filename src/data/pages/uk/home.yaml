@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Магазин Басейни
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Знайдіть свій басейн
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Магазин Басейни
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Знайдіть свій басейн
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Круглі басейни'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Сімейне плавання та гра — найширший розмірний ряд'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Прямокутні басейни'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Пряме місце для плавання для великих зібрань'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Усі колекції: стінки 4–5 PSI drop-stitch, 5–15 хв накачування, зберігання без упаковки. Підігрів і фільтрація зовнішні — обігрівачі і фільтрувальні насоси продаються окремо.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Дослідіть варіанти басейнів для відпочинку у дворі, сімейного часу у воді, купання на відкритому повітрі та сезонних ваканційних помешкань.'
       icon: tabler:home
       cta: 'Перегляньте ідеї басейнів'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Порівняйте реальні специфікації продуктів'
       description: 'Перед вибором перевірте розміри, об''єм води, рекомендований робочий тиск, комплект аксесуарів і вимоги до встановлення.'
       icon: tabler:table
       cta: 'Переглянути специфікації'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Зрозумійте конструкцію Drop Stitch'
       description: 'Дізнайтеся, як працює внутрішня структура, що це означає для форми та зберігання басейну і як продуктивність залежить від правильного надування та встановлення.'
       icon: tabler:hexagon
       cta: 'Прочитайте посібник'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Обирайте впевнено'
       description: 'Отримайте доступ до посібників із продукції, інструкцій із догляду, деталей гарантії та підтримки, щоб визначити, чи підходить вам басейн Felizbay.'
       icon: tabler:shield-check
       cta: 'Прочитайте поширені запитання'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Історії клієнтів'

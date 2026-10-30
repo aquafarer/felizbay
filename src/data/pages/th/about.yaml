@@ -97,15 +97,15 @@ brand_hub_subtitle: ค้นพบคอลเลกชันสระว่า
 brand_hub_cards:
   - title: สระน้ำทรงสี่เหลี่ยม
     desc: สระ Drop Stitch ทรงสี่เหลี่ยมขนาดครอบครัวพร้อมผนังที่แข็งแรงและพื้นที่ว่ายน้ำสูงสุด
-    link: /products
+    link: /products/
     link_label: ดูพูล →
   - title: สระน้ำกลมสีฟ้า
     desc: สระว่ายน้ำทรงกลมคลาสสิกในสีฟ้าสดใส ติดตั้งรวดเร็ว โครงสร้างแข็งแรง ทนทานตลอดฤดูกาล
-    link: /products
+    link: /products/
     link_label: ดูพูล →
   - title: สระน้ำกลมสีเทา
     desc: สระน้ำสีเทาระดับพรีเมียมพร้อมอุปกรณ์เสริมสำหรับตกแต่งสวนหลังบ้านให้ดูทันสมัย
-    link: /products
+    link: /products/
     link_label: ดูพูล →
 production_section:
   tagline: ความเป็นเลิศด้านการผลิต

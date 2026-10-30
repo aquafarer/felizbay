@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Ostke basseinid
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Leidke oma bassein
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Ostke basseinid
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Leidke oma bassein
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Ümmargused basseinid'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Pere ujumine ja mängimine — kõige laiem suurusvalik'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Ristkülikukujulised basseinid'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Sirge küljega ujumisruum suuremate kogunemiste jaoks'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Kõik kollektsioonid: 4–5 PSI drop-stitch seinad, täitmine 5–15 minutit, pakitav hoiuruum. Küte ja filtreerimine on välised — küttekehad ja filtripumbad müüakse eraldi.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Avastage basseinivõimalusi tagaaia lõõgastuseks, pere veega veetmiseks, õues lebumiseks ja hooajalisteks puhkekeskusteks.'
       icon: tabler:home
       cta: 'Sirvi basseiniideid'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Võrrelge tegelikke tootespetsifikatsioone'
       description: 'Enne valimist vaadake üle mõõtmed, veemaht, soovitatud töörõhk, kaasasolev lisavarustus ja paigaldusnõuded.'
       icon: tabler:table
       cta: 'Vaata spetsifikatsioone'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Mõistke Drop Stitch ehitust'
       description: 'Tutvuge, kuidas sisemine struktuur töötab, mida see tähendab basseini kuju ja ladustamise jaoks ning kuidas sõltub toote jõudlus õigest puhumisest ja paigaldusest.'
       icon: tabler:hexagon
       cta: 'Loe juhendit'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Valige kindlalt'
       description: 'Pöörduge tootejuhendite, hooldusjuhiste, garantiitingimuste ja toe poole, et selgitada välja, kas Felizbay bassein teile sobib.'
       icon: tabler:shield-check
       cta: 'Loe KKK-d'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Klientide lood'

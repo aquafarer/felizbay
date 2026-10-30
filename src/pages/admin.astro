@@ -1,10 +1,10 @@
 ---
-const target = '/keystatic';
+const target = '/keystatic/';
 ---
 
 <!doctype html>
 <title>Redirecting to Admin</title>
-<meta http-equiv="refresh" content="0;url={target}" />
+<meta http-equiv="refresh" content={`0;url=${target}`} />
 <meta name="robots" content="noindex" />
 <link rel="canonical" href={target} />
 <body>

@@ -84,7 +84,7 @@ for (const g of [...guides, ...procurementGuides]) guideTitleBySlug[g.slug] = g.
                       {item.relatedGuides.map((slug) =>
                         guideTitleBySlug[slug] ? (
                           <a
-                            href={`/guides/${slug}`}
+                            href={`/guides/${slug}/`}
                             class="px-3 py-1 text-sm bg-gray-50 dark:bg-slate-800 text-gray-600 dark:text-slate-300 rounded-full hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
                           >
                             {guideTitleBySlug[slug]}
@@ -108,7 +108,7 @@ for (const g of [...guides, ...procurementGuides]) guideTitleBySlug[g.slug] = g.
         Read the full buying guide — collection comparison, scenario recommendations, and a pre-purchase checklist.
       </p>
       <a
-        href="/best-drop-stitch-inflatable-pools"
+        href="/best-drop-stitch-inflatable-pools/"
         class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
       >
         Best Drop Stitch Inflatable Pools — Buying Guide

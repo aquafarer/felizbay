@@ -55,70 +55,70 @@ const groups: TabGroup[] = [
   {
     label: 'Home',
     children: [
-      { id: 'hero', href: '/keystatic/hero-images', label: 'Hero Images' },
-      { id: 'categories', href: '/keystatic/categories', label: 'Categories' },
-      { id: 'tech', href: '/keystatic/tech-cards', label: 'Tech Cards' },
-      { id: 'trust', href: '/keystatic/trust-badges', label: 'Trust Badges' },
-      { id: 'trust-bar', href: '/keystatic/trust-bar', label: 'Trust Bar' },
-      { id: 'visuals', href: '/keystatic/product-visuals', label: 'Product Visuals' },
-      { id: 'usecases', href: '/keystatic/use-cases', label: 'Use Cases' },
-      { id: 'proofs', href: '/keystatic/proof-points', label: 'Proof Points' },
-      { id: 'faqs', href: '/keystatic/faqs', label: 'FAQs' },
-      { id: 'testimonials', href: '/keystatic/testimonials', label: 'Testimonials' },
-      { id: 'top-guides', href: '/keystatic/top-guides', label: 'Top Guides' },
-      { id: 'content-v2', href: '/keystatic/content-v2', label: 'Content v2' },
+      { id: 'hero', href: '/keystatic/hero-images/', label: 'Hero Images' },
+      { id: 'categories', href: '/keystatic/categories/', label: 'Categories' },
+      { id: 'tech', href: '/keystatic/tech-cards/', label: 'Tech Cards' },
+      { id: 'trust', href: '/keystatic/trust-badges/', label: 'Trust Badges' },
+      { id: 'trust-bar', href: '/keystatic/trust-bar/', label: 'Trust Bar' },
+      { id: 'visuals', href: '/keystatic/product-visuals/', label: 'Product Visuals' },
+      { id: 'usecases', href: '/keystatic/use-cases/', label: 'Use Cases' },
+      { id: 'proofs', href: '/keystatic/proof-points/', label: 'Proof Points' },
+      { id: 'faqs', href: '/keystatic/faqs/', label: 'FAQs' },
+      { id: 'testimonials', href: '/keystatic/testimonials/', label: 'Testimonials' },
+      { id: 'top-guides', href: '/keystatic/top-guides/', label: 'Top Guides' },
+      { id: 'content-v2', href: '/keystatic/content-v2/', label: 'Content v2' },
     ],
   },
   {
     label: 'About',
-    children: [{ id: 'about', href: '/keystatic/about', label: 'About Page' }],
+    children: [{ id: 'about', href: '/keystatic/about/', label: 'About Page' }],
   },
   {
     label: 'Contact',
     children: [
-      { id: 'contact-form-text', href: '/keystatic/contact-form-text', label: 'Contact Form' },
-      { id: 'countries', href: '/keystatic/countries', label: 'Countries' },
-      { id: 'submissions', href: '/keystatic/inquiries', label: 'Submissions (D1)' },
+      { id: 'contact-form-text', href: '/keystatic/contact-form-text/', label: 'Contact Form' },
+      { id: 'countries', href: '/keystatic/countries/', label: 'Countries' },
+      { id: 'submissions', href: '/keystatic/inquiries/', label: 'Submissions (D1)' },
     ],
   },
   {
     label: 'Products',
-    children: [{ id: 'products', href: '/keystatic/products', label: 'Products' }],
+    children: [{ id: 'products', href: '/keystatic/products/', label: 'Products' }],
   },
   {
     label: 'Technology',
-    children: [{ id: 'technology', href: '/keystatic/technology', label: 'Technology' }],
+    children: [{ id: 'technology', href: '/keystatic/technology/', label: 'Technology' }],
   },
   {
     label: 'Case Uses',
-    children: [{ id: 'case-use', href: '/keystatic/case-use', label: 'Case Uses' }],
+    children: [{ id: 'case-use', href: '/keystatic/case-use/', label: 'Case Uses' }],
   },
   {
     label: 'Posts',
-    children: [{ id: 'posts', href: '/keystatic/news', label: 'News (D1)' }],
+    children: [{ id: 'posts', href: '/keystatic/news/', label: 'News (D1)' }],
   },
   {
     label: 'Pages',
-    children: [{ id: 'pages', href: '/keystatic/pages', label: 'Page Sections' }],
+    children: [{ id: 'pages', href: '/keystatic/pages/', label: 'Page Sections' }],
   },
   {
     label: 'Content',
     children: [
-      { id: 'learning', href: '/keystatic/learning-center', label: 'Learning Center' },
-      { id: 'research', href: '/keystatic/research', label: 'Research' },
-      { id: 'evidence', href: '/keystatic/evidence', label: 'Evidence' },
+      { id: 'learning', href: '/keystatic/learning-center/', label: 'Learning Center' },
+      { id: 'research', href: '/keystatic/research/', label: 'Research' },
+      { id: 'evidence', href: '/keystatic/evidence/', label: 'Evidence' },
     ],
   },
   {
     label: 'Settings',
     children: [
-      { id: 'dashboard', href: '/keystatic', label: 'Dashboard' },
-      { id: 'users', href: '/keystatic/users', label: 'Users' },
-      { id: 'navigation', href: '/keystatic/navigation', label: 'Navigation' },
-      { id: 'branding', href: '/keystatic/branding', label: 'Branding' },
-      { id: 'languages', href: '/keystatic/languages', label: 'Languages' },
-      { id: 'seo', href: '/keystatic/seo', label: 'SEO' },
-      { id: 'links', href: '/keystatic/link-refactor', label: 'Links' },
+      { id: 'dashboard', href: '/keystatic/', label: 'Dashboard' },
+      { id: 'users', href: '/keystatic/users/', label: 'Users' },
+      { id: 'navigation', href: '/keystatic/navigation/', label: 'Navigation' },
+      { id: 'branding', href: '/keystatic/branding/', label: 'Branding' },
+      { id: 'languages', href: '/keystatic/languages/', label: 'Languages' },
+      { id: 'seo', href: '/keystatic/seo/', label: 'SEO' },
+      { id: 'links', href: '/keystatic/link-refactor/', label: 'Links' },
     ],
   },
 ];
@@ -141,12 +141,14 @@ const activeLabel = activeGroup?.label ?? '';
           .then((r) => r.json())
           .then((data) => {
             const user = data?.user || data?.session?.user;
-            if (!user && window.location.pathname !== '/login') {
-              window.location.replace('/login');
+            const isLogin = ['/login', '/login/'].includes(window.location.pathname);
+            if (!user && !isLogin) {
+              window.location.replace('/login/');
             }
           })
           .catch(() => {
-            if (window.location.pathname !== '/login') window.location.replace('/login');
+            const isLogin = ['/login', '/login/'].includes(window.location.pathname);
+            if (!isLogin) window.location.replace('/login/');
           });
       })();
     </script>
@@ -165,7 +167,7 @@ const activeLabel = activeGroup?.label ?? '';
               ></path></svg
             >
           </button>
-          <a href="/keystatic" class="text-lg font-semibold tracking-tight">Felizbay Admin</a>
+          <a href="/keystatic/" class="text-lg font-semibold tracking-tight">Felizbay Admin</a>
           <span class="hidden sm:inline text-xs text-gray-400">/ GitHub-backed CMS</span>
         </div>
         <div class="flex items-center gap-3 text-sm">

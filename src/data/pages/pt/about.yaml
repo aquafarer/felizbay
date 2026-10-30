@@ -97,15 +97,15 @@ brand_hub_subtitle: Descubra as nossas coleções de piscinas insufláveis ​�
 brand_hub_cards:
   - title: Piscinas Retangulares
     desc: Piscinas Drop Stitch retangulares tamanho família com paredes rígidas e área máxima de natação.
-    link: /products
+    link: /products/
     link_label: Ver piscinas →
   - title: Piscinas Azuis Redondas
     desc: A clássica piscina redonda em azul vibrante – configuração rápida, construção rígida, durabilidade para toda a temporada.
-    link: /products
+    link: /products/
     link_label: Ver piscinas →
   - title: Piscinas Redondas Cinzentas
     desc: Piscinas cinza premium com coberturas opcionais para um visual moderno de quintal.
-    link: /products
+    link: /products/
     link_label: Ver piscinas →
 production_section:
   tagline: Excelência de Produção

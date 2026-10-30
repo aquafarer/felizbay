@@ -97,15 +97,15 @@ brand_hub_subtitle: Entdecken Sie unsere Kollektionen aufblasbarer Schwimmbecken
 brand_hub_cards:
   - title: Rechteckige Pools
     desc: Rechteckige Drop-Stitch-Pools in Familiengröße mit starren Wänden und maximaler Schwimmfläche.
-    link: /products
+    link: /products/
     link_label: Pools anzeigen →
   - title: Runde blaue Pools
     desc: Der klassische Rundpool in leuchtendem Blau – schneller Aufbau, stabile Konstruktion, langlebig für die ganze Saison.
-    link: /products
+    link: /products/
     link_label: Pools anzeigen →
   - title: Runde graue Pools
     desc: Premium-Pools in Grau mit optionaler, passender Abdeckung für einen modernen Hinterhof-Look.
-    link: /products
+    link: /products/
     link_label: Pools anzeigen →
 production_section:
   tagline: Produktionsexzellenz

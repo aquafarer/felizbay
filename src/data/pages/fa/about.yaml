@@ -97,15 +97,15 @@ brand_hub_subtitle: مجموعه استخرهای بادی ما را که با �
 brand_hub_cards:
   - title: استخرهای مستطیلی
     desc: استخرهای Drop Stitch مستطیل شکل خانوادگی با دیوارهای سفت و حداکثر سطح شنا.
-    link: /products
+    link: /products/
     link_label: مشاهده استخرها →
   - title: استخرهای آبی گرد
     desc: استخر گرد کلاسیک به رنگ آبی پر جنب و جوش - راه اندازی سریع، ساختار سفت، دوام در طول فصل.
-    link: /products
+    link: /products/
     link_label: مشاهده استخرها →
   - title: استخرهای گرد خاکستری
     desc: استخرهای خاکستری درجه یک با روکش‌های تعبیه شده اختیاری برای نمای مدرن حیاط خلوت.
-    link: /products
+    link: /products/
     link_label: مشاهده استخرها →
 production_section:
   tagline: تعالی تولید

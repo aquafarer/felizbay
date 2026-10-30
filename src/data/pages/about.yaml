@@ -105,15 +105,15 @@ brand_hub_subtitle: Discover our inflatable swimming pool collections built with
 brand_hub_cards:
   - title: Rectangular Pools
     desc: Family-size rectangular drop stitch pools with rigid walls and maximum swim area.
-    link: /products
+    link: /products/
     link_label: 'View pools →'
   - title: Round Blue Pools
     desc: The classic round pool in vibrant blue — fast setup, rigid construction, season-long durability.
-    link: /products
+    link: /products/
     link_label: 'View pools →'
   - title: Round Grey Pools
     desc: Premium grey pools with optional fitted covers for a modern backyard look.
-    link: /products
+    link: /products/
     link_label: 'View pools →'
 
 production_section:

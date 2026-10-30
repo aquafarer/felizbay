@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Osta altaat
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Löydä allas
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Osta altaat
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Löydä allas
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Pyöreät altaat'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Perheuinti ja leikki – laajin kokovalikoima'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Suorakaiteen muotoiset altaat'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Suorasivuinen uimapaikka suurempiin kokoontumisiin'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Kaikki kokoelmat: 4–5 PSI drop-stitch seinät, 5–15 minuutin täyttö, pakattava säilytys. Lämmitys ja suodatus ovat ulkoisia – lämmittimet ja suodatinpumput myydään erikseen.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Tutustu uima-allasvaihtoehtoihin takapihan rentoutumiseen, perheen vesiaikaan, ulkona liottamiseen ja kausiluonteisiin loma-asuntoihin.'
       icon: tabler:home
       cta: 'Selaa uima-allasideoita'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Vertaa todellisia tuotespesifikaatioita'
       description: 'Tarkista mitat, vesikapasiteetti, suositeltu käyttöpaine, lisävarusteet ja asennusvaatimukset ennen valintaa.'
       icon: tabler:table
       cta: 'Näytä tekniset tiedot'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Ymmärrä Drop Stitch -rakenne'
       description: 'Opi, miten sisäinen rakenne toimii, mitä se tarkoittaa uima-altaan muodon ja varastoinnin kannalta ja miten tuotteen suorituskyky riippuu oikeasta täyttymisestä ja asennuksesta.'
       icon: tabler:hexagon
       cta: 'Lue opas'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Valitse luottavaisin mielin'
       description: 'Tutustu tuoteoppaisiin, hoito-ohjeisiin, takuutietoihin ja tukeen määrittääksesi, sopiiko Felizbay-allas tarpeisiisi.'
       icon: tabler:shield-check
       cta: 'Lue UKK'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Asiakastarinat'

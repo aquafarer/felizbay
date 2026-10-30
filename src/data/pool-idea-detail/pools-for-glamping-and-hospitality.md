@@ -75,8 +75,8 @@ Looking to elevate your glamping site or hospitality resort with custom water fe
 
 - **Custom dimensions & colors:** Tailor pool sizes and exterior aesthetics to match your resort's design theme.
 - **Bulk commercial pricing:** Flexible purchasing and logistics for multi-unit resorts and glamping franchises.
-- **OEM / ODM manufacturing:** Full-service design, prototyping, and custom engineering for resort developers and architectural firms — see our [OEM/ODM program](/oem-odm) for details.
+- **OEM / ODM manufacturing:** Full-service design, prototyping, and custom engineering for resort developers and architectural firms — see our [OEM/ODM program](/oem-odm/) for details.
 
 ### Get started today
 
-Interested in custom commercial configurations or a project quote? Email [info@felizbay.com](mailto:info@felizbay.com) or [submit a project request through our contact form](/contact) — our team typically responds within one business day.
+Interested in custom commercial configurations or a project quote? Email [info@felizbay.com](mailto:info@felizbay.com) or [submit a project request through our contact form](/contact/) — our team typically responds within one business day.

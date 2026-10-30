@@ -74,7 +74,7 @@ if (token) {
     <div class="flex items-center gap-2">
       <CsvToolbar dir="src/content/news/" label="Posts" />
       <a
-        href="/keystatic/posts/new"
+        href="/keystatic/posts/new/"
         class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">+ New Post</a
       >
     </div>
@@ -119,7 +119,7 @@ if (token) {
             <tr class="hover:bg-gray-50 dark:hover:bg-gray-900/50">
               <td class="px-4 py-3">
                 <a
-                  href={`/keystatic/posts/${encodeURIComponent(row.name)}`}
+                  href={`/keystatic/posts/${encodeURIComponent(row.name)}/`}
                   class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
                 >
                   {row.title}

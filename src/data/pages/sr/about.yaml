@@ -97,15 +97,15 @@ brand_hub_subtitle: Otkrijte naše kolekcije bazena na naduvavanje napravljene t
 brand_hub_cards:
   - title: Pravougaoni bazeni
     desc: Porodični pravougaoni bazeni Drop Stitch sa čvrstim zidovima i maksimalnom površinom za plivanje.
-    link: /products
+    link: /products/
     link_label: Pogledajte bazene →
   - title: Okrugli plavi bazeni
     desc: Klasični okrugli bazen u živo plavoj boji — brzo postavljanje, čvrsta konstrukcija, izdržljivost tokom cele sezone.
-    link: /products
+    link: /products/
     link_label: Pogledajte bazene →
   - title: Okrugli sivi bazeni
     desc: Vrhunski sivi bazeni sa opcionim ugrađenim poklopcima za moderan izgled dvorišta.
-    link: /products
+    link: /products/
     link_label: Pogledajte bazene →
 production_section:
   tagline: Production Ekcellence

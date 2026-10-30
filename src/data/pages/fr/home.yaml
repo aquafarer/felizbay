@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Magasiner les piscines
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Trouvez votre piscine
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Magasiner les piscines
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Trouvez votre piscine
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Piscines rondes'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Natation et jeu en famille — la plus large gamme de tailles'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Piscines rectangulaires'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Espace de baignade aux côtés droits pour les grands rassemblements'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Toutes les collections : 4 à 5 parois PSI drop-stitch, gonflage de 5 à 15 minutes, rangement pliable. Le chauffage et la filtration sont externes — les réchauffeurs et les pompes de filtration sont vendus séparément.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Explorez les options de piscine pour la détente dans la cour arrière, le temps d''eau en famille, le trempage en plein air et les propriétés de vacances saisonnières.'
       icon: tabler:home
       cta: 'Parcourir les idées de piscines'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Comparer les spécifications des produits réels'
       description: 'Examinez les dimensions, la capacité en eau, la pression de fonctionnement recommandée, les accessoires inclus et les exigences d''installation avant de choisir.'
       icon: tabler:table
       cta: 'Afficher les spécifications'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Comprendre la construction Drop Stitch'
       description: 'Découvrez comment fonctionne la structure interne, ce que cela signifie pour la forme et le stockage de la piscine, et comment les performances du produit dépendent d''un gonflage et d''une configuration appropriés.'
       icon: tabler:hexagon
       cta: 'Lire le guide'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Choisissez en toute confiance'
       description: 'Accédez aux manuels des produits, aux instructions d''entretien, aux détails de la garantie et à l''assistance pour déterminer si une piscine Felizbay répond à vos besoins.'
       icon: tabler:shield-check
       cta: 'Lire la FAQ'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Témoignages clients'

@@ -97,15 +97,15 @@ brand_hub_subtitle: Yuqori bosimli Drop Stitch texnologiyasi bilan qurilgan pufl
 brand_hub_cards:
   - title: To'rtburchak hovuzlar
     desc: Qattiq devorlari va maksimal suzish maydoni bilan oilaviy o'lchamdagi to'rtburchaklar Drop Stitch hovuzlari.
-    link: /products
+    link: /products/
     link_label: Hovuzlarni ko‘rish →
   - title: Dumaloq moviy hovuzlar
     desc: Yorqin ko'k rangdagi klassik dumaloq hovuz - tez sozlash, qattiq qurilish, mavsumiy chidamlilik.
-    link: /products
+    link: /products/
     link_label: Hovuzlarni ko‘rish →
   - title: Dumaloq kulrang hovuzlar
     desc: Hovlining zamonaviy ko'rinishi uchun ixtiyoriy o'rnatilgan qopqoqli premium kulrang hovuzlar.
-    link: /products
+    link: /products/
     link_label: Hovuzlarni ko‘rish →
 production_section:
   tagline: Ishlab chiqarish a'losi

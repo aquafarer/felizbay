@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Kolam Toko
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Temukan Kolam Anda
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Kolam Toko
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Temukan Kolam Anda
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Kolam Bulat'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Berenang dan bermain bersama keluarga — kisaran ukuran terluas'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Kolam Persegi Panjang'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ruang renang sisi lurus untuk pertemuan lebih besar'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Semua koleksi: dinding drop-stitch 4–5 PSI, inflasi 5–15 menit, penyimpanan dalam satu paket. Pemanasan dan filtrasi bersifat eksternal — pemanas dan pompa filter dijual terpisah.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Jelajahi opsi kolam untuk relaksasi di halaman belakang, waktu bersama keluarga di air, berendam di luar ruangan, dan properti liburan musiman.'
       icon: tabler:home
       cta: 'Jelajahi Ide Kolam'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Bandingkan Spesifikasi Produk Nyata'
       description: 'Tinjau dimensi, kapasitas air, tekanan operasi yang direkomendasikan, aksesori yang disertakan, dan persyaratan pemasangan sebelum memilih.'
       icon: tabler:table
       cta: 'Lihat Spesifikasi'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Pahami Konstruksi Drop Stitch'
       description: 'Pelajari bagaimana struktur internal bekerja, apa artinya bagi bentuk dan penyimpanan kolam, serta bagaimana kinerja produk bergantung pada penggelembungan dan pemasangan yang benar.'
       icon: tabler:hexagon
       cta: 'Baca Panduannya'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Pilih dengan Percaya Diri'
       description: 'Akses manual produk, instruksi perawatan, detail garansi, dan dukungan untuk membantu menentukan apakah kolam Felizbay sesuai dengan kebutuhan Anda.'
       icon: tabler:shield-check
       cta: 'Baca FAQ'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Kisah Pelanggan'

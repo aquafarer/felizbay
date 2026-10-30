@@ -97,15 +97,15 @@ brand_hub_subtitle: Objevte naše kolekce nafukovacích bazénů postavené pomo
 brand_hub_cards:
   - title: Obdélníkové bazény
     desc: Rodinné obdélníkové bazény Drop Stitch s pevnými stěnami a maximální plaveckou plochou.
-    link: /products
+    link: /products/
     link_label: Zobrazit bazény →
   - title: Kulaté modré bazény
     desc: Klasický kulatý bazén v zářivě modré — rychlé nastavení, pevná konstrukce, celoroční životnost.
-    link: /products
+    link: /products/
     link_label: Zobrazit bazény →
   - title: Kulaté šedé bazény
     desc: Prémiové šedé bazény s volitelnými kryty pro moderní vzhled dvorku.
-    link: /products
+    link: /products/
     link_label: Zobrazit bazény →
 production_section:
   tagline: Výrobní dokonalost

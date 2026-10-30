@@ -7,7 +7,7 @@ Dogs feel summer heat far more than people do, and a backyard splash spot is one
 
 ## 1. Why Drop-Stitch Handles Paws Better
 
-The difference is wall construction. A soft air-ring pool is a single envelope of thin vinyl — a claw catch or an over-excited leap can tear it. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) bonds thousands of internal vertical threads between two outer layers of PVC, so the whole structure inflates to a hard, low-stretch surface at its rated 4–5 PSI operating pressure. There is no sagging outer skin to catch claws, and the firm rim does not fold under a dog scrambling over the side.
+The difference is wall construction. A soft air-ring pool is a single envelope of thin vinyl — a claw catch or an over-excited leap can tear it. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) bonds thousands of internal vertical threads between two outer layers of PVC, so the whole structure inflates to a hard, low-stretch surface at its rated 4–5 PSI operating pressure. There is no sagging outer skin to catch claws, and the firm rim does not fold under a dog scrambling over the side.
 
 > **Be clear about the limits:** no inflatable pool is chew-proof. Drop-stitch construction resists normal clawing, stepping, and splashing — but persistent, aggressive chewing will eventually damage any fabric product. Supervision is part of the setup.
 
@@ -42,6 +42,6 @@ Pet hair is the real maintenance story:
 
 ## 5. Extending the Season
 
-Because the pool inflates in 5–15 minutes with the included electric pump and drains through a garden-hose-compatible valve, many pet owners run a simple rhythm: inflate for the hot months, skim and top up weekly, then drain, dry, and fold into storage once the weather turns. The [setup guide](/guides/inflatable-pool-setup) and [maintenance guide](/guides/inflatable-pool-maintenance) cover the mechanics.
+Because the pool inflates in 5–15 minutes with the included electric pump and drains through a garden-hose-compatible valve, many pet owners run a simple rhythm: inflate for the hot months, skim and top up weekly, then drain, dry, and fold into storage once the weather turns. The [setup guide](/guides/inflatable-pool-setup/) and [maintenance guide](/guides/inflatable-pool-maintenance/) cover the mechanics.
 
-Give your dog a summer upgrade — browse the [shop](/products) or use [Find Your Pool](/find-your-pool) to narrow the range.
+Give your dog a summer upgrade — browse the [shop](/products/) or use [Find Your Pool](/find-your-pool/) to narrow the range.

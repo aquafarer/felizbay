@@ -22,7 +22,7 @@ const {
   descriptionLabel = 'Description',
   specLabelOverrides = {},
   viewAllText = 'View all products',
-  viewAllHref = '/products',
+  viewAllHref = '/products/',
 } = Astro.props;
 const filtered = products.filter((p) => productIds.includes(p.id));
 

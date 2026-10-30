@@ -83,7 +83,7 @@ const categoryLabel: Record<string, string> = {
     <div class="flex items-center gap-2">
       <CsvToolbar dir="src/content/products/" label="Products" />
       <a
-        href="/keystatic/products/new"
+        href="/keystatic/products/new/"
         class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">+ New Product</a
       >
     </div>
@@ -129,7 +129,7 @@ const categoryLabel: Record<string, string> = {
             <tr class="hover:bg-gray-50 dark:hover:bg-gray-900/50">
               <td class="px-4 py-3">
                 <a
-                  href={`/keystatic/products/${encodeURIComponent(row.name)}`}
+                  href={`/keystatic/products/${encodeURIComponent(row.name)}/`}
                   class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
                 >
                   {row.title}

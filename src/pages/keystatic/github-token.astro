@@ -74,7 +74,7 @@ const { owner, repo } = getRepoInfo();
               </button>
             )
           }
-          <a href="/keystatic" class="text-sm text-gray-500 hover:underline">Back to Dashboard</a>
+          <a href="/keystatic/" class="text-sm text-gray-500 hover:underline">Back to Dashboard</a>
         </div>
       </form>
     </div>
@@ -125,7 +125,7 @@ const { owner, repo } = getRepoInfo();
         } catch {}
         showMessage('Token saved, redirecting...', 'success');
         setTimeout(() => {
-          window.location.href = '/keystatic';
+          window.location.href = '/keystatic/';
         }, 600);
       } catch {
         showMessage('Network error, please retry', 'error');

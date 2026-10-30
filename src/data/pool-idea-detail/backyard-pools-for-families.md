@@ -17,7 +17,7 @@ Proper spatial planning is the first step toward a seamless and enjoyable backya
   - **Clear clearance zone:** Maintain a clear pathway of at least 1 to 1.5 meters around all sides of the pool for easy entry, exit, lounging, and routine maintenance.
 
 - **Actual usable space:**
-  - Traditional soft-sided inflatable pools feature sloped inner walls that eat into your actual swimming area. Felizbay utilizes high-density [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool), resulting in firm, upright, ultra-rigid side walls.
+  - Traditional soft-sided inflatable pools feature sloped inner walls that eat into your actual swimming area. Felizbay utilizes high-density [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool/), resulting in firm, upright, ultra-rigid side walls.
   - This means **the advertised dimensions closely match your actual usable space**. A medium-to-large rectangular drop-stitch pool delivers well over 90% usable interior water surface — giving multiple adults and children ample room to splash, stretch out, and play without feeling cramped.
 
 ## 2. Water Capacity & Multi-Person Usability
@@ -49,7 +49,7 @@ Easy cleaning is a top priority for busy families. Felizbay pools are designed w
 
 - **Routine cleaning & care:**
   - **Stain-resistant material:** Made with high-density, UV-resistant PVC and drop-stitch fabrics, the smooth surface naturally resists algae buildup and grime. A quick wipe with a sponge and mild cleaner is all it takes to keep it sparkling.
-  - **Water quality management:** Pair your pool with a small filter pump for continuous water circulation, and use gentle pool sanitizing tablets (such as chlorine tablets) to maintain clear water. Cover the pool with a fitted protective cover when not in use to keep out leaves and dust. See our [setup and maintenance guide](/guides/inflatable-pool-maintenance) for a full routine.
+  - **Water quality management:** Pair your pool with a small filter pump for continuous water circulation, and use gentle pool sanitizing tablets (such as chlorine tablets) to maintain clear water. Cover the pool with a fitted protective cover when not in use to keep out leaves and dust. See our [setup and maintenance guide](/guides/inflatable-pool-maintenance/) for a full routine.
 
 ## 5. Child Safety & Drowning Prevention (Critical)
 

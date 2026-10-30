@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: استخرهای فروشگاهی
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: استخر خود را پیدا کنید
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: استخرهای فروشگاهی
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: استخر خود را پیدا کنید
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'استخرهای گرد'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'شنا و بازی خانوادگی - وسیع ترین محدوده اندازه'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'استخرهای مستطیلی'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'فضای شنای مستقیم برای مجالس بزرگتر'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'همه مجموعه ها: 4 تا 5 دیوار PSI drop-stitch، باد کردن 5 تا 15 دقیقه، ذخیره سازی بسته. گرمایش و فیلتراسیون خارجی هستند - بخاری ها و پمپ های فیلتر جداگانه فروخته می شوند.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'گزینه‌های استخر برای استراحت در حیاط، وقت‌گذرانی آبی خانوادگی، خیساندن در فضای باز و املاک تفریحی فصلی را کاوش کنید.'
       icon: tabler:home
       cta: 'مرور ایده‌های استخر'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'مقایسه مشخصات واقعی محصولات'
       description: 'قبل از انتخاب، ابعاد، ظرفیت آب، فشار کار توصیه‌شده، لوازم همراه و الزامات نصب را بررسی کنید.'
       icon: tabler:table
       cta: 'مشاهده مشخصات'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'درک ساختار Drop Stitch'
       description: 'ببینید ساختار داخلی چگونه کار می‌کند، برای شکل و نگهداری استخر چه معنایی دارد و عملکرد محصول چگونه به باد کردن و نصب صحیح بستگی دارد.'
       icon: tabler:hexagon
       cta: 'خواندن راهنما'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'با اطمینان انتخاب کنید'
       description: 'به راهنماهای محصول، دستورالعمل‌های نگهداری، جزئیات گارانتی و پشتیبانی دسترسی داشته باشید تا تشخیص دهید استخر Felizbay با نیازهایتان سازگار است یا نه.'
       icon: tabler:shield-check
       cta: 'خواندن سوالات متداول'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'تجربه مشتریان'

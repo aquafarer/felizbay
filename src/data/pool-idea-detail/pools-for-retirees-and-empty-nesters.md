@@ -9,7 +9,7 @@ When the yard quiets down, a pool stops being a playground and becomes a daily c
 
 Confidence around water starts with getting in and out safely:
 
-- **Firm, straight walls.** Unlike soft ring pools that collapse underhand, a [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) at its rated 4–5 PSI operating pressure has firm, straight walls with a stable rim you can sit on.
+- **Firm, straight walls.** Unlike soft ring pools that collapse underhand, a [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) at its rated 4–5 PSI operating pressure has firm, straight walls with a stable rim you can sit on.
 - **Seats built in.** SPA tubs include integrated inflatable seats — lower yourself in slowly, and use them as intermediate steps on the way out.
 - **Clear access.** Keep a step-free, non-slip path from the door to the pool. Garden hoses, filter cords, and pump units belong tucked away from walkways, not underfoot.
 
@@ -33,7 +33,7 @@ Low water volume is the quiet luxury of a small soaking pool:
 - **Minimal chemistry:** a floating dispenser with mild tablets maintains hygiene — small volumes need small doses, no complicated testing rituals.
 - **A fitted cover** keeps out leaves, blossom, and insects between soaks, which is most of the battle.
 
-The full routine lives in the [maintenance guide](/guides/inflatable-pool-maintenance).
+The full routine lives in the [maintenance guide](/guides/inflatable-pool-maintenance/).
 
 ## 4. Draining Without Heavy Lifting
 
@@ -52,4 +52,4 @@ No bucket-bailing is ever needed:
 
 ## 6. Make the Garden a Retreat
 
-Setup is a one-person, 15–30 minute job with the included electric pump ([setup guide](/guides/inflatable-pool-setup)) — inflate for the season, soak daily, then fold away for winter. Browse the [shop](/products) for the sizes above, or let [Find Your Pool](/find-your-pool) narrow the range in three questions.
+Setup is a one-person, 15–30 minute job with the included electric pump ([setup guide](/guides/inflatable-pool-setup/)) — inflate for the season, soak daily, then fold away for winter. Browse the [shop](/products/) for the sizes above, or let [Find Your Pool](/find-your-pool/) narrow the range in three questions.

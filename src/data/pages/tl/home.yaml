@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Mamili ng Pool
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Hanapin ang Iyong Pool
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Mamili ng Pool
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Hanapin ang Iyong Pool
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Mga Bilog na Pool'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Family swimming at play — ang pinakamalawak na hanay ng laki'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Mga Rectangular Pool'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Straight-sided swim space para sa mas malalaking pagtitipon'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Lahat ng koleksyon: 4–5 PSI drop-stitch wall, 5–15 min inflation, pack-away storage. Ang pagpainit at pagsasala ay panlabas — ang mga heater at filter na bomba ay ibinebenta nang hiwalay.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Tuklasin ang mga opsyon ng pool para sa pag-relax sa bakuran, oras ng pamilya sa tubig, paglalango sa labas, at mga seasonal na vacation property.'
       icon: tabler:home
       cta: 'Tingnan ang mga Ideya ng Pool'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Ikumpara ang Totoong Spec ng Produkto'
       description: 'Suriin ang mga sukat, kapasidad ng tubig, inirerekomendang operating pressure, kasamang accessories, at mga kinakailangan sa pag-install bago pumili.'
       icon: tabler:table
       cta: 'Tingnan ang mga Specification'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Unawain ang Drop Stitch Construction'
       description: 'Alamin kung paano gumagana ang internal na istraktura, ano ang ibig sabihin nito sa hugis at imbakan ng pool, at kung paano nakadepende ang performance ng produkto sa tamang pagpapalaki at pag-setup.'
       icon: tabler:hexagon
       cta: 'Basahin ang Gabay'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Pumili nang may Kumpiyansa'
       description: 'I-access ang mga manwal ng produkto, mga tagubilin sa pag-aalaga, detalye ng warranty, at suporta para matukoy kung ang Felizbay pool ay angkop sa iyong mga pangangailangan.'
       icon: tabler:shield-check
       cta: 'Basahin ang FAQ'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Kuwento ng mga Customer'

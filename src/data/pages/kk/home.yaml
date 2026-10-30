@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Дүкен бассейндері
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Өз бассейніңізді табыңыз
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Дүкен бассейндері
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Өз бассейніңізді табыңыз
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Дөңгелек бассейндер'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Отбасылық жүзу және ойын - ең кең ауқым'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Тік бұрышты бассейндер'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Үлкен жиналыстар үшін түзу жүзу кеңістігі'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Барлық жинақтар: 4–5 PSI drop-stitch қабырғалары, 5–15 мин инфляция, қаптамада сақтау. Жылыту және сүзу сыртқы болып табылады — жылытқыштар мен сүзгі сорғылары бөлек сатылады.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Аулада демалыс, отбасымен су шомылу, далада шомылу және маусымдық демалыс үйлері үшін бассейн нұсқаларын қараңыз.'
       icon: tabler:home
       cta: 'Бассейн идеяларын шолу'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Нақты өнім сипаттамаларын салыстырыңыз'
       description: 'Таңдау жасамас бұрын өлшемдерді, су сыйымдылығын, ұсынылатын жұмыс қысымын, кіретін аксессуарларды және орнату талаптарын қараңыз.'
       icon: tabler:table
       cta: 'Сипаттамаларды көру'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Drop Stitch құрылымын түсініңіз'
       description: 'Ішкі құрылым қалай жұмыс істейтінін, оның бассейн пішіні мен сақтауға қандай мағына беретінін және өнім сапасы дұрыс үрлеу мен орнатуға қалай тәуелді екенін біліңіз.'
       icon: tabler:hexagon
       cta: 'Нұсқаулықты оқу'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Сеніммен таңдаңыз'
       description: 'Felizbay бассейні қажеттіліктеріңізге сәйкес келетінін анықтау үшін өнім нұсқаулықтарына, күту нұсқауларына, кепілдік мәліметтеріне және қолдауға қол жеткізіңіз.'
       icon: tabler:shield-check
       cta: 'FAQ оқу'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Тұтынушылардың әңгімелері'

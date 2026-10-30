@@ -97,15 +97,15 @@ brand_hub_subtitle: Yüksek basınçlı Drop Stitch teknolojisiyle oluşturulmu�
 brand_hub_cards:
   - title: Dikdörtgen Havuzlar
     desc: Sert duvarlara ve maksimum yüzme alanına sahip, aile boyutunda dikdörtgen Drop Stitch havuzları.
-    link: /products
+    link: /products/
     link_label: Havuzları görüntüle →
   - title: Yuvarlak Mavi Havuzlar
     desc: Canlı mavi renkte klasik yuvarlak havuz — hızlı kurulum, sağlam yapı, sezon boyu dayanıklılık.
-    link: /products
+    link: /products/
     link_label: Havuzları görüntüle →
   - title: Yuvarlak Gri Havuzlar
     desc: Modern bir arka bahçe görünümü için isteğe bağlı kapaklı birinci sınıf gri havuzlar.
-    link: /products
+    link: /products/
     link_label: Havuzları görüntüle →
 production_section:
   tagline: Üretim Mükemmelliği

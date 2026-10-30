@@ -97,15 +97,15 @@ brand_hub_subtitle: Tutustu korkeapaineisella Drop Stitch-tekniikalla valmistett
 brand_hub_cards:
   - title: Suorakaiteen muotoiset altaat
     desc: Perhekokoiset suorakaiteen muotoiset Drop Stitch-altaat jäykillä seinillä ja suurimmalla uima-alalla.
-    link: /products
+    link: /products/
     link_label: Näytä altaat →
   - title: Pyöreät siniset altaat
     desc: Klassinen pyöreä allas kirkkaan sinisenä – nopea asennus, jäykkä rakenne, kauden kestävyys.
-    link: /products
+    link: /products/
     link_label: Näytä altaat →
   - title: Pyöreät harmaat altaat
     desc: Ensiluokkaiset harmaat uima-altaat valinnaisilla kiinnitetyillä kansilla moderniin takapihan ilmeeseen.
-    link: /products
+    link: /products/
     link_label: Näytä altaat →
 production_section:
   tagline: Tuotannon erinomaisuutta

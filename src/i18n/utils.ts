@@ -9,7 +9,12 @@ export function getLangFromUrl(url: URL): string {
 export function removeLang(path: string): string {
   const parts = path.split('/').filter(Boolean);
   if (parts.length > 0 && parts[0] in languages) {
-    return '/' + parts.slice(1).join('/');
+    const base = '/' + parts.slice(1).join('/');
+    // Preserve the trailing slash: /ar/about/ -> /about/ (not /about), so
+    // language-switcher and hreflang URLs point straight at the 200 page
+    // instead of hopping through a 308 redirect.
+    if (path.endsWith('/') && !base.endsWith('/')) return base + '/';
+    return base;
   }
   return path.startsWith('/') ? path : '/' + path;
 }

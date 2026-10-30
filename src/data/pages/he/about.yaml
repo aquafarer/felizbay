@@ -97,15 +97,15 @@ brand_hub_subtitle: גלה את קולקציית בריכות השחייה המ�
 brand_hub_cards:
   - title: בריכות מלבניות
     desc: בריכות Drop Stitch מלבניות בגודל משפחתי עם קירות קשיחים ושטח שחייה מירבי.
-    link: /products
+    link: /products/
     link_label: צפה בבריכות →
   - title: בריכות כחולות עגולות
     desc: הבריכה הקלאסית העגולה בצבע כחול תוסס - התקנה מהירה, בנייה קשיחה, עמידות לאורך העונה.
-    link: /products
+    link: /products/
     link_label: צפה בבריכות →
   - title: בריכות אפורות עגולות
     desc: בריכות פרימיום אפורות עם כיסויים אופציונליים למראה חצר אחורית מודרנית.
-    link: /products
+    link: /products/
     link_label: צפה בבריכות →
 production_section:
   tagline: מצוינות בייצור

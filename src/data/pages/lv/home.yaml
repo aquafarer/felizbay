@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Veikals baseini
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Atrodiet savu baseinu
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Veikals baseini
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Atrodiet savu baseinu
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Apaļi baseini'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Ģimenes peldēšana un rotaļas — visplašākais izmēru klāsts'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Taisnstūra baseini'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Taisnas malas peldvieta lielākām pulcēšanās vietām'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Visas kolekcijas: 4–5 PSI drop-stitch sienas, 5–15 min piepūšana, iesaiņojuma uzglabāšana. Apkure un filtrēšana ir ārējā — sildītāji un filtru sūkņi tiek pārdoti atsevišķi.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Atklājiet baseinu iespējas atpūtai pagalmā, ģimenes laikam ūdenī, mērcēšanai ārā un sezonālām atpūtas vietām.'
       icon: tabler:home
       cta: 'Pārlūkot baseina idejas'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Salīdziniet reālās produkta specifikācijas'
       description: 'Pirms izvēles pārbaudiet izmērus, ūdens tilpumu, ieteikto darba spiedienu, iekļautos piederumus un uzstādīšanas prasības.'
       icon: tabler:table
       cta: 'Skatīt specifikācijas'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Izprotiet Drop Stitch konstrukciju'
       description: 'Uzziniet, kā darbojas iekšējā struktūra, ko tas nozīmē baseina formai un uzglabāšanai un kā produkta veiktspēja atkarīga no pareizas uzpūšanas un uzstādīšanas.'
       icon: tabler:hexagon
       cta: 'Lasīt ceļvedi'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Izvēlieties ar pārliecību'
       description: 'Izmantojiet produktu rokasgrāmatas, kopšanas instrukcijas, garantijas informāciju un atbalstu, lai noskaidrotu, vai Felizbay baseins atbilst jūsu vajadzībām.'
       icon: tabler:shield-check
       cta: 'Lasīt BUJ'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Klientu stāsti'

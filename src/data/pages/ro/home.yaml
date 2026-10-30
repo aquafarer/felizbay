@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Piscine de magazin
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Găsește-ți piscina
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Piscine de magazin
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Găsește-ți piscina
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Piscine rotunde'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Înot și joacă în familie — cea mai largă gamă de dimensiuni'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Piscine dreptunghiulare'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Spațiu de înot cu laturi drepte pentru adunări mai mari'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Toate colecțiile: pereți drop-stitch de 4–5 PSI, umflare 5–15 min, depozitare la pachet. Încălzirea și filtrarea sunt externe - încălzitoarele și pompele de filtru sunt vândute separat.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Explorați opțiuni de piscine pentru relaxare în curte, momente de apă în familie, îmbăiere în aer liber și proprietăți de vacanță sezoniere.'
       icon: tabler:home
       cta: 'Răsfoiți ideile de piscine'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Comparați specificațiile reale ale produselor'
       description: 'Verificați dimensiunile, capacitatea de apă, presiunea de operare recomandată, accesoriile incluse și cerințele de instalare înainte de a alege.'
       icon: tabler:table
       cta: 'Vezi specificațiile'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Înțelegeți construcția Drop Stitch'
       description: 'Aflați cum funcționează structura internă, ce înseamnă pentru forma și depozarea piscinei și cum depinde performanța produsului de umflare și instalarea corectă.'
       icon: tabler:hexagon
       cta: 'Citiți ghidul'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Alegeți cu încredere'
       description: 'Accesați manualele produselor, instrucțiunile de îngrijire, detaliile garanției și asistența pentru a stabili dacă o piscină Felizbay vi se potrivește.'
       icon: tabler:shield-check
       cta: 'Citiți întrebările frecvente'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Povești ale clienților'

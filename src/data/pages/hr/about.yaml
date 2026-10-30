@@ -97,15 +97,15 @@ brand_hub_subtitle: Otkrijte naše kolekcije bazena na napuhavanje izrađenih te
 brand_hub_cards:
   - title: Pravokutni bazeni
     desc: Pravokutni Drop Stitch bazeni obiteljske veličine s krutim stijenkama i maksimalnom površinom za plivanje.
-    link: /products
+    link: /products/
     link_label: Pogledaj bazene →
   - title: Okrugli plavi bazeni
     desc: Klasični okrugli bazen jarke plave boje — brzo postavljanje, čvrsta konstrukcija, dugotrajnost tijekom cijele sezone.
-    link: /products
+    link: /products/
     link_label: Pogledaj bazene →
   - title: Okrugli sivi bazeni
     desc: Vrhunski sivi bazeni s dodatnim ugrađenim pokrivačima za moderan izgled dvorišta.
-    link: /products
+    link: /products/
     link_label: Pogledaj bazene →
 production_section:
   tagline: Izvrsnost proizvodnje

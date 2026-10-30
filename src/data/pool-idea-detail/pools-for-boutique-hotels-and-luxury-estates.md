@@ -7,7 +7,7 @@ In boutique hospitality, a private plunge on a suite terrace or in a villa court
 
 ## 1. The Guest Experience, Without the Construction
 
-A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) inflated to its rated 4–5 PSI operating pressure holds straight, clean walls and a stable rim — a photogenic, architectural silhouette rather than a toy. Neutral exteriors sit comfortably next to timber decking, natural stone, and planted terraces, and the whole amenity:
+A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) inflated to its rated 4–5 PSI operating pressure holds straight, clean walls and a stable rim — a photogenic, architectural silhouette rather than a toy. Neutral exteriors sit comfortably next to timber decking, natural stone, and planted terraces, and the whole amenity:
 
 - installs with no excavation, foundations, or building works,
 - moves or stores seasonally without leaving a trace, and
@@ -39,7 +39,7 @@ Hospitality water care has to be invisible to guests:
 - **Between-stay protocol:** skim, test, and top up sanitizer at turnover; keep the fitted cover on whenever the suite is unoccupied.
 - **Low-odor treatment:** consistent low-level sanitation avoids the chemical smell guests associate with cheap amenities.
 
-The [maintenance guide](/guides/inflatable-pool-maintenance) details the full routine; our [vacation rental guide](/guides/inflatable-pools-for-vacation-rentals) covers the operational overlap.
+The [maintenance guide](/guides/inflatable-pool-maintenance/) details the full routine; our [vacation rental guide](/guides/inflatable-pools-for-vacation-rentals/) covers the operational overlap.
 
 ## 5. Guest Safety & Property Liability
 
@@ -50,4 +50,4 @@ The [maintenance guide](/guides/inflatable-pool-maintenance) details the full ro
 
 ## 6. B2B Sourcing: Custom Builds & OEM/ODM
 
-For hospitality groups and estate projects, Felizbay supports commercial sourcing through our Qingdao manufacturing partner: custom dimensions and colorways, branded exteriors and deck pads, curated equipment bundles, and volume pricing. The [OEM/ODM program](/oem-odm) details capabilities and lead times; for project quotations email [info@felizbay.com](mailto:info@felizbay.com) — our team typically responds within one business day.
+For hospitality groups and estate projects, Felizbay supports commercial sourcing through our Qingdao manufacturing partner: custom dimensions and colorways, branded exteriors and deck pads, curated equipment bundles, and volume pricing. The [OEM/ODM program](/oem-odm/) details capabilities and lead times; for project quotations email [info@felizbay.com](mailto:info@felizbay.com) — our team typically responds within one business day.

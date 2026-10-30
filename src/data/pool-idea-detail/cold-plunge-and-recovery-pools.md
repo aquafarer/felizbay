@@ -7,7 +7,7 @@ Cold-water immersion (CWI) has moved from locker-room folklore to a mainstream r
 
 ## 1. Why Drop-Stitch Works for Cold Plunge
 
-A plunge vessel gets used daily, and soft air-ring pools flex and wobble under regular use. A [drop-stitch tub](/guides/what-is-a-drop-stitch-inflatable-pool) inflated to its rated 4–5 PSI operating pressure holds a firm, straight-walled shape with a flat, stable floor and a rim stable enough to sit on. Use the built-in seats when getting in and out.
+A plunge vessel gets used daily, and soft air-ring pools flex and wobble under regular use. A [drop-stitch tub](/guides/what-is-a-drop-stitch-inflatable-pool/) inflated to its rated 4–5 PSI operating pressure holds a firm, straight-walled shape with a flat, stable floor and a rim stable enough to sit on. Use the built-in seats when getting in and out.
 
 Felizbay SPA tubs add the two features a plunge actually needs: **built-in seats** for an upright seated immersion position, and a **5 mm insulated thermal bottom** that slows heat transfer from the ground — useful whether you are keeping heat out (cold plunge) or in (hot soak).
 
@@ -16,7 +16,7 @@ Felizbay SPA tubs add the two features a plunge actually needs: **built-in seats
 An honest point first: **insulation slows temperature change, it does not create it.** To hold plunge temperatures (roughly 4–10 °C / 39–50 °F) in warm environments you need one of two approaches:
 
 - **Ice-based:** add bagged ice and replace as it melts. Simple and equipment-free, but requires disciplined water changes every 3–7 days since there is no sanitizer loop running.
-- **Active chilling:** pair the tub with an external water chiller through the standard circulation ports. Confirm port compatibility with your chiller vendor before purchasing — see the specs in the [shop](/products).
+- **Active chilling:** pair the tub with an external water chiller through the standard circulation ports. Confirm port compatibility with your chiller vendor before purchasing — see the specs in the [shop](/products/).
 
 A fitted, insulated cover is non-negotiable for either route: it locks in temperature, blocks debris, keeps energy use down, and keeps children and pets out of an unsupervised water vessel.
 
@@ -51,4 +51,4 @@ Daily single-user plunges are low-contamination, but small volumes still need a 
 
 ## 6. Build the Routine
 
-Start with one tub, one cover, and one honest cooling plan — then iterate as the habit sticks. Browse the [shop](/products) for the full size range, or read the [maintenance guide](/guides/inflatable-pool-maintenance) for the water-care details.
+Start with one tub, one cover, and one honest cooling plan — then iterate as the habit sticks. Browse the [shop](/products/) for the full size range, or read the [maintenance guide](/guides/inflatable-pool-maintenance/) for the water-care details.

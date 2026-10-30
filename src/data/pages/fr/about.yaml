@@ -97,15 +97,15 @@ brand_hub_subtitle: Découvrez nos collections de piscines gonflables construite
 brand_hub_cards:
   - title: Piscines rectangulaires
     desc: Piscines Drop Stitch rectangulaires de taille familiale avec parois rigides et surface de nage maximale.
-    link: /products
+    link: /products/
     link_label: Voir les piscines →
   - title: Piscines rondes bleues
     desc: 'La piscine ronde classique en bleu vif : installation rapide, construction rigide, durabilité toute la saison.'
-    link: /products
+    link: /products/
     link_label: Voir les piscines →
   - title: Piscines rondes grises
     desc: Piscines grises haut de gamme avec couvertures ajustées en option pour un look de jardin moderne.
-    link: /products
+    link: /products/
     link_label: Voir les piscines →
 production_section:
   tagline: Excellence de la production

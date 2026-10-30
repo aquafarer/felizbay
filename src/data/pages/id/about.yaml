@@ -97,15 +97,15 @@ brand_hub_subtitle: Temukan koleksi kolam renang tiup kami yang dibuat dengan te
 brand_hub_cards:
   - title: Kolam Persegi Panjang
     desc: Kolam drop stitch persegi panjang ukuran keluarga dengan dinding kaku dan area berenang maksimal.
-    link: /products
+    link: /products/
     link_label: Lihat kolam →
   - title: Kolam Biru Bulat
     desc: Kolam bundar klasik dengan warna biru cerah — pengaturan cepat, konstruksi kokoh, daya tahan sepanjang musim.
-    link: /products
+    link: /products/
     link_label: Lihat kolam →
   - title: Kolam Kelabu Bulat
     desc: Kolam abu-abu premium dengan penutup opsional untuk tampilan halaman belakang modern.
-    link: /products
+    link: /products/
     link_label: Lihat kolam →
 production_section:
   tagline: Keunggulan Produksi

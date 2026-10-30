@@ -97,15 +97,15 @@ brand_hub_subtitle: Yüksək təzyiqli Drop Stitch texnologiyası ilə tikilmiş
 brand_hub_cards:
   - title: Düzbucaqlı Hovuzlar
     desc: Sərt divarları və maksimum üzmə sahəsi olan ailə ölçülü düzbucaqlı Drop Stitch hovuzları.
-    link: /products
+    link: /products/
     link_label: Hovuzlara baxın →
   - title: Dairəvi Mavi Hovuzlar
     desc: Canlı mavi rəngli klassik dəyirmi hovuz - sürətli quraşdırma, sərt tikinti, mövsüm boyu davamlılıq.
-    link: /products
+    link: /products/
     link_label: Hovuzlara baxın →
   - title: Dəyirmi Boz Hovuzlar
     desc: Müasir həyət görünüşü üçün əlavə quraşdırılmış örtüklərlə premium boz hovuzlar.
-    link: /products
+    link: /products/
     link_label: Hovuzlara baxın →
 production_section:
   tagline: İstehsal Mükəmməlliyi

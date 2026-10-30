@@ -141,11 +141,11 @@ export const procurementGuides: ProcurementGuide[] = [
       },
     ],
     related: [
-      { label: 'OEM / ODM Manufacturing', href: '/oem-odm' },
-      { label: 'Quality Control', href: '/quality-control' },
-      { label: 'Manufacturing Process', href: '/manufacturing' },
-      { label: 'Pool Specs & FOB Price List', href: '/products/specs' },
-      { label: 'Request a Quote', href: '/request-quotation' },
+      { label: 'OEM / ODM Manufacturing', href: '/oem-odm/' },
+      { label: 'Quality Control', href: '/quality-control/' },
+      { label: 'Manufacturing Process', href: '/manufacturing/' },
+      { label: 'Pool Specs & FOB Price List', href: '/products/specs/' },
+      { label: 'Request a Quote', href: '/request-quotation/' },
     ],
   },
   {
@@ -223,10 +223,10 @@ export const procurementGuides: ProcurementGuide[] = [
       },
     ],
     related: [
-      { label: 'OEM / ODM Manufacturing', href: '/oem-odm' },
-      { label: 'Private Label Pools', href: '/private-label' },
-      { label: 'Wholesale Program', href: '/wholesale' },
-      { label: 'Pool Specs & FOB Price List', href: '/products/specs' },
+      { label: 'OEM / ODM Manufacturing', href: '/oem-odm/' },
+      { label: 'Private Label Pools', href: '/private-label/' },
+      { label: 'Wholesale Program', href: '/wholesale/' },
+      { label: 'Pool Specs & FOB Price List', href: '/products/specs/' },
     ],
   },
   {
@@ -319,10 +319,10 @@ export const procurementGuides: ProcurementGuide[] = [
       },
     ],
     related: [
-      { label: 'Private Label Pools', href: '/private-label' },
-      { label: 'OEM / ODM Manufacturing', href: '/oem-odm' },
-      { label: 'Wholesale Program', href: '/wholesale' },
-      { label: 'Request a Quote', href: '/request-quotation' },
+      { label: 'Private Label Pools', href: '/private-label/' },
+      { label: 'OEM / ODM Manufacturing', href: '/oem-odm/' },
+      { label: 'Wholesale Program', href: '/wholesale/' },
+      { label: 'Request a Quote', href: '/request-quotation/' },
     ],
   },
   {
@@ -402,10 +402,10 @@ export const procurementGuides: ProcurementGuide[] = [
       },
     ],
     related: [
-      { label: 'Quality Control', href: '/quality-control' },
-      { label: 'Manufacturing Process', href: '/manufacturing' },
-      { label: 'OEM / ODM Manufacturing', href: '/oem-odm' },
-      { label: 'Pool Specs & FOB Price List', href: '/products/specs' },
+      { label: 'Quality Control', href: '/quality-control/' },
+      { label: 'Manufacturing Process', href: '/manufacturing/' },
+      { label: 'OEM / ODM Manufacturing', href: '/oem-odm/' },
+      { label: 'Pool Specs & FOB Price List', href: '/products/specs/' },
     ],
   },
   {
@@ -489,10 +489,10 @@ export const procurementGuides: ProcurementGuide[] = [
       },
     ],
     related: [
-      { label: 'Pool Specs & FOB Price List', href: '/products/specs' },
-      { label: 'Wholesale Program', href: '/wholesale' },
-      { label: 'Container Loading Guide', href: '/guides/inflatable-pool-container-loading-guide' },
-      { label: 'Request a Bulk Quote', href: '/request-quotation' },
+      { label: 'Pool Specs & FOB Price List', href: '/products/specs/' },
+      { label: 'Wholesale Program', href: '/wholesale/' },
+      { label: 'Container Loading Guide', href: '/guides/inflatable-pool-container-loading-guide/' },
+      { label: 'Request a Bulk Quote', href: '/request-quotation/' },
     ],
   },
   {
@@ -570,10 +570,10 @@ export const procurementGuides: ProcurementGuide[] = [
       },
     ],
     related: [
-      { label: 'Pool Specs & FOB Price List', href: '/products/specs' },
-      { label: 'Wholesale Program', href: '/wholesale' },
-      { label: 'Wholesale Pool Cost Guide', href: '/guides/how-much-does-a-wholesale-drop-stitch-pool-cost' },
-      { label: 'Request a Quote', href: '/request-quotation' },
+      { label: 'Pool Specs & FOB Price List', href: '/products/specs/' },
+      { label: 'Wholesale Program', href: '/wholesale/' },
+      { label: 'Wholesale Pool Cost Guide', href: '/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/' },
+      { label: 'Request a Quote', href: '/request-quotation/' },
     ],
   },
 ];

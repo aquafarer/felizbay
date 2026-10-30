@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: ร้านค้าสระว่ายน้ำ
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: ค้นหาสระน้ำของคุณ
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: ร้านค้าสระว่ายน้ำ
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: ค้นหาสระน้ำของคุณ
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'สระน้ำทรงกลม'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'ว่ายน้ำและเล่นสำหรับครอบครัว — ขนาดที่กว้างที่สุด'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'สระน้ำทรงสี่เหลี่ยม'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'พื้นที่ว่ายน้ำด้านตรงเพื่อการสังสรรค์ที่ใหญ่ขึ้น'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'คอลเลกชันทั้งหมด: ผนัง 4–5 PSI drop-stitch, การสูบลม 5–15 นาที, พื้นที่จัดเก็บแบบแพ็คแยก การทำความร้อนและการกรองเป็นแบบภายนอก - เครื่องทำความร้อนและปั๊มกรองจำหน่ายแยกต่างหาก'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'สำรวจตัวเลือกสระน้ำสำหรับพักผ่อนในสวนหลังบ้าน กิจกรรมน้ำสำหรับครอบครัว การแช่น้ำกลางแจ้ง และบ้านพักตากอากาศตามฤดูกาล'
       icon: tabler:home
       cta: 'ดูไอเดียสระน้ำ'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'เปรียบเทียบสเปกสินค้าจริง'
       description: 'ตรวจสอบขนาด ความจุน้ำ แรงดันใช้งานที่แนะนำ อุปกรณ์ที่รวมมา และข้อกำหนดการติดตั้งก่อนตัดสินใจ'
       icon: tabler:table
       cta: 'ดูสเปก'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'เข้าใจโครงสร้าง Drop Stitch'
       description: 'เรียนรู้ว่าโครงสร้างภายในทำงานอย่างไร ส่งผลต่อรูปทรงและการจัดเก็บอย่างไร และประสิทธิภาพของสินค้าขึ้นอยู่กับการสูบลมและการติดตั้งที่ถูกต้องอย่างไร'
       icon: tabler:hexagon
       cta: 'อ่านคู่มือ'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'เลือกอย่างมั่นใจ'
       description: 'เข้าถึงคู่มือสินค้า คำแนะนำการดูแล รายละเอียดการรับประกัน และฝ่ายสนับสนุน เพื่อช่วยพิจารณาว่าสระน้ำ Felizbay เหมาะกับความต้องการของคุณหรือไม่'
       icon: tabler:shield-check
       cta: 'อ่านคำถามที่พบบ่อย'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'เรื่องราวจากลูกค้า'

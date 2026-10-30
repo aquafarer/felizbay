@@ -23,7 +23,7 @@ The tiers below map to real Felizbay catalog models — every dimension, wall he
 
 ### Why vertical walls matter for capacity
 
-Unlike standard inflatable pools with sloped walls that squeeze interior usable space, Felizbay's [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) maintains straight, vertical 90-degree walls. This delivers edge-to-edge usable interior volume, allowing adults to sit or lean comfortably along the pool perimeter without losing wall stability or losing precious water over the sides.
+Unlike standard inflatable pools with sloped walls that squeeze interior usable space, Felizbay's [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool/) maintains straight, vertical 90-degree walls. This delivers edge-to-edge usable interior volume, allowing adults to sit or lean comfortably along the pool perimeter without losing wall stability or losing precious water over the sides.
 
 ### A working density rule
 
@@ -49,7 +49,7 @@ Heavy pool usage during family gatherings introduces sunscreens, body oils, and 
 
 - **Sanitizing & water maintenance:**
   - **Floating chemical dispenser:** Use slow-dissolving chlorine or bromine tablets in a regulated dispenser to keep sanitizer levels stable (1 to 3 ppm).
-  - **Post-party shock:** After hosting a large group, apply a mild pool shock treatment overnight to clear micro-contaminants and restore clarity. Our [maintenance guide](/guides/inflatable-pool-maintenance) covers the full routine.
+  - **Post-party shock:** After hosting a large group, apply a mild pool shock treatment overnight to clear micro-contaminants and restore clarity. Our [maintenance guide](/guides/inflatable-pool-maintenance/) covers the full routine.
 
 ## 4. Drainage Time & Water Management
 

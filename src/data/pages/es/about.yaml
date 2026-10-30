@@ -97,15 +97,15 @@ brand_hub_subtitle: Descubra nuestras colecciones de piscinas hinchables constru
 brand_hub_cards:
   - title: Piscinas rectangulares
     desc: Piscinas Drop Stitch rectangulares de tamaño familiar con paredes rígidas y máxima zona de baño.
-    link: /products
+    link: /products/
     link_label: Ver piscinas →
   - title: Piscinas Redondas Azules
     desc: 'La clásica piscina redonda en un azul vibrante: instalación rápida, construcción rígida y durabilidad durante toda la temporada.'
-    link: /products
+    link: /products/
     link_label: Ver piscinas →
   - title: Piscinas Redondas Grises
     desc: Piscinas grises de primera calidad con cubiertas instaladas opcionales para una apariencia moderna de patio trasero.
-    link: /products
+    link: /products/
     link_label: Ver piscinas →
 production_section:
   tagline: Excelencia en producción

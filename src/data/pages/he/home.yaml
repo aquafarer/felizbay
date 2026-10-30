@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: חנות בריכות
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: מצא את הבריכה שלך
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: חנות בריכות
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: מצא את הבריכה שלך
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'בריכות עגולות'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'שחייה ומשחק משפחתיים - טווח המידות הרחב ביותר'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'בריכות מלבניות'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'מרחב שחייה ישר צדדי להתכנסויות גדולות יותר'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'כל הקולקציות: קירות 4-5 PSI drop-stitch, ניפוח של 5-15 דקות, אחסון לארוז. חימום וסינון הם חיצוניים - תנורי חימום ומשאבות מסננים נמכרים בנפרד.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'גלו אפשרויות בריכה לרגיעה בחצר, זמן מים משפחתי, רביצה בחוץ ונכסי נופש עונתיים.'
       icon: tabler:home
       cta: 'עיינו ברעיונות לבריכות'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'השוו מפרטי מוצר אמיתיים'
       description: 'בדקו ממדים, קיבולת מים, לחץ עבודה מומלץ, אביזרים כלולים ודרישות התקנה לפני שאתם בוחרים.'
       icon: tabler:table
       cta: 'צפו במפרט'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'הבינו את מבנה ה-Drop Stitch'
       description: 'למדו כיצד המבנה הפנימי פועל, מה המשמעות שלו לצורת הבריכה ולאחסון, וכיצד ביצועי המוצר תלויים בניפוח ובהתקנה נכונים.'
       icon: tabler:hexagon
       cta: 'קראו את המדריך'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'בחרו בביטחון'
       description: 'גשו למדריכי מוצר, הוראות טיפול, פרטי אחריות ותמיכה שיעזרו לכם להחליט אם בריכת Felizbay מתאימה לצרכים שלכם.'
       icon: tabler:shield-check
       cta: 'קראו את השאלות הנפוצות'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'סיפורי לקוחות'

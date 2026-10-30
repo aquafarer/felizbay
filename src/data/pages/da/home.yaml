@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Shop Pools
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Find din pool
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Shop Pools
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Find din pool
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Runde pools'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Familiesvømning og leg — det bredeste størrelsesområde'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Rektangulære pools'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ligesidet svømmeplads til større forsamlinger'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Alle samlinger: 4–5 PSI drop-stitch-vægge, 5–15 min. oppustning, opbevaring til opbevaring. Opvarmning og filtrering er ekstern - varmelegemer og filterpumper sælges separat.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Udforsk poolmuligheder til afslapning i baghaven, familievandtid, udendørs iblødsætning og sæsonbestemte ferieboliger.'
       icon: tabler:home
       cta: 'Gennemse poolideer'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Sammenlign ægte produktspecifikationer'
       description: 'Gennemgå dimensioner, vandkapacitet, anbefalet driftstryk, inkluderet tilbehør og installationskrav, før du vælger.'
       icon: tabler:table
       cta: 'Se specifikationer'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Forstå Drop Stitch-konstruktion'
       description: 'Lær, hvordan den interne struktur fungerer, hvad det betyder for poolform og opbevaring, og hvordan produktets ydeevne afhænger af korrekt oppustning og opsætning.'
       icon: tabler:hexagon
       cta: 'Læs vejledningen'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Vælg med tillid'
       description: 'Få adgang til produktmanualer, vedligeholdelsesinstruktioner, garantioplysninger og support for at hjælpe med at afgøre, om en Felizbay-pool passer til dine behov.'
       icon: tabler:shield-check
       cta: 'Læs ofte stillede spørgsmål'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Kundehistorier'

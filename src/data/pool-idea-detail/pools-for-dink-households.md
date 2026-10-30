@@ -9,7 +9,7 @@ This guide covers the space, the water routine, and the practical limits of a tw
 
 ## 1. Design-Led, Not Toy-Like
 
-Cheap inflatable pools clash with a considered outdoor space: sagging bright-vinyl walls, bulging seams, and a footprint that takes over the patio. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool) behaves differently. Inflated to its rated 4–5 PSI operating pressure, the walls form straight, clean vertical lines with a neutral exterior that reads closer to a plastered plunge pool than a beach toy.
+Cheap inflatable pools clash with a considered outdoor space: sagging bright-vinyl walls, bulging seams, and a footprint that takes over the patio. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) behaves differently. Inflated to its rated 4–5 PSI operating pressure, the walls form straight, clean vertical lines with a neutral exterior that reads closer to a plastered plunge pool than a beach toy.
 
 The result is a pool that sits comfortably next to teak furniture, planters, and architectural lighting — and that you will not feel the need to deflate every time guests come over.
 
@@ -34,11 +34,11 @@ Small volume is the hidden luxury of a two-person pool. The entire water-care ro
 - **Sanitizer:** a floating dispenser with slow-dissolving tablets, or gentle liquid treatment after heavy use — small volumes need small doses.
 - **Refresh:** with volumes this low, a full drain-and-refill is a realistic weekly option using the garden-hose-compatible drain valve. Many couples simply prefer fresh water every week.
 
-Our [maintenance guide](/guides/inflatable-pool-maintenance) covers the full routine.
+Our [maintenance guide](/guides/inflatable-pool-maintenance/) covers the full routine.
 
 ## 4. Setup, Travel, and Storage
 
-- **Setup:** the included 1000W electric pump inflates the rigid hull in 5–15 minutes; positioning and setup is typically 15–30 minutes, and filling takes longer depending on pool size and water supply. See the [setup guide](/guides/inflatable-pool-setup).
+- **Setup:** the included 1000W electric pump inflates the rigid hull in 5–15 minutes; positioning and setup is typically 15–30 minutes, and filling takes longer depending on pool size and water supply. See the [setup guide](/guides/inflatable-pool-setup/).
 - **Weekend rhythm:** inflate once for the season and keep it covered between soaks, or inflate on demand for a truly occasional ritual.
 - **Travel and off-season:** deflate, fold, and pack into the storage bag — the packed footprint fits a garage shelf or a large closet, and the patio is fully yours again.
 
@@ -52,4 +52,4 @@ Our [maintenance guide](/guides/inflatable-pool-maintenance) covers the full rou
 
 ## 6. Make It Yours
 
-Because these pools fold flat and set up without tools or construction, they are unusually easy to live with over years: reposition the pool as the garden evolves, take it along when you move, and store it through winter without a single permanent change to the property. Browse the [shop](/products) for sizes, or use [Find Your Pool](/find-your-pool) to narrow the range in three questions.
+Because these pools fold flat and set up without tools or construction, they are unusually easy to live with over years: reposition the pool as the garden evolves, take it along when you move, and store it through winter without a single permanent change to the property. Browse the [shop](/products/) for sizes, or use [Find Your Pool](/find-your-pool/) to narrow the range in three questions.

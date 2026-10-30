@@ -6,4 +6,4 @@ guides:
   - 'inflatable-pool-setup'
   - 'inflatable-pool-maintenance'
 browseText: 'See all pool FAQs →'
-browseHref: '/faq'
+browseHref: '/faq/'

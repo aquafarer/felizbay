@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Vásároljon medencéket
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Találja meg medencéjét
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Vásároljon medencéket
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Találja meg medencéjét
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Kerek medencék'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Családi úszás és játék – a legszélesebb méretválaszték'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Téglalap alakú medencék'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Egyenes oldalú úszótér nagyobb összejövetelek számára'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Minden kollekció: 4–5 PSI drop-stitch falak, 5–15 perces felfújás, elcsomagolt tárolás. A fűtés és a szűrés külső – a fűtőelemek és a szűrőszivattyúk külön vásárolhatók meg.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Fedezze fel a medencelehetőségeket kerti pihenéshez, családi vízi időtöltéshez, szabadtéri áztatáshoz és szezonális nyaralókhoz.'
       icon: tabler:home
       cta: 'Medenceötletek böngészése'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Valódi termékspecifikációk összehasonlítása'
       description: 'Tekintse át a méreteket, a vízkapacitást, az ajánlott üzemi nyomást, a mellékelt kiegészítőket és a telepítési követelményeket, mielőtt dönt.'
       icon: tabler:table
       cta: 'Specifikációk megtekintése'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Ismerje meg a Drop Stitch szerkezetet'
       description: 'Tudja meg, hogyan működik a belső szerkezet, mit jelent a medence alakja és tárolása szempontjából, valamint hogyan függ a termék teljesítménye a megfelelő felfújástól és beállítástól.'
       icon: tabler:hexagon
       cta: 'Olvassa el az útmutatót'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Válasszon magabiztosan'
       description: 'Érje el a termékkézikönyveket, a karbantartási utasításokat, a garancia részleteit és a támogatást, hogy eldönthesse, megfelelő-e Önnek egy Felizbay medence.'
       icon: tabler:shield-check
       cta: 'Olvassa el a GYIK-et'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Ügyféltörténetek'

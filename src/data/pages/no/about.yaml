@@ -97,15 +97,15 @@ brand_hub_subtitle: Oppdag våre oppblåsbare svømmebassengsamlinger bygget med
 brand_hub_cards:
   - title: Rektangulære bassenger
     desc: Rektangulære Drop Stitch-bassenger i familiestørrelse med stive vegger og maksimalt svømmeområde.
-    link: /products
+    link: /products/
     link_label: Se bassenger →
   - title: Runde blå bassenger
     desc: Det klassiske runde bassenget i pulserende blått – raskt oppsett, stiv konstruksjon, sesonglang holdbarhet.
-    link: /products
+    link: /products/
     link_label: Se bassenger →
   - title: Runde grå bassenger
     desc: Premium-grå bassenger med valgfrie deksler for et moderne bakgårdsutseende.
-    link: /products
+    link: /products/
     link_label: Se bassenger →
 production_section:
   tagline: Produksjon fortreffelighet

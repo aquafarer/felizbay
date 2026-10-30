@@ -97,15 +97,15 @@ brand_hub_subtitle: Upptäck våra uppblåsbara poolkollektioner byggda med hög
 brand_hub_cards:
   - title: Rektangulära pooler
     desc: Rektangulära Drop Stitch-pooler i familjestorlek med styva väggar och maximal simyta.
-    link: /products
+    link: /products/
     link_label: Visa pooler →
   - title: Runda blå pooler
     desc: Den klassiska runda poolen i levande blått — snabb installation, styv konstruktion, säsongslång hållbarhet.
-    link: /products
+    link: /products/
     link_label: Visa pooler →
   - title: Runda grå pooler
     desc: Premium-grå pooler med valfria överdrag för en modern bakgårdslook.
-    link: /products
+    link: /products/
     link_label: Visa pooler →
 production_section:
   tagline: Produktionsexcellens

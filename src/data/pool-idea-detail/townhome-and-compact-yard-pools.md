@@ -12,7 +12,7 @@ Two measurements decide everything:
 - **Outer footprint plus buffer.** Plan the pool's outer dimensions plus a 0.5–0.8 m access buffer on all sides for walking, valve access, pump operation, and skimming. A Ø 3 m pool wants roughly a 4 × 4 m zone; a Ø 2 m pool fits a 3 × 3 m corner.
 - **Level surface.** The base must sit flat — paving, concrete, or a level, mown lawn. Uneven pavers and slopes stress the walls and create trip hazards at the rim.
 
-If the measured space is tighter than the buffer allows, step down a size: the [space planning guide](/guides/how-much-space-do-you-need-for-an-inflatable-pool) covers the arithmetic, and [patio placement](/guides/placing-an-inflatable-pool-on-a-patio) covers hard-surface setup in detail.
+If the measured space is tighter than the buffer allows, step down a size: the [space planning guide](/guides/how-much-space-do-you-need-for-an-inflatable-pool/) covers the arithmetic, and [patio placement](/guides/placing-an-inflatable-pool-on-a-patio/) covers hard-surface setup in detail.
 
 ## 2. Sizes That Actually Fit
 
@@ -46,6 +46,6 @@ Dumping several hundred litres toward a shared fence is how neighbors become ene
 
 ## 6. The Compact-Yard Routine
 
-Small volumes are an advantage: faster fills, cheaper chemicals, quicker drains. A weekly rhythm of skimming, a tablet check, and a filter-pump run keeps the water fresh in minutes a day — the [maintenance guide](/guides/inflatable-pool-maintenance) has the full routine, and the [setup guide](/guides/inflatable-pool-setup) walks through the 15–30 minute installation with the included electric pump.
+Small volumes are an advantage: faster fills, cheaper chemicals, quicker drains. A weekly rhythm of skimming, a tablet check, and a filter-pump run keeps the water fresh in minutes a day — the [maintenance guide](/guides/inflatable-pool-maintenance/) has the full routine, and the [setup guide](/guides/inflatable-pool-setup/) walks through the 15–30 minute installation with the included electric pump.
 
-See how little space a real pool needs — browse the [shop](/products) or answer three questions in [Find Your Pool](/find-your-pool).
+See how little space a real pool needs — browse the [shop](/products/) or answer three questions in [Find Your Pool](/find-your-pool/).

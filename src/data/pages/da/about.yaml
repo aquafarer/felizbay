@@ -97,15 +97,15 @@ brand_hub_subtitle: Oplev vores oppustelige swimmingpoolkollektioner bygget med 
 brand_hub_cards:
   - title: Rektangulære pools
     desc: Rektangulære Drop Stitch-bassiner i familiestørrelse med stive vægge og maksimalt svømmeområde.
-    link: /products
+    link: /products/
     link_label: Se pools →
   - title: Runde blå pools
     desc: Den klassiske runde pool i levende blå — hurtig opsætning, stiv konstruktion, sæsonlang holdbarhed.
-    link: /products
+    link: /products/
     link_label: Se pools →
   - title: Runde Grå Pools
     desc: Premium-grå pools med valgfrit monterede dæksler for et moderne baghave-look.
-    link: /products
+    link: /products/
     link_label: Se pools →
 production_section:
   tagline: Fremragende produktion

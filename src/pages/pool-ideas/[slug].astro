@@ -24,12 +24,12 @@ for (const s of poolSeries) seriesById[s.id] = s;
 // Retail product pages per factory series — links consumers from the size ladder to purchasable models.
 const seriesProductPages: Record<string, Array<{ label: string; href: string }>> = {
   round: [
-    { label: 'Round Blue Pool', href: '/products/round-blue-drop-stitch-pool' },
-    { label: 'Round Grey Pool', href: '/products/round-grey-drop-stitch-pool' },
+    { label: 'Round Blue Pool', href: '/products/round-blue-drop-stitch-pool/' },
+    { label: 'Round Grey Pool', href: '/products/round-grey-drop-stitch-pool/' },
   ],
-  'rect-square': [{ label: 'Rectangular Pool', href: '/products/rectangular-drop-stitch-pool' }],
-  'hot-tub-round': [{ label: 'Round SPA Tub', href: '/products/hot-tub-round' }],
-  'hot-tub-square-rect': [{ label: 'Square / Rect SPA Tub', href: '/products/hot-tub-square-rect' }],
+  'rect-square': [{ label: 'Rectangular Pool', href: '/products/rectangular-drop-stitch-pool/' }],
+  'hot-tub-round': [{ label: 'Round SPA Tub', href: '/products/hot-tub-round/' }],
+  'hot-tub-square-rect': [{ label: 'Square / Rect SPA Tub', href: '/products/hot-tub-square-rect/' }],
 };
 
 const matchCards = idea.matches.map((m) => {
@@ -76,7 +76,7 @@ const metadata = merge(
   {}
 ) as MetaData;
 
-const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title }];
+const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas/' }, { name: idea.title }];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
@@ -231,14 +231,14 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
       <h2 class="text-3xl font-bold tracking-tight text-white mb-4">{idea.cta}</h2>
       <div class="flex flex-wrap items-center justify-center gap-4">
         <a
-          href="/products"
+          href="/products/"
           class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all"
         >
           <Icon name="tabler:shopping-cart" class="w-5 h-5" />
           Shop All Pools
         </a>
         <a
-          href="/find-your-pool"
+          href="/find-your-pool/"
           class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
         >
           Find Your Pool
@@ -258,7 +258,7 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
           <div class="grid gap-4 md:grid-cols-2">
             {relatedGuideCards.map((g) => (
               <a
-                href={`/guides/${g.slug}`}
+                href={`/guides/${g.slug}/`}
                 class="block p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
               >
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
@@ -282,7 +282,7 @@ const crumbs = [{ name: 'Pool Ideas', href: '/pool-ideas' }, { name: idea.title 
       {
         otherIdeas.map((o) => (
           <a
-            href={`/pool-ideas/${o.slug}`}
+            href={`/pool-ideas/${o.slug}/`}
             class="block p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
           >
             <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{o.navTitle}</h3>

@@ -34,19 +34,19 @@ const description = t('404.description');
         <p class="mt-2 mb-8 text-lg text-muted dark:text-slate-400">{description}</p>
         <div class="flex flex-wrap justify-center gap-3">
           <a class="btn btn-primary" href={getHomePermalink()}>{t('404.home')}</a>
-          <a class="btn" href={lh('/products')}>{t('404.products')}</a>
-          <a class="btn" href={lh('/faq')}>FAQ</a>
+          <a class="btn" href={lh('/products/')}>{t('404.products')}</a>
+          <a class="btn" href={lh('/faq/')}>FAQ</a>
         </div>
         <div class="mt-8 pt-6 border-t border-gray-200 dark:border-slate-700">
           <p class="text-xs text-muted mb-3">{t('404.explore') || 'Explore our product categories:'}</p>
           <div class="flex flex-wrap justify-center gap-2">
             <a
-              href={lh('/products')}
+              href={lh('/products/')}
               class="inline-flex items-center px-3 py-1.5 text-xs font-medium rounded-full bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-slate-300 hover:bg-sky-100 hover:text-sky-700 dark:hover:bg-sky-900/30 dark:hover:text-sky-400 transition"
               >Inflatable Swimming Pools</a
             >
             <a
-              href={lh('/contact')}
+              href={lh('/contact/')}
               class="inline-flex items-center px-3 py-1.5 text-xs font-medium rounded-full bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-slate-300 hover:bg-sky-100 hover:text-sky-700 dark:hover:bg-sky-900/30 dark:hover:text-sky-400 transition"
               >Contact Us</a
             >

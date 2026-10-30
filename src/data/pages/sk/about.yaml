@@ -97,15 +97,15 @@ brand_hub_subtitle: Objavte našu kolekciu nafukovacích bazénov postavenú pom
 brand_hub_cards:
   - title: Obdĺžnikové bazény
     desc: Obdĺžnikové bazény typu Drop Stitch pre rodinu s pevnými stenami a maximálnou plochou na plávanie.
-    link: /products
+    link: /products/
     link_label: Zobraziť bazény →
   - title: Okrúhle modré bazény
     desc: Klasický kruhový bazén v žiarivej modrej — rýchle nastavenie, pevná konštrukcia, celoročná životnosť.
-    link: /products
+    link: /products/
     link_label: Zobraziť bazény →
   - title: Okrúhle šedé bazény
     desc: Prémiové sivé bazény s voliteľnými krytmi pre moderný vzhľad záhrady.
-    link: /products
+    link: /products/
     link_label: Zobraziť bazény →
 production_section:
   tagline: Výrobná dokonalosť

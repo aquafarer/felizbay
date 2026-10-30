@@ -97,15 +97,15 @@ brand_hub_subtitle: Atraskite mūsų pripučiamų baseinų kolekcijas, sukurtas 
 brand_hub_cards:
   - title: Stačiakampiai baseinai
     desc: Šeimos dydžio stačiakampiai „Drop Stitch“ baseinai su tvirtomis sienomis ir maksimalia plaukimo zona.
-    link: /products
+    link: /products/
     link_label: Žiūrėti baseinus →
   - title: Apvalūs mėlyni baseinai
     desc: Klasikinis apvalus ryškiai mėlynos spalvos baseinas – greitas montavimas, tvirta konstrukcija, patvarumas visą sezoną.
-    link: /products
+    link: /products/
     link_label: Žiūrėti baseinus →
   - title: Apvalūs pilki baseinai
     desc: Aukščiausios kokybės pilki baseinai su papildomai montuojamais dangčiais, kad atrodytų šiuolaikiškai.
-    link: /products
+    link: /products/
     link_label: Žiūrėti baseinus →
 production_section:
   tagline: Gamybos meistriškumas

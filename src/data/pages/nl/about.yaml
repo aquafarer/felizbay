@@ -97,15 +97,15 @@ brand_hub_subtitle: Ontdek onze collecties opblaasbare zwembaden die zijn gebouw
 brand_hub_cards:
   - title: Rechthoekige zwembaden
     desc: Rechthoekige drop-stitch-zwembaden voor gezinnen, met stijve wanden en een maximaal zwemoppervlak.
-    link: /products
+    link: /products/
     link_label: Bekijk zwembaden →
   - title: Ronde blauwe zwembaden
     desc: 'Het klassieke ronde zwembad in levendig blauw: snelle installatie, stevige constructie, duurzaamheid gedurende het hele seizoen.'
-    link: /products
+    link: /products/
     link_label: Bekijk zwembaden →
   - title: Ronde grijze zwembaden
     desc: Premium grijze zwembaden met optionele ingebouwde afdekkingen voor een moderne achtertuinlook.
-    link: /products
+    link: /products/
     link_label: Bekijk zwembaden →
 production_section:
   tagline: Uitmuntende productie

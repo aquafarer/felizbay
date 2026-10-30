@@ -86,7 +86,7 @@ const footer = data?.footer ?? {};
     </p>
     <p class="mt-2 text-xs text-amber-700 dark:text-amber-400">
       ⚠️ If you rename a menu item or change a link, page content may still reference the old URL. Use the
-      <a class="font-medium underline" href="/keystatic/link-refactor">Link Refactor Tool</a>
+      <a class="font-medium underline" href="/keystatic/link-refactor/">Link Refactor Tool</a>
       to batch update. A banner will appear below after saving.
     </p>
   </div>
@@ -734,7 +734,7 @@ const footer = data?.footer ?? {};
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
         <div class="text-xs text-gray-500" data-file-info>File: <code class="font-mono">{file}</code></div>
         <div class="flex gap-2">
-          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
             >Cancel</a
           >
           <button
@@ -778,7 +778,7 @@ const footer = data?.footer ?? {};
     <p class="text-xs text-amber-800 dark:text-amber-300 mb-3">
       Other files (home.yaml / about.yaml / posts / products, etc.) may still reference the old URL or text. Click the
       "Rename" buttons below to pre-fill the
-      <a href="/keystatic/link-refactor" class="font-medium underline">Link Refactor Tool</a> with these changes.
+      <a href="/keystatic/link-refactor/" class="font-medium underline">Link Refactor Tool</a> with these changes.
     </p>
     <ul data-change-list class="space-y-2 max-h-80 overflow-y-auto pr-1"></ul>
   </div>
@@ -803,7 +803,7 @@ const footer = data?.footer ?? {};
       // Locale switcher
       localeSelect?.addEventListener('change', () => {
         const loc = localeSelect.value;
-        const href = loc === 'en' ? '/keystatic/navigation' : '/keystatic/navigation?locale=' + loc;
+        const href = loc === 'en' ? '/keystatic/navigation/' : '/keystatic/navigation/?locale=' + loc;
         window.location.href = href;
       });
 
@@ -905,7 +905,7 @@ const footer = data?.footer ?? {};
             code2.className = 'font-mono text-green-700 dark:text-green-400';
             code2.textContent = c.newHref;
             const btn = document.createElement('a');
-            btn.href = `/keystatic/link-refactor?${new URLSearchParams({ oldUrl: c.oldHref, newUrl: c.newHref })}`;
+            btn.href = `/keystatic/link-refactor/?${new URLSearchParams({ oldUrl: c.oldHref, newUrl: c.newHref })}`;
             btn.target = '_blank';
             btn.rel = 'noopener';
             btn.className =
@@ -927,7 +927,7 @@ const footer = data?.footer ?? {};
             code2.className = 'font-mono text-green-700 dark:text-green-400';
             code2.textContent = c.newText;
             const btn = document.createElement('a');
-            btn.href = `/keystatic/link-refactor?${new URLSearchParams({ oldName: c.oldText, newName: c.newText })}`;
+            btn.href = `/keystatic/link-refactor/?${new URLSearchParams({ oldName: c.oldText, newName: c.newText })}`;
             btn.target = '_blank';
             btn.rel = 'noopener';
             btn.className =

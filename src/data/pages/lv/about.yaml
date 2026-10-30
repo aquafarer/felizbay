@@ -97,15 +97,15 @@ brand_hub_subtitle: Atklājiet mūsu piepūšamo peldbaseinu kolekcijas, kas vei
 brand_hub_cards:
   - title: Taisnstūra baseini
     desc: Ģimenes izmēra taisnstūrveida Drop Stitch baseini ar stingrām sienām un maksimālo peldvietu.
-    link: /products
+    link: /products/
     link_label: Skatīt baseinus →
   - title: Apaļi zili baseini
     desc: Klasiskais apaļais baseins koši zilā krāsā — ātra uzstādīšana, stingra konstrukcija, izturība visas sezonas garumā.
-    link: /products
+    link: /products/
     link_label: Skatīt baseinus →
   - title: Apaļi pelēki baseini
     desc: Augstākās kvalitātes pelēki baseini ar papildu pārsegiem mūsdienīgam pagalma izskatam.
-    link: /products
+    link: /products/
     link_label: Skatīt baseinus →
 production_section:
   tagline: Ražošanas izcilība

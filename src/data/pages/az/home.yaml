@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Mağaza hovuzları
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Hovuzunuzu tapın
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Mağaza hovuzları
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Hovuzunuzu tapın
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Dairəvi hovuzlar'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Ailə üzgüçülük və oyun - ən geniş ölçü diapazonu'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Düzbucaqlı Hovuzlar'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Daha böyük yığıncaqlar üçün düz tərəfli üzgüçülük sahəsi'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Bütün kolleksiyalar: 4–5 PSI drop-stitch divarları, 5–15 dəqiqəlik inflyasiya, paketdə saxlama. İstilik və filtrasiya xaricidir — qızdırıcılar və filtr nasosları ayrıca satılır.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Arxa həyətdə istirahət, ailə ilə su vaxtı, açıq havada çimmə və mövsümi tətil obyektləri üçün hovuz variantlarını kəşf edin.'
       icon: tabler:home
       cta: 'Hovuz ideyalarına baxın'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Gerçək məhsul spesifikasiyalarını müqayisə edin'
       description: 'Seçməzdən əvvəl ölçüləri, su həcmini, tövsiyə olunan iş təzyiqini, daxil olan aksesuarları və quraşdırma tələblərini nəzərdən keçirin.'
       icon: tabler:table
       cta: 'Spesifikasiyalara bax'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Drop Stitch konstruksiyasını anlayın'
       description: 'Daxili strukturun necə işlədiyini, hovuzun forması və saxlanması üçün nə demək olduğunu və məhsul performansının düzgün şişirmə və quraşdırmadan necə asılı olduğunu öyrənin.'
       icon: tabler:hexagon
       cta: 'Bələdçini oxuyun'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Əminliklə seçin'
       description: 'Felizbay hovuzunun ehtiyaclarınıza uyğun olub olmadığını müəyyən etmək üçün məhsul təlimatlarına, qulluq göstərişlərinə, zəmanət detallarına və dəstəyə çıxış əldə edin.'
       icon: tabler:shield-check
       cta: 'FAQ oxuyun'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Müştəri hekayələri'

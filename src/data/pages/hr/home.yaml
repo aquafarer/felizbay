@@ -8,10 +8,10 @@ hero:
   actions:
     - variant: primary
       text: Trgovina bazenima
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Pronađite svoj bazen
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
   image:
     src: /images/pools/rectangular-pool-2.webp
@@ -139,10 +139,10 @@ cta:
   actions:
     - variant: primary
       text: Trgovina bazenima
-      href: /products
+      href: /products/
       icon: tabler:pool
     - text: Pronađite svoj bazen
-      href: /find-your-pool
+      href: /find-your-pool/
       icon: tabler:compass
 
 
@@ -158,11 +158,11 @@ compare_collections:
     - collection: 'Okrugli bazeni'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Obiteljsko kupanje i igra — najširi raspon veličina'
-      href: /products/round-blue-drop-stitch-pool
+      href: /products/round-blue-drop-stitch-pool/
     - collection: 'Pravokutni bazeni'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ravni prostor za kupanje za veća okupljanja'
-      href: /products/rectangular-drop-stitch-pool
+      href: /products/rectangular-drop-stitch-pool/
   note: 'Sve kolekcije: 4–5 PSI drop-stitch zidovi, 5–15 min napuhavanja, skladištenje bez pakiranja. Grijanje i filtracija su vanjski — grijači i filter pumpe prodaju se zasebno.'
 
 content_evidence:
@@ -174,22 +174,22 @@ content_evidence:
       description: 'Istražite opcije bazena za opuštanje u dvorištu, obiteljsko vrijeme u vodi, kupanje na otvorenom i sezonske odmorišta.'
       icon: tabler:home
       cta: 'Pregledajte ideje za bazene'
-      cta_href: /pool-ideas/backyard-pools-for-families
+      cta_href: /pool-ideas/backyard-pools-for-families/
     - title: 'Usporedite stvarne specifikacije proizvoda'
       description: 'Prije odabira pregledajte dimenzije, kapacitet vode, preporučeni radni tlak, uključene dodatke i zahtjeve za postavljanje.'
       icon: tabler:table
       cta: 'Pogledajte specifikacije'
-      cta_href: /products/specs
+      cta_href: /products/specs/
     - title: 'Razumijte Drop Stitch konstrukciju'
       description: 'Saznajte kako radi unutarnja struktura, što znači za oblik i skladištenje bazena te kako performanse proizvoda ovise o pravilnom napuhivanju i postavljanju.'
       icon: tabler:hexagon
       cta: 'Pročitajte vodič'
-      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool
+      cta_href: /guides/what-is-a-drop-stitch-inflatable-pool/
     - title: 'Odaberite sa samopouzdanjem'
       description: 'Pristupite priručnicima proizvoda, uputama za njegu, detaljima jamstva i podršci kako biste utvrdili odgovara li vam Felizbay bazen.'
       icon: tabler:shield-check
       cta: 'Pročitajte česta pitanja'
-      cta_href: /faq
+      cta_href: /faq/
 
 content_stories:
   tagline: 'Priče kupaca'

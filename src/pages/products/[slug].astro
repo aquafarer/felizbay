@@ -76,12 +76,12 @@ const metadata = merge(
 
 const productCrumbs = [
   { name: 'Home', href: '/' },
-  { name: 'Products', href: '/products' },
+  { name: 'Products', href: '/products/' },
   ...(product.categoryLabel
     ? [
         {
           name: product.categoryLabel,
-          href: `/products?category=${product.category || 'pool'}`,
+          href: `/products/?category=${product.category || 'pool'}`,
         },
       ]
     : []),
@@ -556,7 +556,7 @@ const specGroups = detailV2
               ) : null
             }
             <a
-              href={`/contact?product=${encodeURIComponent(product.title)}`}
+              href={`/contact/?product=${encodeURIComponent(product.title)}`}
               class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
             >
               <Icon name="tabler:message-circle" class="w-5 h-5" />
@@ -605,10 +605,10 @@ const specGroups = detailV2
         fitRows={detailV2.fitRows}
         fitNotice={detailV2.fitNotice}
         catalogItems={catalogSeries.items}
-        quoteHref={`/contact?product=${encodeURIComponent(product.title)}`}
-        compareHref="/products/compare"
+        quoteHref={`/contact/?product=${encodeURIComponent(product.title)}`}
+        compareHref="/products/compare/"
         retailSku={product.sku || undefined}
-        wholesaleHref="/products/specs"
+        wholesaleHref="/products/specs/"
       />
     )
   }
@@ -839,7 +839,7 @@ const specGroups = detailV2
             >
             <p class="text-sm text-gray-700 dark:text-slate-300 mt-1">
               {productCompliance.warranty}{' '}
-              <a href="/terms" class="text-sky-600 dark:text-sky-400 hover:underline">(Terms)</a>
+              <a href="/terms/" class="text-sky-600 dark:text-sky-400 hover:underline">(Terms)</a>
             </p>
           </div>
         </div>
@@ -886,7 +886,7 @@ const specGroups = detailV2
           <div class="grid md:grid-cols-3 gap-4">
             {relatedGuides.map((g) => (
               <a
-                href={`/guides/${g.slug}`}
+                href={`/guides/${g.slug}/`}
                 class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
               >
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
@@ -972,14 +972,14 @@ const specGroups = detailV2
       }
       <div class="mt-6 flex flex-wrap gap-4">
         <a
-          href="/for-businesses"
+          href="/for-businesses/"
           class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
         >
           Explore business solutions
           <Icon name="tabler:arrow-right" class="w-4 h-4" />
         </a>
         <a
-          href="/products/specs"
+          href="/products/specs/"
           class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-700 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
         >
           <Icon name="tabler:table" class="w-4 h-4" />
@@ -1012,7 +1012,7 @@ const specGroups = detailV2
           ) : null
         }
         <a
-          href={`/contact?product=${encodeURIComponent(product.title)}`}
+          href={`/contact/?product=${encodeURIComponent(product.title)}`}
           class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
         >
           Request a Quote

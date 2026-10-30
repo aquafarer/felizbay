@@ -32,7 +32,7 @@ A repeatable between-stay routine keeps turnovers inside a standard housekeeping
 
 Guest handling is unpredictable, making commercial durability essential:
 
-- **Drop-stitch vs. standard inflatables:** Standard single-layer vinyl inflatable pools are prone to punctures, wall sagging, and air leaks under frequent or careless use. Felizbay's high-pressure [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool) provides a rigid, ultra-durable shell capable of supporting adult bather loads without collapsing or warping.
+- **Drop-stitch vs. standard inflatables:** Standard single-layer vinyl inflatable pools are prone to punctures, wall sagging, and air leaks under frequent or careless use. Felizbay's high-pressure [drop-stitch construction](/guides/what-is-a-drop-stitch-inflatable-pool/) provides a rigid, ultra-durable shell capable of supporting adult bather loads without collapsing or warping.
 
 - **Wear protection:** Always install heavy-duty rubber floor tiles or thick ground padding beneath the pool base to shield against abrasive footwear, patio stones, or dropped objects.
 

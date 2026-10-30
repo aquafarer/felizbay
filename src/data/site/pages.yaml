@@ -17,8 +17,8 @@
 
 - slug: about
   label: About
-  path: /about
-  permalink: /about
+  path: /about/
+  permalink: /about/
   file: src/data/pages/about.yaml
   sections:
     - { key: hero, type: hero, label: 'Top Hero' }
@@ -35,8 +35,8 @@
 
 - slug: contact
   label: Contact
-  path: /contact
-  permalink: /contact
+  path: /contact/
+  permalink: /contact/
   file: src/data/pages/contact.yaml
   sections:
     - { key: hero_text, type: hero_text, label: 'Contact Hero Text' }
@@ -45,8 +45,8 @@
 
 - slug: request-quotation
   label: Request a Quotation
-  path: /request-quotation
-  permalink: /request-quotation
+  path: /request-quotation/
+  permalink: /request-quotation/
   file: src/data/pages/request-quotation.yaml
   sections:
     - { key: hero_text, type: hero_text, label: 'Quotation Hero Text' }
@@ -55,16 +55,16 @@
 
 - slug: products
   label: Products
-  path: /products
-  permalink: /products
+  path: /products/
+  permalink: /products/
   file: src/pages/products/index.astro
   sections:
     - { key: product_grid, type: featured_products, label: 'Pool Product Grid' }
 
 - slug: faq
   label: FAQ
-  path: /faq
-  permalink: /faq
+  path: /faq/
+  permalink: /faq/
   file: src/pages/faq.astro
   sections:
     - { key: faqs, type: faqs, label: 'FAQ List' }

@@ -97,15 +97,15 @@ brand_hub_subtitle: Tuklasin ang aming mga inflatable na koleksyon ng swimming p
 brand_hub_cards:
   - title: Mga Rectangular Pool
     desc: Family-size rectangular drop stitch pool na may matibay na pader at maximum na lugar ng paglangoy.
-    link: /products
+    link: /products/
     link_label: Tingnan ang mga pool →
   - title: Round Blue Pools
     desc: Ang klasikong bilog na pool sa makulay na asul — mabilis na pag-setup, matibay na konstruksyon, tibay ng panahon.
-    link: /products
+    link: /products/
     link_label: Tingnan ang mga pool →
   - title: Round Grey Pool
     desc: Mga premium na gray na pool na may opsyonal na fitted na mga pabalat para sa modernong hitsura sa likod-bahay.
-    link: /products
+    link: /products/
     link_label: Tingnan ang mga pool →
 production_section:
   tagline: Kahusayan sa Produksyon
