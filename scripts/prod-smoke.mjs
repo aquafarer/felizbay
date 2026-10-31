@@ -92,7 +92,11 @@ const CHECKS = [
     desc: 'llms-full.txt corpus (covers guides, pool ideas, support)',
   },
   { path: '/ai-sitemap.xml', marker: '<urlset', desc: 'AI sitemap' },
-  { path: '/knowledge-sitemap.xml', marker: '<urlset', desc: 'knowledge sitemap' },
+  {
+    path: '/knowledge-sitemap.xml',
+    markers: ['<urlset', '/pool-ideas/', '/guides/'],
+    desc: 'knowledge sitemap (guides + pool ideas)',
+  },
   {
     path: '/.well-known/entity.json',
     marker: '@context',

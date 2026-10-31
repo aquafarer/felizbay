@@ -176,33 +176,29 @@ function simpleXml(urls, changefreq, pages) {
 }
 
 const AI_TOP_SECTIONS = [
+  // Core
   '/',
   '/about/',
-  '/about/Felizbay/',
   '/products/',
   '/faq/',
-  '/academy/',
-  '/factory/',
-  '/technology/',
-  '/safety/',
-  '/news/',
   '/guides/',
-  '/compare/',
-  '/custom/',
-  '/media/',
+  '/pool-ideas/',
   '/contact/',
-  '/size-guide/',
-  '/randdcenter/',
-  '/Felizbay-story/',
-  '/gallery/',
-  '/warranty/',
-  '/quality/',
-  '/oem-odm-manufacturer/',
-  '/engineering-perfection/',
-  '/design-powerhouse/',
-  '/engineering-team/',
-  '/solutions/by-industry/',
-  '/solutions/by-use-case/',
+  '/request-quotation/',
+  // Consumer discovery & care
+  '/find-your-pool/',
+  '/best-drop-stitch-inflatable-pools/',
+  '/support/',
+  '/returns-and-warranty/',
+  '/ai-answer-center/',
+  // B2B
+  '/for-businesses/',
+  '/oem-odm/',
+  '/wholesale/',
+  '/private-label/',
+  '/commercial-pools/',
+  '/manufacturing/',
+  '/quality-control/',
 ];
 
 function main() {
@@ -228,6 +224,7 @@ function main() {
       isEn(p) &&
       (p.startsWith('/v2/') ||
         p.startsWith('/guides/') ||
+        p.startsWith('/pool-ideas/') ||
         p.startsWith('/faq') ||
         p.startsWith('/academy/') ||
         p.startsWith('/learn/'))

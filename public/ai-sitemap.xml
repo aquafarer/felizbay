@@ -75,6 +75,9 @@
   <url><loc>https://felizbay.com/guides/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/pool-ideas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/contact/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/contact/"/>
@@ -93,4 +96,43 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/request-quotation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/request-quotation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/request-quotation/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/find-your-pool/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/find-your-pool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/find-your-pool/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/best-drop-stitch-inflatable-pools/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/best-drop-stitch-inflatable-pools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/best-drop-stitch-inflatable-pools/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/support/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/returns-and-warranty/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/returns-and-warranty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/returns-and-warranty/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/ai-answer-center/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/ai-answer-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/ai-answer-center/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/for-businesses/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/for-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/for-businesses/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/oem-odm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/oem-odm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/oem-odm/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/wholesale/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/wholesale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/wholesale/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/private-label/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/private-label/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/private-label/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/commercial-pools/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/commercial-pools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/commercial-pools/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/manufacturing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/manufacturing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/manufacturing/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://felizbay.com/quality-control/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/quality-control/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/quality-control/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
 </urlset>
