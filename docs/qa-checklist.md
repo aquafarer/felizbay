@@ -9,13 +9,13 @@ Legend: ✅ pass · 🟡 partial · ❌ blocked / not applicable yet
 
 ## 网站基础 (Site basics)
 
-| #   | Item                         | Status | Notes & verification                                                                                                      |
-| --- | ---------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------- |
-| 1   | 所有主导航链接正常访问       | ✅     | `dist-gate` broken-links = 1 (`/api/admin/inquiries.csv` worker route false positive). Nav hrefs = walking `dist/` links. |
-| 2   | 多语言路由及语言切换正常     | ✅     | 65bc428: route-aware hreflang + switcher (root-only whitelist). Gate: hreflang broken = 1 (`/404`, moot).                 |
-| 3   | 移动端导航正常               | 🟡     | Not automated — manual check (hamburger menu, dropdowns) in browser at 375 px before release.                             |
-| 4   | 首页、分类和产品页面加载正常 | ✅     | `npm run build` (650 pages) + `scripts/validate-dist.mjs` PASS + `mirror-root-en.mjs` 0 missing.                          |
-| 5   | 404 和 301 规则正确          | ✅     | `/404` returns 404 status; `/zh/` server-redirects 301 to `/` (verified by `npm run smoke`, 2026-10-31).                  |
+| #   | Item                         | Status | Notes & verification                                                                                                                                                                                                 |
+| --- | ---------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | 所有主导航链接正常访问       | ✅     | `dist-gate` broken-links = 1 (`/api/admin/inquiries.csv` worker route false positive). Nav hrefs = walking `dist/` links.                                                                                            |
+| 2   | 多语言路由及语言切换正常     | ✅     | 65bc428: route-aware hreflang + switcher (root-only whitelist). Gate: hreflang broken = 1 (`/404`, moot).                                                                                                            |
+| 3   | 移动端导航正常               | 🟡     | Structure automated in `npm run smoke` (home asserts `data-aw-toggle-menu` button + `aria-label="Main navigation"` nav + theme toggle). Visual check (menu opens, dropdowns work at 375 px) still manual in browser. |
+| 4   | 首页、分类和产品页面加载正常 | ✅     | `npm run build` (650 pages) + `scripts/validate-dist.mjs` PASS + `mirror-root-en.mjs` 0 missing.                                                                                                                     |
+| 5   | 404 和 301 规则正确          | ✅     | `/404` returns 404 status; `/zh/` server-redirects 301 to `/` (verified by `npm run smoke`, 2026-10-31).                                                                                                             |
 
 ## 产品系统 (Product system)
 
@@ -71,8 +71,11 @@ npm run build          # ~651 pages, validate-dist + all post-build gates
 npm run check          # astro check + ESLint + Prettier
 node scripts/validate-dist.mjs   # (runs inside build; standalone re-run OK)
 # dist-gate (temp tool, session-scoped): broken links / hreflang / canonical / noindex scans on dist/
-npm run smoke          # production spot-checks: 31 routes/files + AI infra pre-flight (scripts/prod-smoke.mjs)
+npm run smoke          # production spot-checks: 33 checks incl. AI infra + contact honeypot + AIChat quality (scripts/prod-smoke.mjs)
 ```
 
-Manual pre-release spot-checks (not automatable): mobile navigation (#3), dark mode,
-contact form roundtrip (Turnstile + D1 insert + email), AIChat answer quality.
+Manual pre-release spot-checks (not automatable): mobile navigation visual
+check (#3 — structure is smoke-checked, behavior is not), dark mode visual check,
+one real contact submission (Turnstile + D1 insert + email — the honeypot path
+is smoke-checked, the real path needs a human), AIChat answer quality beyond
+the Q17 spot-check.

@@ -24,7 +24,11 @@ const CONCURRENCY = 6;
 
 /** One smoke check. status defaults to 200; marker is an optional substring. */
 const CHECKS = [
-  { path: '/', marker: 'Felizbay', desc: 'home' },
+  {
+    path: '/',
+    markers: ['Felizbay', 'data-aw-toggle-menu', 'aria-label="Main navigation"', 'data-aw-toggle-color-scheme'],
+    desc: 'home: brand, mobile menu button, main nav, theme toggle',
+  },
   { path: '/en/', marker: 'Felizbay', desc: 'EN mirror home' },
   { path: '/de/', marker: 'lang="de"', desc: 'localized page renders (de)' },
   {
@@ -118,17 +122,63 @@ const CHECKS = [
     status: 400,
     desc: 'AI chat endpoint online (empty question 400)',
   },
+  // ---- AIChat answer quality spot-check (baseline Q17, docs/ai-visibility-baseline.md §2b) ----
+  {
+    path: '/api/chat',
+    method: 'POST',
+    body: { question: 'Can I install an inflatable pool on a raised wooden deck?' },
+    timeoutMs: 45000,
+    desc: 'AIChat answers the raised-deck safety question',
+    validate: (res) => {
+      let parsed;
+      try {
+        parsed = JSON.parse(res.body);
+      } catch {
+        return { ok: false, reason: 'response is not JSON' };
+      }
+      const answer = typeof parsed.answer === 'string' ? parsed.answer : '';
+      if (answer.length < 100) return { ok: false, reason: 'answer too short' };
+      if (!/deck/i.test(answer)) return { ok: false, reason: 'answer does not address the deck question' };
+      return { ok: true };
+    },
+  },
+  // ---- Contact worker roundtrip via the honeypot path (no D1 write, no email) ----
+  {
+    path: '/api/contact',
+    method: 'POST',
+    body: {
+      firstName: 'Smoke',
+      lastName: 'Test',
+      email: 'smoke-test@felizbay.com',
+      subject: 'Production smoke test',
+      message: 'Honeypot roundtrip from the production smoke gate. This submission must not be stored.',
+      email_confirm: 'honeypot-filled-by-smoke',
+    },
+    desc: 'contact worker honeypot roundtrip (fake success, zero data written)',
+    validate: (res) => {
+      let parsed;
+      try {
+        parsed = JSON.parse(res.body);
+      } catch {
+        return { ok: false, reason: 'response is not JSON' };
+      }
+      if (parsed.success !== true || typeof parsed.id !== 'string' || parsed.id.length < 8) {
+        return { ok: false, reason: `unexpected honeypot response: ${res.body.slice(0, 120)}` };
+      }
+      return { ok: true };
+    },
+  },
 ];
 
 /** Request helper with redirect following (max 3 hops) and a hard timeout.
  *  Supports GET (default) and JSON-body POST. `follow: false` returns the
  *  first response (status + location) un-followed. */
-const fetchRaw = (url, depth = 0, follow = true, postBody = undefined) =>
+const fetchRaw = (url, depth = 0, follow = true, postBody = undefined, timeoutMs = TIMEOUT_MS) =>
   new Promise((resolve, reject) => {
     const payload = postBody === undefined ? null : JSON.stringify(postBody);
     const headers = { 'user-agent': 'felizbay-prod-smoke/1.0' };
     if (payload !== null) headers['content-type'] = 'application/json';
-    const options = { headers, timeout: TIMEOUT_MS, method: payload === null ? 'GET' : 'POST' };
+    const options = { headers, timeout: timeoutMs, method: payload === null ? 'GET' : 'POST' };
     const req = https.request(url, options, (res) => {
       // Follow up to 3 redirects (R2 assets 301 to the assets domain).
       if (res.statusCode && res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
@@ -153,7 +203,7 @@ const fetchRaw = (url, depth = 0, follow = true, postBody = undefined) =>
     });
     if (payload !== null) req.write(payload);
     req.on('timeout', () => {
-      req.destroy(new Error(`timeout after ${TIMEOUT_MS}ms`));
+      req.destroy(new Error(`timeout after ${timeoutMs}ms`));
     });
     req.on('error', reject);
     req.end();
@@ -175,7 +225,7 @@ const runCheck = async (check) => {
       return { ok: true };
     }
     if (check.method === 'POST') {
-      const res = await fetchRaw(`${BASE}${check.path}`, 0, true, check.body ?? {});
+      const res = await fetchRaw(`${BASE}${check.path}`, 0, true, check.body ?? {}, check.timeoutMs);
       if (res.status !== expected) {
         return { ok: false, reason: `expected status ${expected}, got ${res.status}` };
       }
@@ -185,12 +235,14 @@ const runCheck = async (check) => {
       }
       return { ok: true };
     }
-    const res = await fetchRaw(`${BASE}${check.path}`);
+    const res = await fetchRaw(`${BASE}${check.path}`, 0, true, undefined, check.timeoutMs);
     if (res.status !== expected) {
       return { ok: false, reason: `expected status ${expected}, got ${res.status}` };
     }
-    if (check.marker && !res.body.includes(check.marker)) {
-      return { ok: false, reason: `marker not found: ${JSON.stringify(check.marker)}` };
+    const markers = check.markers ?? (check.marker ? [check.marker] : []);
+    const missing = markers.filter((m) => !res.body.includes(m));
+    if (missing.length > 0) {
+      return { ok: false, reason: `marker not found: ${JSON.stringify(missing)}` };
     }
     if (check.contentType && !res.contentType.startsWith(check.contentType)) {
       return { ok: false, reason: `expected content-type ${check.contentType}, got ${res.contentType}` };
