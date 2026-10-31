@@ -62,7 +62,7 @@
     "js-yaml": "^5.4.1",
     "limax": "4.2.3",
     "lodash.merge": "^4.6.2",
-    "marked": "^18.0.12",
+    "marked": "^18.1.0",
     "unpic": "^4.2.2"
   },
   "devDependencies": {
