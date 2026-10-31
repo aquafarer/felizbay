@@ -15,7 +15,7 @@ Legend: ✅ pass · 🟡 partial · ❌ blocked / not applicable yet
 | 2   | 多语言路由及语言切换正常     | ✅     | 65bc428: route-aware hreflang + switcher (root-only whitelist). Gate: hreflang broken = 1 (`/404`, moot).                 |
 | 3   | 移动端导航正常               | 🟡     | Not automated — manual check (hamburger menu, dropdowns) in browser at 375 px before release.                             |
 | 4   | 首页、分类和产品页面加载正常 | ✅     | `npm run build` (650 pages) + `scripts/validate-dist.mjs` PASS + `mirror-root-en.mjs` 0 missing.                          |
-| 5   | 404 和 301 规则正确          | ✅     | `/404` returns 404 status; locale-removal redirects 308→200 spot-checked in production (2026-10 session).                 |
+| 5   | 404 和 301 规则正确          | ✅     | `/404` returns 404 status; `/zh/` server-redirects 301 to `/` (verified by `npm run smoke`, 2026-10-31).                  |
 
 ## 产品系统 (Product system)
 
@@ -67,11 +67,11 @@ Legend: ✅ pass · 🟡 partial · ❌ blocked / not applicable yet
 Release re-verification (run in order):
 
 ```powershell
-npm run build          # ~650 pages, validate-dist + all post-build gates
+npm run build          # ~651 pages, validate-dist + all post-build gates
 npm run check          # astro check + ESLint + Prettier
 node scripts/validate-dist.mjs   # (runs inside build; standalone re-run OK)
 # dist-gate (temp tool, session-scoped): broken links / hreflang / canonical / noindex scans on dist/
-# Production spot-checks: nav links, language switch, /404 status, /support/ loads, product pages render
+npm run smoke          # production spot-checks: 25 routes, status + marker + redirects (scripts/prod-smoke.mjs)
 ```
 
 Manual pre-release spot-checks (not automatable): mobile navigation (#3), dark mode,

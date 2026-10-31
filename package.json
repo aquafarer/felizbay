@@ -37,6 +37,7 @@
     "check:i18n": "node scripts/check-translations.mjs --json --fail",
     "check:links": "node scripts/audit-dist-links.mjs",
     "validate": "node scripts/validate-dist.mjs",
+    "smoke": "node scripts/prod-smoke.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
