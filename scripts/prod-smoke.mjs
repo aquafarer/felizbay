@@ -78,6 +78,7 @@ const CHECKS = [
     desc: 'llms.txt knowledge manifest (covers guides, pool ideas, support)',
   },
   { path: '/ai-corpus.json', marker: 'locales', desc: 'AI corpus manifest' },
+  { path: '/rss.xml', marker: '<rss', desc: 'news-worker RSS feed (worker-served, no static source)' },
   { path: '/merchant-feed.xml', marker: '<rss', desc: 'merchant feed (0 items while checkout disabled)' },
   {
     path: '/images/pools/round-pool-s2005.webp',

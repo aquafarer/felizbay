@@ -110,6 +110,17 @@ Cloudflare Redirect Rule 配置后实测：
 
 `scripts/fast-upload-r2.mjs` 增加 prune 步骤（每次 deploy 自动运行）：删除 R2 中位于同步前缀（`data/ images/ files/`）下、但本地 `public/` 已不存在的对象。安全护栏：本地某前缀为空则跳过该前缀；删除数超过 200 直接跳过并告警；prune 失败不阻断部署。P6 遗留的 15 张旧 PNG/JPG（约 18.5MB）由该步骤自动清除。
 
+### 2.4 llms 清单与 AI sitemap 漂移修复（2026-10-31 完成，commit `6aded2e` / `d823bd8`）
+
+排查 rss.xml / llms.txt 收录疑点时发现的 AEO 真实缺口（均已修复并部署）：
+
+- **llms.txt**（AI 知识清单主入口）滞后于 2026-10 内容批次：缺全部 13 篇新 consumer guides、15 个场景页、`/support/`、`/find-your-pool/`、`/returns-and-warranty/`。已补 "Pool Owner Guides"（16 篇）与 "Pool Ideas"（hub + 15 场景）两节。
+- **llms-full.txt** 生成器从 `src/data/pages` YAML 原样导出，emit 了 **57 个死链**：37 个 `/home/`（本地化首页路由是 `/{lang}/`，非 `/{lang}/home/`）+ 20 个本地化 `/request-quotation/`（该页仅根路由）。重写 `generate-geo-files.ts` `getPageUrls()` 只 emit 真实路由；guides/pool-ideas 改从 SSOT 数据模块导入（新增内容自动收录）。
+- **ai-sitemap.xml**：`AI_TOP_SECTIONS` 为陈旧模板清单（26 条中 19 条不存在，靠 filter 兜底仅剩 6 条）。重写为 20 条现存顶级分区。
+- **knowledge-sitemap.xml**：过滤器缺 `/pool-ideas/` 前缀，15 个场景页未收录。已补（24→40 URL）。
+- **rss.xml 疑点结论**：非 bug——feed 由 news-worker 服务（D1 驱动，当前空频道 342B），仓库无 `src/pages/rss.xml.ts`（AGENTS.md 过时描述已修正）。
+- **防回归**：`npm run smoke` 对 llms.txt / llms-full.txt / knowledge-sitemap 增加 guides+pool-ideas+support 覆盖断言，并新增 `/rss.xml` 与 knowledge-sitemap 专项检查（33→35 项）。
+
 ## 3. 剩余人工操作清单
 
 | 事项              | 位置           | 操作                                                          |
