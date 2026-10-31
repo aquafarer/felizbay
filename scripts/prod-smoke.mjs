@@ -77,6 +77,12 @@ const CHECKS = [
     markers: ['Felizbay', 'pool-ideas/', 'guides/', '/support/'],
     desc: 'llms.txt knowledge manifest (covers guides, pool ideas, support)',
   },
+  { path: '/llms-index', marker: 'Markdown Endpoint Index', desc: 'combined markdown endpoint index' },
+  {
+    path: '/llms/ideas/seasonal-and-portable-pools',
+    marker: '# Seasonal',
+    desc: 'pool idea markdown endpoint',
+  },
   { path: '/ai-corpus.json', marker: 'locales', desc: 'AI corpus manifest' },
   { path: '/rss.xml', marker: '<rss', desc: 'news-worker RSS feed (worker-served, no static source)' },
   { path: '/merchant-feed.xml', marker: '<rss', desc: 'merchant feed (0 items while checkout disabled)' },

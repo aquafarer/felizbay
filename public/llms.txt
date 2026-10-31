@@ -88,3 +88,7 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 - [Why Drop Stitch Pools](https://felizbay.com/llms/v2/why-drop-stitch-pools): Benefits of drop stitch pools over frame and ring pools
 - [Inflatable Pool vs Steel Frame](https://felizbay.com/llms/v2/inflatable-pool-vs-steel-frame): Comparison of inflatable and steel frame pools
 - [Pool Water Care Basics](https://felizbay.com/llms/v2/inflatable-pool-water-care-basics): Keeping inflatable pool water clean and safe
+
+## Markdown Endpoints
+
+- [Markdown Endpoint Index](https://felizbay.com/llms-index): Index of all plain-markdown content — 16 consumer guides, 6 B2B procurement guides, 15 pool idea scenarios, and every product page
