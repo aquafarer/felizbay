@@ -3,6 +3,8 @@ import path from 'node:path';
 import * as yaml from 'js-yaml';
 import { products } from '../src/data/products';
 import { productTexts } from '../src/data/product-texts';
+import { guides } from '../src/data/guides';
+import { POOL_IDEAS } from '../src/data/pool-ideas';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const PUBLIC = path.join(ROOT, 'public');
@@ -58,6 +60,15 @@ const CATEGORY_LABELS: Record<string, string> = {
   POOL: 'Inflatable Swimming Pools',
 };
 
+// Only these localized pages are actually routed under /{lang}/ (see
+// src/pages/[lang]/*.astro). YAML files like home.yaml / request-quotation.yaml
+// describe the root homepage and the root quotation page — emitting them as
+// /{lang}/home/ or /{lang}/request-quotation/ would create dead URLs.
+const ROUTED_LANG_PAGES = ['about', 'contact'];
+
+// Root (English) YAML-backed pages that exist as real routes.
+const ROOT_PAGE_NAMES = ['about', 'contact', 'request-quotation'];
+
 function readSource(file: string): string | null {
   try {
     return fs.readFileSync(path.join(ROOT, 'src', 'data', 'geo', file), 'utf8');
@@ -82,39 +93,61 @@ function extractPageTitle(content: string): string | null {
   return null;
 }
 
+function pageLine(url: string, title: string | null): string {
+  return title ? `- ${url} — ${title}` : `- ${url}`;
+}
+
 function getPageUrls(): string[] {
   const urls: string[] = [];
-  const seen = new Set<string>();
 
+  // Root (English) YAML-backed pages
+  for (const name of ROOT_PAGE_NAMES) {
+    const yamlPath = path.join(PAGES_DIR, `${name}.yaml`);
+    if (!fs.existsSync(yamlPath)) continue;
+    const title = extractPageTitle(fs.readFileSync(yamlPath, 'utf8'));
+    urls.push(pageLine(`${SITE_URL}/${name}/`, title));
+  }
+
+  // EN-only utility and content pages (no per-locale YAML — routes are
+  // src/pages/*.astro and src/pages/{guides,pool-ideas}/[slug].astro)
+  urls.push(
+    `${pageLine(`${SITE_URL}/find-your-pool/`, 'Interactive pool advisor: match a pool to your space, household, and use case')}`
+  );
+  urls.push(
+    `${pageLine(`${SITE_URL}/support/`, 'After-sales support hub: shipping, warranty, care, and troubleshooting')}`
+  );
+  urls.push(`${pageLine(`${SITE_URL}/returns-and-warranty/`, 'Return policy and warranty coverage')}`);
+
+  // Guides — generated from the guides SSOT so new guides appear automatically
+  urls.push(pageLine(`${SITE_URL}/guides/`, 'All procurement and pool owner guides index'));
+  for (const g of guides) {
+    urls.push(pageLine(`${SITE_URL}/guides/${g.slug}/`, g.title));
+  }
+
+  // Pool ideas — generated from the pool-ideas SSOT
+  urls.push(pageLine(`${SITE_URL}/pool-ideas/`, 'All pool ideas: browse scenarios by household, space, and use case'));
+  for (const idea of POOL_IDEAS) {
+    urls.push(pageLine(`${SITE_URL}/pool-ideas/${idea.slug}/`, idea.title));
+  }
+
+  // Localized routed pages — only page names that exist under /{lang}/
   const entries = fs.readdirSync(PAGES_DIR);
-  for (const entry of entries) {
-    const entryPath = path.join(PAGES_DIR, entry);
-    if (fs.statSync(entryPath).isDirectory()) {
-      const lang = entry;
-      if (!LANGUAGES[lang]) continue;
-      const langFiles = fs.readdirSync(entryPath);
-      for (const lf of langFiles) {
-        if (!lf.endsWith('.yaml')) continue;
-        const name = lf.replace(/\.yaml$/, '');
-        const url = `${SITE_URL}/${lang}/${name}/`;
-        if (seen.has(url)) continue;
-        seen.add(url);
-        const content = fs.readFileSync(path.join(entryPath, lf), 'utf8');
-        const title = extractPageTitle(content);
-        urls.push(title ? `- ${url} — ${title}` : `- ${url}`);
-      }
-    } else if (entry.endsWith('.yaml') && !entry.startsWith('_')) {
-      const name = entry.replace(/\.yaml$/, '');
-      const url = `${SITE_URL}/${name}/`;
-      if (seen.has(url)) continue;
-      seen.add(url);
-      const content = fs.readFileSync(entryPath, 'utf8');
-      const title = extractPageTitle(content);
-      urls.push(title ? `- ${url} — ${title}` : `- ${url}`);
+  const langs = entries
+    .filter((entry) => {
+      const entryPath = path.join(PAGES_DIR, entry);
+      return fs.statSync(entryPath).isDirectory() && LANGUAGES[entry];
+    })
+    .sort((a, b) => a.localeCompare(b));
+
+  for (const lang of langs) {
+    for (const name of ROUTED_LANG_PAGES) {
+      const yamlPath = path.join(PAGES_DIR, lang, `${name}.yaml`);
+      if (!fs.existsSync(yamlPath)) continue;
+      const title = extractPageTitle(fs.readFileSync(yamlPath, 'utf8'));
+      urls.push(pageLine(`${SITE_URL}/${lang}/${name}/`, title));
     }
   }
 
-  urls.sort();
   return urls;
 }
 

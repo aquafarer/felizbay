@@ -72,7 +72,11 @@ const CHECKS = [
     desc: 'robots.txt sitemap directive',
   },
   { path: '/sitemap-index.xml', marker: 'sitemap-entity.xml', desc: 'sitemap index' },
-  { path: '/llms.txt', marker: 'Felizbay', desc: 'llms.txt knowledge manifest' },
+  {
+    path: '/llms.txt',
+    markers: ['Felizbay', 'pool-ideas/', 'guides/', '/support/'],
+    desc: 'llms.txt knowledge manifest (covers guides, pool ideas, support)',
+  },
   { path: '/ai-corpus.json', marker: 'locales', desc: 'AI corpus manifest' },
   { path: '/merchant-feed.xml', marker: '<rss', desc: 'merchant feed (0 items while checkout disabled)' },
   {
@@ -82,7 +86,11 @@ const CHECKS = [
   },
   { path: '/nonexistent-prod-smoke-page/', status: 404, desc: 'garbage path returns 404' },
   // ---- AI infrastructure pre-flight (docs/ai-visibility-baseline.md §4) ----
-  { path: '/llms-full.txt', marker: 'Felizbay', desc: 'llms-full.txt corpus' },
+  {
+    path: '/llms-full.txt',
+    markers: ['Felizbay', '/guides/', '/pool-ideas/', '/support/'],
+    desc: 'llms-full.txt corpus (covers guides, pool ideas, support)',
+  },
   { path: '/ai-sitemap.xml', marker: '<urlset', desc: 'AI sitemap' },
   { path: '/knowledge-sitemap.xml', marker: '<urlset', desc: 'knowledge sitemap' },
   {
