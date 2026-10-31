@@ -604,6 +604,49 @@ export const POOL_IDEAS: PoolIdea[] = [
     cta: 'Plan a hospitality project with our commercial team.',
     relatedGuides: ["inflatable-pools-for-vacation-rentals","inflatable-pool-maintenance"],
   },
+  {
+    slug: 'seasonal-and-portable-pools',
+    navTitle: 'Seasonal & Portable Pools',
+    eyebrow: 'Pool Ideas',
+    title: 'Seasonal & Portable Pools',
+    intro: [
+      'Most pools are a nine-month commitment to a wet corner of the yard. A Felizbay drop-stitch pool is different: one person sets it up in 5–15 minutes with the included 1000W pump in spring, and in autumn it drains, folds, and goes back into its storage bag — returning your lawn, patio, or garage for the rest of the year.',
+      'Deflated, a drop-stitch pool packs at just 5–10% of the volume of an equivalent rigid pool — the same factory spec that makes container-efficient wholesale shipping also makes off-season storage a one-person, one-shelf job.',
+    ],
+    conditions: [
+      'Households that want the lawn back in winter for play, dining, or decorations',
+      'Renters and frequent movers — the pool folds into a bag that fits a car boot and re-installs at the next address',
+      'Cottage, cabin, and second-home owners who close the property for winter',
+      'Anyone who would rather store a pool than winterize pumps, plumbing, and covers',
+    ],
+    matches: [
+      {
+        series: 'round',
+        reason:
+          'The classic seasonal choice — from the Ø 2 m compact (18.4 kg packed) to the Ø 10 m commercial pool, every round size folds back into its bag for the off-season.',
+      },
+      {
+        series: 'rect-square',
+        reason:
+          'Large 50 cm-wall rectangles still pack flat for storage, and the full-coverage dustproof & waterproof cover (included with the series) keeps the pool clean between weekend uses.',
+      },
+      {
+        series: 'hot-tub-square-rect',
+        reason:
+          'A 5 mm insulated thermal bottom and heater compatibility stretch the soaking season into spring and autumn — the seasonal pool you use more of the year, not less.',
+      },
+    ],
+    tableNote:
+      'Seasonal favorites: a Ø 3 × 1.2 m round or 3 × 2 × 0.8 m rectangular pool for a full summer of swimming that still stores on one shelf; a square SPA tub if you want shoulder-season soaks.',
+    safety: [
+      'Drain, dry, and fold the pool before the first frost — trapped water freezes and can split seams and valves.',
+      'Store the deflated pool indoors or in a dry shed, away from rodents and sharp shelving.',
+      'Re-check the ground for frost heave, level, and sharp debris when you re-install each season.',
+      'Inspect valves and seams and test inflation to the rated 4–5 PSI before the first fill of the season.',
+    ],
+    cta: 'Pick the size that fits your season — every model folds away in autumn.',
+    relatedGuides: ["how-to-store-a-drop-stitch-pool","how-to-clean-an-inflatable-pool","how-to-prevent-pool-leaks"],
+  },
 ];
 
 export const findPoolIdea = (slug: string): PoolIdea | undefined => POOL_IDEAS.find((i) => i.slug === slug);
