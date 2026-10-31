@@ -71,7 +71,7 @@ npm run build          # ~651 pages, validate-dist + all post-build gates
 npm run check          # astro check + ESLint + Prettier
 node scripts/validate-dist.mjs   # (runs inside build; standalone re-run OK)
 # dist-gate (temp tool, session-scoped): broken links / hreflang / canonical / noindex scans on dist/
-npm run smoke          # production spot-checks: 25 routes, status + marker + redirects (scripts/prod-smoke.mjs)
+npm run smoke          # production spot-checks: 31 routes/files + AI infra pre-flight (scripts/prod-smoke.mjs)
 ```
 
 Manual pre-release spot-checks (not automatable): mobile navigation (#3), dark mode,

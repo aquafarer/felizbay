@@ -77,13 +77,59 @@ const CHECKS = [
     desc: 'R2-backed product image',
   },
   { path: '/nonexistent-prod-smoke-page/', status: 404, desc: 'garbage path returns 404' },
+  // ---- AI infrastructure pre-flight (docs/ai-visibility-baseline.md §4) ----
+  { path: '/llms-full.txt', marker: 'Felizbay', desc: 'llms-full.txt corpus' },
+  { path: '/ai-sitemap.xml', marker: '<urlset', desc: 'AI sitemap' },
+  { path: '/knowledge-sitemap.xml', marker: '<urlset', desc: 'knowledge sitemap' },
+  {
+    path: '/.well-known/entity.json',
+    marker: '@context',
+    desc: 'entity JSON-LD manifest',
+  },
+  {
+    path: '/api/search',
+    method: 'POST',
+    body: { query: 'wholesale drop stitch pool FOB price' },
+    desc: 'Vectorize search hits a guide with score > 0.6',
+    validate: (res) => {
+      let parsed;
+      try {
+        parsed = JSON.parse(res.body);
+      } catch {
+        return { ok: false, reason: 'response is not JSON' };
+      }
+      const first = parsed.results?.[0];
+      if (!first) return { ok: false, reason: 'no results returned' };
+      // Vectorize metadata stores URLs relative to the site root.
+      const hitPath = `/${String(first.url).replace(/^\/+/, '')}`;
+      if (!hitPath.startsWith('/guides/')) {
+        return { ok: false, reason: `first hit is not a guide: ${first.url}` };
+      }
+      if (typeof first.score !== 'number' || first.score <= 0.6) {
+        return { ok: false, reason: `score too low: ${first.score}` };
+      }
+      return { ok: true };
+    },
+  },
+  {
+    path: '/api/chat',
+    method: 'POST',
+    body: {},
+    status: 400,
+    desc: 'AI chat endpoint online (empty question 400)',
+  },
 ];
 
-/** GET with redirect following (max 3 hops) and a hard timeout.
- *  `follow: false` returns the first response (status + location) un-followed. */
-const fetchRaw = (url, depth = 0, follow = true) =>
+/** Request helper with redirect following (max 3 hops) and a hard timeout.
+ *  Supports GET (default) and JSON-body POST. `follow: false` returns the
+ *  first response (status + location) un-followed. */
+const fetchRaw = (url, depth = 0, follow = true, postBody = undefined) =>
   new Promise((resolve, reject) => {
-    const req = https.get(url, { headers: { 'user-agent': 'felizbay-prod-smoke/1.0' }, timeout: TIMEOUT_MS }, (res) => {
+    const payload = postBody === undefined ? null : JSON.stringify(postBody);
+    const headers = { 'user-agent': 'felizbay-prod-smoke/1.0' };
+    if (payload !== null) headers['content-type'] = 'application/json';
+    const options = { headers, timeout: TIMEOUT_MS, method: payload === null ? 'GET' : 'POST' };
+    const req = https.request(url, options, (res) => {
       // Follow up to 3 redirects (R2 assets 301 to the assets domain).
       if (res.statusCode && res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         res.resume();
@@ -105,10 +151,12 @@ const fetchRaw = (url, depth = 0, follow = true) =>
         })
       );
     });
+    if (payload !== null) req.write(payload);
     req.on('timeout', () => {
       req.destroy(new Error(`timeout after ${TIMEOUT_MS}ms`));
     });
     req.on('error', reject);
+    req.end();
   });
 
 const runCheck = async (check) => {
@@ -123,6 +171,17 @@ const runCheck = async (check) => {
       const target = new URL(res.location || '/', `${BASE}${check.path}`).pathname;
       if (target !== check.redirectsTo) {
         return { ok: false, reason: `expected redirect to ${check.redirectsTo}, got ${target}` };
+      }
+      return { ok: true };
+    }
+    if (check.method === 'POST') {
+      const res = await fetchRaw(`${BASE}${check.path}`, 0, true, check.body ?? {});
+      if (res.status !== expected) {
+        return { ok: false, reason: `expected status ${expected}, got ${res.status}` };
+      }
+      if (check.validate) {
+        const verdict = check.validate(res);
+        if (!verdict.ok) return verdict;
       }
       return { ok: true };
     }

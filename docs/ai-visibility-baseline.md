@@ -69,6 +69,14 @@
 
 ## 4. 基础设施自查清单（每轮复测先跑一遍）
 
+**自动化（推荐）**：以下全部检查项已收录进 `npm run smoke`（`scripts/prod-smoke.mjs`，31 项含本节全部 + 26 项站点冒烟），复测前跑一次即可，任一 FAIL 先修复再执行人工轮次：
+
+```powershell
+npm run smoke
+```
+
+**等价手动命令（备用）**：
+
 ```bash
 for u in llms.txt llms-full.txt ai-sitemap.xml knowledge-sitemap.xml \
          sitemap-index.xml robots.txt .well-known/entity.json merchant-feed.xml; do
