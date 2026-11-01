@@ -3,7 +3,7 @@ title: 'Pools for Pet Families: A Durable Splash Spot for Dogs'
 description: 'Claw resistance, entry design, hair management, and supervision rules for drop-stitch pools used by dogs and their owners.'
 ---
 
-Dogs feel summer heat far more than people do, and a backyard splash spot is one of the most effective ways to keep them cool, exercised, and entertained at home. The usual failure mode is equipment: thin vinyl inflatables and splash pads rarely survive a week of claws, zoomies, and chewing. A drop-stitch pool is the tougher answer — with honest limits this guide spells out.
+Dogs feel summer heat far more than people do, and a backyard splash spot is one of the most effective ways to keep them cool, exercised, and entertained at home. The usual failure mode is equipment: thin, soft-walled inflatables and splash pads puncture easily around claws and chewing. A drop-stitch pool is the tougher answer — with honest limits this guide spells out.
 
 ## 1. Why Drop-Stitch Handles Paws Better
 

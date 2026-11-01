@@ -366,8 +366,8 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A golden retriever playing in a round Felizbay pool on a sunny suburban lawn while its owner joins in with a toy.',
     intro: [
-      'Dogs feel the summer heat far more than we do, and a backyard splash spot is one of the best ways to keep them cool, exercised, and entertained. The problem with most inflatable pools is that thin vinyl walls lose to claws within days.',
-      'Felizbay drop-stitch pools take a different approach: dense internal threading and multi-layer PVC inflate to a hard, low-stretch surface at 4–5 PSI that handles normal paw traffic far better than soft air-ring pools. No inflatable is chew-proof — but for supervised splash time, drop-stitch is the toughest portable wall you can buy.',
+      'Dogs feel the summer heat far more than we do, and a backyard splash spot is one of the best ways to keep them cool, exercised, and entertained. The problem with most inflatable pools is that thin, soft walls puncture easily.',
+      'Felizbay drop-stitch pools take a different approach: dense internal threading and multi-layer PVC inflate to a hard, low-stretch surface at 4–5 PSI that handles normal paw traffic far better than soft air-ring pools. No inflatable is chew-proof — but for supervised splash time, drop-stitch is the most durable portable option we offer.',
     ],
     conditions: [
       'A level patch of lawn or patio from about 2 × 2 m',

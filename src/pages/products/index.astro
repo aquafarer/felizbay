@@ -120,20 +120,26 @@ const cardData = await Promise.all(
   })
 );
 
+// Channel split (audit 2026-10-27 §六): retail sets and wholesale collections
+// are sectioned separately so retail buyers never land on an FOB-only product
+// by mistake. Each card still carries its own channel label under the price.
+const retailCards = cardData.filter((c) => c.isRetail);
+const businessCards = cardData.filter((c) => !c.isRetail);
+
 const catalogSections = [
   {
-    id: 'pool',
-    title: 'Swimming Pools',
+    id: 'retail',
+    title: 'Retail — Buy Online',
     intro:
-      'Family-size drop stitch swimming pools with rigid high-pressure walls — from compact patio sizes to large garden models. Pump, cover, repair kit, and storage bag included.',
-    cards: cardData.filter((c) => !c.isSpa),
+      'Fixed-size sets that ship directly to your door. Each set is one factory size with a fixed retail price — pump, repair kit, and storage bag included. Every model in this section can be purchased as a single piece.',
+    cards: retailCards,
   },
   {
-    id: 'spa',
-    title: 'SPA Soaking Tubs',
+    id: 'business',
+    title: 'Wholesale & Project Collections',
     intro:
-      'Compact drop-stitch soaking tubs with built-in inflatable seats and an insulated bottom. Compatible with selected external heating systems, sold separately — confirm equipment compatibility before purchase.',
-    cards: cardData.filter((c) => c.isSpa),
+      'Collections produced for business buyers — vacation rentals, glamping sites, hotels, and resellers. Prices are wholesale FOB (FOB Qingdao, price basis 20 pcs per item); factory size ranges are listed in the specs table. These models are not available as single-piece retail purchases.',
+    cards: businessCards,
   },
 ].filter((section) => section.cards.length > 0);
 
@@ -173,8 +179,8 @@ const metadata = merge(
         Compare shapes, sizes, and features to find the right pool for your backyard or outdoor space.
       </p>
       <p class="mt-2 mx-auto text-sm text-gray-500 dark:text-slate-400">
-        5 product families · 4 collections · 48 standard SKUs — see the full size and price matrix in the
-        <a href="/products/specs/" class="text-primary dark:text-blue-400 hover:underline">specs table</a>.
+        3 retail sets that ship direct · 2 wholesale collections quoted FOB — see the full factory size and price matrix
+        in the <a href="/products/specs/" class="text-primary dark:text-blue-400 hover:underline">specs table</a>.
       </p>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
         <a

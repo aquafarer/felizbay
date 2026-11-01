@@ -358,7 +358,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'Can it be used as a cold plunge tub?',
-        a: 'Yes. The insulated bottom works in both directions, and the compact size makes it a popular professional cold plunge recovery bath for athletes.',
+        a: 'Yes. The insulated bottom works in both directions, and the compact size suits cold-plunge setups. The tub is a water vessel, not a medical device — no health or recovery claims are made.',
       },
       {
         q: 'Does it fit on a balcony?',

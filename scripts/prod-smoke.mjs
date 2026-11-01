@@ -37,7 +37,23 @@ const CHECKS = [
     redirectsTo: '/',
     desc: 'removed locale server-redirects to EN root',
   },
-  { path: '/products/', marker: 'Drop Stitch', desc: 'product listing' },
+  {
+    path: '/products/',
+    markers: [
+      'Retail — Buy Online',
+      'Wholesale & Project Collections',
+      'data-catalog-section="retail"',
+      'data-catalog-section="business"',
+    ],
+    notMarkers: ['48 standard SKUs'],
+    desc: 'product listing: retail and wholesale sections split by sales channel',
+  },
+  {
+    path: '/de/products/',
+    markers: ['data-catalog-section="retail"', 'data-catalog-section="business"', 'Wholesale FOB'],
+    notMarkers: ['48 standard-SKU'],
+    desc: 'localized product listing: channel sections present, 48-SKU note removed',
+  },
   {
     path: '/products/round-blue-drop-stitch-pool/',
     markers: ['Fixed-size retail set'],
@@ -57,8 +73,8 @@ const CHECKS = [
   },
   {
     path: '/products/compare/',
-    marker: 'Compare Drop Stitch Inflatable Pools',
-    desc: 'compare center',
+    markers: ['Compare Drop Stitch Inflatable Pools', 'single-piece online retail prices', 'data-channel="wholesale"'],
+    desc: 'compare center: retail-only price table plus separate wholesale section',
   },
   { path: '/products/specs/', marker: 'FOB Qingdao', desc: 'wholesale price list' },
   { path: '/pool-ideas/', marker: 'Pool Ideas', desc: 'scenario hub' },

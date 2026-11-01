@@ -347,7 +347,7 @@ export const guides: GuideRecord[] = [
       'Wall strength, pressure ratings, and real-world durability of drop stitch inflatable pools — what the numbers mean and what the walls can take.',
     tldr: 'Drop stitch pools are far stronger than ring pools: walls inflated to 4–5 PSI act as rigid panels, carry an 8 PSI structural rating, and pass a 24–48 hour factory pressure test. Strength comes from thousands of internal threads, not thicker vinyl alone.',
     problem:
-      '"Inflatable" sounds fragile, so buyers picture a toy that punctures on the first sharp stone and collapses when an adult leans on the wall. That describes thin ring pools — not drop stitch construction.',
+      '"Inflatable" sounds fragile, so buyers picture a toy that punctures on the first sharp stone and folds under a full water load. That describes thin ring pools — not drop stitch construction.',
     solution:
       'Judge strength by construction and pressure ratings. Thousands of internal polyester threads lock the two PVC wall layers together, so at 4–5 PSI the wall behaves like a stiff panel: it holds a 1.2–1.5 m water column, stays flat under load, and survives full-season outdoor use. Every Felizbay unit ships only after passing a 24–48 hour pressure-drop test.',
     audience: 'Buyers weighing durability against the low price of thin-vinyl pools.',
@@ -357,13 +357,13 @@ export const guides: GuideRecord[] = [
       'Wall stiffness: internal threads stop the wall from ballooning, which is why the wall stays flat and rigid under a full water load',
       'Factory verification: every pool passes a 24–48 hour pressure-drop test before packing — a wall that loses pressure never ships',
       'Material layers: reinforced, UV-stabilized multi-layer PVC resists punctures, sunlight, and abrasion far better than single-layer vinyl',
-      'Real-world limits: the walls tolerate leaning, sitting on the rim of larger models, and daily family use — but sharp objects, pet claws, and deliberate cutting will puncture any inflatable',
+      'Real-world limits: the walls are built for daily family use — but sharp objects, pet claws, and deliberate cutting will puncture any inflatable',
       'Field repair: every pool includes a repair kit, and small punctures patch in minutes without deflating the whole pool',
     ],
     faq: [
       {
         q: 'Can adults lean or sit on the wall?',
-        a: 'The rigid drop stitch wall tolerates leaning and sitting far better than a soft ring, but treat the rim as a seat only on larger models and never as a diving or jumping platform.',
+        a: 'The walls are not rated as seating or load-bearing structures. Do not sit on, lean against, or climb the walls — follow the use limits in the product manual, and never use the pool as a diving or jumping platform.',
       },
       {
         q: 'How long do drop stitch pools last?',
