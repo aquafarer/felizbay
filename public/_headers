@@ -18,6 +18,14 @@
 /*.txt
   Cache-Control: public, max-age=3600
 
+# Markdown endpoints (extensionless prerendered APIRoutes) — CF Pages would
+# otherwise serve them as application/octet-stream.
+/llms/*
+  Content-Type: text/markdown; charset=utf-8
+
+/llms-index
+  Content-Type: text/markdown; charset=utf-8
+
 /contact/*
   Cache-Control: public, max-age=0, s-maxage=0
 

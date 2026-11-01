@@ -135,6 +135,28 @@ const CHECKS = [
     },
   },
   {
+    path: '/api/search',
+    method: 'POST',
+    body: { query: 'seasonal portable pool for winter storage' },
+    desc: 'Vectorize search surfaces a pool-ideas scenario',
+    validate: (res) => {
+      let parsed;
+      try {
+        parsed = JSON.parse(res.body);
+      } catch {
+        return { ok: false, reason: 'response is not JSON' };
+      }
+      const results = Array.isArray(parsed.results) ? parsed.results.slice(0, 3) : [];
+      const hit = results.find(
+        (r) => typeof r.url === 'string' && r.url.replace(/^\/+/, '').startsWith('pool-ideas/') && r.score > 0.5
+      );
+      if (!hit) {
+        return { ok: false, reason: `no pool-ideas hit in top 3: ${JSON.stringify(parsed.results?.slice(0, 3))}` };
+      }
+      return { ok: true };
+    },
+  },
+  {
     path: '/api/chat',
     method: 'POST',
     body: {},

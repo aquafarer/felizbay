@@ -130,110 +130,83 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 /
 ├── src/
 │  ├── pages/
-│  │  ├── [lang]/                    # Localized pages (37 languages)
-│  │  │  ├── index.astro            # Homepage (SSG)
-│  │  │  ├── about.astro            # About page
-│  │  │  ├── brand/                 # Brand hub
-│  │  │  │  ├── index.astro         # Brand index
-│  │  │  │  ├── Felizbay.astro     # Felizbay entity page
-│  │  │  │  └── team.astro          # Team entity (founder, leadership, 6 profiles)
-│  │  │  ├── brand-story.astro      # Brand story
-│  │  │  ├── brand-global-presence.astro  # Global presence
-│  │  │  ├── certifications.astro   # CE, ISO 9001, UKCA, BSCI, REACH, safety
-│  │  │  ├── partners.astro         # Partner programs (distributor, dealer, OEM, etc.)
-│  │  │  ├── cases/                 # Case studies hub
-│  │  │  ├── contact.astro          # Contact
-│  │  │  ├── custom/                # Custom Lab
-│  │  │  ├── disclaimer.astro       # Medical disclaimer (legal)
-│  │  │  ├── factory/               # Factory, process, equipment
-│  │  │  │  ├── index.astro         # Factory overview
-│  │  │  │  ├── capacity.astro      # Production capacity
-│  │  │  │  ├── process.astro       # Production process
-│  │  │  │  ├── quality-lab.astro   # Quality lab & testing
-│  │  │  │  ├── equipment.astro     # Equipment & machinery
-│  │  │  │  └── oem-capability.astro # OEM/ODM manufacturing
-│  │  │  ├── gallery/               # Gallery
-│  │  │  ├── guides/                # Buying guides (18 guides × 22 locales)
-│  │  │  │  ├── index.astro         # Guides listing
-│  │  │  │  └── [slug].astro        # Guide detail
-│  │  │  ├── journal/               # Journal
-│  │  │  ├── lifestyle/             # Lifestyle
-│  │  │  ├── media/                 # Media Center
-│  │  │  ├── privacy.astro          # Privacy policy (legal)
-│  │  │  ├── quality.astro          # Quality
-│  │  │  ├── request-quotation.astro # RFQ page (with B2B fields: application, country, material, engine, uploads)
-│  │  │  ├── resources.astro        # Download center & buyer guides
-│  │  │  ├── safety.astro           # Safety
-│  │  │  ├── solutions/             # Industry solutions
-│  │  │  │  ├── index.astro         # Solutions hub
-│  │  │  │  ├── clubs.astro         # For water sports clubs
-│  │  │  │  ├── resorts.astro       # For resorts & hotels
-│  │  │  │  ├── entrepreneurs.astro # For brand founders
-│  │  │  │  ├── rental-business.astro # For rental operators
-│  │  │  │  ├── by-industry.astro   # By industry
-│  │  │  │  └── by-use-case.astro   # By use case
-│  │  │  ├── technology.astro       # Technology
-│  │  │  ├── terms.astro            # Terms and conditions (legal)
-│  │  │  ├── academy/               # Academy index
-│  │  │  ├── products/              # Product catalog & detail
-│  │  │  ├── use-cases/             # Use-case pages
-│  │  │  ├── compare/               # Product comparisons
-│  │  │  ├── oem-process.astro      # OEM/ODM Process
-│  │  │  ├── oem-odm-blueprint.astro # OEM/ODM Blueprint
-│  │  │  ├── design-powerhouse.astro # Design & Innovation
-│  │  │  ├── engineering-team.astro # Engineering & R&D Team
-│  │  │  ├── randdcenter/           # R&D Center
-│  │  │  ├── success-stories.astro  # Success Stories
-│  │  │  ├── testimonials.astro     # Testimonials
-│  │  │  ├── business-packages.astro # Business Packages
-│  │  │  ├── sitemap.xml.ts         # Per-locale sitemap
-│  │  │  └── llms.txt.ts            # Per-locale AI knowledge graph
-│  │  ├── llms/                     # AI-readable markdown
-│  │  │  ├── products/[slug].ts     # Product markdown
-│  │  │  ├── news/[slug].ts         # News markdown
-│  │  │  ├── guides/[slug].ts       # Guide markdown
-│  │  │  ├── v2/[slug].ts           # V2 knowledge markdown
-│  │  │  └── pages/[slug].ts        # Standalone page markdown
-│  │  ├── llms.txt.ts               # Root llms.txt (prerender)
-│  │  ├── llms-full.txt.ts          # Root llms-full.txt (prerender)
-│  │  ├── keystatic/                # Admin panel (30+ CMS editor pages, incl. link-refactor, validate-links, inquiries, users)
-│  │  ├── login/                    # Login page
-│  │  ├── internal/                 # GEO/SEO dashboards
-│  │  ├── [category].astro          # Product category pages
-│  │  ├── search.astro              # Client-side search
-│  │  ├── faq.astro                 # FAQ
-│  │  └── ...                       # 404, privacy, terms, B2B pages
+│  │  ├── [lang]/                    # Localized pages (fixed set, all 36 locales)
+│  │  │  ├── index.astro             # Homepage (SSG)
+│  │  │  ├── about.astro             # About page
+│  │  │  ├── contact.astro           # Contact
+│  │  │  ├── faq.astro               # FAQ
+│  │  │  ├── search.astro            # Client-side search
+│  │  │  ├── privacy.astro           # Privacy policy (legal)
+│  │  │  ├── terms.astro             # Terms and conditions (legal)
+│  │  │  ├── disclaimer.astro        # Medical disclaimer (legal)
+│  │  │  └── products/               # Localized product pages
+│  │  ├── guides/                    # 16 consumer + B2B guide articles (EN)
+│  │  ├── pool-ideas/                # 15 scenario pages + hub (EN)
+│  │  ├── products/                  # Product catalog: index, [slug], specs, compare
+│  │  ├── llms/                      # AI-readable markdown endpoints
+│  │  │  ├── guides/[slug].ts        # 16 consumer guide markdown docs
+│  │  │  ├── procurement/[slug].ts   # 6 B2B guide markdown docs
+│  │  │  ├── ideas/[slug].ts         # 15 pool-idea scenario markdown docs
+│  │  │  ├── products/[slug].ts      # Product markdown
+│  │  │  ├── pages/[slug].ts         # Standalone page markdown
+│  │  │  └── v2/[slug].ts            # V2 knowledge markdown
+│  │  ├── llms-index.ts              # Combined markdown endpoint index (/llms-index)
+│  │  ├── ai-answer-center/          # AI answer center
+│  │  ├── keystatic/                 # Admin panel (30+ CMS editor pages, incl. link-refactor, validate-links, inquiries, users)
+│  │  ├── internal/                  # GEO/SEO dashboards
+│  │  ├── find-your-pool.astro       # Interactive pool advisor
+│  │  ├── support.astro              # After-sales support hub
+│  │  ├── returns-and-warranty.astro # Returns & warranty policy
+│  │  ├── best-drop-stitch-inflatable-pools.astro # Editorial top-picks page
+│  │  ├── for-businesses.astro       # B2B hub
+│  │  ├── oem-odm.astro              # OEM/ODM page
+│  │  ├── wholesale.astro            # Wholesale program
+│  │  ├── private-label.astro        # Private label program
+│  │  ├── commercial-pools.astro     # Commercial pool solutions
+│  │  ├── manufacturing.astro        # Manufacturing process
+│  │  ├── quality-control.astro      # Quality control
+│  │  ├── request-quotation.astro    # RFQ page (B2B fields: application, country, material, uploads)
+│  │  ├── search.astro / search-index.json.ts # Client-side search
+│  │  ├── faq.astro / about.astro / contact.astro / 404.astro
+│  │  ├── privacy.astro / terms.astro / disclaimer.astro  # Legal
+│  │  ├── login.astro / register.astro / admin.astro      # Auth pages
+│  │  └── manifest.json.ts           # PWA manifest
 │  ├── components/
 │  ├── layouts/
 │  ├── lib/
 │  ├── i18n/
 │  ├── data/
-│  │  ├── products.ts               # Product data SSOT (63 products)
+│  │  ├── products.ts               # Product data SSOT (5 retail products)
 │  │  ├── product-texts.ts          # Translated product descriptions (8 seed langs: fr/de/es/pt/it/ru/pl/ar)
 │  │  ├── product-business-data.ts  # Commercial product tagging (use case, bestFor, ROI)
+│  │  ├── product-compliance.ts     # Product compliance data
+│  │  ├── product-page-content.ts   # Product page structured content
+│  │  ├── pool-catalog.ts           # Factory pool catalog (series + SKU items, size tables)
+│  │  ├── pool-ideas.ts             # 15 scenario pages SSOT (PoolIdea)
+│  │  ├── guides.ts                 # 16 GuideRecord SSOT
+│  │  ├── procurement-guides.ts     # 6 B2B guide records
+│  │  ├── faq.ts                    # FAQ entries
+│  │  ├── customer-cases.ts         # Customer case records
+│  │  ├── standalone-pages.ts       # Standalone page records
 │  │  ├── content-v2.ts             # V2 content records (incl. business-guide articles)
-│  │  ├── factory-videos.ts         # Factory tour video data (8 stages)
-│  │  ├── world-map-data.ts         # Global customer map (7 regions, 50+ countries)
 │  │  ├── knowledge-graph.ts        # AI knowledge graph + business entity relationships
 │  │  ├── site/image-dimensions.json # Image dimension SSOT (36 entries, rebuilt each build)
 │  │  ├── geo/                      # GEO source data
 │  │  │  └── entity.json            # Schema.org Organization entity
-│  │  ├── pages/                    # Page YAML content (root = EN, subdir = per locale)
-│  │  │  ├── home.yaml
-│  │  │  ├── about.yaml
-│  │  │  ├── contact.yaml
-│  │  │  ├── request-quotation.yaml
+│  │  └── pages/                    # Page YAML content (root = EN, subdir = per locale)
+│  │  │  ├── about.yaml / contact.yaml / home.yaml / request-quotation.yaml
 │  │  │  ├── de/                    # Per-locale page content
 │  │  │  ├── fr/
 │  │  │  └── ...
-│  │  └── ...
 │  ├── content/
 │  ├── middleware.ts                 # Astro locale middleware
 │  └── config.yaml                  # Site configuration
 ├── public/
-│  ├── llms.txt                     # AI brand summary (15-language knowledge graph)
-│  ├── llms-full.txt                # Full AI knowledge base (auto-generated, 37 langs)
-│  ├── fi/llms.txt                  # Per-locale llms.txt
+│  ├── llms.txt                     # Curated AI knowledge manifest (hand-maintained, links all content)
+│  ├── llms-full.txt                # Full AI knowledge base (auto-generated Site Pages + Product Catalog)
+│  ├── ai-sitemap.xml               # Curated AI section sitemap (20 top sections)
+│  ├── knowledge-sitemap.xml        # Knowledge content sitemap (guides + pool-ideas + FAQ)
+│  ├── fi/llms.txt                  # Per-locale llms.txt (32 locales)
 │  ├── da/llms.txt
 │  ├── ...
 │  └── .well-known/
