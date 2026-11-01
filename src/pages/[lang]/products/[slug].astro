@@ -760,11 +760,7 @@ const specGroups = detailV2
   }
 
   {/* Module 08 — FAQ (detail V2) */}
-  {
-    isDetailV2 && faqs.length > 0 && (
-      <ProductFaq title={detailUi['product.faqTitle']} faqs={faqs as any} />
-    )
-  }
+  {isDetailV2 && faqs.length > 0 && <ProductFaq title={detailUi['product.faqTitle']} faqs={faqs as any} />}
 
   <JsonLd type="FAQPage" faqs={faqs} />
 
