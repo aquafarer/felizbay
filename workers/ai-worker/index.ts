@@ -2,8 +2,22 @@ export interface Env {
   AI: AiLike;
   VECTORIZE: VectorizeLike;
   DATA_BUCKET: R2BucketLike;
+  DB?: D1Like;
   REINDEX_TOKEN?: string;
   SITE_ORIGIN?: string;
+}
+
+interface D1ResultLike {
+  meta?: { changes?: number };
+}
+
+interface D1PreparedStatementLike {
+  bind(...values: unknown[]): D1PreparedStatementLike;
+  run(): Promise<D1ResultLike>;
+}
+
+interface D1Like {
+  prepare(query: string): D1PreparedStatementLike;
 }
 
 interface AiLike {
@@ -135,6 +149,7 @@ const RATE_LIMITS: Record<string, { limit: number; windowSec: number }> = {
   chat: { limit: 10, windowSec: 600 },
   search: { limit: 60, windowSec: 60 },
   embed: { limit: 10, windowSec: 600 },
+  track: { limit: 30, windowSec: 600 },
 };
 const ANSWER_CACHE_TTL_SEC = 6 * 3600;
 // Chunk-embeds the account may spend on reindex per UTC day: one full corpus
@@ -916,6 +931,63 @@ async function runReindexSlice(env: Env, opts: { force?: boolean; reset?: boolea
   };
 }
 
+// --- Pool Advisor anonymous event tracking (GEO KPI) --------------------------
+// Collects coarse, anonymous selection events from /find-your-pool: quiz
+// filter sessions, result-card clicks and no-match outcomes (migration 0005).
+// No PII: answer values are whitelisted coarse bucket ids; free-text inputs
+// (e.g. delivery country) are never sent by the client and never stored here.
+
+const TRACK_TYPES: ReadonlySet<string> = new Set(['quiz_filter', 'result_click', 'no_match']);
+const TRACK_ANSWER_KEYS: ReadonlySet<string> = new Set([
+  'use',
+  'space',
+  'who',
+  'install',
+  'climate',
+  'purpose',
+  'dims',
+  'target',
+]);
+
+function sanitizeTrackAnswers(value: unknown): string {
+  if (!value || typeof value !== 'object') return '{}';
+  const src = value as Record<string, unknown>;
+  const out: Record<string, string> = {};
+  for (const key of Object.keys(src).slice(0, 12)) {
+    if (!TRACK_ANSWER_KEYS.has(key)) continue;
+    const v = src[key];
+    if (typeof v === 'string' && /^[a-z0-9x.-]{1,40}$/.test(v)) out[key] = v;
+  }
+  const serialized = JSON.stringify(out);
+  return serialized.length <= 400 ? serialized : '{}';
+}
+
+async function handleTrack(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
+  const limited = await rateLimit(env, ctx, 'track', request);
+  if (limited) return limited;
+  if (!env.DB) return json({ error: 'Tracking unavailable' }, 503);
+  const body = await readBody(request);
+  const type = typeof body.type === 'string' ? body.type : '';
+  if (!TRACK_TYPES.has(type)) return json({ error: 'Invalid event type' }, 400);
+  const product =
+    typeof body.product === 'string' && /^[a-z0-9-]{1,64}$/.test(body.product) ? body.product : null;
+  const rawLang = typeof body.lang === 'string' ? body.lang.toLowerCase() : 'en';
+  const lang = /^[a-z]{2}(-[a-z]{2})?$/.test(rawLang) ? rawLang : 'en';
+  const answers = sanitizeTrackAnswers(body.answers);
+  ctx.waitUntil(
+    env.DB
+      .prepare('INSERT INTO advisor_event (event_type, product_slug, lang, answers, created_at) VALUES (?, ?, ?, ?, ?)')
+      .bind(type, product, lang, answers, Date.now())
+      .run()
+      .catch((e: unknown) => console.error('[track] insert failed:', e))
+  );
+  return new Response(null, {
+    status: 204,
+    headers: { 'Access-Control-Allow-Origin': '*' },
+  });
+}
+
 async function handleReindex(request: Request, env: Env): Promise<Response> {
   if (!env.REINDEX_TOKEN) return json({ error: 'Not found' }, 404);
   const auth = request.headers.get('Authorization') || '';
@@ -978,6 +1050,9 @@ export default {
           return await handleSearch(request, env, ctx);
         case '/embed':
           return await handleEmbed(request, env, ctx);
+        case '/track':
+        case '/ai/track':
+          return await handleTrack(request, env, ctx);
         case '/reindex':
         case '/ai/reindex':
           return await handleReindex(request, env);

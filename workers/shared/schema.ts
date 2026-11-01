@@ -162,3 +162,23 @@ export const newPost = sqliteTable(
 );
 
 export type News = typeof newPost.$inferSelect;
+
+// Anonymous Pool Advisor (find-your-pool) selection events — the GEO KPI
+// source (filter sessions, result clicks, no-match reasons). No PII: coarse
+// answer buckets only; purged 180 days after insert by the automation
+// worker's daily cleanup.
+export const advisorEvent = sqliteTable(
+  'advisor_event',
+  {
+    id: integer('id').primaryKey({ isAutoincrement: true }),
+    eventType: text('event_type').notNull(),
+    productSlug: text('product_slug'),
+    lang: text('lang').notNull().default('en'),
+    answers: text('answers').notNull().default('{}'),
+    createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
+  },
+  (table) => [
+    index('advisor_event_type_created_idx').on(table.eventType, table.createdAt),
+    index('advisor_event_created_idx').on(table.createdAt),
+  ]
+);

@@ -493,6 +493,80 @@ const metadata = merge(
 
       const active: Record<string, string> = {};
 
+      // --- Anonymous advisor analytics (GEO KPI: filter → click → no-match) ---
+      // Coarse answer buckets only, no PII — the free-text country field is
+      // never included. Each event is sent at most once per answer-set per
+      // page session; failures never break the finder.
+      const sentEvents = new Set<string>();
+      let trackTimer: ReturnType<typeof setTimeout> | null = null;
+
+      function trackLang(): string {
+        const l = (document.documentElement.lang || 'en').toLowerCase();
+        return /^[a-z]{2}(-[a-z]{2})?$/.test(l) ? l : 'en';
+      }
+
+      function answerSnapshot(): Record<string, string> {
+        const a: Record<string, string> = {};
+        for (const [q, v] of Object.entries(active)) {
+          if (q === 'Where will it be installed?') a.install = v;
+          else if (q === 'What will you use it for?') a.use = v;
+          else if (q === 'How much flat space do you have?') a.space = v;
+          else if (q === 'Do you need heating or massage?') a.climate = v;
+          else if (q === 'Who is it mainly for?') a.who = v;
+          else if (q === 'Personal use or business project?') a.purpose = v;
+        }
+        const dl = parseDim(lenEl);
+        const dw = parseDim(widEl);
+        if (!isNaN(dl) && !isNaN(dw)) a.dims = `${dl}x${dw}`;
+        return a;
+      }
+
+      function sendTrack(type: string, product: string | null, answers: Record<string, string>): void {
+        try {
+          const body = JSON.stringify({ type, product, lang: trackLang(), answers });
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon('/api/track', new Blob([body], { type: 'application/json' }));
+          } else {
+            void fetch('/api/track', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body,
+              keepalive: true,
+            });
+          }
+        } catch {
+          /* analytics must never break the finder */
+        }
+      }
+
+      function queueTrack(visible: number, hasInput: boolean): void {
+        if (trackTimer !== null) clearTimeout(trackTimer);
+        trackTimer = setTimeout(() => {
+          trackTimer = null;
+          if (!hasInput) return;
+          const answers = answerSnapshot();
+          const type = visible === 0 ? 'no_match' : 'quiz_filter';
+          const key = `${type}|${JSON.stringify(answers)}`;
+          if (sentEvents.has(key)) return;
+          sentEvents.add(key);
+          sendTrack(type, null, answers);
+        }, 900);
+      }
+
+      container.addEventListener('click', (ev: MouseEvent) => {
+        const target = ev.target as HTMLElement | null;
+        const anchor = target && target.closest ? target.closest('a') : null;
+        if (!anchor) return;
+        const href = anchor.getAttribute('href') || '';
+        const productMatch = href.match(/^\/products\/([a-z0-9-]+)/);
+        const ideaMatch = href.match(/^\/pool-ideas\/([a-z0-9-]+)/);
+        if (productMatch) {
+          sendTrack('result_click', productMatch[1], { ...answerSnapshot(), target: 'shop' });
+        } else if (ideaMatch) {
+          sendTrack('result_click', ideaMatch[1], { ...answerSnapshot(), target: 'guide' });
+        }
+      });
+
       function parseDim(el: HTMLInputElement | null): number {
         if (!el) return NaN;
         const v = parseFloat(el.value);
@@ -698,6 +772,7 @@ const metadata = merge(
             noMatch.classList.add('hidden');
           }
         }
+        queueTrack(visible, hasInput);
         renderNotices();
       }
 

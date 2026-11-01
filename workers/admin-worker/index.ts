@@ -1,5 +1,5 @@
 import * as yaml from 'js-yaml';
-import { desc, asc, eq, count, and, or, sql, gt } from 'drizzle-orm';
+import { desc, asc, eq, count, and, or, sql, gt, gte, isNotNull } from 'drizzle-orm';
 import { createDb, type DB } from '../shared/client';
 import { createAuth, type AuthEnv } from '../shared/auth';
 import { assertAdmin, type AdminUser } from '../shared/assert-admin';
@@ -8,6 +8,7 @@ import {
   session as sessionTable,
   inquiry,
   newPost,
+  advisorEvent,
   INQUIRY_STATUSES,
   type InquiryStatus,
 } from '../shared/schema';
@@ -142,6 +143,40 @@ async function handleAdmin(request: Request, env: Env, path: string, admin: Admi
 
   if (path === '/api/admin/inquiries.csv' && request.method === 'GET') {
     return await exportInquiriesCsv(db);
+  }
+
+  // ---- Pool Advisor GEO KPI (advisor_event, migration 0005) ----
+  if (path === '/api/admin/advisor-stats' && request.method === 'GET') {
+    const days = Math.min(180, Math.max(1, Number(urlParam(request, 'days') || 30) || 30));
+    const since = new Date(Date.now() - days * 86400000);
+    const [byType, topProducts, topNoMatch] = await Promise.all([
+      db
+        .select({ t: advisorEvent.eventType, c: count() })
+        .from(advisorEvent)
+        .where(gte(advisorEvent.createdAt, since))
+        .groupBy(advisorEvent.eventType),
+      db
+        .select({ slug: advisorEvent.productSlug, c: count() })
+        .from(advisorEvent)
+        .where(
+          and(
+            eq(advisorEvent.eventType, 'result_click'),
+            gte(advisorEvent.createdAt, since),
+            isNotNull(advisorEvent.productSlug)
+          )
+        )
+        .groupBy(advisorEvent.productSlug)
+        .orderBy(sql`count(*) desc`)
+        .limit(10),
+      db
+        .select({ answers: advisorEvent.answers, c: count() })
+        .from(advisorEvent)
+        .where(and(eq(advisorEvent.eventType, 'no_match'), gte(advisorEvent.createdAt, since)))
+        .groupBy(advisorEvent.answers)
+        .orderBy(sql`count(*) desc`)
+        .limit(10),
+    ]);
+    return json({ days, byType, topProducts, topNoMatch });
   }
 
   // Stream a submitted inquiry attachment from R2. R2 objects are not public —

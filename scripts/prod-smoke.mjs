@@ -94,6 +94,18 @@ const CHECKS = [
   { path: '/returns-and-warranty/', marker: 'Warranty', desc: 'warranty policy' },
   { path: '/contact/', marker: 'Contact', desc: 'contact form' },
   { path: '/request-quotation/', marker: 'Quote', desc: 'B2B quote entry' },
+  // ---- B2B pages (flagged as 404s in the 2026-11 GEO review; keep covered) ----
+  { path: '/wholesale/', marker: 'Wholesale Inflatable Swimming Pools at Factory Prices', desc: 'wholesale hub' },
+  { path: '/for-businesses/', marker: 'Felizbay for Business Projects', desc: 'B2B landing' },
+  { path: '/oem-odm/', marker: 'Custom Inflatable Pools', desc: 'OEM/ODM page (nav-linked, was 404 in GEO review)' },
+  { path: '/quality-control/', marker: 'Quality Control', desc: 'QC page (nav-linked, was 404 in GEO review)' },
+  {
+    path: '/manufacturing/',
+    marker: 'How Every Felizbay Drop-Stitch Pool Is Built',
+    desc: 'manufacturing process page',
+  },
+  { path: '/private-label/', marker: 'Private Label Inflatable Pools', desc: 'private label page' },
+  { path: '/commercial-pools/', marker: 'Commercial Inflatable Pools', desc: 'commercial / hospitality page' },
   { path: '/ai-answer-center/', marker: 'AI Answer Center', desc: 'AI answer center' },
   {
     path: '/robots.txt',
@@ -224,6 +236,14 @@ const CHECKS = [
       if (!/deck/i.test(answer)) return { ok: false, reason: 'answer does not address the deck question' };
       return { ok: true };
     },
+  },
+  // ---- Pool Advisor anonymous tracking endpoint (advisor_event, migration 0005) ----
+  {
+    path: '/api/track',
+    method: 'POST',
+    body: { type: 'invalid_smoke_type' },
+    status: 400,
+    desc: 'advisor tracking endpoint online (invalid type 400, no D1 write)',
   },
   // ---- Contact worker roundtrip via the honeypot path (no D1 write, no email) ----
   {

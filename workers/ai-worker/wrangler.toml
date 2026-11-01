@@ -10,6 +10,7 @@ routes = [
   { pattern = "felizbay.com/api/embed*", zone_name = "felizbay.com" },
   { pattern = "felizbay.com/api/reindex*", zone_name = "felizbay.com" },
   { pattern = "felizbay.com/api/ai/*", zone_name = "felizbay.com" },
+  { pattern = "felizbay.com/api/track*", zone_name = "felizbay.com" },
 ]
 
 [triggers]
@@ -28,3 +29,11 @@ index_name = "ai-index-v2"
 [[r2_buckets]]
 binding = "DATA_BUCKET"
 bucket_name = "felizbay-data"
+
+# Pool Advisor anonymous selection events (advisor_event table, migration
+# 0005) — shared with contact/admin workers.
+[[d1_databases]]
+binding = "DB"
+database_name = "Felizbay-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "../../migrations"

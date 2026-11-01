@@ -6,6 +6,10 @@ const RATE_LIMIT_RETENTION_SECONDS = 30 * 24 * 3600;
 // next request — rows untouched for 24h are pure cruft. last_request is epoch ms.
 const AUTH_RATE_LIMIT_STALE_MS = 24 * 60 * 60 * 1000;
 
+// Pool Advisor anonymous selection events (migration 0005): coarse, PII-free
+// buckets kept for GEO KPI trending; 180 days is plenty for monthly reviews.
+const ADVISOR_EVENT_RETENTION_MS = 180 * 24 * 60 * 60 * 1000;
+
 export async function dbCleanup(env: { DB: D1Database }) {
   const nowMs = Date.now();
   const results = await Promise.all([
@@ -17,11 +21,19 @@ export async function dbCleanup(env: { DB: D1Database }) {
     env.DB.prepare('DELETE FROM `rateLimit` WHERE last_request IS NOT NULL AND last_request < ?1')
       .bind(nowMs - AUTH_RATE_LIMIT_STALE_MS)
       .run(),
+    // Isolated so a not-yet-migrated advisor_event table can't break the
+    // other cleanups (migration 0005 applies on the next deploy).
+    env.DB
+      .prepare('DELETE FROM advisor_event WHERE created_at < ?1')
+      .bind(nowMs - ADVISOR_EVENT_RETENTION_MS)
+      .run()
+      .catch(() => ({ results: [], success: false, meta: { changes: 0 } })),
   ]);
   return {
     sessionsExpired: results[0].meta.changes,
     verificationsExpired: results[1].meta.changes,
     rateLimitPurged: results[2].meta.changes,
     authRateLimitPurged: results[3].meta.changes,
+    advisorEventsPurged: results[4].meta.changes,
   };
 }

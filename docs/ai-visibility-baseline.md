@@ -57,6 +57,19 @@
 17. `Can I install an inflatable pool on a raised wooden deck?`
 18. `Which Felizbay pool has built-in massage jets?`
 
+## 2c. GEO 方案问题集 v3（2026-11-01 增补，冻结）
+
+来源：《Felizbay GEO 优化方案》（2026-11 导出）§8 "建立固定的 AI 搜索测试题库"。该方案建议的 8 题覆盖小庭院、刚性池壁、大池比较、Glamping 商用、自有品牌、drop-stitch 对比、SPA 甲板安装与厂商信息查询。v1/v2 保持冻结不动；今后每轮复测 v1 + v2 + v3 全部 26 题逐平台执行，记录同样追加到 §5 记录区。
+
+19. `What are the best drop-stitch inflatable pools for small backyards?`
+20. `Which inflatable swimming pools have rigid walls instead of inflatable rings?`
+21. `What should I compare before buying a large inflatable pool?`
+22. `Which inflatable pools are suitable for glamping businesses?`
+23. `What should I know before starting a private-label inflatable pool brand?`
+24. `How do drop-stitch pools compare with traditional inflatable pools?`
+25. `What should I consider before installing an inflatable spa on a deck?`
+26. `Where can I find an inflatable pool manufacturer's specifications and quality-control information?`
+
 ## 3. 记录模板
 
 ```markdown
@@ -69,7 +82,7 @@
 
 ## 4. 基础设施自查清单（每轮复测先跑一遍）
 
-**自动化（推荐）**：以下全部检查项已收录进 `npm run smoke`（`scripts/prod-smoke.mjs`，31 项含本节全部 + 26 项站点冒烟），复测前跑一次即可，任一 FAIL 先修复再执行人工轮次：
+**自动化（推荐）**：以下全部检查项已收录进 `npm run smoke`（`scripts/prod-smoke.mjs`，49 项含本节全部 + 站点冒烟 + B2B 页 + 顾问埋点端点），复测前跑一次即可，任一 FAIL 先修复再执行人工轮次：
 
 ```powershell
 npm run smoke
@@ -123,3 +136,4 @@ curl -s -X POST https://felizbay.com/api/search \
 - **准确性**：出现 ⚠️/❌ 时先核对是否站内数据口径不一致（价格、压力、认证），修站内数据优先于任何"AI 优化"。
 - **场景题（13–16）**：判定标准为①推荐到正确型号/页面（产品页、`/find-your-pool`、场景指南）②引用的尺寸/价格与站内一致③不虚构站内没有的政策或规格。
 - **反向题（17–18）**：判定标准为①17 应提示甲板安装需专业结构评估、不直接推荐产品②18 应回答产品线无按摩功能（只有 soaking/hot-tub 浸泡池），不得编造带按摩的型号。
+- **GEO 方案题（19–26）**：判定标准同上——推荐应指向真实页面（`/products/*`、`/pool-ideas/*`、`/guides/*`、`/oem-odm/`、`/quality-control/`），引用规格与站内一致，不虚构型号、价格或认证。
