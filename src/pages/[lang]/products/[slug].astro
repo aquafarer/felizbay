@@ -59,6 +59,11 @@ const { product: rawProduct } = Astro.props as Props;
 const product = localizeProductData(rawProduct, lang);
 const recRaw = productRecords.find((p) => p.id === product.slug);
 const rec = recRaw ? localizeProduct(recRaw, lang) : undefined;
+// MDX frontmatter carries no ai_faq (defaults to a truthy empty array), so the
+// old `product.ai_faq || rec?.ai_faq` always resolved to [] and silently dropped
+// the FAQ block and FAQPage JSON-LD on every localized PDP. Prefer whichever
+// array is non-empty.
+const faqs = (product.ai_faq?.length ?? 0) > 0 ? product.ai_faq : (rec?.ai_faq ?? []);
 // Canonical + og:url must include the language prefix on localized pages;
 // without it every non-EN product page canonicalizes to the EN URL and
 // deindexes itself.
@@ -728,14 +733,14 @@ const specGroups = detailV2
 
   {/* FAQ Section */}
   {
-    !isDetailV2 && ((product.ai_faq || []).length > 0 || (rec?.ai_faq || []).length > 0) && (
+    !isDetailV2 && faqs.length > 0 && (
       <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">
             {t('product.faq')}
           </h2>
           <div class="space-y-3">
-            {(product.ai_faq || rec?.ai_faq || []).map((f: any) => (
+            {faqs.map((f: any) => (
               <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
                 <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
                   {f.q}
@@ -756,12 +761,12 @@ const specGroups = detailV2
 
   {/* Module 08 — FAQ (detail V2) */}
   {
-    isDetailV2 && (product.ai_faq || rec?.ai_faq || []).length > 0 && (
-      <ProductFaq title={detailUi['product.faqTitle']} faqs={(product.ai_faq || rec?.ai_faq || []) as any} />
+    isDetailV2 && faqs.length > 0 && (
+      <ProductFaq title={detailUi['product.faqTitle']} faqs={faqs as any} />
     )
   }
 
-  <JsonLd type="FAQPage" faqs={product.ai_faq || rec?.ai_faq || []} />
+  <JsonLd type="FAQPage" faqs={faqs} />
 
   {/* Safety & Usage */}
   {

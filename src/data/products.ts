@@ -94,6 +94,10 @@ export const products: ProductRecord[] = [
         q: 'How do I store it in winter?',
         a: 'Drain the water, deflate, let it dry completely, then roll it up and store it in the included storage bag in a frost-free place.',
       },
+      {
+        q: 'What does it cost to run?',
+        a: 'Beyond the listed FOB price, running costs are small: the included 1000W air pump uses about 0.17 kWh for a ~10-minute inflation, and water is filled from a garden hose. Filtration systems and standard pool chemicals are sold separately — a filter pump is recommended to keep the water clear through long summer use.',
+      },
     ],
   },
   {
@@ -167,6 +171,10 @@ export const products: ProductRecord[] = [
         q: 'How do I store it in winter?',
         a: 'Drain the water, deflate, let it dry completely, then fold it flat and store it in the included storage bag in a frost-free place.',
       },
+      {
+        q: 'What does it cost to run?',
+        a: 'Beyond the $299 purchase price, running costs are small: the included 1000W air pump uses about 0.17 kWh for a ~10-minute inflation, and water is filled from a garden hose. Filtration systems and standard pool chemicals are sold separately — a filter pump is recommended to keep the water clear through long summer use.',
+      },
     ],
   },
   {
@@ -237,6 +245,10 @@ export const products: ProductRecord[] = [
       {
         q: 'Can it be left out all summer?',
         a: 'Yes. The high-pressure drop stitch construction is built for full-season outdoor use. The optional fitted cover is recommended when the pool is not in use.',
+      },
+      {
+        q: 'What does it cost to run?',
+        a: 'Beyond the $399 purchase price, running costs are small: the included 1000W air pump uses about 0.17 kWh for a ~10-minute inflation, and water is filled from a garden hose. The fitted cover is sold separately, and a filter pump plus standard pool chemicals are recommended to keep the water clean through the season.',
       },
     ],
   },
@@ -309,6 +321,10 @@ export const products: ProductRecord[] = [
         q: 'What pressure does it run at?',
         a: 'The recommended operating pressure is 4–5 PSI. Every tub is factory QC tested at 6 PSI, and the pressure-relief valve auto-releases above 6 PSI (8 PSI maximum tolerance).',
       },
+      {
+        q: 'What will my total cost be as a wholesale buyer?',
+        a: 'Prices are FOB Qingdao, USD, on a 20-pc per item basis including the built-in seats and 5 mm insulated thermal bottom. Landed cost adds ocean freight, duty, and destination charges — typically 20–40% on top of FOB — while heaters, sand filter pumps, and disinfection systems are sold separately. See the wholesale price list and procurement guides for details.',
+      },
     ],
   },
   {
@@ -379,6 +395,10 @@ export const products: ProductRecord[] = [
       {
         q: 'Can it be shipped and stored compactly?',
         a: 'Yes. Like every Felizbay drop stitch product it packs down to a fraction of its inflated size, cutting shipping and storage costs compared with rigid acrylic or fiberglass tubs.',
+      },
+      {
+        q: 'What does it cost to run?',
+        a: 'Beyond the $499 purchase price, the main extra costs are the external heater (sold separately) and its electricity, plus qualified professional installation of the heating and electrical equipment. The 5 mm insulated thermal bottom retains heat to keep heating energy costs down; spa water chemicals are an ongoing consumable, and sand filter pumps or inline disinfection systems are sold separately.',
       },
     ],
   },
