@@ -153,16 +153,20 @@ const ITEM_PHOTOS: Record<string, { src: string; alt: string; w: number; h: numb
     h: 470,
   },
 };
-const hasVariant = catalogSeries
-  ? catalogSeries.items.map((it) => ({
-      '@type': 'Product',
-      '@id': `${url}#item-${it.item}`,
-      sku: it.item,
-      name: `${catalogSeries.name} ${it.size} m`,
-      size: `${it.size} m`,
-      ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
-    }))
-  : undefined;
+// Retail pages (fixed Stripe SKU) publish a single Product with one exact
+// Offer — factory-size variants stay on the wholesale/spec pages. Only
+// wholesale products (no online SKU) expose the ProductGroup structure.
+const hasVariant =
+  !product.sku && catalogSeries
+    ? catalogSeries.items.map((it) => ({
+        '@type': 'Product',
+        '@id': `${url}#item-${it.item}`,
+        sku: it.item,
+        name: `${catalogSeries.name} ${it.size} m`,
+        size: `${it.size} m`,
+        ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
+      }))
+    : undefined;
 
 // ---- Product detail page V2 (per2.txt 13-module template, all pool products) ----
 const detailV2 = PRODUCT_PAGE_DETAILS[product.slug];
@@ -628,6 +632,7 @@ const specGroups = detailV2
         quoteHref={`/contact/?product=${encodeURIComponent(product.title)}`}
         compareHref="/products/compare/"
         retailSku={product.sku || undefined}
+        showChecker={!product.sku}
         wholesaleHref="/products/specs/"
         itemPhotos={ITEM_PHOTOS}
       />

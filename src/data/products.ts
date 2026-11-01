@@ -137,11 +137,11 @@ export const products: ProductRecord[] = [
     ai_faq: [
       {
         q: 'Is it suitable for children?',
-        a: 'Yes, with constant adult supervision. The rigid walls and even depth make it a safe environment for kids to learn to swim.',
+        a: 'Yes, with constant adult supervision. The rigid walls and even depth make it a stable family pool — children should always be actively supervised around water.',
       },
       {
         q: 'What size options are available?',
-        a: 'Diameters run from Ø 2 × 0.5 m up to Ø 10 × 1.2 m across 23 factory sizes, with 10 or 15 cm inflated walls. Use the size checker on this page to compare sizes, walls, and estimated fill volumes before ordering.',
+        a: 'This page sells one fixed-size retail set (SKU FZ-POOL-RND-BLUE). If you need a different size, the full round series — Ø 2 × 0.5 m up to Ø 10 × 1.2 m across 23 factory sizes — is available through our commercial program; see the wholesale price list for details.',
       },
       {
         q: 'What is included with the pool?',
@@ -203,7 +203,7 @@ export const products: ProductRecord[] = [
       material: 'Double-layer PVC drop stitch fabric',
       wall_thickness: '10 / 15 cm drop stitch',
       pressure: '4–5 PSI',
-      cover: 'Optional fitted cover',
+      cover: 'Optional fitted cover, sold separately',
       setup: '~10 minutes inflation with electric pump',
       included: '1000W electric air pump, repair kit, storage bag',
     },
@@ -212,7 +212,7 @@ export const products: ProductRecord[] = [
     ai_faq: [
       {
         q: 'Does it come with a cover?',
-        a: 'A fitted matching cover is available as an option and recommended to keep the water clean and warm.',
+        a: 'No — a fitted matching cover is sold separately and recommended to keep the water clean and warm.',
       },
       {
         q: 'Can the color be customized?',
@@ -220,15 +220,15 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What sizes are available?',
-        a: 'The grey finish is available across the full round series — 23 factory sizes from Ø 2 × 0.5 m up to Ø 10 × 1.2 m, with 10 or 15 cm inflated walls.',
+        a: 'This page sells one fixed-size retail set (SKU FZ-POOL-RND-GREY). If you need a different size, the grey finish is also available across the full round series — 23 factory sizes from Ø 2 × 0.5 m up to Ø 10 × 1.2 m — through our commercial program; see the wholesale price list for details.',
       },
       {
         q: 'What is the difference between the grey and blue round pools?',
-        a: 'Both share the same double-layer drop stitch construction, size range, and 4–5 PSI rigidity. The grey model adds a premium modern finish and an optional fitted cover for design-conscious buyers.',
+        a: 'Both share the same double-layer drop stitch construction and 4–5 PSI rigidity. The grey model adds a premium modern finish and an optional fitted cover (sold separately) for design-conscious buyers.',
       },
       {
         q: 'What is included with the pool?',
-        a: 'Each pool ships with a 1000W electric air pump, a repair kit, and a storage bag. The fitted cover is optional.',
+        a: 'Each pool ships with a 1000W electric air pump, a repair kit, and a storage bag. The fitted cover is sold separately.',
       },
       {
         q: 'How long does setup take?',

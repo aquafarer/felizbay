@@ -27,7 +27,8 @@ const CHECKS = [
   {
     path: '/',
     markers: ['Felizbay', 'data-aw-toggle-menu', 'aria-label="Main navigation"', 'data-aw-toggle-color-scheme'],
-    desc: 'home: brand, mobile menu button, main nav, theme toggle',
+    notMarkers: ['Real Pools in Real Backyards'],
+    desc: 'home: brand, mobile menu button, main nav, theme toggle; fabricated customer stories removed',
   },
   { path: '/en/', marker: 'Felizbay', desc: 'EN mirror home' },
   { path: '/de/', marker: 'lang="de"', desc: 'localized page renders (de)' },
@@ -39,8 +40,20 @@ const CHECKS = [
   { path: '/products/', marker: 'Drop Stitch', desc: 'product listing' },
   {
     path: '/products/round-blue-drop-stitch-pool/',
+    markers: ['Fixed-size retail set'],
+    notMarkers: ['fitg-size', 'aggregateRating', '10.0 m'],
+    desc: 'retail PDP: fixed-set spec present, no factory size checker, no fake aggregate rating',
+  },
+  {
+    path: '/products/round-grey-drop-stitch-pool/',
+    markers: ['Fixed-size retail set'],
+    notMarkers: ['fitg-size', 'aggregateRating'],
+    desc: 'grey retail PDP: fixed-set spec present, no size checker, no fake rating',
+  },
+  {
+    path: '/products/rectangular-drop-stitch-pool/',
     marker: 'fitg-size',
-    desc: 'PDP with FitGuide size checker',
+    desc: 'wholesale PDP keeps the FitGuide size checker',
   },
   {
     path: '/products/compare/',
@@ -297,6 +310,11 @@ const runCheck = async (check) => {
     const missing = markers.filter((m) => !res.body.includes(m));
     if (missing.length > 0) {
       return { ok: false, reason: `marker not found: ${JSON.stringify(missing)}` };
+    }
+    const notMarkers = check.notMarkers ?? [];
+    const forbidden = notMarkers.filter((m) => res.body.includes(m));
+    if (forbidden.length > 0) {
+      return { ok: false, reason: `forbidden marker found: ${JSON.stringify(forbidden)}` };
     }
     if (check.contentType && !res.contentType.startsWith(check.contentType)) {
       return { ok: false, reason: `expected content-type ${check.contentType}, got ${res.contentType}` };

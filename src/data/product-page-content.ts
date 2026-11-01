@@ -96,6 +96,48 @@ const SUPPORT_CARDS_BASE: SupportCard[] = [
   },
 ];
 
+/** Wholesale delivery / shipping cards (factory-direct products without an online retail SKU) */
+const WHOLESALE_SUPPORT_CARDS: SupportCard[] = [
+  {
+    titleKey: 'product.deliveryCard',
+    summary: 'Volume orders ship from the factory (FOB Qingdao).',
+    details: [
+      'Wholesale orders are produced and dispatched by our manufacturing partner; the price basis is listed per factory size.',
+      'Single-piece availability is confirmed per inquiry before you commit.',
+      'A dispatch confirmation with tracking is sent by email once your order ships.',
+    ],
+  },
+  {
+    titleKey: 'product.shippingCard',
+    summary: 'Freight cost and trade terms are confirmed in your written quote before you pay.',
+    details: [
+      'FOB prices are listed per factory size on the wholesale price list; freight is quoted per destination and order volume.',
+      'Some remote destinations may not be serviceable — you will be notified if your order cannot ship.',
+    ],
+  },
+  {
+    titleKey: 'product.returnsCard',
+    summary: 'Unused products in original packaging can be returned.',
+    details: [
+      'Contact info@felizbay.com with your order reference before returning anything.',
+      'Return shipping costs and conditions are confirmed case by case depending on the destination.',
+    ],
+    href: '/returns-and-warranty/',
+    hrefLabel: 'Returns & Warranty policy',
+  },
+  {
+    titleKey: 'product.warrantyCard',
+    summary: '2-year manufacturer warranty on material and workmanship defects.',
+    details: [
+      'The warranty covers manufacturing defects in the drop-stitch fabric, seams, and valves.',
+      'It does not cover punctures from external objects, improper pressure, or normal wear.',
+      'Warranty requests: info@felizbay.com with your order reference and photos.',
+    ],
+    href: '/support/',
+    hrefLabel: 'Support Center',
+  },
+];
+
 /** Shared setup links (EN hrefs — [lang] pages prefix the language code at render time) */
 const SETUP_LINKS_BASE: { label: string; href: string }[] = [
   { label: 'View Setup Guides', href: '/guides/' },
@@ -185,7 +227,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
       {
         titleKey: 'product.assuranceDelivery',
-        text: 'Single-piece online orders ship from our warehouse. Dispatch is confirmed by email after checkout.',
+        text: 'Volume orders ship FOB Qingdao; single-piece availability is confirmed per inquiry before you commit.',
       },
       {
         titleKey: 'product.assuranceWarranty',
@@ -224,7 +266,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
     ],
     setupSteps: SWIM_POOL_SETUP_STEPS,
     setupLinks: SETUP_LINKS_BASE,
-    supportCards: SUPPORT_CARDS_BASE,
+    supportCards: WHOLESALE_SUPPORT_CARDS,
   },
 
   'round-blue-drop-stitch-pool': {
@@ -281,7 +323,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
     assurance: [
       {
         titleKey: 'product.assuranceIncluded',
-        text: 'Pool body, 1000W electric air pump, repair kit, and storage bag. A fitted cover is available as an option.',
+        text: 'Pool body, 1000W electric air pump, repair kit, and storage bag. A fitted cover is available as an option, sold separately.',
       },
       {
         titleKey: 'product.assuranceDelivery',
@@ -335,7 +377,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
       {
         titleKey: 'product.assuranceDelivery',
-        text: 'Single-piece online orders ship from our warehouse. Dispatch is confirmed by email after checkout.',
+        text: 'Volume orders ship FOB Qingdao; single-piece availability is confirmed per inquiry before you commit.',
       },
       {
         titleKey: 'product.assuranceWarranty',
@@ -375,7 +417,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
     ],
     setupSteps: HOT_TUB_SETUP_STEPS,
     setupLinks: SETUP_LINKS_BASE,
-    supportCards: SUPPORT_CARDS_BASE,
+    supportCards: WHOLESALE_SUPPORT_CARDS,
   },
 
   'hot-tub-round': {

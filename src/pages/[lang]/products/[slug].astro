@@ -14,7 +14,6 @@ import Tldr from '~/components/common/Tldr.astro';
 import TrustBadges from '~/components/common/TrustBadges.astro';
 
 import { findRelatedProducts, getStaticPathsProduct } from '~/utils/products';
-import { productBusinessData } from '~/data/product-business-data';
 import { findImage } from '~/utils/images';
 import { SITE } from 'astrowind:config';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
@@ -76,16 +75,6 @@ const gallery = await Promise.all(
 // render translated titles/summaries on non-EN pages.
 const related = (await findRelatedProducts(product, 3)).map((p) => localizeProductData(p, lang || defaultLang));
 const relatedGuides = rec ? guides.filter((g) => g.relatedProducts.includes(rec.id)).slice(0, 3) : [];
-const bizData = rec ? productBusinessData[rec.id] : undefined;
-const productRating = bizData
-  ? (() => {
-      const lifespan = parseInt(bizData.lifespan) || 0;
-      if (lifespan >= 10) return { ratingValue: 4.7, reviewCount: 8 };
-      if (lifespan >= 7) return { ratingValue: 4.5, reviewCount: 6 };
-      if (lifespan >= 4) return { ratingValue: 4.3, reviewCount: 4 };
-      return { ratingValue: 4.0, reviewCount: 3 };
-    })()
-  : undefined;
 
 const defaultTitle = `${product.title} | ${SITE.name}`;
 const localizedDesc =
@@ -140,16 +129,20 @@ const SERIES_BY_SLUG: Record<string, string> = {
   'hot-tub-square-rect': 'hot-tub-square-rect',
 };
 const catalogSeries = poolSeries.find((s) => s.id === SERIES_BY_SLUG[product.slug]);
-const hasVariant = catalogSeries
-  ? catalogSeries.items.map((it) => ({
-      '@type': 'Product',
-      '@id': `${url}#item-${it.item}`,
-      sku: it.item,
-      name: `${catalogSeries.name} ${it.size} m`,
-      size: `${it.size} m`,
-      ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
-    }))
-  : undefined;
+// Retail pages (fixed Stripe SKU) publish a single Product with one exact
+// Offer — factory-size variants stay on the wholesale/spec pages. Only
+// wholesale products (no online SKU) expose the ProductGroup structure.
+const hasVariant =
+  !product.sku && catalogSeries
+    ? catalogSeries.items.map((it) => ({
+        '@type': 'Product',
+        '@id': `${url}#item-${it.item}`,
+        sku: it.item,
+        name: `${catalogSeries.name} ${it.size} m`,
+        size: `${it.size} m`,
+        ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
+      }))
+    : undefined;
 
 // ---- Product detail page V2 (per2.txt 13-module template, all pool products) ----
 const detailV2 = PRODUCT_PAGE_DETAILS[product.slug];
@@ -317,15 +310,6 @@ const specGroups = detailV2
             ]
           : []),
       ],
-      ...(productRating
-        ? {
-            aggregateRating: {
-              ratingValue: productRating.ratingValue,
-              reviewCount: productRating.reviewCount,
-              bestRating: 5,
-            },
-          }
-        : {}),
       ...(hasVariant
         ? {
             productGroupId: product.sku || catalogSeries?.id,
@@ -686,6 +670,7 @@ const specGroups = detailV2
         quoteHref={`/${lang}/contact/?product=${encodeURIComponent(product.title)}`}
         compareHref="/products/compare/"
         retailSku={product.sku || undefined}
+        showChecker={!product.sku}
         wholesaleHref={localizeHref('/products/specs/', lang)}
       />
     )

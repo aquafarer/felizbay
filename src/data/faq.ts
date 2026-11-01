@@ -38,7 +38,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-water-capacity',
     question: 'How much water does an inflatable pool hold?',
     answer:
-      'It depends on the model, size, and fill level. Each product page has a size checker that shows the estimated fill volume for every factory size — check the exact figure for your pool there before filling. Always place the pool on ground that can support the combined weight of pool plus water before filling.',
+      'It depends on the model, size, and fill level. The wholesale spec page shows the estimated fill volume for every factory size, and the retail product pages list the dimensions of the fixed-size set they sell — check the exact figure for your pool before filling. Always place the pool on ground that can support the combined weight of pool plus water before filling.',
     category: 'product',
     relatedProducts: [],
     relatedGuides: ['how-much-space-do-you-need-for-an-inflatable-pool'],
@@ -56,7 +56,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-filtration',
     question: 'Do I need a filter pump?',
     answer:
-      'A cartridge filter pump keeps water clean and greatly extends the time between water changes. Felizbay pools have standard hose fittings that accept common 32mm or 38mm filter pumps, available separately or bundled with your order.',
+      'A cartridge filter pump keeps water clean and greatly extends the time between water changes. Felizbay pools have standard hose fittings that accept common 32mm or 38mm filter pumps — filter pumps are available separately and are not part of the standard retail package.',
     category: 'maintenance',
     relatedProducts: [],
     relatedGuides: ['inflatable-pool-maintenance'],
@@ -92,7 +92,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-kids-safety',
     question: 'Are inflatable pools safe for children?',
     answer:
-      'Yes — with active adult supervision at all times. Children must never be left unattended in or near any pool, even shallow ones. Empty small pools after use, secure larger pools with a cover or ladder removal, and check local fencing regulations for pools above certain depths.',
+      'Yes — with active adult supervision at all times. Children must never be left unattended in or near any pool, even shallow ones. Empty small pools after use, store access steps away from the pool between sessions, and check local fencing regulations for pools above certain depths.',
     category: 'safety',
     relatedProducts: [],
     relatedGuides: [],
@@ -110,7 +110,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-with-cover',
     question: 'Do pools come with a cover?',
     answer:
-      'Rectangular pools ship with a full-coverage dustproof and waterproof cover included. Round pools ship with the pump and repair kit, and a fitted cover is available as an optional accessory. A cover keeps out leaves and insects, reduces evaporation, and helps maintain water temperature.',
+      'Cover availability is listed per model on each product page. The round blue retail set does not include a cover; the round grey retail set takes an optional fitted cover that is sold separately. A cover keeps out leaves and insects, reduces evaporation, and helps maintain water temperature — check the package contents on the product page for the model you are ordering.',
     category: 'product',
     relatedProducts: ['rectangular-drop-stitch-pool'],
     relatedGuides: [],
@@ -137,7 +137,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-pricing',
     question: 'How much do Felizbay pools cost?',
     answer:
-      'Each product page lists the recommended retail price. To order, send us a message through the contact page or email info@felizbay.com and we will confirm availability, shipping, and final pricing for your location. Wholesale pricing is available for bulk orders.',
+      'The fixed price of each online retail set is shown on its product page. Wholesale and commercial orders are quoted separately — factory sizes, FOB Qingdao volume pricing, and MOQ terms are listed on the wholesale price list. Contact info@felizbay.com with your location and quantity for a wholesale quote.',
     category: 'ordering',
     relatedProducts: ['rectangular-drop-stitch-pool', 'round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'],
     relatedGuides: [],

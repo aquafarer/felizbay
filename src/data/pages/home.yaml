@@ -56,7 +56,7 @@ features:
       description: 'Double-layer PVC drop stitch fabric, engineered to resist punctures and UV exposure through a full season of family use.'
       icon: tabler:shield
     - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. Fitted covers available for round models.'
+      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.'
       icon: tabler:box
     - title: Safety-Conscious Design
       description: 'Residential pool design referencing EN 16582-1 and ASTM F2666 — model-specific safety information is provided in the product documentation. Constant adult supervision is always required.'
@@ -92,7 +92,7 @@ content_compliance:
       description: 'Unbox and inflate with the included pump in 5-15 minutes, then fill with a garden hose — filling time varies with pool size and water supply.'
       icon: tabler:rocket
     - title: 'Simple Water Care'
-      description: 'Standard 32/38 mm filter-pump ports, regular pH checks, and a fitted cover on round models keep water clean.'
+      description: 'Standard 32/38 mm filter-pump ports accept common cartridge pumps (sold separately), and regular pH checks keep water clean.'
       icon: tabler:droplet
     - title: 'Clean, Drain & Store'
       description: 'Drain, dry, roll up, and pack the pool into its storage bag for winter. No permanent installation to maintain.'
@@ -148,11 +148,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Round models have an optional fitted cover.'
+      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.'
       icon: tabler:box
       category: all
     - title: What sizes are available?
-      description: '48 standard SKUs across four collections — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs with built-in seats.'
+      description: 'Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.'
       icon: tabler:ruler-2
       category: all
     - title: What surfaces can the pool stand on?
