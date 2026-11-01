@@ -88,14 +88,14 @@ export const GET: APIRoute = async ({ params }) => {
     lines.push('## Related Guides');
     lines.push('');
     for (const g of entry.relatedGuides) {
-      lines.push(`- [${g}](${SITE?.site || 'https://felizbay.com'}/v2/${g})`);
+      lines.push(`- [${g}](${SITE?.site || 'https://felizbay.com'}/guides/${g})`);
     }
     lines.push('');
   }
 
   lines.push('---');
   lines.push(
-    `Difficulty: ${entry.difficulty} | Type: ${entry.type} | Source: ${SITE?.site || 'https://felizbay.com'}/v2/${entry.slug}`
+    `Difficulty: ${entry.difficulty} | Type: ${entry.type} | Source: ${SITE?.site || 'https://felizbay.com'}/llms/v2/${entry.slug}`
   );
 
   return new Response(lines.join('\n'), {

@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import { guides } from '~/data/guides';
 import { procurementGuides } from '~/data/procurement-guides';
 import { POOL_IDEAS } from '~/data/pool-ideas';
+import { standalonePages } from '~/data/standalone-pages';
+import { contentV2Records } from '~/data/content-v2';
 import { SITE } from 'astrowind:config';
 
 export const prerender = true;
@@ -50,6 +52,20 @@ export const GET: APIRoute = async () => {
     const title = p.data?.title ?? p.id;
     const blurb = p.data?.summary ?? p.data?.description ?? '';
     lines.push(`- [${title}](${base}/llms/products/${p.id})${blurb ? ` — ${blurb}` : ''}`);
+  }
+  lines.push('');
+
+  lines.push(`## Knowledge Center — v2 (${contentV2Records.length})`);
+  lines.push('');
+  for (const entry of contentV2Records) {
+    lines.push(`- [${entry.title}](${base}/llms/v2/${entry.slug}) — ${entry.description}`);
+  }
+  lines.push('');
+
+  lines.push(`## Standalone Tech Pages (${standalonePages.length})`);
+  lines.push('');
+  for (const p of standalonePages) {
+    lines.push(`- [${p.title}](${base}/llms/pages/${p.slug}) — ${p.description}`);
   }
   lines.push('');
 

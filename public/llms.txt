@@ -91,4 +91,4 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 
 ## Markdown Endpoints
 
-- [Markdown Endpoint Index](https://felizbay.com/llms-index): Index of all plain-markdown content — 16 consumer guides, 6 B2B procurement guides, 15 pool idea scenarios, and every product page
+- [Markdown Endpoint Index](https://felizbay.com/llms-index): Index of all plain-markdown content — 16 consumer guides, 6 B2B procurement guides, 15 pool idea scenarios, every product page, 3 knowledge-center (v2) entries, and 2 standalone tech pages

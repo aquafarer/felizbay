@@ -38,7 +38,7 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   lines.push('---');
-  lines.push(`Source: ${SITE_URL}/${page.slug}`);
+  lines.push(`Source: ${SITE_URL}/llms/pages/${page.slug}`);
 
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/markdown; charset=utf-8' },

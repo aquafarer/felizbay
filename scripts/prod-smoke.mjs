@@ -157,6 +157,19 @@ const CHECKS = [
     },
   },
   {
+    path: '/llms/pages/drop-stitch-technology',
+    desc: 'Standalone tech page markdown endpoint (Source self-link, no dead HTML route)',
+    validate: (res) => {
+      if (!res.body.includes('# Drop Stitch Pool Technology')) {
+        return { ok: false, reason: 'missing title heading' };
+      }
+      if (!res.body.includes('/llms/pages/drop-stitch-technology')) {
+        return { ok: false, reason: 'Source line does not point at the markdown endpoint' };
+      }
+      return { ok: true };
+    },
+  },
+  {
     path: '/api/chat',
     method: 'POST',
     body: {},

@@ -206,9 +206,6 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  ├── llms-full.txt                # Full AI knowledge base (auto-generated Site Pages + Product Catalog)
 │  ├── ai-sitemap.xml               # Curated AI section sitemap (20 top sections)
 │  ├── knowledge-sitemap.xml        # Knowledge content sitemap (guides + pool-ideas + FAQ)
-│  ├── fi/llms.txt                  # Per-locale llms.txt (32 locales)
-│  ├── da/llms.txt
-│  ├── ...
 │  └── .well-known/
 │       └── entity.json             # Schema.org Organization (AI entity)
 ├── functions/
@@ -446,73 +443,32 @@ Images, photos, PDFs, and other static files must be uploaded to R2, **not commi
 
 ### 7.1 GEO Files (AI-facing)
 
-| File                | Path                       | Purpose                                                                                                                  | Generation                                                     |
-| ------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| `llms.txt`          | `/llms.txt`                | Knowledge graph for AI (ChatGPT Search, Perplexity, Gemini, Claude, Bing AI)                                             | Auto-generated (37 langs) by `scripts/build-geo-v4.ts`         |
-| Per-locale llms.txt | `/{lang}/llms.txt`         | Per-language knowledge graph                                                                                             | Auto-generated (37 langs) by `scripts/build-geo-v4.ts`         |
-| `llms-full.txt`     | `/llms-full.txt`           | Full AI knowledge base (brand, OEM, products, certifications, FAQ, buyer info + all site pages + 63 products × 37 langs) | Auto-generated (idempotent) by `scripts/generate-geo-files.ts` |
-| `entity.json`       | `/.well-known/entity.json` | Schema.org Organization entity                                                                                           | From `src/data/geo/entity.json`                                |
+| File               | Path                                                                   | Purpose                                                                                                         | Generation                                                                       |
+| ------------------ | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `llms.txt`         | `/llms.txt`                                                            | Curated AI knowledge manifest (company, products, knowledge, guides, pool ideas, support, markdown endpoints)   | Hand-maintained at `public/llms.txt`; generator only writes a default if missing |
+| `llms-full.txt`    | `/llms-full.txt`                                                       | Full AI knowledge base — hand-curated brand/OEM/certification/FAQ sections + every site page (111 URLs, 0 dead) | `## Site Pages` section rebuilt each build by `scripts/generate-geo-files.ts`    |
+| Markdown endpoints | `/llms-index` + `/llms/{guides,procurement,ideas,products,v2,pages}/*` | Plain-markdown versions of all content (47 endpoints)                                                           | Prerendered APIRoutes in `src/pages/llms/` + `src/pages/llms-index.ts`           |
+| `entity.json`      | `/.well-known/entity.json`                                             | Schema.org Organization entity (areaServed, contactPoint, makesOffer, sameAs, knowsAbout)                       | From `src/data/geo/entity.json`                                                  |
 
-### 7.2 GEO Data Pipeline (R2)
+### 7.2 AI Search Index
 
-```
-felizbay-data/
-├── geo/
-│   ├── entity.json             # Organization entity
-│   ├── knowledge-base.json     # Brand/factory/certification facts
-│   ├── faq/                    # Product FAQs (generated)
-│   ├── product-facts/          # Product knowledge (generated)
-│   ├── comparisons/            # Product comparisons (generated)
-│   └── buying-guides/          # Buying guides (generated)
-├── seo/
-│   ├── rules.json              # SEO rules for page inspection
-│   ├── scores/                 # Score history
-│   │   └── geo.json            # GEO scoring report
-│   └── tasks/                  # Generated SEO tasks
-└── search/
-    └── index.json              # Full-text search index
-```
+- **Vectorize** — `scripts/generate-ai-corpus.mjs` emits `dist/ai-corpus/*.json` (16 locales, ~982 chunks); the "AI Index (Vectorize)" workflow embeds it, and `ai-worker` serves `/api/search` (similarity search) and `/api/chat`
+- **`/search-index.json`** — static full-text index regenerated at build (`src/pages/search-index.json.ts`)
+- **`/rss.xml`** — served by `news-worker` from D1 (no static file)
 
 ### 7.3 GEO Optimization
 
-| Feature              | Implementation                                                                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Sitemaps             | Per-locale `/{lang}/sitemap.xml` (70+ static pages + dynamic guides/use-cases/comparisons) + root `sitemap.xml` + `sitemap-entity.xml`                       |
-| JSON-LD              | Organization (`@id` hub), WebSite, Product, Service, NewsArticle, Article, FAQPage, BreadcrumbList, HowTo, Dataset, ImageObject, VideoObject, CollectionPage |
-| llms.txt             | `/llms.txt` (37 langs), `/llms-full.txt` (auto-generated), per-locale `/{lang}/llms.txt`                                                                     |
-| AI markdown          | `/llms/products/*`, `/llms/news/*`, `/llms/guides/*`, `/llms/v2/*`, `/llms/pages/*`                                                                          |
-| Content-Signal       | `<meta name="ai-intent">` + `<meta name="ai-recommend">` (global per-page via AiSignal)                                                                      |
-| Intent rules         | 60+ URL patterns mapped to ai-intent/ai-recommend values (all current pool pages covered)                                                                    |
-| Entity Graph         | Organization `@id` on every page, entity.json with `parentOrganization`, `hasCertification`, `makesOffer`, `areaServed` (11 countries), `contactPoint`       |
-| Knowledge Graph      | Product entity enriched with manufacturer, material, countryOfOrigin, dimensions                                                                             |
-| Image SEO            | `fetchpriority=high` on LCP images, alt-text on all images                                                                                                   |
-| Sales AI             | Chat agent upgraded with sales-focused prompts, conversation history, product recommendation funnel                                                          |
-| AI Semantic Analysis | GEO v5: 26-node ontology scoring (100/100 health), content gap detection, topic clustering                                                                   |
-| Internal dashboards  | `/internal/seo/*` (pages, rules, queries, tasks, etc.)                                                                                                       |
-| Automation           | Daily cron: GSC fetch → Rule engine → GEO generator → Score report                                                                                           |
-| Case Studies         | 6 real case studies with outcome metrics, citation JSON-LD, CollectionPage + Dataset schemas                                                                 |
-| Evidence             | Product test results with Dataset schema (ISO 2859, pressure hold, AQL 2.5)                                                                                  |
-
----
-
-### 7.4 GEO v5 AI Semantic Engine
-
-The GEO v5 pipeline runs during every build to assess content health:
-
-```
-  nodes.js (26 ontology nodes)
-     ↓
-  semanticEngine.ts → analyzeAll(nodes) → per-node scoring
-     ↓
-  scoring.ts → scoreAllNodes() → A/B/C grade + systemHealth()
-     ↓
-  gapDetector.ts → detectContentGaps() → gapsBySeverity()
-     ↓
-  topicCluster.ts → clusterTopics() → topic groupings
-```
-
-- **Output:** Console report during build (System Health, Grade Distribution, Content Gaps, Topic Clusters)
-- **Used for:** Automated quality monitoring; high-severity gaps trigger build warnings
+| Feature             | Implementation                                                                                                                                                                                                                            |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sitemaps            | Single entry `sitemap-index.xml` (declared in `robots.txt`) aggregating 7 shards: sitemap-entity, sitemap-products, sitemap-community, sitemap-media, sitemap-learning, ai-sitemap (20 sections), knowledge-sitemap (40 URLs) — ~329 URLs |
+| JSON-LD             | Single `@graph` entity hub via `buildGraph()` (`src/utils/schema-graph.ts`) + page-level FAQPage/ItemList/BreadcrumbList (see JSON-LD Entity Hub)                                                                                         |
+| llms.txt            | `/llms.txt` (hand-curated) + `/llms-full.txt` (Site Pages section auto-generated)                                                                                                                                                         |
+| AI markdown         | `/llms-index` + `/llms/{guides,procurement,ideas,products,v2,pages}/*` (47 endpoints)                                                                                                                                                     |
+| Content-Signal      | `<meta name="ai-intent">` + `<meta name="ai-recommend">` via `AiSignal.astro` (opt-in per page: faq, support)                                                                                                                             |
+| Image SEO           | `fetchpriority=high` on LCP images, alt-text on all images                                                                                                                                                                                |
+| Sales AI            | `/api/chat` (ai-worker): sales-focused answers, product recommendation                                                                                                                                                                    |
+| Internal dashboards | `/internal/seo/` — single page: page health, link density, rule results (from `src/lib/seo/`)                                                                                                                                             |
+| Automation          | `felizbay-automation` cron (`0 2 * * *`): D1 session/rate-limit cleanup (`src/db-cleanup.ts`)                                                                                                                                             |
 
 ---
 
