@@ -46,7 +46,7 @@ The [maintenance guide](/guides/inflatable-pool-maintenance/) details the full r
 - Guest materials and suite orientation must state that pools are recreational amenities — **not anti-drowning devices** — and require adult supervision for minors and non-swimmers.
 - Verify local hotel-pool sanitation codes, fencing or barrier requirements, and signage rules before guest use.
 - Confirm commercial liability insurance coverage for the amenity with your insurer.
-- Cover and secure the pool outside supervised hours.
+- Cover the pool outside supervised hours and restrict guest access in line with local barrier requirements — a dust cover keeps out debris, it is not a safety barrier.
 
 ## 6. B2B Sourcing: Custom Builds & OEM/ODM
 

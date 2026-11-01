@@ -155,7 +155,7 @@ export const faqs: FaqRecord[] = [
     id: 'pool-warranty',
     question: 'What is the Felizbay warranty?',
     answer:
-      'Felizbay pools carry a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers drop stitch fabric, seams, and valves; it excludes improper use, unauthorized modifications, and normal wear. Contact info@felizbay.com with your order details to start a claim.',
+      'Felizbay pools carry a 2-year limited manufacturer warranty covering defects in materials and workmanship under normal use. The warranty covers drop stitch fabric, seams, and valves; it excludes improper use, unauthorized modifications, and normal wear. Contact info@felizbay.com with your order details to start a claim — full terms are published on our Returns & Warranty page.',
     category: 'warranty',
     relatedProducts: [],
     relatedGuides: [],

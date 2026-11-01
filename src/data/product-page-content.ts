@@ -75,10 +75,11 @@ const SUPPORT_CARDS_BASE: SupportCard[] = [
   },
   {
     titleKey: 'product.returnsCard',
-    summary: 'Unused products in original packaging can be returned.',
+    summary: 'Unused products in original packaging can be returned within 30 days of delivery.',
     details: [
       'Contact info@felizbay.com with your order reference before returning anything.',
-      'Return shipping costs and conditions are confirmed case by case depending on the destination.',
+      'Return shipping is paid by the buyer; we cover it for defective or incorrect items. Refunds are issued to your original payment method after inspection.',
+      'Custom or made-to-order items cannot be returned.',
     ],
     href: '/returns-and-warranty/',
     hrefLabel: 'Returns & Warranty policy',
@@ -91,8 +92,8 @@ const SUPPORT_CARDS_BASE: SupportCard[] = [
       'It does not cover punctures from external objects, improper pressure, or normal wear.',
       'Warranty requests: info@felizbay.com with your order reference and photos.',
     ],
-    href: '/support/',
-    hrefLabel: 'Support Center',
+    href: '/returns-and-warranty/',
+    hrefLabel: 'Warranty policy',
   },
 ];
 
@@ -117,10 +118,10 @@ const WHOLESALE_SUPPORT_CARDS: SupportCard[] = [
   },
   {
     titleKey: 'product.returnsCard',
-    summary: 'Unused products in original packaging can be returned.',
+    summary: 'Returns follow the terms of your written quotation.',
     details: [
-      'Contact info@felizbay.com with your order reference before returning anything.',
-      'Return shipping costs and conditions are confirmed case by case depending on the destination.',
+      'Wholesale and project orders are governed by the order confirmation — any return arrangements are agreed in writing before you commit.',
+      'The 2-year limited warranty against manufacturing defects applies to wholesale orders as well.',
     ],
     href: '/returns-and-warranty/',
     hrefLabel: 'Returns & Warranty policy',
@@ -133,8 +134,8 @@ const WHOLESALE_SUPPORT_CARDS: SupportCard[] = [
       'It does not cover punctures from external objects, improper pressure, or normal wear.',
       'Warranty requests: info@felizbay.com with your order reference and photos.',
     ],
-    href: '/support/',
-    hrefLabel: 'Support Center',
+    href: '/returns-and-warranty/',
+    hrefLabel: 'Warranty policy',
   },
 ];
 
@@ -231,7 +232,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
       {
         titleKey: 'product.assuranceWarranty',
-        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms on request.',
+        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms are published in our Returns & Warranty policy.',
       },
       {
         titleKey: 'product.assuranceSupport',
@@ -281,7 +282,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
       {
         titleKey: 'product.assuranceWarranty',
-        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms on request.',
+        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms are published in our Returns & Warranty policy.',
       },
       {
         titleKey: 'product.assuranceSupport',
@@ -331,7 +332,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
       {
         titleKey: 'product.assuranceWarranty',
-        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms on request.',
+        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms are published in our Returns & Warranty policy.',
       },
       {
         titleKey: 'product.assuranceSupport',
@@ -381,7 +382,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
       {
         titleKey: 'product.assuranceWarranty',
-        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms on request.',
+        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms are published in our Returns & Warranty policy.',
       },
       {
         titleKey: 'product.assuranceSupport',
@@ -432,7 +433,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
       {
         titleKey: 'product.assuranceWarranty',
-        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms on request.',
+        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms are published in our Returns & Warranty policy.',
       },
       {
         titleKey: 'product.assuranceSupport',
