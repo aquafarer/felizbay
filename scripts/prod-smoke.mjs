@@ -41,7 +41,7 @@ const CHECKS = [
     path: '/products/',
     markers: [
       'Retail — Buy Online',
-      'Wholesale & Project Collections',
+      'Wholesale &amp; Project Collections',
       'data-catalog-section="retail"',
       'data-catalog-section="business"',
     ],
