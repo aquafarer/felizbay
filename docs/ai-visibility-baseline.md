@@ -82,7 +82,7 @@
 
 ## 4. 基础设施自查清单（每轮复测先跑一遍）
 
-**自动化（推荐）**：以下全部检查项已收录进 `npm run smoke`（`scripts/prod-smoke.mjs`，49 项含本节全部 + 站点冒烟 + B2B 页 + 顾问埋点端点），复测前跑一次即可，任一 FAIL 先修复再执行人工轮次：
+**自动化（推荐）**：以下全部检查项已收录进 `npm run smoke`（`scripts/prod-smoke.mjs`，50 项含本节全部 + 站点冒烟 + B2B 页 + 顾问埋点端点 + PDP 总成本 FAQ / 本地化 PDP FAQPage 防回归），复测前跑一次即可，任一 FAIL 先修复再执行人工轮次：
 
 ```powershell
 npm run smoke

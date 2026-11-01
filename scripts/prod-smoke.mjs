@@ -56,9 +56,14 @@ const CHECKS = [
   },
   {
     path: '/products/round-blue-drop-stitch-pool/',
-    markers: ['Fixed-size retail set'],
+    markers: ['Fixed-size retail set', 'cost to run'],
     notMarkers: ['fitg-size', 'aggregateRating', '10.0 m'],
-    desc: 'retail PDP: fixed-set spec present, no factory size checker, no fake aggregate rating',
+    desc: 'retail PDP: fixed-set spec + total-cost FAQ present, no factory size checker, no fake aggregate rating',
+  },
+  {
+    path: '/de/products/round-blue-drop-stitch-pool/',
+    markers: ['FAQPage', 'cost to run'],
+    desc: 'localized PDP renders FAQPage JSON-LD + FAQ content (ai_faq empty-array fallback regression)',
   },
   {
     path: '/products/round-grey-drop-stitch-pool/',
