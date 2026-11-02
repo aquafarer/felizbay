@@ -26,9 +26,15 @@ const CONCURRENCY = 6;
 const CHECKS = [
   {
     path: '/',
-    markers: ['Felizbay', 'data-aw-toggle-menu', 'aria-label="Main navigation"', 'data-aw-toggle-color-scheme'],
+    markers: [
+      'Felizbay',
+      'data-aw-toggle-menu',
+      'aria-label="Main navigation"',
+      'data-aw-toggle-color-scheme',
+      'cloudflareinsights',
+    ],
     notMarkers: ['Real Pools in Real Backyards'],
-    desc: 'home: brand, mobile menu button, main nav, theme toggle; fabricated customer stories removed',
+    desc: 'home: brand, mobile menu button, main nav, theme toggle, analytics beacon; fabricated customer stories removed',
   },
   { path: '/en/', marker: 'Felizbay', desc: 'EN mirror home' },
   { path: '/de/', marker: 'lang="de"', desc: 'localized page renders (de)' },
