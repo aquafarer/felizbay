@@ -124,8 +124,9 @@ const specRows = product.specs ?? [];
 const productCompliance = getProductCompliance(product.category);
 
 // ProductGroup (schema.org): real series → factory-size structure from the catalog.
-// Variants carry only verified facts (item number, size, packed weight); no
-// per-variant offers — the group-level Offer is the only published price.
+// Variants carry verified catalog facts (item number, size, packed weight) plus
+// a per-variant FOB Offer from the same pool-catalog SSOT as /products/specs/,
+// so AI engines can answer size-specific price questions.
 const SERIES_BY_SLUG: Record<string, string> = {
   'round-blue-drop-stitch-pool': 'round',
   'round-grey-drop-stitch-pool': 'round',
@@ -146,6 +147,18 @@ const hasVariant =
         name: `${catalogSeries.name} ${it.size} m`,
         size: `${it.size} m`,
         ...(it.weightKg ? { weight: `${it.weightKg} kg` } : {}),
+        // Per-variant wholesale Offer (verified FOB unit price from the catalog
+        // SSOT — same terms as the group-level AggregateOffer: MOQ 20, FOB
+        // Qingdao basis). Mirrors the public /products/specs/ price table.
+        offers: {
+          '@type': 'Offer',
+          availability: product.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+          businessFunction: 'https://schema.org/Sell',
+          price: it.fobUsd,
+          priceCurrency: 'USD',
+          eligibleQuantity: { '@type': 'QuantitativeValue', minValue: 20 },
+          additionalProperty: { '@type': 'PropertyValue', name: 'Price basis', value: 'FOB Qingdao' },
+        },
       }))
     : undefined;
 

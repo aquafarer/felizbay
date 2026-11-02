@@ -79,8 +79,8 @@ const CHECKS = [
   },
   {
     path: '/products/rectangular-drop-stitch-pool/',
-    marker: 'fitg-size',
-    desc: 'wholesale PDP keeps the FitGuide size checker',
+    markers: ['fitg-size', '"sku":"SR220815"', '"@type":"Offer"'],
+    desc: 'wholesale PDP keeps FitGuide size checker + per-variant FOB offers in ProductGroup hasVariant',
   },
   {
     path: '/products/compare/',
@@ -99,6 +99,11 @@ const CHECKS = [
     path: '/guides/how-to-store-a-drop-stitch-pool/',
     marker: 'Store',
     desc: 'guide article',
+  },
+  {
+    path: '/guides/how-to-choose-inflatable-pool/',
+    markers: ['href="/products/round-blue-drop-stitch-pool/"', 'href="/products/rectangular-drop-stitch-pool/"'],
+    desc: 'consumer buying guide deep-links to round + rectangular PDPs (relatedProducts wired)',
   },
   { path: '/find-your-pool/', marker: 'data-finder', desc: 'pool advisor quiz' },
   { path: '/support/', marker: 'Support', desc: 'support hub' },
