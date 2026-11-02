@@ -119,121 +119,119 @@ const isRootOnlyRoute = isRootOnlyRouteFn(pathWithoutLang);
     <Metadata {...metadata} seoSettings={seo} />
     <Analytics id={seo.googleAnalyticsId} />
     <CloudflareAnalytics />
-    {fontPreloads.map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
+    {fontPreloads.map((f) => (
+      <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />
+    ))}
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://assets.felizbay.com" crossorigin />
 
-    {
-      !isRootOnlyRoute &&
-        enabledLangs
-          .filter((l: any) => FULLY_LOCALIZED.includes(l.locale))
-          .map((l: any) => (
-            <link
-              rel="alternate"
-              hreflang={l.locale}
-              href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, l.locale)}`}
-            />
-          ))
-    }
+    {!isRootOnlyRoute &&
+      enabledLangs
+        .filter((l: any) => FULLY_LOCALIZED.includes(l.locale))
+        .map((l: any) => (
+          <link
+            rel="alternate"
+            hreflang={l.locale}
+            href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, l.locale)}`}
+          />
+        ))}
     <link
       rel="alternate"
       hreflang="x-default"
       href={`${siteUrlTrimmed}${localizeUseCasePath(pathWithoutLang, defaultLang)}`}
     />
 
-    {
-      !disableGlobalLd && (
-        <>
-          <JsonLd
-            type="Organization"
-            data={{
+    {!disableGlobalLd && (
+      <>
+        <JsonLd
+          type="Organization"
+          data={{
+            name: facts.brand.name,
+            alternateName: 'Felizbay Inflatable Pools',
+            url: seo.siteUrl,
+            logo: facts.logo.url,
+            image: facts.logo.url,
+            description: facts.brand.description,
+            slogan: facts.brand.slogan,
+            foundingDate: String(facts.brand.foundingYear),
+            foundingLocation: {
+              '@type': 'Place',
+              name: 'New Mexico, USA',
+              address: {
+                '@type': 'PostalAddress',
+                addressRegion: facts.office.province,
+                addressCountry: facts.office.country,
+              },
+            },
+            parentOrganization: {
+              '@type': 'Organization',
+              name: facts.brand.legalName,
+            },
+            brand: {
+              '@type': 'Brand',
               name: facts.brand.name,
-              alternateName: 'Felizbay Inflatable Pools',
-              url: seo.siteUrl,
-              logo: facts.logo.url,
-              image: facts.logo.url,
-              description: facts.brand.description,
-              slogan: facts.brand.slogan,
-              foundingDate: String(facts.brand.foundingYear),
-              foundingLocation: {
-                '@type': 'Place',
-                name: 'New Mexico, USA',
-                address: {
-                  '@type': 'PostalAddress',
-                  addressRegion: facts.office.province,
-                  addressCountry: facts.office.country,
-                },
+            },
+            knowsAbout: [
+              'Drop stitch inflatable pool manufacturing',
+              'PVC pool fabrication',
+              'Backyard pool safety (EN 16582-1, ASTM F2666)',
+              'Inflatable pool water care',
+              'Private label pool branding',
+              'Pool pressure testing and quality validation',
+              'ISO 9001:2015 certified manufacturing',
+            ],
+            industry: ['Consumer Pool & Outdoor Products', 'Inflatable Pool OEM'],
+            areaServed: facts.reach.regions,
+            email: facts.contact.email,
+            telephone: facts.contact.primaryPhone,
+            sameAs: [
+              facts.social.linkedin,
+              facts.social.youtube,
+              facts.social.x,
+              facts.social.instagram,
+              facts.social.facebook,
+            ].filter(Boolean),
+          }}
+        />
+        <JsonLd
+          type="Person"
+          data={{
+            name: facts.founder.name,
+            jobTitle: facts.founder.jobTitle,
+            description:
+              'Founder of Felizbay, supplier of premium drop stitch inflatable swimming pools for families and retailers worldwide.',
+            url: 'https://felizbay.com/about',
+            knowsAbout: [
+              'Drop Stitch Pool Manufacturing',
+              'PVC Fabrication',
+              'Inflatable Pool Design',
+              'Pool Safety Standards',
+            ],
+            affiliation: { '@type': 'Organization', name: facts.brand.name, url: 'https://felizbay.com' },
+            worksFor: { '@type': 'Organization', name: facts.brand.name },
+          }}
+        />
+        <JsonLd
+          type="WebSite"
+          data={{
+            name: SITE_SETTINGS.siteName || orgName,
+            url: seo.siteUrl,
+            description:
+              'Premium drop stitch inflatable swimming pools by Felizbay — rigid walls, fast setup, easy winter storage.',
+            about: getAboutSchema(pathname),
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${siteUrlTrimmed}/search?q={search_term_string}`,
               },
-              parentOrganization: {
-                '@type': 'Organization',
-                name: facts.brand.legalName,
-              },
-              brand: {
-                '@type': 'Brand',
-                name: facts.brand.name,
-              },
-              knowsAbout: [
-                'Drop stitch inflatable pool manufacturing',
-                'PVC pool fabrication',
-                'Backyard pool safety (EN 16582-1, ASTM F2666)',
-                'Inflatable pool water care',
-                'Private label pool branding',
-                'Pool pressure testing and quality validation',
-                'ISO 9001:2015 certified manufacturing',
-              ],
-              industry: ['Consumer Pool & Outdoor Products', 'Inflatable Pool OEM'],
-              areaServed: facts.reach.regions,
-              email: facts.contact.email,
-              telephone: facts.contact.primaryPhone,
-              sameAs: [
-                facts.social.linkedin,
-                facts.social.youtube,
-                facts.social.x,
-                facts.social.instagram,
-                facts.social.facebook,
-              ].filter(Boolean),
-            }}
-          />
-          <JsonLd
-            type="Person"
-            data={{
-              name: facts.founder.name,
-              jobTitle: facts.founder.jobTitle,
-              description:
-                'Founder of Felizbay, supplier of premium drop stitch inflatable swimming pools for families and retailers worldwide.',
-              url: 'https://felizbay.com/about',
-              knowsAbout: [
-                'Drop Stitch Pool Manufacturing',
-                'PVC Fabrication',
-                'Inflatable Pool Design',
-                'Pool Safety Standards',
-              ],
-              affiliation: { '@type': 'Organization', name: facts.brand.name, url: 'https://felizbay.com' },
-              worksFor: { '@type': 'Organization', name: facts.brand.name },
-            }}
-          />
-          <JsonLd
-            type="WebSite"
-            data={{
-              name: SITE_SETTINGS.siteName || orgName,
-              url: seo.siteUrl,
-              description:
-                'Premium drop stitch inflatable swimming pools by Felizbay — rigid walls, fast setup, easy winter storage.',
-              about: getAboutSchema(pathname),
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: {
-                  '@type': 'EntryPoint',
-                  urlTemplate: `${siteUrlTrimmed}/search?q={search_term_string}`,
-                },
-                'query-input': 'required name=search_term_string',
-              },
-            }}
-          />
-        </>
-      )
-    }
+              'query-input': 'required name=search_term_string',
+            },
+          }}
+        />
+      </>
+    )}
 
     <AiSignal />
 

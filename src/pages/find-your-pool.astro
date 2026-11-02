@@ -260,34 +260,35 @@ const metadata = merge(
 
     <!-- Questions -->
     <div class="mb-8 space-y-5" data-finder>
-      {
-        questions.map((q) => (
-          <div class="text-center" data-question={q.label} data-filter={q.filter}>
-            <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">{q.label}</p>
-            <div class="flex flex-wrap items-center justify-center gap-2">
-              {q.filters.map((f) => (
-                <button
-                  type="button"
-                  data-answer={f.id}
-                  class="finder-chip inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700"
-                >
-                  {f.text}
-                </button>
-              ))}
-            </div>
+      {questions.map((q) => (
+        <div class="text-center" data-question={q.label} data-filter={q.filter}>
+          <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">{q.label}</p>
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            {q.filters.map((f) => (
+              <button
+                type="button"
+                data-answer={f.id}
+                class="finder-chip inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700"
+              >
+                {f.text}
+              </button>
+            ))}
           </div>
-        ))
-      }
+        </div>
+      ))}
 
       <!-- Exact measurements (takes priority over the size buckets) -->
       <div class="text-center" data-question="Exact flat area available" data-filter="dim">
         <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
-          Exact flat area available <span class="font-normal text-gray-400 dark:text-slate-500"
-            >(optional — takes priority over the buckets above)</span
-          >
+          Exact flat area available{' '}
+          <span class="font-normal text-gray-400 dark:text-slate-500">
+            (optional — takes priority over the buckets above)
+          </span>
         </p>
         <div class="flex flex-wrap items-center justify-center gap-2">
-          <label for="finder-len" class="sr-only">Available length in meters</label>
+          <label for="finder-len" class="sr-only">
+            Available length in meters
+          </label>
           <input
             id="finder-len"
             type="number"
@@ -300,7 +301,9 @@ const metadata = merge(
             class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
           />
           <span class="text-sm text-gray-400 dark:text-slate-500">×</span>
-          <label for="finder-wid" class="sr-only">Available width in meters</label>
+          <label for="finder-wid" class="sr-only">
+            Available width in meters
+          </label>
           <input
             id="finder-wid"
             type="number"
@@ -323,7 +326,9 @@ const metadata = merge(
         <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
           Delivery country <span class="font-normal text-gray-400 dark:text-slate-500">(optional)</span>
         </p>
-        <label for="finder-country" class="sr-only">Delivery country</label>
+        <label for="finder-country" class="sr-only">
+          Delivery country
+        </label>
         <input
           id="finder-country"
           type="text"
@@ -378,52 +383,50 @@ const metadata = merge(
 
     <!-- Result cards -->
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-setup-grid>
-      {
-        setups.map((s) => (
-          <article
-            class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
-            data-tags={s.tags.join(' ')}
-            data-opts={JSON.stringify(s.opts)}
-          >
-            <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
-            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
-            <p
-              class="mt-3 hidden rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/50 px-3 py-2 text-xs leading-relaxed text-sky-900 dark:text-sky-200"
-              data-why
-            />
-            <dl class="mt-4 space-y-2 text-sm">
-              <div>
-                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                  Typical size
-                </dt>
-                <dd class="font-medium text-primary dark:text-blue-400">{s.sizes}</dd>
-              </div>
-              <div>
-                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                  Product family
-                </dt>
-                <dd class="text-gray-700 dark:text-slate-300">{s.products}</dd>
-              </div>
-            </dl>
-            <div class="mt-5 flex items-center gap-3">
-              <a
-                href={s.shopHref}
-                class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                Shop this setup
-              </a>
-              {s.ideaHref && (
-                <a
-                  href={s.ideaHref}
-                  class="inline-flex items-center justify-center px-4 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
-                >
-                  Guide
-                </a>
-              )}
+      {setups.map((s) => (
+        <article
+          class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
+          data-tags={s.tags.join(' ')}
+          data-opts={JSON.stringify(s.opts)}
+        >
+          <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
+          <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
+          <p
+            class="mt-3 hidden rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/50 px-3 py-2 text-xs leading-relaxed text-sky-900 dark:text-sky-200"
+            data-why
+          />
+          <dl class="mt-4 space-y-2 text-sm">
+            <div>
+              <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                Typical size
+              </dt>
+              <dd class="font-medium text-primary dark:text-blue-400">{s.sizes}</dd>
             </div>
-          </article>
-        ))
-      }
+            <div>
+              <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                Product family
+              </dt>
+              <dd class="text-gray-700 dark:text-slate-300">{s.products}</dd>
+            </div>
+          </dl>
+          <div class="mt-5 flex items-center gap-3">
+            <a
+              href={s.shopHref}
+              class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              Shop this setup
+            </a>
+            {s.ideaHref && (
+              <a
+                href={s.ideaHref}
+                class="inline-flex items-center justify-center px-4 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+              >
+                Guide
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
     </div>
 
     <p class="mt-6 text-center text-sm text-gray-400 dark:text-slate-500" data-finder-hint>
@@ -432,31 +435,29 @@ const metadata = merge(
 
     <!-- How to measure -->
     <div class="mt-14 grid gap-6 lg:grid-cols-3">
-      {
-        [
-          {
-            icon: 'tabler:ruler',
-            title: 'Measure your space',
-            text: 'Mark the pool footprint with string or tape, leaving at least 50 cm (ideally 1 m) of clear, non-slip walkway on all sides. Remember the surface must carry the water: roughly 1 t per m³.',
-          },
-          {
-            icon: 'tabler:flame',
-            title: 'Plan for water & power',
-            text: 'Check your fill time from a garden tap, plan a safe drainage route for the drain valve, and keep the electric pump connection away from the water edge.',
-          },
-          {
-            icon: 'tabler:shield-check',
-            title: 'Plan for safety',
-            text: 'Active adult supervision whenever the pool is in use, empty or cover it between sessions, and check your local barrier rules — they usually apply to inflatable pools too.',
-          },
-        ].map((step) => (
-          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-6">
-            <Icon name={step.icon} class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
-            <h3 class="font-semibold font-heading dark:text-slate-100 mb-2">{step.title}</h3>
-            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{step.text}</p>
-          </div>
-        ))
-      }
+      {[
+        {
+          icon: 'tabler:ruler',
+          title: 'Measure your space',
+          text: 'Mark the pool footprint with string or tape, leaving at least 50 cm (ideally 1 m) of clear, non-slip walkway on all sides. Remember the surface must carry the water: roughly 1 t per m³.',
+        },
+        {
+          icon: 'tabler:flame',
+          title: 'Plan for water & power',
+          text: 'Check your fill time from a garden tap, plan a safe drainage route for the drain valve, and keep the electric pump connection away from the water edge.',
+        },
+        {
+          icon: 'tabler:shield-check',
+          title: 'Plan for safety',
+          text: 'Active adult supervision whenever the pool is in use, empty or cover it between sessions, and check your local barrier rules — they usually apply to inflatable pools too.',
+        },
+      ].map((step) => (
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-6">
+          <Icon name={step.icon} class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+          <h3 class="font-semibold font-heading dark:text-slate-100 mb-2">{step.title}</h3>
+          <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{step.text}</p>
+        </div>
+      ))}
     </div>
 
     <div class="mt-14 text-center">

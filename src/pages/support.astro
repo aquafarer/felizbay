@@ -89,9 +89,9 @@ const businessSupport = [
     <p class="mt-6 text-lg text-gray-500 dark:text-slate-400 max-w-2xl mx-auto">
       Setup help, water care, troubleshooting, warranty, and order questions for your Felizbay drop stitch pool — all in
       one place. Can't find what you need? Email
-      <a href="mailto:info@felizbay.com" class="text-sky-600 dark:text-sky-400 font-medium hover:underline"
-        >info@felizbay.com</a
-      >
+      <a href="mailto:info@felizbay.com" class="text-sky-600 dark:text-sky-400 font-medium hover:underline">
+        info@felizbay.com
+      </a>
       and we reply within one business day.
     </p>
   </section>
@@ -99,21 +99,19 @@ const businessSupport = [
   {/* Quick help cards */}
   <section class="px-4 pb-16 sm:px-6 mx-auto max-w-7xl" data-ai-block="support-quick-links">
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        quickLinks.map((c) => (
-          <a
-            href={c.href}
-            class="group flex flex-col rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all"
-          >
-            <span class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400">
-              <Icon name={c.icon} class="w-6 h-6" />
-            </span>
-            <h2 class="mt-4 text-lg font-semibold text-gray-900 dark:text-slate-100">{c.title}</h2>
-            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 flex-1">{c.description}</p>
-            <span class="mt-4 text-sm font-medium text-sky-600 dark:text-sky-400 group-hover:underline">{c.cta} →</span>
-          </a>
-        ))
-      }
+      {quickLinks.map((c) => (
+        <a
+          href={c.href}
+          class="group flex flex-col rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all"
+        >
+          <span class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400">
+            <Icon name={c.icon} class="w-6 h-6" />
+          </span>
+          <h2 class="mt-4 text-lg font-semibold text-gray-900 dark:text-slate-100">{c.title}</h2>
+          <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 flex-1">{c.description}</p>
+          <span class="mt-4 text-sm font-medium text-sky-600 dark:text-sky-400 group-hover:underline">{c.cta} →</span>
+        </a>
+      ))}
     </div>
   </section>
 
@@ -125,18 +123,16 @@ const businessSupport = [
         Getting Started
       </h2>
       <ul class="space-y-3">
-        {
-          gettingStarted.map((l) => (
-            <li>
-              <a
-                href={l.href}
-                class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
-              >
-                {l.title}
-              </a>
-            </li>
-          ))
-        }
+        {gettingStarted.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
+            >
+              {l.title}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
     <div>
@@ -145,23 +141,23 @@ const businessSupport = [
         Care & Troubleshooting
       </h2>
       <ul class="space-y-3">
-        {
-          careAndTroubleshooting.map((l) => (
-            <li>
-              <a
-                href={l.href}
-                class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
-              >
-                {l.title}
-              </a>
-            </li>
-          ))
-        }
+        {careAndTroubleshooting.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
+            >
+              {l.title}
+            </a>
+          </li>
+        ))}
         <li class="text-sm text-gray-500 dark:text-slate-500">
           Every pool ships with a repair kit. Spare parts — valves, patches, pumps, covers — stay available for the life
           of the product: email
-          <a href="mailto:info@felizbay.com" class="text-sky-600 dark:text-sky-400 hover:underline">info@felizbay.com</a
-          >.
+          <a href="mailto:info@felizbay.com" class="text-sky-600 dark:text-sky-400 hover:underline">
+            info@felizbay.com
+          </a>
+          .
         </li>
       </ul>
     </div>
@@ -171,18 +167,16 @@ const businessSupport = [
         Business & OEM Support
       </h2>
       <ul class="space-y-3">
-        {
-          businessSupport.map((l) => (
-            <li>
-              <a
-                href={l.href}
-                class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
-              >
-                {l.title}
-              </a>
-            </li>
-          ))
-        }
+        {businessSupport.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class="text-sm text-gray-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 hover:underline"
+            >
+              {l.title}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   </section>
@@ -205,7 +199,9 @@ const businessSupport = [
         <p class="text-sm text-gray-500 dark:text-slate-400">
           Unused pools can be returned within 30 days of delivery in original packaging. Defective or incorrect items
           ship back at our cost.
-          <a href="/returns-and-warranty/" class="text-sky-600 dark:text-sky-400 hover:underline">Full policy →</a>
+          <a href="/returns-and-warranty/" class="text-sky-600 dark:text-sky-400 hover:underline">
+            Full policy →
+          </a>
         </p>
       </div>
       <div>
@@ -213,9 +209,9 @@ const businessSupport = [
         <p class="text-sm text-gray-500 dark:text-slate-400">
           2-year limited warranty on manufacturing defects — seams, valves, and drop-stitch fabric. Claims are answered
           within one business day.
-          <a href="/returns-and-warranty/#warranty" class="text-sky-600 dark:text-sky-400 hover:underline"
-            >Warranty details →</a
-          >
+          <a href="/returns-and-warranty/#warranty" class="text-sky-600 dark:text-sky-400 hover:underline">
+            Warranty details →
+          </a>
         </p>
       </div>
     </div>

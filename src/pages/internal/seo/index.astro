@@ -33,44 +33,52 @@ const totalTasks = tasks.high.length + tasks.medium.length + tasks.low.length;
       <a
         href="/internal/seo/brand-os/"
         class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-xs font-medium hover:bg-blue-200 transition font-bold"
-        >Brand OS</a
       >
+        Brand OS
+      </a>
       <a
         href="/internal/seo/social/"
         class="px-3 py-1.5 bg-pink-100 text-pink-700 rounded-lg text-xs font-medium hover:bg-pink-200 transition"
-        >Social Engine</a
       >
+        Social Engine
+      </a>
       <a
         href="/internal/seo/rules/"
         class="px-3 py-1.5 bg-amber-100 text-amber-700 rounded-lg text-xs font-medium hover:bg-amber-200 transition"
-        >Rule Engine</a
       >
+        Rule Engine
+      </a>
       <a
         href="/internal/seo/tasks/"
         class="px-3 py-1.5 bg-red-100 text-red-700 rounded-lg text-xs font-medium hover:bg-red-200 transition"
-        >Tasks ({totalTasks})</a
       >
+        Tasks ({totalTasks})
+      </a>
       <a
         href="/internal/seo/queries/"
         class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-xs font-medium hover:bg-blue-200 transition"
-        >Queries</a
       >
+        Queries
+      </a>
       <a
         href="/internal/seo/workflow/"
         class="px-3 py-1.5 bg-green-100 text-green-700 rounded-lg text-xs font-medium hover:bg-green-200 transition"
-        >Workflow</a
       >
+        Workflow
+      </a>
       <a
         href="/internal/seo/geo/"
         class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-xs font-medium hover:bg-purple-200 transition"
-        >GEO</a
       >
+        GEO
+      </a>
 
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
           <div class="text-sm text-gray-500 dark:text-gray-400">Avg Page Health</div>
           <div class="text-3xl font-bold mt-1">
-            {avgHealth}<span class="text-lg font-normal text-gray-400">/100</span>
+            {avgHealth}
+            <span class="text-lg font-normal text-gray-400">/100</span>
           </div>
           <div class="text-xs text-gray-400 mt-1">{aGradeCount} pages at grade A</div>
         </div>
@@ -88,7 +96,9 @@ const totalTasks = tasks.high.length + tasks.medium.length + tasks.low.length;
           <div class="text-sm text-gray-500 dark:text-gray-400">🔥 High Priority Tasks</div>
           <div class="text-3xl font-bold mt-1 text-red-600">{tasks.high.length}</div>
           <div class="text-xs text-gray-400 mt-1">
-            <a href="/internal/seo/tasks/" class="underline">View task list</a>
+            <a href="/internal/seo/tasks/" class="underline">
+              View task list
+            </a>
           </div>
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
@@ -122,8 +132,12 @@ const totalTasks = tasks.high.length + tasks.medium.length + tasks.low.length;
           </div>
         </div>
         <div class="flex gap-3 mt-4 text-xs text-gray-400">
-          <a href="/internal/seo/brand-os/" class="underline hover:text-blue-600">Brand OS</a>
-          <a href="/internal/seo/social/" class="underline hover:text-pink-600">Social Pipeline</a>
+          <a href="/internal/seo/brand-os/" class="underline hover:text-blue-600">
+            Brand OS
+          </a>
+          <a href="/internal/seo/social/" class="underline hover:text-pink-600">
+            Social Pipeline
+          </a>
           <span class="text-gray-300">|</span>
           <span class="text-green-600">6 Regions · 20 Pages · 0 AI</span>
         </div>
@@ -161,135 +175,125 @@ const totalTasks = tasks.high.length + tasks.medium.length + tasks.low.length;
           <section class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
             <h2 class="text-lg font-semibold mb-4">Health Score Distribution</h2>
             <div class="space-y-3">
-              {
-                ['A', 'B', 'C', 'D', 'F'].map((grade) => {
-                  const count = healthScores.filter((h) => h.grade === grade).length;
-                  const pct = Math.round((count / healthScores.length) * 100);
-                  const colorMap = {
-                    A: 'bg-green-500',
-                    B: 'bg-blue-500',
-                    C: 'bg-amber-500',
-                    D: 'bg-orange-500',
-                    F: 'bg-red-500',
-                  };
-                  return (
-                    <div>
-                      <div class="flex justify-between text-sm mb-1">
-                        <span class="font-medium">Grade {grade}</span>
-                        <span class="text-gray-500">
-                          {count} ({pct}%)
-                        </span>
-                      </div>
-                      <div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-2">
-                        <div
-                          class={`${colorMap[grade as keyof typeof colorMap]} h-2 rounded-full`}
-                          style={`width: ${pct}%`}
-                        />
-                      </div>
+              {['A', 'B', 'C', 'D', 'F'].map((grade) => {
+                const count = healthScores.filter((h) => h.grade === grade).length;
+                const pct = Math.round((count / healthScores.length) * 100);
+                const colorMap = {
+                  A: 'bg-green-500',
+                  B: 'bg-blue-500',
+                  C: 'bg-amber-500',
+                  D: 'bg-orange-500',
+                  F: 'bg-red-500',
+                };
+                return (
+                  <div>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span class="font-medium">Grade {grade}</span>
+                      <span class="text-gray-500">
+                        {count} ({pct}%)
+                      </span>
                     </div>
-                  );
-                })
-              }
+                    <div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-2">
+                      <div
+                        class={`${colorMap[grade as keyof typeof colorMap]} h-2 rounded-full`}
+                        style={`width: ${pct}%`}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
           <section class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
             <h2 class="text-lg font-semibold mb-4">Top Queries (GSC Sample)</h2>
             <div class="space-y-2">
-              {
-                sampleTopQueries.slice(0, 6).map((q) => (
-                  <div class="flex items-center justify-between text-sm py-1.5 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                    <div class="truncate flex-1">
-                      <a href="/internal/seo/queries/" class="text-blue-600 hover:underline">
-                        {q.query}
-                      </a>
-                    </div>
-                    <div class="flex gap-4 text-xs text-gray-500 ml-4 shrink-0">
-                      <span>{q.impressions.toLocaleString()} imp</span>
-                      <span class={q.ctr < 2 ? 'text-red-600 font-medium' : 'text-green-600'}>{q.ctr}%</span>
-                      <span>#{q.position}</span>
-                    </div>
+              {sampleTopQueries.slice(0, 6).map((q) => (
+                <div class="flex items-center justify-between text-sm py-1.5 border-b border-gray-100 dark:border-gray-700 last:border-0">
+                  <div class="truncate flex-1">
+                    <a href="/internal/seo/queries/" class="text-blue-600 hover:underline">
+                      {q.query}
+                    </a>
                   </div>
-                ))
-              }
+                  <div class="flex gap-4 text-xs text-gray-500 ml-4 shrink-0">
+                    <span>{q.impressions.toLocaleString()} imp</span>
+                    <span class={q.ctr < 2 ? 'text-red-600 font-medium' : 'text-green-600'}>{q.ctr}%</span>
+                    <span>#{q.position}</span>
+                  </div>
+                </div>
+              ))}
             </div>
-            <a href="/internal/seo/queries/" class="mt-3 inline-block text-sm text-blue-600 hover:underline"
-              >View all queries →</a
-            >
+            <a href="/internal/seo/queries/" class="mt-3 inline-block text-sm text-blue-600 hover:underline">
+              View all queries →
+            </a>
 
             <section class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
               <h2 class="text-lg font-semibold mb-4">🔥 Next Tasks</h2>
               <div class="space-y-2">
-                {
-                  tasks.high.slice(0, 4).map((task) => (
-                    <div class="p-2.5 bg-red-50 dark:bg-red-950 rounded-lg text-sm">
-                      <div class="flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0" />
-                        <span class="font-medium text-xs truncate">{task.page}</span>
-                      </div>
-                      <div class="text-xs text-gray-500 mt-0.5 ml-3">
-                        {task.type}: {task.action.length > 60 ? task.action.slice(0, 60) + '...' : task.action}
-                      </div>
+                {tasks.high.slice(0, 4).map((task) => (
+                  <div class="p-2.5 bg-red-50 dark:bg-red-950 rounded-lg text-sm">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0" />
+                      <span class="font-medium text-xs truncate">{task.page}</span>
                     </div>
-                  ))
-                }
+                    <div class="text-xs text-gray-500 mt-0.5 ml-3">
+                      {task.type}: {task.action.length > 60 ? task.action.slice(0, 60) + '...' : task.action}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <a href="/internal/seo/tasks/" class="mt-3 inline-block text-sm text-blue-600 hover:underline"
-                >Full task list ({totalTasks}) →</a
-              >
+              <a href="/internal/seo/tasks/" class="mt-3 inline-block text-sm text-blue-600 hover:underline">
+                Full task list ({totalTasks}) →
+              </a>
             </section>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <section class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
                 <h2 class="text-lg font-semibold mb-4">Pages Needing CTR Improvement</h2>
                 <div class="space-y-2">
-                  {
-                    sampleLowCtrPages
-                      .filter((p) => p.ctr < 1.5)
-                      .slice(0, 5)
-                      .map((p) => (
-                        <div class="flex items-center justify-between text-sm py-1.5 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                          <span class="truncate flex-1">{p.path.split('/').pop()}</span>
-                          <div class="flex gap-4 text-xs ml-4 shrink-0">
-                            <span>{p.impressions} imp</span>
-                            <span class="text-red-600 font-medium">{p.ctr}%</span>
-                            <span>#{p.position}</span>
-                          </div>
+                  {sampleLowCtrPages
+                    .filter((p) => p.ctr < 1.5)
+                    .slice(0, 5)
+                    .map((p) => (
+                      <div class="flex items-center justify-between text-sm py-1.5 border-b border-gray-100 dark:border-gray-700 last:border-0">
+                        <span class="truncate flex-1">{p.path.split('/').pop()}</span>
+                        <div class="flex gap-4 text-xs ml-4 shrink-0">
+                          <span>{p.impressions} imp</span>
+                          <span class="text-red-600 font-medium">{p.ctr}%</span>
+                          <span>#{p.position}</span>
                         </div>
-                      ))
-                  }
+                      </div>
+                    ))}
                 </div>
-                <a href="/internal/seo/pages/" class="mt-3 inline-block text-sm text-blue-600 hover:underline"
-                  >CTR analysis →</a
-                >
+                <a href="/internal/seo/pages/" class="mt-3 inline-block text-sm text-blue-600 hover:underline">
+                  CTR analysis →
+                </a>
 
                 <section class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
                   <h2 class="text-lg font-semibold mb-4">Weekly Workflow — Status</h2>
                   <div class="space-y-3">
-                    {
-                      [
-                        'Data Pull (Day 1)',
-                        'Decision (Day 2)',
-                        'Content Update (Day 3-4)',
-                        'Reindex (Day 5)',
-                        'Observe (Day 6-7)',
-                      ].map((step, i) => {
-                        const done = i < 2;
-                        return (
-                          <div class="flex items-center gap-3 text-sm">
-                            <span class={`w-3 h-3 rounded-full ${done ? 'bg-green-500' : 'bg-gray-300'}`} />
-                            <span class={done ? 'text-gray-900 dark:text-white' : 'text-gray-400'}>{step}</span>
-                            <span class={`ml-auto text-xs font-medium ${done ? 'text-green-600' : 'text-gray-400'}`}>
-                              {done ? 'Done' : 'Pending'}
-                            </span>
-                          </div>
-                        );
-                      })
-                    }
+                    {[
+                      'Data Pull (Day 1)',
+                      'Decision (Day 2)',
+                      'Content Update (Day 3-4)',
+                      'Reindex (Day 5)',
+                      'Observe (Day 6-7)',
+                    ].map((step, i) => {
+                      const done = i < 2;
+                      return (
+                        <div class="flex items-center gap-3 text-sm">
+                          <span class={`w-3 h-3 rounded-full ${done ? 'bg-green-500' : 'bg-gray-300'}`} />
+                          <span class={done ? 'text-gray-900 dark:text-white' : 'text-gray-400'}>{step}</span>
+                          <span class={`ml-auto text-xs font-medium ${done ? 'text-green-600' : 'text-gray-400'}`}>
+                            {done ? 'Done' : 'Pending'}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
-                  <a href="/internal/seo/workflow/" class="mt-3 inline-block text-sm text-blue-600 hover:underline"
-                    >Full workflow →</a
-                  >
+                  <a href="/internal/seo/workflow/" class="mt-3 inline-block text-sm text-blue-600 hover:underline">
+                    Full workflow →
+                  </a>
                 </section>
               </section>
             </div>

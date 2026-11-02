@@ -57,7 +57,9 @@ const skill = (fm.skill as string) ?? '';
         name="_language"
         class="px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
       >
-        <option value="en" selected>English (default)</option>
+        <option value="en" selected>
+          English (default)
+        </option>
         <option value="fr">Français</option>
         <option value="de">Deutsch</option>
         <option value="es">Español</option>
@@ -83,9 +85,9 @@ const skill = (fm.skill as string) ?? '';
     <h2 class="text-lg font-semibold">Basic Info</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="title"
-          >Product Name <span class="text-red-500">*</span></label
-        >
+        <label class="block text-sm font-medium mb-1" for="title">
+          Product Name <span class="text-red-500">*</span>
+        </label>
         <input
           id="title"
           name="title"
@@ -97,7 +99,9 @@ const skill = (fm.skill as string) ?? '';
         />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="sku">SKU / Product Code</label>
+        <label class="block text-sm font-medium mb-1" for="sku">
+          SKU / Product Code
+        </label>
         <input
           id="sku"
           name="sku"
@@ -108,28 +112,32 @@ const skill = (fm.skill as string) ?? '';
       </div>
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="summary">One-line Summary</label>
+      <label class="block text-sm font-medium mb-1" for="summary">
+        One-line Summary
+      </label>
       <textarea
         id="summary"
         name="summary"
         rows="2"
         class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-        >{(fm.summary as string) ?? ''}</textarea
-      >
+      >{(fm.summary as string) ?? ''}</textarea>
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="description">Description</label>
+      <label class="block text-sm font-medium mb-1" for="description">
+        Description
+      </label>
       <textarea
         id="description"
         name="description"
         rows="4"
         data-fm-path="desc"
         class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-        >{(fm.description as string) ?? ''}</textarea
-      >
+      >{(fm.description as string) ?? ''}</textarea>
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="image">Main Image URL</label>
+      <label class="block text-sm font-medium mb-1" for="image">
+        Main Image URL
+      </label>
       <input
         id="image"
         name="image"
@@ -140,19 +148,29 @@ const skill = (fm.skill as string) ?? '';
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="product-category">Category</label>
+        <label class="block text-sm font-medium mb-1" for="product-category">
+          Category
+        </label>
         <select
           id="product-category"
           name="category"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
         >
-          <option value="pool" selected={category === 'pool'}>Inflatable Swimming Pool</option>
-          <option value="accessory" selected={category === 'accessory'}>Accessory</option>
-          <option value="service" selected={category === 'service'}>Service</option>
+          <option value="pool" selected={category === 'pool'}>
+            Inflatable Swimming Pool
+          </option>
+          <option value="accessory" selected={category === 'accessory'}>
+            Accessory
+          </option>
+          <option value="service" selected={category === 'service'}>
+            Service
+          </option>
         </select>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="publishDate">Publish Date</label>
+        <label class="block text-sm font-medium mb-1" for="publishDate">
+          Publish Date
+        </label>
         <input
           id="publishDate"
           name="publishDate"
@@ -182,43 +200,45 @@ const skill = (fm.skill as string) ?? '';
     <h2 class="text-lg font-semibold">Gallery</h2>
     <p class="text-sm text-gray-500">Each image: URL + Alt text</p>
     <div id="gallery-list" class="space-y-3">
-      {
-        gallery.map((g) => (
-          <div class="flex items-center gap-2" data-gallery-row>
-            <input
-              type="url"
-              name="galleryUrl"
-              value={g.url}
-              placeholder="Image URL"
-              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-xs"
-            />
-            <input
-              type="text"
-              name="galleryAlt"
-              value={g.alt ?? ''}
-              placeholder="Alt Text"
-              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-            />
-            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs whitespace-nowrap">
-              Delete
-            </button>
-          </div>
-        ))
-      }
+      {gallery.map((g) => (
+        <div class="flex items-center gap-2" data-gallery-row>
+          <input
+            type="url"
+            name="galleryUrl"
+            value={g.url}
+            placeholder="Image URL"
+            class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-xs"
+          />
+          <input
+            type="text"
+            name="galleryAlt"
+            value={g.alt ?? ''}
+            placeholder="Alt Text"
+            class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs whitespace-nowrap">
+            Delete
+          </button>
+        </div>
+      ))}
     </div>
     <button
       type="button"
       data-repeater-add="gallery-list"
       data-template="gallery"
-      class="text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Image</button
+      class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
     >
+      + Add Image
+    </button>
   </div>
 
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
     <h2 class="text-lg font-semibold">Price</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="price-amount">Amount</label>
+        <label class="block text-sm font-medium mb-1" for="price-amount">
+          Amount
+        </label>
         <input
           id="price-amount"
           name="priceAmount"
@@ -230,7 +250,9 @@ const skill = (fm.skill as string) ?? '';
         />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="price-currency">Currency</label>
+        <label class="block text-sm font-medium mb-1" for="price-currency">
+          Currency
+        </label>
         <input
           id="price-currency"
           name="priceCurrency"
@@ -241,7 +263,9 @@ const skill = (fm.skill as string) ?? '';
         />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="price-note">Note</label>
+        <label class="block text-sm font-medium mb-1" for="price-note">
+          Note
+        </label>
         <input
           id="price-note"
           name="priceNote"
@@ -261,54 +285,54 @@ const skill = (fm.skill as string) ?? '';
       <div>
         <label class="block text-sm font-medium mb-1">Environment</label>
         <div id="environment-list" class="space-y-2">
-          {
-            environment.map((e) => (
-              <div class="flex items-center gap-2" data-repeater-row>
-                <input
-                  type="text"
-                  name="environment"
-                  value={e}
-                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                />
-                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
-                  Delete
-                </button>
-              </div>
-            ))
-          }
+          {environment.map((e) => (
+            <div class="flex items-center gap-2" data-repeater-row>
+              <input
+                type="text"
+                name="environment"
+                value={e}
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                Delete
+              </button>
+            </div>
+          ))}
         </div>
         <button
           type="button"
           data-repeater-add="environment-list"
           data-template="environment"
-          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Environment</button
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2"
         >
+          + Add Environment
+        </button>
       </div>
       <div>
         <label class="block text-sm font-medium mb-1">Water Condition</label>
         <div id="water_condition-list" class="space-y-2">
-          {
-            water_condition.map((w) => (
-              <div class="flex items-center gap-2" data-repeater-row>
-                <input
-                  type="text"
-                  name="water_condition"
-                  value={w}
-                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                />
-                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
-                  Delete
-                </button>
-              </div>
-            ))
-          }
+          {water_condition.map((w) => (
+            <div class="flex items-center gap-2" data-repeater-row>
+              <input
+                type="text"
+                name="water_condition"
+                value={w}
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                Delete
+              </button>
+            </div>
+          ))}
         </div>
         <button
           type="button"
           data-repeater-add="water_condition-list"
           data-template="water_condition"
-          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Water Condition</button
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2"
         >
+          + Add Water Condition
+        </button>
       </div>
     </div>
   </div>
@@ -316,63 +340,63 @@ const skill = (fm.skill as string) ?? '';
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
     <h2 class="text-lg font-semibold">Specifications</h2>
     <div id="specs-list" class="space-y-3">
-      {
-        specs.map((s, _i) => (
-          <div class="flex items-center gap-2" data-specs-row>
-            <input
-              type="text"
-              name="specLabel"
-              value={s.label}
-              placeholder="Label (e.g. Length)"
-              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-            />
-            <input
-              type="text"
-              name="specValue"
-              value={s.value}
-              placeholder="Value (e.g. 3.3m)"
-              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-            />
-            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs whitespace-nowrap">
-              Delete
-            </button>
-          </div>
-        ))
-      }
+      {specs.map((s, _i) => (
+        <div class="flex items-center gap-2" data-specs-row>
+          <input
+            type="text"
+            name="specLabel"
+            value={s.label}
+            placeholder="Label (e.g. Length)"
+            class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <input
+            type="text"
+            name="specValue"
+            value={s.value}
+            placeholder="Value (e.g. 3.3m)"
+            class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs whitespace-nowrap">
+            Delete
+          </button>
+        </div>
+      ))}
     </div>
     <button
       type="button"
       data-repeater-add="specs-list"
       data-template="specs"
-      class="text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Spec</button
+      class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
     >
+      + Add Spec
+    </button>
   </div>
 
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
     <h2 class="text-lg font-semibold">Tags</h2>
     <div id="tags-list" class="space-y-2">
-      {
-        tags.map((t, _i) => (
-          <div class="flex items-center gap-2" data-repeater-row>
-            <input
-              type="text"
-              name="tags"
-              value={t}
-              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-            />
-            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
-              Delete
-            </button>
-          </div>
-        ))
-      }
+      {tags.map((t, _i) => (
+        <div class="flex items-center gap-2" data-repeater-row>
+          <input
+            type="text"
+            name="tags"
+            value={t}
+            class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+          />
+          <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+            Delete
+          </button>
+        </div>
+      ))}
     </div>
     <button
       type="button"
       data-repeater-add="tags-list"
       data-template="tag"
-      class="text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Tag</button
+      class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
     >
+      + Add Tag
+    </button>
   </div>
 
   <details class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 group">
@@ -383,164 +407,179 @@ const skill = (fm.skill as string) ?? '';
     </summary>
     <div class="mt-4 space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="definition">Definition</label>
+        <label class="block text-sm font-medium mb-1" for="definition">
+          Definition
+        </label>
         <textarea
           id="definition"
           name="definition"
           rows="3"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-          >{(fm.definition as string) ?? ''}</textarea
-        >
+        >{(fm.definition as string) ?? ''}</textarea>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="problem">Problem (Why This Exists)</label>
+        <label class="block text-sm font-medium mb-1" for="problem">
+          Problem (Why This Exists)
+        </label>
         <textarea
           id="problem"
           name="problem"
           rows="3"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-          >{(fm.problem as string) ?? ''}</textarea
-        >
+        >{(fm.problem as string) ?? ''}</textarea>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="howItWorks">How It Works</label>
+        <label class="block text-sm font-medium mb-1" for="howItWorks">
+          How It Works
+        </label>
         <textarea
           id="howItWorks"
           name="howItWorks"
           rows="3"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-          >{(fm.howItWorks as string) ?? ''}</textarea
-        >
+        >{(fm.howItWorks as string) ?? ''}</textarea>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="audience">Audience (Designed For)</label>
+        <label class="block text-sm font-medium mb-1" for="audience">
+          Audience (Designed For)
+        </label>
         <textarea
           id="audience"
           name="audience"
           rows="2"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-          >{(fm.audience as string) ?? ''}</textarea
-        >
+        >{(fm.audience as string) ?? ''}</textarea>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="skill">Skill Level</label>
+        <label class="block text-sm font-medium mb-1" for="skill">
+          Skill Level
+        </label>
         <select
           id="skill"
           name="skill"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         >
           <option value="">-- Select --</option>
-          <option value="beginner" selected={skill === 'beginner'}>Beginner</option>
-          <option value="intermediate" selected={skill === 'intermediate'}>Intermediate</option>
-          <option value="advanced" selected={skill === 'advanced'}>Advanced</option>
-          <option value="professional" selected={skill === 'professional'}>Professional</option>
+          <option value="beginner" selected={skill === 'beginner'}>
+            Beginner
+          </option>
+          <option value="intermediate" selected={skill === 'intermediate'}>
+            Intermediate
+          </option>
+          <option value="advanced" selected={skill === 'advanced'}>
+            Advanced
+          </option>
+          <option value="professional" selected={skill === 'professional'}>
+            Professional
+          </option>
         </select>
       </div>
       <div>
         <label class="block text-sm font-medium mb-1">Use Cases</label>
         <div id="ai_use_cases-list" class="space-y-2">
-          {
-            ai_use_cases.map((uc) => (
-              <div class="flex items-center gap-2" data-repeater-row>
-                <input
-                  type="text"
-                  name="ai_use_cases"
-                  value={uc}
-                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                />
-                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
-                  Delete
-                </button>
-              </div>
-            ))
-          }
+          {ai_use_cases.map((uc) => (
+            <div class="flex items-center gap-2" data-repeater-row>
+              <input
+                type="text"
+                name="ai_use_cases"
+                value={uc}
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                Delete
+              </button>
+            </div>
+          ))}
         </div>
         <button
           type="button"
           data-repeater-add="ai_use_cases-list"
           data-template="ai_use_cases"
-          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Use Case</button
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2"
         >
+          + Add Use Case
+        </button>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="ai_comparison">Comparison Text</label>
+        <label class="block text-sm font-medium mb-1" for="ai_comparison">
+          Comparison Text
+        </label>
         <textarea
           id="ai_comparison"
           name="ai_comparison"
           rows="3"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-          >{(fm.ai_comparison as string) ?? ''}</textarea
-        >
+        >{(fm.ai_comparison as string) ?? ''}</textarea>
       </div>
       <div>
         <label class="block text-sm font-medium mb-2">FAQ</label>
         <div id="ai_faq-list" class="space-y-3">
-          {
-            ai_faq.map((f) => (
-              <div class="flex items-start gap-2" data-ai-faq-row>
-                <div class="flex-1 space-y-2">
-                  <input
-                    type="text"
-                    name="ai_faq_q"
-                    value={f.q}
-                    placeholder="Question"
-                    class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <input
-                    type="text"
-                    name="ai_faq_a"
-                    value={f.a}
-                    placeholder="Answer"
-                    class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                </div>
-                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs mt-2">
-                  Delete
-                </button>
+          {ai_faq.map((f) => (
+            <div class="flex items-start gap-2" data-ai-faq-row>
+              <div class="flex-1 space-y-2">
+                <input
+                  type="text"
+                  name="ai_faq_q"
+                  value={f.q}
+                  placeholder="Question"
+                  class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <input
+                  type="text"
+                  name="ai_faq_a"
+                  value={f.a}
+                  placeholder="Answer"
+                  class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
               </div>
-            ))
-          }
+              <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs mt-2">
+                Delete
+              </button>
+            </div>
+          ))}
         </div>
         <button
           type="button"
           data-repeater-add="ai_faq-list"
           data-template="ai_faq"
-          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add FAQ</button
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2"
         >
+          + Add FAQ
+        </button>
       </div>
       <div>
         <label class="block text-sm font-medium mb-2">AI Specs (Key / Value)</label>
         <div id="ai_specs-list" class="space-y-3">
-          {
-            ai_specsEntries.map((s) => (
-              <div class="flex items-center gap-2" data-ai-specs-row>
-                <input
-                  type="text"
-                  name="ai_specs_key"
-                  value={s.key}
-                  placeholder="Key"
-                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-                />
-                <input
-                  type="text"
-                  name="ai_specs_value"
-                  value={s.value}
-                  placeholder="Value"
-                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                />
-                <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
-                  Delete
-                </button>
-              </div>
-            ))
-          }
+          {ai_specsEntries.map((s) => (
+            <div class="flex items-center gap-2" data-ai-specs-row>
+              <input
+                type="text"
+                name="ai_specs_key"
+                value={s.key}
+                placeholder="Key"
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+              <input
+                type="text"
+                name="ai_specs_value"
+                value={s.value}
+                placeholder="Value"
+                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+              <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+                Delete
+              </button>
+            </div>
+          ))}
         </div>
         <button
           type="button"
           data-repeater-add="ai_specs-list"
           data-template="ai_specs"
-          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">+ Add Spec</button
+          class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2"
         >
+          + Add Spec
+        </button>
       </div>
     </div>
   </details>
@@ -553,7 +592,9 @@ const skill = (fm.skill as string) ?? '';
     </summary>
     <div class="mt-4 space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="seo-title">Meta Title</label>
+        <label class="block text-sm font-medium mb-1" for="seo-title">
+          Meta Title
+        </label>
         <input
           id="seo-title"
           name="seoTitle"
@@ -564,18 +605,21 @@ const skill = (fm.skill as string) ?? '';
         />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="seo-desc">Meta Description</label>
+        <label class="block text-sm font-medium mb-1" for="seo-desc">
+          Meta Description
+        </label>
         <textarea
           id="seo-desc"
           name="seoDescription"
           data-fm-path="metadata.description"
           rows="2"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-          >{(seo.description as string) ?? ''}</textarea
-        >
+        >{(seo.description as string) ?? ''}</textarea>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="seo-canonical">Canonical URL</label>
+        <label class="block text-sm font-medium mb-1" for="seo-canonical">
+          Canonical URL
+        </label>
         <input
           id="seo-canonical"
           name="seoCanonical"
@@ -586,36 +630,39 @@ const skill = (fm.skill as string) ?? '';
         />
       </div>
       <div class="flex items-center gap-6 text-sm">
-        <label class="flex items-center gap-2"
-          ><input
+        <label class="flex items-center gap-2">
+          <input
             type="checkbox"
             name="seoRobotIndex"
             data-fm-path="metadata.robots.index"
             value="true"
             checked={seoRobots.index !== false}
             class="rounded"
-          /> Index</label
-        >
-        <label class="flex items-center gap-2"
-          ><input
+          />{' '}
+          Index
+        </label>
+        <label class="flex items-center gap-2">
+          <input
             type="checkbox"
             name="seoRobotFollow"
             data-fm-path="metadata.robots.follow"
             value="true"
             checked={seoRobots.follow !== false}
             class="rounded"
-          /> Follow</label
-        >
-        <label class="flex items-center gap-2"
-          ><input
+          />{' '}
+          Follow
+        </label>
+        <label class="flex items-center gap-2">
+          <input
             type="checkbox"
             name="seoIgnoreTitleTemplate"
             data-fm-path="metadata.ignoreTitleTemplate"
             value="true"
             checked={seo.ignoreTitleTemplate === true}
             class="rounded"
-          /> Ignore Title Template</label
-        >
+          />{' '}
+          Ignore Title Template
+        </label>
       </div>
       <div class="border-t border-gray-200 dark:border-gray-800 pt-4">
         <div class="text-sm font-medium mb-2">Open Graph</div>
@@ -688,8 +735,12 @@ const skill = (fm.skill as string) ?? '';
 
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6">
     <div class="flex items-center justify-between mb-2">
-      <label class="block text-sm font-medium" for="body">Product Details (Markdown, MDX supported)</label>
-      <span class="text-xs text-gray-400" id="body-stats">0 characters</span>
+      <label class="block text-sm font-medium" for="body">
+        Product Details (Markdown, MDX supported)
+      </label>
+      <span class="text-xs text-gray-400" id="body-stats">
+        0 characters
+      </span>
     </div>
     <textarea
       id="body"
@@ -697,17 +748,16 @@ const skill = (fm.skill as string) ?? '';
       rows="22"
       required
       class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-      >{initial.body}</textarea
-    >
+    >{initial.body}</textarea>
   </div>
 
-  <div
-    class="sticky bottom-0 -mx-6 px-6 py-4 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 flex items-center justify-end gap-3"
-  >
+  <div class="sticky bottom-0 -mx-6 px-6 py-4 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 flex items-center justify-end gap-3">
     <a
       href="/keystatic/products/"
-      class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">Cancel</a
+      class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
     >
+      Cancel
+    </a>
   </div>
 </form>
 

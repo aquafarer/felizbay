@@ -126,158 +126,153 @@ const crumbs = [{ name: t('nav.home') || 'Home', href: `/${lang}/` }, { name: 'T
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
-  {
-    Body ? (
-      <Body lang={lang} />
-    ) : (
-      <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
-        <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">
-          Terms and Conditions
-        </h1>
-        <div class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-          <p>
-            <em>Last updated: October 19, 2026</em>
-          </p>
-          <p>Please read these terms and conditions carefully before using Our Service.</p>
+  {Body ? (
+    <Body lang={lang} />
+  ) : (
+    <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+      <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">Terms and Conditions</h1>
+      <div class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+        <p>
+          <em>Last updated: October 19, 2026</em>
+        </p>
+        <p>Please read these terms and conditions carefully before using Our Service.</p>
 
-          <h2 id="warranty">Warranty</h2>
-          <p>
-            Felizbay pools and SPA tubs carry a 2-year limited warranty against manufacturing defects, covering seams,
-            valves, and fabric. Every pool ships with a repair kit for small field repairs, and spare parts — valves,
-            patches, pumps, covers — remain available through info@felizbay.com for the life of the product.
-            Model-specific warranty documentation is provided with each product; where that documentation differs from
-            this section, it governs. To make a warranty claim or request spare parts, contact info@felizbay.com.
-          </p>
+        <h2 id="warranty">Warranty</h2>
+        <p>
+          Felizbay pools and SPA tubs carry a 2-year limited warranty against manufacturing defects, covering seams,
+          valves, and fabric. Every pool ships with a repair kit for small field repairs, and spare parts — valves,
+          patches, pumps, covers — remain available through info@felizbay.com for the life of the product.
+          Model-specific warranty documentation is provided with each product; where that documentation differs from
+          this section, it governs. To make a warranty claim or request spare parts, contact info@felizbay.com.
+        </p>
 
-          <h2 id="orders-and-deliveries">Orders & Deliveries</h2>
-          <p>
-            Orders are placed through written quotations and order confirmations. Your quotation specifies prices,
-            delivery terms, lead times, and any order-specific conditions, including any return arrangements. To request
-            a quotation, use the request form on this site or contact info@felizbay.com.
-          </p>
+        <h2 id="orders-and-deliveries">Orders & Deliveries</h2>
+        <p>
+          Orders are placed through written quotations and order confirmations. Your quotation specifies prices,
+          delivery terms, lead times, and any order-specific conditions, including any return arrangements. To request a
+          quotation, use the request form on this site or contact info@felizbay.com.
+        </p>
 
-          <h2 id="interpretation-and-definitions">Interpretation and Definitions</h2>
-          <h3 id="interpretation">Interpretation</h3>
-          <p>
-            The words of which the initial letter is capitalized have meanings defined under the following conditions.
-          </p>
-          <h3 id="definitions">Definitions</h3>
-          <p>For the purposes of these Terms and Conditions:</p>
-          <ul>
-            <li>
-              <strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with
-              a party.
-            </li>
-            <li>
-              <strong>Country</strong> refers to: New Mexico, United States
-            </li>
-            <li>
-              <strong>Company</strong> refers to Aquafarer LLC, a supplier of inflatable swimming pools.
-            </li>
-            <li>
-              <strong>Device</strong> means any device that can access the Service.
-            </li>
-            <li>
-              <strong>Service</strong> refers to the Website.
-            </li>
-            <li>
-              <strong>Website</strong> refers to Felizbay, accessible from{' '}
-              <a href="https://felizbay.com">https://felizbay.com</a>
-            </li>
-            <li>
-              <strong>You</strong> means the individual accessing or using the Service.
-            </li>
-          </ul>
+        <h2 id="interpretation-and-definitions">Interpretation and Definitions</h2>
+        <h3 id="interpretation">Interpretation</h3>
+        <p>
+          The words of which the initial letter is capitalized have meanings defined under the following conditions.
+        </p>
+        <h3 id="definitions">Definitions</h3>
+        <p>For the purposes of these Terms and Conditions:</p>
+        <ul>
+          <li>
+            <strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a
+            party.
+          </li>
+          <li>
+            <strong>Country</strong> refers to: New Mexico, United States
+          </li>
+          <li>
+            <strong>Company</strong> refers to Aquafarer LLC, a supplier of inflatable swimming pools.
+          </li>
+          <li>
+            <strong>Device</strong> means any device that can access the Service.
+          </li>
+          <li>
+            <strong>Service</strong> refers to the Website.
+          </li>
+          <li>
+            <strong>Website</strong> refers to Felizbay, accessible from{' '}
+            <a href="https://felizbay.com">https://felizbay.com</a>
+          </li>
+          <li>
+            <strong>You</strong> means the individual accessing or using the Service.
+          </li>
+        </ul>
 
-          <h2 id="acknowledgment">Acknowledgment</h2>
-          <p>
-            These are the Terms and Conditions governing the use of this Service. Your access to and use of the Service
-            is conditioned on Your acceptance of and compliance with these Terms and Conditions.
-          </p>
-          <p>
-            You represent that you are over the age of 18. The Company does not permit those under 18 to use the
-            Service.
-          </p>
+        <h2 id="acknowledgment">Acknowledgment</h2>
+        <p>
+          These are the Terms and Conditions governing the use of this Service. Your access to and use of the Service is
+          conditioned on Your acceptance of and compliance with these Terms and Conditions.
+        </p>
+        <p>
+          You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.
+        </p>
 
-          <h2 id="links-to-other-websites">Links to Other Websites</h2>
-          <p>
-            Our Service may contain links to third-party web sites or services that are not owned or controlled by the
-            Company. We assume no responsibility for the content, privacy policies, or practices of any third party
-            sites or services.
-          </p>
+        <h2 id="links-to-other-websites">Links to Other Websites</h2>
+        <p>
+          Our Service may contain links to third-party web sites or services that are not owned or controlled by the
+          Company. We assume no responsibility for the content, privacy policies, or practices of any third party sites
+          or services.
+        </p>
 
-          <h2 id="termination">Termination</h2>
-          <p>
-            We may terminate or suspend Your access immediately, without prior notice or liability, for any reason
-            whatsoever, including without limitation if You breach these Terms and Conditions.
-          </p>
+        <h2 id="termination">Termination</h2>
+        <p>
+          We may terminate or suspend Your access immediately, without prior notice or liability, for any reason
+          whatsoever, including without limitation if You breach these Terms and Conditions.
+        </p>
 
-          <h2 id="limitation-of-liability">Limitation of Liability</h2>
-          <p>
-            To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable
-            for any special, incidental, indirect, or consequential damages whatsoever.
-          </p>
+        <h2 id="limitation-of-liability">Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable
+          for any special, incidental, indirect, or consequential damages whatsoever.
+        </p>
 
-          <h2 id="as-is-and-as-available-disclaimer">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
-          <p>
-            The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty
-            of any kind.
-          </p>
+        <h2 id="as-is-and-as-available-disclaimer">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+        <p>
+          The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of
+          any kind.
+        </p>
 
-          <h2 id="regional-distribution">Regional Distribution & Service Areas</h2>
-          <p>Aquafarer LLC operates with exclusive regional distribution agreements.</p>
+        <h2 id="regional-distribution">Regional Distribution & Service Areas</h2>
+        <p>Aquafarer LLC operates with exclusive regional distribution agreements.</p>
 
-          <h2 id="governing-law">Governing Law</h2>
-          <p>
-            The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the
-            Service.
-          </p>
+        <h2 id="governing-law">Governing Law</h2>
+        <p>
+          The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the
+          Service.
+        </p>
 
-          <h2 id="disputes-resolution">Disputes Resolution</h2>
-          <p>
-            If You have any concern or dispute about the Service, You agree to first try to resolve the dispute
-            informally by contacting the Company.
-          </p>
+        <h2 id="disputes-resolution">Disputes Resolution</h2>
+        <p>
+          If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally
+          by contacting the Company.
+        </p>
 
-          <h2 id="for-european-union-eu-users">For European Union (EU) Users</h2>
-          <p>
-            If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the
-            country in which you are resident in.
-          </p>
+        <h2 id="for-european-union-eu-users">For European Union (EU) Users</h2>
+        <p>
+          If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country
+          in which you are resident in.
+        </p>
 
-          <h2 id="united-states-legal-compliance">United States Legal Compliance</h2>
-          <p>
-            You represent and warrant that You are not located in a country subject to US government embargo and You are
-            not listed on any US government list of prohibited or restricted parties.
-          </p>
+        <h2 id="united-states-legal-compliance">United States Legal Compliance</h2>
+        <p>
+          You represent and warrant that You are not located in a country subject to US government embargo and You are
+          not listed on any US government list of prohibited or restricted parties.
+        </p>
 
-          <h2 id="severability-and-waiver">Severability and Waiver</h2>
-          <p>
-            If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and
-            interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable
-            law.
-          </p>
+        <h2 id="severability-and-waiver">Severability and Waiver</h2>
+        <p>
+          If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and
+          interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable
+          law.
+        </p>
 
-          <h2 id="translation-interpretation">Translation Interpretation</h2>
-          <p>
-            These Terms and Conditions may have been translated. You agree that the original English text shall prevail
-            in the case of a dispute.
-          </p>
+        <h2 id="translation-interpretation">Translation Interpretation</h2>
+        <p>
+          These Terms and Conditions may have been translated. You agree that the original English text shall prevail in
+          the case of a dispute.
+        </p>
 
-          <h2 id="changes-to-these-terms-and-conditions">Changes to These Terms and Conditions</h2>
-          <p>
-            We reserve the right to modify or replace these Terms at any time. If a revision is material We will make
-            reasonable efforts to provide at least 30 days' notice.
-          </p>
+        <h2 id="changes-to-these-terms-and-conditions">Changes to These Terms and Conditions</h2>
+        <p>
+          We reserve the right to modify or replace these Terms at any time. If a revision is material We will make
+          reasonable efforts to provide at least 30 days' notice.
+        </p>
 
-          <h2 id="contact-us">Contact Us</h2>
-          <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
-          <ul>
-            <li>By email: info@felizbay.com</li>
-            <li>By mail: New Mexico, USA</li>
-          </ul>
-        </div>
-      </section>
-    )
-  }
+        <h2 id="contact-us">Contact Us</h2>
+        <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
+        <ul>
+          <li>By email: info@felizbay.com</li>
+          <li>By mail: New Mexico, USA</li>
+        </ul>
+      </div>
+    </section>
+  )}
 </Layout>

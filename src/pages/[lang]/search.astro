@@ -36,20 +36,19 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
         <button
           type="submit"
           class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition"
-          >{t('search.submit') || 'Search'}</button
         >
+          {t('search.submit') || 'Search'}
+        </button>
       </form>
     </div>
 
     <div id="search-filters" class="hidden mb-6 flex flex-wrap gap-2" data-search-filters></div>
     <div id="search-results" class="space-y-4">
-      {
-        q && (
-          <p class="text-gray-500 dark:text-gray-400" id="loading">
-            {t('search.loading') || 'Searching...'}
-          </p>
-        )
-      }
+      {q && (
+        <p class="text-gray-500 dark:text-gray-400" id="loading">
+          {t('search.loading') || 'Searching...'}
+        </p>
+      )}
       {!q && <p class="text-gray-500 dark:text-gray-400">{t('search.prompt') || 'Enter a keyword to search.'}</p>}
     </div>
   </section>

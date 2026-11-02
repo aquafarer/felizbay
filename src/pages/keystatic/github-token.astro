@@ -13,38 +13,58 @@ const { owner, repo } = getRepoInfo();
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6">
       <h1 class="text-xl font-semibold">Link GitHub Personal Access Token</h1>
       <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-        Used to push content changes to <code class="font-mono">{owner}/{repo}</code>. Not persisted to any file or
-        database &mdash; only encrypted and saved in your browser cookie.
+        Used to push content changes to{' '}
+        <code class="font-mono">
+          {owner}/{repo}
+        </code>
+        . Not persisted to any file or database &mdash; only encrypted and saved in your browser cookie.
       </p>
 
       <div class="mt-4 rounded-md bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-3 text-sm">
         <div class="font-medium mb-1">How to Generate a Token</div>
         <ol class="list-decimal list-inside space-y-1 text-gray-600 dark:text-gray-400">
           <li>
-            Visit <a
+            Visit{' '}
+            <a
               href="https://github.com/settings/tokens"
               target="_blank"
               rel="noopener"
-              class="text-blue-600 hover:underline">github.com/settings/tokens</a
+              class="text-blue-600 hover:underline"
             >
+              github.com/settings/tokens
+            </a>
           </li>
-          <li>Click <strong>Generate new token</strong> ?Select <strong>Fine-grained token</strong></li>
-          <li>Resource owner: <code class="font-mono">{owner}</code></li>
-          <li>Repository access ?Only select repositories ?<code class="font-mono">{repo}</code></li>
+          <li>
+            Click <strong>Generate new token</strong> ?Select <strong>Fine-grained token</strong>
+          </li>
+          <li>
+            Resource owner: <code class="font-mono">{owner}</code>
+          </li>
+          <li>
+            Repository access ?Only select repositories ?<code class="font-mono">{repo}</code>
+          </li>
           <li>
             Permissions ?Repository permissions:
             <ul class="list-disc list-inside ml-5">
-              <li><strong>Contents</strong>: Read and write</li>
-              <li><strong>Metadata</strong>: Read-only (default)</li>
+              <li>
+                <strong>Contents</strong>: Read and write
+              </li>
+              <li>
+                <strong>Metadata</strong>: Read-only (default)
+              </li>
             </ul>
           </li>
-          <li>Click <strong>Generate token</strong>, copy it (only shown once)</li>
+          <li>
+            Click <strong>Generate token</strong>, copy it (only shown once)
+          </li>
         </ol>
       </div>
 
       <form id="token-form" class="mt-6 space-y-4">
         <div>
-          <label for="token" class="block text-sm font-medium mb-1">Personal Access Token</label>
+          <label for="token" class="block text-sm font-medium mb-1">
+            Personal Access Token
+          </label>
           <input
             type="password"
             id="token"
@@ -61,20 +81,21 @@ const { owner, repo } = getRepoInfo();
             type="submit"
             id="submit-btn"
             class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md disabled:opacity-50"
-            >Verify & Save</button
           >
-          {
-            token && (
-              <button
-                type="button"
-                id="clear-btn"
-                class="px-4 py-2 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-md text-red-600 dark:text-red-400"
-              >
-                Clear Saved Token
-              </button>
-            )
-          }
-          <a href="/keystatic/" class="text-sm text-gray-500 hover:underline">Back to Dashboard</a>
+            Verify & Save
+          </button>
+          {token && (
+            <button
+              type="button"
+              id="clear-btn"
+              class="px-4 py-2 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-md text-red-600 dark:text-red-400"
+            >
+              Clear Saved Token
+            </button>
+          )}
+          <a href="/keystatic/" class="text-sm text-gray-500 hover:underline">
+            Back to Dashboard
+          </a>
         </div>
       </form>
     </div>

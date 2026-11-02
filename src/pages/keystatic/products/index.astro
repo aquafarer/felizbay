@@ -84,18 +84,18 @@ const categoryLabel: Record<string, string> = {
       <CsvToolbar dir="src/content/products/" label="Products" />
       <a
         href="/keystatic/products/new/"
-        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">+ New Product</a
+        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
       >
+        + New Product
+      </a>
     </div>
   </div>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Failed to load: {loadError} &mdash; Please check if the token still has repository access
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Failed to load: {loadError} &mdash; Please check if the token still has repository access
+    </div>
+  )}
 
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden">
     <table id="file-list" class="w-full text-sm">
@@ -115,66 +115,62 @@ const categoryLabel: Record<string, string> = {
         data-dir="src/content/products/"
         data-content-type="products"
       >
-        {
-          rows.length === 0 && !loadError && (
-            <tr>
-              <td colspan="6" class="px-4 py-12 text-center text-gray-500">
-                No products yet. Click + New Product to create the first one.
-              </td>
-            </tr>
-          )
-        }
-        {
-          rows.map((row) => (
-            <tr class="hover:bg-gray-50 dark:hover:bg-gray-900/50">
-              <td class="px-4 py-3">
-                <a
-                  href={`/keystatic/products/${encodeURIComponent(row.name)}/`}
-                  class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  {row.title}
-                </a>
-                <div class="text-xs text-gray-400 font-mono mt-0.5">{row.name}</div>
-              </td>
-              <td class="px-4 py-3">
-                {row.category ? (
-                  <span class="inline-block px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs">
-                    {categoryLabel[row.category] ?? row.category}
-                  </span>
-                ) : (
-                  <span class="text-gray-400">&mdash;</span>
-                )}
-              </td>
-              <td class="px-4 py-3 text-gray-600 dark:text-gray-300 font-mono text-xs">
-                {row.sku || <span class="text-gray-400">&mdash;</span>}
-              </td>
-              <td class="px-4 py-3 text-gray-600 dark:text-gray-300">
-                {row.date || <span class="text-gray-400">&mdash;</span>}
-              </td>
-              <td class="px-4 py-3">
-                {row.draft ? (
-                  <span class="text-xs px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">
-                    Draft
-                  </span>
-                ) : (
-                  <span class="text-xs text-green-600 dark:text-green-400">Published</span>
-                )}
-              </td>
-              <td class="px-4 py-3 text-right">
-                <button
-                  type="button"
-                  data-delete-product
-                  data-name={row.name}
-                  data-path={row.path}
-                  data-sha={row.sha}
-                  class="text-red-600 dark:text-red-400 hover:underline text-xs"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))
-        }
+        {rows.length === 0 && !loadError && (
+          <tr>
+            <td colspan="6" class="px-4 py-12 text-center text-gray-500">
+              No products yet. Click + New Product to create the first one.
+            </td>
+          </tr>
+        )}
+        {rows.map((row) => (
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <td class="px-4 py-3">
+              <a
+                href={`/keystatic/products/${encodeURIComponent(row.name)}/`}
+                class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                {row.title}
+              </a>
+              <div class="text-xs text-gray-400 font-mono mt-0.5">{row.name}</div>
+            </td>
+            <td class="px-4 py-3">
+              {row.category ? (
+                <span class="inline-block px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs">
+                  {categoryLabel[row.category] ?? row.category}
+                </span>
+              ) : (
+                <span class="text-gray-400">&mdash;</span>
+              )}
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-300 font-mono text-xs">
+              {row.sku || <span class="text-gray-400">&mdash;</span>}
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-300">
+              {row.date || <span class="text-gray-400">&mdash;</span>}
+            </td>
+            <td class="px-4 py-3">
+              {row.draft ? (
+                <span class="text-xs px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">
+                  Draft
+                </span>
+              ) : (
+                <span class="text-xs text-green-600 dark:text-green-400">Published</span>
+              )}
+            </td>
+            <td class="px-4 py-3 text-right">
+              <button
+                type="button"
+                data-delete-product
+                data-name={row.name}
+                data-path={row.path}
+                data-sha={row.sha}
+                class="text-red-600 dark:text-red-400 hover:underline text-xs"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   </div>

@@ -38,7 +38,9 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
     <h2 class="text-lg font-semibold">Basic Info</h2>
     <div>
-      <label class="block text-sm font-medium mb-1" for="title">Title <span class="text-red-500">*</span></label>
+      <label class="block text-sm font-medium mb-1" for="title">
+        Title <span class="text-red-500">*</span>
+      </label>
       <input
         id="title"
         name="title"
@@ -50,7 +52,9 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="publishDate">Publish Date</label>
+        <label class="block text-sm font-medium mb-1" for="publishDate">
+          Publish Date
+        </label>
         <input
           id="publishDate"
           name="publishDate"
@@ -60,7 +64,9 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
         />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="category">Category</label>
+        <label class="block text-sm font-medium mb-1" for="category">
+          Category
+        </label>
         <input
           id="category"
           name="category"
@@ -77,28 +83,32 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
       </div>
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="summary">Summary</label>
+      <label class="block text-sm font-medium mb-1" for="summary">
+        Summary
+      </label>
       <textarea
         id="summary"
         name="summary"
         rows="2"
         class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
-        >{(fm.summary as string) ?? ''}</textarea
-      >
+      >{(fm.summary as string) ?? ''}</textarea>
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="description">Description</label>
+      <label class="block text-sm font-medium mb-1" for="description">
+        Description
+      </label>
       <textarea
         id="description"
         name="description"
         rows="4"
         class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
-        >{(fm.description as string) ?? ''}</textarea
-      >
+      >{(fm.description as string) ?? ''}</textarea>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="environment">Environment</label>
+        <label class="block text-sm font-medium mb-1" for="environment">
+          Environment
+        </label>
         <input
           id="environment"
           name="environment"
@@ -115,7 +125,9 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
         </datalist>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="skill">Skill</label>
+        <label class="block text-sm font-medium mb-1" for="skill">
+          Skill
+        </label>
         <input
           id="skill"
           name="skill"
@@ -128,55 +140,55 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
     <div>
       <label class="block text-sm font-medium mb-1">Products</label>
       <div id="products-list" class="space-y-2">
-        {
-          products.map((p, _i) => (
-            <div class="flex items-center gap-2" data-repeater-row>
-              <input
-                type="text"
-                name="products"
-                value={p}
-                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-              />
-              <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
-                Delete
-              </button>
-            </div>
-          ))
-        }
+        {products.map((p, _i) => (
+          <div class="flex items-center gap-2" data-repeater-row>
+            <input
+              type="text"
+              name="products"
+              value={p}
+              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+              Delete
+            </button>
+          </div>
+        ))}
       </div>
       <button
         type="button"
         data-repeater-add="products-list"
         data-template="product"
         data-name="products"
-        class="mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Product</button
+        class="mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
       >
+        + Add Product
+      </button>
     </div>
     <div>
       <label class="block text-sm font-medium mb-1">Tags</label>
       <div id="tags-list" class="space-y-2">
-        {
-          tags.map((t, _i) => (
-            <div class="flex items-center gap-2" data-repeater-row>
-              <input
-                type="text"
-                name="tags"
-                value={t}
-                class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-              />
-              <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
-                Delete
-              </button>
-            </div>
-          ))
-        }
+        {tags.map((t, _i) => (
+          <div class="flex items-center gap-2" data-repeater-row>
+            <input
+              type="text"
+              name="tags"
+              value={t}
+              class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+            <button type="button" data-repeater-remove class="text-red-500 hover:underline text-xs">
+              Delete
+            </button>
+          </div>
+        ))}
       </div>
       <button
         type="button"
         data-repeater-add="tags-list"
         data-template="tag"
-        class="mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Tag</button
+        class="mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
       >
+        + Add Tag
+      </button>
     </div>
     <div class="flex items-center gap-6">
       <label class="flex items-center gap-2 text-sm">
@@ -194,7 +206,9 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
     </summary>
     <div class="mt-4 space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-1" for="seo-title">Meta Title</label>
+        <label class="block text-sm font-medium mb-1" for="seo-title">
+          Meta Title
+        </label>
         <input
           id="seo-title"
           name="seoTitle"
@@ -205,18 +219,21 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
         />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="seo-desc">Meta Description</label>
+        <label class="block text-sm font-medium mb-1" for="seo-desc">
+          Meta Description
+        </label>
         <textarea
           id="seo-desc"
           name="seoDescription"
           data-fm-path="metadata.description"
           rows="2"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-          >{(seo.description as string) ?? ''}</textarea
-        >
+        >{(seo.description as string) ?? ''}</textarea>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1" for="seo-canonical">Canonical URL</label>
+        <label class="block text-sm font-medium mb-1" for="seo-canonical">
+          Canonical URL
+        </label>
         <input
           id="seo-canonical"
           name="seoCanonical"
@@ -227,36 +244,39 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
         />
       </div>
       <div class="flex items-center gap-6 text-sm">
-        <label class="flex items-center gap-2"
-          ><input
+        <label class="flex items-center gap-2">
+          <input
             type="checkbox"
             name="seoRobotIndex"
             data-fm-path="metadata.robots.index"
             value="true"
             checked={seoRobots.index !== false}
             class="rounded"
-          /> Index</label
-        >
-        <label class="flex items-center gap-2"
-          ><input
+          />{' '}
+          Index
+        </label>
+        <label class="flex items-center gap-2">
+          <input
             type="checkbox"
             name="seoRobotFollow"
             data-fm-path="metadata.robots.follow"
             value="true"
             checked={seoRobots.follow !== false}
             class="rounded"
-          /> Follow</label
-        >
-        <label class="flex items-center gap-2"
-          ><input
+          />{' '}
+          Follow
+        </label>
+        <label class="flex items-center gap-2">
+          <input
             type="checkbox"
             name="seoIgnoreTitleTemplate"
             data-fm-path="metadata.ignoreTitleTemplate"
             value="true"
             checked={seo.ignoreTitleTemplate === true}
             class="rounded"
-          /> Ignore Title Template</label
-        >
+          />{' '}
+          Ignore Title Template
+        </label>
       </div>
       <div class="border-t border-gray-200 dark:border-gray-800 pt-4">
         <div class="text-sm font-medium mb-2">Open Graph</div>
@@ -329,8 +349,12 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
 
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6">
     <div class="flex items-center justify-between mb-2">
-      <label class="block text-sm font-medium" for="body">Content (Markdown, MDX supported)</label>
-      <span class="text-xs text-gray-400" id="body-stats">0 characters</span>
+      <label class="block text-sm font-medium" for="body">
+        Content (Markdown, MDX supported)
+      </label>
+      <span class="text-xs text-gray-400" id="body-stats">
+        0 characters
+      </span>
     </div>
     <textarea
       id="body"
@@ -338,17 +362,16 @@ const products = Array.isArray(fm.products) ? (fm.products as string[]) : [];
       rows="22"
       required
       class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-      >{initial.body}</textarea
-    >
+    >{initial.body}</textarea>
   </div>
 
-  <div
-    class="sticky bottom-0 -mx-6 px-6 py-4 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 flex items-center justify-end gap-3"
-  >
+  <div class="sticky bottom-0 -mx-6 px-6 py-4 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 flex items-center justify-end gap-3">
     <a
       href="/keystatic/case-use/"
-      class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">Cancel</a
+      class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
     >
+      Cancel
+    </a>
   </div>
 </form>
 

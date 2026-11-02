@@ -64,13 +64,11 @@ if (token) {
           id="locale-select"
           class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         >
-          {
-            ADMIN_LOCALE_CODES.map((l) => (
-              <option value={l} selected={l === locale}>
-                {ADMIN_LOCALES[l]}
-              </option>
-            ))
-          }
+          {ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))}
         </select>
       </div>
     </div>
@@ -80,13 +78,11 @@ if (token) {
     </p>
   </div>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Failed to read: {loadError}
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Failed to read: {loadError}
+    </div>
+  )}
 
   <form
     id="hero-form"
@@ -103,50 +99,53 @@ if (token) {
           name="images"
           rows="8"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-          >{images.join('\n')}</textarea
-        >
+        >{images.join('\n')}</textarea>
         <p class="mt-2 text-xs text-gray-500">
-          One image path per line. Relative to site root (e.g. <code class="font-mono"
-            >https://assets.felizbay.com/images/Felizbay/hero/Felizbay-hero-design-concept.webp</code
-          >).
+          One image path per line. Relative to site root (e.g.{' '}
+          <code class="font-mono">
+            https://assets.felizbay.com/images/Felizbay/hero/Felizbay-hero-design-concept.webp
+          </code>
+          ).
         </p>
       </div>
       <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 p-4">
         <p class="text-xs text-gray-500 mb-2">Preview ({images.length} images)</p>
         <div class="flex gap-2 overflow-x-auto pb-2" data-preview>
-          {
-            images.map((src) => (
-              <img
-                src={src}
-                alt=""
-                class="h-20 w-32 rounded object-cover shrink-0 border border-gray-200"
-                loading="lazy"
-              />
-            ))
-          }
+          {images.map((src) => (
+            <img
+              src={src}
+              alt=""
+              class="h-20 w-32 rounded object-cover shrink-0 border border-gray-200"
+              loading="lazy"
+            />
+          ))}
         </div>
       </div>
     </div>
 
-    <div
-      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-    >
+    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-        <div class="text-xs text-gray-500" data-fileInfo>File: <code class="font-mono">{file}</code></div>
+        <div class="text-xs text-gray-500" data-fileInfo>
+          File: <code class="font-mono">{file}</code>
+        </div>
         <div class="flex gap-2">
-          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
-            >Cancel</a
-          >
+          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">
+            Cancel
+          </a>
           <button
             id="save-draft-btn"
             type="button"
-            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
           >
+            Save Draft
+          </button>
           <button
             id="publish-btn"
             type="button"
-            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
           >
+            Publish
+          </button>
         </div>
       </div>
     </div>

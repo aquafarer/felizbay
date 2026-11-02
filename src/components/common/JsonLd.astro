@@ -353,8 +353,6 @@ if (type === 'Organization') {
 }
 ---
 
-{
-  schema && Object.keys(schema).length > 2 && (
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
-  )
-}
+{schema && Object.keys(schema).length > 2 && (
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}

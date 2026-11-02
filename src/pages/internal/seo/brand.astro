@@ -60,11 +60,9 @@ const comparisonCount = brandPages.filter((p) => p.category === 'comparison').le
         <div class="md:col-span-3">
           <span class="text-gray-400 text-xs uppercase tracking-wider">Ethos</span>
           <div class="flex gap-2 mt-1">
-            {
-              BRAND_SUMMARY.ethos.map((e) => (
-                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">{e}</span>
-              ))
-            }
+            {BRAND_SUMMARY.ethos.map((e) => (
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">{e}</span>
+            ))}
           </div>
         </div>
       </div>
@@ -88,38 +86,36 @@ const comparisonCount = brandPages.filter((p) => p.category === 'comparison').le
             </tr>
           </thead>
           <tbody>
-            {
-              brandPages.map((p) => (
-                <tr class="border-b border-gray-100 hover:bg-gray-50">
-                  <td class="py-3 pr-4 font-medium text-gray-900">{p.title}</td>
-                  <td class="py-3 pr-4">
-                    <span
-                      class={`px-2 py-0.5 rounded text-xs font-medium ${
-                        p.category === 'beginner'
-                          ? 'bg-sky-100 text-sky-700'
-                          : p.category === 'comparison'
-                            ? 'bg-purple-100 text-purple-700'
-                            : p.category === 'guide'
-                              ? 'bg-amber-100 text-amber-700'
-                              : 'bg-green-100 text-green-700'
-                      }`}
-                    >
-                      {p.category}
-                    </span>
-                  </td>
-                  <td class="py-3 pr-4 text-sky-600">{p.cta.text}</td>
-                  <td class="py-3 pr-4 text-gray-500 text-xs">{p.cta.link}</td>
-                  <td class="py-3 pr-4">
-                    <div class="flex gap-1 flex-wrap">
-                      {p.productSlugs.map((s) => (
-                        <span class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs">{s}</span>
-                      ))}
-                    </div>
-                  </td>
-                  <td class="py-3 text-xs text-gray-400">{p.brandKeywords.slice(0, 2).join(', ')}</td>
-                </tr>
-              ))
-            }
+            {brandPages.map((p) => (
+              <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-3 pr-4 font-medium text-gray-900">{p.title}</td>
+                <td class="py-3 pr-4">
+                  <span
+                    class={`px-2 py-0.5 rounded text-xs font-medium ${
+                      p.category === 'beginner'
+                        ? 'bg-sky-100 text-sky-700'
+                        : p.category === 'comparison'
+                          ? 'bg-purple-100 text-purple-700'
+                          : p.category === 'guide'
+                            ? 'bg-amber-100 text-amber-700'
+                            : 'bg-green-100 text-green-700'
+                    }`}
+                  >
+                    {p.category}
+                  </span>
+                </td>
+                <td class="py-3 pr-4 text-sky-600">{p.cta.text}</td>
+                <td class="py-3 pr-4 text-gray-500 text-xs">{p.cta.link}</td>
+                <td class="py-3 pr-4">
+                  <div class="flex gap-1 flex-wrap">
+                    {p.productSlugs.map((s) => (
+                      <span class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs">{s}</span>
+                    ))}
+                  </div>
+                </td>
+                <td class="py-3 text-xs text-gray-400">{p.brandKeywords.slice(0, 2).join(', ')}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

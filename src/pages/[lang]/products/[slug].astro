@@ -235,7 +235,6 @@ const specGroups = detailV2
 ---
 
 ---
-
 <ProductLayout metadata={metadata} breadcrumbs={productCrumbs}>
   <JsonLd
     type="Product"
@@ -324,13 +323,11 @@ const specGroups = detailV2
         : {}),
     }}
   />
-  {
-    gallery.length > 1 &&
-      gallery.slice(1).map((g) => {
-        const imgUrl = typeof g.raw === 'string' ? g.raw : String(g.raw?.src || '');
-        return imgUrl ? <JsonLd type="ImageObject" image={{ url: imgUrl, caption: g.alt || product.title }} /> : null;
-      })
-  }
+  {gallery.length > 1 &&
+    gallery.slice(1).map((g) => {
+      const imgUrl = typeof g.raw === 'string' ? g.raw : String(g.raw?.src || '');
+      return imgUrl ? <JsonLd type="ImageObject" image={{ url: imgUrl, caption: g.alt || product.title }} /> : null;
+    })}
 
   {/* Product Hero: Image Gallery + Info */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
@@ -339,43 +336,15 @@ const specGroups = detailV2
         <!-- Left: Image Gallery -->
         <div class="space-y-4">
           <div class="relative aspect-[4/3] bg-gray-100 dark:bg-slate-800 rounded-2xl overflow-hidden">
-            {
-              gallery.length > 0 ? (
-                gallery[0].raw ? (
-                  (() => {
-                    const img0 = gallery[0];
-                    return typeof img0.raw === 'string' ? (
-                      <img
-                        id="gallery-main"
-                        src={img0.raw}
-                        alt={img0.alt || product.title}
-                        class="w-full h-full object-contain p-2"
-                        loading="eager"
-                        fetchpriority="high"
-                        decoding="async"
-                      />
-                    ) : (
-                      <Image
-                        id="gallery-main"
-                        src={img0.raw as ImageMetadata}
-                        alt={img0.alt || product.title}
-                        class="w-full h-full object-contain p-2"
-                        widths={[480, 768, 1024]}
-                        width={768}
-                        height={576}
-                        format="webp"
-                        loading="eager"
-                        fetchpriority="high"
-                        decoding="async"
-                      />
-                    );
-                  })()
-                ) : image ? (
-                  typeof image === 'string' ? (
+            {gallery.length > 0 ? (
+              gallery[0].raw ? (
+                (() => {
+                  const img0 = gallery[0];
+                  return typeof img0.raw === 'string' ? (
                     <img
                       id="gallery-main"
-                      src={image}
-                      alt={product.title}
+                      src={img0.raw}
+                      alt={img0.alt || product.title}
                       class="w-full h-full object-contain p-2"
                       loading="eager"
                       fetchpriority="high"
@@ -384,8 +353,8 @@ const specGroups = detailV2
                   ) : (
                     <Image
                       id="gallery-main"
-                      src={image as ImageMetadata}
-                      alt={product.title}
+                      src={img0.raw as ImageMetadata}
+                      alt={img0.alt || product.title}
                       class="w-full h-full object-contain p-2"
                       widths={[480, 768, 1024]}
                       width={768}
@@ -395,12 +364,8 @@ const specGroups = detailV2
                       fetchpriority="high"
                       decoding="async"
                     />
-                  )
-                ) : (
-                  <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-slate-600 text-sm">
-                    No image available
-                  </div>
-                )
+                  );
+                })()
               ) : image ? (
                 typeof image === 'string' ? (
                   <img
@@ -432,151 +397,165 @@ const specGroups = detailV2
                   No image available
                 </div>
               )
-            }
-          </div>
-          {
-            gallery.length > 1 && (
-              <div class="flex gap-3 overflow-x-auto pb-2">
-                {gallery.map((g, i) => (
-                  <button
-                    data-gallery-thumb={typeof g.raw === 'string' ? g.raw : String(g.raw?.src || '')}
-                    data-gallery-alt={g.alt || `Image ${i + 1}`}
-                    class={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-colors bg-gray-100 dark:bg-slate-800 ${i === 0 ? 'border-sky-500' : 'border-transparent hover:border-sky-400'}`}
-                    aria-label={`View ${g.alt || `image ${i + 1}`}`}
-                  >
-                    {typeof g.raw === 'string' ? (
-                      <img
-                        src={g.raw}
-                        alt={g.alt || `Image ${i + 1}`}
-                        class="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    ) : g.raw ? (
-                      <Image
-                        src={g.raw as ImageMetadata}
-                        alt={g.alt || `Image ${i + 1}`}
-                        class="w-full h-full object-cover"
-                        widths={[80]}
-                        width={80}
-                        height={80}
-                        format="webp"
-                        loading="lazy"
-                      />
-                    ) : null}
-                  </button>
-                ))}
+            ) : image ? (
+              typeof image === 'string' ? (
+                <img
+                  id="gallery-main"
+                  src={image}
+                  alt={product.title}
+                  class="w-full h-full object-contain p-2"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              ) : (
+                <Image
+                  id="gallery-main"
+                  src={image as ImageMetadata}
+                  alt={product.title}
+                  class="w-full h-full object-contain p-2"
+                  widths={[480, 768, 1024]}
+                  width={768}
+                  height={576}
+                  format="webp"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              )
+            ) : (
+              <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-slate-600 text-sm">
+                No image available
               </div>
-            )
-          }
+            )}
+          </div>
+          {gallery.length > 1 && (
+            <div class="flex gap-3 overflow-x-auto pb-2">
+              {gallery.map((g, i) => (
+                <button
+                  data-gallery-thumb={typeof g.raw === 'string' ? g.raw : String(g.raw?.src || '')}
+                  data-gallery-alt={g.alt || `Image ${i + 1}`}
+                  class={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-colors bg-gray-100 dark:bg-slate-800 ${i === 0 ? 'border-sky-500' : 'border-transparent hover:border-sky-400'}`}
+                  aria-label={`View ${g.alt || `image ${i + 1}`}`}
+                >
+                  {typeof g.raw === 'string' ? (
+                    <img
+                      src={g.raw}
+                      alt={g.alt || `Image ${i + 1}`}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : g.raw ? (
+                    <Image
+                      src={g.raw as ImageMetadata}
+                      alt={g.alt || `Image ${i + 1}`}
+                      class="w-full h-full object-cover"
+                      widths={[80]}
+                      width={80}
+                      height={80}
+                      format="webp"
+                      loading="lazy"
+                    />
+                  ) : null}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <!-- Right: Product Info -->
         <div class="flex flex-col gap-6">
           <div>
             <div class="flex items-center gap-3 text-sm text-gray-400 dark:text-slate-500 mb-3">
-              {
-                product.categoryLabel && (
-                  <span class="font-medium uppercase tracking-wider">{product.categoryLabel}</span>
-                )
-              }
-              {
-                product.sku && (
+              {product.categoryLabel && (
+                <span class="font-medium uppercase tracking-wider">{product.categoryLabel}</span>
+              )}
+              {product.sku && (
+                <>
                   <>
-                    <>
-                      <span aria-hidden="true">·</span>
-                      <span class="font-mono text-xs">{product.sku}</span>
-                    </>
+                    <span aria-hidden="true">·</span>
+                    <span class="font-mono text-xs">{product.sku}</span>
                   </>
-                )
-              }
+                </>
+              )}
             </div>
             <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 leading-[1.15]">
               {product.title}
             </h1>
-            {
-              product.summary && (
-                <p class="mt-3 text-base text-gray-600 dark:text-slate-400 leading-relaxed">{product.summary}</p>
-              )
-            }
-            {
-              product.price?.amount ? (
-                <div class="mt-4">
-                  <div class="flex items-baseline gap-3">
-                    <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">
-                      {product.price.currency === 'USD' || !product.price.currency
-                        ? `$${product.price.amount}`
-                        : `${product.price.currency ?? ''} ${product.price.amount}`}
+            {product.summary && (
+              <p class="mt-3 text-base text-gray-600 dark:text-slate-400 leading-relaxed">{product.summary}</p>
+            )}
+            {product.price?.amount ? (
+              <div class="mt-4">
+                <div class="flex items-baseline gap-3">
+                  <span class="text-3xl font-bold text-gray-900 dark:text-slate-100">
+                    {product.price.currency === 'USD' || !product.price.currency
+                      ? `$${product.price.amount}`
+                      : `${product.price.currency ?? ''} ${product.price.amount}`}
+                  </span>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                    {product.sku
+                      ? `${t('product.retailPrice') || 'Retail price'} — SKU ${product.sku}`
+                      : 'Wholesale FOB price'}
+                  </span>
+                  {product.inStock && (
+                    <span class="text-sm font-medium text-green-600">
+                      {t('product.inStock') || 'Available to order'}
                     </span>
-                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                      {product.sku
-                        ? `${t('product.retailPrice') || 'Retail price'} — SKU ${product.sku}`
-                        : 'Wholesale FOB price'}
-                    </span>
-                    {product.inStock && (
-                      <span class="text-sm font-medium text-green-600">
-                        {t('product.inStock') || 'Available to order'}
-                      </span>
-                    )}
-                  </div>
+                  )}
                 </div>
-              ) : null
-            }
+              </div>
+            ) : null}
             {product.price?.note && <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{product.price.note}</p>}
           </div>
 
           {/* Key Specs Grid */}
-          {
-            specRows.length > 0 && (
-              <div class="grid grid-cols-2 gap-2">
-                {specRows.slice(0, 6).map((s: any) => (
-                  <div class="flex flex-col gap-0.5 p-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-                    <span class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                      {s.label}
-                    </span>
-                    <span class="text-sm font-medium text-gray-800 dark:text-slate-200">{s.value}</span>
+          {specRows.length > 0 && (
+            <div class="grid grid-cols-2 gap-2">
+              {specRows.slice(0, 6).map((s: any) => (
+                <div class="flex flex-col gap-0.5 p-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                  <span class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                    {s.label}
+                  </span>
+                  <span class="text-sm font-medium text-gray-800 dark:text-slate-200">{s.value}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Full Specs Toggle */}
+          {specRows.length > 6 && (
+            <details class="group">
+              <summary class="text-sm font-semibold text-gray-500 dark:text-slate-400 cursor-pointer hover:text-gray-700 dark:hover:text-slate-200 transition-colors list-none flex items-center gap-2">
+                {t('product.specifications')}
+                <span class="text-[10px] group-open:rotate-180 transition-transform">&#9660;</span>
+              </summary>
+              <div class="mt-3 grid grid-cols-2 gap-2">
+                {specRows.slice(6).map((s: any) => (
+                  <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+                    <span class="text-xs font-medium text-gray-600 dark:text-slate-400 capitalize">{s.label}</span>
+                    <span class="text-xs text-gray-500 dark:text-slate-500 ml-2 text-right">{s.value}</span>
                   </div>
                 ))}
               </div>
-            )
-          }
-
-          {/* Full Specs Toggle */}
-          {
-            specRows.length > 6 && (
-              <details class="group">
-                <summary class="text-sm font-semibold text-gray-500 dark:text-slate-400 cursor-pointer hover:text-gray-700 dark:hover:text-slate-200 transition-colors list-none flex items-center gap-2">
-                  {t('product.specifications')}
-                  <span class="text-[10px] group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <div class="mt-3 grid grid-cols-2 gap-2">
-                  {specRows.slice(6).map((s: any) => (
-                    <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-                      <span class="text-xs font-medium text-gray-600 dark:text-slate-400 capitalize">{s.label}</span>
-                      <span class="text-xs text-gray-500 dark:text-slate-500 ml-2 text-right">{s.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </details>
-            )
-          }
+            </details>
+          )}
 
           {/* CTA Buttons */}
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            {
-              product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
-                <form method="POST" action="/api/checkout" class="flex-1">
-                  <input type="hidden" name="sku" value={product.sku} />
-                  <input type="hidden" name="lang" value={lang} />
-                  <button
-                    type="submit"
-                    class="inline-flex w-full items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
-                  >
-                    <Icon name="tabler:shopping-cart" class="w-5 h-5" />
-                    {t('product.buyNow') || 'Buy Now'}
-                  </button>
-                </form>
-              ) : null
-            }
+            {product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
+              <form method="POST" action="/api/checkout" class="flex-1">
+                <input type="hidden" name="sku" value={product.sku} />
+                <input type="hidden" name="lang" value={lang} />
+                <button
+                  type="submit"
+                  class="inline-flex w-full items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+                >
+                  <Icon name="tabler:shopping-cart" class="w-5 h-5" />
+                  {t('product.buyNow') || 'Buy Now'}
+                </button>
+              </form>
+            ) : null}
             <a
               href={`/${lang}/contact/?product=${encodeURIComponent(product.title)}`}
               class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
@@ -594,170 +573,152 @@ const specGroups = detailV2
   {isDetailV2 && assuranceItems.length > 0 && <PurchaseAssurance items={assuranceItems} />}
 
   {/* TLDR (AI-crawlable) */}
-  {
-    (product.definition || rec) && (
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
-        <Tldr
-          summary={product.definition || rec?.definition}
-          points={[
-            `${product.audience || rec?.audience}`,
-            `Use cases: ${(product.ai_use_cases || rec?.ai_use_cases || []).slice(0, 3).join(', ')}`,
-          ]}
-        />
-      </section>
-    )
-  }
+  {(product.definition || rec) && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
+      <Tldr
+        summary={product.definition || rec?.definition}
+        points={[
+          `${product.audience || rec?.audience}`,
+          `Use cases: ${(product.ai_use_cases || rec?.ai_use_cases || []).slice(0, 3).join(', ')}`,
+        ]}
+      />
+    </section>
+  )}
 
   {/* Environment & Water Condition Tags */}
-  {
-    (product.environment || []).length > 0 || (product.water_condition || []).length > 0 ? (
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
-        <div class="flex flex-wrap gap-2">
-          {(product.environment || []).map((e: string) => (
-            <span class="px-3 py-1.5 bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 text-xs font-medium rounded-full">
-              {e}
-            </span>
-          ))}
-          {(product.water_condition || []).map((w: string) => (
-            <span class="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-xs font-medium rounded-full">
-              {w}
-            </span>
-          ))}
-        </div>
+  {(product.environment || []).length > 0 || (product.water_condition || []).length > 0 ? (
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
+      <div class="flex flex-wrap gap-2">
+        {(product.environment || []).map((e: string) => (
+          <span class="px-3 py-1.5 bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 text-xs font-medium rounded-full">
+            {e}
+          </span>
+        ))}
+        {(product.water_condition || []).map((w: string) => (
+          <span class="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-xs font-medium rounded-full">
+            {w}
+          </span>
+        ))}
       </div>
-    ) : null
-  }
+    </div>
+  ) : null}
 
   {/* Tags */}
-  {
-    product.tags && product.tags.length > 0 && (
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
-        <div class="flex flex-wrap gap-1.5">
-          {product.tags.map((tag: any) => (
-            <span class="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 text-gray-500 dark:text-slate-400 text-xs rounded-md">
-              {String((tag as any)?.title || (tag as any)?.slug || tag || '').trim()}
-            </span>
+  {product.tags && product.tags.length > 0 && (
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
+      <div class="flex flex-wrap gap-1.5">
+        {product.tags.map((tag: any) => (
+          <span class="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 text-gray-500 dark:text-slate-400 text-xs rounded-md">
+            {String((tag as any)?.title || (tag as any)?.slug || tag || '').trim()}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {/* Content (MDX) */}
+  {(PRODUCT_CONTENT_L10N[lang]?.[product.slug] || product.Content) && (
+    <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+        {PRODUCT_CONTENT_L10N[lang]?.[product.slug] ? (
+          <div
+            class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none"
+            set:html={marked.parse(PRODUCT_CONTENT_L10N[lang]![product.slug])}
+          />
+        ) : (
+          <div class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none">
+            <product.Content />
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  {/* Module 03+05 — Fit Guide & Size Checker (detail V2) */}
+  {detailV2 && catalogSeries && (
+    <FitGuide
+      ui={detailUi}
+      fitIntro={detailV2.fitIntro}
+      fitRows={detailV2.fitRows}
+      fitNotice={detailV2.fitNotice}
+      catalogItems={catalogSeries.items}
+      quoteHref={`/${lang}/contact/?product=${encodeURIComponent(product.title)}`}
+      compareHref="/products/compare/"
+      retailSku={product.sku || undefined}
+      showChecker={!product.sku}
+      wholesaleHref={localizeHref('/products/specs/', lang)}
+    />
+  )}
+
+  {/* Comparison */}
+  {(product.ai_comparison || rec?.ai_comparison) && (
+    <section
+      class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
+      data-ai-block="comparison"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+          {t('product.comparison')}
+        </span>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
+          {t('product.howCompares')}
+        </h2>
+        <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+          {product.ai_comparison || rec?.ai_comparison}
+        </p>
+      </div>
+    </section>
+  )}
+
+  {/* Module 06 — Package Contents (detail V2) */}
+  {detailV2 && (
+    <PackageContents
+      title={detailUi['product.packageTitle']}
+      includedTitle={detailUi['product.includedInPackage']}
+      requiredTitle={detailUi['product.requiredSeparately']}
+      optionalTitle={detailUi['product.optionalAddOns']}
+      included={detailV2.packageIncluded}
+      requiredSeparately={detailV2.packageRequired}
+      optionalAddOns={poolAccessories}
+      showFob={!product.sku}
+      currencyNote={
+        product.sku
+          ? 'Individual availability and pricing on request — contact us for single-piece options.'
+          : PRICE_BASIS_NOTE
+      }
+    />
+  )}
+
+  {/* Module 07 — Setup & Storage (detail V2) */}
+  {detailV2 && (
+    <SetupStorage title={detailUi['product.setupTitle']} steps={detailV2.setupSteps} links={setupLinksL10n} />
+  )}
+
+  {/* FAQ Section */}
+  {!isDetailV2 && faqs.length > 0 && (
+    <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">
+          {t('product.faq')}
+        </h2>
+        <div class="space-y-3">
+          {faqs.map((f: any) => (
+            <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
+                {f.q}
+                <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
+                  &#9660;
+                </span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
+                {f.a}
+              </div>
+            </details>
           ))}
         </div>
       </div>
-    )
-  }
-
-  {/* Content (MDX) */}
-  {
-    (PRODUCT_CONTENT_L10N[lang]?.[product.slug] || product.Content) && (
-      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-16">
-          {PRODUCT_CONTENT_L10N[lang]?.[product.slug] ? (
-            <div
-              class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none"
-              set:html={marked.parse(PRODUCT_CONTENT_L10N[lang]![product.slug])}
-            />
-          ) : (
-            <div class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none">
-              <product.Content />
-            </div>
-          )}
-        </div>
-      </section>
-    )
-  }
-
-  {/* Module 03+05 — Fit Guide & Size Checker (detail V2) */}
-  {
-    detailV2 && catalogSeries && (
-      <FitGuide
-        ui={detailUi}
-        fitIntro={detailV2.fitIntro}
-        fitRows={detailV2.fitRows}
-        fitNotice={detailV2.fitNotice}
-        catalogItems={catalogSeries.items}
-        quoteHref={`/${lang}/contact/?product=${encodeURIComponent(product.title)}`}
-        compareHref="/products/compare/"
-        retailSku={product.sku || undefined}
-        showChecker={!product.sku}
-        wholesaleHref={localizeHref('/products/specs/', lang)}
-      />
-    )
-  }
-
-  {/* Comparison */}
-  {
-    (product.ai_comparison || rec?.ai_comparison) && (
-      <section
-        class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800"
-        data-ai-block="comparison"
-      >
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
-            {t('product.comparison')}
-          </span>
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">
-            {t('product.howCompares')}
-          </h2>
-          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">
-            {product.ai_comparison || rec?.ai_comparison}
-          </p>
-        </div>
-      </section>
-    )
-  }
-
-  {/* Module 06 — Package Contents (detail V2) */}
-  {
-    detailV2 && (
-      <PackageContents
-        title={detailUi['product.packageTitle']}
-        includedTitle={detailUi['product.includedInPackage']}
-        requiredTitle={detailUi['product.requiredSeparately']}
-        optionalTitle={detailUi['product.optionalAddOns']}
-        included={detailV2.packageIncluded}
-        requiredSeparately={detailV2.packageRequired}
-        optionalAddOns={poolAccessories}
-        showFob={!product.sku}
-        currencyNote={
-          product.sku
-            ? 'Individual availability and pricing on request — contact us for single-piece options.'
-            : PRICE_BASIS_NOTE
-        }
-      />
-    )
-  }
-
-  {/* Module 07 — Setup & Storage (detail V2) */}
-  {
-    detailV2 && (
-      <SetupStorage title={detailUi['product.setupTitle']} steps={detailV2.setupSteps} links={setupLinksL10n} />
-    )
-  }
-
-  {/* FAQ Section */}
-  {
-    !isDetailV2 && faqs.length > 0 && (
-      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">
-            {t('product.faq')}
-          </h2>
-          <div class="space-y-3">
-            {faqs.map((f: any) => (
-              <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
-                <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
-                  {f.q}
-                  <span class="shrink-0 ml-2 text-gray-300 dark:text-slate-600 group-open:rotate-180 transition-transform text-xs">
-                    &#9660;
-                  </span>
-                </summary>
-                <div class="px-5 pb-4 text-sm text-gray-600 dark:text-slate-400 leading-relaxed border-t border-gray-100 dark:border-slate-700 pt-3 mt-0">
-                  {f.a}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-    )
-  }
+    </section>
+  )}
 
   {/* Module 08 — FAQ (detail V2) */}
   {isDetailV2 && faqs.length > 0 && <ProductFaq title={detailUi['product.faqTitle']} faqs={faqs as any} />}
@@ -765,56 +726,52 @@ const specGroups = detailV2
   <JsonLd type="FAQPage" faqs={faqs} />
 
   {/* Safety & Usage */}
-  {
-    ((rec?.safety_rules || []).length > 0 || (product.safety_rules || []).length > 0) && (
-      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="safety">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            {t('product.safetyUsage') || 'Safety & Usage'}
-          </h2>
-          <div class="bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl px-6 py-5">
-            <ul class="space-y-2.5">
-              {(product.safety_rules || rec?.safety_rules || []).map((rule: string) => (
-                <li class="flex items-start gap-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
-                  <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 flex-shrink-0" />
-                  <span class="capitalize">{rule}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+  {((rec?.safety_rules || []).length > 0 || (product.safety_rules || []).length > 0) && (
+    <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="safety">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+          {t('product.safetyUsage') || 'Safety & Usage'}
+        </h2>
+        <div class="bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl px-6 py-5">
+          <ul class="space-y-2.5">
+            {(product.safety_rules || rec?.safety_rules || []).map((rule: string) => (
+              <li class="flex items-start gap-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
+                <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 flex-shrink-0" />
+                <span class="capitalize">{rule}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )}
 
   {/* Materials & Construction */}
-  {
-    (product.ai_specs || rec?.ai_specs) && (
-      <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
-            {t('product.specifications')}
-          </span>
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            {t('product.specifications')}
-          </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Object.entries(product.ai_specs || rec?.ai_specs || {})
-              .filter(([k]) => !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k))
-              .slice(0, 6)
-              .map(([k, v]) => (
-                <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
-                  <div class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
-                    {k.replace(/_/g, ' ')}
-                  </div>
-                  <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{v}</div>
+  {(product.ai_specs || rec?.ai_specs) && (
+    <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+          {t('product.specifications')}
+        </span>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+          {t('product.specifications')}
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {Object.entries(product.ai_specs || rec?.ai_specs || {})
+            .filter(([k]) => !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k))
+            .slice(0, 6)
+            .map(([k, v]) => (
+              <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                  {k.replace(/_/g, ' ')}
                 </div>
-              ))}
-          </div>
+                <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{v}</div>
+              </div>
+            ))}
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )}
 
   {/* Module 10 — Full Specifications (detail V2) */}
   {isDetailV2 && <SpecTable title={detailUi['product.specTitle']} groups={specGroups} />}
@@ -822,9 +779,9 @@ const specGroups = detailV2
   {/* Certifications & Compliance */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-      <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block"
-        >{t('product.compliance') || 'Compliance'}</span
-      >
+      <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
+        {t('product.compliance') || 'Compliance'}
+      </span>
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
         {t('product.certifications') || 'Certifications & Compliance'}
       </h2>
@@ -835,22 +792,20 @@ const specGroups = detailV2
             <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('product.certs') || 'Certifications'}</h3>
           </div>
           <div class="space-y-2">
-            {
-              productCompliance.certs.map((c: any) => (
-                <div class="flex items-start gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                  <div>
-                    <span class="text-sm font-medium text-gray-900 dark:text-slate-200">{c.label}</span>
-                    {c.standard && <span class="text-xs text-gray-500 dark:text-slate-400"> ({c.standard})</span>}
-                    {c.body && (
-                      <span class="text-xs text-gray-400 dark:text-slate-500 block">
-                        {t('product.certifiedBy') || 'Certified by'} {c.body}
-                      </span>
-                    )}
-                  </div>
+            {productCompliance.certs.map((c: any) => (
+              <div class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                <div>
+                  <span class="text-sm font-medium text-gray-900 dark:text-slate-200">{c.label}</span>
+                  {c.standard && <span class="text-xs text-gray-500 dark:text-slate-400"> ({c.standard})</span>}
+                  {c.body && (
+                    <span class="text-xs text-gray-400 dark:text-slate-500 block">
+                      {t('product.certifiedBy') || 'Certified by'} {c.body}
+                    </span>
+                  )}
                 </div>
-              ))
-            }
+              </div>
+            ))}
           </div>
         </div>
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
@@ -861,14 +816,12 @@ const specGroups = detailV2
             </h3>
           </div>
           <div class="space-y-2">
-            {
-              productCompliance.materialCompliance.map((m: string) => (
-                <div class="flex items-start gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                  <span class="text-sm text-gray-600 dark:text-slate-400">{m}</span>
-                </div>
-              ))
-            }
+            {productCompliance.materialCompliance.map((m: string) => (
+              <div class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                <span class="text-sm text-gray-600 dark:text-slate-400">{m}</span>
+              </div>
+            ))}
           </div>
         </div>
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
@@ -879,24 +832,22 @@ const specGroups = detailV2
             </h3>
           </div>
           <div class="space-y-2 mb-4">
-            {
-              productCompliance.testStandards.map((t: string) => (
-                <div class="flex items-start gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                  <span class="text-sm text-gray-600 dark:text-slate-400">{t}</span>
-                </div>
-              ))
-            }
+            {productCompliance.testStandards.map((t: string) => (
+              <div class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                <span class="text-sm text-gray-600 dark:text-slate-400">{t}</span>
+              </div>
+            ))}
           </div>
           <div class="pt-3 border-t border-gray-200 dark:border-slate-700">
-            <span class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider"
-              >{t('product.warranty') || 'Warranty'}</span
-            >
+            <span class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">
+              {t('product.warranty') || 'Warranty'}
+            </span>
             <p class="text-sm text-gray-700 dark:text-slate-300 mt-1">
               {productCompliance.warranty}{' '}
-              <a href={`${langPrefix}/terms/`} class="text-sky-600 dark:text-sky-400 hover:underline"
-                >({t('nav.terms')})</a
-              >
+              <a href={`${langPrefix}/terms/`} class="text-sky-600 dark:text-sky-400 hover:underline">
+                ({t('nav.terms')})
+              </a>
             </p>
           </div>
         </div>
@@ -915,49 +866,45 @@ const specGroups = detailV2
   </section>
 
   {/* Related Products */}
-  {
-    related.length > 0 && (
-      <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            {t('product.comparedWith')} {product.categoryLabel || t('product.pageTitle')}
-          </h2>
-          <div class="grid md:grid-cols-3 gap-4">
-            {related.map((p) => (
-              <ProductCard product={p} showMeta={false} lang={lang} />
-            ))}
-          </div>
+  {related.length > 0 && (
+    <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+          {t('product.comparedWith')} {product.categoryLabel || t('product.pageTitle')}
+        </h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          {related.map((p) => (
+            <ProductCard product={p} showMeta={false} lang={lang} />
+          ))}
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )}
 
   {/* Related Guides */}
-  {
-    relatedGuides.length > 0 && (
-      <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
-          <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
-            {t('product.relatedGuides')}
-          </h2>
-          <div class="grid md:grid-cols-3 gap-4">
-            {relatedGuides.map((g) => (
-              <a
-                href={localizeHref(`/guides/${g.slug}/`, lang)}
-                class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
-              >
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
-                <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 line-clamp-2">{g.description}</p>
-                <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
-                  {t('product.readGuide')}
-                </span>
-              </a>
-            ))}
-          </div>
+  {relatedGuides.length > 0 && (
+    <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+        <h2 class="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
+          {t('product.relatedGuides')}
+        </h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          {relatedGuides.map((g) => (
+            <a
+              href={localizeHref(`/guides/${g.slug}/`, lang)}
+              class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
+            >
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
+              <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 line-clamp-2">{g.description}</p>
+              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
+                {t('product.readGuide')}
+              </span>
+            </a>
+          ))}
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )}
 
   {/* Business & Customization */}
   <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="business">
@@ -969,10 +916,8 @@ const specGroups = detailV2
         {t('product.businessCtaTitle') || 'Need custom sizes or branded products?'}
       </h2>
       <p class="text-gray-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-        {
-          t('product.businessCtaDesc') ||
-            'Beyond the standard retail range, this product line is also produced for vacation rentals, glamping sites, retailers, and brand partners — including custom sizes, OEM/ODM adaptations, and private-label programs.'
-        }
+        {t('product.businessCtaDesc') ||
+          'Beyond the standard retail range, this product line is also produced for vacation rentals, glamping sites, retailers, and brand partners — including custom sizes, OEM/ODM adaptations, and private-label programs.'}
       </p>
       <div class="mt-6 flex flex-wrap gap-4">
         <a
@@ -997,25 +942,21 @@ const specGroups = detailV2
   <section class="bg-gray-900 dark:bg-slate-800">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-18 text-center">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">{product.title}</h2>
-      <p class="text-lg text-white/70 mb-8 max-w-xl mx-auto">
-        {t('cta.requestQuote')}
-      </p>
+      <p class="text-lg text-white/70 mb-8 max-w-xl mx-auto">{t('cta.requestQuote')}</p>
       <div class="flex flex-wrap items-center justify-center gap-4">
-        {
-          product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
-            <form method="POST" action="/api/checkout">
-              <input type="hidden" name="sku" value={product.sku} />
-              <input type="hidden" name="lang" value={lang} />
-              <button
-                type="submit"
-                class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
-              >
-                <Icon name="tabler:shopping-cart" class="w-5 h-5" />
-                {t('product.buyNow') || 'Buy Now'}
-              </button>
-            </form>
-          ) : null
-        }
+        {product.sku && product.price?.amount && CHECKOUT_ENABLED ? (
+          <form method="POST" action="/api/checkout">
+            <input type="hidden" name="sku" value={product.sku} />
+            <input type="hidden" name="lang" value={lang} />
+            <button
+              type="submit"
+              class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+            >
+              <Icon name="tabler:shopping-cart" class="w-5 h-5" />
+              {t('product.buyNow') || 'Buy Now'}
+            </button>
+          </form>
+        ) : null}
         <a
           href={`/${lang}/contact/?product=${encodeURIComponent(product.title)}`}
           class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
@@ -1045,7 +986,6 @@ const specGroups = detailV2
       window.setTimeout(() => banner.remove(), 8000);
     }
   </script>
-
   {/* Image Gallery Script */}
   <script>
     if (document.querySelector('[data-gallery-thumb]')) {
@@ -1067,19 +1007,16 @@ const specGroups = detailV2
       }
     }
   </script>
-
   {/* Module 16 — Mobile Sticky Buy Bar (detail V2) */}
-  {
-    isDetailV2 && CHECKOUT_ENABLED && (
-      <StickyBuyBar
-        price={product.price?.amount ? `$${product.price.amount}` : ''}
-        priceLabel={product.sku ? detailUi['product.retailPrice'] : ''}
-        sku={product.sku}
-        lang={lang}
-        buyLabel={detailUi['product.buyNow']}
-      />
-    )
-  }
+  {isDetailV2 && CHECKOUT_ENABLED && (
+    <StickyBuyBar
+      price={product.price?.amount ? `$${product.price.amount}` : ''}
+      priceLabel={product.sku ? detailUi['product.retailPrice'] : ''}
+      sku={product.sku}
+      lang={lang}
+      buyLabel={detailUi['product.buyNow']}
+    />
+  )}
 
   <ToBlogLink href={`/${lang}/products/`} text={t('product.backToProducts') || 'Back to Products'} />
 </ProductLayout>

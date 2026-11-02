@@ -124,9 +124,7 @@ const benefits = [
       <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700 mb-4">
         <table class="w-full text-sm">
           <thead>
-            <tr
-              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
-            >
+            <tr class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
               <th class="px-4 py-3">Collection</th>
               <th class="px-4 py-3">Size Range</th>
               <th class="px-4 py-3">Wall Options</th>
@@ -134,26 +132,24 @@ const benefits = [
             </tr>
           </thead>
           <tbody>
-            {
-              seriesRows.map((row, i) => (
-                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
-                  <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
-                    <a href={row.href} class="hover:text-primary dark:hover:text-sky-400">
-                      {row.name}
-                    </a>
-                  </td>
-                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
-                    {row.sizes}
-                  </td>
-                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
-                    {row.wall}
-                  </td>
-                  <td class="px-4 py-2.5 text-right font-semibold text-gray-900 dark:text-slate-100 border-b border-gray-100 dark:border-slate-800">
-                    {row.price}
-                  </td>
-                </tr>
-              ))
-            }
+            {seriesRows.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800">
+                  <a href={row.href} class="hover:text-primary dark:hover:text-sky-400">
+                    {row.name}
+                  </a>
+                </td>
+                <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                  {row.sizes}
+                </td>
+                <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800">
+                  {row.wall}
+                </td>
+                <td class="px-4 py-2.5 text-right font-semibold text-gray-900 dark:text-slate-100 border-b border-gray-100 dark:border-slate-800">
+                  {row.price}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -168,19 +164,17 @@ const benefits = [
         Why Retailers Choose Drop-Stitch Pools
       </h2>
       <div class="grid sm:grid-cols-2 gap-4">
-        {
-          benefits.map((b) => (
-            <div class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
-                <Icon name={b.icon} class="w-5 h-5" />
-              </span>
-              <div>
-                <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{b.title}</h3>
-                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{b.description}</p>
-              </div>
+        {benefits.map((b) => (
+          <div class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+              <Icon name={b.icon} class="w-5 h-5" />
+            </span>
+            <div>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1">{b.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{b.description}</p>
             </div>
-          ))
-        }
+          </div>
+        ))}
       </div>
     </section>
 
@@ -188,26 +182,27 @@ const benefits = [
       <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-3">How to Order</h2>
       <ol class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
         <li>
-          <strong class="text-gray-900 dark:text-slate-200">1.</strong> Browse the <a
-            href="/products/specs/"
-            class="text-primary dark:text-sky-400 hover:underline">specification & FOB price list</a
-          > and shortlist your items.
+          <strong class="text-gray-900 dark:text-slate-200">1.</strong> Browse the{' '}
+          <a href="/products/specs/" class="text-primary dark:text-sky-400 hover:underline">
+            specification & FOB price list
+          </a>{' '}
+          and shortlist your items.
         </li>
         <li>
-          <strong class="text-gray-900 dark:text-slate-200">2.</strong> Request an itemized quotation — single items, mixed
-          containers and annual programs are all welcome.
+          <strong class="text-gray-900 dark:text-slate-200">2.</strong> Request an itemized quotation — single items,
+          mixed containers and annual programs are all welcome.
         </li>
         <li>
-          <strong class="text-gray-900 dark:text-slate-200">3.</strong> Order samples from 1 piece to check quality in your
-          market before committing to volume.
+          <strong class="text-gray-900 dark:text-slate-200">3.</strong> Order samples from 1 piece to check quality in
+          your market before committing to volume.
         </li>
         <li>
-          <strong class="text-gray-900 dark:text-slate-200">4.</strong> Approve the proforma invoice; production runs with
-          inline QC and a 24–48 hour pressure test on every unit.
+          <strong class="text-gray-900 dark:text-slate-200">4.</strong> Approve the proforma invoice; production runs
+          with inline QC and a 24–48 hour pressure test on every unit.
         </li>
         <li>
-          <strong class="text-gray-900 dark:text-slate-200">5.</strong> Goods ship FOB Qingdao (or CFR/CIF/DDP on request)
-          with full export documentation.
+          <strong class="text-gray-900 dark:text-slate-200">5.</strong> Goods ship FOB Qingdao (or CFR/CIF/DDP on
+          request) with full export documentation.
         </li>
       </ol>
     </section>
@@ -218,23 +213,27 @@ const benefits = [
         <a
           href="/oem-odm/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >OEM / ODM</a
         >
+          OEM / ODM
+        </a>
         <a
           href="/private-label/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Private Label</a
         >
+          Private Label
+        </a>
         <a
           href="/commercial-pools/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Commercial Pools</a
         >
+          Commercial Pools
+        </a>
         <a
           href="/quality-control/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Quality Control</a
         >
+          Quality Control
+        </a>
       </div>
     </section>
 
@@ -244,18 +243,21 @@ const benefits = [
         <a
           href="/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Wholesale Cost Guide</a
         >
+          Wholesale Cost Guide
+        </a>
         <a
           href="/guides/inflatable-pool-container-loading-guide/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Container Loading Guide</a
         >
+          Container Loading Guide
+        </a>
         <a
           href="/guides/how-to-choose-a-drop-stitch-pool-manufacturer/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Choosing a Manufacturer</a
         >
+          Choosing a Manufacturer
+        </a>
       </div>
     </section>
   </section>

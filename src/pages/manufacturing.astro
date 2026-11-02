@@ -61,19 +61,17 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
         five controlled steps.
       </p>
       <ol class="space-y-3">
-        {
-          POOL_PRODUCTION_STEPS.map((step, i) => (
-            <li class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-              <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
-                {i + 1}
-              </span>
-              <div>
-                <h3 class="text-base font-bold text-gray-900 dark:text-slate-100 mb-1">{step.title}</h3>
-                <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step.description}</p>
-              </div>
-            </li>
-          ))
-        }
+        {POOL_PRODUCTION_STEPS.map((step, i) => (
+          <li class="flex gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <span class="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-sm font-bold">
+              {i + 1}
+            </span>
+            <div>
+              <h3 class="text-base font-bold text-gray-900 dark:text-slate-100 mb-1">{step.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{step.description}</p>
+            </div>
+          </li>
+        ))}
       </ol>
     </section>
 
@@ -86,16 +84,14 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
         automatic over-pressure protection.
       </p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {
-          POOL_PRESSURE_SPECS.map((p) => (
-            <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-              <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
-                {p.label}
-              </div>
-              <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
+        {POOL_PRESSURE_SPECS.map((p) => (
+          <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+              {p.label}
             </div>
-          ))
-        }
+            <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
+          </div>
+        ))}
       </div>
     </section>
 
@@ -109,28 +105,33 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
         <a
           href="/request-quotation/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Request a Quote</a
         >
+          Request a Quote
+        </a>
         <a
           href="/quality-control/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Quality Control</a
         >
+          Quality Control
+        </a>
         <a
           href="/oem-odm/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >OEM / ODM</a
         >
+          OEM / ODM
+        </a>
         <a
           href="/wholesale/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Wholesale Program</a
         >
+          Wholesale Program
+        </a>
         <a
           href="/for-businesses/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >All Business Programs</a
         >
+          All Business Programs
+        </a>
       </div>
     </section>
 
@@ -140,13 +141,15 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Manufacturing' }];
         <a
           href="/guides/inflatable-pool-pressure-testing-explained/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Pressure Testing Explained</a
         >
+          Pressure Testing Explained
+        </a>
         <a
           href="/guides/how-to-choose-a-drop-stitch-pool-manufacturer/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Choosing a Manufacturer</a
         >
+          Choosing a Manufacturer
+        </a>
       </div>
     </section>
   </section>

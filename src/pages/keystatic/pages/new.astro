@@ -50,7 +50,10 @@ const SECTION_LABELS: Record<string, string> = {
 
 <AdminLayout title="New Page" active="pages">
   <div class="mb-6">
-    <a href="/keystatic/pages/" class="text-sm text-gray-500 hover:underline"> ?Back to Pages list</a>
+    <a href="/keystatic/pages/" class="text-sm text-gray-500 hover:underline">
+      {' '}
+      ?Back to Pages list
+    </a>
     <h1 class="mt-2 text-2xl font-semibold">New Page</h1>
     <p class="mt-1 text-sm text-gray-500">
       Create a new page with a YAML content file, page definition, and locale placeholders.
@@ -115,16 +118,12 @@ const SECTION_LABELS: Record<string, string> = {
               value="hero"
               placeholder="key"
             />
-            <select
-              class="section-type flex-1 px-2 py-1 text-xs border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900"
-            >
-              {
-                ALL_SECTION_TYPES.map((t) => (
-                  <option value={t} selected={t === 'hero'}>
-                    {SECTION_LABELS[t]}
-                  </option>
-                ))
-              }
+            <select class="section-type flex-1 px-2 py-1 text-xs border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900">
+              {ALL_SECTION_TYPES.map((t) => (
+                <option value={t} selected={t === 'hero'}>
+                  {SECTION_LABELS[t]}
+                </option>
+              ))}
             </select>
             <input
               type="text"
@@ -141,27 +140,28 @@ const SECTION_LABELS: Record<string, string> = {
             </button>
           </span>
 
-          <button type="button" id="add-section-btn" class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-            >+ Add Section</button
-          >
+          <button type="button" id="add-section-btn" class="text-xs text-blue-600 dark:text-blue-400 hover:underline">
+            + Add Section
+          </button>
         </div>
 
-        <div
-          class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-        >
+        <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
           <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
             <div id="form-status" class="text-xs text-gray-500"></div>
             <div class="flex gap-2">
               <a
                 href="/keystatic/pages/"
-                class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">Cancel</a
+                class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
               >
+                Cancel
+              </a>
               <button
                 id="submit-btn"
                 type="submit"
                 class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
-                >Create Page</button
               >
+                Create Page
+              </button>
             </div>
           </div>
         </div>
@@ -291,5 +291,5 @@ const SECTION_LABELS: Record<string, string> = {
         }
       })();
     </script>
-  </form></AdminLayout
->
+  </form>
+</AdminLayout>

@@ -106,178 +106,168 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
             </tr>
           </thead>
           <tbody>
-            {
-              fitRows.map((row) => (
-                <tr class="border-t border-gray-100 dark:border-slate-700 align-top">
-                  <td class="px-4 py-3 text-gray-700 dark:text-slate-300">
-                    <span class="mr-1.5 text-green-600 dark:text-green-400">&#10003;</span>
-                    {row.recommended}
-                  </td>
-                  <td class="px-4 py-3 text-gray-600 dark:text-slate-400">{row.check}</td>
-                </tr>
-              ))
-            }
+            {fitRows.map((row) => (
+              <tr class="border-t border-gray-100 dark:border-slate-700 align-top">
+                <td class="px-4 py-3 text-gray-700 dark:text-slate-300">
+                  <span class="mr-1.5 text-green-600 dark:text-green-400">&#10003;</span>
+                  {row.recommended}
+                </td>
+                <td class="px-4 py-3 text-gray-600 dark:text-slate-400">{row.check}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
 
-      {
-        /* Size checker — wholesale/spec pages only. Hidden on fixed-size retail
+      {/* Size checker — wholesale/spec pages only. Hidden on fixed-size retail
           product pages (2026-11 review P0-B): the online sale is one SKU,
-          not a factory-size selection. */
-      }
-      {
-        showChecker && (
-          <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5 md:p-6">
-            <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100">{ui['product.fitCheckerTitle']}</h3>
-            <label class="mt-4 block">
-              <span class="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-slate-400">
-                {ui['product.selectSize']}
-              </span>
-              <select
-                id="fitg-size"
-                class="mt-1.5 w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-500"
-              >
-                {sizeOptions.map((o) => (
-                  <option
-                    value={o.item}
-                    selected={o.item === first?.item}
-                    data-size={o.label}
-                    data-wall={o.wall}
-                    data-fob={retailSku ? undefined : o.fobUsd.toFixed(2)}
-                    data-liters={o.estLiters}
-                    data-internal={o.internal ?? ''}
-                  >
-                    {o.label} — {o.wall}
-                  </option>
-                ))}
-              </select>
-            </label>
+          not a factory-size selection. */}
+      {showChecker && (
+        <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5 md:p-6">
+          <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100">{ui['product.fitCheckerTitle']}</h3>
+          <label class="mt-4 block">
+            <span class="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-slate-400">
+              {ui['product.selectSize']}
+            </span>
+            <select
+              id="fitg-size"
+              class="mt-1.5 w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2.5 text-sm text-gray-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-500"
+            >
+              {sizeOptions.map((o) => (
+                <option
+                  value={o.item}
+                  selected={o.item === first?.item}
+                  data-size={o.label}
+                  data-wall={o.wall}
+                  data-fob={retailSku ? undefined : o.fobUsd.toFixed(2)}
+                  data-liters={o.estLiters}
+                  data-internal={o.internal ?? ''}
+                >
+                  {o.label} — {o.wall}
+                </option>
+              ))}
+            </select>
+          </label>
 
-            {retailSku && (
-              <div class="mt-3 rounded-lg border border-sky-200 dark:border-sky-900/50 bg-sky-50 dark:bg-sky-950/30 px-4 py-3">
-                <p class="text-xs leading-relaxed text-sky-900 dark:text-sky-200">
-                  These are factory sizes for fit reference. The online purchase is the fixed retail set (SKU{' '}
-                  <span class="font-mono font-semibold">{retailSku}</span>) — selecting a size here does not change the
-                  cart. Wholesale FOB pricing for factory sizes is on the{' '}
-                  <a href={wholesaleHref || '/products/specs/'} class="font-semibold underline">
-                    wholesale price list
-                  </a>
-                  .
-                </p>
-              </div>
-            )}
-
-            {/* External dimension diagram (per2.txt §二十 item 2) — redrawn by the selector script */}
-            <div
-              id="fitg-diagram"
-              data-cap-top={diagramCaptions.top}
-              data-cap-side={diagramCaptions.side}
-              data-photos={JSON.stringify(itemPhotos ?? {})}
-              class="mt-4 mx-auto max-w-md"
-              set:html={firstDiagramSvg}
-            />
-
-            {/* Factory photo of the selected size (shown only when one exists) */}
-            {itemPhotos && Object.keys(itemPhotos).length > 0 && (
-              <div
-                id="fitg-photo"
-                class="mt-4 hidden overflow-hidden rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-              >
-                <img id="fitg-photo-img" alt="" class="w-full h-auto" loading="lazy" decoding="async" />
-              </div>
-            )}
-            <p id="fitg-photo-cap" class="mt-1.5 hidden text-[11px] text-gray-400 dark:text-slate-500" />
-
-            <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
-              <div>
-                <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
-                  {ui['product.externalSize']}
-                </dt>
-                <dd id="fitg-size-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
-                  {first?.label}
-                </dd>
-              </div>
-              <div>
-                <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
-                  {ui['product.internalSize']}
-                </dt>
-                <dd id="fitg-internal-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
-                  {first?.internal || '—'}
-                </dd>
-              </div>
-              <div>
-                <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
-                  {ui['product.wallLabel']}
-                </dt>
-                <dd id="fitg-wall-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
-                  {first?.wall}
-                </dd>
-              </div>
-              <div>
-                <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
-                  {ui['product.estFillVolume']}
-                </dt>
-                <dd id="fitg-volume-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
-                  {first?.estLiters ? fmtLiters(first.estLiters) : '—'}
-                </dd>
-              </div>
-              {!retailSku && (
-                <div>
-                  <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
-                    {ui['product.fobWholesale']}
-                  </dt>
-                  <dd id="fitg-fob-val" class="mt-0.5 text-sm font-semibold text-sky-700 dark:text-sky-400">
-                    {first ? fmtFob(first.fobUsd) : '—'}
-                  </dd>
-                </div>
-              )}
-            </dl>
-
-            <p class="mt-3 text-[11px] text-gray-400 dark:text-slate-500 leading-snug">{ui['product.estFillNote']}</p>
-
-            <div class="mt-5 flex flex-wrap gap-3">
-              <a
-                id="fitg-quote"
-                href={quoteHref}
-                class="inline-flex items-center px-5 py-2.5 bg-sky-600 text-white text-sm font-semibold rounded-full hover:bg-sky-700 transition-colors"
-              >
-                {ui['product.requestWholesaleQuote']}
-              </a>
-              <a
-                href={compareHref}
-                class="inline-flex items-center px-5 py-2.5 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-full hover:bg-white dark:hover:bg-slate-800 transition-colors"
-              >
-                {ui['product.compareAllSizes']}
-              </a>
+          {retailSku && (
+            <div class="mt-3 rounded-lg border border-sky-200 dark:border-sky-900/50 bg-sky-50 dark:bg-sky-950/30 px-4 py-3">
+              <p class="text-xs leading-relaxed text-sky-900 dark:text-sky-200">
+                These are factory sizes for fit reference. The online purchase is the fixed retail set (SKU{' '}
+                <span class="font-mono font-semibold">{retailSku}</span>) — selecting a size here does not change the
+                cart. Wholesale FOB pricing for factory sizes is on the{' '}
+                <a href={wholesaleHref || '/products/specs/'} class="font-semibold underline">
+                  wholesale price list
+                </a>
+                .
+              </p>
             </div>
+          )}
+
+          {/* External dimension diagram (per2.txt §二十 item 2) — redrawn by the selector script */}
+          <div
+            id="fitg-diagram"
+            data-cap-top={diagramCaptions.top}
+            data-cap-side={diagramCaptions.side}
+            data-photos={JSON.stringify(itemPhotos ?? {})}
+            class="mt-4 mx-auto max-w-md"
+            set:html={firstDiagramSvg}
+          />
+
+          {/* Factory photo of the selected size (shown only when one exists) */}
+          {itemPhotos && Object.keys(itemPhotos).length > 0 && (
+            <div
+              id="fitg-photo"
+              class="mt-4 hidden overflow-hidden rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900"
+            >
+              <img id="fitg-photo-img" alt="" class="w-full h-auto" loading="lazy" decoding="async" />
+            </div>
+          )}
+          <p id="fitg-photo-cap" class="mt-1.5 hidden text-[11px] text-gray-400 dark:text-slate-500" />
+
+          <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
+            <div>
+              <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                {ui['product.externalSize']}
+              </dt>
+              <dd id="fitg-size-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+                {first?.label}
+              </dd>
+            </div>
+            <div>
+              <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                {ui['product.internalSize']}
+              </dt>
+              <dd id="fitg-internal-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+                {first?.internal || '—'}
+              </dd>
+            </div>
+            <div>
+              <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                {ui['product.wallLabel']}
+              </dt>
+              <dd id="fitg-wall-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+                {first?.wall}
+              </dd>
+            </div>
+            <div>
+              <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                {ui['product.estFillVolume']}
+              </dt>
+              <dd id="fitg-volume-val" class="mt-0.5 text-sm font-semibold text-gray-900 dark:text-slate-100">
+                {first?.estLiters ? fmtLiters(first.estLiters) : '—'}
+              </dd>
+            </div>
+            {!retailSku && (
+              <div>
+                <dt class="text-[11px] uppercase tracking-wider text-gray-500 dark:text-slate-400">
+                  {ui['product.fobWholesale']}
+                </dt>
+                <dd id="fitg-fob-val" class="mt-0.5 text-sm font-semibold text-sky-700 dark:text-sky-400">
+                  {first ? fmtFob(first.fobUsd) : '—'}
+                </dd>
+              </div>
+            )}
+          </dl>
+
+          <p class="mt-3 text-[11px] text-gray-400 dark:text-slate-500 leading-snug">{ui['product.estFillNote']}</p>
+
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a
+              id="fitg-quote"
+              href={quoteHref}
+              class="inline-flex items-center px-5 py-2.5 bg-sky-600 text-white text-sm font-semibold rounded-full hover:bg-sky-700 transition-colors"
+            >
+              {ui['product.requestWholesaleQuote']}
+            </a>
+            <a
+              href={compareHref}
+              class="inline-flex items-center px-5 py-2.5 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-slate-300 text-sm font-medium rounded-full hover:bg-white dark:hover:bg-slate-800 transition-colors"
+            >
+              {ui['product.compareAllSizes']}
+            </a>
           </div>
-        )
-      }
+        </div>
+      )}
 
       {/* Fixed-size retail set card (retail product pages, checker hidden) */}
-      {
-        !showChecker && retailSku && (
-          <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5 md:p-6">
-            <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100">{ui['product.fitCheckerTitle']}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-gray-600 dark:text-slate-400">
-              This page sells one fixed-size retail set (SKU <span class="font-mono font-semibold">{retailSku}</span>) —
-              its exact dimensions are listed in the specifications above. If you need a different size, other factory
-              sizes from this series are available through our commercial program on the{' '}
-              <a href={wholesaleHref || '/products/specs/'} class="font-semibold underline">
-                wholesale price list
-              </a>
-              .
-            </p>
-          </div>
-        )
-      }
+      {!showChecker && retailSku && (
+        <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5 md:p-6">
+          <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100">{ui['product.fitCheckerTitle']}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600 dark:text-slate-400">
+            This page sells one fixed-size retail set (SKU <span class="font-mono font-semibold">{retailSku}</span>) —
+            its exact dimensions are listed in the specifications above. If you need a different size, other factory
+            sizes from this series are available through our commercial program on the{' '}
+            <a href={wholesaleHref || '/products/specs/'} class="font-semibold underline">
+              wholesale price list
+            </a>
+            .
+          </p>
+        </div>
+      )}
     </div>
 
     {/* Elevated / rental notice */}
-    <div
-      class="mt-6 rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 px-5 py-4"
-    >
+    <div class="mt-6 rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 px-5 py-4">
       <h3 class="text-sm font-semibold text-amber-900 dark:text-amber-200">{fitNotice.title}</h3>
       <p class="mt-1 text-sm text-amber-800/90 dark:text-amber-200/80 leading-relaxed">{fitNotice.text}</p>
     </div>

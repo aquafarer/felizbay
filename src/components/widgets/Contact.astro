@@ -100,9 +100,7 @@ const rows = Object.keys(grouped)
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  <div
-    class="flex flex-col max-w-2xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full"
-  >
+  <div class="flex flex-col max-w-2xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
     <form
       id={id}
       method="POST"
@@ -120,44 +118,26 @@ const rows = Object.keys(grouped)
         <label for={`${id}-email-confirm`}>Do not fill this</label>
         <input id={`${id}-email-confirm`} type="text" name="email_confirm" tabindex="-1" autocomplete="off" />
       </div>
-      {
-        turnstileSiteKey && (
-          <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme={isDark ? 'dark' : 'light'} />
-        )
-      }
+      {turnstileSiteKey && (
+        <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme={isDark ? 'dark' : 'light'} />
+      )}
       <div data-form-fields>
-        {
-          rows.map((rowIdx) => {
-            const row = grouped[rowIdx];
-            const isWide =
-              row.length === 1 && (row[0].type === 'textarea' || row[0].type === 'text' || row[0].type === 'email');
-            if (isWide) {
-              const f = row[0];
-              if (f.type === 'textarea') {
-                return (
-                  <div>
-                    <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
-                      {f.label}
-                    </label>
-                    <textarea
-                      id={`${id}-${f.name}`}
-                      name={f.name}
-                      rows={f.rows ?? 4}
-                      placeholder={f.placeholder}
-                      class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                    />
-                  </div>
-                );
-              }
+        {rows.map((rowIdx) => {
+          const row = grouped[rowIdx];
+          const isWide =
+            row.length === 1 && (row[0].type === 'textarea' || row[0].type === 'text' || row[0].type === 'email');
+          if (isWide) {
+            const f = row[0];
+            if (f.type === 'textarea') {
               return (
                 <div>
                   <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
                     {f.label}
                   </label>
-                  <input
+                  <textarea
                     id={`${id}-${f.name}`}
-                    type={(f.type === 'select' ? 'text' : (f.type ?? 'text')) as any}
                     name={f.name}
+                    rows={f.rows ?? 4}
                     placeholder={f.placeholder}
                     class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
                   />
@@ -165,136 +145,148 @@ const rows = Object.keys(grouped)
               );
             }
             return (
-              <div
-                class={`grid grid-cols-1 sm:grid-cols-${row.length} gap-4`}
-                data-fields={row.map((f) => f.name).join(' ')}
-              >
-                {row.map((f) => {
-                  if (f.withCountryCode) {
-                    return (
-                      <div>
-                        <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
-                          {f.label}
-                        </label>
-                        <div class="flex gap-2">
-                          <select
-                            name={`${f.name}_countryCode`}
-                            data-tel-country
-                            class="py-2 px-2 block w-40 text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                            aria-label="Country code"
-                          >
-                            {countryCodes.map((c) => (
-                              <option value={c.code} selected={c.code === defaultCountryCode}>
-                                {c.label}
-                              </option>
-                            ))}
-                          </select>
-                          <input
-                            id={`${id}-${f.name}`}
-                            type="tel"
-                            name={f.name}
-                            inputmode="numeric"
-                            placeholder={f.placeholder ?? '555 123 4567'}
-                            class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                          />
-                        </div>
-                      </div>
-                    );
-                  }
-                  if (f.type === 'select') {
-                    const opts = resolveOptions(f);
-                    return (
-                      <div>
-                        <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
-                          {f.label}
-                        </label>
-                        <select
-                          id={`${id}-${f.name}`}
-                          name={f.name}
-                          class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                          required
-                        >
-                          {opts.map((o) => (
-                            <option value={o.value}>{o.label}</option>
-                          ))}
-                        </select>
-                      </div>
-                    );
-                  }
+              <div>
+                <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
+                  {f.label}
+                </label>
+                <input
+                  id={`${id}-${f.name}`}
+                  type={(f.type === 'select' ? 'text' : (f.type ?? 'text')) as any}
+                  name={f.name}
+                  placeholder={f.placeholder}
+                  class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                />
+              </div>
+            );
+          }
+          return (
+            <div
+              class={`grid grid-cols-1 sm:grid-cols-${row.length} gap-4`}
+              data-fields={row.map((f) => f.name).join(' ')}
+            >
+              {row.map((f) => {
+                if (f.withCountryCode) {
                   return (
                     <div>
                       <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
                         {f.label}
                       </label>
-                      <input
-                        id={`${id}-${f.name}`}
-                        type={(f.type === 'email' ? 'email' : f.type === 'tel' ? 'tel' : 'text') as any}
-                        name={f.name}
-                        placeholder={f.placeholder}
-                        class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                      />
+                      <div class="flex gap-2">
+                        <select
+                          name={`${f.name}_countryCode`}
+                          data-tel-country
+                          class="py-2 px-2 block w-40 text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                          aria-label="Country code"
+                        >
+                          {countryCodes.map((c) => (
+                            <option value={c.code} selected={c.code === defaultCountryCode}>
+                              {c.label}
+                            </option>
+                          ))}
+                        </select>
+                        <input
+                          id={`${id}-${f.name}`}
+                          type="tel"
+                          name={f.name}
+                          inputmode="numeric"
+                          placeholder={f.placeholder ?? '555 123 4567'}
+                          class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                        />
+                      </div>
                     </div>
                   );
-                })}
-              </div>
-            );
-          })
-        }
+                }
+                if (f.type === 'select') {
+                  const opts = resolveOptions(f);
+                  return (
+                    <div>
+                      <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
+                        {f.label}
+                      </label>
+                      <select
+                        id={`${id}-${f.name}`}
+                        name={f.name}
+                        class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                        required
+                      >
+                        {opts.map((o) => (
+                          <option value={o.value}>{o.label}</option>
+                        ))}
+                      </select>
+                    </div>
+                  );
+                }
+                return (
+                  <div>
+                    <label for={`${id}-${f.name}`} class="block text-sm font-medium mb-1">
+                      {f.label}
+                    </label>
+                    <input
+                      id={`${id}-${f.name}`}
+                      type={(f.type === 'email' ? 'email' : f.type === 'tel' ? 'tel' : 'text') as any}
+                      name={f.name}
+                      placeholder={f.placeholder}
+                      class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
 
-      {
-        enableFileUpload && (
-          <div>
-            <label for={`${id}-file`} class="block text-sm font-medium mb-1">
-              {fileLabel}
-            </label>
-            <input
-              id={`${id}-file`}
-              type="file"
-              name="file"
-              accept=".png,.jpg,.jpeg,.svg,.webp,.pdf,.ai,.psd,.dwg,.dxf,.zip"
-              data-file-input
-              data-max-mb={String(fileMaxMB)}
-              class="block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 file:mr-4 file:rounded-md file:border-0 file:bg-sky-50 dark:file:bg-slate-800 file:px-4 file:py-2 file:text-sm file:font-medium file:text-sky-700 dark:file:text-sky-300 hover:file:bg-sky-100 dark:hover:file:bg-slate-700 cursor-pointer"
-            />
-            <p class="mt-1 text-xs text-muted dark:text-slate-400">{fileHint}</p>
-            <p data-file-error class="hidden mt-1 text-xs text-red-600 dark:text-red-400" />
-          </div>
-        )
-      }
+      {enableFileUpload && (
+        <div>
+          <label for={`${id}-file`} class="block text-sm font-medium mb-1">
+            {fileLabel}
+          </label>
+          <input
+            id={`${id}-file`}
+            type="file"
+            name="file"
+            accept=".png,.jpg,.jpeg,.svg,.webp,.pdf,.ai,.psd,.dwg,.dxf,.zip"
+            data-file-input
+            data-max-mb={String(fileMaxMB)}
+            class="block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 file:mr-4 file:rounded-md file:border-0 file:bg-sky-50 dark:file:bg-slate-800 file:px-4 file:py-2 file:text-sm file:font-medium file:text-sky-700 dark:file:text-sky-300 hover:file:bg-sky-100 dark:hover:file:bg-slate-700 cursor-pointer"
+          />
+          <p class="mt-1 text-xs text-muted dark:text-slate-400">{fileHint}</p>
+          <p data-file-error class="hidden mt-1 text-xs text-red-600 dark:text-red-400" />
+        </div>
+      )}
 
-      {
-        consent && (
-          <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
-            <label class="flex items-start gap-3 text-sm text-muted dark:text-slate-300 cursor-pointer select-none">
-              <input
-                type="checkbox"
-                name="consent"
-                data-consent
-                data-consent-error={consentError}
-                required={consentRequired}
-                class="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary cursor-pointer"
-              />
-              <span class="leading-relaxed">
-                {consentText}{' '}
-                <a
-                  href={consentLinkHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-primary underline underline-offset-2 hover:text-secondary dark:text-blue-400"
-                >
-                  {consentLinkText}
-                </a>
-                .
-              </span>
-            </label>
-            <p data-consent-error class="hidden mt-1 text-xs text-red-600 dark:text-red-400" />
-          </div>
-        )
-      }
+      {consent && (
+        <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
+          <label class="flex items-start gap-3 text-sm text-muted dark:text-slate-300 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              name="consent"
+              data-consent
+              data-consent-error={consentError}
+              required={consentRequired}
+              class="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary cursor-pointer"
+            />
+            <span class="leading-relaxed">
+              {consentText}{' '}
+              <a
+                href={consentLinkHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary underline underline-offset-2 hover:text-secondary dark:text-blue-400"
+              >
+                {consentLinkText}
+              </a>
+              .
+            </span>
+          </label>
+          <p data-consent-error class="hidden mt-1 text-xs text-red-600 dark:text-red-400" />
+        </div>
+      )}
 
       <div class="pt-2">
-        <Button type="submit" variant="primary" data-submit-button>{submitButton}</Button>
+        <Button type="submit" variant="primary" data-submit-button>
+          {submitButton}
+        </Button>
       </div>
 
       <div data-form-status class="hidden text-sm font-medium"></div>

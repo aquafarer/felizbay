@@ -63,41 +63,37 @@ const footer = data?.footer ?? {};
           id="locale-select"
           class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         >
-          {
-            locales.map((l) => (
-              <option value={l} selected={l === locale}>
-                {localeLabels[l]}
-              </option>
-            ))
-          }
+          {locales.map((l) => (
+            <option value={l} selected={l === locale}>
+              {localeLabels[l]}
+            </option>
+          ))}
         </select>
       </div>
     </div>
     <p class="mt-2 text-xs text-gray-500">
       File: <code class="font-mono">{file}</code>
-      {
-        !isDefault && (
-          <span class="text-amber-600 dark:text-amber-400">
-            {' '}
-            &mdash; locale override (inherits English nav as baseline)
-          </span>
-        )
-      }
+      {!isDefault && (
+        <span class="text-amber-600 dark:text-amber-400">
+          {' '}
+          &mdash; locale override (inherits English nav as baseline)
+        </span>
+      )}
     </p>
     <p class="mt-2 text-xs text-amber-700 dark:text-amber-400">
       ⚠️ If you rename a menu item or change a link, page content may still reference the old URL. Use the
-      <a class="font-medium underline" href="/keystatic/link-refactor/">Link Refactor Tool</a>
+      <a class="font-medium underline" href="/keystatic/link-refactor/">
+        Link Refactor Tool
+      </a>
       to batch update. A banner will appear below after saving.
     </p>
   </div>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Load failed: {loadError}
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Load failed: {loadError}
+    </div>
+  )}
 
   <form
     id="nav-form"
@@ -111,9 +107,7 @@ const footer = data?.footer ?? {};
       open
       class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
     >
-      <summary
-        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
-      >
+      <summary class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900">
         <div>
           <div class="text-sm font-semibold">Top Bar</div>
           <div class="text-xs text-gray-500 font-mono mt-0.5">header.topBar &mdash; thin utility bar above nav</div>
@@ -122,41 +116,39 @@ const footer = data?.footer ?? {};
       <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800 space-y-4">
         <div>
           <div class="flex items-center justify-between mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300"
-              >Top Bar Links (e.g. Find a Store | Help | Join Us | Sign In)</label
-            >
-            <button type="button" data-add-topbar-link class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-              >+ Add Link</button
-            >
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Top Bar Links (e.g. Find a Store | Help | Join Us | Sign In)
+            </label>
+            <button type="button" data-add-topbar-link class="text-xs text-blue-600 dark:text-blue-400 hover:underline">
+              + Add Link
+            </button>
           </div>
           <div data-topbar-list class="space-y-2">
-            {
-              (topBar ?? []).map((l: any) => (
-                <div data-topbar-row class="flex gap-2">
-                  <input
-                    type="text"
-                    name="topbarText"
-                    value={l.text ?? ''}
-                    placeholder="Link Text"
-                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <input
-                    type="text"
-                    name="topbarHref"
-                    value={l.href ?? ''}
-                    placeholder="/url"
-                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <button
-                    type="button"
-                    data-remove-topbar-link
-                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
-                  >
-                    Delete
-                  </button>
-                </div>
-              ))
-            }
+            {(topBar ?? []).map((l: any) => (
+              <div data-topbar-row class="flex gap-2">
+                <input
+                  type="text"
+                  name="topbarText"
+                  value={l.text ?? ''}
+                  placeholder="Link Text"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <input
+                  type="text"
+                  name="topbarHref"
+                  value={l.href ?? ''}
+                  placeholder="/url"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button
+                  type="button"
+                  data-remove-topbar-link
+                  class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
           </div>
           <template data-topbar-template>
             <div data-topbar-row class="flex gap-2">
@@ -175,8 +167,10 @@ const footer = data?.footer ?? {};
               <button
                 type="button"
                 data-remove-topbar-link
-                class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete</button
+                class="text-xs text-red-600 dark:text-red-400 hover:underline"
               >
+                Delete
+              </button>
             </div>
           </template>
         </div>
@@ -187,9 +181,7 @@ const footer = data?.footer ?? {};
       open
       class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
     >
-      <summary
-        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
-      >
+      <summary class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900">
         <div>
           <div class="text-sm font-semibold">Header Navigation</div>
           <div class="text-xs text-gray-500 font-mono mt-0.5">header.links / header.actions</div>
@@ -198,85 +190,64 @@ const footer = data?.footer ?? {};
       <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800 space-y-4">
         <div>
           <div class="flex items-center justify-between mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300"
-              >Navigation Groups (Dropdown Menus)</label
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Navigation Groups (Dropdown Menus)
+            </label>
+            <button
+              type="button"
+              data-add-header-group
+              class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
             >
-            <button type="button" data-add-header-group class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-              >+ Add Group</button
-            >
+              + Add Group
+            </button>
           </div>
           <div data-header-groups class="space-y-3">
-            {
-              (header.links ?? []).map((g: any) => (
-                <div
-                  data-header-group-row
-                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
-                >
-                  <div class="flex gap-2">
-                    <input
-                      type="text"
-                      name="headerGroupText"
-                      value={g.text ?? ''}
-                      placeholder="Group Name (e.g. Products)"
-                      class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                    />
+            {(header.links ?? []).map((g: any) => (
+              <div
+                data-header-group-row
+                class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
+              >
+                <div class="flex gap-2">
+                  <input
+                    type="text"
+                    name="headerGroupText"
+                    value={g.text ?? ''}
+                    placeholder="Group Name (e.g. Products)"
+                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <button
+                    type="button"
+                    data-remove-header-group
+                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                  >
+                    Delete Group
+                  </button>
+                </div>
+                <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <label class="text-xs text-gray-500">Sub Links</label>
                     <button
                       type="button"
-                      data-remove-header-group
-                      class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                      data-add-header-link
+                      class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
                     >
-                      Delete Group
+                      + Add Link
                     </button>
                   </div>
-                  <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
-                    <div class="flex items-center justify-between">
-                      <label class="text-xs text-gray-500">Sub Links</label>
-                      <button
-                        type="button"
-                        data-add-header-link
-                        class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                      >
-                        + Add Link
-                      </button>
-                    </div>
-                    <div data-header-links-list class="space-y-1.5">
-                      {(g.links ?? []).map((l: any) => (
-                        <div data-header-link-row class="flex gap-1">
-                          <input
-                            type="text"
-                            name="headerLinkText"
-                            value={l.text ?? ''}
-                            placeholder="Link Text"
-                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                          />
-                          <input
-                            type="text"
-                            name="headerLinkHref"
-                            value={l.href ?? ''}
-                            placeholder="/url"
-                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                          />
-                          <button
-                            type="button"
-                            data-remove-header-link
-                            class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
-                          >
-                            ×
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                    <template data-header-link-template>
+                  <div data-header-links-list class="space-y-1.5">
+                    {(g.links ?? []).map((l: any) => (
                       <div data-header-link-row class="flex gap-1">
                         <input
                           type="text"
                           name="headerLinkText"
+                          value={l.text ?? ''}
                           placeholder="Link Text"
                           class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                         />
                         <input
                           type="text"
                           name="headerLinkHref"
+                          value={l.href ?? ''}
                           placeholder="/url"
                           class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                         />
@@ -288,11 +259,34 @@ const footer = data?.footer ?? {};
                           ×
                         </button>
                       </div>
-                    </template>
+                    ))}
                   </div>
+                  <template data-header-link-template>
+                    <div data-header-link-row class="flex gap-1">
+                      <input
+                        type="text"
+                        name="headerLinkText"
+                        placeholder="Link Text"
+                        class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                      />
+                      <input
+                        type="text"
+                        name="headerLinkHref"
+                        placeholder="/url"
+                        class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                      />
+                      <button
+                        type="button"
+                        data-remove-header-link
+                        class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </template>
                 </div>
-              ))
-            }
+              </div>
+            ))}
           </div>
           <template data-header-group-template>
             <div
@@ -309,8 +303,10 @@ const footer = data?.footer ?? {};
                 <button
                   type="button"
                   data-remove-header-group
-                  class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete Group</button
+                  class="text-xs text-red-600 dark:text-red-400 hover:underline"
                 >
+                  Delete Group
+                </button>
               </div>
               <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
                 <div class="flex items-center justify-between">
@@ -318,8 +314,10 @@ const footer = data?.footer ?? {};
                   <button
                     type="button"
                     data-add-header-link
-                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add Link</button
+                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
                   >
+                    + Add Link
+                  </button>
                 </div>
                 <div data-header-links-list class="space-y-1.5"></div>
               </div>
@@ -333,57 +331,57 @@ const footer = data?.footer ?? {};
             <button
               type="button"
               data-add-header-action
-              class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add Button</button
+              class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
             >
+              + Add Button
+            </button>
           </div>
           <div data-header-actions-list class="space-y-2">
-            {
-              (header.actions ?? []).map((a: any) => (
-                <div
-                  data-header-action-row
-                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
+            {(header.actions ?? []).map((a: any) => (
+              <div
+                data-header-action-row
+                class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
+              >
+                <input
+                  type="text"
+                  name="headerActionText"
+                  value={a.text ?? ''}
+                  placeholder="Button Text"
+                  class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <input
+                  type="text"
+                  name="headerActionHref"
+                  value={a.href ?? ''}
+                  placeholder="/url"
+                  class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <select
+                  name="headerActionVariant"
+                  class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                 >
-                  <input
-                    type="text"
-                    name="headerActionText"
-                    value={a.text ?? ''}
-                    placeholder="Button Text"
-                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <input
-                    type="text"
-                    name="headerActionHref"
-                    value={a.href ?? ''}
-                    placeholder="/url"
-                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <select
-                    name="headerActionVariant"
-                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  >
-                    <option value="" selected={!a.variant}>
-                      Default
-                    </option>
-                    <option value="primary" selected={a.variant === 'primary'}>
-                      primary
-                    </option>
-                    <option value="secondary" selected={a.variant === 'secondary'}>
-                      secondary
-                    </option>
-                    <option value="tertiary" selected={a.variant === 'tertiary'}>
-                      tertiary
-                    </option>
-                  </select>
-                  <button
-                    type="button"
-                    data-remove-header-action
-                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
-                  >
-                    Delete
-                  </button>
-                </div>
-              ))
-            }
+                  <option value="" selected={!a.variant}>
+                    Default
+                  </option>
+                  <option value="primary" selected={a.variant === 'primary'}>
+                    primary
+                  </option>
+                  <option value="secondary" selected={a.variant === 'secondary'}>
+                    secondary
+                  </option>
+                  <option value="tertiary" selected={a.variant === 'tertiary'}>
+                    tertiary
+                  </option>
+                </select>
+                <button
+                  type="button"
+                  data-remove-header-action
+                  class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
           </div>
           <template data-header-action-template>
             <div
@@ -414,8 +412,10 @@ const footer = data?.footer ?? {};
               <button
                 type="button"
                 data-remove-header-action
-                class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete</button
+                class="text-xs text-red-600 dark:text-red-400 hover:underline"
               >
+                Delete
+              </button>
             </div>
           </template>
         </div>
@@ -426,9 +426,7 @@ const footer = data?.footer ?? {};
       open
       class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
     >
-      <summary
-        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
-      >
+      <summary class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900">
         <div>
           <div class="text-sm font-semibold">Footer Link Groups</div>
           <div class="text-xs text-gray-500 font-mono mt-0.5">footer.links</div>
@@ -438,82 +436,61 @@ const footer = data?.footer ?? {};
         <div>
           <div class="flex items-center justify-between mb-2">
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Footer Categories</label>
-            <button type="button" data-add-footer-group class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-              >+ Add Category</button
+            <button
+              type="button"
+              data-add-footer-group
+              class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
             >
+              + Add Category
+            </button>
           </div>
           <div data-footer-groups class="space-y-3">
-            {
-              (footer.links ?? []).map((g: any) => (
-                <div
-                  data-footer-group-row
-                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
-                >
-                  <div class="flex gap-2">
-                    <input
-                      type="text"
-                      name="footerGroupTitle"
-                      value={g.title ?? ''}
-                      placeholder="Category Title (e.g. Products)"
-                      class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                    />
+            {(footer.links ?? []).map((g: any) => (
+              <div
+                data-footer-group-row
+                class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
+              >
+                <div class="flex gap-2">
+                  <input
+                    type="text"
+                    name="footerGroupTitle"
+                    value={g.title ?? ''}
+                    placeholder="Category Title (e.g. Products)"
+                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                  <button
+                    type="button"
+                    data-remove-footer-group
+                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                  >
+                    Delete Category
+                  </button>
+                </div>
+                <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <label class="text-xs text-gray-500">Links</label>
                     <button
                       type="button"
-                      data-remove-footer-group
-                      class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                      data-add-footer-link
+                      class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
                     >
-                      Delete Category
+                      + Add Link
                     </button>
                   </div>
-                  <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
-                    <div class="flex items-center justify-between">
-                      <label class="text-xs text-gray-500">Links</label>
-                      <button
-                        type="button"
-                        data-add-footer-link
-                        class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                      >
-                        + Add Link
-                      </button>
-                    </div>
-                    <div data-footer-links-list class="space-y-1.5">
-                      {(g.links ?? []).map((l: any) => (
-                        <div data-footer-link-row class="flex gap-1">
-                          <input
-                            type="text"
-                            name="footerLinkText"
-                            value={l.text ?? ''}
-                            placeholder="Link Text"
-                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                          />
-                          <input
-                            type="text"
-                            name="footerLinkHref"
-                            value={l.href ?? ''}
-                            placeholder="/url"
-                            class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                          />
-                          <button
-                            type="button"
-                            data-remove-footer-link
-                            class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
-                          >
-                            ×
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                    <template data-footer-link-template>
+                  <div data-footer-links-list class="space-y-1.5">
+                    {(g.links ?? []).map((l: any) => (
                       <div data-footer-link-row class="flex gap-1">
                         <input
                           type="text"
                           name="footerLinkText"
+                          value={l.text ?? ''}
                           placeholder="Link Text"
                           class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                         />
                         <input
                           type="text"
                           name="footerLinkHref"
+                          value={l.href ?? ''}
                           placeholder="/url"
                           class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                         />
@@ -525,11 +502,34 @@ const footer = data?.footer ?? {};
                           ×
                         </button>
                       </div>
-                    </template>
+                    ))}
                   </div>
+                  <template data-footer-link-template>
+                    <div data-footer-link-row class="flex gap-1">
+                      <input
+                        type="text"
+                        name="footerLinkText"
+                        placeholder="Link Text"
+                        class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                      />
+                      <input
+                        type="text"
+                        name="footerLinkHref"
+                        placeholder="/url"
+                        class="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                      />
+                      <button
+                        type="button"
+                        data-remove-footer-link
+                        class="text-xs text-red-600 dark:text-red-400 hover:underline px-1"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </template>
                 </div>
-              ))
-            }
+              </div>
+            ))}
           </div>
           <template data-footer-group-template>
             <div
@@ -546,8 +546,10 @@ const footer = data?.footer ?? {};
                 <button
                   type="button"
                   data-remove-footer-group
-                  class="text-xs text-red-600 dark:text-red-400 hover:underline">Delete Category</button
+                  class="text-xs text-red-600 dark:text-red-400 hover:underline"
                 >
+                  Delete Category
+                </button>
               </div>
               <div class="pl-4 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
                 <div class="flex items-center justify-between">
@@ -555,8 +557,10 @@ const footer = data?.footer ?? {};
                   <button
                     type="button"
                     data-add-footer-link
-                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add Link</button
+                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
                   >
+                    + Add Link
+                  </button>
                 </div>
                 <div data-footer-links-list class="space-y-1.5"></div>
               </div>
@@ -570,9 +574,7 @@ const footer = data?.footer ?? {};
       open
       class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
     >
-      <summary
-        class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900"
-      >
+      <summary class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900">
         <div>
           <div class="text-sm font-semibold">Footer Secondary Links + Copyright + Social</div>
           <div class="text-xs text-gray-500 font-mono mt-0.5">footer.secondaryLinks / footNote / socialLinks</div>
@@ -581,41 +583,39 @@ const footer = data?.footer ?? {};
       <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800 space-y-4">
         <div>
           <div class="flex items-center justify-between mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300"
-              >Secondary Links (Bottom-Left, · Separated)</label
-            >
-            <button type="button" data-add-secondary class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-              >+ Add</button
-            >
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Secondary Links (Bottom-Left, · Separated)
+            </label>
+            <button type="button" data-add-secondary class="text-xs text-blue-600 dark:text-blue-400 hover:underline">
+              + Add
+            </button>
           </div>
           <div data-secondary-list class="space-y-2">
-            {
-              (footer.secondaryLinks ?? []).map((l: any) => (
-                <div data-secondary-row class="flex gap-2">
-                  <input
-                    type="text"
-                    name="secondaryText"
-                    value={l.text ?? ''}
-                    placeholder="Link Text"
-                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <input
-                    type="text"
-                    name="secondaryHref"
-                    value={l.href ?? ''}
-                    placeholder="/url"
-                    class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <button
-                    type="button"
-                    data-remove-secondary
-                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
-                  >
-                    Delete
-                  </button>
-                </div>
-              ))
-            }
+            {(footer.secondaryLinks ?? []).map((l: any) => (
+              <div data-secondary-row class="flex gap-2">
+                <input
+                  type="text"
+                  name="secondaryText"
+                  value={l.text ?? ''}
+                  placeholder="Link Text"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <input
+                  type="text"
+                  name="secondaryHref"
+                  value={l.href ?? ''}
+                  placeholder="/url"
+                  class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button
+                  type="button"
+                  data-remove-secondary
+                  class="text-xs text-red-600 dark:text-red-400 hover:underline"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
           </div>
           <template data-secondary-template>
             <div data-secondary-row class="flex gap-2">
@@ -631,70 +631,67 @@ const footer = data?.footer ?? {};
                 placeholder="/url"
                 class="flex-1 px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
               />
-              <button type="button" data-remove-secondary class="text-xs text-red-600 dark:text-red-400 hover:underline"
-                >Delete</button
+              <button
+                type="button"
+                data-remove-secondary
+                class="text-xs text-red-600 dark:text-red-400 hover:underline"
               >
+                Delete
+              </button>
             </div>
           </template>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Copyright (footNote, HTML supported)</label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Copyright (footNote, HTML supported)
+          </label>
           <textarea
             name="footNote"
             rows="2"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-            >{footer.footNote ?? ''}</textarea
-          >
+          >{footer.footNote ?? ''}</textarea>
         </div>
 
         <div>
           <div class="flex items-center justify-between mb-2">
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Social Media Icons</label>
-            <button type="button" data-add-social class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-              >+ Add</button
-            >
+            <button type="button" data-add-social class="text-xs text-blue-600 dark:text-blue-400 hover:underline">
+              + Add
+            </button>
           </div>
           <div data-social-list class="space-y-2">
-            {
-              (footer.socialLinks ?? []).map((s: any) => (
-                <div
-                  data-social-row
-                  class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
-                >
-                  <input
-                    type="text"
-                    name="socialAria"
-                    value={s.ariaLabel ?? ''}
-                    placeholder="ariaLabel (e.g. X, Instagram)"
-                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <input
-                    type="text"
-                    name="socialIcon"
-                    value={s.icon ?? ''}
-                    placeholder="Icon (e.g. tabler:brand-x)"
-                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <input
-                    type="text"
-                    name="socialHref"
-                    value={s.href ?? ''}
-                    placeholder="URL"
-                    class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                  <button
-                    type="button"
-                    data-remove-social
-                    class="text-xs text-red-600 dark:text-red-400 hover:underline"
-                  >
-                    Delete
-                  </button>
-                </div>
-              ))
-            }
+            {(footer.socialLinks ?? []).map((s: any) => (
+              <div
+                data-social-row
+                class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
+              >
+                <input
+                  type="text"
+                  name="socialAria"
+                  value={s.ariaLabel ?? ''}
+                  placeholder="ariaLabel (e.g. X, Instagram)"
+                  class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <input
+                  type="text"
+                  name="socialIcon"
+                  value={s.icon ?? ''}
+                  placeholder="Icon (e.g. tabler:brand-x)"
+                  class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <input
+                  type="text"
+                  name="socialHref"
+                  value={s.href ?? ''}
+                  placeholder="URL"
+                  class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+                <button type="button" data-remove-social class="text-xs text-red-600 dark:text-red-400 hover:underline">
+                  Delete
+                </button>
+              </div>
+            ))}
           </div>
           <template data-social-template>
             <div
@@ -719,34 +716,38 @@ const footer = data?.footer ?? {};
                 placeholder="URL"
                 class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
               />
-              <button type="button" data-remove-social class="text-xs text-red-600 dark:text-red-400 hover:underline"
-                >Delete</button
-              >
+              <button type="button" data-remove-social class="text-xs text-red-600 dark:text-red-400 hover:underline">
+                Delete
+              </button>
             </div>
           </template>
         </div>
       </div>
     </details>
 
-    <div
-      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-    >
+    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-        <div class="text-xs text-gray-500" data-file-info>File: <code class="font-mono">{file}</code></div>
+        <div class="text-xs text-gray-500" data-file-info>
+          File: <code class="font-mono">{file}</code>
+        </div>
         <div class="flex gap-2">
-          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
-            >Cancel</a
-          >
+          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">
+            Cancel
+          </a>
           <button
             id="save-draft-btn"
             type="button"
-            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
           >
+            Save Draft
+          </button>
           <button
             id="publish-btn"
             type="button"
-            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
           >
+            Publish
+          </button>
         </div>
       </div>
     </div>
@@ -765,20 +766,25 @@ const footer = data?.footer ?? {};
           type="button"
           data-banner-reload
           class="text-xs px-2 py-1 rounded border border-amber-400 dark:border-amber-700 hover:bg-amber-100 dark:hover:bg-amber-900/40"
-          >Reload</button
         >
+          Reload
+        </button>
         <button
           type="button"
           data-banner-dismiss
           class="text-xs px-2 py-1 rounded border border-amber-400 dark:border-amber-700 hover:bg-amber-100 dark:hover:bg-amber-900/40"
-          >Dismiss</button
         >
+          Dismiss
+        </button>
       </div>
     </div>
     <p class="text-xs text-amber-800 dark:text-amber-300 mb-3">
       Other files (home.yaml / about.yaml / posts / products, etc.) may still reference the old URL or text. Click the
       "Rename" buttons below to pre-fill the
-      <a href="/keystatic/link-refactor/" class="font-medium underline">Link Refactor Tool</a> with these changes.
+      <a href="/keystatic/link-refactor/" class="font-medium underline">
+        Link Refactor Tool
+      </a>{' '}
+      with these changes.
     </p>
     <ul data-change-list class="space-y-2 max-h-80 overflow-y-auto pr-1"></ul>
   </div>

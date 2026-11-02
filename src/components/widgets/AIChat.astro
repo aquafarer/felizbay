@@ -86,7 +86,8 @@ const networkErrorText = t('ai.networkError');
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
     </div>
@@ -96,30 +97,36 @@ const networkErrorText = t('ai.networkError');
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 hover:bg-sky-100 transition-colors"
-        data-hint={t('ai.hint1q')}>{t('ai.hint1')}</button
+        data-hint={t('ai.hint1q')}
       >
+        {t('ai.hint1')}
+      </button>
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors"
-        data-hint={t('ai.hint2q')}>{t('ai.hint2')}</button
+        data-hint={t('ai.hint2q')}
       >
+        {t('ai.hint2')}
+      </button>
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 transition-colors"
-        data-hint={t('ai.hint3q')}>{t('ai.hint3')}</button
+        data-hint={t('ai.hint3q')}
       >
+        {t('ai.hint3')}
+      </button>
       <button
         type="button"
         class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition-colors"
-        data-hint={t('ai.hint4q')}>{t('ai.hint4')}</button
+        data-hint={t('ai.hint4q')}
       >
+        {t('ai.hint4')}
+      </button>
     </div>
 
     <!-- Messages -->
     <div id="ai-chat-messages" class="flex-1 overflow-y-auto max-h-72 p-4 space-y-3 min-h-[180px]">
-      <div class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 p-3 rounded-lg text-sm">
-        {welcome}
-      </div>
+      <div class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 p-3 rounded-lg text-sm">{welcome}</div>
     </div>
 
     <!-- Input -->
@@ -145,7 +152,8 @@ const networkErrorText = t('ai.networkError');
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
           </svg>
         </button>
       </form>

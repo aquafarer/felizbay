@@ -81,37 +81,32 @@ const year = new Date().getFullYear();
           id="locale-select"
           class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         >
-          {
-            ADMIN_LOCALE_CODES.map((l) => (
-              <option value={l} selected={l === locale}>
-                {ADMIN_LOCALES[l]}
-              </option>
-            ))
-          }
+          {ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))}
         </select>
       </div>
     </div>
     <p class="mt-1 text-sm text-gray-500">
       编辑站点名称、Logo、版权信息、联系方式、WhatsApp、邮件配置和谷歌地图。 Edit site name, logo, copyright, contact
-      info, WhatsApp, email config, and Google Maps. File: <code class="font-mono">{file}</code>. You can use <code
-        class="font-mono">{'{year}'}</code
-      > and <code class="font-mono">{'{site_name}'}</code> placeholders in the copyright text, which will be auto-replaced
-      (current year {year}, current site_name "{data.site_name}").
+      info, WhatsApp, email config, and Google Maps. File: <code class="font-mono">{file}</code>. You can use{' '}
+      <code class="font-mono">{'{year}'}</code> and <code class="font-mono">{'{site_name}'}</code> placeholders in the
+      copyright text, which will be auto-replaced (current year {year}, current site_name "{data.site_name}").
       {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
     </p>
     <p class="mt-1 text-xs text-amber-600 dark:text-amber-400">
-      <strong>提示：</strong> 此面板编辑的是显示用信息。JSON-LD 结构化数据中的组织信息和社交链接请在 SEO 面板中编辑。 Tip:
-      This panel edits display info. For JSON-LD organization info and social links, use the SEO panel.
+      <strong>提示：</strong> 此面板编辑的是显示用信息。JSON-LD 结构化数据中的组织信息和社交链接请在 SEO 面板中编辑。
+      Tip: This panel edits display info. For JSON-LD organization info and social links, use the SEO panel.
     </p>
   </div>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Failed to read: {loadError}
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Failed to read: {loadError}
+    </div>
+  )}
 
   <form
     id="branding-form"
@@ -164,20 +159,17 @@ const year = new Date().getFullYear();
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >Copyright (supports HTML tags, e.g. <code class="font-mono">&lt;a class="text-blue-600 underline"&gt;</code
-          >)</label
-        >
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          Copyright (supports HTML tags, e.g. <code class="font-mono">&lt;a class="text-blue-600 underline"&gt;</code>)
+        </label>
         <textarea
           name="copyright"
           rows="3"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-          >{data.copyright ?? ''}</textarea
-        >
+        >{data.copyright ?? ''}</textarea>
         <p class="mt-1 text-xs text-gray-500">
-          Preview (live replacement of <code class="font-mono">{'{year}'}</code>): <span
-            class="font-mono"
-            data-copyright-preview></span>
+          Preview (live replacement of <code class="font-mono">{'{year}'}</code>):{' '}
+          <span class="font-mono" data-copyright-preview></span>
         </p>
       </div>
     </div>
@@ -190,9 +182,9 @@ const year = new Date().getFullYear();
           footer and contact page. To update JSON-LD organization info, use the SEO panel.
         </p>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Phone Number <span class="text-xs text-gray-400 font-normal">(电话)</span></label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Phone Number <span class="text-xs text-gray-400 font-normal">(电话)</span>
+          </label>
           <input
             type="text"
             name="phone"
@@ -203,9 +195,9 @@ const year = new Date().getFullYear();
           <p class="mt-1 text-xs text-gray-500">显示在 footer 和 contact 页面。不会影响 JSON-LD schema。</p>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Address <span class="text-xs text-gray-400 font-normal">(地址)</span></label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Address <span class="text-xs text-gray-400 font-normal">(地址)</span>
+          </label>
           <input
             type="text"
             name="address"
@@ -215,9 +207,9 @@ const year = new Date().getFullYear();
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Email <span class="text-xs text-gray-400 font-normal">(邮箱)</span></label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Email <span class="text-xs text-gray-400 font-normal">(邮箱)</span>
+          </label>
           <input
             type="email"
             name="email"
@@ -249,29 +241,29 @@ const year = new Date().getFullYear();
             name="whatsapp_default_message"
             rows="2"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-            >{data.whatsapp_default_message ?? ''}</textarea
-          >
+          >{data.whatsapp_default_message ?? ''}</textarea>
         </div>
       </div>
 
-      <div
-        class="rounded-xl border border-amber-300 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 p-6 space-y-5"
-      >
+      <div class="rounded-xl border border-amber-300 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 p-6 space-y-5">
         <div>
           <h2 class="text-base font-semibold text-amber-900 dark:text-amber-200">Contact Form Storage + Email</h2>
           <p class="mt-1 text-xs text-amber-800 dark:text-amber-300">
             Submissions from <code class="font-mono">/contact</code> are stored in
-            <strong>Cloudflare D1</strong> (written by the contact worker, protected by Turnstile + per-IP rate limiting)
-            — no GitHub writes. They can be viewed, filtered, status-marked and exported as CSV at{' '}
-            <a class="underline" href="/keystatic/inquiries/"> /keystatic/inquiries</a>; the notification email is sent
-            via Resend (Reply-To set to the submitter).
+            <strong>Cloudflare D1</strong> (written by the contact worker, protected by Turnstile + per-IP rate
+            limiting) — no GitHub writes. They can be viewed, filtered, status-marked and exported as CSV at{' '}
+            <a class="underline" href="/keystatic/inquiries/">
+              {' '}
+              /keystatic/inquiries
+            </a>
+            ; the notification email is sent via Resend (Reply-To set to the submitter).
           </p>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Recipient Email (Contact email →To)</label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Recipient Email (Contact email →To)
+          </label>
           <input
             type="email"
             name="contact_email_to"
@@ -286,9 +278,9 @@ const year = new Date().getFullYear();
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Sender Email (Contact →From)</label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Sender Email (Contact →From)
+          </label>
           <input
             type="email"
             name="contact_from_email"
@@ -298,15 +290,15 @@ const year = new Date().getFullYear();
           />
           <p class="mt-1 text-xs text-gray-500">
             SPF/DKIM must be configured on your domain (Cloudflare DNS), otherwise emails will be marked as spam.
-            Recommended: Use Cloudflare Email Routing to route <code class="font-mono">noreply@your-domain.com</code> to your
-            real email, then verify <code class="font-mono">your-domain.com</code> in Resend's Domain settings.
+            Recommended: Use Cloudflare Email Routing to route <code class="font-mono">noreply@your-domain.com</code> to
+            your real email, then verify <code class="font-mono">your-domain.com</code> in Resend's Domain settings.
           </p>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Sender Display Name (From name)</label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Sender Display Name (From name)
+          </label>
           <input
             type="text"
             name="contact_from_name"
@@ -322,25 +314,25 @@ const year = new Date().getFullYear();
             name="contact_email_provider"
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
           >
-            <option value="none" selected={!data.contact_email_provider || data.contact_email_provider === 'none'}
-              >Do not send email (only store to GitHub)</option
-            >
-            <option value="resend" selected={data.contact_email_provider === 'resend'}
-              >Resend (Recommended · Free 100/day · Cloudflare compatible)</option
-            >
+            <option value="none" selected={!data.contact_email_provider || data.contact_email_provider === 'none'}>
+              Do not send email (only store to GitHub)
+            </option>
+            <option value="resend" selected={data.contact_email_provider === 'resend'}>
+              Resend (Recommended · Free 100/day · Cloudflare compatible)
+            </option>
           </select>
           <p class="mt-1 text-xs text-gray-500">
-            Cloudflare Email Workers can only handle <strong>inbound</strong> emails, not send arbitrary outbound mail. Resend
-            is a Cloudflare Pages-compatible sending service. If you want to use SMTP instead, you can replace <code
-              class="font-mono">sendEmailViaResend</code
-            > in <code class="font-mono">src/pages/api/contact.ts</code>.
+            Cloudflare Email Workers can only handle <strong>inbound</strong> emails, not send arbitrary outbound mail.
+            Resend is a Cloudflare Pages-compatible sending service. If you want to use SMTP instead, you can replace{' '}
+            <code class="font-mono">sendEmailViaResend</code> in <code class="font-mono">src/pages/api/contact.ts</code>
+            .
           </p>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Resend API Key <span class="text-xs text-gray-400 font-normal">(Resend 密钥)</span></label
-          >
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Resend API Key <span class="text-xs text-gray-400 font-normal">(Resend 密钥)</span>
+          </label>
           <input
             type="password"
             name="contact_resend_api_key"
@@ -350,14 +342,12 @@ const year = new Date().getFullYear();
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
           />
           <p class="mt-1 text-xs text-gray-500">
-            用于发送联系表单邮件。创建地址 <a
-              class="underline"
-              href="https://resend.com/api-keys"
-              target="_blank"
-              rel="noopener">resend.com/api-keys</a
-            >，Full access 权限即可。 <strong class="text-amber-600"
-              >注意：此密钥明文存储于 git 仓库中，请使用专用密钥。</strong
-            >
+            用于发送联系表单邮件。创建地址{' '}
+            <a class="underline" href="https://resend.com/api-keys" target="_blank" rel="noopener">
+              resend.com/api-keys
+            </a>
+            ，Full access 权限即可。{' '}
+            <strong class="text-amber-600">注意：此密钥明文存储于 git 仓库中，请使用专用密钥。</strong>
           </p>
         </div>
       </div>
@@ -365,12 +355,11 @@ const year = new Date().getFullYear();
       <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
         <h2 class="text-base font-semibold">Google Maps</h2>
         <p class="text-xs text-gray-500">
-          Used on the contact page. Get a free API key at <a
-            class="underline"
-            href="https://console.cloud.google.com/google/maps-apis"
-            target="_blank"
-            rel="noopener">Google Cloud Console</a
-          > (enable "Maps Embed API").
+          Used on the contact page. Get a free API key at{' '}
+          <a class="underline" href="https://console.cloud.google.com/google/maps-apis" target="_blank" rel="noopener">
+            Google Cloud Console
+          </a>{' '}
+          (enable "Maps Embed API").
         </p>
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">API Key</label>
@@ -409,52 +398,57 @@ const year = new Date().getFullYear();
       <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50 p-4">
         <div class="text-xs text-gray-500 mb-2">Current Logo Preview (live)</div>
         <div class="flex items-center gap-2" data-logo-preview>
-          {
-            data.logo_image ? (
-              <img
-                src={data.logo_image}
-                alt={data.logo_alt}
-                class="h-9 w-9 rounded-lg object-cover shadow-sm"
-                data-preview-img
-              />
-            ) : (
-              <span
-                class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white font-black text-lg shadow-sm"
-                data-preview-letter
-              >
-                {(data.site_name || 'V').charAt(0).toUpperCase()}
-              </span>
-            )
-          }
+          {data.logo_image ? (
+            <img
+              src={data.logo_image}
+              alt={data.logo_alt}
+              class="h-9 w-9 rounded-lg object-cover shadow-sm"
+              data-preview-img
+            />
+          ) : (
+            <span
+              class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white font-black text-lg shadow-sm"
+              data-preview-letter
+            >
+              {(data.site_name || 'V').charAt(0).toUpperCase()}
+            </span>
+          )}
           <span
             class="self-center text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white tracking-tight"
-            data-preview-name>{data.site_name}</span
+            data-preview-name
           >
+            {data.site_name}
+          </span>
         </div>
         <p class="mt-2 text-xs text-gray-500">The footer logo text will display the same site_name.</p>
       </div>
 
-      <div
-        class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-      >
+      <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
         <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-          <div class="text-xs text-gray-500" data-fileInfo>File: <code class="font-mono">{file}</code></div>
+          <div class="text-xs text-gray-500" data-fileInfo>
+            File: <code class="font-mono">{file}</code>
+          </div>
           <div class="flex gap-2">
-            <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
-              >Cancel</a
+            <a
+              href="/keystatic/"
+              class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
             >
+              Cancel
+            </a>
             <button
               id="save-draft-btn"
               type="button"
               class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
-              >Save Draft</button
             >
+              Save Draft
+            </button>
             <button
               id="publish-btn"
               type="button"
               class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
-              >Publish</button
             >
+              Publish
+            </button>
           </div>
         </div>
       </div>

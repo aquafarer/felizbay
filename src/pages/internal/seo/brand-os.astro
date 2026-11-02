@@ -71,46 +71,35 @@ const engineStyles: Record<string, { bg: string; border: string; text: string; l
       <h2 class="text-lg font-semibold mb-4">Brand Identity</h2>
       <div class="grid md:grid-cols-3 gap-6 text-sm">
         <div>
-          <span class="text-gray-400 text-xs uppercase tracking-wider">Name</span><p
-            class="font-bold text-gray-900 mt-1 text-xl"
-          >
-            {BRAND.name}
-          </p>
+          <span class="text-gray-400 text-xs uppercase tracking-wider">Name</span>
+          <p class="font-bold text-gray-900 mt-1 text-xl">{BRAND.name}</p>
         </div>
         <div class="md:col-span-2">
-          <span class="text-gray-400 text-xs uppercase tracking-wider">Tagline</span><p
-            class="font-semibold text-gray-900 mt-1"
-          >
-            {BRAND.tagline}
-          </p>
+          <span class="text-gray-400 text-xs uppercase tracking-wider">Tagline</span>
+          <p class="font-semibold text-gray-900 mt-1">{BRAND.tagline}</p>
         </div>
         <div>
-          <span class="text-gray-400 text-xs uppercase tracking-wider">Founded</span><p class="text-gray-900 mt-1">
-            {BRAND.foundingYear}
-          </p>
+          <span class="text-gray-400 text-xs uppercase tracking-wider">Founded</span>
+          <p class="text-gray-900 mt-1">{BRAND.foundingYear}</p>
         </div>
         <div>
-          <span class="text-gray-400 text-xs uppercase tracking-wider">CTA</span><p class="text-sky-600 mt-1">
-            {BRAND.cta.text} →
-          </p>
+          <span class="text-gray-400 text-xs uppercase tracking-wider">CTA</span>
+          <p class="text-sky-600 mt-1">{BRAND.cta.text} →</p>
         </div>
         <div>
-          <span class="text-gray-400 text-xs uppercase tracking-wider">Categories</span><p class="text-gray-900 mt-1">
-            {BRAND.categories.join(', ')}
-          </p>
+          <span class="text-gray-400 text-xs uppercase tracking-wider">Categories</span>
+          <p class="text-gray-900 mt-1">{BRAND.categories.join(', ')}</p>
         </div>
       </div>
       <div class="mt-4">
         <span class="text-gray-400 text-xs uppercase tracking-wider">Ethos</span>
         <ul class="mt-2 space-y-1">
-          {
-            BRAND.ethos.map((e) => (
-              <li class="text-sm text-gray-700 flex items-center gap-2">
-                <span class="w-1.5 h-1.5 bg-sky-500 rounded-full" />
-                {e}
-              </li>
-            ))
-          }
+          {BRAND.ethos.map((e) => (
+            <li class="text-sm text-gray-700 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-sky-500 rounded-full" />
+              {e}
+            </li>
+          ))}
         </ul>
       </div>
     </section>
@@ -118,38 +107,34 @@ const engineStyles: Record<string, { bg: string; border: string; text: string; l
     <section class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
       <h2 class="text-lg font-semibold mb-4">Three Engines</h2>
       <div class="grid md:grid-cols-3 gap-4">
-        {
-          engines.map((e) => {
-            const s = engineStyles[e.color] || engineStyles.sky;
-            return (
-              <div class={`p-5 ${s.bg} rounded-xl border ${s.border}`}>
-                <div class="flex items-center justify-between mb-2">
-                  <span class={`text-xs font-bold uppercase tracking-wider ${s.label}`}>{e.name}</span>
-                  <span class={`text-xs font-medium ${s.count}`}>{e.pages} pages</span>
-                </div>
-                <p class="text-sm text-gray-700">{e.description}</p>
+        {engines.map((e) => {
+          const s = engineStyles[e.color] || engineStyles.sky;
+          return (
+            <div class={`p-5 ${s.bg} rounded-xl border ${s.border}`}>
+              <div class="flex items-center justify-between mb-2">
+                <span class={`text-xs font-bold uppercase tracking-wider ${s.label}`}>{e.name}</span>
+                <span class={`text-xs font-medium ${s.count}`}>{e.pages} pages</span>
               </div>
-            );
-          })
-        }
+              <p class="text-sm text-gray-700">{e.description}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
 
     <section class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
       <h2 class="text-lg font-semibold mb-4">Global Regions</h2>
       <div class="grid md:grid-cols-3 gap-3">
-        {
-          regions.map((r) => (
-            <div class="p-3 bg-gray-50 rounded-lg flex items-center justify-between text-sm">
-              <div class="flex items-center gap-2">
-                <span>{r.flag}</span>
-                <span class="font-medium text-gray-900">{r.name}</span>
-                <span class="text-xs text-gray-400">({r.locale})</span>
-              </div>
-              <span class="text-xs text-gray-400">Priority: {r.sitemapPriority}</span>
+        {regions.map((r) => (
+          <div class="p-3 bg-gray-50 rounded-lg flex items-center justify-between text-sm">
+            <div class="flex items-center gap-2">
+              <span>{r.flag}</span>
+              <span class="font-medium text-gray-900">{r.name}</span>
+              <span class="text-xs text-gray-400">({r.locale})</span>
             </div>
-          ))
-        }
+            <span class="text-xs text-gray-400">Priority: {r.sitemapPriority}</span>
+          </div>
+        ))}
       </div>
     </section>
 
@@ -167,48 +152,46 @@ const engineStyles: Record<string, { bg: string; border: string; text: string; l
             </tr>
           </thead>
           <tbody>
-            {
-              brandPages.map((p) => (
-                <tr class="border-b border-gray-100 hover:bg-gray-50">
-                  <td class="py-3 pr-4 font-medium text-gray-900">{p.title}</td>
-                  <td class="py-3 pr-4">
-                    <span
-                      class={`px-2 py-0.5 rounded text-xs font-medium ${
-                        p.category === 'beginner'
-                          ? 'bg-sky-100 text-sky-700'
-                          : p.category === 'comparison'
-                            ? 'bg-purple-100 text-purple-700'
-                            : p.category === 'guide'
-                              ? 'bg-amber-100 text-amber-700'
-                              : p.category === 'brand'
-                                ? 'bg-green-100 text-green-700'
-                                : 'bg-gray-100 text-gray-700'
-                      }`}
-                    >
-                      {p.category}
-                    </span>
-                  </td>
-                  <td class="py-3 pr-4 text-xs">
-                    <span class="text-sky-600">{p.cta.text}</span>
-                    <span class="text-gray-400 block">{p.cta.link}</span>
-                  </td>
-                  <td class="py-3 pr-4">
-                    <div class="flex gap-1 flex-wrap">
-                      {p.productSlugs.map((s) => (
-                        <span class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs">{s}</span>
-                      ))}
-                    </div>
-                  </td>
-                  <td class="py-3">
-                    {p.geoEnabled ? (
-                      <span class="text-green-600 text-xs">✓</span>
-                    ) : (
-                      <span class="text-gray-300 text-xs">—</span>
-                    )}
-                  </td>
-                </tr>
-              ))
-            }
+            {brandPages.map((p) => (
+              <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-3 pr-4 font-medium text-gray-900">{p.title}</td>
+                <td class="py-3 pr-4">
+                  <span
+                    class={`px-2 py-0.5 rounded text-xs font-medium ${
+                      p.category === 'beginner'
+                        ? 'bg-sky-100 text-sky-700'
+                        : p.category === 'comparison'
+                          ? 'bg-purple-100 text-purple-700'
+                          : p.category === 'guide'
+                            ? 'bg-amber-100 text-amber-700'
+                            : p.category === 'brand'
+                              ? 'bg-green-100 text-green-700'
+                              : 'bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    {p.category}
+                  </span>
+                </td>
+                <td class="py-3 pr-4 text-xs">
+                  <span class="text-sky-600">{p.cta.text}</span>
+                  <span class="text-gray-400 block">{p.cta.link}</span>
+                </td>
+                <td class="py-3 pr-4">
+                  <div class="flex gap-1 flex-wrap">
+                    {p.productSlugs.map((s) => (
+                      <span class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs">{s}</span>
+                    ))}
+                  </div>
+                </td>
+                <td class="py-3">
+                  {p.geoEnabled ? (
+                    <span class="text-green-600 text-xs">✓</span>
+                  ) : (
+                    <span class="text-gray-300 text-xs">—</span>
+                  )}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

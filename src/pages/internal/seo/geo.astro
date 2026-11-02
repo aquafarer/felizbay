@@ -13,7 +13,9 @@ const withFaq = geoOutput.filter((g) => g.blocks.some((b) => b.type === 'FAQ')).
 <Layout metadata={{ title: 'GEO Blocks —— SEO Dashboard' }}>
   <main class="max-w-7xl mx-auto px-6 py-12">
     <div class="mb-8">
-      <a href="/internal/seo/" class="text-sm text-blue-600 hover:underline">&larr; Back to Dashboard</a>
+      <a href="/internal/seo/" class="text-sm text-blue-600 hover:underline">
+        &larr; Back to Dashboard
+      </a>
       <h1 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">GEO Content Blocks</h1>
       <p class="text-gray-500 dark:text-gray-400 mt-1">
         v3.4 —— Structured block generation for AI citation —— No AI —— Template-driven
@@ -23,25 +25,31 @@ const withFaq = geoOutput.filter((g) => g.blocks.some((b) => b.type === 'FAQ')).
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
       <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
         <div class="text-sm text-gray-500 dark:text-gray-400">With TLDR</div>
-        <div class="text-3xl font-bold mt-1 text-green-600">{withTldr}/{geoOutput.length}</div>
+        <div class="text-3xl font-bold mt-1 text-green-600">
+          {withTldr}/{geoOutput.length}
+        </div>
       </div>
       <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
         <div class="text-sm text-gray-500 dark:text-gray-400">With Definition</div>
-        <div class="text-3xl font-bold mt-1 text-blue-600">{withDef}/{geoOutput.length}</div>
+        <div class="text-3xl font-bold mt-1 text-blue-600">
+          {withDef}/{geoOutput.length}
+        </div>
       </div>
       <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
         <div class="text-sm text-gray-500 dark:text-gray-400">With Steps</div>
-        <div class="text-3xl font-bold mt-1 text-amber-600">{withSteps}/{geoOutput.length}</div>
+        <div class="text-3xl font-bold mt-1 text-amber-600">
+          {withSteps}/{geoOutput.length}
+        </div>
       </div>
       <div class="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700">
         <div class="text-sm text-gray-500 dark:text-gray-400">With FAQ</div>
-        <div class="text-3xl font-bold mt-1 text-purple-600">{withFaq}/{geoOutput.length}</div>
+        <div class="text-3xl font-bold mt-1 text-purple-600">
+          {withFaq}/{geoOutput.length}
+        </div>
       </div>
     </div>
 
-    <section
-      class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-8"
-    >
+    <section class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-8">
       <div class="p-6 border-b border-gray-200 dark:border-gray-700">
         <h2 class="text-lg font-semibold">GEO Block Coverage</h2>
         <p class="text-sm text-gray-500 mt-1">
@@ -61,22 +69,20 @@ const withFaq = geoOutput.filter((g) => g.blocks.some((b) => b.type === 'FAQ')).
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
-            {
-              geoOutput.map((g) => {
-                const types = g.blocks.map((b) => b.type);
-                const blockCount = g.blocks.length;
-                return (
-                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-750">
-                    <td class="px-4 py-3 font-medium max-w-xs truncate">{g.title.replace(/\(.*?\)/, '').trim()}</td>
-                    <td class="px-3 py-3 text-center">{types.includes('TLDR') ? '?' : '——'}</td>
-                    <td class="px-3 py-3 text-center">{types.includes('Definition') ? '?' : '——'}</td>
-                    <td class="px-3 py-3 text-center">{types.includes('Steps') ? '?' : '——'}</td>
-                    <td class="px-3 py-3 text-center">{types.includes('FAQ') ? '?' : '——'}</td>
-                    <td class="px-3 py-3 text-center font-medium">{blockCount}</td>
-                  </tr>
-                );
-              })
-            }
+            {geoOutput.map((g) => {
+              const types = g.blocks.map((b) => b.type);
+              const blockCount = g.blocks.length;
+              return (
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750">
+                  <td class="px-4 py-3 font-medium max-w-xs truncate">{g.title.replace(/\(.*?\)/, '').trim()}</td>
+                  <td class="px-3 py-3 text-center">{types.includes('TLDR') ? '?' : '——'}</td>
+                  <td class="px-3 py-3 text-center">{types.includes('Definition') ? '?' : '——'}</td>
+                  <td class="px-3 py-3 text-center">{types.includes('Steps') ? '?' : '——'}</td>
+                  <td class="px-3 py-3 text-center">{types.includes('FAQ') ? '?' : '——'}</td>
+                  <td class="px-3 py-3 text-center font-medium">{blockCount}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -85,36 +91,34 @@ const withFaq = geoOutput.filter((g) => g.blocks.some((b) => b.type === 'FAQ')).
     <section class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
       <h2 class="text-lg font-semibold mb-4">Sample GEO Block — First Page</h2>
       <div class="space-y-4">
-        {
-          geoOutput[0]?.blocks.map((block) => {
-            const isSteps = block.type === 'Steps';
-            const isFaq = block.type === 'FAQ';
-            const content = block.content;
-            return (
-              <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                <span class="font-bold text-xs uppercase tracking-wide text-blue-600">{block.type}</span>
-                {isSteps && Array.isArray(content) && (
-                  <ol class="mt-2 space-y-1 list-decimal list-inside">
-                    {content.map((step: any) => (
-                      <li class="text-sm text-gray-600 dark:text-gray-300">{step}</li>
-                    ))}
-                  </ol>
-                )}
-                {isFaq && Array.isArray(content) && (
-                  <div class="mt-2 space-y-2">
-                    {content.map((faqEntry: any) => (
-                      <div>
-                        <p class="text-sm font-medium text-gray-900 dark:text-white">Q: {faqEntry.q}</p>
-                        <p class="text-sm text-gray-500 mt-0.5">A: {faqEntry.a}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {!isSteps && !isFaq && <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">{String(content)}</p>}
-              </div>
-            );
-          })
-        }
+        {geoOutput[0]?.blocks.map((block) => {
+          const isSteps = block.type === 'Steps';
+          const isFaq = block.type === 'FAQ';
+          const content = block.content;
+          return (
+            <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
+              <span class="font-bold text-xs uppercase tracking-wide text-blue-600">{block.type}</span>
+              {isSteps && Array.isArray(content) && (
+                <ol class="mt-2 space-y-1 list-decimal list-inside">
+                  {content.map((step: any) => (
+                    <li class="text-sm text-gray-600 dark:text-gray-300">{step}</li>
+                  ))}
+                </ol>
+              )}
+              {isFaq && Array.isArray(content) && (
+                <div class="mt-2 space-y-2">
+                  {content.map((faqEntry: any) => (
+                    <div>
+                      <p class="text-sm font-medium text-gray-900 dark:text-white">Q: {faqEntry.q}</p>
+                      <p class="text-sm text-gray-500 mt-0.5">A: {faqEntry.a}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {!isSteps && !isFaq && <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">{String(content)}</p>}
+            </div>
+          );
+        })}
       </div>
     </section>
   </main>

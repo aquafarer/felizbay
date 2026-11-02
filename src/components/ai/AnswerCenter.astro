@@ -27,7 +27,9 @@ const {
       <p class="ac-subtitle">{heroSubtitle}</p>
       <form class="ac-form" id="ac-form">
         <input type="text" id="ac-input" class="ac-input" placeholder={placeholder} autocomplete="off" />
-        <button type="submit" id="ac-submit" class="ac-submit">{askButton}</button>
+        <button type="submit" id="ac-submit" class="ac-submit">
+          {askButton}
+        </button>
       </form>
       <div class="ac-powered">
         <span>Instant answers from the Felizbay pool knowledge base</span>
@@ -41,162 +43,160 @@ const {
       <span class="ac-section-label">Suggested Questions</span>
       <h2 class="ac-section-title">Explore by topic</h2>
       <div class="ac-category-grid">
-        {
-          categories.length > 0 ? (
-            categories.map((cat) => (
-              <div class="ac-category-card">
-                <div class="ac-category-header">
-                  <span class="ac-category-icon">{cat.icon}</span>
-                  <h3 class="ac-category-label">{cat.label}</h3>
-                </div>
-                <ul class="ac-question-list">
-                  {cat.questions.map((q) => (
-                    <li>
-                      <button type="button" class="ac-question-btn" data-question={q}>
-                        {q}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+        {categories.length > 0 ? (
+          categories.map((cat) => (
+            <div class="ac-category-card">
+              <div class="ac-category-header">
+                <span class="ac-category-icon">{cat.icon}</span>
+                <h3 class="ac-category-label">{cat.label}</h3>
               </div>
-            ))
-          ) : (
-            <>
-              <div class="ac-category-card">
-                <div class="ac-category-header">
-                  <span class="ac-category-icon">🏊</span>
-                  <h3 class="ac-category-label">Products</h3>
-                </div>
-                <ul class="ac-question-list">
+              <ul class="ac-question-list">
+                {cat.questions.map((q) => (
                   <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="Which inflatable pool is best for a small backyard?"
-                    >
-                      Best pool for a small backyard?
+                    <button type="button" class="ac-question-btn" data-question={q}>
+                      {q}
                     </button>
                   </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="Should I choose a rectangular or round inflatable pool?"
-                    >
-                      Rectangular vs round pool?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="What size inflatable pool do I need for my family?"
-                    >
-                      What pool size for my family?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="Do Felizbay pools come with a cover and pump?"
-                    >
-                      Do pools include a cover and pump?
-                    </button>
-                  </li>
-                </ul>
+                ))}
+              </ul>
+            </div>
+          ))
+        ) : (
+          <>
+            <div class="ac-category-card">
+              <div class="ac-category-header">
+                <span class="ac-category-icon">🏊</span>
+                <h3 class="ac-category-label">Products</h3>
               </div>
-              <div class="ac-category-card">
-                <div class="ac-category-header">
-                  <span class="ac-category-icon">⚙️</span>
-                  <h3 class="ac-category-label">Technology & Materials</h3>
-                </div>
-                <ul class="ac-question-list">
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="What is drop stitch technology and how does it make pool walls rigid?"
-                    >
-                      How does drop stitch work?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="How durable is the PVC material in Felizbay pools?"
-                    >
-                      How durable is the pool PVC?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="What PSI should I inflate my drop stitch pool to?"
-                    >
-                      What PSI for my pool?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="How is a drop stitch inflatable pool manufactured?"
-                    >
-                      How are inflatable pools made?
-                    </button>
-                  </li>
-                </ul>
+              <ul class="ac-question-list">
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="Which inflatable pool is best for a small backyard?"
+                  >
+                    Best pool for a small backyard?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="Should I choose a rectangular or round inflatable pool?"
+                  >
+                    Rectangular vs round pool?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="What size inflatable pool do I need for my family?"
+                  >
+                    What pool size for my family?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="Do Felizbay pools come with a cover and pump?"
+                  >
+                    Do pools include a cover and pump?
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="ac-category-card">
+              <div class="ac-category-header">
+                <span class="ac-category-icon">⚙️</span>
+                <h3 class="ac-category-label">Technology & Materials</h3>
               </div>
-              <div class="ac-category-card">
-                <div class="ac-category-header">
-                  <span class="ac-category-icon">🌞</span>
-                  <h3 class="ac-category-label">Setup & Care</h3>
-                </div>
-                <ul class="ac-question-list">
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="How long does it take to set up an inflatable pool?"
-                    >
-                      How long does setup take?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="How do I keep the water in my inflatable pool clean?"
-                    >
-                      How to keep pool water clean?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="How do I store my inflatable pool for winter?"
-                    >
-                      How to winterize my pool?
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="ac-question-btn"
-                      data-question="What are the OEM and private label options for Felizbay pools?"
-                    >
-                      OEM/private label options?
-                    </button>
-                  </li>
-                </ul>
+              <ul class="ac-question-list">
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="What is drop stitch technology and how does it make pool walls rigid?"
+                  >
+                    How does drop stitch work?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="How durable is the PVC material in Felizbay pools?"
+                  >
+                    How durable is the pool PVC?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="What PSI should I inflate my drop stitch pool to?"
+                  >
+                    What PSI for my pool?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="How is a drop stitch inflatable pool manufactured?"
+                  >
+                    How are inflatable pools made?
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="ac-category-card">
+              <div class="ac-category-header">
+                <span class="ac-category-icon">🌞</span>
+                <h3 class="ac-category-label">Setup & Care</h3>
               </div>
-            </>
-          )
-        }
+              <ul class="ac-question-list">
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="How long does it take to set up an inflatable pool?"
+                  >
+                    How long does setup take?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="How do I keep the water in my inflatable pool clean?"
+                  >
+                    How to keep pool water clean?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="How do I store my inflatable pool for winter?"
+                  >
+                    How to winterize my pool?
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="ac-question-btn"
+                    data-question="What are the OEM and private label options for Felizbay pools?"
+                  >
+                    OEM/private label options?
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </>
+        )}
       </div>
     </div>
   </section>
@@ -216,7 +216,9 @@ const {
         <ul id="ac-sources-list"></ul>
       </div>
       <div class="ac-answer-actions hidden" id="ac-answer-actions">
-        <button type="button" class="ac-ask-another" id="ac-ask-another">Ask another question</button>
+        <button type="button" class="ac-ask-another" id="ac-ask-another">
+          Ask another question
+        </button>
       </div>
     </div>
   </section>

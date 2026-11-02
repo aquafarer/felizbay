@@ -170,20 +170,18 @@ const astroImageProps = Object.assign({}, rest, {
 }) as unknown as Parameters<typeof AstroImage>[0];
 ---
 
-{
-  isCdnUrl ? (
-    <img
-      src={cdnSrc}
-      srcset={cdnSrcSet}
-      width={w}
-      height={h}
-      alt={alt}
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-      {...rest}
-      style={finalStyle}
-    />
-  ) : (
-    resolved && <AstroImage {...astroImageProps} />
-  )
-}
+{isCdnUrl ? (
+  <img
+    src={cdnSrc}
+    srcset={cdnSrcSet}
+    width={w}
+    height={h}
+    alt={alt}
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    {...rest}
+    style={finalStyle}
+  />
+) : (
+  resolved && <AstroImage {...astroImageProps} />
+)}

@@ -13,7 +13,9 @@ const jsonOutput = exportTasksJson(tasks);
 <Layout metadata={{ title: 'Task List — SEO Dashboard' }}>
   <main class="max-w-7xl mx-auto px-6 py-12">
     <div class="mb-8">
-      <a href="/internal/seo/" class="text-sm text-blue-600 hover:underline">&larr; Back to Dashboard</a>
+      <a href="/internal/seo/" class="text-sm text-blue-600 hover:underline">
+        &larr; Back to Dashboard
+      </a>
       <h1 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">SEO Task List · v3.2</h1>
       <p class="text-gray-500 dark:text-gray-400 mt-1">Rule-driven task generation · Export to Markdown / JSON / CSV</p>
     </div>
@@ -40,117 +42,116 @@ const jsonOutput = exportTasksJson(tasks);
       <button
         id="copy-md"
         class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
-        data-output="md">Copy Markdown</button
+        data-output="md"
       >
+        Copy Markdown
+      </button>
       <button
         id="copy-json"
         class="px-4 py-2 bg-gray-600 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition"
-        data-output="json">Copy JSON</button
+        data-output="json"
       >
+        Copy JSON
+      </button>
       <button
         id="copy-csv"
         class="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition"
-        data-output="csv">Copy CSV</button
+        data-output="csv"
       >
+        Copy CSV
+      </button>
     </div>
 
-    {
-      tasks.high.length > 0 && (
-        <section class="mb-8">
-          <h2 class="text-xl font-semibold mb-4 text-red-700 dark:text-red-400">
-            🔥 HIGH PRIORITY — Must Do This Week
-          </h2>
-          <div class="space-y-6">
-            {tasks.high.map((task, _i) => {
-              const steps = EXECUTION_STEPS[task.type] || [];
-              return (
-                <div class="bg-white dark:bg-gray-800 rounded-xl border border-red-200 dark:border-red-800 overflow-hidden">
-                  <div class="p-6">
-                    <div class="flex items-center gap-2 mb-3">
-                      <span class="px-2 py-0.5 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 rounded text-xs font-bold">
-                        {task.id}
-                      </span>
-                      <span class="px-2 py-0.5 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400 rounded text-xs font-medium">
-                        {task.type}
-                      </span>
+    {tasks.high.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-4 text-red-700 dark:text-red-400">🔥 HIGH PRIORITY — Must Do This Week</h2>
+        <div class="space-y-6">
+          {tasks.high.map((task, _i) => {
+            const steps = EXECUTION_STEPS[task.type] || [];
+            return (
+              <div class="bg-white dark:bg-gray-800 rounded-xl border border-red-200 dark:border-red-800 overflow-hidden">
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-3">
+                    <span class="px-2 py-0.5 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 rounded text-xs font-bold">
+                      {task.id}
+                    </span>
+                    <span class="px-2 py-0.5 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400 rounded text-xs font-medium">
+                      {task.type}
+                    </span>
+                  </div>
+                  <div class="space-y-3">
+                    <div>
+                      <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Page</span>
+                      <p class="font-medium text-sm font-mono mt-0.5">{task.page}</p>
                     </div>
-                    <div class="space-y-3">
+                    <div>
+                      <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Issue</span>
+                      <p class="text-sm text-gray-600 dark:text-gray-300 mt-0.5">{task.issue}</p>
+                    </div>
+                    <div>
+                      <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Action</span>
+                      <p class="text-sm text-blue-600 dark:text-blue-400 mt-0.5">{task.action}</p>
+                    </div>
+                    {steps.length > 0 && (
                       <div>
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Page</span>
-                        <p class="font-medium text-sm font-mono mt-0.5">{task.page}</p>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Execution Steps</span>
+                        <ul class="mt-1 space-y-0.5">
+                          {steps.map((s) => (
+                            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+                              <span class="text-green-500 mt-0.5">✓</span>
+                              {s}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <div>
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Issue</span>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-0.5">{task.issue}</p>
-                      </div>
-                      <div>
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Action</span>
-                        <p class="text-sm text-blue-600 dark:text-blue-400 mt-0.5">{task.action}</p>
-                      </div>
-                      {steps.length > 0 && (
-                        <div>
-                          <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Execution Steps</span>
-                          <ul class="mt-1 space-y-0.5">
-                            {steps.map((s) => (
-                              <li class="text-xs text-gray-500 flex items-start gap-1.5">
-                                <span class="text-green-500 mt-0.5">✓</span>
-                                {s}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      <div>
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Expected Impact</span>
-                        <p class="text-xs text-gray-500 mt-0.5">{task.expectedImpact}</p>
-                      </div>
+                    )}
+                    <div>
+                      <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Expected Impact</span>
+                      <p class="text-xs text-gray-500 mt-0.5">{task.expectedImpact}</p>
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </section>
-      )
-    }
-
-    {
-      tasks.medium.length > 0 && (
-        <section class="mb-8">
-          <h2 class="text-xl font-semibold mb-4 text-amber-700 dark:text-amber-400">
-            🟡 MEDIUM PRIORITY — Plan for Next Week
-          </h2>
-          <div class="space-y-4">
-            {tasks.medium.map((task, _i) => (
-              <div class="bg-white dark:bg-gray-800 rounded-xl border border-amber-200 dark:border-amber-800 p-5">
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 rounded text-xs font-bold">
-                    {task.id}
-                  </span>
-                  <span class="px-2 py-0.5 bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 rounded text-xs font-medium">
-                    {task.type}
-                  </span>
-                </div>
-                <div class="font-medium text-sm">{task.page}</div>
-                <div class="text-xs text-gray-500 mt-1">{task.issue}</div>
-                <div class="text-xs text-blue-600 dark:text-blue-400 mt-1">→ {task.action}</div>
               </div>
-            ))}
-          </div>
-        </section>
-      )
-    }
+            );
+          })}
+        </div>
+      </section>
+    )}
 
-    <section
-      class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-8"
-    >
+    {tasks.medium.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-4 text-amber-700 dark:text-amber-400">
+          🟡 MEDIUM PRIORITY — Plan for Next Week
+        </h2>
+        <div class="space-y-4">
+          {tasks.medium.map((task, _i) => (
+            <div class="bg-white dark:bg-gray-800 rounded-xl border border-amber-200 dark:border-amber-800 p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 rounded text-xs font-bold">
+                  {task.id}
+                </span>
+                <span class="px-2 py-0.5 bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 rounded text-xs font-medium">
+                  {task.type}
+                </span>
+              </div>
+              <div class="font-medium text-sm">{task.page}</div>
+              <div class="text-xs text-gray-500 mt-1">{task.issue}</div>
+              <div class="text-xs text-blue-600 dark:text-blue-400 mt-1">→ {task.action}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-8">
       <div class="p-6 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
         <h2 class="text-lg font-semibold">Markdown Export Preview</h2>
         <span class="text-xs text-gray-400">Copy and paste into Notion or any Markdown editor</span>
       </div>
       <pre
         class="p-6 text-xs font-mono bg-gray-50 dark:bg-gray-900 overflow-auto max-h-96 leading-relaxed"
-        id="md-preview">{markdownOutput}</pre>
+        id="md-preview"
+      >{markdownOutput}</pre>
     </section>
 
     <section class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -160,7 +161,8 @@ const jsonOutput = exportTasksJson(tasks);
       </div>
       <pre
         class="p-6 text-xs font-mono bg-gray-50 dark:bg-gray-900 overflow-auto max-h-64 leading-relaxed"
-        id="json-preview">{jsonOutput.slice(0, 2000)}...</pre>
+        id="json-preview"
+      >{jsonOutput.slice(0, 2000)}...</pre>
     </section>
   </main>
 

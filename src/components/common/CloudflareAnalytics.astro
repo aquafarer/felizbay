@@ -5,16 +5,14 @@
 const token = (import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN as string | undefined) || '';
 ---
 
-{
-  token && (
-    <>
-      <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
-      <script
-        is:inline
-        defer
-        src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon={`{"token": "${token}"}`}
-      />
-    </>
-  )
-}
+{token && (
+  <>
+    <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin />
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={`{"token": "${token}"}`}
+    />
+  </>
+)}

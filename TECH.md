@@ -1674,13 +1674,11 @@ if (token) {
   <div class="flex items-center justify-between gap-4 flex-wrap">
     <h1 class="text-2xl font-semibold">...</h1>
     <select id="locale-select">
-      {
-        ADMIN_LOCALE_CODES.map((l) => (
-          <option value={l} selected={l === locale}>
-            {ADMIN_LOCALES[l]}
-          </option>
-        ))
-      }
+      {ADMIN_LOCALE_CODES.map((l) => (
+        <option value={l} selected={l === locale}>
+          {ADMIN_LOCALES[l]}
+        </option>
+      ))}
     </select>
   </div>
 

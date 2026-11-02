@@ -186,13 +186,11 @@ if (token) {
           id="locale-select"
           class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         >
-          {
-            ADMIN_LOCALE_CODES.map((l) => (
-              <option value={l} selected={l === locale}>
-                {ADMIN_LOCALES[l]}
-              </option>
-            ))
-          }
+          {ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))}
         </select>
       </div>
     </div>
@@ -202,13 +200,11 @@ if (token) {
     </p>
   </div>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Failed to read: {loadError}
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Failed to read: {loadError}
+    </div>
+  )}
 
   <form
     id="form"
@@ -221,91 +217,88 @@ if (token) {
     <!-- Messages & Labels -->
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-6">
       <h2 class="text-base font-semibold">Messages & Labels</h2>
-      {
-        ['submit_button', 'success_message', 'error_message', 'captcha_label', 'consent_text', 'consent_link_text'].map(
-          (key) => (
-            <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{key}</label>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                {ADMIN_LOCALE_CODES.map((locale) => (
-                  <div>
-                    <span class="text-xs text-gray-400">{ADMIN_LOCALES[locale]}</span>
-                    <textarea
-                      name={key + '.' + locale}
-                      rows="2"
-                      class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                    >
+      {['submit_button', 'success_message', 'error_message', 'captcha_label', 'consent_text', 'consent_link_text'].map(
+        (key) => (
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{key}</label>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {ADMIN_LOCALE_CODES.map((locale) => (
+                <div>
+                  <span class="text-xs text-gray-400">{ADMIN_LOCALES[locale]}</span>
+                  <textarea
+                    name={key + '.' + locale}
+                    rows="2"
+                    class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  >
                       {((data as any)[key] || {})[locale] || ''}
                     </textarea>
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          )
+          </div>
         )
-      }
+      )}
     </div>
 
     <!-- Form Fields -->
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-6">
       <h2 class="text-base font-semibold">Form Fields</h2>
-      {
-        (data.fields || []).map((field: any, i: number) => (
-          <div class="border border-gray-100 dark:border-gray-700 rounded-lg p-4 space-y-3">
-            <h3 class="text-sm font-semibold text-gray-500">{field.name}</h3>
-            <input type="hidden" name={'field' + i + '.name'} value={field.name} />
-            <div>
-              <label class="block text-xs font-medium text-gray-500 mb-1">Label</label>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                {ADMIN_LOCALE_CODES.map((locale) => (
-                  <div>
-                    <span class="text-xs text-gray-400">{ADMIN_LOCALES[locale]}</span>
-                    <input
-                      type="text"
-                      name={'field' + i + '.label.' + locale}
-                      value={((field.label || {}) as any)[locale] || ''}
-                      class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-medium text-gray-500 mb-1">Placeholder</label>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                {ADMIN_LOCALE_CODES.map((locale) => (
-                  <div>
-                    <span class="text-xs text-gray-400">{ADMIN_LOCALES[locale]}</span>
-                    <input
-                      type="text"
-                      name={'field' + i + '.placeholder.' + locale}
-                      value={((field.placeholder || {}) as any)[locale] || ''}
-                      class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                    />
-                  </div>
-                ))}
-              </div>
+      {(data.fields || []).map((field: any, i: number) => (
+        <div class="border border-gray-100 dark:border-gray-700 rounded-lg p-4 space-y-3">
+          <h3 class="text-sm font-semibold text-gray-500">{field.name}</h3>
+          <input type="hidden" name={'field' + i + '.name'} value={field.name} />
+          <div>
+            <label class="block text-xs font-medium text-gray-500 mb-1">Label</label>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              {ADMIN_LOCALE_CODES.map((locale) => (
+                <div>
+                  <span class="text-xs text-gray-400">{ADMIN_LOCALES[locale]}</span>
+                  <input
+                    type="text"
+                    name={'field' + i + '.label.' + locale}
+                    value={((field.label || {}) as any)[locale] || ''}
+                    class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                </div>
+              ))}
             </div>
           </div>
-        ))
-      }
+          <div>
+            <label class="block text-xs font-medium text-gray-500 mb-1">Placeholder</label>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              {ADMIN_LOCALE_CODES.map((locale) => (
+                <div>
+                  <span class="text-xs text-gray-400">{ADMIN_LOCALES[locale]}</span>
+                  <input
+                    type="text"
+                    name={'field' + i + '.placeholder.' + locale}
+                    value={((field.placeholder || {}) as any)[locale] || ''}
+                    class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
 
-    <div
-      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-    >
+    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="text-xs text-gray-500">
+          File: <code class="font-mono">{file}</code>
+        </div>
         <div class="flex gap-2">
-          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
-            >Cancel</a
-          >
+          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">
+            Cancel
+          </a>
           <button
             id="submit-btn"
             type="submit"
             class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
-            >Save & Push</button
           >
+            Save & Push
+          </button>
         </div>
       </div>
     </div>

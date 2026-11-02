@@ -48,44 +48,34 @@ const specLabels: Record<string, string> = {
         <thead>
           <tr class="border-b border-gray-200 dark:border-slate-700">
             <th class="text-left py-3 px-4 font-semibold text-gray-900 dark:text-slate-100 w-36">{productLabel}</th>
-            {
-              filtered.map((p) => (
-                <th class="text-center py-3 px-4 font-semibold text-gray-900 dark:text-slate-100 min-w-[140px]">
-                  {p.name}
-                </th>
-              ))
-            }
+            {filtered.map((p) => (
+              <th class="text-center py-3 px-4 font-semibold text-gray-900 dark:text-slate-100 min-w-[140px]">
+                {p.name}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>
           <tr class="border-b border-gray-100 dark:border-slate-800">
             <td class="py-3 px-4 text-gray-500 text-xs font-medium uppercase tracking-wider">{descriptionLabel}</td>
-            {
-              filtered.map((p) => (
-                <td class="py-3 px-4 text-center text-xs text-gray-600 dark:text-slate-400">
-                  {p.desc?.slice(0, 80)}...
-                </td>
-              ))
-            }
+            {filtered.map((p) => (
+              <td class="py-3 px-4 text-center text-xs text-gray-600 dark:text-slate-400">{p.desc?.slice(0, 80)}...</td>
+            ))}
           </tr>
-          {
-            specs.map((spec) => (
-              <tr class="border-b border-gray-100 dark:border-slate-800">
-                <td class="py-3 px-4 text-gray-500 text-xs font-medium uppercase tracking-wider">
-                  {specLabels[spec] || spec}
-                </td>
-                {filtered.map((p) => {
-                  const val = p[spec as keyof typeof p];
-                  const display = Array.isArray(val) ? val.join(', ') : String(val || '-');
-                  return (
-                    <td class="py-3 px-4 text-center text-xs text-gray-700 dark:text-slate-300 capitalize">
-                      {display}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))
-          }
+          {specs.map((spec) => (
+            <tr class="border-b border-gray-100 dark:border-slate-800">
+              <td class="py-3 px-4 text-gray-500 text-xs font-medium uppercase tracking-wider">
+                {specLabels[spec] || spec}
+              </td>
+              {filtered.map((p) => {
+                const val = p[spec as keyof typeof p];
+                const display = Array.isArray(val) ? val.join(', ') : String(val || '-');
+                return (
+                  <td class="py-3 px-4 text-center text-xs text-gray-700 dark:text-slate-300 capitalize">{display}</td>
+                );
+              })}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

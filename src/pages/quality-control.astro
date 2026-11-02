@@ -145,17 +145,15 @@ const qcChecks = [
         ending with a hold-time test that verifies the finished product as a whole.
       </p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {
-          qcChecks.map((c) => (
-            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-              <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
-                <Icon name={c.icon} class="w-5 h-5" />
-              </span>
-              <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{c.title}</h3>
-              <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{c.description}</p>
-            </div>
-          ))
-        }
+        {qcChecks.map((c) => (
+          <div class="p-5 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+              <Icon name={c.icon} class="w-5 h-5" />
+            </span>
+            <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{c.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{c.description}</p>
+          </div>
+        ))}
       </div>
     </section>
 
@@ -165,16 +163,14 @@ const qcChecks = [
         Published pressure limits are enforced on 100% of production — not on a sample basis.
       </p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {
-          POOL_PRESSURE_SPECS.map((p) => (
-            <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
-              <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
-                {p.label}
-              </div>
-              <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
+        {POOL_PRESSURE_SPECS.map((p) => (
+          <div class="p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <div class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+              {p.label}
             </div>
-          ))
-        }
+            <div class="text-sm font-bold text-gray-900 dark:text-slate-100">{p.value}</div>
+          </div>
+        ))}
       </div>
     </section>
 
@@ -189,9 +185,7 @@ const qcChecks = [
       <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
         <table class="w-full text-sm min-w-[768px]">
           <thead>
-            <tr
-              class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400"
-            >
+            <tr class="bg-gray-50 dark:bg-slate-800/70 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400">
               <th class="px-4 py-3">Claim</th>
               <th class="px-4 py-3">Applies To</th>
               <th class="px-4 py-3">Test / Verification</th>
@@ -200,34 +194,34 @@ const qcChecks = [
             </tr>
           </thead>
           <tbody>
-            {
-              claimEvidence.map((row, i) => (
-                <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
-                  <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800 align-top">
-                    {row.claim}
-                  </td>
-                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
-                    {row.applies}
-                  </td>
-                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
-                    {row.verification}
-                  </td>
-                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
-                    {row.result}
-                  </td>
-                  <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
-                    {row.limitations}
-                  </td>
-                </tr>
-              ))
-            }
+            {claimEvidence.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                <td class="px-4 py-2.5 font-medium text-gray-800 dark:text-slate-200 border-b border-gray-100 dark:border-slate-800 align-top">
+                  {row.claim}
+                </td>
+                <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                  {row.applies}
+                </td>
+                <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                  {row.verification}
+                </td>
+                <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                  {row.result}
+                </td>
+                <td class="px-4 py-2.5 text-gray-600 dark:text-slate-400 border-b border-gray-100 dark:border-slate-800 align-top">
+                  {row.limitations}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
       <p class="text-sm text-gray-500 dark:text-slate-400 mt-3">
         Demo videos for inflation and rigidity are published at{' '}
-        <a href="/products/specs/#videos" class="text-primary dark:text-sky-400 hover:underline">Product Videos</a>.
-        Model-level safety and use documentation is provided with each product.
+        <a href="/products/specs/#videos" class="text-primary dark:text-sky-400 hover:underline">
+          Product Videos
+        </a>
+        . Model-level safety and use documentation is provided with each product.
       </p>
     </section>
 
@@ -246,23 +240,27 @@ const qcChecks = [
         <a
           href="/manufacturing/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Manufacturing Process</a
         >
+          Manufacturing Process
+        </a>
         <a
           href="/wholesale/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Wholesale Program</a
         >
+          Wholesale Program
+        </a>
         <a
           href="/oem-odm/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >OEM / ODM</a
         >
+          OEM / ODM
+        </a>
         <a
           href="/products/specs/#pressure"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Full Specifications</a
         >
+          Full Specifications
+        </a>
       </div>
     </section>
 
@@ -272,13 +270,15 @@ const qcChecks = [
         <a
           href="/guides/inflatable-pool-pressure-testing-explained/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Pressure Testing Explained</a
         >
+          Pressure Testing Explained
+        </a>
         <a
           href="/guides/how-to-choose-a-drop-stitch-pool-manufacturer/"
           class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
-          >Choosing a Manufacturer</a
         >
+          Choosing a Manufacturer
+        </a>
       </div>
     </section>
   </section>

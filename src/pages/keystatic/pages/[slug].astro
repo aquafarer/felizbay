@@ -72,7 +72,10 @@ if (token) {
   <div class="mb-6">
     <div class="flex items-center justify-between gap-4 flex-wrap">
       <div>
-        <a href="/keystatic/pages/" class="text-sm text-gray-500 hover:underline"> ?Back to Pages list</a>
+        <a href="/keystatic/pages/" class="text-sm text-gray-500 hover:underline">
+          {' '}
+          ?Back to Pages list
+        </a>
         <h1 class="mt-2 text-2xl font-semibold">Edit: {page.label}</h1>
       </div>
       <div class="flex items-center gap-2">
@@ -81,42 +84,34 @@ if (token) {
           id="locale-select"
           class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         >
-          {
-            ADMIN_LOCALE_CODES.map((l) => (
-              <option value={l} selected={l === locale}>
-                {ADMIN_LOCALES[l]}
-              </option>
-            ))
-          }
+          {ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))}
         </select>
       </div>
     </div>
     <p class="mt-1 text-sm text-gray-500">
       File: <code class="font-mono">{localeFile}</code>
-      {
-        !isDefault && (
-          <span class="text-amber-600 dark:text-amber-400">
-            {' '}
-            &mdash; locale override (inherits English file as fallback)
-          </span>
-        )
-      }
-      · Site path: <a
-        href={page.path}
-        class="text-blue-600 dark:text-blue-400 hover:underline"
-        target="_blank"
-        rel="noopener">{page.path}</a
-      >
+      {!isDefault && (
+        <span class="text-amber-600 dark:text-amber-400">
+          {' '}
+          &mdash; locale override (inherits English file as fallback)
+        </span>
+      )}
+      · Site path:{' '}
+      <a href={page.path} class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener">
+        {page.path}
+      </a>
     </p>
   </div>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Failed to read: {loadError}
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Failed to read: {loadError}
+    </div>
+  )}
 
   <form
     id="page-form"
@@ -126,67 +121,71 @@ if (token) {
     data-locale={locale}
     onsubmit="arguments[0].preventDefault()"
   >
-    {
-      page.sections.map((section) => {
-        const sectionData = data?.[section.key] ?? {};
-        const prefix = `s_${section.key}`;
-        return (
-          <details
-            open
-            class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
-          >
-            <summary class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900">
-              <div>
-                <div class="text-sm font-semibold">{section.label}</div>
-                <div class="text-xs text-gray-500 font-mono mt-0.5">{section.key}</div>
-              </div>
-              <span class="text-xs text-gray-400">widget: {section.type}</span>
-            </summary>
-            <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800">
-              {section.type === 'hero' && <HeroForm prefix={prefix} data={sectionData} />}
-              {section.type === 'hero_text' && <HeroTextForm prefix={prefix} data={sectionData} />}
-              {section.type === 'hero_carousel' && <HeroCarouselForm prefix={prefix} data={sectionData} />}
-              {section.type === 'features' && <FeaturesForm prefix={prefix} data={sectionData} />}
-              {section.type === 'features2' && <Features2Form prefix={prefix} data={sectionData} />}
-              {section.type === 'features3' && <Features3Form prefix={prefix} data={sectionData} />}
-              {section.type === 'content' && <ContentForm prefix={prefix} data={sectionData} />}
-              {section.type === 'steps' && <StepsForm prefix={prefix} data={sectionData} />}
-              {section.type === 'steps2' && <Steps2Form prefix={prefix} data={sectionData} />}
-              {section.type === 'stats' && <StatsForm prefix={prefix} data={sectionData} />}
-              {section.type === 'faqs' && <FaqsForm prefix={prefix} data={sectionData} />}
-              {section.type === 'testimonials' && <TestimonialsForm prefix={prefix} data={sectionData} />}
-              {section.type === 'pricing' && <PricingForm prefix={prefix} data={sectionData} />}
-              {section.type === 'contact' && <ContactFormSection prefix={prefix} data={sectionData} />}
-              {section.type === 'cta' && <CtaForm prefix={prefix} data={sectionData} />}
-              {section.type === 'featured_products' && <FeaturedProductsForm prefix={prefix} data={sectionData} />}
-              {section.type === 'blog_latest' && <BlogLatestForm prefix={prefix} data={sectionData} />}
-              {section.type === 'map' && <MapForm prefix={prefix} data={sectionData} />}
+    {page.sections.map((section) => {
+      const sectionData = data?.[section.key] ?? {};
+      const prefix = `s_${section.key}`;
+      return (
+        <details
+          open
+          class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+        >
+          <summary class="px-5 py-3 cursor-pointer flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-900">
+            <div>
+              <div class="text-sm font-semibold">{section.label}</div>
+              <div class="text-xs text-gray-500 font-mono mt-0.5">{section.key}</div>
             </div>
-          </details>
-        );
-      })
-    }
+            <span class="text-xs text-gray-400">widget: {section.type}</span>
+          </summary>
+          <div class="px-5 py-4 border-t border-gray-200 dark:border-gray-800">
+            {section.type === 'hero' && <HeroForm prefix={prefix} data={sectionData} />}
+            {section.type === 'hero_text' && <HeroTextForm prefix={prefix} data={sectionData} />}
+            {section.type === 'hero_carousel' && <HeroCarouselForm prefix={prefix} data={sectionData} />}
+            {section.type === 'features' && <FeaturesForm prefix={prefix} data={sectionData} />}
+            {section.type === 'features2' && <Features2Form prefix={prefix} data={sectionData} />}
+            {section.type === 'features3' && <Features3Form prefix={prefix} data={sectionData} />}
+            {section.type === 'content' && <ContentForm prefix={prefix} data={sectionData} />}
+            {section.type === 'steps' && <StepsForm prefix={prefix} data={sectionData} />}
+            {section.type === 'steps2' && <Steps2Form prefix={prefix} data={sectionData} />}
+            {section.type === 'stats' && <StatsForm prefix={prefix} data={sectionData} />}
+            {section.type === 'faqs' && <FaqsForm prefix={prefix} data={sectionData} />}
+            {section.type === 'testimonials' && <TestimonialsForm prefix={prefix} data={sectionData} />}
+            {section.type === 'pricing' && <PricingForm prefix={prefix} data={sectionData} />}
+            {section.type === 'contact' && <ContactFormSection prefix={prefix} data={sectionData} />}
+            {section.type === 'cta' && <CtaForm prefix={prefix} data={sectionData} />}
+            {section.type === 'featured_products' && <FeaturedProductsForm prefix={prefix} data={sectionData} />}
+            {section.type === 'blog_latest' && <BlogLatestForm prefix={prefix} data={sectionData} />}
+            {section.type === 'map' && <MapForm prefix={prefix} data={sectionData} />}
+          </div>
+        </details>
+      );
+    })}
 
-    <div
-      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-    >
+    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-        <div class="text-xs text-gray-500" data-file-info>File: <code class="font-mono">{localeFile}</code></div>
+        <div class="text-xs text-gray-500" data-file-info>
+          File: <code class="font-mono">{localeFile}</code>
+        </div>
         <div class="flex gap-2">
           <a
             href="/keystatic/pages/"
-            class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">Cancel</a
+            class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
           >
+            Cancel
+          </a>
           <button
             id="save-draft-btn"
             type="button"
-            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
           >
+            Save Draft
+          </button>
           <button
             id="publish-btn"
             type="button"
-            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
           >
+            Publish
+          </button>
         </div>
       </div>
     </div>

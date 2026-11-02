@@ -140,30 +140,28 @@ const metadata = merge(
     </header>
 
     <div class="grid gap-6 md:grid-cols-2">
-      {
-        tracks.map((track) => (
-          <div class="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-7">
-            <Icon name={track.icon} class="w-9 h-9 text-primary dark:text-blue-400 mb-4" />
-            <h2 class="text-xl font-semibold font-heading dark:text-slate-100 mb-2">{track.title}</h2>
-            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed mb-4">{track.description}</p>
-            <ul class="space-y-2 mb-6 flex-1">
-              {track.points.map((p) => (
-                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-300">
-                  <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-green-500 shrink-0" />
-                  <span>{p}</span>
-                </li>
-              ))}
-            </ul>
-            <a
-              href={track.href}
-              class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-            >
-              {track.cta}
-              <Icon name="tabler:arrow-right" class="w-4 h-4" />
-            </a>
-          </div>
-        ))
-      }
+      {tracks.map((track) => (
+        <div class="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-7">
+          <Icon name={track.icon} class="w-9 h-9 text-primary dark:text-blue-400 mb-4" />
+          <h2 class="text-xl font-semibold font-heading dark:text-slate-100 mb-2">{track.title}</h2>
+          <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed mb-4">{track.description}</p>
+          <ul class="space-y-2 mb-6 flex-1">
+            {track.points.map((p) => (
+              <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-300">
+                <Icon name="tabler:check" class="w-4 h-4 mt-0.5 text-green-500 shrink-0" />
+                <span>{p}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={track.href}
+            class="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            {track.cta}
+            <Icon name="tabler:arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
+      ))}
     </div>
 
     <!-- Why partner -->
@@ -191,15 +189,13 @@ const metadata = merge(
             </tr>
           </thead>
           <tbody>
-            {
-              valueMatrix.map((row, idx) => (
-                <tr class={idx % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
-                  <td class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-200 align-top">{row.challenge}</td>
-                  <td class="px-4 py-3 text-gray-600 dark:text-slate-300 align-top leading-relaxed">{row.solution}</td>
-                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400 align-top leading-relaxed">{row.reality}</td>
-                </tr>
-              ))
-            }
+            {valueMatrix.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50/60 dark:bg-slate-800/40'}>
+                <td class="px-4 py-3 font-semibold text-gray-900 dark:text-slate-200 align-top">{row.challenge}</td>
+                <td class="px-4 py-3 text-gray-600 dark:text-slate-300 align-top leading-relaxed">{row.solution}</td>
+                <td class="px-4 py-3 text-gray-500 dark:text-slate-400 align-top leading-relaxed">{row.reality}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -211,21 +207,19 @@ const metadata = merge(
         Factory &amp; program resources
       </h2>
       <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {
-          resources.map((r) => (
-            <a
-              href={r.href}
-              class="block p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
-            >
-              <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200 mb-1">{r.title}</h3>
-              <p class="text-xs text-gray-500 dark:text-slate-400 leading-relaxed">{r.description}</p>
-              <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
-                Open
-                <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
-              </span>
-            </a>
-          ))
-        }
+        {resources.map((r) => (
+          <a
+            href={r.href}
+            class="block p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
+          >
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200 mb-1">{r.title}</h3>
+            <p class="text-xs text-gray-500 dark:text-slate-400 leading-relaxed">{r.description}</p>
+            <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
+              Open
+              <Icon name="tabler:arrow-right" class="w-3.5 h-3.5" />
+            </span>
+          </a>
+        ))}
       </div>
     </div>
 

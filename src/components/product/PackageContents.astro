@@ -46,47 +46,41 @@ const {
       <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
         <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">{includedTitle}</h3>
         <ul class="space-y-2">
-          {
-            included.map((item) => (
-              <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
-                <span class="text-green-600 dark:text-green-400 mt-0.5">&#10003;</span>
-                <span>{item}</span>
-              </li>
-            ))
-          }
+          {included.map((item) => (
+            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+              <span class="text-green-600 dark:text-green-400 mt-0.5">&#10003;</span>
+              <span>{item}</span>
+            </li>
+          ))}
         </ul>
       </div>
       <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
         <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">{requiredTitle}</h3>
         <ul class="space-y-2">
-          {
-            requiredSeparately.length > 0 ? (
-              requiredSeparately.map((item) => (
-                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
-                  <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))
-            ) : (
-              <li class="text-sm text-gray-500 dark:text-slate-400">—</li>
-            )
-          }
+          {requiredSeparately.length > 0 ? (
+            requiredSeparately.map((item) => (
+              <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+                <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))
+          ) : (
+            <li class="text-sm text-gray-500 dark:text-slate-400">—</li>
+          )}
         </ul>
       </div>
       <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
         <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-100 mb-3">{optionalTitle}</h3>
         <ul class="space-y-2.5">
-          {
-            optionalAddOns.map((acc) => (
-              <li>
-                <p class="text-sm font-medium text-gray-700 dark:text-slate-300">{acc.name}</p>
-                <p class="text-xs text-gray-500 dark:text-slate-400">
-                  {acc.spec}
-                  {showFob && acc.fobUsd ? ` — from $${acc.fobUsd.toFixed(2)} FOB` : ''}
-                </p>
-              </li>
-            ))
-          }
+          {optionalAddOns.map((acc) => (
+            <li>
+              <p class="text-sm font-medium text-gray-700 dark:text-slate-300">{acc.name}</p>
+              <p class="text-xs text-gray-500 dark:text-slate-400">
+                {acc.spec}
+                {showFob && acc.fobUsd ? ` — from $${acc.fobUsd.toFixed(2)} FOB` : ''}
+              </p>
+            </li>
+          ))}
         </ul>
         {currencyNote && <p class="mt-3 text-[11px] text-gray-400 dark:text-slate-500 leading-snug">{currencyNote}</p>}
       </div>

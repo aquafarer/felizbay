@@ -7,23 +7,24 @@ export const prerender = true;
   <div class="mb-6">
     <h1 class="text-2xl font-semibold">Batch URL / Name Refactoring</h1>
     <p class="mt-1 text-sm text-gray-500">
-      Scans all <code class="font-mono">.md</code> / <code class="font-mono">.mdx</code> / <code class="font-mono"
-        >.yaml</code
-      > / <code class="font-mono">.json</code> files under <code class="font-mono">src/data/</code> (excluding encrypted
+      Scans all <code class="font-mono">.md</code> / <code class="font-mono">.mdx</code> /{' '}
+      <code class="font-mono">.yaml</code> / <code class="font-mono">.json</code> files under{' '}
+      <code class="font-mono">src/data/</code> (excluding encrypted
       <code class="font-mono">submissions.enc.json</code>), replacing oldUrl / oldName with newUrl / newName. Matching
-      rules: URLs use <code class="font-mono">(?&lt;![A-Za-z0-9_-])URL(?![A-Za-z0-9_-])</code> (to avoid false matches like
-      <code class="font-mono">/blog-post</code>); names match whole words (to avoid <code class="font-mono">Blog</code> incorrectly
-      modifying <code class="font-mono">Blogpost</code>). Content inside code blocks (``` ... ```) will not be modified.
-      Each apply generates a separate commit per modified file.
+      rules: URLs use <code class="font-mono">(?&lt;![A-Za-z0-9_-])URL(?![A-Za-z0-9_-])</code> (to avoid false matches
+      like
+      <code class="font-mono">/blog-post</code>); names match whole words (to avoid <code class="font-mono">Blog</code>{' '}
+      incorrectly modifying <code class="font-mono">Blogpost</code>). Content inside code blocks (``` ... ```) will not
+      be modified. Each apply generates a separate commit per modified file.
     </p>
   </div>
 
   <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >oldUrl <span class="text-xs text-gray-500">(e.g. /blog)</span></label
-        >
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          oldUrl <span class="text-xs text-gray-500">(e.g. /blog)</span>
+        </label>
         <input
           id="oldUrl"
           type="text"
@@ -32,9 +33,9 @@ export const prerender = true;
         />
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >newUrl <span class="text-xs text-gray-500">(e.g. /news)</span></label
-        >
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          newUrl <span class="text-xs text-gray-500">(e.g. /news)</span>
+        </label>
         <input
           id="newUrl"
           type="text"
@@ -43,9 +44,9 @@ export const prerender = true;
         />
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >oldName <span class="text-xs text-gray-500">(e.g. Blog · whole word)</span></label
-        >
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          oldName <span class="text-xs text-gray-500">(e.g. Blog · whole word)</span>
+        </label>
         <input
           id="oldName"
           type="text"
@@ -54,9 +55,9 @@ export const prerender = true;
         />
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >newName <span class="text-xs text-gray-500">(e.g. News)</span></label
-        >
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          newName <span class="text-xs text-gray-500">(e.g. News)</span>
+        </label>
         <input
           id="newName"
           type="text"
@@ -70,15 +71,17 @@ export const prerender = true;
         id="scan-btn"
         type="button"
         class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
-        >Scan Entire Site</button
       >
+        Scan Entire Site
+      </button>
       <button
         id="apply-btn"
         type="button"
         disabled
         class="px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white text-sm font-medium rounded-md"
-        >Apply Changes</button
       >
+        Apply Changes
+      </button>
       <span id="status" class="self-center text-sm text-gray-500"></span>
     </div>
   </div>

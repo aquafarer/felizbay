@@ -94,13 +94,11 @@ if (token) {
         id="locale-select"
         class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
       >
-        {
-          ADMIN_LOCALE_CODES.map((l) => (
-            <option value={l} selected={l === locale}>
-              {ADMIN_LOCALES[l]}
-            </option>
-          ))
-        }
+        {ADMIN_LOCALE_CODES.map((l) => (
+          <option value={l} selected={l === locale}>
+            {ADMIN_LOCALES[l]}
+          </option>
+        ))}
       </select>
     </div>
   </div>
@@ -109,13 +107,11 @@ if (token) {
     {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
   </p>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Failed to read: {loadError}
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Failed to read: {loadError}
+    </div>
+  )}
 
   <form
     id="proofs-form"
@@ -125,70 +121,72 @@ if (token) {
     data-locale={locale}
     onsubmit="arguments[0].preventDefault()"
   >
-    {
-      points.map((p, i) => (
-        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
-          <h2 class="text-base font-semibold">
-            <span class="text-xs text-gray-400 font-mono mr-2">#{i + 1}</span>
-            {p.id}
-          </h2>
-          <input type="hidden" name={'p' + i + '.id'} value={p.id} />
+    {points.map((p, i) => (
+      <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+        <h2 class="text-base font-semibold">
+          <span class="text-xs text-gray-400 font-mono mr-2">#{i + 1}</span>
+          {p.id}
+        </h2>
+        <input type="hidden" name={'p' + i + '.id'} value={p.id} />
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Metric (big number)</label>
-              <input
-                type="text"
-                name={'p' + i + '.metric'}
-                value={p.metric}
-                placeholder="12"
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-              />
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Label</label>
-              <input
-                type="text"
-                name={'p' + i + '.label'}
-                value={p.label}
-                placeholder="pressure-tested pools"
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-              />
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Detail</label>
-              <input
-                type="text"
-                name={'p' + i + '.detail'}
-                value={p.detail}
-                placeholder="Every pool is inflation-tested before it leaves the factory"
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-              />
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Metric (big number)</label>
+            <input
+              type="text"
+              name={'p' + i + '.metric'}
+              value={p.metric}
+              placeholder="12"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Label</label>
+            <input
+              type="text"
+              name={'p' + i + '.label'}
+              value={p.label}
+              placeholder="pressure-tested pools"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Detail</label>
+            <input
+              type="text"
+              name={'p' + i + '.detail'}
+              value={p.detail}
+              placeholder="Every pool is inflation-tested before it leaves the factory"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
           </div>
         </div>
-      ))
-    }
+      </div>
+    ))}
 
-    <div
-      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-    >
+    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="text-xs text-gray-500">
+          File: <code class="font-mono">{file}</code>
+        </div>
         <div class="flex gap-2">
-          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
-            >Cancel</a
-          >
+          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">
+            Cancel
+          </a>
           <button
             id="save-draft-btn"
             type="button"
-            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
           >
+            Save Draft
+          </button>
           <button
             id="publish-btn"
             type="button"
-            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
           >
+            Publish
+          </button>
         </div>
       </div>
     </div>

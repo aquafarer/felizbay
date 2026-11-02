@@ -6,10 +6,10 @@ const { lang = 'fi' } = Astro.props;
   <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">
     Lääketieteellinen vastuuvapauslauseke
   </h1>
-  <div
-    class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
-  >
-    <p><em>Viimeksi päivitetty: 18. kesäkuuta 2026</em></p>
+  <div class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+    <p>
+      <em>Viimeksi päivitetty: 18. kesäkuuta 2026</em>
+    </p>
     <h2 id="general-information-only">Vain yleistä tietoa</h2>
     <p>
       Tämän verkkosivuston sisältö, mukaan lukien teksti, grafiikka, kuvat ja muu materiaali, on tarkoitettu vain
@@ -24,13 +24,13 @@ const { lang = 'fi' } = Astro.props;
     </p>
     <h2 id="not-for-clinical-use">Ei kliiniseen käyttöön</h2>
     <p>
-      Tuotteemme on suunniteltu yksinomaan <strong>tutkimus-, tiedotus- ja hyvinvointitarkoituksiin</strong>. <strong
-        >FDA, EMA tai mikään muu sääntelyvirasto ei ole hyväksynyt niitä</strong
-      > käytettäväksi kliinisessä diagnoosissa, sairauksien ehkäisyssä tai hoitopäätöksissä.
+      Tuotteemme on suunniteltu yksinomaan <strong>tutkimus-, tiedotus- ja hyvinvointitarkoituksiin</strong>.{' '}
+      <strong>FDA, EMA tai mikään muu sääntelyvirasto ei ole hyväksynyt niitä</strong> käytettäväksi kliinisessä
+      diagnoosissa, sairauksien ehkäisyssä tai hoitopäätöksissä.
     </p>
     <p>
-      Sinun <strong>ei pidä</strong> tehdä lääketieteellisiä tai terveyteen liittyviä päätöksiä tuotteidemme tai verkkosivustomme
-      kautta toimitettujen tietojen perusteella kuulematta pätevää terveydenhuollon ammattilaista.
+      Sinun <strong>ei pidä</strong> tehdä lääketieteellisiä tai terveyteen liittyviä päätöksiä tuotteidemme tai
+      verkkosivustomme kautta toimitettujen tietojen perusteella kuulematta pätevää terveydenhuollon ammattilaista.
     </p>
     <h2 id="no-warranties">Ei takuita</h2>
     <p>
@@ -45,10 +45,9 @@ const { lang = 'fi' } = Astro.props;
     </p>
     <h2 id="data-privacy-genetic-information">Yksityisyys ja geneettiset tiedot</h2>
     <p>
-      Kaikkia palveluidemme kautta lähettämiäsi tai tuottamiasi geneettisiä tai terveyteen liittyviä tietoja käsitellään <a
-        href={`/${lang}/privacy/`}>tietosuojakäytäntömme</a
-      > mukaisesti. Käytämme alan standardien mukaista salausta ja pääsynhallintaa. Mikään Internetin kautta tapahtuva tiedonsiirto
-      ei kuitenkaan ole 100% turvallista.
+      Kaikkia palveluidemme kautta lähettämiäsi tai tuottamiasi geneettisiä tai terveyteen liittyviä tietoja käsitellään{' '}
+      <a href={`/${lang}/privacy/`}>tietosuojakäytäntömme</a> mukaisesti. Käytämme alan standardien mukaista salausta ja
+      pääsynhallintaa. Mikään Internetin kautta tapahtuva tiedonsiirto ei kuitenkaan ole 100% turvallista.
     </p>
     <h2 id="external-links">Ulkoiset linkit</h2>
     <p>
@@ -64,15 +63,19 @@ const { lang = 'fi' } = Astro.props;
     <h2 id="contact">Yhteystiedot</h2>
     <p>Jos sinulla on kysyttävää tästä vastuuvapauslausekkeesta, ota meihin yhteyttä osoitteessa:</p>
     <ul>
-      <li><strong>sähköposti</strong>: info@felizbay.com</li>
-      <li><strong>osoite</strong>: New Mexico, USA</li>
+      <li>
+        <strong>sähköposti</strong>: info@felizbay.com
+      </li>
+      <li>
+        <strong>osoite</strong>: New Mexico, USA
+      </li>
     </ul>
     <hr />
     <p>
-      <strong
-        >Käyttämällä tätä verkkosivustoa ja sen tuotteita vahvistat, että olet lukenut ja ymmärtänyt tämän
-        lääketieteellisen vastuuvapauslausekkeen ja sitoudut siihen.</strong
-      >
+      <strong>
+        Käyttämällä tätä verkkosivustoa ja sen tuotteita vahvistat, että olet lukenut ja ymmärtänyt tämän
+        lääketieteellisen vastuuvapauslausekkeen ja sitoudut siihen.
+      </strong>
     </p>
   </div>
 </section>

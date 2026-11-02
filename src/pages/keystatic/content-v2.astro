@@ -66,20 +66,17 @@ if (token) {
           id="locale-select"
           class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         >
-          {
-            ADMIN_LOCALE_CODES.map((l) => (
-              <option value={l} selected={l === locale}>
-                {ADMIN_LOCALES[l]}
-              </option>
-            ))
-          }
+          {ADMIN_LOCALE_CODES.map((l) => (
+            <option value={l} selected={l === locale}>
+              {ADMIN_LOCALES[l]}
+            </option>
+          ))}
         </select>
       </div>
     </div>
     <p class="mt-1 text-sm text-gray-500">
-      SEO content records: problem pages, guides, comparisons, products, authority. File: <code class="font-mono"
-        >{file}</code
-      >
+      SEO content records: problem pages, guides, comparisons, products, authority. File:{' '}
+      <code class="font-mono">{file}</code>
       {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override</span>}
     </p>
     <button
@@ -91,13 +88,11 @@ if (token) {
     </button>
   </div>
 
-  {
-    loadError && (
-      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-        Load failed: {loadError}
-      </div>
-    )
-  }
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Load failed: {loadError}
+    </div>
+  )}
 
   <form
     id="content-form"
@@ -108,164 +103,139 @@ if (token) {
     onsubmit="arguments[0].preventDefault()"
   >
     <div id="records-container" class="space-y-3">
-      {
-        records.map((r, i) => (
+      {records.map((r, i) => (
+        <div
+          data-record-idx={i}
+          class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+        >
           <div
-            data-record-idx={i}
-            class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden"
+            class="record-header flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 select-none"
+            data-toggle
           >
-            <div
-              class="record-header flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 select-none"
-              data-toggle
+            <span class="text-xs font-mono text-gray-400 w-8 shrink-0">#{i + 1}</span>
+            <span class="text-sm font-medium truncate flex-1">{r.title}</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
+              {categoryLabels[r.category] || r.category}
+            </span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+              {r.difficulty}
+            </span>
+            <span class="text-xs font-mono text-gray-400 hidden sm:inline">{r.slug}</span>
+            <svg
+              class="w-4 h-4 text-gray-400 transition-transform"
+              data-chevron
+              viewBox="0 0 20 20"
+              fill="currentColor"
             >
-              <span class="text-xs font-mono text-gray-400 w-8 shrink-0">#{i + 1}</span>
-              <span class="text-sm font-medium truncate flex-1">{r.title}</span>
-              <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
-                {categoryLabels[r.category] || r.category}
-              </span>
-              <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
-                {r.difficulty}
-              </span>
-              <span class="text-xs font-mono text-gray-400 hidden sm:inline">{r.slug}</span>
-              <svg
-                class="w-4 h-4 text-gray-400 transition-transform"
-                data-chevron
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="record-body border-t border-gray-200 dark:border-gray-800 p-5 space-y-4" style="display:none">
-              <input type="hidden" name={'idx.' + i + '.slug'} value={r.slug} />
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Slug</label>
-                  <input
-                    type="text"
-                    name={'idx.' + i + '.slug'}
-                    value={r.slug}
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-                  />
-                </div>
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Category</label>
-                  <select
-                    name={'idx.' + i + '.category'}
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  >
-                    {Object.entries(categoryLabels).map(([v, l]) => (
-                      <option value={v} selected={r.category === v}>
-                        {l}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Difficulty</label>
-                  <select
-                    name={'idx.' + i + '.difficulty'}
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  >
-                    {Object.entries(difficultyLabels).map(([v, l]) => (
-                      <option value={v} selected={r.difficulty === v}>
-                        {l}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="record-body border-t border-gray-200 dark:border-gray-800 p-5 space-y-4" style="display:none">
+            <input type="hidden" name={'idx.' + i + '.slug'} value={r.slug} />
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                <label class="block text-xs font-medium text-gray-500 mb-1">Title</label>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Slug</label>
                 <input
                   type="text"
-                  name={'idx.' + i + '.title'}
-                  value={r.title}
-                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                />
-              </div>
-              <div>
-                <label class="block text-xs font-medium text-gray-500 mb-1">Type</label>
-                <input
-                  type="text"
-                  name={'idx.' + i + '.type'}
-                  value={r.type}
+                  name={'idx.' + i + '.slug'}
+                  value={r.slug}
                   class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
                 />
               </div>
-              {['description', 'definition', 'tldr', 'problem', 'explanation', 'solution', 'recommendation'].map(
-                (field) => (
-                  <div>
-                    <label class="block text-xs font-medium text-gray-500 mb-1 capitalize">{field}</label>
-                    <textarea
-                      name={'idx.' + i + '.' + field}
-                      rows="3"
-                      class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                    >
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Category</label>
+                <select
+                  name={'idx.' + i + '.category'}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                >
+                  {Object.entries(categoryLabels).map(([v, l]) => (
+                    <option value={v} selected={r.category === v}>
+                      {l}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Difficulty</label>
+                <select
+                  name={'idx.' + i + '.difficulty'}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                >
+                  {Object.entries(difficultyLabels).map(([v, l]) => (
+                    <option value={v} selected={r.difficulty === v}>
+                      {l}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Title</label>
+              <input
+                type="text"
+                name={'idx.' + i + '.title'}
+                value={r.title}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-500 mb-1">Type</label>
+              <input
+                type="text"
+                name={'idx.' + i + '.type'}
+                value={r.type}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+            {['description', 'definition', 'tldr', 'problem', 'explanation', 'solution', 'recommendation'].map(
+              (field) => (
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1 capitalize">{field}</label>
+                  <textarea
+                    name={'idx.' + i + '.' + field}
+                    rows="3"
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                  >
                       {r[field] || ''}
                     </textarea>
-                  </div>
-                )
-              )}
-              <div>
-                <div class="flex items-center justify-between mb-1">
-                  <label class="text-xs font-medium text-gray-500">FAQ</label>
-                  <button
-                    type="button"
-                    data-add-faq
-                    data-idx={i}
-                    class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    + Add FAQ
-                  </button>
                 </div>
-                <div data-faq-list data-idx={i} class="space-y-2">
-                  {(r.faq || []).map((f: any, fi: number) => (
-                    <div data-faq-row class="flex gap-2 items-start">
-                      <div class="flex-1 space-y-1">
-                        <input
-                          type="text"
-                          name={'idx.' + i + '.faq.' + fi + '.q'}
-                          value={f.q}
-                          placeholder="Question"
-                          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                        />
-                        <textarea
-                          name={'idx.' + i + '.faq.' + fi + '.a'}
-                          rows="2"
-                          placeholder="Answer"
-                          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                        >
-                          {f.a}
-                        </textarea>
-                      </div>
-                      <button
-                        type="button"
-                        data-remove-faq
-                        class="text-xs text-red-600 dark:text-red-400 hover:underline mt-2 shrink-0"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  ))}
-                </div>
-                <template data-faq-template>
+              )
+            )}
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-medium text-gray-500">FAQ</label>
+                <button
+                  type="button"
+                  data-add-faq
+                  data-idx={i}
+                  class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  + Add FAQ
+                </button>
+              </div>
+              <div data-faq-list data-idx={i} class="space-y-2">
+                {(r.faq || []).map((f: any, fi: number) => (
                   <div data-faq-row class="flex gap-2 items-start">
                     <div class="flex-1 space-y-1">
                       <input
                         type="text"
+                        name={'idx.' + i + '.faq.' + fi + '.q'}
+                        value={f.q}
                         placeholder="Question"
                         class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                       />
                       <textarea
+                        name={'idx.' + i + '.faq.' + fi + '.a'}
                         rows="2"
                         placeholder="Answer"
                         class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                      />
+                      >
+                          {f.a}
+                        </textarea>
                     </div>
                     <button
                       type="button"
@@ -275,44 +245,67 @@ if (token) {
                       Delete
                     </button>
                   </div>
-                </template>
+                ))}
               </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Related Guides</label>
-                  <input
-                    type="text"
-                    name={'idx.' + i + '.relatedGuides'}
-                    value={(r.relatedGuides || []).join(', ')}
-                    placeholder="slug1, slug2, slug3"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-                  />
+              <template data-faq-template>
+                <div data-faq-row class="flex gap-2 items-start">
+                  <div class="flex-1 space-y-1">
+                    <input
+                      type="text"
+                      placeholder="Question"
+                      class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                    />
+                    <textarea
+                      rows="2"
+                      placeholder="Answer"
+                      class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    data-remove-faq
+                    class="text-xs text-red-600 dark:text-red-400 hover:underline mt-2 shrink-0"
+                  >
+                    Delete
+                  </button>
                 </div>
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Related Products</label>
-                  <input
-                    type="text"
-                    name={'idx.' + i + '.relatedProducts'}
-                    value={(r.relatedProducts || []).join(', ')}
-                    placeholder="slug1, slug2, slug3"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
-                  />
-                </div>
+              </template>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Related Guides</label>
+                <input
+                  type="text"
+                  name={'idx.' + i + '.relatedGuides'}
+                  value={(r.relatedGuides || []).join(', ')}
+                  placeholder="slug1, slug2, slug3"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
               </div>
-              <div class="flex justify-end pt-2 border-t border-gray-100 dark:border-gray-800">
-                <button
-                  type="button"
-                  data-delete-record
-                  data-idx={i}
-                  class="px-3 py-1.5 text-xs text-red-600 dark:text-red-400 hover:underline"
-                >
-                  Delete this record
-                </button>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Related Products</label>
+                <input
+                  type="text"
+                  name={'idx.' + i + '.relatedProducts'}
+                  value={(r.relatedProducts || []).join(', ')}
+                  placeholder="slug1, slug2, slug3"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
               </div>
             </div>
+            <div class="flex justify-end pt-2 border-t border-gray-100 dark:border-gray-800">
+              <button
+                type="button"
+                data-delete-record
+                data-idx={i}
+                class="px-3 py-1.5 text-xs text-red-600 dark:text-red-400 hover:underline"
+              >
+                Delete this record
+              </button>
+            </div>
           </div>
-        ))
-      }
+        </div>
+      ))}
     </div>
 
     <template id="new-record-template">
@@ -327,12 +320,13 @@ if (token) {
           <span class="text-xs font-mono text-gray-400 w-8 shrink-0">#N</span>
           <span class="text-sm font-medium truncate flex-1 text-gray-400 italic">New Record</span>
           <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500">new</span>
-          <svg class="w-4 h-4 text-gray-400 transition-transform" data-chevron viewBox="0 0 20 20" fill="currentColor"
-            ><path
+          <svg class="w-4 h-4 text-gray-400 transition-transform" data-chevron viewBox="0 0 20 20" fill="currentColor">
+            <path
               fill-rule="evenodd"
               d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-              clip-rule="evenodd"></path></svg
-          >
+              clip-rule="evenodd"
+            ></path>
+          </svg>
         </div>
         <div class="record-body border-t border-gray-200 dark:border-gray-800 p-5 space-y-4" style="display:none">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -350,7 +344,9 @@ if (token) {
                 name="new.category"
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
               >
-                {Object.entries(categoryLabels).map(([v, l]) => <option value={v}>{l}</option>)}
+                {Object.entries(categoryLabels).map(([v, l]) => (
+                  <option value={v}>{l}</option>
+                ))}
               </select>
             </div>
             <div>
@@ -359,7 +355,9 @@ if (token) {
                 name="new.difficulty"
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
               >
-                {Object.entries(difficultyLabels).map(([v, l]) => <option value={v}>{l}</option>)}
+                {Object.entries(difficultyLabels).map(([v, l]) => (
+                  <option value={v}>{l}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -379,20 +377,18 @@ if (token) {
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
             />
           </div>
-          {
-            ['description', 'definition', 'tldr', 'problem', 'explanation', 'solution', 'recommendation'].map(
-              (field) => (
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1 capitalize">{field}</label>
-                  <textarea
-                    name={'new.' + field}
-                    rows="3"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-                  />
-                </div>
-              )
+          {['description', 'definition', 'tldr', 'problem', 'explanation', 'solution', 'recommendation'].map(
+            (field) => (
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1 capitalize">{field}</label>
+                <textarea
+                  name={'new.' + field}
+                  rows="3"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+              </div>
             )
-          }
+          )}
           <div>
             <div class="flex items-center justify-between mb-1">
               <label class="text-xs font-medium text-gray-500">FAQ</label>
@@ -400,8 +396,10 @@ if (token) {
                 type="button"
                 data-add-faq
                 data-idx="new"
-                class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Add FAQ</button
+                class="text-xs text-blue-600 dark:text-blue-400 hover:underline"
               >
+                + Add FAQ
+              </button>
             </div>
             <div data-faq-list data-idx="new" class="space-y-2"></div>
           </div>
@@ -429,27 +427,29 @@ if (token) {
       </div>
     </template>
 
-    <div
-      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
-    >
+    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
         <div class="text-xs text-gray-500">
           File: <code class="font-mono">{file}</code> &middot; <span id="record-count">{records.length}</span> records
         </div>
         <div class="flex gap-2">
-          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
-            >Cancel</a
-          >
+          <a href="/keystatic/" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">
+            Cancel
+          </a>
           <button
             id="save-draft-btn"
             type="button"
-            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save Draft</button
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
           >
+            Save Draft
+          </button>
           <button
             id="publish-btn"
             type="button"
-            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">Publish</button
+            class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
           >
+            Publish
+          </button>
         </div>
       </div>
     </div>
