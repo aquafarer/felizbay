@@ -97,7 +97,11 @@ const CHECKS = [
   { path: '/find-your-pool/', marker: 'data-finder', desc: 'pool advisor quiz' },
   { path: '/support/', marker: 'Support', desc: 'support hub' },
   { path: '/returns-and-warranty/', marker: 'Warranty', desc: 'warranty policy' },
-  { path: '/contact/', marker: 'Contact', desc: 'contact form' },
+  {
+    path: '/contact/',
+    markers: ['Contact', 'cf-turnstile'],
+    desc: 'contact form with Turnstile widget rendered (PUBLIC_TURNSTILE_SITE_KEY wired)',
+  },
   { path: '/request-quotation/', marker: 'Quote', desc: 'B2B quote entry' },
   // ---- B2B pages (flagged as 404s in the 2026-11 GEO review; keep covered) ----
   { path: '/wholesale/', marker: 'Wholesale Inflatable Swimming Pools at Factory Prices', desc: 'wholesale hub' },
