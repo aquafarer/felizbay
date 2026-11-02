@@ -181,7 +181,7 @@ Admin reads submissions at `/keystatic/contact-submissions` — the page fetches
 
 ## Analytics (Cloudflare Web Analytics)
 
-Chosen 2026-10 over GA4: no cookies → no 37-language consent banner (GDPR), single deferred beacon, zero CWV impact. `src/components/common/CloudflareAnalytics.astro` (included in `Layout.astro`) renders the `static.cloudflareinsights.com/beacon.min.js` beacon only when `PUBLIC_CF_ANALYTICS_TOKEN` is set — injected by CI (`deploy.yml`/`ci.yml`/`seo-gate.yml`) from the GitHub secret `CF_ANALYTICS_TOKEN` (the beacon token from the Cloudflare dashboard, safe to embed). Until that secret is added the site ships no analytics script; nothing else needs changing to activate.
+Chosen 2026-10 over GA4: no cookies → no 37-language consent banner (GDPR), single deferred beacon, zero CWV impact. `src/components/common/CloudflareAnalytics.astro` (included in `Layout.astro`) renders the `static.cloudflareinsights.com/beacon.min.js` beacon only when `PUBLIC_CF_ANALYTICS_TOKEN` is set — injected by CI (`deploy.yml`/`ci.yml`/`seo-gate.yml`) from the GitHub secret `CF_ANALYTICS_TOKEN` (the beacon token from the Cloudflare dashboard, safe to embed). The secret was added 2026-11 and the beacon is live in production; `scripts/prod-smoke.mjs` asserts the `cloudflareinsights` marker on the home page, so a removed/renamed secret fails the release gate instead of silently dropping analytics.
 
 ## Generated i18n Data (build-time, NOT in public/)
 
