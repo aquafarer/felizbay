@@ -5,9 +5,9 @@ Multilingual (37 languages) water sports equipment site for **Felizbay**, built 
 **Scale:** ~645 pages across 37 languages, 0 build errors
 **Domains:** `felizbay.com` (production; `www.felizbay.com/*` → apex via Cloudflare Redirect Rule, 301 single-hop, path-preserving), `assets.felizbay.com` (R2 asset storage)
 
-**2026-10 architecture snapshot** (latest changes): P6 WebP image migration — 15 product images >100KB converted to WebP 1600px q82 (18.5MB → 0.85MB, -97%), 215 refs × 97 files updated, Lighthouse product-page perf 46 → 67 live (LCP 15.3s → 3.5s) · honeypot false-positive fix — `Contact.astro` page JS strips `email_confirm` from the payload before submit (browsers/password managers autofilled the field and silently dropped real inquiries; post-mortem in `docs/technical-audit-2026-10.md` §2.1) · R2 auto-prune — `fast-upload-r2.mjs` deletes stale R2 objects (`data/`, `images/`, `files/` prefixes) on every deploy, guarded (>200 stale aborts, prune failure never fails deploy) · technical audit record — `docs/technical-audit-2026-10.md` (48/50 audit findings, inquiry T1–T5 tests, www 301 verification), AI visibility protocol — `docs/ai-visibility-baseline.md`.
+**2026-11 architecture snapshot** (latest changes): dependency security sweep — npm audit 1 critical/16 high/2 low → **0/0/0** (better-auth 1.7.3→1.7.15 OAuth-proxy impersonation fix, zod 4.5.4→4.6.7 memory-exhaustion fix, astro 7.4.4/vite 8.3.5/astro-icon 1.2.0/sharp/wrangler/undici in-range bumps; 20 moderate remain, all dev-only tooling whose audit "fixes" are semver-major downgrades — do not apply blindly) · `gen-icon-svgs.cjs` switched to dynamic `import()` (@iconify/utils ≥3 is ESM-only, no `lib/index.cjs`) · Cloudflare Web Analytics beacon live (`CF_ANALYTICS_TOKEN` secret, smoke-gated) · GEO advisor events + KPI panel (D1 `advisor_event`, migration 0005) · PDP TCO FAQs added + `[lang]` product FAQ empty-array fix (FAQPage JSON-LD restored on 185 localized pages) · dependabot backlog cleared (Actions checkout/setup-node v7 + github-script v9, prettier-plugin-astro 1.1.1 — 241-file whitespace reformat, `LEGACY_REDIRECTS` long removed) · `scripts/prod-smoke.mjs` now 50 release checks.
 
-**2026-08 architecture snapshot** (previous): Astro 7.2 / Vite 8 (`@tailwindcss/vite`, postcss removed) · seo-worker deleted, **5 Workers** (contact/ai/admin/news/automation) · legacy `Astro.redirect()` pages migrated to `LEGACY_REDIRECTS` in `astro.config.ts` · i18n build data split: `site-data.ts` (2.2 MiB, `site-*` keys) + `pages/*.ts` (~110 per-page modules), full JSON kept in `src/i18n/generated/` (never in `public/` — Pages rejects files ≥ 25 MiB) · `content-v2*` keys excluded (loaded directly from YAML by `src/data/content-v2.ts`).
+**2026-10 architecture snapshot** (previous): P6 WebP image migration — 15 product images >100KB converted to WebP 1600px q82 (18.5MB → 0.85MB, -97%), 215 refs × 97 files updated, Lighthouse product-page perf 46 → 67 live (LCP 15.3s → 3.5s) · honeypot false-positive fix — `Contact.astro` page JS strips `email_confirm` from the payload before submit (browsers/password managers autofilled the field and silently dropped real inquiries; post-mortem in `docs/technical-audit-2026-10.md` §2.1) · R2 auto-prune — `fast-upload-r2.mjs` deletes stale R2 objects (`data/`, `images/`, `files/` prefixes) on every deploy, guarded (>200 stale aborts, prune failure never fails deploy) · technical audit record — `docs/technical-audit-2026-10.md` (48/50 audit findings, inquiry T1–T5 tests, www 301 verification), AI visibility protocol — `docs/ai-visibility-baseline.md`.
 
 **i18n translation milestone (2026-08-31):** 14 languages × 1,721 keys fully aligned (0 missing/extra) · 3,807 sameAsEn keys translated via Google Translate API (primary) + MyMemory (backup) · 2,456 orphan keys cleaned from ar/no/el/fi · 252/252 page YAMLs translated (14 langs × 18 pages) · EN 404.explore fix propagated · remaining 808 sameAsEn = 540 technical terms + 109 cognates + 29 brand names + 124 short words/numbers (all verified correct). Translation scripts: `scripts/translate-i18n-keys.mjs` (`--dry-run`/`--force` flags).
 
@@ -47,7 +47,7 @@ Read in this order to grasp the whole system fastest (≈10 minutes):
 | Tailwind theme & utilities           | `src/assets/styles/tailwind.css` (@theme/@variant/@plugin), colors/fonts in `src/components/CustomStyles.astro`                                                      |
 | SEO/GEO files                        | `src/pages/search-index.json.ts` (static search), `scripts/generate-sitemaps.mjs`, `scripts/geo-build.mjs`                                                           |
 | Workers (5)                          | `workers/{contact,ai,admin,news,automation}-worker/` (+ `workers/shared/`); routes in each `wrangler.toml`                                                           |
-| D1 migrations                        | `migrations/` (0000 init, 0002 rate_limit), applied by CI / `wrangler d1 migrations apply`                                                                           |
+| D1 migrations                        | `migrations/` (0000–0005: init, news, rate_limit, inquiry_ip, inquiry_routing, advisor_event), applied by CI / `wrangler d1 migrations apply`                        |
 | CI/CD                                | `.github/workflows/{ci,deploy,seo-gate}.yml`                                                                                                                         |
 | Static quality gates                 | `scripts/validate-dist.mjs`, `scripts/fold-untranslated-canonical.mjs`, `scripts/05_ci_gate.py`                                                                      |
 | Legacy leftovers (do not touch)      | `scripts/patch-worker.mjs` (subdomain routing for `output: 'server'` — dead under `static`), `scripts/_patch-pages.cjs` (manual tool)                                |
@@ -104,7 +104,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 
 | Layer           | Technology                                                                                    |
 | --------------- | --------------------------------------------------------------------------------------------- |
-| Framework       | Astro 7.2 (`output: 'static'`, Vite 8 / Rolldown)                                             |
+| Framework       | Astro 7.4 (`output: 'static'`, Vite 8 / Rolldown)                                             |
 | Styling         | Tailwind CSS v4 via `@tailwindcss/vite` plugin                                                |
 | Icons           | tabler (via astro-icon)                                                                       |
 | Fonts           | Inter Variable (fontsource)                                                                   |
@@ -115,7 +115,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 | Auth            | better-auth (Google OAuth, D1-backed sessions, Turnstile)                                     |
 | Frontend Host   | Cloudflare Pages (Direct Upload)                                                              |
 | Backend Workers | 5 Workers: contact, ai, admin, automation, news                                               |
-| Database        | Cloudflare D1 (`Felizbay-db`: inquiries, news, rate_limit, auth)                              |
+| Database        | Cloudflare D1 (`Felizbay-db`: inquiries, news, rate_limit, advisor_event, auth)               |
 | Asset Storage   | Cloudflare R2 (assets + data buckets)                                                         |
 | CI/CD           | GitHub Actions (ci.yml PR gate + deploy.yml on main + ai-index.yml post-deploy index rebuild) |
 | SEO/GEO         | llms.txt (37 langs), llms-full.txt, entity.json, JSON-LD, sitemap                             |
@@ -236,7 +236,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │     │  └── geo-score.ts
 │     └── wrangler.toml
 ├── workers/shared/                 # Shared worker code (auth.ts, schema.ts, news-render.ts, client.ts, assert-admin.ts)
-├── migrations/                     # D1 migrations (inquiry, rate_limit, news, better-auth tables)
+├── migrations/                     # D1 migrations 0000–0005 (inquiry, news, rate_limit, advisor_event, better-auth tables)
 ├── docs/                           # technical-audit-2026-10.md (audit + inquiry test record), ai-visibility-baseline.md (AI visibility protocol)
 ├── scripts/                        # Build & utility scripts (60+ files)
 ├── .github/workflows/ci.yml        # PR quality gate (check + build + worker dry-runs)

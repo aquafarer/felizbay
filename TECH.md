@@ -34,19 +34,19 @@
 
 | 层       | 技术                                                                                                           |
 | -------- | -------------------------------------------------------------------------------------------------------------- |
-| 框架     | **Astro 7.2** (v7.2.2, Rust 编译器), `output: 'static'`, Vite 8 (Rolldown)                                     |
-| 语言     | TypeScript (v5.9.3)                                                                                            |
+| 框架     | **Astro 7.4** (v7.4.4, Rust 编译器), `output: 'static'`, Vite 8 (Rolldown)                                     |
+| 语言     | TypeScript (v6.0.3)                                                                                            |
 | 样式     | Tailwind CSS v4.3 + `@tailwindcss/vite` 插件 (postcss.config.js 已移除)                                        |
 | 包管理   | npm (package-lock.json, CI 使用 `npm ci`)                                                                      |
 | Node     | >= 22.12.0                                                                                                     |
 | 主机     | **Cloudflare Pages** (静态文件) + **Cloudflare Workers** (API)                                                 |
-| 数据库   | **Cloudflare D1** (`Felizbay-db`: inquiry, news, rate_limit, better-auth 表)                                   |
+| 数据库   | **Cloudflare D1** (`Felizbay-db`: inquiry, news, rate_limit, advisor_event, better-auth 表)                    |
 | 存储     | **Cloudflare R2** (felizbay-assets, felizbay-data)                                                             |
 | CMS      | Keystatic (本地 CMS, 在 `/keystatic` 路由)                                                                     |
 | 认证     | better-auth (Google OAuth + 邮箱密码, D1 会话, Turnstile)                                                      |
 | 插件     | `@astrojs/sitemap`, `@astrojs/mdx`, `astro-icon`, `astro-seo`, `@astrojs/markdown-remark`, `astro-auto-import` |
 | 产品数据 | `src/data/products.ts` (TypeScript 数组)                                                                       |
-| 多语言   | 34 种语言, 自建 i18n 系统 (`src/i18n/`)                                                                        |
+| 多语言   | 37 种语言, 自建 i18n 系统 (`src/i18n/`)                                                                        |
 
 **注意**: 项目不使用 `@astrojs/cloudflare` 适配器, 而是构建为纯静态输出后部署到 Cloudflare Pages。Pages 自带的 Functions (`functions/_middleware.ts`) 处理语言重定向和 R2 资源跳转。
 
@@ -130,7 +130,7 @@
 │   ├── contact-worker/      # 联系表单 (D1 + Turnstile + Resend)
 │   ├── news-worker/         # D1 驱动的新闻/RSS/新闻 sitemap
 │   └── shared/              # 共享代码 (auth.ts, schema.ts, client.ts, news-render.ts, assert-admin.ts)
-├── migrations/              # D1 迁移 (0000 初始化, 0002 rate_limit 等)
+ ├── migrations/              # D1 迁移 0000–0005 (初始化, news, rate_limit, inquiry_ip, inquiry_routing, advisor_event)
 ├── functions/
 │   └── _middleware.ts       # Cloudflare Pages Functions 中间件
 ├── scripts/                 # 构建/部署/工具脚本 (~60 个)
@@ -1954,7 +1954,7 @@ RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srp
 > 删除 ja/ko/vi: 翻译 ROI 不及预期 (ja 79 页全译投入未换来自然流量), vi 为 2026-09 扩充语言未毕业。commit `63a1b18` + `a476c8a`。
 
 - **删除范围**: `src/pages/[lang]/{ja,ko,vi}/`、`src/data/pages/{ja,ko,vi}/`、`config.{ja,ko,vi}.yaml`、`tools/l10n/*.{ja,ko,vi}.json`、i18n-config.json/UI 字典相应键、FULLY_LOCALIZED/seo-suppress/sitemap/ai-corpus 等注册表条目
-- **重定向兜底 (双层)**: ① astro.config `LEGACY_REDIRECTS` 追加 `'/ja/': '/'`、`'/ko/': '/'` 静态壳页 (meta-refresh + noindex + canonical; validate-dist/fold/ai-corpus 跳过 noindex 页) — 本地 preview 生效; ② 生产环境由 `_middleware.ts` `REMOVED_LOCALES=['zh','vi','hi','ja','ko']` 301 剥前缀接管 (中间件优先于静态资产)
+- **重定向兜底 (双层)**: ① astro.config `LEGACY_REDIRECTS` 追加 `'/ja/': '/'`、`'/ko/': '/'` 静态壳页 (meta-refresh + noindex + canonical; validate-dist/fold/ai-corpus 跳过 noindex 页) — 本地 preview 生效 (注: `LEGACY_REDIRECTS` 表已随 2026-10 船型内容清理整体移除, 语言下架壳页现位于 astro.config 的 `redirects` 对象, 禁止重新引入); ② 生产环境由 `_middleware.ts` `REMOVED_LOCALES=['zh','vi','hi','ja','ko']` 301 剥前缀接管 (中间件优先于静态资产)
 - **死循环修复 (2026-10-18)**: 删除时 `LOCALE_MAP`(JP/KR) 与 `ACCEPT_LANG_MAP` 仍含 ja/ko → 日韩访客根路径被 302 至 /ja/、/ko/ 壳页 → meta-refresh 回根 → 死循环; 已从 `LANGUAGES`/`LOCALE_MAP`/`ACCEPT_LANG_MAP` 移除 ja/ko (checkout.ts 语言集合同步清理)
 - **翻译缓存清理**: `.cache/` 7 个 git 跟踪缓存移除 8,033 条 ja/ko/vi 死键 — page-translate-cache 4,743 / content-v2-bing-cache 1,357 / body-components-cache 1,041 / product-translate-cache 610 / i18n-translate-cache 121 / content-l10n-cache 100 / page-meta-cache 61
 - **残留死引用清理 (2026-10-18)**: `05_ci_gate.py` LOCALES/STRIP_LOCALE 移除 ja (含汉字/假名特判分支); `translate-products.yml` 默认语言 ja→cs; `fill-missing-page-yamls.mjs`/`inject-rib-l10n.mjs` LANGS 移除 ja; `i18n-tool.cjs` 用法示例更新; 历史一次性脚本 (add-missing-labels-csja.mjs、batch-translate.mjs 注释) 保留原样
@@ -1981,3 +1981,27 @@ RTL: `ar` + `he` (`Layout.astro` RTL_LANGS); 塞尔维亚语 = Latin 转写 "Srp
 `scripts/generate-image-dimensions.mjs` 在每次构建时解析全站图片宽高, 写入 `src/data/site/image-dimensions.json` (**36 条, SSOT**), 由 `vendor/integration/img-dimensions.ts` 在构建期为已知图片注入 `width`/`height` 属性 (防 CLS)。
 
 **规则**: 新增/替换/重命名 `public/images/` 下图片后, 无需手动维护 — 下次 `npm run build` 自动重建; 但**提交前需确认 registry 覆盖所有新图** (运行构建后 git diff 该文件)。
+
+---
+
+## 18. 依赖安全 (2026-11)
+
+### 18.1 npm audit 清零 (2026-11-02)
+
+整改前 1 critical / 16 high / 21 moderate / 2 low → 整改后 **0 critical / 0 high / 0 low** (剩 20 moderate 均为 dev-only 工具链)。commits `5d5a812` + `f7f552e` + `a7d146e`。
+
+**关键修复** (全部范围内升级, 非 breaking):
+
+- **better-auth 1.7.3 → 1.7.15** — OAuth 代理用户冒充漏洞 (CVSS 7.4, GHSA-r4xp-prcw-77qf, 修复于 1.7.7); admin-worker 生产认证, deploy.yml 每次 push 重新部署 5 个 Workers, 修复即生效
+- **zod 4.5.4 → 4.6.7** — 超大集合校验内存耗尽 DoS; contact-worker 运行时输入校验
+- astro 7.3.2→7.4.4 · vite 8.2.2→8.3.5 · astro-icon 1.1.5→1.2.0 · sharp/wrangler/undici/miniflare/js-yaml/fast-uri/source-map-js/prosemirror-view (其余 high, 范围内)
+
+**保留不修的 20 moderate**: eslint/@typescript-eslint 链、drizzle-kit 1.0-beta (→@esbuild-kit/esbuild≤0.24.2)、keystatic、glob/minimatch — 均为 dev-only 工具, npm 审计建议的"修复"是 semver-major **降级** (如 drizzle-kit 1.0-beta→0.18.1、eslint-plugin-astro 0.10→0.9), 会破坏工具链且不进生产运行时; **禁止盲目 `npm audit fix`**。
+
+### 18.2 gen-icon-svgs ESM 兼容
+
+astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`, 无 `lib/index.cjs`), CJS `require()` 失败。`scripts/gen-icon-svgs.cjs` 改为 async IIFE + 动态 `import()` (Windows 下需 `pathToFileURL()` 转换路径), 生成结果不变 (88 个 SVG)。
+
+### 18.3 prettier-plugin-astro 1.x 重排
+
+0.14.1 → 1.1.1 (major): `.astro` 模板新增多行 label/input 内容换行规则, 全仓 241 文件一次性重排 (纯空白/换行, 零内容变更, 乱码扫描 660 文件 0 匹配)。新建/修改 `.astro` 文件后必须 `npm run fix`, 否则 CI prettier gate 拦截。

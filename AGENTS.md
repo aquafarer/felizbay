@@ -4,7 +4,7 @@
 
 AstroWind is a free, open-source website template built with **Astro v7** and **Tailwind CSS v4**, running on **Vite 8 / Rolldown** (Rust compiler). It generates a fully static site optimized for performance, SEO, and accessibility. The site is **Felizbay** — a 37-language water-sports equipment platform (~645 pages), deployed to **Cloudflare Pages + 5 Workers**.
 
-**Stack:** Astro 7.2 | Tailwind CSS 4.3 (`@tailwindcss/vite`) | TypeScript 5.9 | MDX | Sharp | Vite 8
+**Stack:** Astro 7.4 | Tailwind CSS 4.3 (`@tailwindcss/vite`) | TypeScript 6.0 | MDX | Sharp | Vite 8
 
 ## Quick Start for AI Agents (read order)
 
@@ -30,6 +30,9 @@ Fastest way to understand the whole system: `README.md` §0 (Quick Start + file 
 - **Lockfile discipline (CI `npm ci` is strict):** the lockfile must resolve every `package.json` range to its **latest available version** on the registry. When a dependency publishes a new patch/minor (e.g. `eslint`, `@typescript-eslint/*`), CI fails with `EUSAGE: lock file's X does not satisfy X` — fix by running `npm update` (plain `npm install` does NOT bump within-range versions), verify `npm ci --dry-run`, then commit `package-lock.json`.
 - `npm install` no longer needs `--legacy-peer-deps` (peer deps resolved cleanly since astro-auto-import 0.5.2); `package.json` overrides pin `"vite": "^8"` + `"yaml": ">=2.8.3"`
 - `@astrojs/markdown-remark` `unified({...})` processor is configured in `astro.config.ts`
+- **Dependency security (2026-11 sweep):** npm audit = 0 critical / 0 high / 0 low. 20 moderate remain — all dev-only tooling (eslint chain, drizzle-kit 1.0-beta, keystatic, glob) whose audit-suggested "fixes" are semver-major **downgrades** (e.g. drizzle-kit 1.0-beta→0.18.1, eslint-plugin-astro 0.10→0.9); do NOT run `npm audit fix` blindly. Runtime floors: `better-auth` ≥ 1.7.7 (OAuth-proxy user impersonation, GHSA-r4xp-prcw-77qf), `zod` ≥ 4.6.x (memory exhaustion on oversized collections).
+- `scripts/gen-icon-svgs.cjs` loads `@iconify/utils` via dynamic `import()` — the package is ESM-only since v3 (no `lib/index.cjs`); a plain `require()` fails. It also re-renders `src/components/ui/icon-valid-names.ts` + `icon-svgs.ts` (self-generated, excluded from its own scan).
+- **prettier-plugin-astro v1 (2026-11):** new `.astro` line-wrap formatting (multi-line label/input content); the repo-wide reformat (241 files, whitespace only) landed in one commit — run `npm run fix` after editing/creating `.astro` files.
 
 ## Architecture
 
@@ -59,7 +62,7 @@ src/
 docs/                  # technical-audit-2026-10.md (audit + inquiry test record), ai-visibility-baseline.md (AI visibility protocol)
 vendor/integration/    # Custom Astro integration for config loading
 workers/               # 5 Cloudflare Workers: contact, ai, admin, news, automation
-migrations/            # D1 migrations (0000 init, 0002 rate_limit)
+migrations/            # D1 migrations 0000–0005 (init, news, rate_limit, inquiry_ip, inquiry_routing, advisor_event), applied by CI
 scripts/               # Build pipeline + gates (see Build Pipeline below)
 ```
 
