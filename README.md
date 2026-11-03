@@ -5,7 +5,7 @@ Multilingual (37 languages) water sports equipment site for **Felizbay**, built 
 **Scale:** ~645 pages across 37 languages, 0 build errors
 **Domains:** `felizbay.com` (production; `www.felizbay.com/*` → apex via Cloudflare Redirect Rule, 301 single-hop, path-preserving), `assets.felizbay.com` (R2 asset storage)
 
-**2026-11 architecture snapshot** (latest changes): dependency security sweep — npm audit 1 critical/16 high/2 low → **0/0/0** (better-auth 1.7.3→1.7.15 OAuth-proxy impersonation fix, zod 4.5.4→4.6.7 memory-exhaustion fix, astro 7.4.4/vite 8.3.5/astro-icon 1.2.0/sharp/wrangler/undici in-range bumps; 20 moderate remain, all dev-only tooling whose audit "fixes" are semver-major downgrades — do not apply blindly) · `gen-icon-svgs.cjs` switched to dynamic `import()` (@iconify/utils ≥3 is ESM-only, no `lib/index.cjs`) · Cloudflare Web Analytics beacon live (`CF_ANALYTICS_TOKEN` secret, smoke-gated) · GEO advisor events + KPI panel (D1 `advisor_event`, migration 0005) · PDP TCO FAQs added + `[lang]` product FAQ empty-array fix (FAQPage JSON-LD restored on 185 localized pages) · dependabot backlog cleared (Actions checkout/setup-node v7 + github-script v9, prettier-plugin-astro 1.1.1 — 241-file whitespace reformat, `LEGACY_REDIRECTS` long removed) · `scripts/prod-smoke.mjs` now 50 release checks.
+**2026-11 architecture snapshot** (latest changes): dependency security sweep — npm audit 1 critical/16 high/2 low → **0/0/0** (better-auth 1.7.3→1.7.15 OAuth-proxy impersonation fix, zod 4.5.4→4.6.7 memory-exhaustion fix, astro 7.4.4/vite 8.3.5/astro-icon 1.2.0/sharp/wrangler/undici in-range bumps; 20 moderate remain, all dev-only tooling whose audit "fixes" are semver-major downgrades — do not apply blindly) · `gen-icon-svgs.cjs` switched to dynamic `import()` (@iconify/utils ≥3 is ESM-only, no `lib/index.cjs`) · Cloudflare Web Analytics beacon live (`CF_ANALYTICS_TOKEN` secret, smoke-gated) · GEO advisor events + KPI panel (D1 `advisor_event`, migration 0005) · PDP TCO FAQs added + `[lang]` product FAQ empty-array fix (FAQPage JSON-LD restored on 185 localized pages) · dependabot backlog cleared (Actions checkout/setup-node v7 + github-script v9, prettier-plugin-astro 1.1.1 — 241-file whitespace reformat, `LEGACY_REDIRECTS` long removed) · GEO third-round review shipped — per-variant FOB `Offer`s inside wholesale ProductGroup `hasVariant` (EN + `[lang]` PDPs, prices from `pool-catalog.ts` SSOT), consumer-guide → PDP deep links (`relatedProducts`), new guide `/guides/inflatable-pool-operating-costs/` (17th consumer guide), `/pool-volume-calculator/` tool page (client-side, noscript formula fallback), interactive 48-SKU factory-size filter on `/products/compare/`, hand-maintained `llms.txt` re-synced + structural drift guard in smoke (slug coverage + hand-written counts vs SSOT) · GEO baseline answer key + recording template delivered (`docs/ai-visibility-baseline.md` §7–§8, 26 questions × 6 platforms) · `scripts/prod-smoke.mjs` now 54 release checks.
 
 **2026-10 architecture snapshot** (previous): P6 WebP image migration — 15 product images >100KB converted to WebP 1600px q82 (18.5MB → 0.85MB, -97%), 215 refs × 97 files updated, Lighthouse product-page perf 46 → 67 live (LCP 15.3s → 3.5s) · honeypot false-positive fix — `Contact.astro` page JS strips `email_confirm` from the payload before submit (browsers/password managers autofilled the field and silently dropped real inquiries; post-mortem in `docs/technical-audit-2026-10.md` §2.1) · R2 auto-prune — `fast-upload-r2.mjs` deletes stale R2 objects (`data/`, `images/`, `files/` prefixes) on every deploy, guarded (>200 stale aborts, prune failure never fails deploy) · technical audit record — `docs/technical-audit-2026-10.md` (48/50 audit findings, inquiry T1–T5 tests, www 301 verification), AI visibility protocol — `docs/ai-visibility-baseline.md`.
 
@@ -140,11 +140,11 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  │  ├── terms.astro             # Terms and conditions (legal)
 │  │  │  ├── disclaimer.astro        # Medical disclaimer (legal)
 │  │  │  └── products/               # Localized product pages
-│  │  ├── guides/                    # 16 consumer + B2B guide articles (EN)
+│  │  ├── guides/                    # 17 consumer + 6 B2B guide articles (EN)
 │  │  ├── pool-ideas/                # 15 scenario pages + hub (EN)
 │  │  ├── products/                  # Product catalog: index, [slug], specs, compare
 │  │  ├── llms/                      # AI-readable markdown endpoints
-│  │  │  ├── guides/[slug].ts        # 16 consumer guide markdown docs
+│  │  │  ├── guides/[slug].ts        # 17 consumer guide markdown docs
 │  │  │  ├── procurement/[slug].ts   # 6 B2B guide markdown docs
 │  │  │  ├── ideas/[slug].ts         # 15 pool-idea scenario markdown docs
 │  │  │  ├── products/[slug].ts      # Product markdown
@@ -155,6 +155,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  ├── keystatic/                 # Admin panel (30+ CMS editor pages, incl. link-refactor, validate-links, inquiries, users)
 │  │  ├── internal/                  # GEO/SEO dashboards
 │  │  ├── find-your-pool.astro       # Interactive pool advisor
+│  │  ├── pool-volume-calculator.astro # Pool volume calculator (client-side, noscript fallback)
 │  │  ├── support.astro              # After-sales support hub
 │  │  ├── returns-and-warranty.astro # Returns & warranty policy
 │  │  ├── best-drop-stitch-inflatable-pools.astro # Editorial top-picks page
@@ -183,7 +184,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  ├── product-page-content.ts   # Product page structured content
 │  │  ├── pool-catalog.ts           # Factory pool catalog (series + SKU items, size tables)
 │  │  ├── pool-ideas.ts             # 15 scenario pages SSOT (PoolIdea)
-│  │  ├── guides.ts                 # 16 GuideRecord SSOT
+│  │  ├── guides.ts                 # 17 GuideRecord SSOT
 │  │  ├── procurement-guides.ts     # 6 B2B guide records
 │  │  ├── faq.ts                    # FAQ entries
 │  │  ├── customer-cases.ts         # Customer case records

@@ -27,6 +27,8 @@
 15. [多语言批量编辑工具 (tools/)](#15-多语言批量编辑工具-tools)
 16. [37 语言架构与上架流程](#16-37-语言架构与上架流程)
 17. [图片处理 (WebP + 尺寸注册表)](#17-图片处理-webp--尺寸注册表)
+18. [依赖安全 (2026-11)](#18-依赖安全-2026-11)
+19. [GEO 第三轮审查落地 (2026-11-03)](#19-geo-第三轮审查落地-2026-11-03)
 
 ---
 
@@ -552,6 +554,15 @@ rec (本地化 ProductRecord) → 页面各 section 渲染
 5. **构建时依赖**: `product-i18n.ts` 使用 `fs.existsSync` + `fs.readFileSync` 在 Node.js 构建环境下读取 YAML 文件。YAML 文件必须通过 `git push` 存在于仓库中才能被构建使用。
 
 6. **新建翻译文件**: 当某语言的某个产品首次保存时，`save()` 不传 SHA → Worker 的 `/api/admin/update` 视为创建新文件。YAML 文件写入 draft 分支，发布后合并到 main。
+
+### 5.6 PDP JSON-LD: ProductGroup 与变体级 FOB offers (2026-11-03)
+
+PDP JSON-LD 按销售渠道分两支 (`src/pages/products/[slug].astro` 与 `src/pages/[lang]/products/[slug].astro`, 两模板必须同步修改):
+
+- **零售页 (有 Stripe SKU)**: 单一 `Product` + 精确 `Offer` (零售价), 不暴露工厂尺寸变体。
+- **批发页 (无 SKU)**: `ProductGroup` — 组级 `AggregateOffer` (`lowPrice` = 系列最低 FOB, `eligibleQuantity` MOQ 20, FOB Qingdao 基准) + `hasVariant[]` 每变体携带已核实目录事实 (`sku` 货号 / `size` / `weight` 打包重量) 与 **变体级 `Offer`** (2026-11-03 新增): `price` = `pool-catalog.ts` 的 `fobUsd` (与 `/products/specs/` 公开价格表同一 SSOT)、`priceCurrency: USD`、`eligibleQuantity` MOQ 20、`additionalProperty` 注明 FOB Qingdao 基准 — 使 AI 引擎可按尺寸回答批发价格问题。
+
+变体映射: 模板内 `SERIES_BY_SLUG` 将产品 slug 映射到 `poolSeries` 系列 id (round / rect-square / hot-tub-round / hot-tub-square-rect); `JsonLd.astro` 通过 `Array.isArray(product.hasVariant)` 判定输出 ProductGroup 还是 Product。prod-smoke 断言 rectangular PDP 含 `"sku":"SR220815"` 与 `"@type":"Offer"` (EN + 37 语言)。
 
 ---
 
@@ -2005,3 +2016,34 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 ### 18.3 prettier-plugin-astro 1.x 重排
 
 0.14.1 → 1.1.1 (major): `.astro` 模板新增多行 label/input 内容换行规则, 全仓 241 文件一次性重排 (纯空白/换行, 零内容变更, 乱码扫描 660 文件 0 匹配)。新建/修改 `.astro` 文件后必须 `npm run fix`, 否则 CI prettier gate 拦截。
+
+## 19. GEO 第三轮审查落地 (2026-11-03)
+
+外部 AI 第三轮 GEO 深度审查的可实施项全部落地, 提交链 `25c19b5` → `0354fa6`, prod-smoke 50 → 54 项全绿。
+
+### 19.1 变体级 FOB offers + 指南 PDP 深链 (`25c19b5`)
+
+批发 ProductGroup `hasVariant` 每变体注入 FOB `Offer`, 见 §5.6。另为 3 篇消费向指南 (how-to-choose / setup / maintenance) 填充 `relatedProducts` — 指南模板 (`src/pages/guides/[slug].astro`) 经 `findProductsBySlugs` 渲染带图带价产品卡深链, 3 篇合计覆盖全部 5 个产品 slug; choose 指南 `relatedGuides` 增补 operating-costs 形成簇内互链。
+
+### 19.2 新内容三件套 (`885f854`)
+
+- **`/guides/inflatable-pool-operating-costs/`** — `guides.ts` 第 17 篇消费指南: 四条成本线 (初次充气 0.17 kWh / 过滤泵运行 / 水 / 化学品), 全部数字复用已核实口径 (PDP TCO FAQ), 公式优先不虚构价格。
+- **`/pool-volume-calculator/`** — 客户端容量计算器: 圆/矩形几何 (V=πr²h / V=lwh), 填充率默认 85% (80–90% 规则), 输出升/吨与注水时间; 内联 `<script>` 必须 IIFE (Rust 编译器红线: 无顶层 return), `noscript` 公式回退 + 算例保证无 JS 可用; `find-your-pool.astro` 有入链。
+- **`/products/compare/` 交互式工厂尺寸表** — 批发区 48 SKU 可筛选表: 系列 chips 过滤 (`data-series` 行属性 + IIFE, `aria-pressed`, 无 JS 时全表降级可见), 数据源 `pool-catalog.ts` SSOT。
+
+### 19.3 llms.txt 手工维护陷阱与防回归 (`a844242` + `0354fa6`)
+
+`public/llms.txt` 手工维护 (无生成器, `generate-geo-files.ts` 仅在文件缺失时写默认), 已两次滞后于内容批次 (2026-10-31 审计 §2.4; 2026-11-03 新页漏录)。本次补录 3 新页 + 计数 16→17, 并固化防回归:
+
+- prod-smoke 结构性同步断言: 生产 llms.txt 必须覆盖 `guides.ts` + `procurement-guides.ts` 全部 slug, 且 "Markdown Endpoint Index" 行手写计数 (17 consumer / 6 B2B) 与 SSOT 一致, 否则发布门禁 fail。
+- AGENTS.md "AI Content Manifests" 段记录维护规则: 新增指南/工具页必须手工更新 llms.txt 正确分区 + 计数行。
+- llms-index (`llms-index.ts`) 是动态的 (`guides.length` 自动), 无需手工同步。
+
+### 19.4 GEO 基线题包 (`78a8c25`)
+
+`docs/ai-visibility-baseline.md` 新增 §7 答案要点 (26 题逐题核实口径 + 预期引用 URL) 与 §8 预填记录表 (每平台复制一份)。人工执行流程: `npm run smoke` (54 项) → 6 平台 × 26 题 → 结果追加到 §5 记录区。
+
+### 19.5 附带修复
+
+- `generate-sitemaps.mjs` 错误消息双重编码 em-dash 修复 (`a7e11e4`); 全仓 802 跟踪文件乱码终扫仅剩 2 处刻意保留 (TECH.md 乱码文档示例、`fix-garbled.py` 搜索模式)。
+- #9/#10 dependabot PR 待 GitHub 定时任务自动关闭 (main 已含目标版本)。
