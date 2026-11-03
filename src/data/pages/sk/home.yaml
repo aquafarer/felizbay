@@ -36,7 +36,7 @@ features:
       description: 'Dvojvrstvová tkanina PVC drop stitch, navrhnutá tak, aby odolala prepichnutiu a vystaveniu UV počas celej sezóny rodinného používania.'
       icon: tabler:shield
     - title: Kompletný balík
-      description: Každý bazén sa dodáva s elektrickým vzduchovým čerpadlom, súpravou na opravu a úložným vakom. Pre okrúhle modely sú k dispozícii namontované kryty.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Bezpečný dizajn
       description: 'Dizajn obytného bazéna s odkazom na EN 16582-1 a ASTM F2666 – bezpečnostné informácie špecifické pre daný model sú uvedené v dokumentácii k produktu. Vždy je potrebný neustály dozor dospelej osoby.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Čo je súčasťou bazéna?
-      description: Každý bazén Felizbay obsahuje elektrické vzduchové čerpadlo, súpravu na opravu a úložný vak. Okrúhle modely majú voliteľný namontovaný kryt.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Aké veľkosti sú k dispozícii?
-      description: 48 štandardných SKU v štyroch kolekciách – okrúhle bazény do 10 m, obdĺžnikové bazény do 6 × 5 m a SPA vane so zabudovanými sedadlami. Pre obchodných partnerov sú k dispozícii vlastné veľkosti.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Na akých povrchoch môže bazén stáť?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Okrúhle bazény'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Rodinné plávanie a hranie — najširší rozsah veľkostí'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Obdĺžnikové bazény'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Priestor na plávanie s rovnými stranami pre väčšie stretnutia'

@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Forfaits complets
-      description: Chaque piscine est livrée avec une pompe à air électrique, un kit de réparation et un sac de rangement.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Tailles personnalisées
       description: Tailles, couleurs et couvertures OEM pour les marques, les distributeurs et les projets hôteliers.

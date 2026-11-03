@@ -36,7 +36,7 @@ features:
       description: 'Kain PVC drop stitch lapis ganda, dirancang untuk tahan terhadap tusukan dan paparan UV selama penggunaan keluarga selama satu musim penuh.'
       icon: tabler:shield
     - title: Paket Lengkap
-      description: Setiap kolam dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Penutup terpasang tersedia untuk model bulat.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Desain Sadar Keselamatan
       description: 'Referensi desain kolam perumahan EN 16582-1 dan ASTM F2666 — informasi keselamatan khusus model disediakan dalam dokumentasi produk. Pengawasan orang dewasa yang konstan selalu diperlukan.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Apa saja yang termasuk dalam kolam renang?
-      description: Setiap kolam Felizbay dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Model bulat memiliki penutup opsional.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Ukuran apa yang tersedia?
-      description: 48 SKU standar dalam empat koleksi — kolam bundar dengan lebar hingga 10 m, kolam persegi panjang hingga 6 × 5 m, dan bak SPA dengan tempat duduk internal. Ukuran khusus tersedia untuk mitra bisnis.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Pada permukaan apa kolam dapat berdiri?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Kolam Bulat'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Berenang dan bermain bersama keluarga — kisaran ukuran terluas'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Kolam Persegi Panjang'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ruang renang sisi lurus untuk pertemuan lebih besar'

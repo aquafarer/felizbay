@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Popolni paketi
-      description: Vsak bazen ima električno zračno črpalko, komplet za popravilo in torbo za shranjevanje.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Velikosti po meri
       description: OEM velikosti, barve in pokrovi za blagovne znamke, distributerje in gostinske projekte.

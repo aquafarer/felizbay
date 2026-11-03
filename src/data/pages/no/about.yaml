@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komplette pakker
-      description: Hvert basseng leveres med en elektrisk luftpumpe, reparasjonssett og oppbevaringspose.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Egendefinerte størrelser
       description: OEM-størrelser, farger og deksler for merker, distributører og gjestfrihetsprosjekter.

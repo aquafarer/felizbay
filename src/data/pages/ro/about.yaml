@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Pachete complete
-      description: Fiecare piscină se livrează cu o pompă de aer electrică, un kit de reparații și o pungă de depozitare.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Dimensiuni personalizate
       description: Dimensiuni, culori și huse OEM pentru mărci, distribuitori și proiecte de ospitalitate.

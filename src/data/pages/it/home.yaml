@@ -36,7 +36,7 @@ features:
       description: 'Tessuto Drop Stitch in PVC a doppio strato, progettato per resistere alle forature e all''esposizione ai raggi UV durante un''intera stagione di utilizzo in famiglia.'
       icon: tabler:shield
     - title: Pacchetto completo
-      description: Ogni piscina viene fornita con una pompa ad aria elettrica, un kit di riparazione e una custodia. Disponibili coperture su misura per i modelli rotondi.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Design attento alla sicurezza
       description: 'Progettazione di piscine residenziali con riferimento a EN 16582-1 e ASTM F2666: le informazioni sulla sicurezza specifiche del modello sono fornite nella documentazione del prodotto. È sempre necessaria la costante supervisione di un adulto.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Cosa è incluso nella piscina?
-      description: Ogni piscina Felizbay include una pompa ad aria elettrica, un kit di riparazione e una custodia. I modelli rotondi hanno una copertura montata opzionale.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Quali taglie sono disponibili?
-      description: '48 SKU standard in quattro collezioni: piscine rotonde fino a 10 m di diametro, piscine rettangolari fino a 6 × 5 m e vasche SPA con sedili integrati. Sono disponibili dimensioni personalizzate per i partner commerciali.'
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Su quali superfici può poggiare la piscina?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Piscine rotonde'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Nuoto e gioco per tutta la famiglia: la gamma di taglie più ampia'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Piscine rettangolari'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Spazio per nuotare sui lati diritti per riunioni più grandi'

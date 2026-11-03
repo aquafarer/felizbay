@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Pacotes completos
-      description: Cada piscina é enviada com uma bomba de ar elétrica, kit de reparo e bolsa de armazenamento.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Tamanhos personalizados
       description: Tamanhos, cores e coberturas OEM para marcas, distribuidores e projetos de hospitalidade.

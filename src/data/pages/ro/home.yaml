@@ -36,7 +36,7 @@ features:
       description: 'Țesătură cu două straturi PVC drop stitch, proiectată pentru a rezista la perforare și la expunerea la UV pe parcursul unui sezon complet de utilizare în familie.'
       icon: tabler:shield
     - title: Pachet complet
-      description: Fiecare piscină se livrează cu o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Huse montate disponibile pentru modelele rotunde.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Design conștient de siguranță
       description: 'Proiectarea piscinei rezidențiale care face referire la EN 16582-1 și ASTM F2666 — informațiile de siguranță specifice modelului sunt furnizate în documentația produsului. Este întotdeauna necesară supravegherea constantă a unui adult.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Ce este inclus cu piscina?
-      description: Fiecare piscină Felizbay include o pompă de aer electrică, un kit de reparații și o pungă de depozitare. Modelele rotunde au o husă montată opțional.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Ce dimensiuni sunt disponibile?
-      description: 48 de SKU-uri standard din patru colecții — piscine rotunde cu o lungime de până la 10 m, piscine dreptunghiulare de până la 6 × 5 m și căzi SPA cu scaune încorporate. Dimensiunile personalizate sunt disponibile pentru partenerii de afaceri.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Pe ce suprafete poate sta piscina?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Piscine rotunde'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Înot și joacă în familie — cea mai largă gamă de dimensiuni'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Piscine dreptunghiulare'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Spațiu de înot cu laturi drepte pentru adunări mai mari'

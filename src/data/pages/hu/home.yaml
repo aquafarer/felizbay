@@ -36,7 +36,7 @@ features:
       description: 'Kétrétegű PVC drop stitch szövet, amelyet úgy terveztek, hogy ellenálljon a szúrásoknak és a UV expozíciónak a teljes családi használat során.'
       icon: tabler:shield
     - title: Komplett csomag
-      description: Minden medencét elektromos légszivattyúval, javítókészlettel és tárolótáskával szállítunk. Kerek modellekhez felszerelt burkolatok kaphatók.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Biztonságtudatos tervezés
       description: 'A lakómedencék tervezése az EN 16582-1 és az ASTM F2666 szabványnak megfelelően – a modellspecifikus biztonsági információk a termékdokumentációban találhatók. Állandó felnőtt felügyelet szükséges.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mit tartalmaz a medence?
-      description: Minden Felizbay medence tartalmaz egy elektromos légszivattyút, egy javítókészletet és egy tárolótáskát. A kerek modellek opcionálisan felszerelt burkolattal rendelkeznek.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Milyen méretek kaphatók?
-      description: 48 szabványos SKU négy kollekcióban – kerek medencék 10 m-ig, téglalap alakú medencék 6 × 5 m-ig és SPA kádak beépített ülésekkel. Üzleti partnerek számára egyedi méretek állnak rendelkezésre.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Milyen felületeken állhat a medence?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Kerek medencék'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Családi úszás és játék – a legszélesebb méretválaszték'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Téglalap alakú medencék'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Egyenes oldalú úszótér nagyobb összejövetelek számára'

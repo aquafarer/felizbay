@@ -36,7 +36,7 @@ features:
       description: 'ผ้า PVC drop stitch สองชั้น ออกแบบมาเพื่อต้านทานการเจาะทะลุและการสัมผัสกับ UV ตลอดการใช้งานทั้งครอบครัว'
       icon: tabler:shield
     - title: แพ็คเกจที่สมบูรณ์
-      description: สระทุกสระมาพร้อมกับปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ ฝาครอบพอดีสำหรับรุ่นทรงกลม
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: การออกแบบที่คำนึงถึงความปลอดภัย
       description: 'การออกแบบสระว่ายน้ำสำหรับที่อยู่อาศัยอ้างอิง EN 16582-1 และ ASTM F2666 — ข้อมูลด้านความปลอดภัยเฉพาะรุ่นมีอยู่ในเอกสารประกอบของผลิตภัณฑ์ จำเป็นต้องมีการดูแลจากผู้ใหญ่อย่างต่อเนื่อง'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: มีอะไรรวมอยู่ในสระว่ายน้ำ?
-      description: สระ Felizbay ทุกสระมีปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ รุ่นทรงกลมมีฝาครอบแบบติดตั้งที่เป็นอุปกรณ์เสริม
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: มีขนาดอะไรบ้าง?
-      description: SKU มาตรฐาน 48 รายการในสี่คอลเลกชัน ได้แก่ สระทรงกลมเส้นผ่านศูนย์กลางสูงสุด 10 ม. สระทรงสี่เหลี่ยมขนาดสูงสุด 6 × 5 ม. และอ่าง SPA พร้อมที่นั่งในตัว ขนาดที่กำหนดเองมีไว้สำหรับพันธมิตรทางธุรกิจ
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: สระน้ำสามารถยืนบนพื้นผิวใดได้บ้าง?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'สระน้ำทรงกลม'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'ว่ายน้ำและเล่นสำหรับครอบครัว — ขนาดที่กว้างที่สุด'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'สระน้ำทรงสี่เหลี่ยม'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'พื้นที่ว่ายน้ำด้านตรงเพื่อการสังสรรค์ที่ใหญ่ขึ้น'

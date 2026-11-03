@@ -29,7 +29,7 @@ compare_collections:
     - collection: Round Pools
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Family swimming and play — the widest size range'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: Rectangular Pools
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Straight-sided swim space for larger gatherings'
@@ -56,7 +56,7 @@ features:
       description: 'Double-layer PVC drop stitch fabric, engineered to resist punctures and UV exposure through a full season of family use.'
       icon: tabler:shield
     - title: Complete Package
-      description: 'Every pool ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.'
+      description: 'Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.'
       icon: tabler:box
     - title: Safety-Conscious Design
       description: 'Residential pool design referencing EN 16582-1 and ASTM F2666 — model-specific safety information is provided in the product documentation. Constant adult supervision is always required.'
@@ -148,7 +148,7 @@ faqs:
       icon: tabler:package
       category: all
     - title: What is included with the pool?
-      description: 'Every Felizbay pool includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.'
+      description: 'Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.'
       icon: tabler:box
       category: all
     - title: What sizes are available?

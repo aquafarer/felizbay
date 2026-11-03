@@ -36,7 +36,7 @@ features:
       description: 'Dobbeltlags PVC drop stitch-stoff, konstruert for å motstå punkteringer og UV-eksponering gjennom en hel sesong med familiebruk.'
       icon: tabler:shield
     - title: Komplett pakke
-      description: Hvert basseng leveres med en elektrisk luftpumpe, reparasjonssett og oppbevaringspose. Tilpassede deksler tilgjengelig for runde modeller.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Sikkerhetsbevisst design
       description: 'Utforming av boligbasseng som refererer til EN 16582-1 og ASTM F2666 — modellspesifikk sikkerhetsinformasjon er gitt i produktdokumentasjonen. Konstant tilsyn av voksne er alltid nødvendig.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hva følger med bassenget?
-      description: Hvert Felizbay-basseng inkluderer en elektrisk luftpumpe, et reparasjonssett og en oppbevaringspose. Runde modeller har et valgfritt montert deksel.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Hvilke størrelser er tilgjengelige?
-      description: 48 standard SKU-er på tvers av fire samlinger — runde bassenger med en diameter på opptil 10 m, rektangulære bassenger på opptil 6 × 5 m, og SPA-kar med innebygde seter. Egendefinerte størrelser er tilgjengelige for forretningspartnere.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Hvilke overflater kan bassenget stå på?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Runde bassenger'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Familiesvømming og lek — det bredeste størrelsesutvalget'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Rektangulære bassenger'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Rettsidig svømmeplass for større forsamlinger'

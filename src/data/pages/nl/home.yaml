@@ -36,7 +36,7 @@ features:
       description: 'Dubbellaags PVC drop-stitch-stof, ontworpen om lekrijden en UV-blootstelling te weerstaan ​​gedurende een volledig seizoen gezinsgebruik.'
       icon: tabler:shield
     - title: Compleet pakket
-      description: Elk zwembad wordt geleverd met een elektrische luchtpomp, reparatieset en opbergtas. Passende hoezen beschikbaar voor ronde modellen.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Veiligheidsbewust ontwerp
       description: 'Ontwerp van residentiële zwembaden met verwijzing naar EN 16582-1 en ASTM F2666 – modelspecifieke veiligheidsinformatie vindt u in de productdocumentatie. Constant toezicht van een volwassene is altijd vereist.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Wat is inbegrepen bij het zwembad?
-      description: Bij elk Felizbay-zwembad wordt een elektrische luchtpomp, een reparatieset en een opbergtas geleverd. Ronde modellen hebben optioneel een gemonteerde hoes.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Welke maten zijn beschikbaar?
-      description: "48 standaard SKU's verdeeld over vier collecties: ronde zwembaden tot 10 m breed, rechthoekige zwembaden tot 6 x 5 m en SPA-baden met ingebouwde stoelen. Aangepaste formaten zijn beschikbaar voor zakenpartners."
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Op welke oppervlakken kan het zwembad staan?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Ronde zwembaden'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Zwemmen en spelen met het hele gezin — het grootste matenassortiment'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Rechthoekige zwembaden'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Zwemruimte met rechte zijkanten voor grotere bijeenkomsten'

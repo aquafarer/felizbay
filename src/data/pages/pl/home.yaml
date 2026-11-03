@@ -36,7 +36,7 @@ features:
       description: 'Dwuwarstwowy materiał PVC drop stitch, zaprojektowany tak, aby był odporny na przebicia i narażenie na działanie UV przez cały sezon rodzinnego użytkowania.'
       icon: tabler:shield
     - title: Kompletny pakiet
-      description: Każdy basen jest dostarczany z elektryczną pompą powietrza, zestawem naprawczym i torbą do przechowywania. Do modeli okrągłych dostępne są dopasowane pokrowce.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Projekt uwzględniający bezpieczeństwo
       description: 'Projekt basenu mieszkalnego zgodny z normami EN 16582-1 i ASTM F2666 — informacje dotyczące bezpieczeństwa dotyczące konkretnego modelu znajdują się w dokumentacji produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Co jest wliczone w cenę basenu?
-      description: Każdy basen Felizbay zawiera elektryczną pompę powietrza, zestaw naprawczy i torbę do przechowywania. Modele okrągłe mają opcjonalną dopasowaną pokrywę.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Jakie rozmiary są dostępne?
-      description: 48 standardowych jednostek SKU w czterech kolekcjach – baseny okrągłe o średnicy do 10 m, baseny prostokątne do 6×5 m oraz wanny SPA z wbudowanymi siedziskami. Rozmiary niestandardowe są dostępne dla partnerów biznesowych.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Na jakich powierzchniach może stać basen?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Okrągłe baseny'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Pływanie i zabawa dla całej rodziny — najszerszy zakres rozmiarów'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Baseny prostokątne'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Prosta przestrzeń do pływania dla większych zgromadzeń'

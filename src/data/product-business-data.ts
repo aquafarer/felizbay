@@ -33,9 +33,9 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
     recommendation:
       'A modern, understated grey pool that pairs with an optional fitted debris cover. The neutral finish suits design-conscious buyers and premium retail lineups, and the optional cover adds value at the same price tier.',
     useCase: 'Premium backyard setup, design-conscious buyers, gift and premium retail channels',
-    operatingCost: 'Low — the optional fitted cover cuts cleaning time and chemical loss between swims',
+    operatingCost: 'Low — the optional fitted cover keeps debris out of the water between swims',
     whyBusinessesChooseIt:
-      'Differentiates from the sea of blue pools at retail. The optional cover improves customer satisfaction scores and reduces support tickets about water care.',
+      'Differentiates from the sea of blue pools at retail, and the optional fitted cover is a visible add-on at the point of sale.',
     lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
   'hot-tub-square-rect': {
@@ -51,9 +51,9 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
   'hot-tub-round': {
     bestFor: ['families', 'retailers', 'oem'],
     recommendation:
-      'The entry model of the hot tub line. The compact 1.8 m footprint opens sales to urban courtyards and load-rated balconies, and the tub doubles as a professional cold plunge bath for the athletic recovery market.',
+      'The entry model of the hot tub line. The compact 1.8 m footprint opens sales to urban courtyards and load-rated balconies, and the tub is used for cold-water immersion by the athletic recovery market.',
     useCase: 'Balcony and courtyard wellness, cold plunge recovery, compact year-round spa, glamping amenity',
-    operatingCost: 'Low to moderate — small water volume heats fast; insulated bottom retains heat between sessions',
+    operatingCost: 'Low to moderate — the small water volume keeps heating modest; insulated bottom retains heat between sessions',
     whyBusinessesChooseIt:
       'The lowest entry price in the wellness line with the smallest shipping footprint. Popular with glamping operators and fitness studios that add recovery baths without construction.',
     lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',

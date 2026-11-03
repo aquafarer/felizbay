@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Полные пакеты
-      description: Каждый бассейн поставляется с электрическим воздушным насосом, ремонтным комплектом и сумкой для хранения.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Нестандартные размеры
       description: OEM-размеры, цвета и чехлы для брендов, дистрибьюторов и проектов в сфере гостеприимства.

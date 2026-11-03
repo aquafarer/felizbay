@@ -36,7 +36,7 @@ features:
       description: 'Doppellagiges PVC-Drop-Stitch-Gewebe, das so konstruiert ist, dass es eine ganze Saison lang im Familienbereich stichfest und UV-Strahlung ausgesetzt ist.'
       icon: tabler:shield
     - title: Komplettpaket
-      description: Jeder Pool wird mit einer elektrischen Luftpumpe, einem Reparaturset und einer Aufbewahrungstasche geliefert. Passende Abdeckungen für runde Modelle erhältlich.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Sicherheitsbewusstes Design
       description: 'Design von Wohnpools unter Bezugnahme auf EN 16582-1 und ASTM F2666 – modellspezifische Sicherheitsinformationen finden Sie in der Produktdokumentation. Ständige Aufsicht durch Erwachsene ist immer erforderlich.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Was ist im Pool enthalten?
-      description: Zu jedem Felizbay-Pool gehören eine elektrische Luftpumpe, ein Reparaturset und eine Aufbewahrungstasche. Runde Modelle verfügen optional über eine passgenaue Abdeckung.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Welche Größen sind verfügbar?
-      description: 48 Standard-SKUs in vier Kollektionen – runde Pools mit bis zu 10 m Durchmesser, rechteckige Pools mit bis zu 6 × 5 m und SPA-Badewannen mit integrierten Sitzen. Für Geschäftspartner stehen Sondergrößen zur Verfügung.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Auf welchen Untergründen kann der Pool stehen?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Runde Pools'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Familienschwimmen und Spielen – die größte Größenauswahl'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Rechteckige Pools'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Gerader Schwimmbereich für größere Versammlungen'

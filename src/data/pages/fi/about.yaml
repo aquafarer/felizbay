@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Täydelliset paketit
-      description: Jokaisen uima-altaan mukana toimitetaan sähköinen ilmapumppu, korjaussarja ja säilytyspussi.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Mukautetut koot
       description: OEM-koot, värit ja kannet brändeille, jakelijoille ja majoitusprojekteille.

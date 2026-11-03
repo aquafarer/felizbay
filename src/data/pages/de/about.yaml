@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komplettpakete
-      description: Jeder Pool wird mit einer elektrischen Luftpumpe, einem Reparaturset und einer Aufbewahrungstasche geliefert.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Sondergrößen
       description: OEM-Größen, -Farben und -Bezüge für Marken, Händler und Gastronomieprojekte.

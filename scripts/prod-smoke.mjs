@@ -126,9 +126,23 @@ const CHECKS = [
     markers: ['data-volume-calc', 'Pool Volume Calculator', '6,000 liters'],
     desc: 'pool volume calculator tool: inputs, worked example, guide deep links',
   },
-  { path: '/find-your-pool/', marker: 'data-finder', desc: 'pool advisor quiz' },
+  {
+    path: '/products/hot-tub-round/',
+    markers: ['RS2018', 'Ø 2 × 0.8 m', 'fixed-size retail set'],
+    notMarkers: ['Diameter 1.8 m', '8 cm / 10 cm / 15 cm', 'fitg-size'],
+    desc: 'hot-tub retail PDP bound to the fixed RS2018 set — no series-level specs, no factory size checker',
+  },
+  {
+    path: '/find-your-pool/',
+    markers: ['data-finder', 'Shop a Retail Set', 'FZ-SPA-RND', 'Request a quote'],
+    desc: 'pool finder dual entry: retail sets section + business project planner with quote CTAs',
+  },
   { path: '/support/', marker: 'Support', desc: 'support hub' },
-  { path: '/returns-and-warranty/', marker: 'Warranty', desc: 'warranty policy' },
+  {
+    path: '/returns-and-warranty/',
+    markers: ['Warranty', 'accessories originally supplied with your selected set'],
+    desc: 'warranty policy: returns wording matches per-set package contents',
+  },
   {
     path: '/contact/',
     markers: ['Contact', 'cf-turnstile'],

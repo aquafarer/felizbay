@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Täielikud paketid
-      description: Iga basseiniga on kaasas elektriline õhupump, remondikomplekt ja hoiukott.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Kohandatud suurused
       description: OEM-i suurused, värvid ja kaaned kaubamärkide, turustajate ja hotellindusprojektide jaoks.

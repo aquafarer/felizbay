@@ -45,7 +45,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Complete packages
-      description: Every pool ships with an electric air pump, repair kit, and storage bag.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Custom sizes
       description: OEM sizes, colors, and covers for brands, distributors, and hospitality projects.

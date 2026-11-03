@@ -36,7 +36,7 @@ features:
       description: 'Dubbellager PVC drop stitch-tyg, konstruerat för att motstå punkteringar och UV-exponering genom en hel säsong av familjeanvändning.'
       icon: tabler:shield
     - title: Komplett paket
-      description: Varje pool levereras med en elektrisk luftpump, reparationssats och förvaringsväska. Passade överdrag tillgängliga för runda modeller.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Säkerhetsmedveten design
       description: 'Bostadspooldesign med hänvisning till EN 16582-1 och ASTM F2666 — modellspecifik säkerhetsinformation finns i produktdokumentationen. Ständig vuxenövervakning krävs alltid.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Vad ingår i poolen?
-      description: Varje Felizbay-pool inkluderar en elektrisk luftpump, en reparationssats och en förvaringsväska. Runda modeller har en valfri monterad kåpa.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Vilka storlekar finns tillgängliga?
-      description: 48 standard-SKU:er i fyra samlingar — runda pooler upp till 10 m i diameter, rektangulära pooler upp till 6 × 5 m och SPA-badkar med inbyggda säten. Anpassade storlekar är tillgängliga för affärspartners.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Vilka ytor kan poolen stå på?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Runda pooler'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Familjesim och lek — det bredaste storleksintervallet'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Rektangulära pooler'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Raksidig simplats för större sammankomster'

@@ -36,7 +36,7 @@ features:
       description: 'Tejido PVC drop stitch de doble capa, diseñado para resistir pinchazos y exposición UV durante una temporada completa de uso familiar.'
       icon: tabler:shield
     - title: Paquete completo
-      description: Cada piscina se envía con una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Fundas ajustadas disponibles para modelos redondos.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Diseño consciente de la seguridad
       description: 'Diseño de piscina residencial que hace referencia a EN 16582-1 y ASTM F2666: la información de seguridad específica del modelo se proporciona en la documentación del producto. Siempre se requiere la supervisión constante de un adulto.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: ¿Qué incluye la piscina?
-      description: Cada piscina Felizbay incluye una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Los modelos redondos tienen una cubierta incorporada opcional.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: ¿Qué tallas hay disponibles?
-      description: '48 SKU estándar en cuatro colecciones: piscinas redondas de hasta 10 m de ancho, piscinas rectangulares de hasta 6 × 5 m y bañeras de SPA con asientos incorporados. Hay tamaños personalizados disponibles para socios comerciales.'
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: ¿Sobre qué superficies se puede apoyar la piscina?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Piscinas Redondas'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Natación y juego en familia: la gama de tamaños más amplia'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Piscinas rectangulares'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Espacio de baño de lados rectos para reuniones más grandes'

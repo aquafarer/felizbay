@@ -36,7 +36,7 @@ features:
       description: 'Ύφασμα PVC drop stitch διπλής στρώσης, σχεδιασμένο για να αντιστέκεται στα τρυπήματα και στην έκθεση UV για μια πλήρη σεζόν οικογενειακής χρήσης.'
       icon: tabler:shield
     - title: Ολοκληρωμένο Πακέτο
-      description: Κάθε πισίνα συνοδεύεται από ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Εφαρμοσμένα καλύμματα διαθέσιμα για στρογγυλά μοντέλα.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Σχεδιασμός Ασφαλείας-Συνειδητός
       description: 'Σχεδιασμός οικιακής πισίνας με αναφορά στα πρότυπα EN 16582-1 και ASTM F2666 — πληροφορίες ασφαλείας για συγκεκριμένο μοντέλο παρέχονται στην τεκμηρίωση του προϊόντος. Απαιτείται πάντα η συνεχής επίβλεψη από ενήλικα.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Τι περιλαμβάνει η πισίνα;
-      description: Κάθε πισίνα Felizbay περιλαμβάνει ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Τα στρογγυλά μοντέλα διαθέτουν προαιρετικά τοποθετημένο κάλυμμα.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Τι μεγέθη είναι διαθέσιμα;
-      description: 48 τυπικές SKU σε τέσσερις συλλογές — στρογγυλές πισίνες πλάτους έως 10 m, ορθογώνιες πισίνες έως 6 × 5 m και μπανιέρες SPA με ενσωματωμένα καθίσματα. Προσαρμοσμένα μεγέθη είναι διαθέσιμα για επιχειρηματικούς συνεργάτες.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Σε ποιες επιφάνειες μπορεί να σταθεί η πισίνα;
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Στρογγυλές Πισίνες'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Οικογενειακή κολύμβηση και παιχνίδι — το μεγαλύτερο εύρος μεγεθών'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Ορθογώνιες Πισίνες'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Χώρος κολύμβησης με ευθεία όψη για μεγαλύτερες συγκεντρώσεις'

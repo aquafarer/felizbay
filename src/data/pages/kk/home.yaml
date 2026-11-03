@@ -36,7 +36,7 @@ features:
       description: 'Екі қабатты PVC drop stitch мата, отбасылық пайдаланудың толық маусымы арқылы тесілуге ​​және UV әсеріне қарсы тұру үшін жасалған.'
       icon: tabler:shield
     - title: Толық пакет
-      description: Әрбір бассейнде электрлік ауа сорғысы, жөндеу жинағы және сақтауға арналған сөмке бар. Дөңгелек үлгілер үшін орнатылған қақпақтар бар.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Қауіпсіздікке негізделген дизайн
       description: 'EN 16582-1 және ASTM F2666 стандартына сілтеме жасайтын тұрғын үй бассейнінің дизайны — үлгіге қатысты қауіпсіздік ақпараты өнім құжаттамасында берілген. Әрқашан ересектердің бақылауы қажет.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Бассейнге не кіреді?
-      description: Әрбір Felizbay бассейнінде электрлік ауа сорғысы, жөндеу жинағы және сақтауға арналған сөмке бар. Дөңгелек үлгілерде қосымша орнатылған қақпақ бар.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Қандай өлшемдері бар?
-      description: Төрт топтама бойынша 48 стандартты SKU – ені 10 м-ге дейінгі дөңгелек бассейндер, 6 × 5 м-ге дейінгі тікбұрышты бассейндер және кіріктірілген отырғыштары бар SPA ванналары. Жеке өлшемдер іскер серіктестер үшін қол жетімді.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Бассейн қандай беттерде тұра алады?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Дөңгелек бассейндер'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Отбасылық жүзу және ойын - ең кең ауқым'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Тік бұрышты бассейндер'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Үлкен жиналыстар үшін түзу жүзу кеңістігі'

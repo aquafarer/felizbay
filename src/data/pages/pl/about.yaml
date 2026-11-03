@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Kompletne pakiety
-      description: Każdy basen jest dostarczany z elektryczną pompą powietrza, zestawem naprawczym i torbą do przechowywania.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Rozmiary niestandardowe
       description: Rozmiary, kolory i okładki OEM dla marek, dystrybutorów i projektów hotelarskich.

@@ -36,7 +36,7 @@ features:
       description: 'نسيج PVC drop stitch مزدوج الطبقة، مصمم لمقاومة الثقوب والتعرض لـ UV خلال موسم كامل من الاستخدام العائلي.'
       icon: tabler:shield
     - title: حزمة كاملة
-      description: يأتي كل حمام سباحة مزودًا بمضخة هواء كهربائية ومجموعة إصلاح وحقيبة تخزين. الأغطية المجهزة متاحة للنماذج المستديرة.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: تصميم مراعٍ للسلامة
       description: 'مرجع تصميم حمام السباحة السكني EN 16582-1 وASTM F2666 - يتم توفير معلومات السلامة الخاصة بالطراز في وثائق المنتج. مطلوب دائمًا إشراف الكبار المستمر.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: ما الذي يتم تضمينه مع المسبح؟
-      description: يشتمل كل مسبح في Felizbay على مضخة هواء كهربائية ومجموعة أدوات إصلاح وحقيبة تخزين. تحتوي النماذج المستديرة على غطاء اختياري مُجهز.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: ما هي الأحجام المتوفرة؟
-      description: 48 وحدة SKU قياسية في أربع مجموعات — حمامات سباحة مستديرة يصل عرضها إلى 10 أمتار، وأحواض سباحة مستطيلة يصل حجمها إلى 6 × 5 أمتار، وأحواض سبا بمقاعد مدمجة. تتوفر أحجام مخصصة لشركاء الأعمال.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: ما هي الأسطح التي يمكن أن يقف عليها حمام السباحة؟
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'حمامات مستديرة'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'السباحة واللعب العائلي — أكبر نطاق للحجم'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'حمامات سباحة مستطيلة'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'مساحة سباحة مستقيمة الجوانب للتجمعات الكبيرة'

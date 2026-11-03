@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komplett csomagok
-      description: Minden medencét elektromos légszivattyúval, javítókészlettel és tárolótáskával szállítunk.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Egyedi méretek
       description: OEM méretek, színek és burkolatok márkákhoz, forgalmazókhoz és vendéglátó projektekhez.

@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Paket lengkap
-      description: Setiap kolam dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Ukuran khusus
       description: Ukuran, warna, dan sampul OEM untuk merek, distributor, dan proyek perhotelan.

@@ -392,7 +392,7 @@ export const guides: GuideRecord[] = [
       'Factory verification: every pool passes a 24–48 hour pressure-drop test before packing — a wall that loses pressure never ships',
       'Material layers: reinforced, UV-stabilized multi-layer PVC resists punctures, sunlight, and abrasion far better than single-layer vinyl',
       'Real-world limits: the walls are built for daily family use — but sharp objects, pet claws, and deliberate cutting will puncture any inflatable',
-      'Field repair: every pool includes a repair kit, and small punctures patch in minutes without deflating the whole pool',
+      'Field repair: the retail swim-pool sets include a repair kit, and small punctures patch in minutes without deflating the whole pool',
     ],
     faq: [
       {

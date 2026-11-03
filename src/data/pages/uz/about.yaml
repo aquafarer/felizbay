@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: To'liq paketlar
-      description: Har bir hovuz elektr havo pompasi, ta'mirlash to'plami va saqlash sumkasi bilan birga keladi.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Maxsus o'lchamlar
       description: Brendlar, distribyutorlar va mehmondo'stlik loyihalari uchun OEM o'lchamlari, ranglari va qoplamalari.

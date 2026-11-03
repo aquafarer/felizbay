@@ -36,7 +36,7 @@ features:
       description: 'پارچه دولایه PVC drop stitch، مهندسی شده برای مقاومت در برابر سوراخ شدن و قرار گرفتن در معرض UV در طول یک فصل کامل استفاده خانوادگی.'
       icon: tabler:shield
     - title: پکیج کامل
-      description: هر استخر با یک پمپ باد الکتریکی، کیت تعمیر و کیسه ذخیره سازی حمل می شود. روکش های نصب شده برای مدل های گرد موجود است.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: طراحی ایمنی-آگاهانه
       description: 'ارجاع به طراحی استخر مسکونی EN 16582-1 و ASTM F2666 — اطلاعات ایمنی مدل خاص در مستندات محصول ارائه شده است. نظارت مداوم بزرگسالان همیشه مورد نیاز است.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: چه چیزی همراه استخر است؟
-      description: هر استخر Felizbay شامل یک پمپ باد الکتریکی، یک کیت تعمیر و یک کیسه ذخیره سازی است. مدل‌های گرد دارای پوشش اختیاری هستند.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: چه اندازه هایی موجود است؟
-      description: 48 SKU استاندارد در چهار مجموعه - استخرهای گرد تا عرض 10 متر، استخرهای مستطیلی تا 6 × 5 متر، و وان های اسپا با صندلی های توکار. اندازه های سفارشی برای شرکای تجاری در دسترس است.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: استخر روی چه سطوحی می تواند بایستد؟
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'استخرهای گرد'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'شنا و بازی خانوادگی - وسیع ترین محدوده اندازه'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'استخرهای مستطیلی'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'فضای شنای مستقیم برای مجالس بزرگتر'

@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: חבילות שלמות
-      description: כל בריכה נשלחת עם משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: גדלים מותאמים אישית
       description: גדלים, צבעים וכיסויים OEM עבור מותגים, מפיצים ופרויקטי אירוח.

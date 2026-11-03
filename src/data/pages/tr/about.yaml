@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komple paketler
-      description: Her havuz bir elektrikli hava pompası, tamir seti ve saklama çantasıyla birlikte gönderilir.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Özel boyutlar
       description: Markalar, distribütörler ve konaklama projeleri için OEM boyutları, renkleri ve kapakları.

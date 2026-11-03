@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Kompletní balíčky
-      description: Každý bazén je dodáván s elektrickým vzduchovým čerpadlem, opravnou sadou a úložným vakem.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Vlastní velikosti
       description: OEM velikosti, barvy a kryty pro značky, distributory a projekty pohostinství.

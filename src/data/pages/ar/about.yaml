@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: حزم كاملة
-      description: يأتي كل حمام سباحة مزودًا بمضخة هواء كهربائية ومجموعة إصلاح وحقيبة تخزين.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: أحجام مخصصة
       description: أحجام وألوان وأغطية OEM للعلامات التجارية والموزعين ومشاريع الضيافة.

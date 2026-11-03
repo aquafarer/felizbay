@@ -36,7 +36,7 @@ features:
       description: 'Двошарова тканина PVC drop stitch, розроблена для захисту від проколів і впливу UV протягом повного сезону сімейного використання.'
       icon: tabler:shield
     - title: Повний пакет
-      description: Кожен басейн поставляється з електричним повітряним насосом, ремонтним набором і сумкою для зберігання. Встановлені чохли доступні для круглих моделей.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Дизайн з урахуванням безпеки
       description: 'Конструкція житлового басейну з посиланням на EN 16582-1 і ASTM F2666 — інформація про безпеку для конкретної моделі надається в документації продукту. Завжди потрібен постійний нагляд дорослих.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Що входить в басейн?
-      description: До кожного басейну Felizbay входить електричний повітряний насос, ремонтний набір і сумка для зберігання. Круглі моделі мають додаткову кришку.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Які розміри доступні?
-      description: 48 стандартних SKU у чотирьох колекціях — круглі басейни до 10 м у поперечнику, прямокутні басейни до 6 × 5 м і SPA-ванни з вбудованими сидіннями. Для ділових партнерів доступні індивідуальні розміри.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: На яких поверхнях може стояти басейн?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Круглі басейни'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Сімейне плавання та гра — найширший розмірний ряд'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Прямокутні басейни'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Пряме місце для плавання для великих зібрань'

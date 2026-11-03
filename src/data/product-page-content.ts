@@ -45,6 +45,11 @@ export interface ProductPageDetail {
   packageIncluded: string[];
   /** Module 06 — site requirements the buyer must provide separately */
   packageRequired: string[];
+  /** Module 03 — confirmed fixed size of the retail set, shown in the
+   * FitGuide fixed-set card when the factory item binding is verified
+   * (e.g. hot-tub-round → RS2018). Omitted when the fixed dimensions are
+   * not yet confirmed (blue/grey retail sets — 2026-11 review P0). */
+  fixedSetSize?: string;
   /** Module 07 — setup & seasonal storage steps */
   setupSteps: SetupStep[];
   /** Module 07 — resource entry points */
@@ -461,6 +466,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
       },
     ],
     fitNotice: HOT_TUB_FIT_NOTICE,
+    fixedSetSize: 'Ø 2 × 0.8 m (factory item RS2018, 10 cm drop-stitch wall)',
     packageIncluded: ['Built-in integrated inflatable seats', '5 mm insulated thermal bottom base'],
     packageRequired: [
       'An external heating unit for hot soaking (sold separately)',

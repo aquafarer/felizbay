@@ -36,7 +36,7 @@ features:
       description: 'Double-layer na PVC drop stitch na tela, na idinisenyo upang labanan ang mga butas at UV exposure sa buong panahon ng paggamit ng pamilya.'
       icon: tabler:shield
     - title: Kumpletong Package
-      description: Ang bawat pool ay nagpapadala ng electric air pump, repair kit, at storage bag. Available ang mga fitted cover para sa mga bilog na modelo.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Disenyo na Nakababatid sa Kaligtasan
       description: 'Ang disenyo ng residential pool na tumutukoy sa EN 16582-1 at ASTM F2666 — ang impormasyon sa kaligtasan na partikular sa modelo ay ibinibigay sa dokumentasyon ng produkto. Ang patuloy na pangangasiwa ng may sapat na gulang ay palaging kinakailangan.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Ano ang kasama sa pool?
-      description: Ang bawat pool ng Felizbay ay may kasamang electric air pump, repair kit, at storage bag. Ang mga bilog na modelo ay may opsyonal na fitted cover.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Anong mga sukat ang magagamit?
-      description: 48 karaniwang SKU sa apat na koleksyon — mga bilog na pool hanggang 10 m ang lapad, mga rectangular na pool hanggang 6 × 5 m, at mga SPA tub na may mga built-in na upuan. Available ang mga custom na laki para sa mga kasosyo sa negosyo.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Anong mga ibabaw ang maaaring tumayo sa pool?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Mga Bilog na Pool'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Family swimming at play — ang pinakamalawak na hanay ng laki'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Mga Rectangular Pool'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Straight-sided swim space para sa mas malalaking pagtitipon'

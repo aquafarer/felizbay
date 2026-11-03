@@ -36,7 +36,7 @@ features:
       description: 'בד PVC drop stitch שכבתית כפולה, תוכנן לעמוד בפני פנצ''רים וחשיפה ל-UV דרך עונה מלאה של שימוש משפחתי.'
       icon: tabler:shield
     - title: חבילה שלמה
-      description: כל בריכה נשלחת עם משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. כיסויים מצוידים זמינים לדגמים עגולים.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: עיצוב מודע לבטיחות
       description: 'תכנון בריכה למגורים בהתייחס ל-EN 16582-1 ו-ASTM F2666 - מידע בטיחות ספציפי לדגם מסופק בתיעוד המוצר. תמיד נדרשת השגחת מבוגר מתמדת.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: מה כלול בבריכה?
-      description: כל בריכת Felizbay כוללת משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. לדגמים עגולים יש כיסוי אופציונלי.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: אילו גדלים זמינים?
-      description: 48 מק"טים סטנדרטיים על פני ארבע אוספים - בריכות עגולות בקוטר של עד 10 מ', בריכות מלבניות עד 6 × 5 מ', ואמבטיות ספא ​​עם מושבים מובנים. גדלים מותאמים אישית זמינים עבור שותפים עסקיים.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: על אילו משטחים הבריכה יכולה לעמוד?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'בריכות עגולות'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'שחייה ומשחק משפחתיים - טווח המידות הרחב ביותר'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'בריכות מלבניות'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'מרחב שחייה ישר צדדי להתכנסויות גדולות יותר'

@@ -2059,3 +2059,28 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 - 非首页保持 Layout 全局块 + 页面级标记 (如 about = 3 全局块 + BreadcrumbList)。
 - prod-smoke 54 → 57 项: 首页 `"@graph"` / `ManufacturingBusiness` / `/de/` 抽样三条断言。部署后首次 smoke 可能因 CDN 边缘缓存旧页出现批量假失败, 复跑即绿。
 - entity.json 实际路径为 `/.well-known/entity.json` (源 `src/data/geo/entity.json`), 非 `/entity.json` — 复测脚本曾因此误报 404。
+
+### 19.7 可购买性轮: 三零售 SKU 定稿 + 选型工具重构 (2026-11-03)
+
+用户指令: 停止扩充泛化页面, 集中可购买性。按外部审查执行 (审计 → 修复 → 验收):
+
+**hot-tub-round 全模块绑定 RS2018** (`src/content/products/hot-tub-round.mdx`):
+
+- 零售页只卖一个固定套装 (SKU FZ-SPA-RND = 工厂件 RS2018, Ø 2 × 0.8 m, 10 cm): summary/description/metadata 全部改固定尺寸; specs 新增 `Model` 行 + `Size range` 值改为固定串 (保留 "Size range" 标签 — `/products/` 总览卡 `spec('size range')` 查找依赖); Key Features 重写; 删除 "reduces heating energy costs" 无证据主张; gallery 首图 alt 诚实标注 "RS1808, 1.8 m wholesale model" (照片错配属阻塞项)。
+- `product-page-content.ts` 新增 `fixedSetSize?: string` 字段; hot-tub 值 `Ø 2 × 0.8 m (factory item RS2018, 10 cm drop-stitch wall)`。
+
+**FitGuide 双分支** (`src/components/product/FitGuide.astro`): 新增 `fixedSize` prop。固定套装卡 (hot-tub): 尺寸显示 "as listed in the specifications above"; 蓝灰卡 (无 fixedSize): 原 "exact dimensions listed in the specifications above" 虚假承诺改为 "exact dimensions of this set are confirmed with your order, so ask us before you buy if you need them upfront"。两个调用方 (`pages/products/[slug].astro` + `pages/[lang]/products/[slug].astro`) 传 `fixedSize={detailV2.fixedSetSize}`。
+
+**装箱声明范围限定** (一刀切 "pump/repair kit included" → 按套装): `products/index.astro` 零售总述、`returns-and-warranty.astro` (退货配件 = "all accessories originally supplied with your selected set"; 保修段维修包限零售游泳池套装)、`faq.ts:23` (泵限游泳池套装, 删 filter pump)、`guides.ts:395`、`best-drop-stitch` 页 FAQ、`product-business-data.ts` (删满意度/工单数字、"professional cold plunge"、"heats fast")、`pool-ideas.ts:198` (booking magnet → most requested amenities)、`products.ts` hot-tub 记录 (ai_specs 单值 / ai_comparison 删 "heats faster" / ai_faq 三尺寸问答改 "Which size is sold online")。
+
+**37 语言 home/about YAML 同步** (72 文件, `sync-yaml-claims.mjs` 行级手术 — yaml 库重序列化会整体重排): features `tabler:box` + FAQ included 限 "Every swim-pool set"; FAQ sizes 描述清除全部 "48 standard SKUs" 过时主张 (2026-08 翻译漂移残留 — 家用 FAQ 与批发 48 SKU 目录无关); `compare_collections` 行 1 href 蓝色 PDP → `/products/` 总览; 36 语言以 sameAsEn 落盘 (项目惯例)。验证: ru diff 精确 4+1 行, 无 BOM, LF 保持。
+
+**`/find-your-pool/` 双入口重构** (`src/pages/find-your-pool.astro` 整页重写):
+
+- 入口 A "Shop a Retail Set": 3 静态卡 ($299/$399/$499, sku/included/size) + 4 诚实边界卡 (无按摩喷头 / 加热外置 / 高架需签核 / 配送下单前确认) — 2/3 零售 SKU 尺寸未签核, 交互过滤不可能诚实, 故静态卡。
+- 入口 B "Plan a Business or Project Pool": 原问题/尺寸输入/通知/no-match 逻辑与 `data-finder` 埋点全保留; CTA 改 "Request a quote" (`/contact/?product=` 编码预填) + Guide; tracking 扩展 `result_click` contact-quote target。
+- purpose-personal 横幅指回零售区 (原 purpose-business → for-businesses 横幅移除 — 该区即 B 端规划器)。
+
+**验收断言** (prod-smoke 57 → 58 项): hot-tub PDP 三 marker (`RS2018` / `Ø 2 × 0.8 m` / `fixed-size retail set`) + 三 notMarker (`Diameter 1.8 m` / `8 cm / 10 cm / 15 cm` / `fitg-size`); find-your-pool 四 marker (`data-finder` / `Shop a Retail Set` / `FZ-SPA-RND` / `Request a quote`); returns 新措辞 marker。dist 本地验证: 37 语言首页 48-SKU 残留清零; `pool-catalog.ts` 恰 48 条 — wholesale/oem-odm/private-label 页 "48 SKUs" 主张属实 (SSOT 对账)。
+
+**仍阻塞** (不得编数): 蓝/灰零售 SKU 12 字段签核表、灰款 +$100 原因、浸泡池 $499 实际装箱清单、RS2018 实物照片 (现 hero 为 RS1808 工厂照)、配送数据 (国家/发货地/时效/跨境税费)。

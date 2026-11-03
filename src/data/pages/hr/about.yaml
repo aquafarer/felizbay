@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Kompletni paketi
-      description: Svaki bazen se isporučuje s električnom pumpom za zrak, kompletom za popravak i torbom za pohranu.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Prilagođene veličine
       description: OEM veličine, boje i poklopci za robne marke, distributere i ugostiteljske projekte.

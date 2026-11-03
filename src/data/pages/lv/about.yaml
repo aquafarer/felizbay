@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Pilnīgas paketes
-      description: Katrs baseins tiek piegādāts ar elektrisko gaisa sūkni, remonta komplektu un uzglabāšanas maisiņu.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Pielāgoti izmēri
       description: OEM izmēri, krāsas un vāki zīmoliem, izplatītājiem un viesmīlības projektiem.

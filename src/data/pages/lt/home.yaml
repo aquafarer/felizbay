@@ -36,7 +36,7 @@ features:
       description: 'Dvisluoksnis PVC drop stitch audinys, sukurtas taip, kad būtų atsparus pradūrimams ir UV poveikiui per visą šeimos naudojimo sezoną.'
       icon: tabler:shield
     - title: Pilnas paketas
-      description: Kiekviename baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvaliems modeliams yra sumontuoti užvalkalai.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
       icon: tabler:box
     - title: Saugumo požiūriu sąmoningas dizainas
       description: 'Gyvenamojo baseino projektas, atitinkantis EN 16582-1 ir ASTM F2666 – konkrečiam modeliui būdinga saugos informacija pateikiama gaminio dokumentacijoje. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kas įskaičiuota į baseiną?
-      description: Kiekviename Felizbay baseine yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvalūs modeliai turi papildomą dangtelį.
+      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
       icon: tabler:box
       category: all
     - title: Kokie dydžiai galimi?
-      description: 48 standartiniai SKU keturiose kolekcijose – apvalūs baseinai iki 10 m skersmens, stačiakampiai baseinai iki 6 × 5 m ir SPA kubilai su įmontuotomis sėdynėmis. Galimi individualūs dydžiai verslo partneriams.
+      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
       icon: tabler:ruler-2
       category: all
     - title: Ant kokių paviršių gali stovėti baseinas?
@@ -158,7 +158,7 @@ compare_collections:
     - collection: 'Apvalūs baseinai'
       sizes: 'Ø 2.0 – 10.0 m'
       best_for: 'Šeimos plaukimas ir žaidimas – plačiausias dydžių asortimentas'
-      href: /products/round-blue-drop-stitch-pool/
+      href: /products/
     - collection: 'Stačiakampiai baseinai'
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Tiesios pusės plaukimo erdvė didesniems susibūrimams'

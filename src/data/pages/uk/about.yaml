@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Повні пакети
-      description: Кожен басейн поставляється з електричним повітряним насосом, ремонтним набором і сумкою для зберігання.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Нестандартні розміри
       description: OEM-розміри, кольори та кришки для брендів, дистриб’юторів і гостинних проектів.

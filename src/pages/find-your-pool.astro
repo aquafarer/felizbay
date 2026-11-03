@@ -14,6 +14,16 @@ interface FitOption {
   w?: number;
 }
 
+interface RetailSet {
+  title: string;
+  price: string;
+  sku: string;
+  href: string;
+  summary: string;
+  included: string;
+  size: string;
+}
+
 interface PoolSetup {
   title: string;
   description: string;
@@ -25,6 +35,70 @@ interface PoolSetup {
   opts: FitOption[];
 }
 
+/**
+ * Retail entry (2026-11 purchasability review): the three fixed-size sets
+ * sold online as single pieces. Static cards — honest interactive filtering
+ * is impossible while two of the three sets have unconfirmed dimensions, so
+ * the exclusions below state the "no fit" boundaries instead.
+ */
+const retailSets: RetailSet[] = [
+  {
+    title: 'Round Blue Drop Stitch Pool',
+    price: '$299',
+    sku: 'FZ-POOL-RND-BLUE',
+    href: '/products/round-blue-drop-stitch-pool/',
+    summary: 'The classic family swim pool — rigid high-pressure drop stitch walls in a bold blue finish.',
+    included: '1000W electric air pump, repair kit, storage bag',
+    size: 'One fixed factory size — ask us for the exact dimensions before you order.',
+  },
+  {
+    title: 'Round Grey Drop Stitch Pool',
+    price: '$399',
+    sku: 'FZ-POOL-RND-GREY',
+    href: '/products/round-grey-drop-stitch-pool/',
+    summary: 'Premium grey finish for modern backyards — optional fitted cover sold separately.',
+    included: '1000W electric air pump, repair kit, storage bag',
+    size: 'One fixed factory size — ask us for the exact dimensions before you order.',
+  },
+  {
+    title: 'Round Soaking Tub with Seats',
+    price: '$499',
+    sku: 'FZ-SPA-RND',
+    href: '/products/hot-tub-round/',
+    summary: 'Built-in seats and a 5 mm insulated bottom — pairs with an external heater (sold separately).',
+    included: 'Tub shell with built-in seats, 5 mm insulated bottom',
+    size: 'Ø 2 × 0.8 m (factory item RS2018, 10 cm wall).',
+  },
+];
+
+const retailCaveats = [
+  {
+    icon: 'tabler:ripple-off',
+    title: 'No massage jets',
+    text: 'None of our sets include massage jets. Our soaking tub is for still-water soaking — if jets are essential, we are not the right fit.',
+  },
+  {
+    icon: 'tabler:flame',
+    title: 'Heating is external',
+    text: 'No set includes a heater. The soaking tub connects to an external heater, sold separately and installed by a qualified professional.',
+  },
+  {
+    icon: 'tabler:building-bridge',
+    title: 'Raised installs need sign-off',
+    text: 'A filled pool weighs hundreds of kilograms. Only install on a balcony or raised deck after professional structural sign-off.',
+  },
+  {
+    icon: 'tabler:truck-delivery',
+    title: 'Delivery confirmed per order',
+    text: 'Shipping cost and availability for your address are confirmed before you pay — no surprise charges at checkout.',
+  },
+];
+
+/**
+ * Business / project planner: factory series sizes straight from the
+ * Felizbay catalog, quoted FOB Qingdao. These are NOT single-piece retail
+ * prices — every setup routes to a wholesale quote.
+ */
 const setups: PoolSetup[] = [
   {
     title: 'Family Splash Pool',
@@ -93,7 +167,7 @@ const setups: PoolSetup[] = [
   {
     title: 'Guest Amenity Pool',
     description:
-      'A booking magnet for vacation rentals — inflates in minutes with the included pump, drains at season end, no construction.',
+      'A low-commitment amenity for vacation rentals — inflates in minutes with a 1000W electric pump, drains at season end, no construction.',
     sizes: 'Ø 4 – 5 m round typical',
     products: 'Round & Rectangular Pools',
     shopHref: '/products/round-blue-drop-stitch-pool/',
@@ -125,7 +199,8 @@ const setups: PoolSetup[] = [
   },
   {
     title: "Couple's Courtyard Soak",
-    description: 'A design-led two-person retreat for patios and courtyards — low water volume, simple weekly care.',
+    description:
+      'A design-led two-person retreat for patios and courtyards — low water volume and a compact footprint.',
     sizes: '2.1 × 1.6 m or Ø 1.8 – 2 m',
     products: 'SPA Tubs (SS / RS Series)',
     shopHref: '/products/hot-tub-square-rect/',
@@ -240,7 +315,7 @@ const questions: Array<{ label: string; filter: string; filters: Array<{ id: str
 const metadata = merge(
   {
     title: `Find Your Pool | ${SITE.name}`,
-    description: `Answer a few quick questions — installation, use, space, and who's swimming — and find the right Felizbay inflatable pool size and model for your backyard.`,
+    description: `Compare the three fixed-size Felizbay retail sets sold online, or plan a business and wholesale project against the full factory catalog — sizes, fits, and honest no-match guidance.`,
     openGraph: { type: 'website' },
   },
   {}
@@ -253,185 +328,275 @@ const metadata = merge(
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Pool Finder</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Find Your Pool</h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        A few quick questions. One clear recommendation with the reason it fits — and an honest “no match” when nothing
-        does. Sizes come straight from the Felizbay factory catalog.
+        Two ways to find your pool: shop the three fixed-size retail sets sold online below, or plan a business project
+        against the full factory catalog. Sizes come straight from the Felizbay factory catalog — and we say “no match”
+        honestly when nothing fits.
       </p>
     </header>
 
-    <!-- Questions -->
-    <div class="mb-8 space-y-5" data-finder>
-      {questions.map((q) => (
-        <div class="text-center" data-question={q.label} data-filter={q.filter}>
-          <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">{q.label}</p>
-          <div class="flex flex-wrap items-center justify-center gap-2">
-            {q.filters.map((f) => (
-              <button
-                type="button"
-                data-answer={f.id}
-                class="finder-chip inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700"
+    <!-- Entry A: retail sets -->
+    <div id="retail-sets" class="mb-16 md:mb-20 scroll-mt-24">
+      <div class="mb-6 max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Retail Sets</p>
+        <h2 class="text-2xl md:text-3xl font-bold font-heading dark:text-slate-100">Shop a Retail Set</h2>
+        <p class="mt-2 text-sm md:text-base text-gray-500 dark:text-slate-400">
+          Three fixed-size sets sold online as single pieces, shipped directly to your door. Each set is one factory
+          size — the exact dimensions and package contents are listed on each product page.
+        </p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {retailSets.map((s) => (
+          <article class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6">
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-lg font-semibold font-heading dark:text-slate-100">{s.title}</h3>
+              <span class="text-2xl font-bold text-gray-900 dark:text-slate-100 shrink-0">{s.price}</span>
+            </div>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.summary}</p>
+            <dl class="mt-4 space-y-2 text-sm">
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  In the box
+                </dt>
+                <dd class="text-gray-700 dark:text-slate-300">{s.included}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  Size
+                </dt>
+                <dd class="text-gray-700 dark:text-slate-300">{s.size}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  SKU
+                </dt>
+                <dd class="font-mono text-xs text-gray-500 dark:text-slate-400">{s.sku}</dd>
+              </div>
+            </dl>
+            <div class="mt-5 flex items-center gap-3">
+              <a
+                href={s.href}
+                class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
               >
-                {f.text}
-              </button>
-            ))}
+                View the set
+                <Icon name="tabler:arrow-right" class="w-4 h-4" />
+              </a>
+              <span class="text-xs font-medium text-green-600 whitespace-nowrap">Available to order</span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Honest exclusion boundaries for the retail sets -->
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {retailCaveats.map((c) => (
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-5">
+            <Icon name={c.icon} class="w-6 h-6 text-primary dark:text-blue-400 mb-2" />
+            <h3 class="text-sm font-semibold font-heading dark:text-slate-100">{c.title}</h3>
+            <p class="mt-1.5 text-xs text-gray-500 dark:text-slate-400 leading-relaxed">{c.text}</p>
           </div>
-        </div>
-      ))}
-
-      <!-- Exact measurements (takes priority over the size buckets) -->
-      <div class="text-center" data-question="Exact flat area available" data-filter="dim">
-        <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
-          Exact flat area available{' '}
-          <span class="font-normal text-gray-400 dark:text-slate-500">
-            (optional — takes priority over the buckets above)
-          </span>
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <label for="finder-len" class="sr-only">
-            Available length in meters
-          </label>
-          <input
-            id="finder-len"
-            type="number"
-            min="0"
-            max="30"
-            step="0.1"
-            inputmode="decimal"
-            placeholder="Length m"
-            data-dim-l
-            class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-          />
-          <span class="text-sm text-gray-400 dark:text-slate-500">×</span>
-          <label for="finder-wid" class="sr-only">
-            Available width in meters
-          </label>
-          <input
-            id="finder-wid"
-            type="number"
-            min="0"
-            max="30"
-            step="0.1"
-            inputmode="decimal"
-            placeholder="Width m"
-            data-dim-w
-            class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-          />
-        </div>
-        <p class="mt-2 text-xs text-gray-400 dark:text-slate-500">
-          Measure the flat area the pool itself can occupy — keep at least 50 cm (ideally 1 m) of walkway outside it.
-        </p>
-      </div>
-
-      <!-- Delivery country -->
-      <div class="text-center" data-question="Delivery country" data-filter="info">
-        <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
-          Delivery country <span class="font-normal text-gray-400 dark:text-slate-500">(optional)</span>
-        </p>
-        <label for="finder-country" class="sr-only">
-          Delivery country
-        </label>
-        <input
-          id="finder-country"
-          type="text"
-          maxlength="60"
-          placeholder="e.g. Germany"
-          data-country
-          class="w-56 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-        />
-      </div>
-
-      <div class="text-center">
-        <button
-          type="button"
-          data-finder-reset
-          class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-500 dark:text-slate-400 hover:text-gray-800 dark:hover:text-slate-200 transition-colors"
-        >
-          <Icon name="tabler:refresh" class="w-4 h-4" />
-          Start over
-        </button>
+        ))}
       </div>
     </div>
 
-    <!-- Contextual notices (installation limits, heating/massage, business, delivery) -->
-    <div class="mb-8 space-y-3 empty:hidden" data-finder-notices aria-live="polite"></div>
-
-    <!-- No-match panel -->
-    <div
-      class="hidden mb-8 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 md:p-8 text-center"
-      data-finder-nomatch
-    >
-      <h2 class="text-lg font-semibold font-heading dark:text-slate-100" data-nomatch-title>
-        No standard model matches your answers
-      </h2>
-      <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto" data-nomatch-text>
-        Try relaxing a filter — or contact us and we'll point you to the right model.
-      </p>
-      <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
-        <a
-          href="/contact/"
-          class="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-        >
-          Ask us for a recommendation
-        </a>
-        <a
-          href="/products/"
-          class="inline-flex items-center justify-center px-5 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
-        >
-          Browse all products
-        </a>
+    <!-- Entry B: business & project planner -->
+    <div id="project-planner" class="mb-10 scroll-mt-24">
+      <div class="mb-6 max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
+          Business &amp; Project Planner
+        </p>
+        <h2 class="text-2xl md:text-3xl font-bold font-heading dark:text-slate-100">Plan a Business or Project Pool</h2>
+        <p class="mt-2 text-sm md:text-base text-gray-500 dark:text-slate-400">
+          Factory series sizes from the Felizbay catalog, quoted FOB Qingdao (price basis 20 pcs per item) — for
+          vacation rentals, glamping sites, hotels, resellers, and events. These are wholesale sizes, not single-piece
+          retail prices: answer a few questions to narrow the setups, then request a quote with your project details.
+        </p>
       </div>
-    </div>
 
-    <!-- Result cards -->
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-setup-grid>
-      {setups.map((s) => (
-        <article
-          class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
-          data-tags={s.tags.join(' ')}
-          data-opts={JSON.stringify(s.opts)}
-        >
-          <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
-          <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
-          <p
-            class="mt-3 hidden rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/50 px-3 py-2 text-xs leading-relaxed text-sky-900 dark:text-sky-200"
-            data-why
+      <!-- Questions -->
+      <div class="mb-8 space-y-5" data-finder>
+        {questions.map((q) => (
+          <div class="text-center" data-question={q.label} data-filter={q.filter}>
+            <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">{q.label}</p>
+            <div class="flex flex-wrap items-center justify-center gap-2">
+              {q.filters.map((f) => (
+                <button
+                  type="button"
+                  data-answer={f.id}
+                  class="finder-chip inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700"
+                >
+                  {f.text}
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        <!-- Exact measurements (takes priority over the size buckets) -->
+        <div class="text-center" data-question="Exact flat area available" data-filter="dim">
+          <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+            Exact flat area available
+            <span class="font-normal text-gray-400 dark:text-slate-500">
+              (optional — takes priority over the buckets above)
+            </span>
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            <label for="finder-len" class="sr-only">
+              Available length in meters
+            </label>
+            <input
+              id="finder-len"
+              type="number"
+              min="0"
+              max="30"
+              step="0.1"
+              inputmode="decimal"
+              placeholder="Length m"
+              data-dim-l
+              class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            />
+            <span class="text-sm text-gray-400 dark:text-slate-500">×</span>
+            <label for="finder-wid" class="sr-only">
+              Available width in meters
+            </label>
+            <input
+              id="finder-wid"
+              type="number"
+              min="0"
+              max="30"
+              step="0.1"
+              inputmode="decimal"
+              placeholder="Width m"
+              data-dim-w
+              class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            />
+          </div>
+          <p class="mt-2 text-xs text-gray-400 dark:text-slate-500">
+            Measure the flat area the pool itself can occupy — keep at least 50 cm (ideally 1 m) of walkway outside it.
+          </p>
+        </div>
+
+        <!-- Delivery country -->
+        <div class="text-center" data-question="Delivery country" data-filter="info">
+          <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+            Delivery country <span class="font-normal text-gray-400 dark:text-slate-500">(optional)</span>
+          </p>
+          <label for="finder-country" class="sr-only">
+            Delivery country
+          </label>
+          <input
+            id="finder-country"
+            type="text"
+            maxlength="60"
+            placeholder="e.g. Germany"
+            data-country
+            class="w-56 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
           />
-          <dl class="mt-4 space-y-2 text-sm">
-            <div>
-              <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                Typical size
-              </dt>
-              <dd class="font-medium text-primary dark:text-blue-400">{s.sizes}</dd>
+        </div>
+
+        <div class="text-center">
+          <button
+            type="button"
+            data-finder-reset
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-500 dark:text-slate-400 hover:text-gray-800 dark:hover:text-slate-200 transition-colors"
+          >
+            <Icon name="tabler:refresh" class="w-4 h-4" />
+            Start over
+          </button>
+        </div>
+      </div>
+
+      <!-- Contextual notices (installation limits, heating/massage, business, delivery) -->
+      <div class="mb-8 space-y-3 empty:hidden" data-finder-notices aria-live="polite"></div>
+
+      <!-- No-match panel -->
+      <div
+        class="hidden mb-8 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 md:p-8 text-center"
+        data-finder-nomatch
+      >
+        <h2 class="text-lg font-semibold font-heading dark:text-slate-100" data-nomatch-title>
+          No standard model matches your answers
+        </h2>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto" data-nomatch-text>
+          Try relaxing a filter — or contact us and we'll point you to the right model.
+        </p>
+        <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="/contact/"
+            class="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            Ask us for a recommendation
+          </a>
+          <a
+            href="/products/specs/"
+            class="inline-flex items-center justify-center px-5 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+          >
+            Wholesale price list
+          </a>
+        </div>
+      </div>
+
+      <!-- Result cards -->
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-setup-grid>
+        {setups.map((s) => (
+          <article
+            class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
+            data-tags={s.tags.join(' ')}
+            data-opts={JSON.stringify(s.opts)}
+          >
+            <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
+            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
+            <p
+              class="mt-3 hidden rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/50 px-3 py-2 text-xs leading-relaxed text-sky-900 dark:text-sky-200"
+              data-why
+            />
+            <dl class="mt-4 space-y-2 text-sm">
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  Typical size
+                </dt>
+                <dd class="font-medium text-primary dark:text-blue-400">{s.sizes}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  Product family
+                </dt>
+                <dd class="text-gray-700 dark:text-slate-300">{s.products}</dd>
+              </div>
+            </dl>
+            <div class="mt-5 flex items-center gap-3">
+              <a
+                href={`/contact/?product=${encodeURIComponent(`${s.products} — ${s.title}`)}`}
+                class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                Request a quote
+              </a>
+              {s.ideaHref && (
+                <a
+                  href={s.ideaHref}
+                  class="inline-flex items-center justify-center px-4 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+                >
+                  Guide
+                </a>
+              )}
             </div>
-            <div>
-              <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                Product family
-              </dt>
-              <dd class="text-gray-700 dark:text-slate-300">{s.products}</dd>
-            </div>
-          </dl>
-          <div class="mt-5 flex items-center gap-3">
             <a
               href={s.shopHref}
-              class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              class="mt-2.5 inline-block text-xs font-medium text-gray-400 dark:text-slate-500 hover:text-primary dark:hover:text-blue-400 transition-colors"
             >
-              Shop this setup
+              View the product line →
             </a>
-            {s.ideaHref && (
-              <a
-                href={s.ideaHref}
-                class="inline-flex items-center justify-center px-4 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
-              >
-                Guide
-              </a>
-            )}
-          </div>
-        </article>
-      ))}
-    </div>
+          </article>
+        ))}
+      </div>
 
-    <p class="mt-6 text-center text-sm text-gray-400 dark:text-slate-500" data-finder-hint>
-      Tip: exact measurements give the tightest match — or browse everything in the shop.
-    </p>
+      <p class="mt-6 text-center text-sm text-gray-400 dark:text-slate-500" data-finder-hint>
+        Tip: exact measurements give the tightest match — or browse the full factory size and price matrix on the
+        <a href="/products/specs/" class="text-primary dark:text-blue-400 underline underline-offset-2 font-medium">
+          wholesale price list
+        </a>
+        .
+      </p>
+    </div>
 
     <!-- How to measure -->
     <div class="mt-14 grid gap-6 lg:grid-cols-3">
@@ -572,10 +737,13 @@ const metadata = merge(
         const href = anchor.getAttribute('href') || '';
         const productMatch = href.match(/^\/products\/([a-z0-9-]+)/);
         const ideaMatch = href.match(/^\/pool-ideas\/([a-z0-9-]+)/);
+        const quoteMatch = href.match(/^\/contact\//);
         if (productMatch) {
           sendTrack('result_click', productMatch[1], { ...answerSnapshot(), target: 'shop' });
         } else if (ideaMatch) {
           sendTrack('result_click', ideaMatch[1], { ...answerSnapshot(), target: 'guide' });
+        } else if (quoteMatch) {
+          sendTrack('result_click', 'contact-quote', { ...answerSnapshot(), target: 'quote' });
         }
       });
 
@@ -665,14 +833,14 @@ const metadata = merge(
             )
           );
         }
-        if (info['Personal use or business project?'] === 'purpose-business') {
+        if (info['Personal use or business project?'] === 'purpose-personal') {
           notices.appendChild(
             makeBanner(
               'sky',
-              'Buying for a business? Wholesale terms, MOQ and project/OEM options are covered on our business page.',
+              'Buying for yourself or your family? The three fixed-size retail sets sold online are listed at the top of this page — single-piece purchases with direct shipping.',
               {
-                href: '/for-businesses/',
-                label: 'Business & wholesale →',
+                href: '#retail-sets',
+                label: 'See the retail sets ↑',
               }
             )
           );

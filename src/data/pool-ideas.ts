@@ -195,7 +195,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     imageAlt:
       'A family of three enjoying a round Felizbay inflatable pool on the rooftop terrace of a city vacation rental.',
     intro: [
-      'A pool is one of the strongest booking magnets a vacation rental can add — and one of the hardest. Felizbay drop-stitch pools were made for this gap: a genuine swimming pool that inflates in minutes with the included pump, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
+      'A pool is one of the most requested amenities a vacation rental can add — and one of the hardest to get right. Felizbay drop-stitch pools were made for this gap: a genuine swimming pool that inflates in minutes with the included pump, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
       'Rigid 4–5 PSI walls and reinforced seams stand up to guest traffic, and the pressure-relief valve keeps over-enthusiastic inflation from doing damage.',
     ],
     conditions: [

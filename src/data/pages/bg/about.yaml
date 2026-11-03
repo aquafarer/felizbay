@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Пълни пакети
-      description: Всеки басейн се доставя с електрическа въздушна помпа, ремонтен комплект и чанта за съхранение.
+      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
       icon: tabler:package
     - title: Персонализирани размери
       description: OEM размери, цветове и корици за марки, дистрибутори и хотелиерски проекти.

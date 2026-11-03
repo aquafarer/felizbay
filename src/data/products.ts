@@ -344,7 +344,7 @@ export const products: ProductRecord[] = [
     ],
     desc: 'Compact round drop-stitch soaking pool with built-in seats and 5 mm insulated bottom — connects to an external heater (heater not included).',
     definition:
-      'A compact round insulated drop-stitch soaking pool built from double-layer PVC drop stitch fabric (8/10/15 cm wall profiles) with integrated inflatable seats and a 5 mm insulated thermal bottom, available in 1.8 m, 2.0 m, and 2.3 m diameters.',
+      'A compact round insulated drop-stitch soaking pool built from double-layer PVC drop stitch fabric with integrated inflatable seats and a 5 mm insulated thermal bottom. The online retail set is the fixed Ø 2 × 0.8 m model (factory item RS2018, 10 cm wall); 1.8 m and 2.3 m models are sold FOB Qingdao at wholesale volumes.',
     problem:
       'City balconies and small courtyards cannot fit a standard hot tub, and rigid tubs cannot be shipped or moved affordably. Users in small spaces still want genuine heat-retaining hydrotherapy.',
     howItWorks:
@@ -357,8 +357,9 @@ export const products: ProductRecord[] = [
     ai_use_cases: ['Courtyard and compact-space wellness', 'Cold plunge and athletic recovery', 'Compact year-round home spa', 'Glamping amenity'],
     ai_specs: {
       shape: 'Round',
-      wall_thickness: '8 / 10 / 15 cm drop stitch',
-      size_range: 'Ø 1.8 m / Ø 2.0 m / Ø 2.3 m',
+      model: 'Fixed retail set — factory item RS2018',
+      wall_thickness: '10 cm drop stitch',
+      size_range: 'Ø 2 × 0.8 m (fixed retail set — item RS2018)',
       seats: 'Built-in integrated inflatable seats',
       bottom: '5 mm insulated thermal bottom base',
       pressure: '4–5 PSI operating (6 PSI factory QC test)',
@@ -366,11 +367,11 @@ export const products: ProductRecord[] = [
       compatibility: 'Heating units, sand filter pumps, disinfection, air bubble massage',
     },
     ai_comparison:
-      'Compared with square hot tubs it heats faster and fits tighter spaces; compared with rigid one-piece tubs it ships flat at a fraction of the freight cost and can be relocated seasonally.',
+      'Compared with square soaking tubs its round footprint fits tighter spaces; compared with rigid one-piece tubs it ships flat at a fraction of the freight cost and can be relocated seasonally.',
     ai_faq: [
       {
-        q: 'What is the difference between the three sizes?',
-        a: 'The 1.8 m model has an 8 cm wall, the 2.0 m model a 10 cm wall, and the 2.3 m model a 15 cm wall — larger diameters seat more people with a more rigid shell.',
+        q: 'Which size is sold online?',
+        a: 'The online retail set is the fixed Ø 2 × 0.8 m model (factory item RS2018, 10 cm wall). The 1.8 m and 2.3 m models are sold FOB Qingdao at wholesale volumes — see the wholesale price list.',
       },
       {
         q: 'Can it be used as a cold plunge tub?',
@@ -378,7 +379,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'Does it fit on a balcony?',
-        a: 'The 1.8 m model can fit large balconies and indoor spa corners, but a filled tub is heavy — install only on a structure professionally confirmed to carry the full water load.',
+        a: 'The Ø 2 × 0.8 m retail set can fit large balconies and indoor spa corners, but a filled tub is heavy — install only on a structure professionally confirmed to carry the full water load.',
       },
       {
         q: 'Does it include a heater?',
@@ -386,7 +387,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What comes standard on every model?',
-        a: 'Built-in integrated inflatable seats and the 5 mm insulated thermal bottom base come standard on all three models.',
+        a: 'Built-in integrated inflatable seats and the 5 mm insulated thermal bottom base come standard on the retail set and on all wholesale models.',
       },
       {
         q: 'How long does setup take?',
@@ -398,7 +399,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What does it cost to run?',
-        a: 'Beyond the $499 purchase price, the main extra costs are the external heater (sold separately) and its electricity, plus qualified professional installation of the heating and electrical equipment. The 5 mm insulated thermal bottom retains heat to keep heating energy costs down; spa water chemicals are an ongoing consumable, and sand filter pumps or inline disinfection systems are sold separately.',
+        a: 'Beyond the $499 purchase price, the main extra costs are the external heater (sold separately) and its electricity, plus qualified professional installation of the heating and electrical equipment. The 5 mm insulated thermal bottom retains heat between soaks; spa water chemicals are an ongoing consumable, and sand filter pumps or inline disinfection systems are sold separately.',
       },
     ],
   },
