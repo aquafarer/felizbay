@@ -10,6 +10,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import Icon from '~/components/ui/Icon.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { buildGraph } from '~/utils/schema-graph';
 import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
 import { POOL_IDEAS, findPoolIdea, type PoolIdea } from '~/data/pool-ideas';
@@ -37,6 +39,37 @@ const stories = page.content_stories ?? {};
 
 // Homepage is consumer-facing: only retail (single-piece purchase) products appear here.
 const poolProducts = (await getProducts()).filter((p) => p.sku).slice(0, 3);
+
+// P1-C entity hub: home emits the consolidated @graph (Organization+ManufacturingBusiness
+// dual @id hub) and disables Layout's global entity blocks, so entity identity is declared
+// exactly once per page. Other pages keep the Layout global blocks.
+const siteUrl = String(SITE.site).replace(/\/+$/, '');
+const faqItems = (faqs.items ?? []) as Array<{ title?: string; description?: string }>;
+const homeExtras: object[] = [];
+if (faqItems.length > 0) {
+  homeExtras.push({
+    '@type': 'FAQPage',
+    '@id': `${siteUrl}/#faq`,
+    mainEntity: faqItems.map((f) => ({
+      '@type': 'Question',
+      name: f.title,
+      acceptedAnswer: { '@type': 'Answer', text: f.description },
+    })),
+  });
+}
+if (poolProducts.length > 0) {
+  homeExtras.push({
+    '@type': 'ItemList',
+    '@id': `${siteUrl}/#itemlist`,
+    numberOfItems: poolProducts.length,
+    itemListElement: poolProducts.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${siteUrl}/products/${p.slug}/`,
+      name: p.title,
+    })),
+  });
+}
 
 // Consumer scenario showcase — photos and copy from the pool-ideas scenario pages.
 const scenarioSlugs = [
@@ -68,7 +101,8 @@ const metadata = {
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} disableGlobalLd>
+  <JsonLd graph={buildGraph(homeExtras)} />
   {hero.image || hero.title ? (
     <Hero
       tagline={hero.tagline}

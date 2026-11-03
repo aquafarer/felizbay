@@ -228,6 +228,21 @@ const CHECKS = [
     desc: 'entity JSON-LD manifest',
   },
   {
+    path: '/',
+    marker: '"@graph"',
+    desc: 'home P1-C entity hub: consolidated @graph emitted (Layout global blocks disabled)',
+  },
+  {
+    path: '/',
+    marker: 'ManufacturingBusiness',
+    desc: 'home P1-C entity hub: Organization+ManufacturingBusiness dual-type org node',
+  },
+  {
+    path: '/de/',
+    marker: 'ManufacturingBusiness',
+    desc: 'localized home P1-C entity hub (de sample)',
+  },
+  {
     path: '/api/search',
     method: 'POST',
     body: { query: 'wholesale drop stitch pool FOB price' },

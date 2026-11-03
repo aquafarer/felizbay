@@ -135,34 +135,35 @@ Cloudflare Redirect Rule 配置后实测：
 
 ## 5. 季度复测记录
 
-### 5.1 2026-11-03 第一轮复测（线上全量，16 项：13 PASS / 1 N/A / 1 已知阻塞 / 1 发现）
+### 5.1 2026-11-03 第一轮复测（线上全量，16 项：14 PASS / 1 已知阻塞 / 1 发现已修复）
 
 复测脚本对照 §1 基线 + §2 T1–T5 + §2.2 www 301，直接打生产 `felizbay.com`（无 D1 测试写入）。
 
-| 检查项                             | 结果        | 说明                                                                                                |
-| ---------------------------------- | ----------- | --------------------------------------------------------------------------------------------------- |
-| http → https 301                   | ✅ PASS     | 301 → `https://felizbay.com/`                                                                       |
-| sitemap-index + 7 子 sitemap       | ✅ PASS     | 332 URL（entity 263 / ai 20 / knowledge 41 / products 8 / community+media+learning 0）              |
-| canonical 自引用（12 页抽样）      | ✅ PASS     | 含新增 `/pool-volume-calculator/`、`/guides/inflatable-pool-operating-costs/`、`/products/compare/` |
-| robots.txt + AI 爬虫放行           | ✅ PASS     | 200，Sitemap 行 + GPTBot/ClaudeBot/PerplexityBot                                                    |
-| 每页 H1 唯一（6 页抽样）           | ✅ PASS     | 均 1 个 H1                                                                                          |
-| hreflang + x-default（首页、/de/） | ✅ PASS     | 各 17 alternates（16 语言 + en + x-default）                                                        |
-| llms.txt / llms-full / ai-sitemap  | ✅ PASS     | llms.txt 含 3 新页；llms-full 31.6KB；ai-sitemap 20 URL                                             |
-| entity.json                        | ⚪ N/A      | 404 —— 该路由**从未存在于 git 历史**，2026-10-21 基线 §1.1 该行记录不准确                           |
-| merchant-feed.xml（GMC）           | 🔶 已知阻塞 | 200 / 0 items —— Stripe checkout 未开通，生成器门禁（price×100==unitAmount）正确输出空 feed         |
-| JSON-LD 实体枢纽                   | ❌ 见 5.2   | **P1-C @graph 从未接线**（详见 5.2）                                                                |
-| T1–T5 表单分层                     | ✅ 全 PASS  | 400 / 400 / 200 假成功 / 400 / 401，与基线一致                                                      |
-| www → apex 301（5 例）             | ✅ PASS     | 全部 301 单跳，路径保留                                                                             |
+| 检查项                             | 结果         | 说明                                                                                                                           |
+| ---------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| http → https 301                   | ✅ PASS      | 301 → `https://felizbay.com/`                                                                                                  |
+| sitemap-index + 7 子 sitemap       | ✅ PASS      | 332 URL（entity 263 / ai 20 / knowledge 41 / products 8 / community+media+learning 0）                                         |
+| canonical 自引用（12 页抽样）      | ✅ PASS      | 含新增 `/pool-volume-calculator/`、`/guides/inflatable-pool-operating-costs/`、`/products/compare/`                            |
+| robots.txt + AI 爬虫放行           | ✅ PASS      | 200，Sitemap 行 + GPTBot/ClaudeBot/PerplexityBot                                                                               |
+| 每页 H1 唯一（6 页抽样）           | ✅ PASS      | 均 1 个 H1                                                                                                                     |
+| hreflang + x-default（首页、/de/） | ✅ PASS      | 各 17 alternates（16 语言 + en + x-default）                                                                                   |
+| llms.txt / llms-full / ai-sitemap  | ✅ PASS      | llms.txt 含 3 新页；llms-full 31.6KB；ai-sitemap 20 URL                                                                        |
+| `/.well-known/entity.json`         | ✅ PASS      | 200，@context 实体清单（复测初查误打 `/entity.json` 报 404，正确路径在 `/.well-known/` 下，源文件 `src/data/geo/entity.json`） |
+| merchant-feed.xml（GMC）           | 🔶 已知阻塞  | 200 / 0 items —— Stripe checkout 未开通，生成器门禁（price×100==unitAmount）正确输出空 feed                                    |
+| JSON-LD 实体枢纽                   | ❌→✅ 见 5.2 | **P1-C @graph 未接线**（发现当日完成接线，见 5.2）                                                                             |
+| T1–T5 表单分层                     | ✅ 全 PASS   | 400 / 400 / 200 假成功 / 400 / 401，与基线一致                                                                                 |
+| www → apex 301（5 例）             | ✅ PASS      | 全部 301 单跳，路径保留                                                                                                        |
 
-### 5.2 发现：P1-C @graph 实体枢纽未落地（文档与代码不符）
+### 5.2 发现与修复：P1-C @graph 实体枢纽未接线（2026-11-03 当日修复）
 
-- `src/utils/schema-graph.ts` 的 `buildGraph()`（Organization+ManufacturingBusiness 双 @id 枢纽）**零调用者**——死代码；`git log -S "buildGraph" -- src/pages/` 无任何历史。
-- `src/pages/index.astro` / `src/pages/[lang]/index.astro` **未传 `disableGlobalLd`**、未输出 `buildGraph()`；首页实际输出 Layout 全局 3 块（Organization / Person / WebSite，单一实体各带 @id，无页内重复）。
-- `Layout.astro` 的 `disableGlobalLd` prop 已实现（`Layout.astro:78`），仅缺首页接线。
-- ManufacturingBusiness 全仓仅出现在 schema-graph.ts（死代码）中。
-- **AGENTS.md "JSON-LD Entity Hub (P1-C)" 一节描述的状态与代码不符**（"首页传 disableGlobalLd、仅输出 buildGraph()"从未发生）。2026-10-21 基线 §1.1 "JSON-LD @graph 实体枢纽 ✅" 行同样不准确。
-- 影响评估：当前线上状态并非基线所述的"7 块碎片冲突"老问题——reposition 重构后每页仅 3 块一致的全局块，页内无实体冲突；缺的是 ManufacturingBusiness/Brand 的机器可读声明与跨页 @id 收敛。
-- 待决策：A) 完成 P1-C 接线（首页传 `disableGlobalLd` + 输出 `buildGraph()`）使代码对齐文档；B) 修正 AGENTS.md 描述并删除 schema-graph.ts 死代码。
+**发现**：`src/utils/schema-graph.ts` 的 `buildGraph()`（Organization+ManufacturingBusiness 双 @id 枢纽）零调用者——死代码；`src/pages/index.astro` / `[lang]/index.astro` 未传 `disableGlobalLd`、未输出 `buildGraph()`；AGENTS.md P1-C 段与 2026-10-21 基线 §1.1 "JSON-LD @graph 实体枢纽 ✅" 行均描述了从未发生的状态（当日已同步修正 AGENTS.md）。当时线上为 Layout 全局 3 块（Organization/Person/WebSite），无页内实体冲突，缺 ManufacturingBusiness/Brand 机器可读声明。
+
+**修复（同日）**：
+
+- `JsonLd.astro` 新增 `graph` prop——完整 @graph 载荷绕过 type 分支直接渲染（守卫 `graph || keys > 2`）。
+- `index.astro` / `[lang]/index.astro` 传 `disableGlobalLd`（关闭 Layout 全局 3 块），经 `<JsonLd graph={buildGraph(homeExtras)} />` 输出单一 @graph；`homeExtras` = FAQPage（首页 FAQ 区）+ ItemList（零售产品卡）页面级节点。
+- prod-smoke 新增 3 项断言（54→57）：首页含 `"@graph"`、首页含 `ManufacturingBusiness`、`/de/` 抽样同。
+- AGENTS.md P1-C 段更新为实际接线状态（首页无 BreadcrumbList——`schema-graph.ts` 约定面包屑仅用于非首页）。
 
 ### 5.3 其他复查
 

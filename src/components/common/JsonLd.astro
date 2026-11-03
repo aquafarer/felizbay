@@ -136,6 +136,8 @@ export type LdType = 'Organization' | 'WebSite' | 'BreadcrumbList' | 'Product' |
 export interface Props {
   type?: LdType;
   data?: Record<string, unknown>;
+  /** Full @graph payload (P1-C entity hub). Rendered as-is; bypasses all type branches. */
+  graph?: Record<string, unknown>;
   breadcrumbs?: BreadcrumbItem[];
   faqs?: FaqItem[];
   product?: ProductLd;
@@ -147,7 +149,7 @@ export interface Props {
   person?: PersonLd;
 }
 
-const { type: typeProp, data, breadcrumbs, faqs, product, article, howto, image, video, service } = Astro.props;
+const { type: typeProp, data, graph, breadcrumbs, faqs, product, article, howto, image, video, service } = Astro.props;
 const type = typeProp || (data?.['@type'] as LdType) || 'WebSite';
 const siteUrl = String(SITE.site).replace(/\/+$/, '');
 const name = SITE_SETTINGS?.siteName || SITE?.name || 'Felizbay';
@@ -155,7 +157,11 @@ const authorName = 'Felizbay Team';
 
 let schema: Record<string, unknown> = { '@context': 'https://schema.org' };
 
-if (type === 'Organization') {
+if (graph) {
+  // P1-C consolidated @graph hub — caller (home pages) supplies the full payload
+  // from buildGraph(); entity identity is declared exactly once per page.
+  schema = graph;
+} else if (type === 'Organization') {
   schema = {
     ...schema,
     '@type': 'Organization',
@@ -353,6 +359,6 @@ if (type === 'Organization') {
 }
 ---
 
-{schema && Object.keys(schema).length > 2 && (
+{schema && (graph || Object.keys(schema).length > 2) && (
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 )}

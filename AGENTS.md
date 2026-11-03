@@ -111,13 +111,14 @@ Components use `twMerge` from `tailwind-merge` v3 for conditional class composit
 
 ## JSON-LD Entity Hub (P1-C)
 
-实体身份已收敛为单一 `@graph` 枢纽，避免同名 Organization/Brand/ManufacturingBusiness 多份矛盾声明：
+实体身份已收敛为单一 `@graph` 枢纽，避免同名 Organization/Brand/ManufacturingBusiness 多份矛盾声明（2026-11-03 完成接线；此前 `buildGraph()` 工具已存在但从未接入任何页面）：
 
 - **`src/utils/schema-graph.ts`** — `buildGraph(extra?)` 输出单一 `@graph`（Organization+ManufacturingBusiness 双类型 @id 枢纽 + WebSite + Brand + Person(founder)），全部字段从 `src/config/facts.json` 渲染。
 - **`Layout.astro`** — 全局 Organization/Person/WebSite 三块用 `disableGlobalLd` prop 包裹（默认输出）。
 - **`PageLayout.astro`** — 透传 `disableGlobalLd`。
-- **首页（`src/pages/index.astro` 与 `[lang]/index.astro`）** — 传 `disableGlobalLd`，删除内联 ManufacturingBusiness/Brand/entity-graph 块，仅输出 `buildGraph()` + FAQPage/ItemList/BreadcrumbList 页面级标记。
-- 禁止新页面内联 Organization/Brand/WebSite/Person 实体声明；实体身份一律走 `buildGraph()` 或 Layout 全局块。
+- **首页（`src/pages/index.astro` 与 `[lang]/index.astro`）** — 传 `disableGlobalLd`，经 `JsonLd` 的 `graph` prop 输出 `buildGraph(homeExtras)`（FAQPage/ItemList 页面级节点作 extra 传入；首页无 BreadcrumbList——`schema-graph.ts` 约定面包屑仅用于非首页）。
+- **`JsonLd.astro`** — `graph` prop 渲染完整 @graph 载荷，绕过 type 分支（守卫 `graph || keys > 2`）。
+- 禁止新页面内联 Organization/Brand/WebSite/Person 实体声明；实体身份一律走 `buildGraph()`（仅首页）或 Layout 全局块（其余页面）。prod-smoke 断言首页含 `"@graph"` 与 `ManufacturingBusiness`（EN + `/de/` 抽样）。
 
 ## Content Collections
 
