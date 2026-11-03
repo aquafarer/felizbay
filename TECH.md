@@ -2047,3 +2047,15 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 
 - `generate-sitemaps.mjs` 错误消息双重编码 em-dash 修复 (`a7e11e4`); 全仓 802 跟踪文件乱码终扫仅剩 2 处刻意保留 (TECH.md 乱码文档示例、`fix-garbled.py` 搜索模式)。
 - #9/#10 dependabot PR 待 GitHub 定时任务自动关闭 (main 已含目标版本)。
+
+### 19.6 季度复测与 P1-C @graph 接线 (2026-11-03)
+
+按 `docs/technical-audit-2026-10.md` §4 复测建议执行第一轮季度复测 (记录见该文件 §5): 16 项检查 — 14 PASS / 1 已知阻塞 (merchant-feed 0 items, Stripe checkout 未开通) / 1 发现: **P1-C @graph 实体枢纽从未接线** (`schema-graph.ts` `buildGraph()` 零调用者; AGENTS.md 与 2026-10-21 基线 §1.1 均描述了未落地的状态)。
+
+当日完成接线 (`51fa668`):
+
+- `JsonLd.astro` 新增 `graph` prop — 完整 @graph 载荷绕过 type 分支直接渲染 (守卫 `graph || keys > 2`)。
+- `index.astro` / `[lang]/index.astro` 传 `disableGlobalLd` (关闭 Layout 全局 Organization/Person/WebSite 三块), 经 `<JsonLd graph={buildGraph(homeExtras)} />` 输出单一 @graph: Organization+ManufacturingBusiness 双 @id 枢纽 + WebSite + Brand + Person(founder) + FAQPage/ItemList 页面级节点 (首页无 BreadcrumbList — `schema-graph.ts` 约定面包屑仅用于非首页)。
+- 非首页保持 Layout 全局块 + 页面级标记 (如 about = 3 全局块 + BreadcrumbList)。
+- prod-smoke 54 → 57 项: 首页 `"@graph"` / `ManufacturingBusiness` / `/de/` 抽样三条断言。部署后首次 smoke 可能因 CDN 边缘缓存旧页出现批量假失败, 复跑即绿。
+- entity.json 实际路径为 `/.well-known/entity.json` (源 `src/data/geo/entity.json`), 非 `/entity.json` — 复测脚本曾因此误报 404。

@@ -71,7 +71,7 @@ npm run build          # ~651 pages, validate-dist + all post-build gates
 npm run check          # astro check + ESLint + Prettier
 node scripts/validate-dist.mjs   # (runs inside build; standalone re-run OK)
 # dist-gate (temp tool, session-scoped): broken links / hreflang / canonical / noindex scans on dist/
-npm run smoke          # production spot-checks: 54 checks incl. AI infra (llms manifests + llms.txt structural sync, markdown endpoints, sitemaps), contact honeypot, AIChat quality, Vectorize search, PDP per-variant offers, guide PDP deep links
+npm run smoke          # production spot-checks: 57 checks incl. AI infra (llms manifests + llms.txt structural sync, markdown endpoints, sitemaps), contact honeypot, AIChat quality, Vectorize search, PDP per-variant offers, guide PDP deep links, home @graph entity hub
 ```
 
 Manual pre-release spot-checks (not automatable): mobile navigation visual
