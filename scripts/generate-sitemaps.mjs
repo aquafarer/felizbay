@@ -203,7 +203,7 @@ const AI_TOP_SECTIONS = [
 
 function main() {
   if (!existsSync(DIST)) {
-    console.error('[sitemaps] dist/ not found 鈥?run after astro build');
+    console.error('[sitemaps] dist/ not found — run after astro build');
     process.exit(1);
   }
 
