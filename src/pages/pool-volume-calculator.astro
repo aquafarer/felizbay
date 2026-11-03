@@ -1,0 +1,330 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import type { MetaData } from '~/types';
+
+const metadata = merge(
+  {
+    title: `Pool Volume Calculator | ${SITE.name}`,
+    description: `Calculate the water volume, water weight, and garden-hose fill time for any inflatable pool size — round or rectangular — with exact dimensions and a fill level you control.`,
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata} breadcrumbs={[{ name: 'Pool Volume Calculator' }]}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Pool Tools</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Pool Volume Calculator
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Enter your pool dimensions — get liters of water, water weight in tons, and the time a garden hose needs to fill
+        it. Works for round and rectangular inflatable pools.
+      </p>
+    </header>
+
+    <!-- Calculator -->
+    <div class="max-w-3xl mx-auto bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-6 md:p-10 shadow-sm">
+      <div class="grid gap-5" data-volume-calc>
+        <div>
+          <label for="vc-shape" class="block text-sm font-semibold text-gray-700 dark:text-slate-300 mb-1.5">
+            Pool shape
+          </label>
+          <select
+            id="vc-shape"
+            class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-slate-100"
+          >
+            <option value="round" selected>
+              Round (diameter)
+            </option>
+            <option value="rect">Rectangular (length × width)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div data-vc-dim-round>
+            <label for="vc-diameter" class="block text-sm font-semibold text-gray-700 dark:text-slate-300 mb-1.5">
+              Diameter (m)
+            </label>
+            <input
+              id="vc-diameter"
+              type="number"
+              min="0.5"
+              max="20"
+              step="0.1"
+              value="3"
+              class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-slate-100"
+            />
+          </div>
+          <div data-vc-dim-rect class="hidden">
+            <label for="vc-length" class="block text-sm font-semibold text-gray-700 dark:text-slate-300 mb-1.5">
+              Length × width (m)
+            </label>
+            <div class="flex gap-2">
+              <input
+                id="vc-length"
+                type="number"
+                min="0.5"
+                max="20"
+                step="0.1"
+                value="4"
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-slate-100"
+              />
+              <input
+                id="vc-width"
+                type="number"
+                min="0.5"
+                max="20"
+                step="0.1"
+                value="3"
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-slate-100"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="vc-wall" class="block text-sm font-semibold text-gray-700 dark:text-slate-300 mb-1.5">
+              Wall height (m)
+            </label>
+            <input
+              id="vc-wall"
+              type="number"
+              min="0.2"
+              max="2"
+              step="0.05"
+              value="1"
+              class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-slate-100"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="vc-fill" class="block text-sm font-semibold text-gray-700 dark:text-slate-300 mb-1.5">
+              Fill level (% of wall)
+            </label>
+            <input
+              id="vc-fill"
+              type="number"
+              min="50"
+              max="100"
+              step="1"
+              value="85"
+              class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-slate-100"
+            />
+            <p class="mt-1 text-xs text-gray-400 dark:text-slate-500">Felizbay pools fill to 80–90% of wall height.</p>
+          </div>
+          <div>
+            <label for="vc-flow" class="block text-sm font-semibold text-gray-700 dark:text-slate-300 mb-1.5">
+              Hose flow (L/min)
+            </label>
+            <input
+              id="vc-flow"
+              type="number"
+              min="1"
+              max="100"
+              step="1"
+              value="20"
+              class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-slate-100"
+            />
+            <p class="mt-1 text-xs text-gray-400 dark:text-slate-500">A typical garden tap delivers 15–25 L/min.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-2 border-t border-gray-100 dark:border-slate-800" data-vc-results>
+          <div class="text-center">
+            <p class="text-2xl md:text-3xl font-bold font-heading text-primary dark:text-blue-400" data-vc-liters>
+              —
+            </p>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mt-1">Liters</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl md:text-3xl font-bold font-heading text-primary dark:text-blue-400" data-vc-tons>
+              —
+            </p>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mt-1">
+              Water weight (t)
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl md:text-3xl font-bold font-heading text-primary dark:text-blue-400" data-vc-time>
+              —
+            </p>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mt-1">
+              Fill time
+            </p>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-500 dark:text-slate-400" data-vc-detail>
+          Enter dimensions to see results.
+        </p>
+      </div>
+
+      <noscript>
+        <div class="mt-6 p-4 rounded-lg bg-gray-50 dark:bg-slate-800 text-sm text-gray-600 dark:text-slate-300">
+          <p class="font-semibold mb-2">Formulas (calculate by hand):</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Round pool: volume (m³) = π × (diameter ÷ 2)² × water depth</li>
+            <li>Rectangular pool: volume (m³) = length × width × water depth</li>
+            <li>Liters = m³ × 1000; water weight ≈ 1 t per m³; fill time (min) = liters ÷ hose flow (L/min)</li>
+          </ul>
+        </div>
+      </noscript>
+    </div>
+
+    <!-- How it works -->
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-6">
+        <Icon name="tabler:ruler" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold font-heading dark:text-slate-100 mb-2">Measure inside the walls</h3>
+        <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+          Use the internal pool dimensions — the water only fills the space inside the inflated walls. For drop stitch
+          pools the walls stand vertical, so the internal footprint is close to the listed size.
+        </p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-6">
+        <Icon name="tabler:droplets" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold font-heading dark:text-slate-100 mb-2">Water depth, not wall height</h3>
+        <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+          Felizbay pools are filled to 80–90% of the wall height — overfilling stresses the walls, underfilling reduces
+          stability. The calculator defaults to 85% and lets you change it.
+        </p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 p-6">
+        <Icon name="tabler:scale" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold font-heading dark:text-slate-100 mb-2">Check the ground can carry it</h3>
+        <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+          Water weighs about 1 tonne per cubic meter — a 6 m³ pool puts roughly 6 t on your patio or lawn. Confirm the
+          surface is level and rated for the load before filling.
+        </p>
+      </div>
+    </div>
+
+    <!-- Worked example -->
+    <div class="mt-10 max-w-3xl mx-auto p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/60">
+      <h2 class="text-lg font-bold font-heading dark:text-slate-100 mb-3">Worked example: Ø 3 m × 1 m round pool</h2>
+      <p class="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">
+        Filled to 85% of the 1 m wall, the water depth is 0.85 m. Volume = π × 1.5² × 0.85 ≈ 6.0 m³ — about
+        <strong>6,000 liters</strong>, roughly <strong>6 tonnes</strong> of water. At a 20 L/min garden tap that fill
+        takes around <strong>5 hours</strong>. Full factory sizes and packed weights are on the
+        <a href="/products/specs/" class="text-primary dark:text-blue-400 underline underline-offset-2">
+          wholesale spec sheet
+        </a>
+        .
+      </p>
+    </div>
+
+    <!-- Next steps -->
+    <div class="mt-10 flex flex-wrap justify-center gap-4 text-sm">
+      <a
+        href="/find-your-pool/"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition-colors"
+      >
+        Find your pool size
+        <Icon name="tabler:arrow-right" class="w-4 h-4" />
+      </a>
+      <a
+        href="/guides/inflatable-pool-setup/"
+        class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+      >
+        Setup guide
+      </a>
+      <a
+        href="/guides/inflatable-pool-operating-costs/"
+        class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+      >
+        Operating costs
+      </a>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const root = document.querySelector('[data-volume-calc]');
+      if (!root) return;
+
+      const shape = document.getElementById('vc-shape') as HTMLSelectElement | null;
+      const dimRound = root.querySelector('[data-vc-dim-round]') as HTMLElement | null;
+      const dimRect = root.querySelector('[data-vc-dim-rect]') as HTMLElement | null;
+      const diameter = document.getElementById('vc-diameter') as HTMLInputElement | null;
+      const length = document.getElementById('vc-length') as HTMLInputElement | null;
+      const width = document.getElementById('vc-width') as HTMLInputElement | null;
+      const wall = document.getElementById('vc-wall') as HTMLInputElement | null;
+      const fill = document.getElementById('vc-fill') as HTMLInputElement | null;
+      const flow = document.getElementById('vc-flow') as HTMLInputElement | null;
+      const outLiters = root.querySelector('[data-vc-liters]') as HTMLElement | null;
+      const outTons = root.querySelector('[data-vc-tons]') as HTMLElement | null;
+      const outTime = root.querySelector('[data-vc-time]') as HTMLElement | null;
+      const outDetail = root.querySelector('[data-vc-detail]') as HTMLElement | null;
+
+      function num(el: HTMLInputElement | null): number {
+        if (!el || !el.value) return NaN;
+        return parseFloat(el.value);
+      }
+
+      function fmtTime(minutes: number): string {
+        if (minutes < 60) return `${Math.round(minutes)} min`;
+        const h = Math.floor(minutes / 60);
+        const m = Math.round(minutes % 60);
+        return m > 0 ? `${h} h ${m} min` : `${h} h`;
+      }
+
+      function recalc(): void {
+        if (!shape || !wall || !fill || !flow || !outLiters || !outTons || !outTime || !outDetail) return;
+        const fillPct = num(fill);
+        const wallH = num(wall);
+        const flowRate = num(flow);
+        if (isNaN(fillPct) || isNaN(wallH) || isNaN(flowRate) || fillPct <= 0 || wallH <= 0 || flowRate <= 0) {
+          outLiters.textContent = '—';
+          outTons.textContent = '—';
+          outTime.textContent = '—';
+          outDetail.textContent = 'Enter dimensions to see results.';
+          return;
+        }
+        const depth = (wallH * Math.min(Math.max(fillPct, 10), 100)) / 100;
+        let m3 = NaN;
+        if (shape.value === 'round') {
+          const d = num(diameter);
+          if (!isNaN(d) && d > 0) m3 = Math.PI * Math.pow(d / 2, 2) * depth;
+        } else {
+          const l = num(length);
+          const w = num(width);
+          if (!isNaN(l) && !isNaN(w) && l > 0 && w > 0) m3 = l * w * depth;
+        }
+        if (isNaN(m3) || m3 <= 0) {
+          outLiters.textContent = '—';
+          outTons.textContent = '—';
+          outTime.textContent = '—';
+          outDetail.textContent = 'Enter dimensions to see results.';
+          return;
+        }
+        const liters = m3 * 1000;
+        const tons = m3; // 1 m³ of water ≈ 1 t
+        outLiters.textContent = Math.round(liters).toLocaleString('en-US');
+        outTons.textContent = tons >= 10 ? Math.round(tons).toString() : tons.toFixed(1);
+        outTime.textContent = fmtTime(liters / flowRate);
+        outDetail.textContent = `Water depth ${depth.toFixed(2)} m — volume ${m3.toFixed(2)} m³ (${Math.round(liters).toLocaleString('en-US')} liters), about ${tons >= 10 ? Math.round(tons) : tons.toFixed(1)} tonnes of water.`;
+      }
+
+      function syncShape(): void {
+        if (!shape || !dimRound || !dimRect) return;
+        const isRound = shape.value === 'round';
+        dimRound.classList.toggle('hidden', !isRound);
+        dimRect.classList.toggle('hidden', isRound);
+        recalc();
+      }
+
+      shape?.addEventListener('change', syncShape);
+      [diameter, length, width, wall, fill, flow].forEach((el) => {
+        el?.addEventListener('input', recalc);
+      });
+      syncShape();
+    })();
+  </script>
+</Layout>

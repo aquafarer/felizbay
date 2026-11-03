@@ -84,8 +84,13 @@ const CHECKS = [
   },
   {
     path: '/products/compare/',
-    markers: ['Compare Drop Stitch Inflatable Pools', 'single-piece online retail prices', 'data-channel="wholesale"'],
-    desc: 'compare center: retail-only price table plus separate wholesale section',
+    markers: [
+      'Compare Drop Stitch Inflatable Pools',
+      'single-piece online retail prices',
+      'data-channel="wholesale"',
+      'data-size-filter',
+    ],
+    desc: 'compare center: retail price table + wholesale section + interactive factory-size filter',
   },
   { path: '/products/specs/', marker: 'FOB Qingdao', desc: 'wholesale price list' },
   { path: '/pool-ideas/', marker: 'Pool Ideas', desc: 'scenario hub' },
@@ -104,6 +109,16 @@ const CHECKS = [
     path: '/guides/how-to-choose-inflatable-pool/',
     markers: ['href="/products/round-blue-drop-stitch-pool/"', 'href="/products/rectangular-drop-stitch-pool/"'],
     desc: 'consumer buying guide deep-links to round + rectangular PDPs (relatedProducts wired)',
+  },
+  {
+    path: '/guides/inflatable-pool-operating-costs/',
+    markers: ['0.17 kWh', 'href="/products/round-blue-drop-stitch-pool/"'],
+    desc: 'operating-costs guide: verified TCO figures (0.17 kWh inflation) + PDP deep links',
+  },
+  {
+    path: '/pool-volume-calculator/',
+    markers: ['data-volume-calc', 'Pool Volume Calculator', '6,000 liters'],
+    desc: 'pool volume calculator tool: inputs, worked example, guide deep links',
   },
   { path: '/find-your-pool/', marker: 'data-finder', desc: 'pool advisor quiz' },
   { path: '/support/', marker: 'Support', desc: 'support hub' },

@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
 import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
+import { poolSeries, PRICE_BASIS_NOTE } from '~/data/pool-catalog';
 
 const metadata = {
   title: `Compare Drop Stitch Inflatable Pools | ${SITE.name}`,
@@ -127,6 +128,64 @@ const comparisonRows = [
         >
           Factory sizes &amp; wholesale price list →
         </a>
+
+        <!-- Interactive size comparison: filter factory sizes by series (client-side) -->
+        <h3 class="mt-12 text-xl md:text-2xl font-semibold text-gray-900">Compare Factory Sizes Interactively</h3>
+        <p class="mt-2 text-sm text-gray-500 max-w-3xl leading-relaxed">
+          Every catalog size in one filterable table — pick a series to compare sizes, wall thickness, packed weights,
+          and wholesale FOB unit prices side by side. {PRICE_BASIS_NOTE.split(' — ')[0]}, MOQ 20 pcs per item.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2" data-size-filter>
+          <button
+            type="button"
+            data-series="all"
+            aria-pressed="false"
+            class="px-4 py-2 text-sm font-medium rounded-full border transition-colors"
+          >
+            All series
+          </button>
+          {poolSeries.map((s) => (
+            <button
+              type="button"
+              data-series={s.id}
+              aria-pressed="false"
+              class="px-4 py-2 text-sm font-medium rounded-full border transition-colors"
+            >
+              {s.name}
+            </button>
+          ))}
+        </div>
+        <p class="mt-3 text-xs text-gray-400" data-size-count></p>
+        <div class="mt-4 overflow-x-auto">
+          <table class="w-full text-sm border-collapse" data-size-table>
+            <thead>
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">Item no.</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">Series</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">Size (m)</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">Wall</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">
+                  Packed weight
+                </th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">FOB USD/unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {poolSeries.flatMap((s) =>
+                s.items.map((it) => (
+                  <tr data-series={s.id} class="border-b border-gray-100">
+                    <td class="px-4 py-2.5 font-medium text-gray-800">{it.item}</td>
+                    <td class="px-4 py-2.5 text-gray-600">{s.name}</td>
+                    <td class="px-4 py-2.5 text-gray-600">{it.size}</td>
+                    <td class="px-4 py-2.5 text-gray-600">{it.wall}</td>
+                    <td class="px-4 py-2.5 text-gray-600">{it.weightKg != null ? `${it.weightKg} kg` : '—'}</td>
+                    <td class="px-4 py-2.5 text-gray-800">${it.fobUsd}</td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
       </section>
     )}
 
@@ -140,4 +199,42 @@ const comparisonRows = [
       </p>
     </section>
   </section>
+
+  <script>
+    (function () {
+      const filter = document.querySelector('[data-size-filter]');
+      const table = document.querySelector('[data-size-table]');
+      if (!filter || !table) return;
+      const buttons = Array.from(filter.querySelectorAll('button[data-series]')) as HTMLButtonElement[];
+      const rows = Array.from(table.querySelectorAll('tbody tr[data-series]')) as HTMLTableRowElement[];
+      const countEl = document.querySelector('[data-size-count]') as HTMLElement | null;
+      const ACTIVE = ['bg-sky-600', 'border-sky-600', 'text-white'];
+      const IDLE = ['border-gray-300', 'text-gray-700', 'hover:bg-gray-50'];
+
+      function apply(series: string): void {
+        let visible = 0;
+        rows.forEach((row) => {
+          const show = series === 'all' || row.getAttribute('data-series') === series;
+          row.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        if (countEl) countEl.textContent = `${visible} of ${rows.length} factory sizes shown`;
+        buttons.forEach((b) => {
+          const isActive = (b.getAttribute('data-series') || 'all') === series;
+          b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          b.classList.toggle(ACTIVE[0], isActive);
+          b.classList.toggle(ACTIVE[1], isActive);
+          b.classList.toggle(ACTIVE[2], isActive);
+          b.classList.toggle(IDLE[0], !isActive);
+          b.classList.toggle(IDLE[1], !isActive);
+          b.classList.toggle(IDLE[2], !isActive);
+        });
+      }
+
+      buttons.forEach((b) => {
+        b.addEventListener('click', () => apply(b.getAttribute('data-series') || 'all'));
+      });
+      apply('all');
+    })();
+  </script>
 </Layout>

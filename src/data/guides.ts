@@ -47,7 +47,7 @@ export const guides: GuideRecord[] = [
       },
     ],
     relatedProducts: ['round-blue-drop-stitch-pool', 'rectangular-drop-stitch-pool'],
-    relatedGuides: ['inflatable-pool-maintenance'],
+    relatedGuides: ['inflatable-pool-maintenance', 'inflatable-pool-operating-costs'],
     difficulty: 'beginner',
     waterType: ['freshwater'],
   },
@@ -119,6 +119,40 @@ export const guides: GuideRecord[] = [
     ],
     relatedProducts: ['round-grey-drop-stitch-pool', 'hot-tub-square-rect'],
     relatedGuides: ['inflatable-pool-setup'],
+    difficulty: 'beginner',
+    waterType: ['freshwater'],
+  },
+  {
+    slug: 'inflatable-pool-operating-costs',
+    category: 'buying-guide',
+    title: 'What an Inflatable Pool Really Costs to Run',
+    description:
+      'The full operating-cost picture of a drop stitch inflatable pool: inflation electricity, filter pump energy, water, and chemicals — with simple formulas to plug in your own local rates.',
+    tldr: 'Running costs are small and predictable: about 0.17 kWh to inflate with the included 1000W pump, a few hours of filter pump power per day, one fill of water that lasts 3–6 weeks with proper care, and standard pool chemicals. Use the formulas here with your local utility rates for an exact seasonal budget.',
+    problem:
+      'Buyers budget for the purchase price but not for the season: pump electricity, water refills, and chemicals are small lines that quietly add up when nobody plans for them.',
+    solution:
+      'Break the season into four cost lines — inflation electricity, filtration energy, water, and chemicals — then price each with a simple formula and your own local rates instead of guessing.',
+    audience: 'Families and facility buyers budgeting a full season of pool ownership.',
+    steps: [
+      'Inflation: the included 1000W air pump draws about 0.17 kWh for a ~10-minute inflation — a once-per-setup cost, not a daily one',
+      'Filtration: run the filter pump 4–8 hours a day in season; daily energy = rated watts × hours ÷ 1000, priced at your local kWh rate',
+      'Water: one full fill stays swimmable for 3–6 weeks with correct filtration and chemical care; cost = fill volume × your local water rate',
+      'Chemicals: chlorine tablets and pH adjusters are inexpensive, regionally priced consumables — test 2–3 times per week so you top up chemicals instead of paying for a full water change',
+      'Season total: add the four lines, then budget one drain-and-refill margin for surprises such as algae or heavy splash-out',
+    ],
+    faq: [
+      {
+        q: 'How much electricity does an inflatable pool use?',
+        a: 'Inflating with the included 1000W pump uses about 0.17 kWh for a ~10-minute setup. The ongoing cost is the filter pump: multiply its rated wattage by your daily running hours and your local kWh rate — a few hours a day keeps the energy line small.',
+      },
+      {
+        q: 'How often will I pay for water?',
+        a: 'With filtration and correct chemical levels, one fill stays swimmable for 3–6 weeks. Most owners budget for a full drain-and-refill about once a month of heavy use, plus small top-ups for splash-out and evaporation.',
+      },
+    ],
+    relatedProducts: ['round-blue-drop-stitch-pool', 'rectangular-drop-stitch-pool'],
+    relatedGuides: ['inflatable-pool-maintenance'],
     difficulty: 'beginner',
     waterType: ['freshwater'],
   },

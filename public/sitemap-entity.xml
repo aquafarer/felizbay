@@ -2660,6 +2660,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/inflatable-pool-operating-costs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/inflatable-pool-operating-costs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/inflatable-pool-operating-costs/"/>
+    <x:entity>inflatable-pool-operating-costs</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/inflatable-pool-pressure-testing-explained/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/inflatable-pool-pressure-testing-explained/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/inflatable-pool-pressure-testing-explained/"/>
@@ -4068,6 +4076,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-ideas/townhome-and-compact-yard-pools/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-ideas/townhome-and-compact-yard-pools/"/>
     <x:entity>pool-ideas/townhome-and-compact-yard-pools</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/pool-volume-calculator/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/pool-volume-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/pool-volume-calculator/"/>
+    <x:entity>pool-volume-calculator</x:entity>
     <x:type>page</x:type>
     <priority>0.5</priority>
   </url>
