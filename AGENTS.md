@@ -186,6 +186,10 @@ Admin reads submissions at `/keystatic/contact-submissions` — the page fetches
 
 Chosen 2026-10 over GA4: no cookies → no 37-language consent banner (GDPR), single deferred beacon, zero CWV impact. `src/components/common/CloudflareAnalytics.astro` (included in `Layout.astro`) renders the `static.cloudflareinsights.com/beacon.min.js` beacon only when `PUBLIC_CF_ANALYTICS_TOKEN` is set — injected by CI (`deploy.yml`/`ci.yml`/`seo-gate.yml`) from the GitHub secret `CF_ANALYTICS_TOKEN` (the beacon token from the Cloudflare dashboard, safe to embed). The secret was added 2026-11 and the beacon is live in production; `scripts/prod-smoke.mjs` asserts the `cloudflareinsights` marker on the home page, so a removed/renamed secret fails the release gate instead of silently dropping analytics.
 
+## AI Content Manifests (hand-maintained llms.txt trap)
+
+`public/llms.txt` is **hand-maintained** — no generator updates it (`generate-geo-files.ts` only writes a default if the file is missing). Everything else (llms-full.txt, llms-index, ai-corpus, sitemaps) regenerates automatically from the data SSOT. **When adding any new guide, tool page, or content section, you must manually update `public/llms.txt`**: add the entry under the right section AND update the hand-written counts in the "Markdown Endpoint Index" line. This was left stale twice (2026-10-31 audit §2.4; 2026-11-03 — new guide/calculator/compare missing), so `scripts/prod-smoke.mjs` now asserts that production llms.txt lists every slug from `src/data/guides.ts` + `src/data/procurement-guides.ts` and that the counts match — a stale manifest fails the release gate.
+
 ## Generated i18n Data (build-time, NOT in public/)
 
 `scripts/generate-data-json.mjs` emits build-time modules into `src/i18n/generated/` (gitignored):

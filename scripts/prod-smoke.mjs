@@ -12,6 +12,12 @@
 //
 // Exit code 0 = all checks passed, 1 = at least one failure.
 import https from 'node:https';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(HERE, '..');
 
 const args = process.argv.slice(2);
 const readArg = (name, fallback) => {
@@ -152,6 +158,42 @@ const CHECKS = [
     path: '/llms.txt',
     markers: ['Felizbay', 'pool-ideas/', 'guides/', '/support/'],
     desc: 'llms.txt knowledge manifest (covers guides, pool ideas, support)',
+  },
+  // ---- llms.txt manifest sync (drift guard: public/llms.txt is hand-maintained and
+  // was left stale twice — 2026-10-31 audit §2.4 and 2026-11-03; catches missing
+  // guides + the hand-written consumer/B2B counts in the Markdown Endpoint Index line) ----
+  {
+    path: '/llms.txt',
+    desc: 'llms.txt lists every consumer + procurement guide slug and correct counts (hand-maintained manifest sync)',
+    validate: (res) => {
+      const readSlugs = (file) => {
+        try {
+          return [...readFileSync(join(ROOT, file), 'utf8').matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1]);
+        } catch {
+          return [];
+        }
+      };
+      const consumerSlugs = readSlugs('src/data/guides.ts');
+      const b2bSlugs = readSlugs('src/data/procurement-guides.ts');
+      if (consumerSlugs.length === 0 || b2bSlugs.length === 0) {
+        return { ok: false, reason: 'could not read guide slugs from src/data (run from repo root)' };
+      }
+      const missing = [...consumerSlugs, ...b2bSlugs].filter((s) => !res.body.includes(`/guides/${s}`));
+      if (missing.length > 0) {
+        return { ok: false, reason: `llms.txt missing guides: ${missing.join(', ')} — update public/llms.txt by hand` };
+      }
+      const countMatch = res.body.match(/(\d+) consumer guides, (\d+) B2B procurement guides/);
+      if (!countMatch) {
+        return { ok: false, reason: 'Markdown Endpoint Index count line not found in llms.txt' };
+      }
+      if (parseInt(countMatch[1], 10) !== consumerSlugs.length || parseInt(countMatch[2], 10) !== b2bSlugs.length) {
+        return {
+          ok: false,
+          reason: `llms.txt counts (${countMatch[1]}/${countMatch[2]}) != SSOT (${consumerSlugs.length}/${b2bSlugs.length})`,
+        };
+      }
+      return { ok: true };
+    },
   },
   { path: '/llms-index', marker: 'Markdown Endpoint Index', desc: 'combined markdown endpoint index' },
   {
