@@ -82,7 +82,7 @@
 
 ## 4. 基础设施自查清单（每轮复测先跑一遍）
 
-**自动化（推荐）**：以下全部检查项已收录进 `npm run smoke`（`scripts/prod-smoke.mjs`，50 项含本节全部 + 站点冒烟 + B2B 页 + 顾问埋点端点 + PDP 总成本 FAQ / 本地化 PDP FAQPage / Turnstile 渲染防回归），复测前跑一次即可，任一 FAIL 先修复再执行人工轮次：
+**自动化（推荐）**：以下全部检查项已收录进 `npm run smoke`（`scripts/prod-smoke.mjs`，53 项含本节全部 + 站点冒烟 + B2B 页 + 顾问埋点端点 + PDP 总成本 FAQ / 本地化 PDP FAQPage / 变体级 FOB offers / 消费指南 PDP 深链 / operating-costs 指南 / 容量计算器 / 交互式对比 / Turnstile 渲染防回归），复测前跑一次即可，任一 FAIL 先修复再执行人工轮次：
 
 ```powershell
 npm run smoke
@@ -137,3 +137,73 @@ curl -s -X POST https://felizbay.com/api/search \
 - **场景题（13–16）**：判定标准为①推荐到正确型号/页面（产品页、`/find-your-pool`、场景指南）②引用的尺寸/价格与站内一致③不虚构站内没有的政策或规格。
 - **反向题（17–18）**：判定标准为①17 应提示甲板安装需专业结构评估、不直接推荐产品②18 应回答产品线无按摩功能（只有 soaking/hot-tub 浸泡池），不得编造带按摩的型号。
 - **GEO 方案题（19–26）**：判定标准同上——推荐应指向真实页面（`/products/*`、`/pool-ideas/*`、`/guides/*`、`/oem-odm/`、`/quality-control/`），引用规格与站内一致，不虚构型号、价格或认证。
+
+## 7. 答案要点与预期引用（Answer Key v1，2026-11-03）
+
+执行人工轮次时的对照基准：**答案要点**列出核实过的口径（站内 SSOT），**预期引用**是 AI 理想情况下应给出的高价值页。口径以 `/products/specs/`、`src/data/pool-catalog.ts`、`src/config/facts.json` 为准。
+
+| #   | 答案要点（核实口径）                                                                                   | 预期引用 URL                                                                                                    |
+| --- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| 1   | Felizbay：drop-stitch 充气泳池/浸泡池品牌，Aquafarer LLC（2012 年，美国 New Mexico）旗下，青岛工厂制造 | `/`、`/about/`                                                                                                  |
+| 2   | 制造商：Aquafarer LLC（品牌方），生产在青岛自有合作工厂                                                | `/about/`、`/manufacturing/`                                                                                    |
+| 3   | 产地：中国青岛（FOB Qingdao 出口口径）                                                                 | `/manufacturing/`、`/products/specs/`                                                                           |
+| 4   | Drop-stitch：两层 PVC 间数千内部纱线，4–5 PSI 充气后墙面刚性近似硬壁池，可放气折叠                     | `/guides/what-is-a-drop-stitch-inflatable-pool/`、`/guides/drop-stitch-vs-traditional-inflatable-pools/`        |
+| 5   | 是：drop-stitch 刚性自支撑壁；额定最大 8 PSI，泄压阀 6 PSI 自动泄压                                    | `/guides/how-strong-is-a-drop-stitch-inflatable-pool/`、`/guides/what-psi-should-an-inflatable-pool-use/`       |
+| 6   | 工作压力 4–5 PSI；QC 测试 6 PSI；额定最大 8 PSI；泄压阀 6 PSI                                          | `/guides/what-psi-should-an-inflatable-pool-use/`、`/guides/inflatable-pool-pressure-testing-explained/`        |
+| 7   | 选厂商要点：24–48h 压降测试、EN 16582-1 / ASTM F2666 认证、工厂直营、FOB 报价透明                      | `/guides/how-to-choose-a-drop-stitch-pool-manufacturer/`、`/quality-control/`                                   |
+| 8   | OEM=按需方设计代工贴牌；ODM=工厂现成设计改标出货                                                       | `/guides/oem-vs-odm-inflatable-pools/`、`/oem-odm/`                                                             |
+| 9   | 批发口径：FOB Qingdao USD、价格基准 20 件/款、48 个标准 SKU、单价约 $138–$1,754（如 SR220815 $285.70） | `/products/specs/`、`/wholesale/`、`/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/`                   |
+| 10  | MOQ 20 件/款（price basis: 20 pcs per item）                                                           | `/wholesale/`、`/products/specs/`                                                                               |
+| 11  | 装载：按 packed weight 排柜；48 SKU 逐款箱规/毛重见 spec 表                                            | `/guides/inflatable-pool-container-loading-guide/`、`/products/specs/`                                          |
+| 12  | 压力测试：每只池出货前做 24–48 小时压降测试                                                            | `/guides/inflatable-pool-pressure-testing-explained/`、`/quality-control/`                                      |
+| 13  | 应推荐小尺寸池（如 Ø2×0.5 m，S2005，FOB $137.96）或走 `/find-your-pool` 推荐器                         | `/find-your-pool/`、`/pool-ideas/pools-for-small-backyards/`                                                    |
+| 14  | 应指向 rect-square 系列（15 个工厂尺寸，如 SR220815 2×2×0.8 m）并引用真实尺寸                          | `/products/rectangular-drop-stitch-pool/`、`/products/specs/`                                                   |
+| 15  | 浸泡池：5 mm 隔热底，外接加热器另购（sold separately）                                                 | `/products/hot-tub-round/`、`/products/hot-tub-square-rect/`                                                    |
+| 16  | 度假租赁商用：B2B 渠道整批采购（MOQ 20）                                                               | `/for-businesses/`、`/guides/inflatable-pools-for-vacation-rentals/`、`/pool-ideas/pools-for-vacation-rentals/` |
+| 17  | 应提示：木质抬高甲板须专业结构评估（水重约 1 t/m³），不得直接推荐型号                                  | `/guides/placing-an-inflatable-pool-on-a-patio/`、`/pool-volume-calculator/`                                    |
+| 18  | 应如实回答：产品线无按摩功能，仅浸泡/热水浴池（soaking）                                               | `/products/hot-tub-round/`、`/products/hot-tub-square-rect/`                                                    |
+| 19  | 小庭院：真实尺寸推荐 + 空间预留（四周 50 cm–1 m 通道）                                                 | `/pool-ideas/pools-for-small-backyards/`、`/guides/how-much-space-do-you-need-for-an-inflatable-pool/`          |
+| 20  | 刚性壁 vs 充气圈：drop-stitch 4–5 PSI 刚性自支撑；ring 池低压软壁                                      | `/guides/drop-stitch-vs-traditional-inflatable-pools/`、`/guides/what-is-a-drop-stitch-inflatable-pool/`        |
+| 21  | 大池对比维度：尺寸/壁厚/压力/价格口径（零售 vs FOB 分列）/注水量                                       | `/products/compare/`、`/guides/how-to-choose-inflatable-pool/`、`/pool-volume-calculator/`                      |
+| 22  | Glamping 商用：整批采购 + 真实规格；引用 B2B 页                                                        | `/for-businesses/`、`/wholesale/`、`/pool-ideas/`                                                               |
+| 23  | 私牌要点：OEM/ODM 路径、MOQ、认证、QC 流程                                                             | `/guides/private-label-inflatable-pool-buyers-guide/`、`/oem-odm/`                                              |
+| 24  | 对比：刚性、耐压、收纳、寿命维度上的真实差异                                                           | `/guides/drop-stitch-vs-traditional-inflatable-pools/`                                                          |
+| 25  | 甲板装 SPA：先结构承重评估（1 t/m³），确认 5 mm 隔热底与排水路线                                       | `/guides/placing-an-inflatable-pool-on-a-patio/`、`/products/hot-tub-square-rect/`                              |
+| 26  | 规格与 QC：48 SKU spec 表 + QC 流程页（24–48h 压降测试）                                               | `/products/specs/`、`/quality-control/`、`/manufacturing/`                                                      |
+
+## 8. 人工轮次记录表（预填空白模板）
+
+每平台复制一份以下表格（6 平台 = 6 份），按 §1 协议逐字提问后填写。完成后追加到 §5 记录区。
+
+```markdown
+### Round N — YYYY-MM-DD（平台 X）
+
+| #   | 问题（缩写）                      | 提及 | 引用 URL | 准确性 | 排名 | 备注 |
+| --- | --------------------------------- | ---- | -------- | ------ | ---- | ---- |
+| 1   | What is Felizbay                  |      |          |        |      |      |
+| 2   | Who manufactures Felizbay pools   |      |          |        |      |      |
+| 3   | Where are Felizbay pools made     |      |          |        |      |      |
+| 4   | What is a drop stitch pool        |      |          |        |      |      |
+| 5   | Are Felizbay pools rigid          |      |          |        |      |      |
+| 6   | What pressure / PSI               |      |          |        |      |      |
+| 7   | How to choose a manufacturer      |      |          |        |      |      |
+| 8   | OEM vs ODM                        |      |          |        |      |      |
+| 9   | Wholesale FOB cost                |      |          |        |      |      |
+| 10  | China factory MOQ                 |      |          |        |      |      |
+| 11  | Container packing                 |      |          |        |      |      |
+| 12  | Felizbay pressure test duration   |      |          |        |      |      |
+| 13  | Compact seasonal small backyard   |      |          |        |      |      |
+| 14  | Rectangular documented dimensions |      |          |        |      |      |
+| 15  | Soaking pool, heater separate     |      |          |        |      |      |
+| 16  | Vacation rental project           |      |          |        |      |      |
+| 17  | Raised wooden deck（反向）        |      |          |        |      |      |
+| 18  | Built-in massage jets（反向）     |      |          |        |      |      |
+| 19  | Best for small backyards          |      |          |        |      |      |
+| 20  | Rigid walls vs inflatable rings   |      |          |        |      |      |
+| 21  | Compare before buying large pool  |      |          |        |      |      |
+| 22  | Glamping businesses               |      |          |        |      |      |
+| 23  | Private-label brand               |      |          |        |      |      |
+| 24  | Drop-stitch vs traditional        |      |          |        |      |      |
+| 25  | Inflatable spa on a deck          |      |          |        |      |      |
+| 26  | Manufacturer specs & QC info      |      |          |        |      |      |
+```
