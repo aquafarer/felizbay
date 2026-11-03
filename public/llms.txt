@@ -13,6 +13,7 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 - [Request a Quotation](https://felizbay.com/request-quotation/): Request pricing for pools and bulk orders
 - [AI Answer Center](https://felizbay.com/ai-answer-center/): AI-powered answers about Felizbay inflatable pools
 - [Find Your Pool](https://felizbay.com/find-your-pool/): Interactive pool advisor — match a pool to your space, household, and use case
+- [Pool Volume Calculator](https://felizbay.com/pool-volume-calculator/): Calculate water volume, weight, and hose fill time for any pool size
 - [Support Hub](https://felizbay.com/support/): After-sales help — shipping, warranty, care, and troubleshooting resources
 - [Returns & Warranty](https://felizbay.com/returns-and-warranty/): Return policy and warranty coverage
 
@@ -49,6 +50,7 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 - [What PSI Should an Inflatable Pool Use?](https://felizbay.com/guides/what-psi-should-an-inflatable-pool-use/): Recommended inflation pressure and gauge use
 - [How Strong Is a Drop Stitch Inflatable Pool?](https://felizbay.com/guides/how-strong-is-a-drop-stitch-inflatable-pool/): Wall strength, weight capacity, and puncture resistance
 - [Inflatable Pool Water Care and Maintenance](https://felizbay.com/guides/inflatable-pool-maintenance/): Season-long water care and maintenance routine
+- [What an Inflatable Pool Really Costs to Run](https://felizbay.com/guides/inflatable-pool-operating-costs/): Operating-cost breakdown — inflation electricity, filtration, water, and chemicals
 - [How to Clean an Inflatable Pool](https://felizbay.com/guides/how-to-clean-an-inflatable-pool/): Cleaning tools, schedule, and mildew prevention
 - [How to Prevent and Repair Pool Leaks](https://felizbay.com/guides/how-to-prevent-pool-leaks/): Leak prevention and field repair steps
 - [How to Store a Drop Stitch Pool for Winter](https://felizbay.com/guides/how-to-store-a-drop-stitch-pool/): End-of-season drain, dry, fold, and winter storage
@@ -57,6 +59,7 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 
 ## Products
 
+- [Compare Drop Stitch Pools](https://felizbay.com/products/compare/): Side-by-side comparison — retail price table plus a filterable 48-SKU factory size and FOB price table
 - [Rectangular Drop Stitch Pool](https://felizbay.com/products/rectangular-drop-stitch-pool/): Family-size rectangular inflatable pool with rigid walls
 - [Round Blue Drop Stitch Pool](https://felizbay.com/products/round-blue-drop-stitch-pool/): Round pool in classic blue
 - [Round Grey Drop Stitch Pool](https://felizbay.com/products/round-grey-drop-stitch-pool/): Round pool in modern grey with matching cover
@@ -91,4 +94,4 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 
 ## Markdown Endpoints
 
-- [Markdown Endpoint Index](https://felizbay.com/llms-index): Index of all plain-markdown content — 16 consumer guides, 6 B2B procurement guides, 15 pool idea scenarios, every product page, 3 knowledge-center (v2) entries, and 2 standalone tech pages
+- [Markdown Endpoint Index](https://felizbay.com/llms-index): Index of all plain-markdown content — 17 consumer guides, 6 B2B procurement guides, 15 pool idea scenarios, every product page, 3 knowledge-center (v2) entries, and 2 standalone tech pages
