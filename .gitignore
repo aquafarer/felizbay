@@ -39,8 +39,9 @@ pnpm-lock.yaml
 # Note: .yarnrc.yml is tracked in git so Cloudflare's yarn install
 # uses the same nodeLinker: node-modules and produce a node_modules
 # tree that `npm run build` (and `node_modules/.bin/astro`) need.
-# R2-managed files (served from Cloudflare R2, not git)
-public/files/
+# public/files/ hosts git-tracked downloads (e.g. the drop-stitch pool
+# user manual PDF); they ship with the Pages deploy and are mirrored
+# to R2 by fast-upload-r2.mjs.
 
 # Backup files
 *.bak

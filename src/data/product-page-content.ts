@@ -146,6 +146,7 @@ const WHOLESALE_SUPPORT_CARDS: SupportCard[] = [
 
 /** Shared setup links (EN hrefs — [lang] pages prefix the language code at render time) */
 const SETUP_LINKS_BASE: { label: string; href: string }[] = [
+  { label: 'User Manual & Setup Guide', href: '/user-manual/' },
   { label: 'View Setup Guides', href: '/guides/' },
   { label: 'Ask a Support Question', href: '/contact/' },
 ];

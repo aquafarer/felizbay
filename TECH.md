@@ -2099,3 +2099,15 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 - **验收** (prod-smoke 58 项, finder 断言替换): markers `data-finder` / `Shop a Retail Set` / `FZ-SPA-RND` / `View This Exact Set` / `Request a Project Review` / `Potential Product Family for Review` / `Total clear, level area available`; notMarker `Request a quote` (v1 CTA 不得残留)。dist 静态验证: 状态面板五态文案全部在打包 JS chunk 内, 零售卡 `display:none` + noscript 回退确认。docx §10 交互用例表标注为需人工浏览器测试 (构建静态验证只覆盖分支存在性)。
 
 **仍阻塞** (同 19.7, 另加): 蓝/灰固定尺寸签核前, personal 路径尺寸检查仅 RS2018 生效 (opts `[{d:2}]`); model-level 加热器/气泡设备兼容清单 (docx P0-3 要求, heated 目前只能 Compatibility review)。
+
+### 19.9 /user-manual/ 产品手册页 (2026-11-04)
+
+工厂 `USER MANUAL` 文件夹 (原版 PDF + 16 张步骤 JPG + 全部步骤 txt) 集成为 EN 单文件页 `/user-manual/`:
+
+- **数据冲突与裁定**: 手册原文 Step 2 写工作压力 5–8 PSI (0.34–0.55 bar) / 上限 15 PSI, 与规格表 SSOT (`pool-catalog.ts`: OPERATING 4–5 PSI / RELIEF 6 PSI / MAX 8 PSI) 直接矛盾 — 6 PSI 泄压阀在手册工作区间内会持续泄气, 物理上不可能同时成立, 且 "5-8 PSI" 烧在压力表插图 (绿色 OK 区) 里。管理员裁定: **页面文字按规格表 SSOT 发布** (Step 2 → 4–5 PSI / 8 PSI 上限 / 6 PSI 泄压阀 / 热天降压提示), 带 5–8 PSI 的压力表插图不上页, **原版 PDF 照托管** (`public/files/drop-stitch-pool-user-manual.pdf`), hero 下琥珀色透明度框披露两份文件差异并标注 "confirming the correct figures with the factory"。矛盾数字未作为主张发布。
+- **页面结构** (`src/pages/user-manual.astro`, 与 find-your-pool 同为 EN 单文件、无 [lang] 孪生): hero (PDF 下载 + cover 图) → Mandatory Safety Warnings 5 条 (Read First / Active Adult Supervision / NO DIVING–NO JUMPING / Do Not Walk on Walls / Remove Ladders & Toys / Electrical Safety, 前 4 条带 pictogram) → Setup 六步 (交替图文; Step 2/Step 5 带红框 WARNING: 压力上限 / 最高水位 10 cm) → Draining & Storage 四步 (Step 3 Complete Deflation 无图 — 源文件夹即无对应 JPG, 其 txt 物理位于 Step 2 子目录内) → Leak Detection & Patch Repairs (皂水检漏 + 4 步补丁, 2–3 cm 余量, 24 h 固化) → Related Help 6 卡 → CTA。插图中的梯子/砂滤泵/泳池罩为可选配件, 页面明示 "not part of every retail set — check the Included list on your product page"。
+- **图片**: 15 张转 WebP q82 入 `public/images/manual/` (16 张中跳过 5–8 PSI 压力表图), 构建时 `generate-image-dimensions.mjs` 自动入尺寸注册表。
+- **接线**: `support.astro` quickLinks 卡 (tabler:book) + gettingStarted 首条; PDP `SETUP_LINKS_BASE` 首条 (EN + [lang] 全部 PDP — `localizeHref` 对 root-only 路由不加前缀, [lang] 页安全, 标签按既有行为保持 EN); `public/llms.txt` Company 节手工加条目 (Iron Rule, smoke 只断言 guide slug 覆盖与计数, 新条目行不受计数断言影响); `generate-sitemaps.mjs` `AI_TOP_SECTIONS` 加 `/user-manual/`。FitGuide 未接 (上下文不合 + 新 ui key 需全语言 i18n 改动), 手册入口经 SetupStorage links 覆盖全部产品页。
+- **验收** (prod-smoke 58 → 60 项): 页面 6 marker (`User Manual` / `Mandatory Safety Warnings` / `4–5 PSI` / `relief valve` / PDF href / factory-confirmation 框文案) + PDF 资产 contentType `application/pdf` 检查。
+
+**仍阻塞** (本节新增): 工厂压力数字确认 (手册 5–8/15 vs 规格表 4–5/8/6) — 确认后需更新页面 + 更换/修订 PDF + 核对 AnswerCenter "What PSI" 问答; 其余同 19.8。

@@ -17,9 +17,11 @@ export function cleanBuildAssets() {
 
     // Local assets under dist/images (e.g. /images/pools/*) must ship with the
     // site now that images are served locally, so only legacy R2-era leftovers
-    // are cleaned. 'files' no longer exists in public/ either, but the check is
-    // kept for older build artifacts.
+    // are cleaned. public/files/ is a real source dir again (hosted PDFs, e.g.
+    // the drop-stitch pool user manual), so dist/files/ is only removed when
+    // the source dir no longer exists (stale artifact from an older tree).
     for (const sub of ['files']) {
+      if (existsSync(path.join(ROOT, 'public', sub))) continue;
       const subDir = path.join(dir, sub);
       if (existsSync(subDir)) {
         rmSync(subDir, { recursive: true, force: true });

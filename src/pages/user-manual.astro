@@ -1,0 +1,488 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `User Manual & Setup Guide — ${SITE.name}`,
+  description: `Official Felizbay drop stitch pool user manual: six setup and inflation steps, mandatory safety warnings, draining and seasonal storage, and leak detection with patch repairs.`,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'User Manual' }];
+
+interface StepItem {
+  title: string;
+  image: string;
+  alt: string;
+  w: number;
+  h: number;
+  paragraphs: string[];
+  warning?: { label: string; text: string };
+}
+
+const setupSteps: StepItem[] = [
+  {
+    title: 'Step 1 — Valve Preparation',
+    image: '/images/manual/step1-valve-preparation.webp',
+    alt: 'Unscrewing the outer valve cover and checking the center push-pin position',
+    w: 1024,
+    h: 572,
+    paragraphs: [
+      'Unscrew the outer valve cover counterclockwise. Check that the center valve push-pin is in the UP position (closed / inflation mode) so air cannot escape when you remove the hose.',
+    ],
+  },
+  {
+    title: 'Step 2 — Connection & Controlled Inflation',
+    image: '/images/manual/step2-connect-inflate.webp',
+    alt: 'Connecting the air pump hose to the inflation valve with a quarter-turn',
+    w: 1024,
+    h: 765,
+    paragraphs: [
+      'Connect the air pump hose to the inflation valve and twist it a quarter-turn clockwise until it locks firmly. Run the pump: the drop-stitch walls take shape and become rigid as pressure builds. Watch a pressure gauge and inflate gradually to the recommended operating pressure of 4–5 PSI (0.28–0.34 bar).',
+    ],
+    warning: {
+      label: 'Pressure limits',
+      text: 'Never exceed 8 PSI (0.55 bar) — the maximum structural rating, not an inflation target. The pressure-relief valve on the walls automatically releases air above 6 PSI. Direct sunlight heats the air inside the walls and raises the pressure: re-check the gauge on hot days and release a little air if needed.',
+    },
+  },
+  {
+    title: 'Step 3 — Sealing & Valve Tightening',
+    image: '/images/manual/step3-seal-valve.webp',
+    alt: 'Tightening the valve with the valve wrench and reinstalling the protective cap',
+    w: 1024,
+    h: 765,
+    paragraphs: [
+      'Disconnect the hose with a quarter-turn counterclockwise. If slight seepage occurs around the valve port, insert the valve wrench into the valve notches, hold the valve body firmly, and rotate clockwise to secure — do not overtighten. Reinstall and hand-tighten the protective cap.',
+    ],
+  },
+  {
+    title: 'Step 4 — Filtration System Connection',
+    image: '/images/manual/step4-filtration.webp',
+    alt: 'Connecting external filter hoses to the inlet and outlet ports',
+    w: 1024,
+    h: 765,
+    paragraphs: [
+      'Before filling, connect external sand-filter or circulation-pump hoses firmly to the matching Inlet and Outlet ports. If you run the pool without a filtration system, tightly close all unused ports with their dedicated screw-on caps.',
+    ],
+  },
+  {
+    title: 'Step 5 — Filling & Water Level Control',
+    image: '/images/manual/step5-water-level.webp',
+    alt: 'Filling the pool while keeping the water level at least 10 cm below the top edge',
+    w: 1024,
+    h: 765,
+    paragraphs: ['Fill the pool gradually, checking continuously that the pool body stays even and vertically stable.'],
+    warning: {
+      label: 'Maximum water level',
+      text: 'Keep the water level at least 10 cm below the top edge of the pool at all times. Never overfill — overflow can tilt or deform the structure.',
+    },
+  },
+  {
+    title: 'Step 6 — Accessories & Pool Cover',
+    image: '/images/manual/step6-accessories-cover.webp',
+    alt: 'Securing the pool ladder and fitting the protective pool cover',
+    w: 1024,
+    h: 765,
+    paragraphs: [
+      'Erect and secure the pool ladder on stable, level ground. Fit the protective cover with its integrated straps whenever the pool is not in use, and remove the cover completely before anyone enters the pool.',
+      'Ladders, covers, and filtration pumps are optional accessories and are not part of every retail set — check the Included list on your product page.',
+    ],
+  },
+];
+
+interface SafetyItem {
+  title: string;
+  text: string;
+  image?: string;
+  alt?: string;
+}
+
+const safetyWarnings: SafetyItem[] = [
+  {
+    title: 'Read Instructions First',
+    text: 'Read this manual — and the Included list on your product page — completely before setting up the pool.',
+    image: '/images/manual/safety-read-first.webp',
+    alt: 'Pictogram: read the instruction manual before use',
+  },
+  {
+    title: 'Active Adult Supervision',
+    text: 'Children and non-swimmers require continuous, active supervision by a competent adult at all times. Never leave minors unattended.',
+    image: '/images/manual/safety-supervision.webp',
+    alt: 'Pictogram: an adult actively supervising a child in the water',
+  },
+  {
+    title: 'NO DIVING — NO JUMPING',
+    text: 'This is a shallow, above-ground pool. Do not dive, jump, or slide into the pool — doing so can lead to severe spinal injuries, paralysis, or death.',
+    image: '/images/manual/safety-no-diving.webp',
+    alt: 'Pictogram: no diving and no jumping into the pool',
+  },
+  {
+    title: 'Do Not Walk on Walls',
+    text: 'Never stand, sit, walk, climb, or bounce on the drop-stitch pool walls.',
+    image: '/images/manual/safety-walls.webp',
+    alt: 'Pictogram: do not walk or stand on the pool walls',
+  },
+  {
+    title: 'Remove Ladders & Toys',
+    text: 'Remove all floating toys from the pool after use to avoid attracting young children. Remove or secure the ladder whenever the pool is unoccupied.',
+  },
+  {
+    title: 'Electrical Safety',
+    text: 'Maintain safe electrical clearance around the pool and disconnect all pump equipment from power before performing cleaning or maintenance.',
+  },
+];
+
+interface DrainItem {
+  title: string;
+  image?: string;
+  alt?: string;
+  text: string;
+}
+
+const drainingSteps: DrainItem[] = [
+  {
+    title: '1. Complete Draining',
+    image: '/images/manual/drain1-draining.webp',
+    alt: 'Discharge hose attached to the red Water Out drain port',
+    text: 'Attach a discharge hose to the red "Water Out" drain port to direct water safely away, or drain with a submersible sump pump. Disconnect all external hoses and fittings when done.',
+  },
+  {
+    title: '2. Cleaning & Complete Drying',
+    image: '/images/manual/drain2-cleaning-drying.webp',
+    alt: 'Cleaning the interior and exterior pool surfaces before drying',
+    text: 'Clean both interior and exterior surfaces. Allow the pool to dry completely before packing — improper moist storage accelerates wear and fosters mold growth.',
+  },
+  {
+    title: '3. Complete Deflation',
+    text: 'Open the valve cap, depress the center pin, and turn it clockwise to lock it in the down (deflation) position. Connect the pump hose to the deflation port of the air pump to extract all residual air until the pool lies flat.',
+  },
+  {
+    title: '4. Folding & Storage',
+    image: '/images/manual/drain4-folding-storage.webp',
+    alt: 'Folding the deflated pool flat and packing it into the storage bag',
+    text: 'Fold the section opposite the connection ports inward, then fold both side sections inward, and fold flat — avoid creasing over hard valves and fittings. Fasten with the strap, pack into the storage bag, and store in a cool, dry place away from heat sources and sharp objects.',
+  },
+];
+
+const patchSteps = [
+  'Completely drain, deflate, clean, and dry the damaged area.',
+  'Cut a circular or rounded PVC patch extending at least 2–3 cm beyond the puncture edge.',
+  'Apply an even layer of repair adhesive to both surfaces, press the patch firmly onto the area, and smooth out all trapped air bubbles.',
+  'Clamp or weight the patch down and let it cure undisturbed for at least 24 hours before reinflating or filling with water.',
+];
+
+const relatedLinks = [
+  {
+    icon: 'tabler:tool',
+    title: 'Inflatable Pool Setup in 8 Steps',
+    description: 'The full illustrated setup walkthrough — site prep to first swim.',
+    href: '/guides/inflatable-pool-setup/',
+  },
+  {
+    icon: 'tabler:droplet',
+    title: 'What PSI Should an Inflatable Pool Use?',
+    description: 'Why 4–5 PSI is the target, how to gauge it, and what the relief valve does.',
+    href: '/guides/what-psi-should-an-inflatable-pool-use/',
+  },
+  {
+    icon: 'tabler:tool',
+    title: 'How to Prevent and Repair Pool Leaks',
+    description: 'Leak prevention and field repair with the included repair kit.',
+    href: '/guides/how-to-prevent-pool-leaks/',
+  },
+  {
+    icon: 'tabler:droplet',
+    title: 'How to Store a Drop Stitch Pool',
+    description: 'End-of-season drain, dry, fold, and winter storage routine.',
+    href: '/guides/how-to-store-a-drop-stitch-pool/',
+  },
+  {
+    icon: 'tabler:shield-check',
+    title: 'Returns & Warranty',
+    description: '30-day returns and the 2-year limited warranty against manufacturing defects.',
+    href: '/returns-and-warranty/',
+  },
+  {
+    icon: 'tabler:message-circle',
+    title: 'Support Center',
+    description: 'Setup help, water care, troubleshooting, and direct contact.',
+    href: '/support/',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <meta
+    name="ai-intent"
+    content="user-manual,setup-guide,inflatable-pool-instructions,inflation-pressure,safety-warnings,draining-storage,leak-repair"
+  />
+
+  {/* Hero */}
+  <section class="px-4 pt-16 pb-12 sm:px-6 mx-auto max-w-7xl" data-ai-block="manual-hero">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Official Documentation</span>
+        <h1 class="mt-4 font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">
+          User Manual &amp; Setup Guide
+        </h1>
+        <p class="mt-6 text-lg text-gray-500 dark:text-slate-400 leading-relaxed">
+          The complete manual for your {SITE.name} drop-stitch pool: valve preparation, controlled inflation, filling,
+          mandatory safety warnings, end-of-season draining and storage, and leak detection with patch repairs.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="/files/drop-stitch-pool-user-manual.pdf"
+            class="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg text-sm"
+            download
+          >
+            <Icon name="tabler:book" class="w-5 h-5" />
+            Download the PDF manual
+          </a>
+          <a
+            href="/support/"
+            class="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+          >
+            Support Center
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 border border-gray-100 dark:border-slate-800 shadow-sm">
+        <img
+          src="/images/manual/cover.webp"
+          alt="Family enjoying a Felizbay drop-stitch inflatable pool in a backyard"
+          width="1024"
+          height="547"
+          class="w-full h-auto"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
+    </div>
+
+    {/* Pressure-figures transparency note (printed manual vs specification sheet) */}
+    <div
+      id="pressure-note"
+      class="mt-10 max-w-4xl rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 px-5 py-4"
+    >
+      <h2 class="text-sm font-semibold text-amber-900 dark:text-amber-200">
+        Note on inflation figures in the printed PDF
+      </h2>
+      <p class="mt-1 text-sm text-amber-800/90 dark:text-amber-200/80 leading-relaxed">
+        The factory-printed manual available for download above states a 5–8 PSI operating range and a 15 PSI limit. Our
+        verified specification sheet lists 4–5 PSI operating, a pressure-relief valve that releases above 6 PSI, and an
+        8 PSI maximum rating — and running the pool inside the printed range would keep the 6 PSI relief valve venting
+        during normal use. We are confirming the correct figures with the factory and will update this page and the PDF;
+        until then, this page follows the more conservative specification-sheet figures.
+      </p>
+    </div>
+  </section>
+
+  {/* Mandatory safety warnings */}
+  <section
+    class="bg-gray-50 dark:bg-slate-900/50 border-y border-gray-100 dark:border-slate-800 px-4 py-14 sm:px-6"
+    data-ai-block="manual-safety"
+  >
+    <div class="mx-auto max-w-7xl">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+        Mandatory Safety Warnings
+      </h2>
+      <p class="mt-3 max-w-3xl text-sm md:text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+        Read these before setup. Every warning below is mandatory for all drop-stitch pools and SPA tubs.
+      </p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {safetyWarnings.map((w) => (
+          <div class="rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
+            {w.image && (
+              <img
+                src={w.image}
+                alt={w.alt || w.title}
+                width="1024"
+                height="1024"
+                class="w-20 h-20 rounded-xl object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+            <h3 class="mt-4 text-base font-semibold text-gray-900 dark:text-slate-100">{w.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{w.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Setup guide */}
+  <section class="px-4 py-14 sm:px-6 mx-auto max-w-7xl" data-ai-block="manual-setup">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+      Setup Guide — Six Steps
+    </h2>
+    <p class="mt-3 max-w-3xl text-sm md:text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+      From sealed box to filled pool. Setup takes about 15 minutes with the included electric pump; the walls reach
+      operating pressure in roughly 10 minutes.
+    </p>
+    <div class="mt-10 space-y-12">
+      {setupSteps.map((step) => (
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 border border-gray-100 dark:border-slate-800 shadow-sm">
+            <img
+              src={step.image}
+              alt={step.alt}
+              width={step.w}
+              height={step.h}
+              class="w-full h-auto"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-slate-100">{step.title}</h3>
+            {step.paragraphs.map((p) => (
+              <p class="mt-3 text-sm md:text-base text-gray-600 dark:text-slate-400 leading-relaxed">{p}</p>
+            ))}
+            {step.warning && (
+              <div class="mt-4 rounded-xl border border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-950/30 px-5 py-4">
+                <h4 class="text-sm font-semibold text-red-900 dark:text-red-200">WARNING — {step.warning.label}</h4>
+                <p class="mt-1 text-sm text-red-800/90 dark:text-red-200/80 leading-relaxed">{step.warning.text}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Draining & storage */}
+  <section
+    class="bg-gray-50 dark:bg-slate-900/50 border-y border-gray-100 dark:border-slate-800 px-4 py-14 sm:px-6"
+    data-ai-block="manual-draining"
+  >
+    <div class="mx-auto max-w-7xl">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+        Draining &amp; Seasonal Storage
+      </h2>
+      <p class="mt-3 max-w-3xl text-sm md:text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+        Four steps to pack the pool away cleanly at the end of the season — drain, clean and dry, deflate, fold and
+        store.
+      </p>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {drainingSteps.map((step) => (
+          <div class="rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
+            {step.image && (
+              <img
+                src={step.image}
+                alt={step.alt || step.title}
+                width="1024"
+                height="765"
+                class="w-full h-auto rounded-xl"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+            <h3 class="mt-4 text-base font-semibold text-gray-900 dark:text-slate-100">{step.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{step.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Leak detection & patch repairs */}
+  <section class="px-4 py-14 sm:px-6 mx-auto max-w-7xl" data-ai-block="manual-leak-repair">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+          Leak Detection &amp; Patch Repairs
+        </h2>
+        <h3 class="mt-6 text-base font-semibold text-gray-900 dark:text-slate-100">Finding a leak</h3>
+        <p class="mt-2 text-sm md:text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+          If the pool loses air pressure unusually fast, brush soapy water over the seams and valve perimeters — air
+          bubbling identifies the leak origin.
+        </p>
+        <h3 class="mt-6 text-base font-semibold text-gray-900 dark:text-slate-100">Patching procedure</h3>
+        <ol class="mt-3 space-y-3">
+          {patchSteps.map((p, i) => (
+            <li class="flex items-start gap-3 text-sm md:text-base text-gray-600 dark:text-slate-400 leading-relaxed">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-sky-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                {i + 1}
+              </span>
+              <span>{p}</span>
+            </li>
+          ))}
+        </ol>
+        <p class="mt-5 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+          Every retail swim-pool set ships with a repair kit for exactly this purpose. Need replacement patches, valves,
+          or adhesive? Email
+          <a href="mailto:info@felizbay.com" class="text-sky-600 dark:text-sky-400 hover:underline">
+            info@felizbay.com
+          </a>
+          .
+        </p>
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-slate-800 border border-gray-100 dark:border-slate-800 shadow-sm">
+        <img
+          src="/images/manual/leak-patch-repairs.webp"
+          alt="Locating a leak with soapy water and applying a rounded PVC patch"
+          width="1024"
+          height="765"
+          class="w-full h-auto"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* Related help */}
+  <section
+    class="bg-gray-50 dark:bg-slate-900/50 border-y border-gray-100 dark:border-slate-800 px-4 py-14 sm:px-6"
+    data-ai-block="manual-related"
+  >
+    <div class="mx-auto max-w-7xl">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">Related Help</h2>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {relatedLinks.map((c) => (
+          <a
+            href={c.href}
+            class="group flex flex-col rounded-2xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all"
+          >
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400">
+              <Icon name={c.icon} class="w-6 h-6" />
+            </span>
+            <h3 class="mt-4 text-base font-semibold text-gray-900 dark:text-slate-100">{c.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 flex-1">{c.description}</p>
+            <span class="mt-4 text-sm font-medium text-sky-600 dark:text-sky-400 group-hover:underline">
+              Read more →
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Final CTA */}
+  <section class="px-4 py-16 sm:px-6 mx-auto max-w-3xl text-center" data-ai-block="manual-cta">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+      Question about a step?
+    </h2>
+    <p class="mt-4 text-gray-500 dark:text-slate-400">
+      Send us your question, order reference, or a photo of the issue — our support team replies within one business
+      day.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="/contact/"
+        class="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg text-sm"
+      >
+        <Icon name="tabler:message-circle" class="w-5 h-5" />
+        Contact Support
+      </a>
+      <a
+        href="mailto:info@felizbay.com"
+        class="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 font-medium rounded-full hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+      >
+        <Icon name="tabler:mail" class="w-5 h-5" />
+        info@felizbay.com
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -15,6 +15,7 @@ Felizbay pools are built with drop stitch construction: thousands of internal th
 - [Find Your Pool](https://felizbay.com/find-your-pool/): Interactive pool advisor — match a pool to your space, household, and use case
 - [Pool Volume Calculator](https://felizbay.com/pool-volume-calculator/): Calculate water volume, weight, and hose fill time for any pool size
 - [Support Hub](https://felizbay.com/support/): After-sales help — shipping, warranty, care, and troubleshooting resources
+- [User Manual & Setup Guide](https://felizbay.com/user-manual/): Official drop stitch pool manual — six setup steps, mandatory safety warnings, draining and storage, leak detection and patch repair
 - [Returns & Warranty](https://felizbay.com/returns-and-warranty/): Return policy and warranty coverage
 
 ## B2B & Manufacturing

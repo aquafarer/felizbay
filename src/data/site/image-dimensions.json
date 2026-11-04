@@ -142,5 +142,65 @@
   "/images/pool-ideas/cold-plunge-and-recovery-pools.webp": {
     "w": 1024,
     "h": 762
+  },
+  "/images/manual/step6-accessories-cover.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/step5-water-level.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/step4-filtration.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/step3-seal-valve.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/step2-connect-inflate.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/step1-valve-preparation.webp": {
+    "w": 1024,
+    "h": 572
+  },
+  "/images/manual/safety-walls.webp": {
+    "w": 1024,
+    "h": 1024
+  },
+  "/images/manual/safety-supervision.webp": {
+    "w": 1024,
+    "h": 1024
+  },
+  "/images/manual/safety-read-first.webp": {
+    "w": 1024,
+    "h": 1024
+  },
+  "/images/manual/safety-no-diving.webp": {
+    "w": 1024,
+    "h": 1024
+  },
+  "/images/manual/leak-patch-repairs.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/drain4-folding-storage.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/drain2-cleaning-drying.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/drain1-draining.webp": {
+    "w": 1024,
+    "h": 765
+  },
+  "/images/manual/cover.webp": {
+    "w": 1024,
+    "h": 547
   }
 }

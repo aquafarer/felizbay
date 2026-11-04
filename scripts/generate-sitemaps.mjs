@@ -190,6 +190,7 @@ const AI_TOP_SECTIONS = [
   '/best-drop-stitch-inflatable-pools/',
   '/support/',
   '/returns-and-warranty/',
+  '/user-manual/',
   '/ai-answer-center/',
   // B2B
   '/for-businesses/',

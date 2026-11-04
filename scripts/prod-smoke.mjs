@@ -148,6 +148,23 @@ const CHECKS = [
   },
   { path: '/support/', marker: 'Support', desc: 'support hub' },
   {
+    path: '/user-manual/',
+    markers: [
+      'User Manual',
+      'Mandatory Safety Warnings',
+      '4–5 PSI',
+      'relief valve',
+      'href="/files/drop-stitch-pool-user-manual.pdf"',
+      'confirming the correct figures with the factory',
+    ],
+    desc: 'user manual page: six setup steps, safety warnings, SSOT pressure figures with factory-confirmation note, PDF download link',
+  },
+  {
+    path: '/files/drop-stitch-pool-user-manual.pdf',
+    contentType: 'application/pdf',
+    desc: 'hosted user manual PDF (factory original, hosted per admin decision)',
+  },
+  {
     path: '/returns-and-warranty/',
     markers: ['Warranty', 'accessories originally supplied with your selected set'],
     desc: 'warranty policy: returns wording matches per-set package contents',
