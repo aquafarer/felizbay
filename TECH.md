@@ -2084,3 +2084,18 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 **验收断言** (prod-smoke 57 → 58 项): hot-tub PDP 三 marker (`RS2018` / `Ø 2 × 0.8 m` / `fixed-size retail set`) + 三 notMarker (`Diameter 1.8 m` / `8 cm / 10 cm / 15 cm` / `fitg-size`); find-your-pool 四 marker (`data-finder` / `Shop a Retail Set` / `FZ-SPA-RND` / `Request a quote`); returns 新措辞 marker。dist 本地验证: 37 语言首页 48-SKU 残留清零; `pool-catalog.ts` 恰 48 条 — wholesale/oem-odm/private-label 页 "48 SKUs" 主张属实 (SSOT 对账)。
 
 **仍阻塞** (不得编数): 蓝/灰零售 SKU 12 字段签核表、灰款 +$100 原因、浸泡池 $499 实际装箱清单、RS2018 实物照片 (现 hero 为 RS1808 工厂照)、配送数据 (国家/发货地/时效/跨境税费)。
+
+### 19.8 find-your-pool v2: docx 外部审查响应 (2026-11-04)
+
+外部审查 docx (`检查Find Your Pool选型工具逻辑.docx`) 对 v1 双入口版提出 P0×4 + P1×2; v2 整页重写逐项落地:
+
+- **P0-1 purpose 前置真分流**: purpose 移到第一问并真正切换结果区 — personal → 仅 3 个零售候选卡 (`#retail-results`, 默认 `display:none`, JS 切换; `<noscript>` 样式回退显示); business → `#project-planner` 候选族。按钮三态: 零售 "View This Exact Set" / 商业 "Request a Project Review" (`/contact/?project=` 预填) / 状态面板 "Ask for Product Advice" + "Request Compatibility Advice"。商业区标题改 "Potential Product Family for Review" (禁 "Your Perfect Pool" 式确认语)。
+- **P0-2 空间口径统一**: 输入标签 "Total clear, level area available", 帮助文案 "Enter the full length and width available for the pool, access and required equipment. Do not subtract clearance yourself"; 删除全站统一 50 cm 通道主张 (v1 遗留) → "required clearance depends on the selected model, equipment layout and applicable local requirements"。dims 四态: none/partial (提示补全, 回退 bucket)/invalid (0/负/非数字 → 警告 + 不做精确匹配)/valid (覆盖 space bucket, 保留 use 过滤); 矩形 90° 旋转匹配, 圆形直径比两边。
+- **P0-3 功能硬筛选**: features 改 4 选项多选 (ambient 互斥清空其余): bubble/massage → 全部结果卡隐藏 + "Unsupported feature" 面板 (按摩文案 = docx 原文 "We cannot confirm a standard massage-jet configuration for your requirements."); heated → 仅 soak 候选卡 (`data-heat="candidate"`) + "Compatibility review required" 面板 (无型号级已核实加热配置, 不输出确定推荐)。
+- **P0-4 高架/商业转审核**: install-raised → 状态面板 "Installation review required" (优先级仅次于 unsupported/no-fit), 候选卡保留但明确 "installation suitability is not confirmed"。
+- **P1 no-match 5 态**: 状态面板 `data-finder-status` 单面板承载 unsupported / no-fit (含哪一维度不满足 + "do not reduce required installation clearance to force a fit") / review-required / compatibility-review; insufficient-data 为卡级静态标注 — 蓝/灰卡 `data-dims-known="false"` 永不参与尺寸匹配, 卡面常显 "Insufficient data: ... we do not substitute factory sizes"。
+- **P1 卡片收敛**: 14 个商业 setup 全部绑定真实目录型号 (SS151508/SS181808/SS202008/SS202010/SS211608/SS242410/SS302010/SR341220/SR561250/S2005–S10012/RS1808/RS2018/RS2308, 对账 `pool-catalog.ts` 48 条 SSOT; 注意 SR341220 实为 4×3×1.2 — 命名 SR34=4×3); "3 × 2 m square" → rectangular; Hospitality Plunge 删 "connects to standard cartridge filtration" 未核实兼容主张 → "quoted and confirmed per project"; use 问题扩 6 选项 (use-cold/use-fitness/use-pets 新增, 消除不可达结果卡); who 标签降级为解释组 (TAG_TEXT 渲染进 why-text, 不参与过滤)。
+- **埋点**: answers 快照 qid 化 (purpose/install/use/space/who/features 多选 join/dims); result_click target 扩 shop/guide/review/advice。
+- **验收** (prod-smoke 58 项, finder 断言替换): markers `data-finder` / `Shop a Retail Set` / `FZ-SPA-RND` / `View This Exact Set` / `Request a Project Review` / `Potential Product Family for Review` / `Total clear, level area available`; notMarker `Request a quote` (v1 CTA 不得残留)。dist 静态验证: 状态面板五态文案全部在打包 JS chunk 内, 零售卡 `display:none` + noscript 回退确认。docx §10 交互用例表标注为需人工浏览器测试 (构建静态验证只覆盖分支存在性)。
+
+**仍阻塞** (同 19.7, 另加): 蓝/灰固定尺寸签核前, personal 路径尺寸检查仅 RS2018 生效 (opts `[{d:2}]`); model-level 加热器/气泡设备兼容清单 (docx P0-3 要求, heated 目前只能 Compatibility review)。

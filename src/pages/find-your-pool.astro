@@ -22,6 +22,14 @@ interface RetailSet {
   summary: string;
   included: string;
   size: string;
+  important: string;
+  /** Primary use tag (drives the personal-path use filter) */
+  tags: string[];
+  /** true when the exact external dimensions of this set are published */
+  dimsKnown: boolean;
+  /** Candidate for heated soaking via an external heater (confirmed per order) */
+  heat?: boolean;
+  opts: FitOption[];
 }
 
 interface PoolSetup {
@@ -32,14 +40,17 @@ interface PoolSetup {
   shopHref: string;
   ideaHref?: string;
   tags: string[];
+  /** Candidate for heated soaking via an external heater (confirmed per order) */
+  heat?: boolean;
   opts: FitOption[];
 }
 
 /**
- * Retail entry (2026-11 purchasability review): the three fixed-size sets
- * sold online as single pieces. Static cards — honest interactive filtering
- * is impossible while two of the three sets have unconfirmed dimensions, so
- * the exclusions below state the "no fit" boundaries instead.
+ * Retail candidates (2026-11 docx review, P0-1): the three fixed-size sets
+ * sold online as single pieces. Personal-path results are filtered ONLY
+ * against these. Sets whose exact dimensions are not yet published carry
+ * dimsKnown=false — they are never auto-matched against factory sizes and
+ * keep a visible "insufficient data" note instead.
  */
 const retailSets: RetailSet[] = [
   {
@@ -50,6 +61,11 @@ const retailSets: RetailSet[] = [
     summary: 'The classic family swim pool — rigid high-pressure drop stitch walls in a bold blue finish.',
     included: '1000W electric air pump, repair kit, storage bag',
     size: 'One fixed factory size — ask us for the exact dimensions before you order.',
+    important:
+      'Insufficient data: the exact external dimensions of this set are not yet published. Request them and check the fit against your measured area before ordering — we do not substitute factory sizes.',
+    tags: ['use-play'],
+    dimsKnown: false,
+    opts: [],
   },
   {
     title: 'Round Grey Drop Stitch Pool',
@@ -59,6 +75,11 @@ const retailSets: RetailSet[] = [
     summary: 'Premium grey finish for modern backyards — optional fitted cover sold separately.',
     included: '1000W electric air pump, repair kit, storage bag',
     size: 'One fixed factory size — ask us for the exact dimensions before you order.',
+    important:
+      'Insufficient data: the exact external dimensions of this set are not yet published. Request them and check the fit against your measured area before ordering — we do not substitute factory sizes.',
+    tags: ['use-play'],
+    dimsKnown: false,
+    opts: [],
   },
   {
     title: 'Round Soaking Tub with Seats',
@@ -68,6 +89,12 @@ const retailSets: RetailSet[] = [
     summary: 'Built-in seats and a 5 mm insulated bottom — pairs with an external heater (sold separately).',
     included: 'Tub shell with built-in seats, 5 mm insulated bottom',
     size: 'Ø 2 × 0.8 m (factory item RS2018, 10 cm wall).',
+    important:
+      'No heater is included. External heater compatibility is confirmed per order — request compatibility advice before planning a heated setup.',
+    tags: ['use-soak'],
+    dimsKnown: true,
+    heat: true,
+    opts: [{ d: 2 }],
   },
 ];
 
@@ -95,19 +122,22 @@ const retailCaveats = [
 ];
 
 /**
- * Business / project planner: factory series sizes straight from the
- * Felizbay catalog, quoted FOB Qingdao. These are NOT single-piece retail
- * prices — every setup routes to a wholesale quote.
+ * Business / project planner (docx P0-1): factory series candidates straight
+ * from the Felizbay catalog (pool-catalog.ts SSOT), quoted FOB Qingdao. These
+ * are NOT retail recommendations — the section is framed as
+ * "Potential Product Family for Review" and every CTA requests a project
+ * review. Model numbers in parentheses are real catalog items; sizes in opts
+ * mirror them for the exact-area fit check (rect 90° rotation included).
  */
 const setups: PoolSetup[] = [
   {
     title: 'Family Splash Pool',
     description: 'Knee-to-waist-deep play space for kids with rigid drop-stitch walls. Fills fast, heats easily.',
     sizes: 'Ø 3 – 4 m round, 1 – 1.2 m wall',
-    products: 'Classic Round Pool',
+    products: 'Classic Round Pool (S3012 / S4012)',
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/backyard-pools-for-families/',
-    tags: ['use-play', 'space-medium', 'who-family'],
+    tags: ['use-play', 'space-medium'],
     opts: [{ d: 3 }, { d: 4 }],
   },
   {
@@ -118,7 +148,7 @@ const setups: PoolSetup[] = [
     products: 'Classic Round Pool (S2005)',
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-small-backyards/',
-    tags: ['use-play', 'space-compact', 'who-family'],
+    tags: ['use-play', 'space-compact', 'space-medium'],
     opts: [{ d: 2 }],
   },
   {
@@ -126,10 +156,10 @@ const setups: PoolSetup[] = [
     description:
       'Real swimming depth with rigid drop-stitch walls. The everyday family pool that packs away in autumn.',
     sizes: 'Ø 5 – 6 m round or 4 × 3 m rectangular',
-    products: 'Round & Rectangular Pools',
+    products: 'Round Pool (S5012 / S6012) & Rectangular (SR341220)',
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/backyard-pools-for-families/',
-    tags: ['use-play', 'space-large', 'who-family'],
+    tags: ['use-play', 'space-large'],
     opts: [{ d: 5 }, { d: 6 }, { l: 4, w: 3 }],
   },
   {
@@ -137,20 +167,22 @@ const setups: PoolSetup[] = [
     description:
       'Built-in seats, a 5 mm insulated thermal bottom, and a footprint that fits the smallest courtyard. Pairs with an external heater (sold separately).',
     sizes: '1.5 × 1.5 m square or Ø 1.8 m round',
-    products: 'SPA Tubs (SS / RS Series)',
+    products: 'Square SPA Tub (SS151508) / Round SPA Tub (RS1808)',
     shopHref: '/products/hot-tub-square-rect/',
     ideaHref: '/pool-ideas/outdoor-soaking-pools/',
-    tags: ['use-soak', 'space-compact', 'who-adults'],
+    tags: ['use-soak', 'space-compact', 'space-medium'],
+    heat: true,
     opts: [{ l: 1.5, w: 1.5 }, { d: 1.8 }],
   },
   {
     title: 'Garden Soaking Tub',
     description: 'A full soaking spa for the household — insulated, seated, and sized for a normal garden corner.',
-    sizes: 'Ø 2.0 – 2.3 m round or 3 × 2 m square',
-    products: 'SPA Tubs (SS / RS Series)',
+    sizes: 'Ø 2 – 2.3 m round or 3 × 2 m rectangular',
+    products: 'Round SPA Tub (RS2018 / RS2308) & Square SPA Tub (SS302010)',
     shopHref: '/products/hot-tub-round/',
     ideaHref: '/pool-ideas/outdoor-soaking-pools/',
-    tags: ['use-soak', 'space-medium', 'who-adults'],
+    tags: ['use-soak', 'space-medium'],
+    heat: true,
     opts: [{ d: 2 }, { d: 2.3 }, { l: 3, w: 2 }],
   },
   {
@@ -158,21 +190,21 @@ const setups: PoolSetup[] = [
     description:
       'The centerpiece for parties and reunions — swim-area sizes with reinforced seams and a pressure-relief valve.',
     sizes: 'Ø 6 – 10 m round or 6 × 5 m rectangular',
-    products: 'Large Round & Rectangular',
+    products: 'Large Round Pool (S6012 / S7012 / S10012) & Rectangular (SR561250)',
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/large-pools-for-family-gatherings/',
-    tags: ['use-entertain', 'space-large', 'who-mixed'],
-    opts: [{ d: 6 }, { d: 8 }, { d: 10 }, { l: 6, w: 5 }],
+    tags: ['use-entertain', 'space-large'],
+    opts: [{ d: 6 }, { d: 7 }, { d: 10 }, { l: 6, w: 5 }],
   },
   {
     title: 'Guest Amenity Pool',
     description:
       'A low-commitment amenity for vacation rentals — inflates in minutes with a 1000W electric pump, drains at season end, no construction.',
     sizes: 'Ø 4 – 5 m round typical',
-    products: 'Round & Rectangular Pools',
+    products: 'Round Pool (S4012 / S5012)',
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-vacation-rentals/',
-    tags: ['use-entertain', 'space-medium', 'who-mixed'],
+    tags: ['use-entertain', 'space-medium'],
     opts: [{ d: 4 }, { d: 5 }],
   },
   {
@@ -180,32 +212,34 @@ const setups: PoolSetup[] = [
     description:
       'The signature glamping moment: a woodside soaking tub for cabin decks and boutique hospitality sites.',
     sizes: 'Ø 1.8 – 2.3 m round',
-    products: 'Round SPA Tub (RS Series)',
+    products: 'Round SPA Tub (RS1808 / RS2018 / RS2308)',
     shopHref: '/products/hot-tub-round/',
     ideaHref: '/pool-ideas/pools-for-glamping-and-hospitality/',
-    tags: ['use-soak', 'space-medium', 'who-mixed'],
-    opts: [{ d: 1.8 }, { d: 2.3 }],
+    tags: ['use-soak', 'space-compact', 'space-medium'],
+    heat: true,
+    opts: [{ d: 1.8 }, { d: 2 }, { d: 2.3 }],
   },
   {
     title: 'Cold Plunge Tub',
     description:
       'A rigid, insulated tub for cold-water immersion — built-in seats and an insulated base. Confirm your target water temperature and equipment compatibility before ordering.',
     sizes: 'Ø 1.8 – 2.3 m round or 2 × 2 m square',
-    products: 'SPA Tubs (RS / SS Series)',
+    products: 'Round SPA Tub (RS1808 / RS2018 / RS2308) & Square SPA Tub (SS202008)',
     shopHref: '/products/hot-tub-round/',
     ideaHref: '/pool-ideas/cold-plunge-and-recovery-pools/',
-    tags: ['use-soak', 'space-compact', 'who-adults'],
-    opts: [{ d: 1.8 }, { d: 2.3 }, { l: 2, w: 2 }],
+    tags: ['use-cold', 'space-compact', 'space-medium'],
+    opts: [{ d: 1.8 }, { d: 2 }, { d: 2.3 }, { l: 2, w: 2 }],
   },
   {
     title: "Couple's Courtyard Soak",
     description:
       'A design-led two-person retreat for patios and courtyards — low water volume and a compact footprint.',
-    sizes: '2.1 × 1.6 m or Ø 1.8 – 2 m',
-    products: 'SPA Tubs (SS / RS Series)',
+    sizes: '2.1 × 1.6 m rectangular or Ø 1.8 – 2 m round',
+    products: 'Square SPA Tub (SS211608) / Round SPA Tub (RS1808 / RS2018)',
     shopHref: '/products/hot-tub-square-rect/',
     ideaHref: '/pool-ideas/pools-for-dink-households/',
-    tags: ['use-soak', 'space-medium', 'who-adults'],
+    tags: ['use-soak', 'space-compact', 'space-medium'],
+    heat: true,
     opts: [{ l: 2.1, w: 1.6 }, { d: 1.8 }, { d: 2 }],
   },
   {
@@ -213,10 +247,10 @@ const setups: PoolSetup[] = [
     description:
       'Wide, stable, waist-deep water for water aerobics, stretching, and active family play — no lap-pool footprint.',
     sizes: 'Ø 4 – 5 m round or 3 × 2 m rectangular',
-    products: 'Round & Rectangular Pools',
+    products: 'Round Pool (S4012 / S5012) & Square SPA Tub (SS302010)',
     shopHref: '/products/rectangular-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-water-fitness-and-recreation/',
-    tags: ['use-play', 'space-medium', 'who-adults'],
+    tags: ['use-fitness', 'space-medium'],
     opts: [{ d: 4 }, { d: 5 }, { l: 3, w: 2 }],
   },
   {
@@ -224,10 +258,10 @@ const setups: PoolSetup[] = [
     description:
       'Rigid drop-stitch walls built from the same fabric as our family pools — a supervised summer cool-down for dogs.',
     sizes: 'Ø 2 – 3 m round',
-    products: 'Classic Round Pool',
+    products: 'Classic Round Pool (S2005 / S3010)',
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-pet-families/',
-    tags: ['use-play', 'space-medium', 'who-family'],
+    tags: ['use-pets', 'space-compact', 'space-medium'],
     opts: [{ d: 2 }, { d: 3 }],
   },
   {
@@ -235,21 +269,22 @@ const setups: PoolSetup[] = [
     description:
       'A fleet-ready water feature for festivals, brand activations, and rentals — fast deploy, fast strike, packs flat.',
     sizes: 'Ø 4 – 6 m round typical',
-    products: 'Large Round & Rectangular',
+    products: 'Large Round Pool (S4012 – S6012)',
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-rental-and-event-operators/',
-    tags: ['use-entertain', 'space-large', 'who-mixed'],
+    tags: ['use-entertain', 'space-medium', 'space-large'],
     opts: [{ d: 4 }, { d: 5 }, { d: 6 }],
   },
   {
     title: 'Hospitality Plunge',
     description:
-      'A suite-terrace or courtyard soak for boutique hotels and estates — non-invasive install; connects to standard cartridge filtration (sold separately).',
+      'A suite-terrace or courtyard soak for boutique hotels and estates — non-invasive install; filtration and heating equipment are quoted and confirmed per project.',
     sizes: '1.8 × 1.8 m to 3 × 2 m',
-    products: 'SPA Tubs (SS Series)',
+    products: 'Square SPA Tub (SS181808 / SS302010)',
     shopHref: '/products/hot-tub-square-rect/',
     ideaHref: '/pool-ideas/pools-for-boutique-hotels-and-luxury-estates/',
-    tags: ['use-entertain', 'space-medium', 'who-mixed'],
+    tags: ['use-entertain', 'space-compact', 'space-medium'],
+    heat: true,
     opts: [
       { l: 1.8, w: 1.8 },
       { l: 3, w: 2 },
@@ -257,8 +292,30 @@ const setups: PoolSetup[] = [
   },
 ];
 
-const questions: Array<{ label: string; filter: string; filters: Array<{ id: string; text: string }> }> = [
+/**
+ * Question order per docx §2/§9: purpose FIRST and it truly splits the flow
+ * (personal → retail candidates only; business → project-family candidates).
+ * 'features' is multi-select ("Ambient-water use" clears the rest).
+ * 'who' is explanation-only — it never filters results (docx §9).
+ */
+const questions: Array<{
+  qid: string;
+  label: string;
+  hint?: string;
+  filter: 'tag' | 'info' | 'features';
+  filters: Array<{ id: string; text: string }>;
+}> = [
   {
+    qid: 'purpose',
+    label: 'Is this for personal use or a business project?',
+    filter: 'info',
+    filters: [
+      { id: 'purpose-personal', text: 'Personal / family use' },
+      { id: 'purpose-business', text: 'Business or rental project' },
+    ],
+  },
+  {
+    qid: 'install',
     label: 'Where will it be installed?',
     filter: 'info',
     filters: [
@@ -267,16 +324,34 @@ const questions: Array<{ label: string; filter: string; filters: Array<{ id: str
     ],
   },
   {
+    qid: 'use',
     label: 'What will you use it for?',
     filter: 'tag',
     filters: [
       { id: 'use-play', text: 'Swim & Play' },
       { id: 'use-soak', text: 'Relax & Soak' },
       { id: 'use-entertain', text: 'Entertain Guests' },
+      { id: 'use-cold', text: 'Cold Plunge & Recovery' },
+      { id: 'use-fitness', text: 'Water Fitness' },
+      { id: 'use-pets', text: 'Pet Splash' },
     ],
   },
   {
-    label: 'How much flat space do you have?',
+    qid: 'features',
+    label: 'Which features do you require?',
+    hint: 'Select all that apply — picking “Ambient-water use” clears the others.',
+    filter: 'features',
+    filters: [
+      { id: 'ambient', text: 'Ambient-water use' },
+      { id: 'heated', text: 'Heated soaking' },
+      { id: 'bubble', text: 'Bubble system' },
+      { id: 'massage', text: 'Water-jet massage' },
+    ],
+  },
+  {
+    qid: 'space',
+    label: 'Roughly how much total clear, level area do you have?',
+    hint: 'Skip this if you enter exact measurements below.',
     filter: 'tag',
     filters: [
       { id: 'space-compact', text: 'Compact (under 3 m)' },
@@ -285,29 +360,14 @@ const questions: Array<{ label: string; filter: string; filters: Array<{ id: str
     ],
   },
   {
-    label: 'Do you need heating or massage?',
-    filter: 'info',
-    filters: [
-      { id: 'climate-none', text: 'No — ambient water' },
-      { id: 'climate-heating', text: 'Heated soaking' },
-      { id: 'climate-massage', text: 'Massage jets' },
-    ],
-  },
-  {
+    qid: 'who',
     label: 'Who is it mainly for?',
-    filter: 'tag',
+    hint: 'Explanation only — this never filters the results.',
+    filter: 'info',
     filters: [
       { id: 'who-family', text: 'Kids & Family' },
       { id: 'who-adults', text: 'Adults' },
       { id: 'who-mixed', text: 'Guests / Mixed' },
-    ],
-  },
-  {
-    label: 'Personal use or business project?',
-    filter: 'info',
-    filters: [
-      { id: 'purpose-personal', text: 'Personal / family use' },
-      { id: 'purpose-business', text: 'Business or rental project' },
     ],
   },
 ];
@@ -315,7 +375,7 @@ const questions: Array<{ label: string; filter: string; filters: Array<{ id: str
 const metadata = merge(
   {
     title: `Find Your Pool | ${SITE.name}`,
-    description: `Compare the three fixed-size Felizbay retail sets sold online, or plan a business and wholesale project against the full factory catalog — sizes, fits, and honest no-match guidance.`,
+    description: `Personal buyers are matched only against the three fixed-size Felizbay retail sets sold online; business projects review candidate factory families from the catalog — with honest no-fit, insufficient-data and review-required states.`,
     openGraph: { type: 'website' },
   },
   {}
@@ -323,35 +383,164 @@ const metadata = merge(
 ---
 
 <Layout metadata={metadata} breadcrumbs={[{ name: 'Find Your Pool' }]}>
-  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl" id="finder-root">
     <header class="mb-10 md:mb-12 text-center max-w-3xl mx-auto">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Pool Finder</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Find Your Pool</h1>
       <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Two ways to find your pool: shop the three fixed-size retail sets sold online below, or plan a business project
-        against the full factory catalog. Sizes come straight from the Felizbay factory catalog — and we say “no match”
-        honestly when nothing fits.
+        One questionnaire, two honest paths. Personal buyers are matched only against the three fixed-size retail sets
+        sold online; business projects review candidate factory families from the Felizbay catalog. When nothing fits —
+        or the data is not confirmed yet — we say so instead of forcing a match.
       </p>
     </header>
 
-    <!-- Entry A: retail sets -->
-    <div id="retail-sets" class="mb-16 md:mb-20 scroll-mt-24">
+    <!-- Questionnaire (purpose first — it splits retail vs business) -->
+    <div class="mb-10 space-y-5" data-finder>
+      {questions.map((q) => (
+        <div class="text-center" data-qid={q.qid} data-filter={q.filter}>
+          <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+            {q.label}
+            {q.hint && <span class="font-normal text-gray-400 dark:text-slate-500"> ({q.hint})</span>}
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            {q.filters.map((f) => (
+              <button
+                type="button"
+                data-answer={f.id}
+                class="finder-chip inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700"
+              >
+                {f.text}
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <!-- Total clear, level area (docx P0-2: one unified input definition) -->
+      <div class="text-center" data-qid="dims" data-filter="dim">
+        <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+          Total clear, level area available
+          <span class="font-normal text-gray-400 dark:text-slate-500">
+            (optional — takes priority over the buckets)
+          </span>
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <label for="finder-len" class="sr-only">
+            Available length in meters
+          </label>
+          <input
+            id="finder-len"
+            type="number"
+            min="0"
+            max="30"
+            step="0.1"
+            inputmode="decimal"
+            placeholder="Length m"
+            data-dim-l
+            class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          />
+          <span class="text-sm text-gray-400 dark:text-slate-500">×</span>
+          <label for="finder-wid" class="sr-only">
+            Available width in meters
+          </label>
+          <input
+            id="finder-wid"
+            type="number"
+            min="0"
+            max="30"
+            step="0.1"
+            inputmode="decimal"
+            placeholder="Width m"
+            data-dim-w
+            class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          />
+        </div>
+        <p class="mt-2 text-xs text-gray-400 dark:text-slate-500 max-w-xl mx-auto">
+          Enter the full length and width available for the pool, access and required equipment. Do not subtract
+          clearance yourself — required clearance depends on the selected model, equipment layout and applicable local
+          requirements.
+        </p>
+      </div>
+
+      <!-- Delivery country -->
+      <div class="text-center" data-qid="country" data-filter="info">
+        <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+          Delivery country <span class="font-normal text-gray-400 dark:text-slate-500">(optional)</span>
+        </p>
+        <label for="finder-country" class="sr-only">
+          Delivery country
+        </label>
+        <input
+          id="finder-country"
+          type="text"
+          maxlength="60"
+          placeholder="e.g. Germany"
+          data-country
+          class="w-56 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+        />
+      </div>
+
+      <div class="text-center">
+        <button
+          type="button"
+          data-finder-reset
+          class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-500 dark:text-slate-400 hover:text-gray-800 dark:hover:text-slate-200 transition-colors"
+        >
+          <Icon name="tabler:refresh" class="w-4 h-4" />
+          Start over
+        </button>
+      </div>
+    </div>
+
+    <!-- Contextual notices (routing, input guidance, delivery) -->
+    <div class="mb-8 space-y-3 empty:hidden" data-finder-notices aria-live="polite"></div>
+
+    <!-- Result status panel: unsupported / no-fit / review-required / compatibility (docx §6) -->
+    <div
+      class="hidden mb-8 rounded-2xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 p-6 md:p-8 text-center"
+      data-finder-status
+    >
+      <h2 class="text-lg font-semibold font-heading text-amber-900 dark:text-amber-100" data-status-title></h2>
+      <p class="mt-2 text-sm text-amber-800 dark:text-amber-200 leading-relaxed max-w-2xl mx-auto" data-status-text></p>
+      <div class="mt-5">
+        <a
+          data-status-cta
+          href="/contact/"
+          class="inline-flex items-center justify-center px-5 py-2.5 bg-amber-600 hover:bg-amber-500 text-white text-sm font-semibold rounded-lg transition-colors"
+        ></a>
+      </div>
+    </div>
+
+    <!-- Personal path: retail sets (shown when purpose = personal) -->
+    <div id="retail-results" style="display:none" class="mb-16 md:mb-20 scroll-mt-24">
       <div class="mb-6 max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Retail Sets</p>
         <h2 class="text-2xl md:text-3xl font-bold font-heading dark:text-slate-100">Shop a Retail Set</h2>
         <p class="mt-2 text-sm md:text-base text-gray-500 dark:text-slate-400">
-          Three fixed-size sets sold online as single pieces, shipped directly to your door. Each set is one factory
-          size — the exact dimensions and package contents are listed on each product page.
+          Personal purchases are matched only against these three fixed-size sets, sold online as single pieces and
+          shipped directly to your door. Exact fit is checked against your entered clear area where the dimensions are
+          published — sets without published dimensions stay visible with an honest “insufficient data” note instead of
+          being auto-matched.
         </p>
       </div>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-retail-grid>
         {retailSets.map((s) => (
-          <article class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6">
+          <article
+            class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
+            data-tags={s.tags.join(' ')}
+            data-opts={JSON.stringify(s.opts)}
+            data-dims-known={s.dimsKnown ? 'true' : 'false'}
+            data-heat={s.heat ? 'candidate' : ''}
+          >
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="text-lg font-semibold font-heading dark:text-slate-100">{s.title}</h3>
               <span class="text-2xl font-bold text-gray-900 dark:text-slate-100 shrink-0">{s.price}</span>
             </div>
-            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.summary}</p>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{s.summary}</p>
+            <p
+              class="mt-3 hidden rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/50 px-3 py-2 text-xs leading-relaxed text-sky-900 dark:text-sky-200"
+              data-why
+            />
             <dl class="mt-4 space-y-2 text-sm">
               <div>
                 <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
@@ -371,13 +560,19 @@ const metadata = merge(
                 </dt>
                 <dd class="font-mono text-xs text-gray-500 dark:text-slate-400">{s.sku}</dd>
               </div>
+              <div>
+                <dt class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                  Important
+                </dt>
+                <dd class="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">{s.important}</dd>
+              </div>
             </dl>
             <div class="mt-5 flex items-center gap-3">
               <a
                 href={s.href}
                 class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
               >
-                View the set
+                View This Exact Set
                 <Icon name="tabler:arrow-right" class="w-4 h-4" />
               </a>
               <span class="text-xs font-medium text-green-600 whitespace-nowrap">Available to order</span>
@@ -398,141 +593,21 @@ const metadata = merge(
       </div>
     </div>
 
-    <!-- Entry B: business & project planner -->
+    <!-- Business path: candidate product families for review (docx P0-4) -->
     <div id="project-planner" class="mb-10 scroll-mt-24">
       <div class="mb-6 max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
           Business &amp; Project Planner
         </p>
-        <h2 class="text-2xl md:text-3xl font-bold font-heading dark:text-slate-100">Plan a Business or Project Pool</h2>
-        <p class="mt-2 text-sm md:text-base text-gray-500 dark:text-slate-400">
-          Factory series sizes from the Felizbay catalog, quoted FOB Qingdao (price basis 20 pcs per item) — for
-          vacation rentals, glamping sites, hotels, resellers, and events. These are wholesale sizes, not single-piece
-          retail prices: answer a few questions to narrow the setups, then request a quote with your project details.
-        </p>
-      </div>
-
-      <!-- Questions -->
-      <div class="mb-8 space-y-5" data-finder>
-        {questions.map((q) => (
-          <div class="text-center" data-question={q.label} data-filter={q.filter}>
-            <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">{q.label}</p>
-            <div class="flex flex-wrap items-center justify-center gap-2">
-              {q.filters.map((f) => (
-                <button
-                  type="button"
-                  data-answer={f.id}
-                  class="finder-chip inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700"
-                >
-                  {f.text}
-                </button>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        <!-- Exact measurements (takes priority over the size buckets) -->
-        <div class="text-center" data-question="Exact flat area available" data-filter="dim">
-          <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
-            Exact flat area available
-            <span class="font-normal text-gray-400 dark:text-slate-500">
-              (optional — takes priority over the buckets above)
-            </span>
-          </p>
-          <div class="flex flex-wrap items-center justify-center gap-2">
-            <label for="finder-len" class="sr-only">
-              Available length in meters
-            </label>
-            <input
-              id="finder-len"
-              type="number"
-              min="0"
-              max="30"
-              step="0.1"
-              inputmode="decimal"
-              placeholder="Length m"
-              data-dim-l
-              class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-            />
-            <span class="text-sm text-gray-400 dark:text-slate-500">×</span>
-            <label for="finder-wid" class="sr-only">
-              Available width in meters
-            </label>
-            <input
-              id="finder-wid"
-              type="number"
-              min="0"
-              max="30"
-              step="0.1"
-              inputmode="decimal"
-              placeholder="Width m"
-              data-dim-w
-              class="w-28 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-            />
-          </div>
-          <p class="mt-2 text-xs text-gray-400 dark:text-slate-500">
-            Measure the flat area the pool itself can occupy — keep at least 50 cm (ideally 1 m) of walkway outside it.
-          </p>
-        </div>
-
-        <!-- Delivery country -->
-        <div class="text-center" data-question="Delivery country" data-filter="info">
-          <p class="text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
-            Delivery country <span class="font-normal text-gray-400 dark:text-slate-500">(optional)</span>
-          </p>
-          <label for="finder-country" class="sr-only">
-            Delivery country
-          </label>
-          <input
-            id="finder-country"
-            type="text"
-            maxlength="60"
-            placeholder="e.g. Germany"
-            data-country
-            class="w-56 px-4 py-2.5 rounded-full text-sm border bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-          />
-        </div>
-
-        <div class="text-center">
-          <button
-            type="button"
-            data-finder-reset
-            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-500 dark:text-slate-400 hover:text-gray-800 dark:hover:text-slate-200 transition-colors"
-          >
-            <Icon name="tabler:refresh" class="w-4 h-4" />
-            Start over
-          </button>
-        </div>
-      </div>
-
-      <!-- Contextual notices (installation limits, heating/massage, business, delivery) -->
-      <div class="mb-8 space-y-3 empty:hidden" data-finder-notices aria-live="polite"></div>
-
-      <!-- No-match panel -->
-      <div
-        class="hidden mb-8 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 md:p-8 text-center"
-        data-finder-nomatch
-      >
-        <h2 class="text-lg font-semibold font-heading dark:text-slate-100" data-nomatch-title>
-          No standard model matches your answers
+        <h2 class="text-2xl md:text-3xl font-bold font-heading dark:text-slate-100">
+          Potential Product Family for Review
         </h2>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto" data-nomatch-text>
-          Try relaxing a filter — or contact us and we'll point you to the right model.
+        <p class="mt-2 text-sm md:text-base text-gray-500 dark:text-slate-400">
+          Factory series from the Felizbay catalog (quoted FOB Qingdao, price basis 20 pcs per item) — for vacation
+          rentals, glamping sites, hotels, resellers, and events. These are candidate product families, not confirmed
+          recommendations: answer the questions to narrow the list, then request a project review — we confirm model,
+          equipment and suitability per project. Model numbers in parentheses are real catalog items.
         </p>
-        <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="/contact/"
-            class="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-          >
-            Ask us for a recommendation
-          </a>
-          <a
-            href="/products/specs/"
-            class="inline-flex items-center justify-center px-5 py-2.5 border border-gray-200 dark:border-slate-700 text-gray-600 dark:text-slate-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
-          >
-            Wholesale price list
-          </a>
-        </div>
       </div>
 
       <!-- Result cards -->
@@ -542,9 +617,10 @@ const metadata = merge(
             class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
             data-tags={s.tags.join(' ')}
             data-opts={JSON.stringify(s.opts)}
+            data-heat={s.heat ? 'candidate' : ''}
           >
-            <h2 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h2>
-            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed flex-1">{s.description}</p>
+            <h3 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h3>
+            <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{s.description}</p>
             <p
               class="mt-3 hidden rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-100 dark:border-sky-900/50 px-3 py-2 text-xs leading-relaxed text-sky-900 dark:text-sky-200"
               data-why
@@ -565,10 +641,10 @@ const metadata = merge(
             </dl>
             <div class="mt-5 flex items-center gap-3">
               <a
-                href={`/contact/?product=${encodeURIComponent(`${s.products} — ${s.title}`)}`}
+                href={`/contact/?project=${encodeURIComponent(`${s.title} — ${s.products}`)}`}
                 class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
               >
-                Request a quote
+                Request a Project Review
               </a>
               {s.ideaHref && (
                 <a
@@ -590,7 +666,8 @@ const metadata = merge(
       </div>
 
       <p class="mt-6 text-center text-sm text-gray-400 dark:text-slate-500" data-finder-hint>
-        Tip: exact measurements give the tightest match — or browse the full factory size and price matrix on the
+        Tip: exact measurements give the tightest match, and required clearance depends on the selected model, equipment
+        layout and applicable local requirements. Or browse the full factory size and price matrix on the
         <a href="/products/specs/" class="text-primary dark:text-blue-400 underline underline-offset-2 font-medium">
           wholesale price list
         </a>
@@ -603,8 +680,8 @@ const metadata = merge(
       {[
         {
           icon: 'tabler:ruler',
-          title: 'Measure your space',
-          text: 'Mark the pool footprint with string or tape, leaving at least 50 cm (ideally 1 m) of clear, non-slip walkway on all sides. Remember the surface must carry the water: roughly 1 t per m³.',
+          title: 'Measure the total clear area',
+          text: 'Mark the full clear, level area with string or tape — pool plus access and equipment space. Do not subtract clearance yourself: required clearance depends on the selected model, equipment layout and applicable local requirements. The surface must carry the water: roughly 1 t per m³.',
         },
         {
           icon: 'tabler:flame',
@@ -645,6 +722,15 @@ const metadata = merge(
         <Icon name="tabler:arrow-right" class="w-5 h-5" />
       </a>
     </div>
+
+    <!-- No-JS fallback: reveal the retail sets (JS hides #retail-results until purpose = personal) -->
+    <noscript>
+      <style>
+        #retail-results {
+          display: block !important;
+        }
+      </style>
+    </noscript>
   </section>
 
   <script>
@@ -655,20 +741,25 @@ const metadata = merge(
         w?: number;
       }
 
-      const grid = document.querySelector<HTMLElement>('[data-setup-grid]');
-      const chips = document.querySelectorAll<HTMLElement>('[data-answer]');
-      const reset = document.querySelector<HTMLElement>('[data-finder-reset]');
-      const notices = document.querySelector<HTMLElement>('[data-finder-notices]');
-      const noMatch = document.querySelector<HTMLElement>('[data-finder-nomatch]');
-      const noMatchTitle = document.querySelector<HTMLElement>('[data-nomatch-title]');
-      const noMatchText = document.querySelector<HTMLElement>('[data-nomatch-text]');
-      const lenEl = document.querySelector<HTMLInputElement>('[data-dim-l]');
-      const widEl = document.querySelector<HTMLInputElement>('[data-dim-w]');
-      const countryEl = document.querySelector<HTMLInputElement>('[data-country]');
-      if (!grid) return;
-      const container: HTMLElement = grid;
+      const root = document.getElementById('finder-root');
+      if (!root) return;
+      const grid = root.querySelector<HTMLElement>('[data-setup-grid]');
+      const retailGrid = root.querySelector<HTMLElement>('[data-retail-grid]');
+      const retailSection = document.getElementById('retail-results');
+      const businessSection = document.getElementById('project-planner');
+      const chips = root.querySelectorAll<HTMLElement>('[data-answer]');
+      const reset = root.querySelector<HTMLElement>('[data-finder-reset]');
+      const notices = root.querySelector<HTMLElement>('[data-finder-notices]');
+      const statusPanel = root.querySelector<HTMLElement>('[data-finder-status]');
+      const statusTitle = root.querySelector<HTMLElement>('[data-status-title]');
+      const statusText = root.querySelector<HTMLElement>('[data-status-text]');
+      const statusCta = root.querySelector<HTMLAnchorElement>('[data-status-cta]');
+      const lenEl = root.querySelector<HTMLInputElement>('[data-dim-l]');
+      const widEl = root.querySelector<HTMLInputElement>('[data-dim-w]');
+      const countryEl = root.querySelector<HTMLInputElement>('[data-country]');
 
-      const active: Record<string, string> = {};
+      const sel: Record<string, string> = {};
+      const features = new Set<string>();
 
       // --- Anonymous advisor analytics (GEO KPI: filter → click → no-match) ---
       // Coarse answer buckets only, no PII — the free-text country field is
@@ -684,17 +775,14 @@ const metadata = merge(
 
       function answerSnapshot(): Record<string, string> {
         const a: Record<string, string> = {};
-        for (const [q, v] of Object.entries(active)) {
-          if (q === 'Where will it be installed?') a.install = v;
-          else if (q === 'What will you use it for?') a.use = v;
-          else if (q === 'How much flat space do you have?') a.space = v;
-          else if (q === 'Do you need heating or massage?') a.climate = v;
-          else if (q === 'Who is it mainly for?') a.who = v;
-          else if (q === 'Personal use or business project?') a.purpose = v;
+        for (const k of ['purpose', 'install', 'use', 'space', 'who']) {
+          if (sel[k]) a[k] = sel[k];
         }
-        const dl = parseDim(lenEl);
-        const dw = parseDim(widEl);
-        if (!isNaN(dl) && !isNaN(dw)) a.dims = `${dl}x${dw}`;
+        if (features.size > 0) a.features = Array.from(features).sort().join('+');
+        if (dimsState() === 'valid') {
+          const d = readDims();
+          a.dims = `${d.L}x${d.W}`;
+        }
         return a;
       }
 
@@ -730,33 +818,50 @@ const metadata = merge(
         }, 900);
       }
 
-      container.addEventListener('click', (ev: MouseEvent) => {
+      root.addEventListener('click', (ev: MouseEvent) => {
         const target = ev.target as HTMLElement | null;
         const anchor = target && target.closest ? target.closest('a') : null;
         if (!anchor) return;
         const href = anchor.getAttribute('href') || '';
         const productMatch = href.match(/^\/products\/([a-z0-9-]+)/);
         const ideaMatch = href.match(/^\/pool-ideas\/([a-z0-9-]+)/);
-        const quoteMatch = href.match(/^\/contact\//);
         if (productMatch) {
           sendTrack('result_click', productMatch[1], { ...answerSnapshot(), target: 'shop' });
         } else if (ideaMatch) {
           sendTrack('result_click', ideaMatch[1], { ...answerSnapshot(), target: 'guide' });
-        } else if (quoteMatch) {
-          sendTrack('result_click', 'contact-quote', { ...answerSnapshot(), target: 'quote' });
+        } else if (href.indexOf('/contact/?project=') === 0) {
+          sendTrack('result_click', 'project-review', { ...answerSnapshot(), target: 'review' });
+        } else if (href.indexOf('/contact/') === 0) {
+          sendTrack('result_click', 'contact-advice', { ...answerSnapshot(), target: 'advice' });
         }
       });
 
-      function parseDim(el: HTMLInputElement | null): number {
-        if (!el) return NaN;
-        const v = parseFloat(el.value);
-        return isFinite(v) && v > 0 ? v : NaN;
+      // --- Exact-area input: four states (none / partial / invalid / valid) ---
+      function readRaw(el: HTMLInputElement | null): string {
+        return el ? el.value.trim() : '';
       }
 
-      function usingDims(): boolean {
-        return !isNaN(parseDim(lenEl)) && !isNaN(parseDim(widEl));
+      function dimsState(): 'none' | 'partial' | 'invalid' | 'valid' {
+        const rl = readRaw(lenEl);
+        const rw = readRaw(widEl);
+        const hasL = rl !== '';
+        const hasW = rw !== '';
+        if (!hasL && !hasW) return 'none';
+        if (hasL !== hasW) return 'partial';
+        const l = parseFloat(rl);
+        const w = parseFloat(rw);
+        if (!isFinite(l) || !isFinite(w) || l <= 0 || w <= 0) return 'invalid';
+        return 'valid';
       }
 
+      function readDims(): { L: number; W: number } {
+        return {
+          L: parseFloat(lenEl ? lenEl.value : '0'),
+          W: parseFloat(widEl ? widEl.value : '0'),
+        };
+      }
+
+      // --- Fit math: circle = diameter vs both sides; rect = 90° rotation allowed ---
       function optFits(o: FitOption, L: number, W: number): boolean {
         if (typeof o.d === 'number') return o.d <= L && o.d <= W;
         if (typeof o.l === 'number' && typeof o.w === 'number') {
@@ -774,8 +879,13 @@ const metadata = merge(
       }
 
       function cardFitsDims(card: HTMLElement, L: number, W: number): boolean {
-        const opts = parseOpts(card);
-        return opts.some((o) => optFits(o, L, W));
+        return parseOpts(card).some((o) => optFits(o, L, W));
+      }
+
+      function optLabel(o: FitOption): string {
+        if (typeof o.d === 'number') return `Ø ${o.d} m footprint`;
+        if (typeof o.l === 'number' && typeof o.w === 'number') return `${o.l} × ${o.w} m footprint`;
+        return '';
       }
 
       function makeBanner(tone: 'amber' | 'sky', text: string, link?: { href: string; label: string }): HTMLElement {
@@ -797,51 +907,39 @@ const metadata = merge(
         return wrap;
       }
 
-      function renderNotices(): void {
+      function renderNotices(ds: 'none' | 'partial' | 'invalid' | 'valid'): void {
         if (!notices) return;
         notices.replaceChildren();
-        const info: Record<string, string> = {};
-        for (const key of Object.keys(active)) {
-          const el = document.querySelector<HTMLElement>(`[data-question="${key}"][data-filter="info"]`);
-          if (el) info[key] = active[key];
-        }
-        if (info['Where will it be installed?'] === 'install-raised') {
-          notices.appendChild(
-            makeBanner(
-              'amber',
-              'Raised installation needs structural sign-off before you order. A filled pool weighs roughly 1 t per m³ of water — even a small pool concentrates several tonnes in a few square meters. Have your deck or balcony rated by a professional and plan for drainage first. Do not order without that confirmation.',
-              {
-                href: '/guides/how-much-does-a-filled-inflatable-pool-weigh/',
-                label: 'See filled-weight math by size →',
-              }
-            )
-          );
-        }
-        if (info['Do you need heating or massage?'] === 'climate-massage') {
-          notices.appendChild(
-            makeBanner(
-              'amber',
-              'None of our models include massage jets. Our spa tubs are for still-water soaking, optionally paired with an external heater (sold separately). If massage jets are essential, we are not the right fit.'
-            )
-          );
-        }
-        if (info['Do you need heating or massage?'] === 'climate-heating') {
+        if (ds === 'partial') {
           notices.appendChild(
             makeBanner(
               'sky',
-              'About heating: our spa tubs have insulated walls and a thermal bottom but no built-in heater. They pair with an external heater, sold separately — see each product page for what is included.'
+              'Enter both length and width to check the exact fit — until then the rough area buckets apply.'
             )
           );
         }
-        if (info['Personal use or business project?'] === 'purpose-personal') {
+        if (ds === 'invalid') {
+          notices.appendChild(
+            makeBanner(
+              'amber',
+              'Enter valid positive numbers — 0, negative or non-numeric values cannot be checked, so no exact-fit recommendation is made.'
+            )
+          );
+        }
+        if (sel['purpose'] === 'purpose-business') {
           notices.appendChild(
             makeBanner(
               'sky',
-              'Buying for yourself or your family? The three fixed-size retail sets sold online are listed at the top of this page — single-piece purchases with direct shipping.',
-              {
-                href: '#retail-sets',
-                label: 'See the retail sets ↑',
-              }
+              'Business project: the families below are candidates for review — we confirm model, equipment and suitability per project. Send your country, site, planned usage and timeline.',
+              { href: '/contact/', label: 'Start a project review →' }
+            )
+          );
+        }
+        if (sel['purpose'] === 'purpose-personal') {
+          notices.appendChild(
+            makeBanner(
+              'sky',
+              'Personal path: showing the retail sets sold online as single pieces. Business and wholesale buyers can switch the first answer to review factory families instead.'
             )
           );
         }
@@ -861,12 +959,12 @@ const metadata = merge(
         'use-play': 'swim & play use',
         'use-soak': 'relax & soak use',
         'use-entertain': 'entertaining guests',
-        'who-family': 'kids & family',
-        'who-adults': 'adults',
-        'who-mixed': 'mixed guests',
-        'space-compact': 'compact space',
-        'space-medium': 'medium space',
-        'space-large': 'large space',
+        'use-cold': 'cold-plunge & recovery use',
+        'use-fitness': 'water fitness',
+        'use-pets': 'pet splash use',
+        'who-family': 'for kids & family',
+        'who-adults': 'for adults',
+        'who-mixed': 'for mixed guests',
       };
 
       const INSTALL_TEXT: Record<string, string> = {
@@ -874,36 +972,23 @@ const metadata = merge(
         'install-raised': 'raised install — engineer sign-off required',
       };
 
-      function optLabel(o: FitOption): string {
-        if (typeof o.d === 'number') return `Ø ${o.d} m footprint`;
-        if (typeof o.l === 'number' && typeof o.w === 'number') return `${o.l} × ${o.w} m footprint`;
-        return '';
-      }
-
-      function renderWhy(
-        card: HTMLElement,
-        show: boolean,
-        dims: boolean,
-        L: number,
-        W: number,
-        tagGroups: string[]
-      ): void {
+      function renderWhy(card: HTMLElement, show: boolean, dimsValid: boolean, L: number, W: number): void {
         const why = card.querySelector<HTMLElement>('[data-why]');
         if (!why) return;
         const parts: string[] = [];
-        if (show && dims) {
+        if (show && dimsValid) {
           const fits = parseOpts(card)
             .filter((o) => optFits(o, L, W))
             .map(optLabel)
             .filter(Boolean);
-          if (fits.length > 0) parts.push(`${fits.slice(0, 2).join(' or ')} fits your ${L} × ${W} m space`);
+          if (fits.length > 0) parts.push(`${fits.slice(0, 2).join(' or ')} fits your ${L} × ${W} m clear area`);
         }
-        for (const g of tagGroups) {
-          const t = TAG_TEXT[active[g]];
-          if (t) parts.push(t);
-        }
-        const install = active['Where will it be installed?'];
-        if (install && INSTALL_TEXT[install]) parts.push(INSTALL_TEXT[install]);
+        const useT = TAG_TEXT[sel['use'] || ''];
+        if (useT) parts.push(useT);
+        const whoT = TAG_TEXT[sel['who'] || ''];
+        if (whoT) parts.push(whoT);
+        const instT = INSTALL_TEXT[sel['install'] || ''];
+        if (instT) parts.push(instT);
         if (show && parts.length > 0) {
           why.textContent = `Why it fits: ${parts.join(' · ')}`;
           why.classList.remove('hidden');
@@ -912,48 +997,143 @@ const metadata = merge(
         }
       }
 
+      // --- Result status panel (docx §6: no-fit / unsupported / review / compatibility) ---
+      function setStatus(
+        state: 'none' | 'unsupported' | 'nofit' | 'review' | 'compat',
+        dimsValid: boolean,
+        L: number,
+        W: number,
+        purpose: string
+      ): void {
+        if (!statusPanel) return;
+        if (state === 'none') {
+          statusPanel.classList.add('hidden');
+          return;
+        }
+        let title: string;
+        let text: string;
+        let ctaHref: string;
+        let ctaLabel: string;
+        if (state === 'unsupported') {
+          title = 'Unsupported feature';
+          text = features.has('massage')
+            ? 'We cannot confirm a standard massage-jet configuration for your requirements. None of our sets include massage jets — if jets are essential, we are not the right fit.'
+            : 'None of our sets include a bubble system as a standard, verified feature. If a bubble system is essential, request compatibility advice before ordering.';
+          ctaHref = '/contact/?topic=compatibility';
+          ctaLabel = 'Request Compatibility Advice';
+        } else if (state === 'nofit') {
+          title = dimsValid ? 'No fit for this space' : 'No confirmed match for your answers';
+          text = dimsValid
+            ? `None of the ${purpose === 'purpose-personal' ? 'retail sets' : 'recommended sizes'} fit ${L} × ${W} m. Our smallest footprints start around 1.5 × 1.5 m. Revise your measurements or ask us about custom OEM sizes — do not reduce required installation clearance to force a fit.`
+            : 'No standard model matches your answers. Space, safety and required features are not relaxed to force a fit — revise an answer or ask for product advice.';
+          ctaHref = '/contact/';
+          ctaLabel = 'Ask for Product Advice';
+        } else if (state === 'review') {
+          title = 'Installation review required';
+          text =
+            'A filled pool weighs roughly 1 t per m³ of water — a raised deck or balcony must be rated by a structural professional before anything is ordered. The candidates shown are for review only: installation suitability is not confirmed, and drainage must be planned first.';
+          ctaHref = '/guides/how-much-does-a-filled-inflatable-pool-weigh/';
+          ctaLabel = 'See filled-weight math by size →';
+        } else {
+          title = 'Compatibility review required';
+          text =
+            'Heated soaking needs an external heater (sold separately) — no model-level heater configuration has been verified yet. The soak-tub candidates shown pair with external heaters, but compatibility is confirmed per order, not automatically.';
+          ctaHref = '/contact/?topic=compatibility';
+          ctaLabel = 'Request Compatibility Advice';
+        }
+        if (statusTitle) statusTitle.textContent = title;
+        if (statusText) statusText.textContent = text;
+        if (statusCta) {
+          statusCta.href = ctaHref;
+          statusCta.textContent = ctaLabel;
+        }
+        statusPanel.classList.remove('hidden');
+      }
+
+      // --- Rule pipeline (docx §9, simplified to the front-end subset) ---
       function apply(): void {
-        const dims = usingDims();
-        const L = parseDim(lenEl);
-        const W = parseDim(widEl);
-        const tagGroups = Object.keys(active).filter((g) => {
-          const el = document.querySelector<HTMLElement>(`[data-question="${g}"]`);
-          return el !== null && el.getAttribute('data-filter') === 'tag';
-        });
-        const cards = Array.from(container.children) as HTMLElement[];
-        let visible = 0;
-        for (const card of cards) {
-          const tags = (card.getAttribute('data-tags') || '').split(' ');
-          let show: boolean;
-          if (dims) {
-            show = cardFitsDims(card, L, W);
-          } else {
-            show = tagGroups.every((g) => tags.includes(active[g]));
-          }
-          card.style.display = show ? '' : 'none';
-          renderWhy(card, show, dims, L, W, tagGroups);
-          if (show) visible++;
-        }
-        const hasInput = dims || tagGroups.length > 0;
-        if (noMatch) {
-          if (visible === 0 && hasInput) {
-            if (noMatchTitle) {
-              noMatchTitle.textContent = dims
-                ? 'No standard model fits this space'
-                : 'No standard model matches your answers';
+        const ds = dimsState();
+        const dimsValid = ds === 'valid';
+        const d = dimsValid ? readDims() : { L: 0, W: 0 };
+        const L = d.L;
+        const W = d.W;
+        const p = sel['purpose'] || '';
+        const unsupported = features.has('bubble') || features.has('massage');
+        const heated = features.has('heated');
+        const raised = sel['install'] === 'install-raised';
+        const useSel = sel['use'] || '';
+        const spaceSel = sel['space'] || '';
+
+        // 1. Retail / business routing (P0-1)
+        if (retailSection) retailSection.style.display = p === 'purpose-personal' ? '' : 'none';
+        if (businessSection) businessSection.style.display = p === 'purpose-personal' ? 'none' : '';
+
+        // 2. Business candidates (P0-1: family review, never a confirmed recommendation)
+        let bizVisible = 0;
+        if (grid) {
+          const cards = Array.from(grid.children) as HTMLElement[];
+          for (const card of cards) {
+            const tags = (card.getAttribute('data-tags') || '').split(' ');
+            let show = true;
+            if (unsupported) {
+              show = false;
+            } else {
+              if (heated && card.getAttribute('data-heat') !== 'candidate') show = false;
+              if (show && useSel && !tags.includes(useSel)) show = false;
+              if (show && dimsValid) {
+                show = cardFitsDims(card, L, W);
+              } else if (show && spaceSel && !tags.includes(spaceSel)) {
+                show = false;
+              }
             }
-            if (noMatchText) {
-              noMatchText.textContent = dims
-                ? `Our smallest footprints start around 1.5 × 1.5 m, and none of the recommended sizes fit ${L} × ${W} m. Adjust your measurements, browse the catalog, or ask us about custom OEM sizes.`
-                : 'Try relaxing a filter — or contact us and we will point you to the right model.';
-            }
-            noMatch.classList.remove('hidden');
-          } else {
-            noMatch.classList.add('hidden');
+            card.style.display = show ? '' : 'none';
+            renderWhy(card, show, dimsValid, L, W);
+            if (show) bizVisible++;
           }
         }
-        queueTrack(visible, hasInput);
-        renderNotices();
+
+        // 3. Retail candidates (P0-1: only the three retail SKUs; P1: sets
+        //    without published dimensions are never auto-matched)
+        let retailVisible = 0;
+        if (retailGrid) {
+          const cards = Array.from(retailGrid.children) as HTMLElement[];
+          for (const card of cards) {
+            const tags = (card.getAttribute('data-tags') || '').split(' ');
+            let show = true;
+            if (unsupported) {
+              show = false;
+            } else {
+              if (heated && card.getAttribute('data-heat') !== 'candidate') show = false;
+              if (show && useSel && !tags.includes(useSel)) show = false;
+              if (show && dimsValid && card.getAttribute('data-dims-known') === 'true') {
+                show = cardFitsDims(card, L, W);
+              }
+            }
+            card.style.display = show ? '' : 'none';
+            renderWhy(card, show, dimsValid, L, W);
+            if (show) retailVisible++;
+          }
+        }
+
+        const activeVisible = p === 'purpose-personal' ? retailVisible : bizVisible;
+        const hasInput =
+          Object.keys(sel).length > 0 || features.size > 0 || dimsValid || ds === 'invalid' || ds === 'partial';
+
+        // 4. Status panel priority: unsupported > no-fit > install review > heated compat
+        let state: 'none' | 'unsupported' | 'nofit' | 'review' | 'compat' = 'none';
+        if (unsupported) {
+          state = 'unsupported';
+        } else if (activeVisible === 0 && (dimsValid || useSel || spaceSel || heated)) {
+          state = 'nofit';
+        } else if (raised) {
+          state = 'review';
+        } else if (heated) {
+          state = 'compat';
+        }
+        setStatus(state, dimsValid, L, W, p);
+
+        renderNotices(ds);
+        queueTrack(activeVisible, hasInput);
       }
 
       function setChip(chip: HTMLElement, on: boolean): void {
@@ -964,31 +1144,62 @@ const metadata = merge(
         chip.classList.toggle('dark:border-blue-500', on);
       }
 
+      function syncFeatureChips(): void {
+        if (!root) return;
+        const fGroup = root.querySelector<HTMLElement>('[data-qid="features"]');
+        if (!fGroup) return;
+        fGroup.querySelectorAll<HTMLElement>('[data-answer]').forEach((c) => {
+          setChip(c, features.has(c.getAttribute('data-answer') || ''));
+        });
+      }
+
       chips.forEach((chip) => {
         chip.addEventListener('click', () => {
-          const groupEl = chip.closest('[data-question]');
-          const group = groupEl?.getAttribute('data-question') || '';
-          const wasOn = active[group] === chip.getAttribute('data-answer');
-          if (wasOn) {
-            delete active[group];
+          const groupEl = chip.closest<HTMLElement>('[data-qid]');
+          const qid = groupEl?.getAttribute('data-qid') || '';
+          const id = chip.getAttribute('data-answer') || '';
+          const filter = groupEl?.getAttribute('data-filter') || '';
+          if (filter === 'features') {
+            if (id === 'ambient') {
+              if (features.has('ambient')) {
+                features.clear();
+              } else {
+                features.clear();
+                features.add('ambient');
+              }
+            } else {
+              features.delete('ambient');
+              if (features.has(id)) {
+                features.delete(id);
+              } else {
+                features.add(id);
+              }
+            }
+            syncFeatureChips();
           } else {
-            const prev = groupEl?.querySelector<HTMLElement>('[data-answer].bg-primary');
-            if (prev) setChip(prev, false);
-            active[group] = chip.getAttribute('data-answer') || '';
+            const wasOn = sel[qid] === id;
+            if (wasOn) {
+              delete sel[qid];
+              setChip(chip, false);
+            } else {
+              const prev = groupEl?.querySelector<HTMLElement>('[data-answer].bg-primary');
+              if (prev) setChip(prev, false);
+              sel[qid] = id;
+              setChip(chip, true);
+            }
           }
-          setChip(chip, !wasOn);
           apply();
         });
       });
 
-      [lenEl, widEl].forEach((el) => {
-        el?.addEventListener('input', apply);
-      });
-      countryEl?.addEventListener('input', apply);
+      if (lenEl) lenEl.addEventListener('input', apply);
+      if (widEl) widEl.addEventListener('input', apply);
+      if (countryEl) countryEl.addEventListener('input', apply);
 
       if (reset) {
         reset.addEventListener('click', () => {
-          for (const key of Object.keys(active)) delete active[key];
+          for (const key of Object.keys(sel)) delete sel[key];
+          features.clear();
           chips.forEach((chip) => setChip(chip, false));
           if (lenEl) lenEl.value = '';
           if (widEl) widEl.value = '';

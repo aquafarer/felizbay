@@ -134,8 +134,17 @@ const CHECKS = [
   },
   {
     path: '/find-your-pool/',
-    markers: ['data-finder', 'Shop a Retail Set', 'FZ-SPA-RND', 'Request a quote'],
-    desc: 'pool finder dual entry: retail sets section + business project planner with quote CTAs',
+    markers: [
+      'data-finder',
+      'Shop a Retail Set',
+      'FZ-SPA-RND',
+      'View This Exact Set',
+      'Request a Project Review',
+      'Potential Product Family for Review',
+      'Total clear, level area available',
+    ],
+    notMarkers: ['Request a quote'],
+    desc: 'pool finder v2 (docx review): purpose-first split, retail candidates with per-set CTAs, business family-review section, unified clear-area input',
   },
   { path: '/support/', marker: 'Support', desc: 'support hub' },
   {
