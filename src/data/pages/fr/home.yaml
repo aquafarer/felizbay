@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Murs rigides Drop Stitch
-      description: 'Des milliers de fils internes verrouillent les couches de parois ensemble, de sorte que la piscine se gonfle de manière rigide au taux nominal de 4-5 PSI et conserve sa forme une fois remplie.'
+      description: 'Des milliers de fils internes verrouillent les couches de parois ensemble, de sorte que la piscine se gonfle de manière rigide au taux nominal de 4-6 PSI et conserve sa forme une fois remplie.'
       icon: tabler:hexagon
     - title: Installation rapide et sans outil
       description: Gonflez avec la pompe électrique incluse en quelques minutes, puis remplissez avec un tuyau d'arrosage. Aucun outil, aucune construction, aucune installation professionnelle.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Quelle est la rigidité d’une piscine drop stitch ?
-      description: Très rigide. Les parois Drop Stitch se gonflent fortement à 4-5 PSI – comme une planche à pagaie gonflable – de sorte que la piscine conserve sa forme lorsqu'elle est remplie d'eau.
+      description: Très rigide. Les parois Drop Stitch se gonflent fortement à 4-6 PSI – comme une planche à pagaie gonflable – de sorte que la piscine conserve sa forme lorsqu'elle est remplie d'eau.
       icon: tabler:hexagon
       category: all
     - title: Les enfants peuvent-ils utiliser la piscine ?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Espace de baignade aux côtés droits pour les grands rassemblements'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Toutes les collections : 4 à 5 parois PSI drop-stitch, gonflage de 5 à 15 minutes, rangement pliable. Le chauffage et la filtration sont externes — les réchauffeurs et les pompes de filtration sont vendus séparément.'
+  note: 'Toutes les collections : 4 à 6 parois PSI drop-stitch, gonflage de 5 à 15 minutes, rangement pliable. Le chauffage et la filtration sont externes — les réchauffeurs et les pompes de filtration sont vendus séparément.'
 
 content_evidence:
   tagline: 'Pourquoi Felizbay'

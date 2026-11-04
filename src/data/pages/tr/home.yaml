@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Sağlam Drop Stitch Duvarları
-      description: 'Binlerce iç diş duvar katmanlarını birbirine kilitler, böylece havuz 4-5 PSI değerinde sert bir şekilde şişer ve doldurulduğunda şeklini korur.'
+      description: 'Binlerce iç diş duvar katmanlarını birbirine kilitler, böylece havuz 4-6 PSI değerinde sert bir şekilde şişer ve doldurulduğunda şeklini korur.'
       icon: tabler:hexagon
     - title: Hızlı, Aletsiz Kurulum
       description: Ürünle birlikte verilen elektrikli pompayla birkaç dakika içinde şişirin, ardından bahçe hortumuyla doldurun. Alet yok, inşaat yok, profesyonel kurulum yok.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Drop Stitch havuzu ne kadar serttir?
-      description: Çok katı. Drop Stitch duvarları, şişirilebilir kürek tahtasına benzer şekilde 4-5 PSI'da sert bir şekilde şişer, böylece havuz suyla doldurulduğunda şeklini korur.
+      description: Çok katı. Drop Stitch duvarları, şişirilebilir kürek tahtasına benzer şekilde 4-6 PSI'da sert bir şekilde şişer, böylece havuz suyla doldurulduğunda şeklini korur.
       icon: tabler:hexagon
       category: all
     - title: Çocuklar havuzu kullanabilir mi?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Daha büyük toplantılar için düz kenarlı yüzme alanı'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Tüm koleksiyonlar: 4–5 PSI drop-stitch duvarlar, 5–15 dakika şişirme, paketli depolama. Isıtma ve filtreleme haricidir; ısıtıcılar ve filtre pompaları ayrı satılır.'
+  note: 'Tüm koleksiyonlar: 4–6 PSI drop-stitch duvarlar, 5–15 dakika şişirme, paketli depolama. Isıtma ve filtreleme haricidir; ısıtıcılar ve filtre pompaları ayrı satılır.'
 
 content_evidence:
   tagline: 'Neden Felizbay'

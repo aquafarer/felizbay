@@ -16,7 +16,7 @@ stats:
     - title: 'Pripūtimo laikas'
       amount: '5-15 min'
     - title: Vardinis slėgis
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Susisiekite
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Su kiekviena siūle, siena ir vožtuvu elgiamasi taip, lyg joje plauks mūsų pačių šeimos.
       icon: tabler:heart
     - title: Inžinierius prieš parduodant
-      description: Aukšto slėgio „Drop Stitch“ konstrukcija, išbandyta virš vardinio slėgio, prieš siunčiant baseiną.
+      description: Aukšto slėgio „Drop Stitch“ konstrukcija, išbandyta prie vardinio slėgio viršutinės ribos, prieš siunčiant baseiną.
       icon: tabler:settings
     - title: Parama, kuri trunka ilgiau nei sezoną
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Griežta kokybės kontrolė
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Pasaulinis pasiekiamumas
@@ -141,6 +141,6 @@ global_ops_section:
       label: Baseino kolekcijos
     - value: '5-15 min'
       label: 'Pripūtimo laikas'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Vardinis slėgis
 

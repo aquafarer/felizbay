@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Jäigad Drop Stitch seinad
-      description: 'Tuhanded sisekeermed lukustavad seinakihid kokku, nii et bassein pumbatakse jäigaks 4–5 PSI juures ja säilitab täitmisel oma kuju.'
+      description: 'Tuhanded sisekeermed lukustavad seinakihid kokku, nii et bassein pumbatakse jäigaks 4–6 PSI juures ja säilitab täitmisel oma kuju.'
       icon: tabler:hexagon
     - title: Kiire ja tööriistavaba seadistamine
       description: Täitke kaasasoleva elektripumbaga minutitega, seejärel täitke aiavoolikuga. Ei mingeid tööriistu, ehitust ega professionaalset paigaldust.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Kui jäik on Drop Stitchi bassein?
-      description: Väga jäik. Drop Stitchi seinad paisuvad kõvasti täis 4–5 PSI juures – sarnaselt täispuhutavale aerulauale – nii et bassein säilitab veega täitmisel oma kuju.
+      description: Väga jäik. Drop Stitchi seinad paisuvad kõvasti täis 4–6 PSI juures – sarnaselt täispuhutavale aerulauale – nii et bassein säilitab veega täitmisel oma kuju.
       icon: tabler:hexagon
       category: all
     - title: Kas lapsed saavad basseini kasutada?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Sirge küljega ujumisruum suuremate kogunemiste jaoks'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Kõik kollektsioonid: 4–5 PSI drop-stitch seinad, täitmine 5–15 minutit, pakitav hoiuruum. Küte ja filtreerimine on välised — küttekehad ja filtripumbad müüakse eraldi.'
+  note: 'Kõik kollektsioonid: 4–6 PSI drop-stitch seinad, täitmine 5–15 minutit, pakitav hoiuruum. Küte ja filtreerimine on välised — küttekehad ja filtripumbad müüakse eraldi.'
 
 content_evidence:
   tagline: 'Miks Felizbay'

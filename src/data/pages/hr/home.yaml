@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Čvrsti Drop Stitch zidovi
-      description: 'Tisuće unutarnjih navoja spajaju slojeve zidova zajedno, tako da se bazen čvrsto napuhuje pri nazivnom 4-5 PSI i zadržava svoj oblik kada se napuni.'
+      description: 'Tisuće unutarnjih navoja spajaju slojeve zidova zajedno, tako da se bazen čvrsto napuhuje pri nazivnom 4-6 PSI i zadržava svoj oblik kada se napuni.'
       icon: tabler:hexagon
     - title: Brzo postavljanje bez alata
       description: Napuhajte uključenom električnom pumpom za nekoliko minuta, a zatim napunite vrtnim crijevom. Bez alata, bez konstrukcije, bez profesionalne instalacije.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Koliko je krut drop stitch bazen?
-      description: Vrlo krut. Drop Stitch stijenke snažno se napuhavaju pri 4-5 PSI — slično dasci za veslanje na napuhavanje — tako da bazen zadržava svoj oblik kada se napuni vodom.
+      description: Vrlo krut. Drop Stitch stijenke snažno se napuhavaju pri 4-6 PSI — slično dasci za veslanje na napuhavanje — tako da bazen zadržava svoj oblik kada se napuni vodom.
       icon: tabler:hexagon
       category: all
     - title: Mogu li djeca koristiti bazen?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ravni prostor za kupanje za veća okupljanja'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Sve kolekcije: 4–5 PSI drop-stitch zidovi, 5–15 min napuhavanja, skladištenje bez pakiranja. Grijanje i filtracija su vanjski — grijači i filter pumpe prodaju se zasebno.'
+  note: 'Sve kolekcije: 4–6 PSI drop-stitch zidovi, 5–15 min napuhavanja, skladištenje bez pakiranja. Grijanje i filtracija su vanjski — grijači i filter pumpe prodaju se zasebno.'
 
 content_evidence:
   tagline: 'Zašto Felizbay'

@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Stijve Drop Stitch-wanden
-      description: 'Duizenden interne schroefdraden houden de wandlagen aan elkaar vast, zodat het zwembad stijf opblaast met een nominale snelheid van 4-5 PSI en zijn vorm behoudt wanneer het gevuld is.'
+      description: 'Duizenden interne schroefdraden houden de wandlagen aan elkaar vast, zodat het zwembad stijf opblaast met een nominale snelheid van 4-6 PSI en zijn vorm behoudt wanneer het gevuld is.'
       icon: tabler:hexagon
     - title: Snelle, gereedschapsloze installatie
       description: Binnen enkele minuten opblazen met de meegeleverde elektrische pomp en vervolgens vullen met een tuinslang. Geen gereedschap, geen constructie, geen professionele installatie.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Hoe stijf is een drop-stitch-zwembad?
-      description: Zeer stijf. De drop-stitch-wanden worden hard opgeblazen met 4-5 PSI, zodat het zwembad zijn vorm behoudt wanneer het met water is gevuld.
+      description: Zeer stijf. De drop-stitch-wanden worden hard opgeblazen met 4-6 PSI, zodat het zwembad zijn vorm behoudt wanneer het met water is gevuld.
       icon: tabler:hexagon
       category: all
     - title: Kunnen kinderen het zwembad gebruiken?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Zwemruimte met rechte zijkanten voor grotere bijeenkomsten'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Alle collecties: 4–5 PSI drop-stitch-wanden, 5–15 min. opblazen, opbergruimte. Verwarming en filtratie zijn extern; verwarmingen en filterpompen worden afzonderlijk verkocht.'
+  note: 'Alle collecties: 4–6 PSI drop-stitch-wanden, 5–15 min. opblazen, opbergruimte. Verwarming en filtratie zijn extern; verwarmingen en filterpompen worden afzonderlijk verkocht.'
 
 content_evidence:
   tagline: 'Waarom Felizbay'

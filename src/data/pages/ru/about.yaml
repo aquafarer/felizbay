@@ -16,7 +16,7 @@ stats:
     - title: 'Время надувания'
       amount: '5-15 min'
     - title: Номинальное давление
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Контакт
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: К каждому шву, стенке и клапану относятся так, как будто в нем будут купаться наши собственные семьи.
       icon: tabler:heart
     - title: Инженер, прежде чем мы продадим
-      description: Конструкция Drop Stitch высокого давления, проверенная давлением выше номинального, перед отправкой в ​​бассейн.
+      description: Конструкция Drop Stitch высокого давления, проверенная при верхнем номинальном давлении, перед отправкой в ​​бассейн.
       icon: tabler:settings
     - title: Поддержка, которая переживет сезон
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Строгий контроль качества
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Глобальный охват
@@ -141,6 +141,6 @@ global_ops_section:
       label: Коллекции для бассейнов
     - value: '5-15 min'
       label: 'Время надувания'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Номинальное давление
 

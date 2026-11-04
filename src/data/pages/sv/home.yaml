@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Styva Drop Stitch-väggar
-      description: 'Tusentals invändiga gängor låser ihop vägglagren, så att poolen blåser upp styvt vid nominella 4-5 PSI och behåller sin form när den fylls.'
+      description: 'Tusentals invändiga gängor låser ihop vägglagren, så att poolen blåser upp styvt vid nominella 4-6 PSI och behåller sin form när den fylls.'
       icon: tabler:hexagon
     - title: Snabb, verktygsfri installation
       description: Blås upp med den medföljande elektriska pumpen på några minuter och fyll sedan med en trädgårdsslang. Inga verktyg, ingen konstruktion, ingen professionell installation.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Hur stel är en Drop Stitch-pool?
-      description: Mycket stel. Drop Stitch-väggarna blåser upp hårt vid 4-5 PSI - liknande en uppblåsbar paddelbräda - så poolen behåller sin form när den fylls med vatten.
+      description: Mycket stel. Drop Stitch-väggarna blåser upp hårt vid 4-6 PSI - liknande en uppblåsbar paddelbräda - så poolen behåller sin form när den fylls med vatten.
       icon: tabler:hexagon
       category: all
     - title: Kan barn använda poolen?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Raksidig simplats för större sammankomster'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Alla kollektioner: 4–5 PSI drop-stitch väggar, 5–15 min uppblåsning, packningsförvaring. Uppvärmning och filtrering är externa — värmare och filterpumpar säljs separat.'
+  note: 'Alla kollektioner: 4–6 PSI drop-stitch väggar, 5–15 min uppblåsning, packningsförvaring. Uppvärmning och filtrering är externa — värmare och filterpumpar säljs separat.'
 
 content_evidence:
   tagline: 'Varför Felizbay'

@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Starre Drop-Stitch-Wände
-      description: 'Tausende Innengewinde verbinden die Wandschichten miteinander, sodass sich der Pool bei einem Nenndruck von 4–5 PSI stabil aufbläst und seine Form behält, wenn er gefüllt ist.'
+      description: 'Tausende Innengewinde verbinden die Wandschichten miteinander, sodass sich der Pool bei einem Nenndruck von 4–6 PSI stabil aufbläst und seine Form behält, wenn er gefüllt ist.'
       icon: tabler:hexagon
     - title: Schnelle, werkzeuglose Einrichtung
       description: Mit der mitgelieferten Elektropumpe in wenigen Minuten aufpumpen und dann mit einem Gartenschlauch befüllen. Keine Werkzeuge, keine Konstruktion, keine professionelle Installation.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Wie steif ist ein Drop-Stitch-Pool?
-      description: Sehr starr. Die Drop-Stitch-Wände werden mit 4–5 PSI stark aufgepumpt, sodass der Pool seine Form behält, wenn er mit Wasser gefüllt ist.
+      description: Sehr starr. Die Drop-Stitch-Wände werden mit 4–6 PSI stark aufgepumpt, sodass der Pool seine Form behält, wenn er mit Wasser gefüllt ist.
       icon: tabler:hexagon
       category: all
     - title: Können Kinder den Pool nutzen?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Gerader Schwimmbereich für größere Versammlungen'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Alle Kollektionen: 4–5 PSI drop-stitch-Wände, 5–15 Minuten Aufblasen, verstaubare Lagerung. Heizung und Filterung erfolgen extern – Heizungen und Filterpumpen sind separat erhältlich.'
+  note: 'Alle Kollektionen: 4–6 PSI drop-stitch-Wände, 5–15 Minuten Aufblasen, verstaubare Lagerung. Heizung und Filterung erfolgen extern – Heizungen und Filterpumpen sind separat erhältlich.'
 
 content_evidence:
   tagline: 'Warum Felizbay'

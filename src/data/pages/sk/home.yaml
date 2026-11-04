@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Pevné Drop Stitch steny
-      description: 'Tisíce vnútorných závitov spájajú vrstvy stien dohromady, takže bazén sa nafúkne pevne pri menovitých 4-5 PSI a po naplnení si zachováva svoj tvar.'
+      description: 'Tisíce vnútorných závitov spájajú vrstvy stien dohromady, takže bazén sa nafúkne pevne pri menovitých 4-6 PSI a po naplnení si zachováva svoj tvar.'
       icon: tabler:hexagon
     - title: Rýchle nastavenie bez použitia nástrojov
       description: Nafúknite pomocou priloženej elektrickej pumpy za pár minút a potom naplňte záhradnou hadicou. Bez náradia, bez konštrukcie, bez odbornej inštalácie.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Aký pevný je bazén typu Drop Stitch?
-      description: Veľmi tuhý. Steny Drop Stitch sa nafukujú tvrdo na 4-5 PSI, takže bazén si po naplnení vodou zachováva svoj tvar.
+      description: Veľmi tuhý. Steny Drop Stitch sa nafukujú tvrdo na 4-6 PSI, takže bazén si po naplnení vodou zachováva svoj tvar.
       icon: tabler:hexagon
       category: all
     - title: Môžu bazén využívať deti?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Priestor na plávanie s rovnými stranami pre väčšie stretnutia'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Všetky kolekcie: steny 4–5 PSI drop-stitch, 5–15 minút nafukovania, skladovanie po zbalení. Vykurovanie a filtrácia sú externé — ohrievače a filtračné čerpadlá sa predávajú samostatne.'
+  note: 'Všetky kolekcie: steny 4–6 PSI drop-stitch, 5–15 minút nafukovania, skladovanie po zbalení. Vykurovanie a filtrácia sú externé — ohrievače a filtračné čerpadlá sa predávajú samostatne.'
 
 content_evidence:
   tagline: 'Prečo Felizbay'

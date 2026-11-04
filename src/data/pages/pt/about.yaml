@@ -16,7 +16,7 @@ stats:
     - title: 'Tempo de inflar'
       amount: '5-15 min'
     - title: Pressão nominal
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Contato
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Cada costura, parede e válvula são tratadas como se nossas próprias famílias fossem nadar nelas.
       icon: tabler:heart
     - title: Engenheiro antes de vender
-      description: Construção Drop Stitch de alta pressão, testada acima da pressão nominal, antes de qualquer navio de piscina.
+      description: Construção Drop Stitch de alta pressão, testada no limite superior da pressão nominal, antes de qualquer navio de piscina.
       icon: tabler:settings
     - title: Suporte que dura mais que a temporada
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Rigoroso controle de qualidade
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Alcance global
@@ -141,6 +141,6 @@ global_ops_section:
       label: Coleções de piscina
     - value: '5-15 min'
       label: 'Tempo de inflar'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Pressão nominal
 

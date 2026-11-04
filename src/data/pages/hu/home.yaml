@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Merev Drop Stitch falak
-      description: 'Több ezer belső menet rögzíti egymáshoz a falrétegeket, így a medence 4-5 PSI névleges nyomással mereven felfújódik, és megtöltéskor megtartja alakját.'
+      description: 'Több ezer belső menet rögzíti egymáshoz a falrétegeket, így a medence 4-6 PSI névleges nyomással mereven felfújódik, és megtöltéskor megtartja alakját.'
       icon: tabler:hexagon
     - title: Gyors, szerszámmentes beállítás
       description: Fújja fel a mellékelt elektromos szivattyúval percek alatt, majd töltse fel kerti tömlővel. Nincsenek szerszámok, nincs építés, nincs szakszerű telepítés.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Mennyire merev a Drop Stitch medence?
-      description: Nagyon merev. A Drop Stitch falai 4-5 PSI-vel keményen felfújódnak – hasonlóan egy felfújható eveződeszkához –, így a medence megtartja formáját, ha vízzel van feltöltve.
+      description: Nagyon merev. A Drop Stitch falai 4-6 PSI-vel keményen felfújódnak – hasonlóan egy felfújható eveződeszkához –, így a medence megtartja formáját, ha vízzel van feltöltve.
       icon: tabler:hexagon
       category: all
     - title: Gyermekek használhatják a medencét?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Egyenes oldalú úszótér nagyobb összejövetelek számára'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Minden kollekció: 4–5 PSI drop-stitch falak, 5–15 perces felfújás, elcsomagolt tárolás. A fűtés és a szűrés külső – a fűtőelemek és a szűrőszivattyúk külön vásárolhatók meg.'
+  note: 'Minden kollekció: 4–6 PSI drop-stitch falak, 5–15 perces felfújás, elcsomagolt tárolás. A fűtés és a szűrés külső – a fűtőelemek és a szűrőszivattyúk külön vásárolhatók meg.'
 
 content_evidence:
   tagline: 'Miért Felizbay'

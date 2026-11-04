@@ -9,7 +9,7 @@ This guide covers the space, the water routine, and the practical limits of a tw
 
 ## 1. Design-Led, Not Toy-Like
 
-Cheap inflatable pools clash with a considered outdoor space: sagging bright-vinyl walls, bulging seams, and a footprint that takes over the patio. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) behaves differently. Inflated to its rated 4–5 PSI operating pressure, the walls form straight, clean vertical lines with a neutral exterior that reads closer to a plastered plunge pool than a beach toy.
+Cheap inflatable pools clash with a considered outdoor space: sagging bright-vinyl walls, bulging seams, and a footprint that takes over the patio. A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) behaves differently. Inflated to its rated 4–6 PSI operating pressure, the walls form straight, clean vertical lines with a neutral exterior that reads closer to a plastered plunge pool than a beach toy.
 
 The result is a pool that sits comfortably next to teak furniture, planters, and architectural lighting — and that you will not feel the need to deflate every time guests come over.
 

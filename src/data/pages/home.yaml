@@ -34,7 +34,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Straight-sided swim space for larger gatherings'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'All collections: 4–5 PSI drop-stitch walls, 5–15 min inflation, pack-away storage. Heating and filtration are external — heaters and filter pumps are sold separately.'
+  note: 'All collections: 4–6 PSI drop-stitch walls, 5–15 min inflation, pack-away storage. Heating and filtration are external — heaters and filter pumps are sold separately.'
 
 features:
   id: features
@@ -44,7 +44,7 @@ features:
   columns: 2
   items:
     - title: Rigid Drop Stitch Walls
-      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rigid at the rated 4-5 PSI and keeps its shape when filled.'
+      description: 'Thousands of internal threads lock the wall layers together, so the pool inflates rigid at the rated 4-6 PSI and keeps its shape when filled.'
       icon: tabler:hexagon
     - title: Fast, Tool-Free Setup
       description: 'Inflate with the included electric pump in minutes, then fill with a garden hose. No tools, no construction, no professional installation.'
@@ -136,7 +136,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: How rigid is a drop stitch pool?
-      description: 'Very rigid. The drop stitch walls inflate hard at 4-5 PSI, so the pool keeps its shape when filled with water.'
+      description: 'Very rigid. The drop stitch walls inflate hard at 4-6 PSI, so the pool keeps its shape when filled with water.'
       icon: tabler:hexagon
       category: all
     - title: Can children use the pool?

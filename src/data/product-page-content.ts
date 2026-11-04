@@ -156,7 +156,7 @@ const SWIM_POOL_SETUP_STEPS: SetupStep[] = [
   {
     title: 'Review the installation requirements',
     description:
-      'Read the manual first: recommended 4–5 PSI operating pressure, ground conditions, and fill limits for your model.',
+      'Read the manual first: recommended 4–6 PSI operating pressure, ground conditions, and fill limits for your model.',
   },
   {
     title: 'Prepare the setup area',
@@ -186,7 +186,7 @@ const HOT_TUB_SETUP_STEPS: SetupStep[] = [
   {
     title: 'Review the installation requirements',
     description:
-      'Read the manual first: recommended 4–5 PSI operating pressure, fill limits, and the heater/filtration connection specs for your model.',
+      'Read the manual first: recommended 4–6 PSI operating pressure, fill limits, and the heater/filtration connection specs for your model.',
   },
   {
     title: 'Prepare the setup area',

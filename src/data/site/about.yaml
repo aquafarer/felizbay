@@ -36,7 +36,7 @@ design:
   stats:
     - value: '100%'
       label: 'pressure-tested<br />before packing'
-    - value: '4–5'
+    - value: '4–6'
       label: 'PSI rated<br />working pressure'
     - value: '5–15'
       label: 'minute<br />inflation'

@@ -16,7 +16,7 @@ stats:
     - title: 'Час надування'
       amount: '5-15 min'
     - title: Номінальний тиск
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: контакт
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Кожен шов, стіна та клапан обробляються так, ніби в них плаватимуть наші власні родини.
       icon: tabler:heart
     - title: Інженер перед продажем
-      description: Конструкція Drop Stitch високого тиску, випробувана вище номінального тиску, перед будь-яким транспортуванням басейну.
+      description: Конструкція Drop Stitch високого тиску, випробувана при верхній межі номінального тиску, перед будь-яким транспортуванням басейну.
       icon: tabler:settings
     - title: Підтримка, яка витримає весь сезон
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Суворий контроль якості
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Глобальне охоплення
@@ -141,6 +141,6 @@ global_ops_section:
       label: Колекції басейнів
     - value: '5-15 min'
       label: 'Час надування'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Номінальний тиск
 

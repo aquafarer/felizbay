@@ -16,7 +16,7 @@ stats:
     - title: 'Masa pengembungan'
       amount: '5-15 min'
     - title: Tekanan terkadar
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Kenalan
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Setiap jahitan, dinding, dan injap dianggap seolah-olah keluarga kita sendiri akan berenang di dalamnya.
       icon: tabler:heart
     - title: Jurutera sebelum kami menjual
-      description: Pembinaan Drop Stitch bertekanan tinggi, diuji melebihi tekanan terkadarnya, sebelum sebarang kolam dihantar.
+      description: Pembinaan Drop Stitch bertekanan tinggi, diuji pada had atas tekanan terkadarnya, sebelum sebarang kolam dihantar.
       icon: tabler:settings
     - title: Sokongan yang bertahan lebih lama daripada musim ini
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Kawalan Kualiti yang Ketat
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Jangkauan Global
@@ -141,6 +141,6 @@ global_ops_section:
       label: Koleksi kolam
     - value: '5-15 min'
       label: 'Masa pengembungan'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Tekanan terkadar
 

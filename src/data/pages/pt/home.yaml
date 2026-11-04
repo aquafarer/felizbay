@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Paredes Rígidas Drop Stitch
-      description: 'Milhares de roscas internas prendem as camadas da parede, de modo que a piscina infla de forma rígida a 4-5 PSI e mantém sua forma quando cheia.'
+      description: 'Milhares de roscas internas prendem as camadas da parede, de modo que a piscina infla de forma rígida a 4-6 PSI e mantém sua forma quando cheia.'
       icon: tabler:hexagon
     - title: Configuração rápida e sem ferramentas
       description: Encha com a bomba elétrica incluída em minutos e depois encha com uma mangueira de jardim. Sem ferramentas, sem construção, sem instalação profissional.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Quão rígida é uma piscina de drop stitch?
-      description: Muito rígido. As paredes Drop Stitch inflam fortemente a 4-5 PSI – semelhante a uma prancha de remo inflável – para que a piscina mantenha sua forma quando cheia de água.
+      description: Muito rígido. As paredes Drop Stitch inflam fortemente a 4-6 PSI – semelhante a uma prancha de remo inflável – para que a piscina mantenha sua forma quando cheia de água.
       icon: tabler:hexagon
       category: all
     - title: As crianças podem usar a piscina?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Espaço de natação reto para reuniões maiores'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Todas as coleções: paredes drop-stitch de 4–5 PSI, inflação de 5–15 min, armazenamento portátil. O aquecimento e a filtragem são externos – os aquecedores e as bombas de filtro são vendidos separadamente.'
+  note: 'Todas as coleções: paredes drop-stitch de 4–6 PSI, inflação de 5–15 min, armazenamento portátil. O aquecimento e a filtragem são externos – os aquecedores e as bombas de filtro são vendidos separadamente.'
 
 content_evidence:
   tagline: 'Por que Felizbay'

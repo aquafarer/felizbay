@@ -162,16 +162,16 @@ export const guides: GuideRecord[] = [
     title: 'What Is a Drop Stitch Inflatable Pool?',
     description:
       'A plain-English explanation of drop stitch construction — how thousands of internal threads make an inflatable pool wall rigid enough to swim against.',
-    tldr: 'Drop stitch fabric joins two outer PVC layers with thousands of internal threads. Inflated to 4–5 PSI, those threads lock the walls flat and rigid — closer to a hard-sided pool than a toy ring pool — yet the pool still deflates and folds for storage.',
+    tldr: 'Drop stitch fabric joins two outer PVC layers with thousands of internal threads. Inflated to 4–6 PSI, those threads lock the walls flat and rigid — closer to a hard-sided pool than a toy ring pool — yet the pool still deflates and folds for storage.',
     problem:
       'Most people have only seen ring-style or soft-sided inflatable pools that sag, bulge, and collapse. That experience makes it hard to believe an inflatable pool can hold a firm, straight wall 1.5 meters high.',
     solution:
-      'Drop stitch construction limits how far the walls can expand: thousands of internal threads turn pressure into stiffness, so the fabric becomes a rigid panel instead of a balloon. Felizbay pools operate at 4–5 PSI with a pressure-relief valve that releases above 6 PSI, and every unit passes a 24–48 hour pressure-drop test before it ships.',
+      'Drop stitch construction limits how far the walls can expand: thousands of internal threads turn pressure into stiffness, so the fabric becomes a rigid panel instead of a balloon. Felizbay pools operate at 4–6 PSI with a pressure-relief valve that releases above 6 PSI, and every unit passes a 24–48 hour pressure-drop test before it ships.',
     audience: 'First-time buyers comparing pool types.',
     steps: [
       'Outer layers: two sheets of reinforced, UV-stabilized PVC form the wall surfaces',
       'Internal threads: thousands of fine polyester threads connect the layers at fixed intervals',
-      'Air chamber: inflating the chamber to 4–5 PSI pulls the layers taut against the threads, locking the wall flat',
+      'Air chamber: inflating the chamber to 4–6 PSI pulls the layers taut against the threads, locking the wall flat',
       'Rigid result: the wall becomes stiff and flat like a hard-sided pool',
       'Safety margin: rated maximum pressure is 8 PSI, with a relief valve that auto-releases above 6 PSI',
       'Storage: open the valves, let the fabric relax, and the whole pool folds into a storage bag',
@@ -179,7 +179,7 @@ export const guides: GuideRecord[] = [
     faq: [
       {
         q: 'Is a drop stitch pool really rigid?',
-        a: 'Yes. At the rated 4–5 PSI operating pressure the walls form a flat, firm surface that resists collapsing or inward buckling.',
+        a: 'Yes. At the rated 4–6 PSI operating pressure the walls form a flat, firm surface that resists collapsing or inward buckling.',
       },
       {
         q: 'Does drop stitch make the pool heavier?',
@@ -211,11 +211,11 @@ export const guides: GuideRecord[] = [
     problem:
       'Ring pools and soft-sided pools are cheap up front but often end in sagging walls, leaking seams, and one disappointing season. Buyers then assume every inflatable pool behaves the same way.',
     solution:
-      'Compare the construction, not the category. Drop stitch walls inflate to 4–5 PSI and behave like hard panels; traditional inflatables operate at low pressure and depend on water pressure to hold their shape. That difference drives depth, wall stability, durability, and how the pool feels in daily use.',
+      'Compare the construction, not the category. Drop stitch walls inflate to 4–6 PSI and behave like hard panels; traditional inflatables operate at low pressure and depend on water pressure to hold their shape. That difference drives depth, wall stability, durability, and how the pool feels in daily use.',
     audience: 'Buyers deciding between pool types and price points.',
     steps: [
       'Wall construction: drop stitch = two PVC layers joined by internal threads; traditional = air-filled vinyl rings or unsupported soft walls',
-      'Operating pressure: drop stitch runs at 4–5 PSI with a relief valve; ring pools run at low pressure with no meaningful pressure rating',
+      'Operating pressure: drop stitch runs at 4–6 PSI with a relief valve; ring pools run at low pressure with no meaningful pressure rating',
       'Wall behavior: drop stitch walls stay flat and rigid; ring walls bulge outward as water pushes on them',
       'Achievable depth: drop stitch supports 1.2–1.5 m walls for real swimming; ring pools rarely exceed 0.7–0.8 m reliably',
       'Rim usability: drop stitch rims are firm enough to sit on; ring rims deform under weight',
@@ -379,14 +379,14 @@ export const guides: GuideRecord[] = [
     title: 'How Strong Is a Drop Stitch Inflatable Pool?',
     description:
       'Wall strength, pressure ratings, and real-world durability of drop stitch inflatable pools — what the numbers mean and what the walls can take.',
-    tldr: 'Drop stitch pools are far stronger than ring pools: walls inflated to 4–5 PSI act as rigid panels, carry an 8 PSI structural rating, and pass a 24–48 hour factory pressure test. Strength comes from thousands of internal threads, not thicker vinyl alone.',
+    tldr: 'Drop stitch pools are far stronger than ring pools: walls inflated to 4–6 PSI act as rigid panels, carry an 8 PSI structural rating, and pass a 24–48 hour factory pressure test. Strength comes from thousands of internal threads, not thicker vinyl alone.',
     problem:
       '"Inflatable" sounds fragile, so buyers picture a toy that punctures on the first sharp stone and folds under a full water load. That describes thin ring pools — not drop stitch construction.',
     solution:
-      'Judge strength by construction and pressure ratings. Thousands of internal polyester threads lock the two PVC wall layers together, so at 4–5 PSI the wall behaves like a stiff panel: it holds a 1.2–1.5 m water column, stays flat under load, and survives full-season outdoor use. Every Felizbay unit ships only after passing a 24–48 hour pressure-drop test.',
+      'Judge strength by construction and pressure ratings. Thousands of internal polyester threads lock the two PVC wall layers together, so at 4–6 PSI the wall behaves like a stiff panel: it holds a 1.2–1.5 m water column, stays flat under load, and survives full-season outdoor use. Every Felizbay unit ships only after passing a 24–48 hour pressure-drop test.',
     audience: 'Buyers weighing durability against the low price of thin-vinyl pools.',
     steps: [
-      'Pressure strength: rated operating pressure is 4–5 PSI; seams and structure carry an 8 PSI maximum rating — three times higher than what a ring pool wall can hold',
+      'Pressure strength: rated operating pressure is 4–6 PSI; seams and structure carry an 8 PSI maximum rating — three times higher than what a ring pool wall can hold',
       'Pressure protection: a relief valve auto-releases air above 6 PSI, so normal over-inflation cannot stress the seams',
       'Wall stiffness: internal threads stop the wall from ballooning, which is why the wall stays flat and rigid under a full water load',
       'Factory verification: every pool passes a 24–48 hour pressure-drop test before packing — a wall that loses pressure never ships',
@@ -426,15 +426,15 @@ export const guides: GuideRecord[] = [
     category: 'technology',
     title: 'What PSI Should an Inflatable Pool Use?',
     description:
-      'Correct inflation pressure for drop stitch pools — why 4–5 PSI is the target, how to measure it, and what the relief valve does.',
-    tldr: 'Inflate drop stitch walls to 4–5 PSI. Below that the walls flex; the relief valve auto-releases above 6 PSI and the structure is rated to 8 PSI. Use a pump with a pressure gauge — firmness by hand tells you almost nothing at these pressures.',
+      'Correct inflation pressure for drop stitch pools — why 4–6 PSI is the operating range, how to measure it, and what the relief valve does.',
+    tldr: 'Inflate drop stitch walls to 4–6 PSI. Below that the walls flex; the relief valve auto-releases above 6 PSI and the structure is rated to 8 PSI. Use a pump with a pressure gauge — firmness by hand tells you almost nothing at these pressures.',
     problem:
       'Inflated by feel, pools end up in one of two states: under-inflated walls that sag and buckle inward under the water load, or wildly over-inflated walls stressed at the seams.',
     solution:
-      'Inflate to the rated 4–5 PSI with a gauge-equipped electric pump, check the pressure when the walls and air are cool, and let the relief valve do its job if you overshoot. The included 1000W pump reaches operating pressure in about 10 minutes.',
+      'Inflate to the rated 4–6 PSI with a gauge-equipped electric pump, check the pressure when the walls and air are cool, and let the relief valve do its job if you overshoot. The included 1000W pump reaches operating pressure in about 10 minutes.',
     audience: 'Pool owners setting up for the season and anyone troubleshooting sagging walls.',
     steps: [
-      'Target: 4–5 PSI operating pressure — this is where the internal threads lock the wall flat and rigid',
+      'Target: 4–6 PSI operating pressure — this is where the internal threads lock the wall flat and rigid',
       'Measure with a gauge: the included electric pump inflates to pressure in ~10 minutes; hand-squeeze firmness is not a reliable indicator',
       'Check cool: pressure rises in direct sun and drops in cool evening air — inflate to range in the morning or shade, not at peak afternoon heat',
       'Relief valve: air auto-releases above 6 PSI, protecting seams from normal over-inflation',
@@ -449,11 +449,11 @@ export const guides: GuideRecord[] = [
       },
       {
         q: 'Can I use a stronger compressor to inflate faster?',
-        a: 'Use the included 1000W pump or a pump with an accurate gauge and auto-stop. Uncontrolled high-pressure air can overshoot quickly — the relief valve protects above 6 PSI, but the goal is a controlled 4–5 PSI.',
+        a: 'Use the included 1000W pump or a pump with an accurate gauge and auto-stop. Uncontrolled high-pressure air can overshoot quickly — the relief valve protects above 6 PSI, but the goal is a controlled 4–6 PSI.',
       },
       {
         q: 'Is more PSI better for a stiffer wall?',
-        a: 'No. Above the 4–5 PSI operating range you gain nothing and stress the seams. Stiffness comes from the drop stitch thread structure at rated pressure, not from extra pressure.',
+        a: 'No. Above the 4–6 PSI operating range you gain nothing and stress the seams. Stiffness comes from the drop stitch thread structure at rated pressure, not from extra pressure.',
       },
     ],
     relatedProducts: [

@@ -16,7 +16,7 @@ stats:
     - title: 'Timp de umflare'
       amount: '5-15 min'
     - title: Presiune nominală
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Contact
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Fiecare cusătură, perete și supapă este tratată ca și cum propriile noastre familii ar înota în el.
       icon: tabler:heart
     - title: Inginer înainte de a vinde
-      description: Construcție Drop Stitch de înaltă presiune, testată peste presiunea sa nominală, înainte ca orice piscină să fie expediată.
+      description: Construcție Drop Stitch de înaltă presiune, testată la limita superioară a presiunii sale nominale, înainte ca orice piscină să fie expediată.
       icon: tabler:settings
     - title: Sprijin care durează mai mult decât sezonul
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Control strict al calității
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Acoperire globală
@@ -141,6 +141,6 @@ global_ops_section:
       label: Colecții de piscină
     - value: '5-15 min'
       label: 'Timp de umflare'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Presiune nominală
 

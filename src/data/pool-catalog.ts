@@ -43,7 +43,7 @@ export interface PoolAccessory {
 }
 
 /** Recommended daily operating pressure */
-export const POOL_OPERATING_PRESSURE = '4–5 PSI';
+export const POOL_OPERATING_PRESSURE = '4–6 PSI';
 /** Factory quality-control test pressure */
 export const POOL_QC_TEST_PRESSURE = '6 PSI';
 /** Maximum pressure tolerance */
@@ -106,7 +106,7 @@ export const POOL_KEY_FEATURES: PoolFeature[] = [
     icon: 'tabler:shield-check',
     title: 'Rock-Solid Rigidity',
     description:
-      'At the standard 4–5 PSI operating pressure the drop-stitch walls form a flat, firm surface that resists collapsing or inward buckling.',
+      'At the standard 4–6 PSI operating pressure the drop-stitch walls form a flat, firm surface that resists collapsing or inward buckling.',
   },
   {
     icon: 'tabler:box',

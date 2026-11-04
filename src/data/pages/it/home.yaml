@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Pareti rigide Drop Stitch
-      description: 'Migliaia di filettature interne bloccano insieme gli strati della parete, quindi la piscina si gonfia rigidamente alla velocità nominale di 4-5 PSI e mantiene la sua forma una volta riempita.'
+      description: 'Migliaia di filettature interne bloccano insieme gli strati della parete, quindi la piscina si gonfia rigidamente alla velocità nominale di 4-6 PSI e mantiene la sua forma una volta riempita.'
       icon: tabler:hexagon
     - title: Configurazione rapida e senza strumenti
       description: Gonfia in pochi minuti con la pompa elettrica inclusa, quindi riempila con un tubo da giardino. Nessuno strumento, nessuna costruzione, nessuna installazione professionale.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Quanto è rigida una piscina Drop Stitch?
-      description: Molto rigido. Le pareti Drop Stitch si gonfiano con forza a 4-5 PSI, quindi la piscina mantiene la sua forma quando viene riempita d'acqua.
+      description: Molto rigido. Le pareti Drop Stitch si gonfiano con forza a 4-6 PSI, quindi la piscina mantiene la sua forma quando viene riempita d'acqua.
       icon: tabler:hexagon
       category: all
     - title: I bambini possono utilizzare la piscina?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Spazio per nuotare sui lati diritti per riunioni più grandi'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Tutte le collezioni: pareti drop-stitch da 4–5 PSI, gonfiaggio da 5–15 minuti, stoccaggio a scomparsa. Il riscaldamento e la filtrazione sono esterni: i riscaldatori e le pompe filtro sono venduti separatamente.'
+  note: 'Tutte le collezioni: pareti drop-stitch da 4–6 PSI, gonfiaggio da 5–15 minuti, stoccaggio a scomparsa. Il riscaldamento e la filtrazione sono esterni: i riscaldatori e le pompe filtro sono venduti separatamente.'
 
 content_evidence:
   tagline: 'Perché Felizbay'

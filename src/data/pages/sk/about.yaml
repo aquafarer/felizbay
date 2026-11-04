@@ -16,7 +16,7 @@ stats:
     - title: 'Čas nafúknutia'
       amount: '5-15 min'
     - title: Menovitý tlak
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Kontaktovať
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: S každým švom, stenou a ventilom sa zaobchádza tak, ako keby v ňom plávali naše vlastné rodiny.
       icon: tabler:heart
     - title: Inžinier pred predajom
-      description: Vysokotlaková konštrukcia Drop Stitch, testovaná nad menovitým tlakom, pred odoslaním akéhokoľvek bazéna.
+      description: Vysokotlaková konštrukcia Drop Stitch, testovaná pri hornej hranici menovitého tlaku, pred odoslaním akéhokoľvek bazéna.
       icon: tabler:settings
     - title: Podpora, ktorá prekoná sezónu
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Prísna kontrola kvality
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Globálny dosah
@@ -141,6 +141,6 @@ global_ops_section:
       label: Bazénové zbierky
     - value: '5-15 min'
       label: 'Čas nafúknutia'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Menovitý tlak
 

@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Stive Drop Stitch-vegger
-      description: 'Tusenvis av innvendige gjenger låser vegglagene sammen, slik at bassenget blåser opp stivt med karakterene 4-5 PSI og holder formen når det fylles.'
+      description: 'Tusenvis av innvendige gjenger låser vegglagene sammen, slik at bassenget blåser opp stivt med karakterene 4-6 PSI og holder formen når det fylles.'
       icon: tabler:hexagon
     - title: Rask, verktøyfri oppsett
       description: Blås opp med den medfølgende elektriske pumpen på minutter, og fyll deretter med en hageslange. Ingen verktøy, ingen konstruksjon, ingen profesjonell installasjon.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Hvor stiv er en drop stitch pool?
-      description: Veldig stiv. Drop Stitch-veggene blåses hardt opp med 4-5 PSI – lik et oppblåsbart padlebrett – slik at bassenget holder formen når det fylles med vann.
+      description: Veldig stiv. Drop Stitch-veggene blåses hardt opp med 4-6 PSI – lik et oppblåsbart padlebrett – slik at bassenget holder formen når det fylles med vann.
       icon: tabler:hexagon
       category: all
     - title: Kan barn bruke bassenget?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Rettsidig svømmeplass for større forsamlinger'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Alle kolleksjoner: 4–5 PSI drop-stitch vegger, 5–15 min oppblåsing, oppbevaring med pakke. Oppvarming og filtrering er ekstern - varmeovner og filterpumper selges separat.'
+  note: 'Alle kolleksjoner: 4–6 PSI drop-stitch vegger, 5–15 min oppblåsing, oppbevaring med pakke. Oppvarming og filtrering er ekstern - varmeovner og filterpumper selges separat.'
 
 content_evidence:
   tagline: 'Hvorfor Felizbay'

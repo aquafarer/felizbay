@@ -16,7 +16,7 @@ stats:
     - title: 'Tempo di gonfiaggio'
       amount: '5-15 min'
     - title: Pressione nominale
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Contatto
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Ogni cucitura, parete e valvola viene trattata come se le nostre stesse famiglie vi nuotassero dentro.
       icon: tabler:heart
     - title: Ingegnere prima di vendere
-      description: Costruzione Drop Stitch ad alta pressione, testata al di sopra della pressione nominale, prima di qualsiasi spedizione in piscina.
+      description: Costruzione Drop Stitch ad alta pressione, testata al limite superiore della pressione nominale, prima di qualsiasi spedizione in piscina.
       icon: tabler:settings
     - title: Supporto che dura tutta la stagione
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Controllo di qualità rigoroso
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Portata globale
@@ -141,6 +141,6 @@ global_ops_section:
       label: Collezioni di piscine
     - value: '5-15 min'
       label: 'Tempo di gonfiaggio'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Pressione nominale
 

@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Toge stene Drop Stitch
-      description: 'Na tisoče notranjih navojev zaklene stenske plasti skupaj, tako da se bazen trdo napihne pri ocenjeni 4-5 PSI in ohrani svojo obliko, ko je napolnjen.'
+      description: 'Na tisoče notranjih navojev zaklene stenske plasti skupaj, tako da se bazen trdo napihne pri ocenjeni 4-6 PSI in ohrani svojo obliko, ko je napolnjen.'
       icon: tabler:hexagon
     - title: Hitra nastavitev brez orodja
       description: Napihnite s priloženo električno črpalko v nekaj minutah, nato napolnite z vrtno cevjo. Brez orodja, brez konstrukcije, brez profesionalne namestitve.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Kako tog je bazen Drop Stitch?
-      description: Zelo tog. Stene Drop Stitch se močno napihnejo pri 4-5 PSI — podobno kot napihljiva deska za veslanje — tako bazen obdrži svojo obliko, ko je napolnjen z vodo.
+      description: Zelo tog. Stene Drop Stitch se močno napihnejo pri 4-6 PSI — podobno kot napihljiva deska za veslanje — tako bazen obdrži svojo obliko, ko je napolnjen z vodo.
       icon: tabler:hexagon
       category: all
     - title: Ali lahko otroci uporabljajo bazen?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ravni plavalni prostor za večja srečanja'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Vse zbirke: stene 4–5 PSI drop-stitch, 5–15 min napihovanja, skladiščenje v embalaži. Ogrevanje in filtracija sta zunanja — grelniki in filtrske črpalke se prodajajo ločeno.'
+  note: 'Vse zbirke: stene 4–6 PSI drop-stitch, 5–15 min napihovanja, skladiščenje v embalaži. Ogrevanje in filtracija sta zunanja — grelniki in filtrske črpalke se prodajajo ločeno.'
 
 content_evidence:
   tagline: 'Zakaj Felizbay'

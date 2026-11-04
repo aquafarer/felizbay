@@ -16,7 +16,7 @@ stats:
     - title: 'Čas za napihovanje'
       amount: '5-15 min'
     - title: Nazivni tlak
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Kontakt
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Vsak šiv, stena in ventil je obdelan, kot da bodo v njem plavale naše družine.
       icon: tabler:heart
     - title: Inženir pred prodajo
-      description: Visokotlačna konstrukcija Drop Stitch, preizkušena nad nazivnim tlakom, pred pošiljanjem katerega koli bazena.
+      description: Visokotlačna konstrukcija Drop Stitch, preizkušena pri zgornji meji nazivnega tlaku, pred pošiljanjem katerega koli bazena.
       icon: tabler:settings
     - title: Podpora, ki preživi sezono
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Stroga kontrola kakovosti
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Globalni doseg
@@ -141,6 +141,6 @@ global_ops_section:
       label: Zbirke bazenov
     - value: '5-15 min'
       label: 'Čas za napihovanje'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Nazivni tlak
 

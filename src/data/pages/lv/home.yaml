@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Stingras Drop Stitch sienas
-      description: 'Tūkstošiem iekšējo vītņu savieno sienas slāņus, tāpēc baseins piepūšas stingrs ar nominālo 4-5 PSI un saglabā savu formu, kad tas ir piepildīts.'
+      description: 'Tūkstošiem iekšējo vītņu savieno sienas slāņus, tāpēc baseins piepūšas stingrs ar nominālo 4-6 PSI un saglabā savu formu, kad tas ir piepildīts.'
       icon: tabler:hexagon
     - title: Ātra iestatīšana bez rīkiem
       description: Piepūšiet ar komplektā iekļauto elektrisko sūkni dažu minūšu laikā, pēc tam piepildiet ar dārza šļūteni. Nav instrumentu, nav konstrukcijas, nav profesionālas uzstādīšanas.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Cik stingrs ir Drop Stitch baseins?
-      description: Ļoti stingrs. Drop Stitch sienas smagi piepūšas ar spiedienu 4–5 PSI — līdzīgi kā piepūšamajam airēšanas dēlim, tāpēc baseins saglabā savu formu, kad tas ir piepildīts ar ūdeni.
+      description: Ļoti stingrs. Drop Stitch sienas smagi piepūšas ar spiedienu 4–6 PSI — līdzīgi kā piepūšamajam airēšanas dēlim, tāpēc baseins saglabā savu formu, kad tas ir piepildīts ar ūdeni.
       icon: tabler:hexagon
       category: all
     - title: Vai bērni var izmantot baseinu?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Taisnas malas peldvieta lielākām pulcēšanās vietām'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Visas kolekcijas: 4–5 PSI drop-stitch sienas, 5–15 min piepūšana, iesaiņojuma uzglabāšana. Apkure un filtrēšana ir ārējā — sildītāji un filtru sūkņi tiek pārdoti atsevišķi.'
+  note: 'Visas kolekcijas: 4–6 PSI drop-stitch sienas, 5–15 min piepūšana, iesaiņojuma uzglabāšana. Apkure un filtrēšana ir ārējā — sildītāji un filtru sūkņi tiek pārdoti atsevišķi.'
 
 content_evidence:
   tagline: 'Kāpēc Felizbay'

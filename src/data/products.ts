@@ -40,11 +40,11 @@ export const products: ProductRecord[] = [
     ],
     desc: 'Family-size rectangular inflatable swimming pool with rigid high-pressure drop stitch walls.',
     definition:
-      'A rectangular inflatable swimming pool built from double-layer PVC drop stitch fabric that inflates to a rigid, self-supporting form at 4–5 PSI.',
+      'A rectangular inflatable swimming pool built from double-layer PVC drop stitch fabric that inflates to a rigid, self-supporting form at 4–6 PSI.',
     problem:
       'Families want a real swimming pool for the summer, but permanent pools are expensive, need permits and construction, and cannot be moved or stored away in the off-season.',
     howItWorks:
-      'Thousands of internal drop stitch threads lock the two PVC wall layers together. When inflated to 4–5 PSI with the included electric pump, the walls become rigid like a hard-sided pool while the whole pool still folds into a storage bag after draining. Inflating takes about 10 minutes.',
+      'Thousands of internal drop stitch threads lock the two PVC wall layers together. When inflated to 4–6 PSI with the included electric pump, the walls become rigid like a hard-sided pool while the whole pool still folds into a storage bag after draining. Inflating takes about 10 minutes.',
     audience:
       'Families with children, homeowners without a permanent pool, holiday-home owners, and rental property operators who want a seasonal swimming pool.',
     best_for_business: ['resorts', 'entrepreneurs'],
@@ -55,7 +55,7 @@ export const products: ProductRecord[] = [
       shape: 'Rectangular',
       material: 'Double-layer PVC drop stitch fabric',
       wall_thickness: '15 / 20 / 50 cm drop stitch',
-      pressure: '4–5 PSI',
+      pressure: '4–6 PSI',
       setup: '~10 minutes inflation with electric pump',
       included: '1000W electric air pump, full-coverage cover, repair kit, storage bag',
     },
@@ -117,11 +117,11 @@ export const products: ProductRecord[] = [
     ],
     desc: 'Classic round blue inflatable swimming pool with rigid high-pressure drop stitch walls.',
     definition:
-      'A round inflatable swimming pool in a vibrant blue finish, built from double-layer PVC drop stitch fabric that inflates rigid at 4–5 PSI.',
+      'A round inflatable swimming pool in a vibrant blue finish, built from double-layer PVC drop stitch fabric that inflates rigid at 4–6 PSI.',
     problem:
       'Cheap inflatable pools sag, bulge, and leak after a few weeks. Families want an affordable pool that stays strong and keeps its shape for the whole summer.',
     howItWorks:
-      'The drop stitch walls inflate hard at 4–5 PSI — far above ordinary inflatable pools — so the pool keeps a perfect round shape when filled. It inflates in about 10 minutes with the included electric pump and folds flat for off-season storage.',
+      'The drop stitch walls inflate hard at 4–6 PSI — far above ordinary inflatable pools — so the pool keeps a perfect round shape when filled. It inflates in about 10 minutes with the included electric pump and folds flat for off-season storage.',
     audience: 'Families, homeowners, and holiday property operators looking for an affordable, durable seasonal pool.',
     best_for_business: ['resorts', 'entrepreneurs'],
     business_recommendation:
@@ -132,7 +132,7 @@ export const products: ProductRecord[] = [
       color: 'Blue',
       material: 'Double-layer PVC drop stitch fabric',
       wall_thickness: '10 / 15 cm drop stitch',
-      pressure: '4–5 PSI',
+      pressure: '4–6 PSI',
       setup: '~10 minutes inflation with electric pump',
       included: '1000W electric air pump, repair kit, storage bag',
     },
@@ -198,7 +198,7 @@ export const products: ProductRecord[] = [
     problem:
       'Design-conscious homeowners and boutique properties want a swimming pool that looks modern and premium, not like a plastic toy.',
     howItWorks:
-      'The understated grey drop stitch walls inflate rigid at 4–5 PSI and keep the pool stable and perfectly round. An optional fitted cover keeps water clean and warm between swims. The pool inflates in about 10 minutes and folds into a storage bag for winter.',
+      'The understated grey drop stitch walls inflate rigid at 4–6 PSI and keep the pool stable and perfectly round. An optional fitted cover keeps water clean and warm between swims. The pool inflates in about 10 minutes and folds into a storage bag for winter.',
     audience:
       'Modern homeowners, villas, boutique hotels, and glamping operators who want a premium-looking seasonal pool.',
     best_for_business: ['resorts', 'entrepreneurs'],
@@ -210,7 +210,7 @@ export const products: ProductRecord[] = [
       color: 'Grey',
       material: 'Double-layer PVC drop stitch fabric',
       wall_thickness: '10 / 15 cm drop stitch',
-      pressure: '4–5 PSI',
+      pressure: '4–6 PSI',
       cover: 'Optional fitted cover, sold separately',
       setup: '~10 minutes inflation with electric pump',
       included: '1000W electric air pump, repair kit, storage bag',
@@ -232,7 +232,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What is the difference between the grey and blue round pools?',
-        a: 'Both share the same double-layer drop stitch construction and 4–5 PSI rigidity. The grey model adds a premium modern finish and an optional fitted cover (sold separately) for design-conscious buyers.',
+        a: 'Both share the same double-layer drop stitch construction and 4–6 PSI rigidity. The grey model adds a premium modern finish and an optional fitted cover (sold separately) for design-conscious buyers.',
       },
       {
         q: 'What is included with the pool?',
@@ -273,7 +273,7 @@ export const products: ProductRecord[] = [
     problem:
       'Rigid acrylic or fiberglass hot tubs are expensive to ship and impossible to move, while cheap inflatable spas lose heat fast and offer no seating. Buyers want a genuinely insulated spa that ships flat, retains heat, and still sets up in minutes.',
     howItWorks:
-      'The drop stitch walls inflate rigid at the recommended 4–5 PSI operating pressure (factory QC tested at 6 PSI), while the 5 mm insulated bottom base and built-in seats form a unified spa shell. Standard circulation ports connect plug-and-play to heating units, sand filter pumps, and air bubble massage systems (heating and massage units are sold separately).',
+      'The drop stitch walls inflate rigid at the recommended 4–6 PSI operating pressure (factory QC tested at 6 PSI), while the 5 mm insulated bottom base and built-in seats form a unified spa shell. Standard circulation ports connect plug-and-play to heating units, sand filter pumps, and air bubble massage systems (heating and massage units are sold separately).',
     audience:
       'Wellness-focused homeowners, glamping and boutique hospitality operators, vacation rental owners, and spa studios that need a movable year-round hot tub.',
     best_for_business: ['resorts', 'entrepreneurs'],
@@ -286,7 +286,7 @@ export const products: ProductRecord[] = [
       size_range: '1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)',
       seats: 'Built-in integrated inflatable seats',
       bottom: '5 mm insulated thermal bottom base',
-      pressure: '4–5 PSI operating (6 PSI factory QC test)',
+      pressure: '4–6 PSI operating (6 PSI factory QC test)',
       setup: '5–15 minutes with 1000W electric pump',
       compatibility: 'Heating units, sand filter pumps, disinfection, air bubble massage',
     },
@@ -319,7 +319,7 @@ export const products: ProductRecord[] = [
       },
       {
         q: 'What pressure does it run at?',
-        a: 'The recommended operating pressure is 4–5 PSI. Every tub is factory QC tested at 6 PSI, and the pressure-relief valve auto-releases above 6 PSI (8 PSI maximum tolerance).',
+        a: 'The recommended operating pressure is 4–6 PSI. Every tub is factory QC tested at 6 PSI, and the pressure-relief valve auto-releases above 6 PSI (8 PSI maximum tolerance).',
       },
       {
         q: 'What will my total cost be as a wholesale buyer?',
@@ -348,7 +348,7 @@ export const products: ProductRecord[] = [
     problem:
       'City balconies and small courtyards cannot fit a standard hot tub, and rigid tubs cannot be shipped or moved affordably. Users in small spaces still want genuine heat-retaining hydrotherapy.',
     howItWorks:
-      'The compact drop stitch shell inflates rigid at the recommended 4–5 PSI operating pressure (factory QC tested at 6 PSI). The 5 mm insulated bottom and built-in seats form a small-footprint spa shell, and standard ports connect to external heaters and filtration systems (heater not included).',
+      'The compact drop stitch shell inflates rigid at the recommended 4–6 PSI operating pressure (factory QC tested at 6 PSI). The 5 mm insulated bottom and built-in seats form a small-footprint spa shell, and standard ports connect to external heaters and filtration systems (heater not included).',
     audience:
       'Urban homeowners with balconies or small courtyards, athletes using cold plunge recovery, glamping operators, and rental property owners.',
     best_for_business: ['resorts', 'entrepreneurs'],
@@ -362,7 +362,7 @@ export const products: ProductRecord[] = [
       size_range: 'Ø 2 × 0.8 m (fixed retail set — item RS2018)',
       seats: 'Built-in integrated inflatable seats',
       bottom: '5 mm insulated thermal bottom base',
-      pressure: '4–5 PSI operating (6 PSI factory QC test)',
+      pressure: '4–6 PSI operating (6 PSI factory QC test)',
       setup: '5–15 minutes with 1000W electric pump',
       compatibility: 'Heating units, sand filter pumps, disinfection, air bubble massage',
     },

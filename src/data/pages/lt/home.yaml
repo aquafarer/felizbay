@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Standžiosios Drop Stitch sienos
-      description: 'Tūkstančiai vidinių sriegių sukabina sienos sluoksnius, todėl baseinas standžiai išsipučia esant vardiniam 4-5 PSI ir išlaiko formą pripildytas.'
+      description: 'Tūkstančiai vidinių sriegių sukabina sienos sluoksnius, todėl baseinas standžiai išsipučia esant vardiniam 4-6 PSI ir išlaiko formą pripildytas.'
       icon: tabler:hexagon
     - title: Greita sąranka be įrankių
       description: Pripūskite naudodami pridedamą elektrinį siurblį per kelias minutes, tada užpildykite sodo žarna. Jokių įrankių, jokių konstrukcijų, jokio profesionalaus montavimo.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Kiek standus yra „Drop Stitch“ baseinas?
-      description: Labai kietas. Drop Stitch sienos sunkiai pripučiamos 4–5 PSI (panašiai kaip pripučiamos irklentės), todėl pripildytas vandens baseinas išlaiko savo formą.
+      description: Labai kietas. Drop Stitch sienos sunkiai pripučiamos 4–6 PSI (panašiai kaip pripučiamos irklentės), todėl pripildytas vandens baseinas išlaiko savo formą.
       icon: tabler:hexagon
       category: all
     - title: Ar vaikai gali naudotis baseinu?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Tiesios pusės plaukimo erdvė didesniems susibūrimams'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Visos kolekcijos: 4–5 PSI drop-stitch sienos, 5–15 min pripūtimas, sandėliavimas supakuotas. Šildymas ir filtravimas yra išoriniai – šildytuvai ir filtravimo siurbliai parduodami atskirai.'
+  note: 'Visos kolekcijos: 4–6 PSI drop-stitch sienos, 5–15 min pripūtimas, sandėliavimas supakuotas. Šildymas ir filtravimas yra išoriniai – šildytuvai ir filtravimo siurbliai parduodami atskirai.'
 
 content_evidence:
   tagline: 'Kodėl Felizbay'

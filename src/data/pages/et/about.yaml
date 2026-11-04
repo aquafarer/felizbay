@@ -16,7 +16,7 @@ stats:
     - title: 'Puhumisaeg'
       amount: '5-15 min'
     - title: Nimirõhk
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Võtke ühendust
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Iga õmblust, seina ja ventiili koheldakse nii, nagu ujuksid meie oma pered selles.
       icon: tabler:heart
     - title: Insener enne müümist
-      description: Kõrgsurve Drop Stitch konstruktsioon, mida on testitud üle selle nimirõhu, enne basseini saatmist.
+      description: Kõrgsurve Drop Stitch konstruktsioon, mida on testitud selle nimirõhu ülempiiril, enne basseini saatmist.
       icon: tabler:settings
     - title: Toetus, mis kestab kauem kui hooaeg
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Range kvaliteedikontroll
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Globaalne haare
@@ -141,6 +141,6 @@ global_ops_section:
       label: Basseini kollektsioonid
     - value: '5-15 min'
       label: 'Puhumisaeg'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Nimirõhk
 

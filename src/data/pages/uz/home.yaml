@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Qattiq Drop Stitch devorlari
-      description: 'Minglab ichki iplar devor qatlamlarini bir-biriga bog''lab turadi, shuning uchun hovuz 4-5 PSI nominalida qattiq shishiradi va to''ldirilganda shaklini saqlaydi.'
+      description: 'Minglab ichki iplar devor qatlamlarini bir-biriga bog''lab turadi, shuning uchun hovuz 4-6 PSI nominalida qattiq shishiradi va to''ldirilganda shaklini saqlaydi.'
       icon: tabler:hexagon
     - title: Tez, asboblarsiz sozlash
       description: Bir necha daqiqada kiritilgan elektr nasos bilan puflang, keyin bog 'shlangi bilan to'ldiring. Asboblar, qurilish yo'q, professional o'rnatish yo'q.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Drop Stitch hovuzi qanchalik qattiq?
-      description: Juda qattiq. Drop Stitch devorlari 4-5 PSI darajasida qattiq shishiradi - xuddi shishiriladigan belkurak taxtasi - shuning uchun hovuz suv bilan to'ldirilganda o'z shaklini saqlab qoladi.
+      description: Juda qattiq. Drop Stitch devorlari 4-6 PSI darajasida qattiq shishiradi - xuddi shishiriladigan belkurak taxtasi - shuning uchun hovuz suv bilan to'ldirilganda o'z shaklini saqlab qoladi.
       icon: tabler:hexagon
       category: all
     - title: Bolalar basseyndan foydalanishlari mumkinmi?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Kattaroq yig''ilishlar uchun tekis qirrali suzish maydoni'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Barcha to''plamlar: 4–5 PSI drop-stitch devorlari, 5–15 daqiqali inflyatsiya, paketli saqlash. Isitish va filtrlash tashqi - isitgichlar va filtr nasoslari alohida sotiladi.'
+  note: 'Barcha to''plamlar: 4–6 PSI drop-stitch devorlari, 5–15 daqiqali inflyatsiya, paketli saqlash. Isitish va filtrlash tashqi - isitgichlar va filtr nasoslari alohida sotiladi.'
 
 content_evidence:
   tagline: 'Nega Felizbay'

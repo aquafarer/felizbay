@@ -16,7 +16,7 @@ stats:
     - title: 'Şişirme zamanı'
       amount: '5-15 min'
     - title: Nominal basınç
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Temas etmek
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Her dikişe, duvara ve vanaya sanki kendi ailelerimiz yüzecekmiş gibi davranılıyor.
       icon: tabler:heart
     - title: Satmadan önce mühendis
-      description: Yüksek basınçlı Drop Stitch yapısı, herhangi bir havuz gemisinden önce nominal basıncının üzerinde test edilmiştir.
+      description: Yüksek basınçlı Drop Stitch yapısı, herhangi bir havuz gemisinden önce nominal basıncının üst sınırında test edilmiştir.
       icon: tabler:settings
     - title: Sezon boyunca sürecek destek
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Sıkı Kalite Kontrolü
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Küresel Erişim
@@ -141,6 +141,6 @@ global_ops_section:
       label: Havuz koleksiyonları
     - value: '5-15 min'
       label: 'Şişirme zamanı'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Nominal basınç
 

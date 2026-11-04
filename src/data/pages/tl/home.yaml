@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Matibay na Drop Stitch Wall
-      description: 'Ang libu-libong panloob na mga thread ay nakakandado sa mga layer ng dingding nang magkakasama, kaya ang pool ay lumaki nang matibay sa rate na 4-5 PSI at pinapanatili ang hugis nito kapag napuno.'
+      description: 'Ang libu-libong panloob na mga thread ay nakakandado sa mga layer ng dingding nang magkakasama, kaya ang pool ay lumaki nang matibay sa rate na 4-6 PSI at pinapanatili ang hugis nito kapag napuno.'
       icon: tabler:hexagon
     - title: Mabilis, Tool-Free Setup
       description: Palakihin ang kasamang electric pump sa loob ng ilang minuto, pagkatapos ay punuin ng hose sa hardin. Walang mga tool, walang konstruksiyon, walang propesyonal na pag-install.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Gaano katigas ang isang drop stitch pool?
-      description: Napakatigas. Ang mga drop stitch wall ay pumuputok nang husto sa 4-5 PSI, kaya napanatili ng pool ang hugis nito kapag napuno ng tubig.
+      description: Napakatigas. Ang mga drop stitch wall ay pumuputok nang husto sa 4-6 PSI, kaya napanatili ng pool ang hugis nito kapag napuno ng tubig.
       icon: tabler:hexagon
       category: all
     - title: Maaari bang gamitin ng mga bata ang pool?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Straight-sided swim space para sa mas malalaking pagtitipon'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Lahat ng koleksyon: 4–5 PSI drop-stitch wall, 5–15 min inflation, pack-away storage. Ang pagpainit at pagsasala ay panlabas — ang mga heater at filter na bomba ay ibinebenta nang hiwalay.'
+  note: 'Lahat ng koleksyon: 4–6 PSI drop-stitch wall, 5–15 min inflation, pack-away storage. Ang pagpainit at pagsasala ay panlabas — ang mga heater at filter na bomba ay ibinebenta nang hiwalay.'
 
 content_evidence:
   tagline: 'Bakit Felizbay'

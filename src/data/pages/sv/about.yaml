@@ -16,7 +16,7 @@ stats:
     - title: 'Uppblåsningstid'
       amount: '5-15 min'
     - title: Märktryck
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Kontakta
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Varje söm, vägg och ventil behandlas som om våra egna familjer skulle simma i den.
       icon: tabler:heart
     - title: Ingenjör innan vi säljer
-      description: Högtrycks-Drop Stitch-konstruktion, testad över dess nominella tryck, innan någon pool skickas.
+      description: Högtrycks-Drop Stitch-konstruktion, testad vid den övre gränsen för dess nominella tryck, innan någon pool skickas.
       icon: tabler:settings
     - title: Stöd som varar längre än säsongen
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Strikt kvalitetskontroll
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Global räckvidd
@@ -141,6 +141,6 @@ global_ops_section:
       label: Poolsamlingar
     - value: '5-15 min'
       label: 'Uppblåsningstid'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Märktryck
 

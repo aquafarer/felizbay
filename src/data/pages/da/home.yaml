@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Stive Drop Stitch-vægge
-      description: 'Tusindvis af indvendige gevind låser væglagene sammen, så poolen puster sig stivt op med de nominelle 4-5 PSI og holder sin form, når den fyldes.'
+      description: 'Tusindvis af indvendige gevind låser væglagene sammen, så poolen puster sig stivt op med de nominelle 4-6 PSI og holder sin form, når den fyldes.'
       icon: tabler:hexagon
     - title: Hurtig, værktøjsfri opsætning
       description: Pust op med den medfølgende elektriske pumpe på få minutter, og fyld derefter med en haveslange. Ingen værktøj, ingen konstruktion, ingen professionel installation.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Hvor stiv er en drop stitch pool?
-      description: Meget stiv. Drop Stitch-væggene puster sig hårdt op ved 4-5 PSI, så poolen holder sin form, når den er fyldt med vand.
+      description: Meget stiv. Drop Stitch-væggene puster sig hårdt op ved 4-6 PSI, så poolen holder sin form, når den er fyldt med vand.
       icon: tabler:hexagon
       category: all
     - title: Kan børn bruge poolen?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Ligesidet svømmeplads til større forsamlinger'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Alle samlinger: 4–5 PSI drop-stitch-vægge, 5–15 min. oppustning, opbevaring til opbevaring. Opvarmning og filtrering er ekstern - varmelegemer og filterpumper sælges separat.'
+  note: 'Alle samlinger: 4–6 PSI drop-stitch-vægge, 5–15 min. oppustning, opbevaring til opbevaring. Opvarmning og filtrering er ekstern - varmelegemer og filterpumper sælges separat.'
 
 content_evidence:
   tagline: 'Hvorfor Felizbay'

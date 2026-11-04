@@ -16,7 +16,7 @@ stats:
     - title: 'Waktu pengembungan'
       amount: '5-15 min'
     - title: Nilai tekanan
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Kontak
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Setiap lapisan, dinding, dan katup diperlakukan seolah-olah keluarga kita sendiri akan berenang di dalamnya.
       icon: tabler:heart
     - title: Insinyur sebelum kami menjual
-      description: Konstruksi Drop Stitch bertekanan tinggi, diuji di atas tekanan terukurnya, sebelum kolam apa pun dikirimkan.
+      description: Konstruksi Drop Stitch bertekanan tinggi, diuji pada batas atas tekanan terukurnya, sebelum kolam apa pun dikirimkan.
       icon: tabler:settings
     - title: Dukungan yang bertahan lebih lama dari musim ini
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Kontrol Kualitas yang Ketat
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Jangkauan Global
@@ -141,6 +141,6 @@ global_ops_section:
       label: Koleksi kolam renang
     - value: '5-15 min'
       label: 'Waktu pengembungan'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Nilai tekanan
 

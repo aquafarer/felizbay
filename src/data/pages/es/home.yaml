@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Paredes rígidas Drop Stitch
-      description: 'Miles de roscas internas unen las capas de la pared, por lo que la piscina se infla rígidamente a una velocidad nominal de 4-5 PSI y mantiene su forma cuando se llena.'
+      description: 'Miles de roscas internas unen las capas de la pared, por lo que la piscina se infla rígidamente a una velocidad nominal de 4-6 PSI y mantiene su forma cuando se llena.'
       icon: tabler:hexagon
     - title: Configuración rápida y sin herramientas
       description: Infle con la bomba eléctrica incluida en minutos y luego llénelo con una manguera de jardín. Sin herramientas, sin construcción, sin instalación profesional.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: ¿Qué tan rígida es una piscina Drop Stitch?
-      description: Muy rígido. Las paredes Drop Stitch se inflan con fuerza a 4-5 PSI, similar a una tabla de remo inflable, para que la piscina mantenga su forma cuando se llena de agua.
+      description: Muy rígido. Las paredes Drop Stitch se inflan con fuerza a 4-6 PSI, similar a una tabla de remo inflable, para que la piscina mantenga su forma cuando se llena de agua.
       icon: tabler:hexagon
       category: all
     - title: ¿Pueden los niños utilizar la piscina?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Espacio de baño de lados rectos para reuniones más grandes'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Todas las colecciones: 4 a 5 paredes PSI drop-stitch, inflado de 5 a 15 minutos, almacenamiento plegable. La calefacción y la filtración son externas: los calentadores y las bombas de filtrado se venden por separado.'
+  note: 'Todas las colecciones: 4 a 6 paredes PSI drop-stitch, inflado de 5 a 15 minutos, almacenamiento plegable. La calefacción y la filtración son externas: los calentadores y las bombas de filtrado se venden por separado.'
 
 content_evidence:
   tagline: 'Por qué Felizbay'

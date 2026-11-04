@@ -17,7 +17,7 @@ stats:
     - title: Time to inflate
       amount: '5-15 min'
     - title: Rated pressure
-      amount: '4-5 PSI'
+      amount: '4-6 PSI'
     - title: Contact
       amount: info@felizbay.com
 
@@ -65,7 +65,7 @@ steps2_values:
       description: Every seam, wall, and valve is treated as if our own families will swim in it.
       icon: tabler:heart
     - title: Engineer before we sell
-      description: High-pressure drop stitch construction, tested above its rated pressure, before any pool ships.
+      description: High-pressure drop stitch construction, tested at the top of its rated pressure range, before any pool ships.
       icon: tabler:settings
     - title: Support that outlasts the season
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -139,7 +139,7 @@ production_section:
     - title: 'Strict Quality Control'
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - 'Pressure testing above the rated 4-5 PSI working range'
+        - 'Pressure testing at the top of the rated 4-6 PSI working range'
         - 'Strict airtightness and durability testing before shipping'
 
 global_ops_section:
@@ -151,5 +151,5 @@ global_ops_section:
       label: 'Pool collections'
     - value: '5-15 min'
       label: 'Time to inflate'
-    - value: '4-5 PSI'
+    - value: '4-6 PSI'
       label: 'Rated pressure'

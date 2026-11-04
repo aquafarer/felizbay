@@ -152,12 +152,12 @@ const CHECKS = [
     markers: [
       'User Manual',
       'Mandatory Safety Warnings',
-      '4–5 PSI',
+      '4–6 PSI',
       'relief valve',
       'href="/files/drop-stitch-pool-user-manual.pdf"',
-      'confirming the correct figures with the factory',
+      'factory has confirmed the correct figures',
     ],
-    desc: 'user manual page: six setup steps, safety warnings, SSOT pressure figures with factory-confirmation note, PDF download link',
+    desc: 'user manual page: six setup steps, safety warnings, factory-confirmed 4–6 PSI figures, PDF download link',
   },
   {
     path: '/files/drop-stitch-pool-user-manual.pdf',

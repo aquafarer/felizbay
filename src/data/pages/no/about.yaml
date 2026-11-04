@@ -16,7 +16,7 @@ stats:
     - title: 'Oppblåsingstid'
       amount: '5-15 min'
     - title: Nominell trykk
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Kontakt
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Hver søm, vegg og ventil blir behandlet som om våre egne familier vil svømme i den.
       icon: tabler:heart
     - title: Ingeniør før vi selger
-      description: Høytrykks Drop Stitch-konstruksjon, testet over det nominelle trykket, før bassenget sendes.
+      description: Høytrykks Drop Stitch-konstruksjon, testet ved øvre grense for det nominelle trykket, før bassenget sendes.
       icon: tabler:settings
     - title: Støtte som varer ut sesongen
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Streng kvalitetskontroll
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Global rekkevidde
@@ -141,6 +141,6 @@ global_ops_section:
       label: Bassengsamlinger
     - value: '5-15 min'
       label: 'Oppblåsingstid'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Nominell trykk
 

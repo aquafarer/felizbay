@@ -16,7 +16,7 @@ stats:
     - title: 'Uzpūšanas laiks'
       amount: '5-15 min'
     - title: Nominālais spiediens
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: Sazināties
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: Ar katru šuvi, sienu un vārstu izturas tā, it kā tajā peldētos mūsu pašu ģimenes.
       icon: tabler:heart
     - title: Inženieris pirms pārdošanas
-      description: Augstspiediena Drop Stitch konstrukcija, kas pārbaudīta virs nominālā spiediena, pirms baseina nosūtīšanas.
+      description: Augstspiediena Drop Stitch konstrukcija, kas pārbaudīta pie nominālā spiediena augšējās robežas, pirms baseina nosūtīšanas.
       icon: tabler:settings
     - title: Atbalsts, kas pārsniedz sezonu
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: Stingra kvalitātes kontrole
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: Globālā sasniedzamība
@@ -141,6 +141,6 @@ global_ops_section:
       label: Baseinu kolekcijas
     - value: '5-15 min'
       label: 'Uzpūšanas laiks'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: Nominālais spiediens
 

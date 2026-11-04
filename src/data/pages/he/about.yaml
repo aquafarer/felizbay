@@ -16,7 +16,7 @@ stats:
     - title: 'זמן ניפוח'
       amount: '5-15 min'
     - title: לחץ מדורג
-      amount: 4-5 PSI
+      amount: 4-6 PSI
     - title: מַגָע
       amount: info@felizbay.com
 features3_what_we_build:
@@ -61,7 +61,7 @@ steps2_values:
       description: כל תפר, קיר ושסתום מטופלים כאילו המשפחות שלנו ישחו בו.
       icon: tabler:heart
     - title: מהנדס לפני שאנחנו מוכרים
-      description: בניית Drop Stitch בלחץ גבוה, נבדקה מעל הלחץ המדורג שלה, לפני כל ספינת בריכה.
+      description: בניית Drop Stitch בלחץ גבוה, נבדקה בגבול העליון של הלחץ המדורג שלה, לפני כל ספינת בריכה.
       icon: tabler:settings
     - title: תמיכה שנמשכת לאורך העונה
       description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
@@ -130,7 +130,7 @@ production_section:
     - title: בקרת איכות קפדנית
       items:
         - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing above the rated 4-5 PSI working range
+        - Pressure testing at the top of the rated 4-6 PSI working range
         - Strict airtightness and durability testing before shipping
 global_ops_section:
   tagline: טווח הגעה עולמי
@@ -141,6 +141,6 @@ global_ops_section:
       label: אוספי בריכות
     - value: '5-15 min'
       label: 'זמן ניפוח'
-    - value: 4-5 PSI
+    - value: 4-6 PSI
       label: לחץ מדורג
 

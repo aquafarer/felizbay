@@ -53,7 +53,7 @@ export const procurementGuides: ProcurementGuide[] = [
       {
         heading: 'Why the Manufacturer Matters More Than the Unit Price',
         paragraphs: [
-          'A drop stitch inflatable pool is a pressure vessel. It holds thousands of liters of water behind walls that must stay rigid at 4–5 PSI for an entire season, then fold up and do it again next year. That performance comes from material quality and manufacturing discipline — not from the price on a quotation sheet.',
+          'A drop stitch inflatable pool is a pressure vessel. It holds thousands of liters of water behind walls that must stay rigid at 4–6 PSI for an entire season, then fold up and do it again next year. That performance comes from material quality and manufacturing discipline — not from the price on a quotation sheet.',
           'A supplier who is 10% cheaper but skips seam reinforcement, ships without inflation testing, or laminates with non-compliant PVC will cost you far more in warranty claims, chargebacks and damaged retail relationships than the savings ever covered. Manufacturer selection is therefore a risk decision first and a cost decision second.',
         ],
       },
@@ -336,7 +336,7 @@ export const procurementGuides: ProcurementGuide[] = [
     updateDate: '2026-10-16',
     readMinutes: 7,
     audience: 'Wholesale buyers, QC managers and importers specifying quality standards.',
-    tldr: 'A drop stitch pool is a pressure vessel: rated at 4–5 PSI operating, 6 PSI factory QC test pressure, 8 PSI maximum tolerance, with a pressure-relief valve that auto-releases above 6 PSI. Every production unit must pass a 24–48 hour pressure-drop test verifying zero leakage before shipment. Buyers should require this test contractually and verify it with third-party inspection.',
+    tldr: 'A drop stitch pool is a pressure vessel: rated at 4–6 PSI operating, 6 PSI factory QC test pressure, 8 PSI maximum tolerance, with a pressure-relief valve that auto-releases above 6 PSI. Every production unit must pass a 24–48 hour pressure-drop test verifying zero leakage before shipment. Buyers should require this test contractually and verify it with third-party inspection.',
     sections: [
       {
         heading: 'A Pool Is a Pressure Vessel',
@@ -349,8 +349,8 @@ export const procurementGuides: ProcurementGuide[] = [
         heading: 'The Pressure Specification',
         paragraphs: ['Felizbay\'s engineering baseline, applied across the catalog:'],
         bullets: [
-          'Recommended operating pressure: 4–5 PSI — walls are rigid at this range',
-          'Factory QC test pressure: 6 PSI — every unit is tested above its operating point',
+          'Recommended operating pressure: 4–6 PSI — walls are rigid at this range',
+          'Factory QC test pressure: 6 PSI — every unit is tested at the top of its operating range',
           'Maximum pressure tolerance: 8 PSI — the structural limit the design must survive',
           'Pressure-relief valve: auto-releases above 6 PSI, protecting against over-inflation and heat expansion',
         ],
@@ -393,8 +393,8 @@ export const procurementGuides: ProcurementGuide[] = [
         a: 'It catches catastrophic failures only. Slow seeps at valve seals or micro-pinholes in welded seams hold pressure for minutes but not for days. The 24–48 hour hold exists precisely because short checks pass defects that customers discover in week two.',
       },
       {
-        q: 'Why test at 6 PSI when operating pressure is 4–5 PSI?',
-        a: 'Testing above the operating point creates margin: a unit that holds at 6 PSI for two days will hold at 4–5 PSI all season. It also confirms the pressure-relief valve (auto-release above 6 PSI) functions in its designed range.',
+        q: 'Why test at 6 PSI, the top of the operating range?',
+        a: 'Testing at the top of the operating range creates margin: a unit that holds at 6 PSI for two days will hold comfortably anywhere in the 4–6 PSI range all season. It also confirms the pressure-relief valve (auto-release above 6 PSI) functions right at its set point.',
       },
       {
         q: 'Does every Felizbay pool get this test?',

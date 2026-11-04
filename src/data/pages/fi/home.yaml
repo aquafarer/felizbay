@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Jäykät Drop Stitch seinät
-      description: 'Tuhannet sisäkierteet lukitsevat seinäkerrokset yhteen, joten allas täyttyy jäykästi 4-5 PSI:llä ja säilyttää muotonsa täytettäessä.'
+      description: 'Tuhannet sisäkierteet lukitsevat seinäkerrokset yhteen, joten allas täyttyy jäykästi 4-6 PSI:llä ja säilyttää muotonsa täytettäessä.'
       icon: tabler:hexagon
     - title: Nopea, työkaluton asennus
       description: Täytä mukana tulevalla sähköpumpulla muutamassa minuutissa ja täytä sitten puutarhaletkulla. Ei työkaluja, ei rakentamista, ei ammattimaista asennusta.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Kuinka jäykkä Drop Stitch-allas on?
-      description: Erittäin jäykkä. Drop Stitch-seinät puhalletaan kovaa 4-5 PSI:n paineella – kuten puhallettava melalauta – joten allas säilyttää muotonsa vedellä täytettynä.
+      description: Erittäin jäykkä. Drop Stitch-seinät puhalletaan kovaa 4-6 PSI:n paineella – kuten puhallettava melalauta – joten allas säilyttää muotonsa vedellä täytettynä.
       icon: tabler:hexagon
       category: all
     - title: Voivatko lapset käyttää uima-allasta?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Suorasivuinen uimapaikka suurempiin kokoontumisiin'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Kaikki kokoelmat: 4–5 PSI drop-stitch seinät, 5–15 minuutin täyttö, pakattava säilytys. Lämmitys ja suodatus ovat ulkoisia – lämmittimet ja suodatinpumput myydään erikseen.'
+  note: 'Kaikki kokoelmat: 4–6 PSI drop-stitch seinät, 5–15 minuutin täyttö, pakattava säilytys. Lämmitys ja suodatus ovat ulkoisia – lämmittimet ja suodatinpumput myydään erikseen.'
 
 content_evidence:
   tagline: 'Miksi Felizbay'

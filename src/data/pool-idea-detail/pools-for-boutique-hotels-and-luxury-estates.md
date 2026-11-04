@@ -7,7 +7,7 @@ In boutique hospitality, a private plunge on a suite terrace or in a villa court
 
 ## 1. The Guest Experience, Without the Construction
 
-A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) inflated to its rated 4–5 PSI operating pressure holds straight, clean walls and a stable rim — a photogenic, architectural silhouette rather than a toy. Neutral exteriors sit comfortably next to timber decking, natural stone, and planted terraces, and the whole amenity:
+A [drop-stitch pool](/guides/what-is-a-drop-stitch-inflatable-pool/) inflated to its rated 4–6 PSI operating pressure holds straight, clean walls and a stable rim — a photogenic, architectural silhouette rather than a toy. Neutral exteriors sit comfortably next to timber decking, natural stone, and planted terraces, and the whole amenity:
 
 - installs with no excavation, foundations, or building works,
 - moves or stores seasonally without leaving a trace, and

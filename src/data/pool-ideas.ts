@@ -43,7 +43,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Backyard Pools for Families',
     intro: [
       'A family pool has to survive summer holidays, birthday parties, and daily after-school splashing — while still being safe for mixed ages and easy for parents to manage. Felizbay drop-stitch pools give you rigid, full-size swimming at a fraction of the cost and commitment of a built-in pool.',
-      'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rigid at 4–5 PSI and the pool keeps its shape all season. When summer ends, it drains, folds, and stores in a storage bag.',
+      'Unlike soft-sided toy pools, the high-pressure drop-stitch walls inflate rigid at 4–6 PSI and the pool keeps its shape all season. When summer ends, it drains, folds, and stores in a storage bag.',
     ],
     conditions: [
       'A flat, load-bearing surface of about 3 × 3 m or larger (lawn, patio, or deck rated for the water weight)',
@@ -67,7 +67,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Active adult supervision is required at all times when children are in or near the pool.',
       'Empty or securely cover the pool when not in use; never leave standing water unattended around small children.',
       'Check local fencing/barrier regulations — many jurisdictions require pool barriers regardless of pool type.',
-      'Inflate to the rated 4–5 PSI operating pressure so walls stay rigid; the pressure-relief valve guards against over-inflation.',
+      'Inflate to the rated 4–6 PSI operating pressure so walls stay rigid; the pressure-relief valve guards against over-inflation.',
     ],
     cta: 'Ready to pick a size? Compare every model in the shop.',
     relatedGuides: ["how-to-choose-inflatable-pool","inflatable-pool-setup"],
@@ -158,7 +158,7 @@ export const POOL_IDEAS: PoolIdea[] = [
     title: 'Outdoor Soaking & Relaxation',
     intro: [
       'Not every backyard moment is about swimming. Sometimes the goal is hot water, built-in seats, and the sky above you. Felizbay insulated SPA soaking tubs — paired with an external heater, sold separately — bring that experience to patios, gardens, and terraces in square, rectangular, and round layouts from 1.5 m up.',
-      'The tubs share the same drop-stitch construction as our pools — rigid walls, 4–5 PSI operating pressure — plus insulated designs with seats, so they hold temperature efficiently and stay in place through four-season use in mild climates.',
+      'The tubs share the same drop-stitch construction as our pools — rigid walls, 4–6 PSI operating pressure — plus insulated designs with seats, so they hold temperature efficiently and stay in place through four-season use in mild climates.',
     ],
     conditions: [
       'A compact footprint from about 1.5 × 1.5 m on a level, load-capable surface',
@@ -196,7 +196,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A family of three enjoying a round Felizbay inflatable pool on the rooftop terrace of a city vacation rental.',
     intro: [
       'A pool is one of the most requested amenities a vacation rental can add — and one of the hardest to get right. Felizbay drop-stitch pools were made for this gap: a genuine swimming pool that inflates in minutes with the included pump, drains at the end of the season, and needs no construction, cranes, or permanent insurance reclassification in most markets (verify with your insurer and local authority).',
-      'Rigid 4–5 PSI walls and reinforced seams stand up to guest traffic, and the pressure-relief valve keeps over-enthusiastic inflation from doing damage.',
+      'Rigid 4–6 PSI walls and reinforced seams stand up to guest traffic, and the pressure-relief valve keeps over-enthusiastic inflation from doing damage.',
     ],
     conditions: [
       'Rental properties with 3 × 3 m of usable outdoor space or more',
@@ -324,7 +324,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A man doing a cold plunge recovery session in a round grey Felizbay tub inside a home garage gym.',
     intro: [
       'Cold-water immersion has become a staple recovery routine for athletes and fitness enthusiasts. A dedicated plunge vessel needs rigid walls, insulation to slow warming, and a compact footprint that fits a garage gym or a shaded patio corner — exactly what Felizbay drop-stitch tubs are built for.',
-      'The same 4–5 PSI rigid construction used across our pools, plus the 5 mm insulated thermal bottom on SPA tubs, holds cold water steadily. Add ice, or pair the tub with external water-chilling equipment — the line is designed to work with heating and spa therapy units.',
+      'The same 4–6 PSI rigid construction used across our pools, plus the 5 mm insulated thermal bottom on SPA tubs, holds cold water steadily. Add ice, or pair the tub with external water-chilling equipment — the line is designed to work with heating and spa therapy units.',
     ],
     conditions: [
       'A shaded, level spot from about 1.5 × 1.5 m — cold plunges work best out of direct sun',
@@ -367,7 +367,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A golden retriever playing in a round Felizbay pool on a sunny suburban lawn while its owner joins in with a toy.',
     intro: [
       'Dogs feel the summer heat far more than we do, and a backyard splash spot is one of the best ways to keep them cool, exercised, and entertained. The problem with most inflatable pools is that thin, soft walls puncture easily.',
-      'Felizbay drop-stitch pools take a different approach: dense internal threading and multi-layer PVC inflate to a hard, low-stretch surface at 4–5 PSI that handles normal paw traffic far better than soft air-ring pools. No inflatable is chew-proof — but for supervised splash time, drop-stitch is the most durable portable option we offer.',
+      'Felizbay drop-stitch pools take a different approach: dense internal threading and multi-layer PVC inflate to a hard, low-stretch surface at 4–6 PSI that handles normal paw traffic far better than soft air-ring pools. No inflatable is chew-proof — but for supervised splash time, drop-stitch is the most durable portable option we offer.',
     ],
     conditions: [
       'A level patch of lawn or patio from about 2 × 2 m',
@@ -407,7 +407,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A family doing water exercises and splash games in a spacious round Felizbay pool on a sunny backyard lawn.',
     intro: [
       'Water aerobics, standing stretches, resistance walking, and family splash games turn a pool into a summer fitness platform. What matters for movement is usable floor area and stable, vertical walls — soft ring pools lose interior space to sloped sides and slosh over the rim during active play.',
-      'Felizbay drop-stitch pools keep their shape at 4–5 PSI: straight 90-degree walls and a flat stable floor — a wide, stable platform for low-impact movement at a fraction of an in-ground pool\u2019s cost.',
+      'Felizbay drop-stitch pools keep their shape at 4–6 PSI: straight 90-degree walls and a flat stable floor — a wide, stable platform for low-impact movement at a fraction of an in-ground pool\u2019s cost.',
     ],
     conditions: [
       'A footprint from about 3 × 2 m with at least 1 m of clear, non-slip walkway around the pool',
@@ -447,7 +447,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'A round Felizbay inflatable pool on the small patio of a modern townhome with wooden privacy fencing and potted plants.',
     intro: [
       'Townhome patios, side yards, and courtyards rarely appear in pool brochures — but a 2 m pool changes that math. Felizbay drop-stitch pools start at footprints that fit a small paved yard, install without touching shared structures, and disappear into storage the day you need the space back.',
-      'Because the walls inflate rigid at 4–5 PSI instead of sagging like a ring pool, even the smallest sizes read as a real pool — straight sides, a stable rim, genuine depth.',
+      'Because the walls inflate rigid at 4–6 PSI instead of sagging like a ring pool, even the smallest sizes read as a real pool — straight sides, a stable rim, genuine depth.',
     ],
     conditions: [
       'Measured space from about 2 × 2 m, plus a 0.5–0.8 m access buffer on all sides for valves, pumps, and cleaning',
@@ -642,7 +642,7 @@ export const POOL_IDEAS: PoolIdea[] = [
       'Drain, dry, and fold the pool before the first frost — trapped water freezes and can split seams and valves.',
       'Store the deflated pool indoors or in a dry shed, away from rodents and sharp shelving.',
       'Re-check the ground for frost heave, level, and sharp debris when you re-install each season.',
-      'Inspect valves and seams and test inflation to the rated 4–5 PSI before the first fill of the season.',
+      'Inspect valves and seams and test inflation to the rated 4–6 PSI before the first fill of the season.',
     ],
     cta: 'Pick the size that fits your season — every model folds away in autumn.',
     relatedGuides: ["how-to-store-a-drop-stitch-pool","how-to-clean-an-inflatable-pool","how-to-prevent-pool-leaks"],

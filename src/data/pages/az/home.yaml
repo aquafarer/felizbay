@@ -24,7 +24,7 @@ features:
   columns: 2
   items:
     - title: Sərt Drop Stitch Divarları
-      description: 'Minlərlə daxili iplər divar təbəqələrini bir-birinə bağlayır, beləliklə hovuz 4-5 PSI nominalında sərt şəkildə şişirilir və doldurulduqda formasını saxlayır.'
+      description: 'Minlərlə daxili iplər divar təbəqələrini bir-birinə bağlayır, beləliklə hovuz 4-6 PSI nominalında sərt şəkildə şişirilir və doldurulduqda formasını saxlayır.'
       icon: tabler:hexagon
     - title: Sürətli, Alətsiz Quraşdırma
       description: Daxil olan elektrik nasosu ilə bir neçə dəqiqə ərzində şişirdin, sonra bağ şlanqı ilə doldurun. Alət yoxdur, tikinti yoxdur, peşəkar quraşdırma yoxdur.
@@ -105,7 +105,7 @@ faqs:
       icon: tabler:clock
       category: all
     - title: Drop Stitch hovuzu nə qədər sərtdir?
-      description: Çox sərt. Drop Stitch divarları 4-5 PSI-da güclü şəkildə şişirilir - şişmə avar taxtasına bənzər - buna görə də hovuz su ilə doldurulduqda öz formasını saxlayır.
+      description: Çox sərt. Drop Stitch divarları 4-6 PSI-da güclü şəkildə şişirilir - şişmə avar taxtasına bənzər - buna görə də hovuz su ilə doldurulduqda öz formasını saxlayır.
       icon: tabler:hexagon
       category: all
     - title: Uşaqlar hovuzdan istifadə edə bilərmi?
@@ -163,7 +163,7 @@ compare_collections:
       sizes: '2 × 2 m – 6 × 5 m'
       best_for: 'Daha böyük yığıncaqlar üçün düz tərəfli üzgüçülük sahəsi'
       href: /products/rectangular-drop-stitch-pool/
-  note: 'Bütün kolleksiyalar: 4–5 PSI drop-stitch divarları, 5–15 dəqiqəlik inflyasiya, paketdə saxlama. İstilik və filtrasiya xaricidir — qızdırıcılar və filtr nasosları ayrıca satılır.'
+  note: 'Bütün kolleksiyalar: 4–6 PSI drop-stitch divarları, 5–15 dəqiqəlik inflyasiya, paketdə saxlama. İstilik və filtrasiya xaricidir — qızdırıcılar və filtr nasosları ayrıca satılır.'
 
 content_evidence:
   tagline: 'Niyə Felizbay'
