@@ -944,6 +944,8 @@ npm run build       # 验证构建
 
 **预防**: 不要用 `--legacy-peer-deps` 安装 (astro-auto-import 0.5.2 起 peer 可干净解析)；锁变更后提交 `package-lock.json`。
 
+**变体 (2026-11-04, commits `6cda0b7`/`7a614a1`): 本地 npm 11 与 CI npm 10 的去重差异**。本地 `npm update` (Node 26 / npm 11.17) 重写 lock 后，本地 `npm ci --dry-run` 通过，但 CI (Node 22 / npm 10.x) 报 `Invalid: lock file's esbuild@0.25.12 does not satisfy esbuild@0.28.2` — npm 11 的 dedup 把 vite 需要的 esbuild 0.28.2 边折叠到了 0.25.12 条目上，npm 10 的理想树构建器拒绝。**修复/预防**: 刷新 lock 必须用与 CI 相同大版本的 npm — `npx -y npm@10 install` 后再 `npx -y npm@10 ci --dry-run` 验证；只信 npm@10 的 dry-run 结果，npm 11 的通过不代表 CI 通过。
+
 ### 11.11 Cloudflare Pages 部署失败: 单文件 ≥ 25 MiB
 
 **现象**: `wrangler pages deploy` 报 `Error: Pages only supports files up to 25 MiB in size — data/page-content.json is 27 MiB`。
