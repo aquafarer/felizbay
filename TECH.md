@@ -1240,6 +1240,21 @@ applier (`tools/i18n-apply.mjs`) 开发中实际踩过的坑:
 
 审计扫描时以下字段命中 EN 值属于**设计如此**, 不要"修复": JSON-LD、meta、image alt、href/slug、`.source` 路由、公司名 (`customer`/`company` 键)、邮寄地址、`color`/`badge` class、认证代号 (CE/ISO/USCG)、测试标准 (`standard` 键, 如 ASTM D751)、对比矩阵规格单元格 (`premium` 键)、阀门品牌名 (Halkey-Roberts/Leafield/Boston)、真实地名、产品型号 (如 RIB 600 Patrol)、`custom.yaml` 的 `hero.tagline` ("Felizbay Custom Lab")。完整键名排除表见 `tools/i18n-audit.mjs` 的 `NOISE_KEY`, 字面值排除表见同文件的 `MACHINE_VALUES`。
 
+### 11.24 git push 代理变体：`-c http.proxy` 无效，用环境变量
+
+**现象 (2026-11-05)**: `git -c http.proxy=socks5h://127.0.0.1:10808 push origin main` 连续两次报 `Failed to connect to github.com:443`（报错对象是目标主机，说明 `-c` 代理未生效、走了直连）；同一时刻 `curl.exe` 经同端口代理访问 github.com 返回 200，代理本身正常。
+
+**修复**: 用环境变量方式设置代理后首推即成功：
+
+```powershell
+$env:HTTPS_PROXY='socks5h://127.0.0.1:10808'
+$env:HTTP_PROXY='socks5h://127.0.0.1:10808'
+$env:NO_PROXY='localhost,127.0.0.1'
+git push origin main
+```
+
+**预防**: 本仓库所有需要出网的命令 (npm / curl.exe / git) 统一走环境变量代理；git 场景不要依赖 `-c http.proxy`（本机 git/libcurl 组合下不稳定，且失败报错具有误导性）。
+
 ---
 
 ## 12. 编辑指南与红线
