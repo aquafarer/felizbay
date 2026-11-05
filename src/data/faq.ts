@@ -26,6 +26,15 @@ export const faqs: FaqRecord[] = [
     relatedGuides: ['inflatable-pool-setup'],
   },
   {
+    id: 'pool-package-contents',
+    question: 'What is included in the box?',
+    answer:
+      'Every retail set ships with the pool body, a 1000W electric air pump, a repair kit, and a storage bag. The rectangular set also includes a full-coverage cover, while the round grey set takes an optional fitted cover sold separately. On the hot tub, heating and filtration units connect via the standard ports and are sold separately. The exact package contents for each set are listed on its product page.',
+    category: 'product',
+    relatedProducts: ['rectangular-drop-stitch-pool', 'round-grey-drop-stitch-pool', 'hot-tub-round'],
+    relatedGuides: [],
+  },
+  {
     id: 'drop-stitch-walls',
     question: 'What is a drop stitch pool?',
     answer:
@@ -42,6 +51,15 @@ export const faqs: FaqRecord[] = [
     category: 'product',
     relatedProducts: [],
     relatedGuides: ['how-much-space-do-you-need-for-an-inflatable-pool'],
+  },
+  {
+    id: 'pool-inflation-psi',
+    question: 'What PSI should I inflate my pool to?',
+    answer:
+      'The recommended operating pressure is 4–6 PSI (0.28–0.41 bar) — inflate gradually with the electric air pump, watching a pressure gauge, until the drop-stitch walls are rigid. The pressure-relief valve on the walls automatically releases air above 6 PSI, and 8 PSI is the maximum structural rating, never an inflation target. Direct sunlight heats the air inside the walls, so re-check the gauge on hot days and release a little air if needed. Full step-by-step instructions are in the user manual.',
+    category: 'safety',
+    relatedProducts: [],
+    relatedGuides: ['what-psi-should-an-inflatable-pool-use'],
   },
   {
     id: 'pool-ground-prep',
@@ -114,6 +132,24 @@ export const faqs: FaqRecord[] = [
     category: 'product',
     relatedProducts: ['rectangular-drop-stitch-pool'],
     relatedGuides: [],
+  },
+  {
+    id: 'hot-tub-heater',
+    question: 'Can I connect a heater to the hot tub?',
+    answer:
+      'Yes. Heating and filtration units connect via the standard ports and are sold separately — the heater is not included. Every model does include the built-in integrated inflatable seats and the 5 mm insulated thermal bottom as standard. Heating and electrical equipment must be installed by a qualified professional.',
+    category: 'product',
+    relatedProducts: ['hot-tub-round'],
+    relatedGuides: [],
+  },
+  {
+    id: 'pool-blue-vs-grey',
+    question: 'What is the difference between the blue and grey round pools?',
+    answer:
+      'Both share the same double-layer drop stitch construction and 4–6 PSI rigidity. The grey model adds a premium modern finish and an optional fitted cover (sold separately) for design-conscious buyers.',
+    category: 'product',
+    relatedProducts: ['round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool'],
+    relatedGuides: ['how-to-choose-inflatable-pool'],
   },
   {
     id: 'pool-lifespan',
