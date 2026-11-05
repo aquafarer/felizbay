@@ -228,5 +228,5 @@ After changes, always verify:
 
 1. `npm run build` succeeds (~645 pages)
 2. `npm run check` passes (astro check + ESLint + Prettier)
-3. Quality gates on `dist/`: no broken internal links (one known false positive: JS template string in `ar/search`), hreflang alternates 0 broken, canonical 0 broken, translation-gap scan `transGap(X): 0` (3 accepted word-form warnings), zero `noindex` leaks in sitemaps
+ 3. Quality gates on `dist/`: no broken internal links (enforced by `scripts/audit-dist-links.mjs`, wired as the last step of `npm run build` since 2026-11-05 — before that the script's toml regex was case-sensitive against lowercase `felizbay.com` patterns and `npm run check:links` had never actually run; inline `<script>` bodies are skipped so the old `ar/search` JS-template false positive no longer applies), hreflang alternates 0 broken, canonical 0 broken, translation-gap scan `transGap(X): 0` (3 accepted word-form warnings), zero `noindex` leaks in sitemaps
 4. Visual check in browser: homepage, blog, dark mode, mobile menu, contact form (verify captcha + submission roundtrip end-to-end)

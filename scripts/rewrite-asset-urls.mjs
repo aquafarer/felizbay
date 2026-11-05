@@ -5,7 +5,7 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const BASE = 'https://assets.felizbay.com';
 
 // Skip already-absolute URLs and bundled asset aliases (~/assets/images).
-const RE = /(?<!https:\/\/assets\.Felizbay\.com)(?<!assets)\/(images|files)\//g;
+const RE = /(?<!https:\/\/assets\.felizbay\.com)(?<!assets)\/(images|files)\//gi;
 
 const SKIP_DIRS = new Set(['node_modules', 'dist', '.git']);
 const SKIP_FILES = new Set(['assets.ts']); // the helper itself
