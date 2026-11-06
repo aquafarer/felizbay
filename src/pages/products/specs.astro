@@ -428,13 +428,23 @@ const formatUsd = (n: number) =>
         Prices are based on 20 pcs per item, FOB Qingdao. For mixed containers, custom sizes, or OEM/ODM projects,
         request an itemized quotation.
       </p>
-      <a
-        href="/request-quotation/"
-        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
-      >
-        <Icon name="tabler:file-invoice" class="w-5 h-5" />
-        Request a Quotation
-      </a>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/request-quotation/"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+        >
+          <Icon name="tabler:file-invoice" class="w-5 h-5" />
+          Request a Quotation
+        </a>
+        <a
+          href="/files/felizbay-wholesale-price-list.xlsx"
+          download
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:file-spreadsheet" class="w-5 h-5" />
+          Download Price List (Excel)
+        </a>
+      </div>
     </div>
   </section>
 

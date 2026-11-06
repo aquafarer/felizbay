@@ -41,6 +41,7 @@ export const VALID_ICON_NAMES = new Set([
   "tabler:droplet",
   "tabler:droplets",
   "tabler:file-invoice",
+  "tabler:file-spreadsheet",
   "tabler:file-text",
   "tabler:flag",
   "tabler:flame",
