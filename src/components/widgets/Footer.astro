@@ -92,6 +92,7 @@ const navTextMap: Record<string, string> = {
   'Private Label Pools': 'nav.privateLabel',
   'Manufacturing Process': 'nav.manufacturingProcess',
   'Quality Control': 'nav.qualityControl',
+  'Premium drop stitch inflatable pools by Felizbay. Designed and operated by Aquafarer LLC, USA.': 'nav.footNote',
 };
 
 function t(text: string | undefined, locale: string): string {
@@ -107,7 +108,7 @@ function t(text: string | undefined, locale: string): string {
 const siteName = branding?.site_name?.trim() || 'Felizbay';
 const year = new Date().getFullYear();
 const rawCopyright = footNote ?? branding?.copyright ?? `© ${year} ${siteName} · All rights reserved.`;
-const copyrightHtml = String(rawCopyright)
+const copyrightHtml = String(t(rawCopyright, currentLocale))
   .replace(/\{year\}/gi, String(year))
   .replace(/\{site_name\}/gi, siteName);
 ---
