@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Tam paketlər
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Hər hovuzda elektrik hava nasosu, təmir dəsti və saxlama çantası olan gəmilər quraşdırılıb.
       icon: tabler:package
     - title: Xüsusi ölçülər
       description: Brendlər, distribyutorlar və qonaqpərvərlik layihələri üçün OEM ölçüləri, rəngləri və örtükləri.
@@ -64,7 +64,7 @@ steps2_values:
       description: Hovuz gəmilərindən əvvəl nominal təzyiqin yuxarı həddində sınaqdan keçirilmiş yüksək təzyiqli Drop Stitch konstruksiyası.
       icon: tabler:settings
     - title: Mövsümü geridə qoyan dəstək
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Suallar, ehtiyat hissələri və ya zəmanət — info@felizbay.com vasitəsilə istənilən vaxt bizimlə əlaqə saxlayın.
       icon: tabler:headset
 steps2_milestones:
   title: Mərhələlər
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-poçt
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — bir iş günü ərzində cavab veririk.
     - title: Veb sayt
       description: felizbay.com — hovuzlarımızı nəzərdən keçirin və qiymət tələb edin.
     - title: OEM / Topdan
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Təcrübəli Texniki Komanda
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Açılan tikiş və PVC materialları haqqında peşəkar biliklər
+        - Kəsmə, qaynaq və montaj işlərində dəqiq ustalıq
+        - Ən son istehsal texnologiyalarına yiyələnmək üçün davamlı təlim
     - title: Qabaqcıl İstehsal Avadanlıqları
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Dəqiq parça panelləri üçün dəqiq kəsmə avadanlığı
+        - Tırtıllı, dayanıqlı tikişlər üçün yüksək dəqiqlikli istilik qaynağı
+        - Peşəkar təzyiq və təhlükəsizlik testi avadanlığı
     - title: Yetkin İdarəetmə Sistemi
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Aydın keyfiyyət standartları ilə standartlaşdırılmış istehsal prosesləri
+        - Arıq istehsal fəlsəfəsi tullantıların azaldılması və səmərəliliyinin artırılması
+        - Etibarlı təchizatçılarla təchizat zəncirinin səmərəli idarə edilməsi
     - title: Ciddi keyfiyyətə nəzarət
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Çox mərhələli yoxlama: xammal, davamsız, son çıxan'
+        - Qiymətləndirilmiş 4-6 PSI iş diapazonunun yuxarısında təzyiq testi
+        - Göndərmədən əvvəl ciddi hava keçiriciliyi və davamlılıq testi
 global_ops_section:
   tagline: Qlobal Çatdırılma
   title_html: Bir marka, <span class="text-white/90">dünya miqyasında göndərmə</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay bütün dünyada ailələrə və biznes müştərilərinə xidmət göstərir <strong class="text-white">felizbay.com</strong>. Pərakəndə satış sifarişləri, topdansatış və OEM/ODM istehsalı komandamız tərəfindən idarə olunur — istənilən vaxt bizimlə əlaqə saxlayın <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Hovuz kolleksiyaları

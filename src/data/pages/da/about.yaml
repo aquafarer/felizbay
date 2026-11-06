@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komplet pakker
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Hvert svømmebassinsæt leveres med en elektrisk luftpumpe, reparationssæt og opbevaringstaske.
       icon: tabler:package
     - title: Brugerdefinerede størrelser
       description: OEM størrelser, farver og covers til mærker, distributører og gæstfrihedsprojekter.
@@ -64,7 +64,7 @@ steps2_values:
       description: Højtryks Drop Stitch-konstruktion, testet ved den øvre grænse for dets nominelle tryk, før enhver pool sendes.
       icon: tabler:settings
     - title: Støtte, der varer længere end sæsonen
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Spørgsmål, reservedele eller garanti — kontakt os når som helst på info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milepæle
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — vi svarer inden for en hverdag.
     - title: Hjemmeside
       description: felizbay.com — gennemse vores pools og anmod om et tilbud.
     - title: OEM / Engros
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Erfarent teknikerteam
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Faglig viden om drop stitch og PVC materialer
+        - Præcis håndværk inden for skæring, svejsning og montage
+        - Løbende træning for at mestre de nyeste produktionsteknologier
     - title: Avanceret produktionsudstyr
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Præcisionsskæreudstyr til præcise stofpaneler
+        - Højpræcisions varmesvejsning for lufttætte, holdbare sømme
+        - Professionelt tryk- og lufttæthedstestudstyr
     - title: Modent ledelsessystem
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardiserede produktionsprocesser med klare kvalitetsstandarder
+        - Lean produktionsfilosofi, der reducerer spild og forbedrer effektiviteten
+        - Effektiv supply chain management med pålidelige leverandører
     - title: Streng kvalitetskontrol
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Flertrinsinspektion: råmateriale, i proces, endelig udgående'
+        - Tryktestning i toppen af ​​det nominelle 4-6 PSI arbejdsområde
+        - Streng lufttætheds- og holdbarhedstest inden forsendelse
 global_ops_section:
   tagline: Global rækkevidde
   title_html: Et mærke, <span class="text-white/90">verdensomspændende forsendelse</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay betjener familier og erhvervskunder over hele verden fra <strong class="text-white">felizbay.com</strong>. Detailordrer, engros- og OEM/ODM-fremstilling håndteres alle af vores team - kontakt os når som helst på <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Pool samlinger

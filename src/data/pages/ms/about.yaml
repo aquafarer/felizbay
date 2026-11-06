@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Pakej lengkap
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Setiap set kolam renang dihantar dengan pam udara elektrik, kit pembaikan dan beg penyimpanan.
       icon: tabler:package
     - title: Saiz tersuai
       description: Saiz, warna dan penutup OEM untuk jenama, pengedar dan projek hospitaliti.
@@ -64,7 +64,7 @@ steps2_values:
       description: Pembinaan Drop Stitch bertekanan tinggi, diuji pada had atas tekanan terkadarnya, sebelum sebarang kolam dihantar.
       icon: tabler:settings
     - title: Sokongan yang bertahan lebih lama daripada musim ini
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Soalan, alat ganti atau waranti — hubungi kami pada bila-bila masa di info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Pencapaian
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-mel
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — kami membalas dalam satu hari perniagaan.
     - title: laman web
       description: felizbay.com — semak imbas kolam kami dan minta sebut harga.
     - title: OEM / Borong
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Pasukan Juruteknik Berpengalaman
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Pengetahuan profesional tentang jahitan jatuh dan bahan PVC
+        - Ketukangan yang tepat dalam memotong, mengimpal dan memasang
+        - Latihan berterusan untuk menguasai teknologi pengeluaran terkini
     - title: Peralatan Pengeluaran Termaju
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Peralatan pemotongan ketepatan untuk panel fabrik yang tepat
+        - Kimpalan haba berketepatan tinggi untuk jahitan kedap udara dan tahan lama
+        - Peralatan ujian tekanan dan kedap udara profesional
     - title: Sistem Pengurusan Matang
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Proses pengeluaran standard dengan standard kualiti yang jelas
+        - Falsafah pengeluaran tanpa lemak mengurangkan pembaziran dan meningkatkan kecekapan
+        - Pengurusan rantaian bekalan yang cekap dengan pembekal yang boleh dipercayai
     - title: Kawalan Kualiti yang Ketat
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Pemeriksaan berbilang peringkat: bahan mentah, dalam proses, keluar akhir'
+        - Ujian tekanan di bahagian atas julat kerja 4-6 PSI yang dinilai
+        - Ujian kedap udara dan ketahanan yang ketat sebelum penghantaran
 global_ops_section:
   tagline: Jangkauan Global
   title_html: Satu jenama, <span class="text-white/90">penghantaran ke seluruh dunia</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay melayani keluarga dan pelanggan perniagaan di seluruh dunia dari <strong class="text-white">felizbay.com</strong>. Pesanan runcit, borong dan pembuatan OEM/ODM semuanya dikendalikan oleh pasukan kami — hubungi kami pada bila-bila masa <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Koleksi kolam

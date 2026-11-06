@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Kompletta paket
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Varje poolset levereras med en elektrisk luftpump, reparationssats och förvaringsväska.
       icon: tabler:package
     - title: Anpassade storlekar
       description: OEM-storlekar, färger och omslag för varumärken, distributörer och gästfrihetsprojekt.
@@ -64,7 +64,7 @@ steps2_values:
       description: Högtrycks-Drop Stitch-konstruktion, testad vid den övre gränsen för dess nominella tryck, innan någon pool skickas.
       icon: tabler:settings
     - title: Stöd som varar längre än säsongen
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Frågor, reservdelar eller garanti — nå oss när som helst på info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milstolpar
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-post
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — vi svarar inom en arbetsdag.
     - title: Webbplats
       description: felizbay.com — bläddra i våra pooler och begär en offert.
     - title: OEM / grossist
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Erfaret teknikerteam
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Professionell kunskap om droppstygn och PVC-material
+        - Exakt hantverk inom skärning, svetsning och montering
+        - Kontinuerlig utbildning för att bemästra den senaste produktionstekniken
     - title: Avancerad produktionsutrustning
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Precisionsskärningsutrustning för exakta tygpaneler
+        - Högprecisionsvärmesvetsning för lufttäta, hållbara sömmar
+        - Professionell tryck- och lufttäthetstestutrustning
     - title: Moget ledningssystem
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardiserade produktionsprocesser med tydliga kvalitetsstandarder
+        - Lean produktionsfilosofi som minskar avfallet och förbättrar effektiviteten
+        - Effektiv supply chain management med pålitliga leverantörer
     - title: Strikt kvalitetskontroll
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Flerstegsinspektion: råmaterial, pågående, slutligt utgående'
+        - Trycktestning i toppen av det nominella arbetsområdet 4-6 PSI
+        - Strikt lufttäthets- och hållbarhetsprovning före leverans
 global_ops_section:
   tagline: Global räckvidd
   title_html: Ett märke, <span class="text-white/90">världsomspännande frakt</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay betjänar familjer och företagskunder över hela världen från <strong class="text-white">felizbay.com</strong>. Detaljhandelsbeställningar, grossist och OEM/ODM-tillverkning hanteras av vårt team - nå oss när som helst på <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Poolsamlingar

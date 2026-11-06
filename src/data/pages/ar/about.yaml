@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: حزم كاملة
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: تأتي كل مجموعة حمام سباحة مزودة بمضخة هواء كهربائية ومجموعة إصلاح وحقيبة تخزين.
       icon: tabler:package
     - title: أحجام مخصصة
       description: أحجام وألوان وأغطية OEM للعلامات التجارية والموزعين ومشاريع الضيافة.
@@ -64,7 +64,7 @@ steps2_values:
       description: هيكل Drop Stitch عالي الضغط، تم اختباره عند الحد الأعلى للضغط المقدر، قبل شحن أي حمام سباحة.
       icon: tabler:settings
     - title: الدعم الذي يدوم هذا الموسم
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: الأسئلة أو قطع الغيار أو الضمان — تواصل معنا في أي وقت على info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: المعالم
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: بريد إلكتروني
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — نرد خلال يوم عمل واحد.
     - title: موقع إلكتروني
       description: felizbay.com - تصفح حمامات السباحة لدينا واطلب عرض أسعار.
     - title: تصنيع المعدات الأصلية / بالجملة
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: فريق فني من ذوي الخبرة
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - المعرفة المهنية بالغرزة المتساقطة والمواد البلاستيكية
+        - براعة دقيقة في القطع واللحام والتجميع
+        - التدريب المستمر لإتقان أحدث تقنيات الإنتاج
     - title: معدات الإنتاج المتقدمة
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - معدات القطع الدقيقة لألواح القماش الدقيقة
+        - لحام حراري عالي الدقة من أجل طبقات محكمة ومتينة
+        - معدات اختبار الضغط وضيق الهواء المهنية
     - title: نظام إدارة ناضج
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - عمليات إنتاج موحدة بمعايير جودة واضحة
+        - فلسفة الإنتاج الخالي من الهدر تقلل من الهدر وتحسين الكفاءة
+        - إدارة سلسلة التوريد بكفاءة مع موردين موثوقين
     - title: رقابة صارمة على الجودة
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'التفتيش متعدد المراحل: المواد الخام، قيد المعالجة، الصادر النهائي'
+        - اختبار الضغط في الجزء العلوي من نطاق العمل المقدر 4-6 رطل لكل بوصة مربعة
+        - اختبار صارم لضيق الهواء والمتانة قبل الشحن
 global_ops_section:
   tagline: الوصول العالمي
   title_html: علامة تجارية واحدة، <span class="text-white/90">الشحن في جميع أنحاء العالم</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: يخدم Felizbay العائلات والعملاء التجاريين في جميع أنحاء العالم من <strong class="text-white">felizbay.com</strong>. يتم التعامل مع طلبات البيع بالتجزئة والبيع بالجملة وتصنيع المعدات الأصلية/تصنيع التصميم الشخصي من قبل فريقنا - يمكنك الوصول إلينا في أي وقت <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: مجموعات حمامات السباحة

@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Kompletné balíčky
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Každý bazénový set sa dodáva s elektrickou vzduchovou pumpou, súpravou na opravu a úložným vakom.
       icon: tabler:package
     - title: Vlastné veľkosti
       description: OEM veľkosti, farby a kryty pre značky, distribútorov a pohostinské projekty.
@@ -64,7 +64,7 @@ steps2_values:
       description: Vysokotlaková konštrukcia Drop Stitch, testovaná pri hornej hranici menovitého tlaku, pred odoslaním akéhokoľvek bazéna.
       icon: tabler:settings
     - title: Podpora, ktorá prekoná sezónu
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Otázky, náhradné diely alebo záruka – kedykoľvek nás kontaktujte na adrese info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Míľniky
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com – odpovieme do jedného pracovného dňa.
     - title: Webová stránka
       description: felizbay.com — prezrite si naše bazény a požiadajte o cenovú ponuku.
     - title: OEM / Veľkoobchod
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Tím skúsených technikov
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Profesionálna znalosť drop stitch a PVC materiálov
+        - Precízne remeselné spracovanie pri rezaní, zváraní a montáži
+        - Neustále školenie na zvládnutie najnovších výrobných technológií
     - title: Pokročilé výrobné zariadenia
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Presné rezacie zariadenie pre presné látkové panely
+        - Vysoko presné tepelné zváranie pre vzduchotesné a odolné švy
+        - Profesionálne zariadenia na testovanie tlaku a vzduchotesnosti
     - title: Vyspelý systém riadenia
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Štandardizované výrobné procesy s jasnými štandardmi kvality
+        - Filozofia štíhlej výroby znižuje odpad a zvyšuje efektivitu
+        - Efektívne riadenie dodávateľského reťazca so spoľahlivými dodávateľmi
     - title: Prísna kontrola kvality
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Viacstupňová kontrola: surovina, v procese, konečný výstup'
+        - Testovanie tlaku v hornej časti menovitého pracovného rozsahu 4-6 PSI
+        - Prísne testovanie vzduchotesnosti a trvanlivosti pred odoslaním
 global_ops_section:
   tagline: Globálny dosah
   title_html: Jedna značka, <span class="text-white/90">celosvetová preprava</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay slúži rodinám a obchodným zákazníkom po celom svete <strong class="text-white">felizbay.com</strong>. Maloobchodné objednávky, veľkoobchod a výrobu OEM/ODM – to všetko rieši náš tím – kedykoľvek nás kontaktujte na adrese <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Bazénové zbierky

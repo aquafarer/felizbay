@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Mga kumpletong pakete
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Bawat swim-pool set ay nagpapadala ng electric air pump, pagkumpuni kit, at storage bag.
       icon: tabler:package
     - title: Mga custom na laki
       description: Mga laki, kulay, at cover ng OEM para sa mga brand, distributor, at proyekto ng hospitality.
@@ -64,7 +64,7 @@ steps2_values:
       description: High-pressure drop stitch construction, nasubok sa itaas na limit ng rate pressure nito, bago ang anumang pool ship.
       icon: tabler:settings
     - title: Suporta na lumalampas sa season
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Mga tanong, ekstrang bahagi, o warranty — makipag-ugnayan sa amin anumang oras sa info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milestones
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — tumugon kami sa loob ng isang araw ng negosyo.
     - title: Website
       description: felizbay.com — i-browse ang aming mga pool at humiling ng quote.
     - title: OEM / Pakyawan
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Sanay na Technician Team
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Propesyonal na kaalaman sa drop stitch at PVC na materyales
+        - Tumpak na pagkakayari sa pagputol, hinang, at pagpupulong
+        - Patuloy na pagsasanay upang makabisado ang pinakabagong mga teknolohiya sa produksyon
     - title: Advanced na Kagamitan sa Produksyon
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Mga kagamitan sa pagputol ng katumpakan para sa tumpak na mga panel ng tela
+        - Mataas na katumpakan init hinang para sa airtight, matibay na tahi
+        - Propesyonal na kagamitan sa pagsubok ng presyon at airtightness
     - title: Mature Management System
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardized na proseso ng produksyon na may malinaw na pamantayan ng kalidad
+        - Lean pilosopiya ng produksyon na binabawasan ang basura at pagpapabuti ng kahusayan
+        - Mahusay na pamamahala ng kadena ng supply na may maaasahang mga supplier
     - title: Mahigpit na Kontrol sa Kalidad
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Multi - stage inspeksyon: raw materyal, in - proseso, pangwakas na papalabas'
+        - Pagsubok ng presyon sa tuktok ng na-rate na 4-6 PSI na hanay ng pagtatrabaho
+        - Mahigpit na airtightness at durability testing bago ipadala
 global_ops_section:
   tagline: Global na Abot
   title_html: Isang tatak, <span class="text-white/90">pandaigdigang pagpapadala</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Naglilingkod ang Felizbay sa mga pamilya at customer ng negosyo sa buong mundo mula sa <strong class="text-white">felizbay.com</strong>. Ang mga retail order, wholesale, at OEM/ODM na pagmamanupaktura ay pinangangasiwaan ng aming team — maabot kami anumang oras sa <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Mga koleksyon ng pool

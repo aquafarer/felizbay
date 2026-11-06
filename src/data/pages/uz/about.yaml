@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: To'liq paketlar
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Har bir suzish havzasi to'plami elektr havo pompasi, ta'mirlash to'plami va saqlash sumkasi bilan birga keladi.
       icon: tabler:package
     - title: Maxsus o'lchamlar
       description: Brendlar, distribyutorlar va mehmondo'stlik loyihalari uchun OEM o'lchamlari, ranglari va qoplamalari.
@@ -64,7 +64,7 @@ steps2_values:
       description: Yuqori bosimli Drop Stitch konstruktsiyasi, har qanday basseynga jo'natilishidan oldin nominal bosimining yuqori chegarasinda sinovdan o'tgan.
       icon: tabler:settings
     - title: Mavsumdan uzoq davom etadigan qo'llab-quvvatlash
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Savollar, ehtiyot qismlar yoki kafolatlar — istalgan vaqtda info@felizbay.com manziliga murojaat qiling.
       icon: tabler:headset
 steps2_milestones:
   title: Marosimlar
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Elektron pochta
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — biz bir ish kuni ichida javob beramiz.
     - title: Veb-sayt
       description: felizbay.com - hovuzlarimizni ko'rib chiqing va narxni so'rang.
     - title: OEM / ulgurji
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Tajribali texniklar jamoasi
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Tomchi tikuv va PVX materiallari bo'yicha professional bilim
+        - Kesish, payvandlash va yig'ishda aniq mahorat
+        - Eng yangi ishlab chiqarish texnologiyalarini o'zlashtirish uchun uzluksiz o'qitish
     - title: Ilg'or ishlab chiqarish uskunalari
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - To'g'ri mato panellari uchun nozik kesish uskunalari
+        - Havo o'tkazmaydigan, bardoshli tikuvlar uchun yuqori aniqlikdagi issiqlik bilan payvandlash
+        - Professional bosim va havo o'tkazmaydigan sinov uskunalari
     - title: Yetuk boshqaruv tizimi
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Aniq sifat standartlari bilan standartlashtirilgan ishlab chiqarish jarayonlari
+        - Chiqindilarni kamaytiradigan va samaradorlikni oshiradigan tejamkor ishlab chiqarish falsafasi
+        - Ishonchli yetkazib beruvchilar bilan ta'minot zanjirini samarali boshqarish
     - title: Qattiq sifat nazorati
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Ko''p bosqichli tekshirish: xom ashyo, ishlov berish, yakuniy chiqish'
+        - Nominal 4-6 PSI ish diapazonining yuqori qismida bosim sinovi
+        - Yuk tashishdan oldin qattiq havo o'tkazmasligi va chidamliligi sinovi
 global_ops_section:
   tagline: Global kirish
   title_html: Bitta brend, <span class="text-white/90">butun dunyo bo'ylab yuk tashish</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay butun dunyo bo'ylab oilalar va biznes mijozlarga xizmat ko'rsatadi <strong class="text-white">felizbay.com</strong>. Chakana buyurtmalar, ulgurji va OEM/ODM ishlab chiqarish bizning jamoamiz tomonidan amalga oshiriladi - biz bilan istalgan vaqtda bog'laning. <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Hovuz kolleksiyalari

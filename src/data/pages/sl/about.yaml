@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Popolni paketi
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Vsak komplet za bazen je opremljen z električno zračno črpalko, kompletom za popravilo in torbo za shranjevanje.
       icon: tabler:package
     - title: Velikosti po meri
       description: OEM velikosti, barve in pokrovi za blagovne znamke, distributerje in gostinske projekte.
@@ -64,7 +64,7 @@ steps2_values:
       description: Visokotlačna konstrukcija Drop Stitch, preizkušena pri zgornji meji nazivnega tlaku, pred pošiljanjem katerega koli bazena.
       icon: tabler:settings
     - title: Podpora, ki preživi sezono
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Vprašanja, rezervni deli ali garancija – kontaktirajte nas kadar koli na info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Mejniki
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-pošta
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — odgovorimo v enem delovnem dnevu.
     - title: Spletna stran
       description: felizbay.com — brskajte po naših bazenih in zahtevajte ponudbo.
     - title: OEM / Trgovina na debelo
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Ekipa izkušenih tehnikov
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Strokovno poznavanje drop stitch in PVC materialov
+        - Natančna izdelava pri rezanju, varjenju in sestavljanju
+        - Nenehno usposabljanje za obvladovanje najnovejših proizvodnih tehnologij
     - title: Napredna proizvodna oprema
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Oprema za natančno rezanje za natančne tkaninske plošče
+        - Visoko natančno toplotno varjenje za zrakotesne, trpežne šive
+        - Profesionalna oprema za testiranje tlaka in zrakotesnosti
     - title: Zrel sistem upravljanja
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardizirani proizvodni procesi z jasnimi standardi kakovosti
+        - Filozofija vitke proizvodnje zmanjšuje količino odpadkov in izboljšuje učinkovitost
+        - Učinkovito upravljanje dobavne verige z zanesljivimi dobavitelji
     - title: Stroga kontrola kakovosti
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Večstopenjski pregled: surovine, v procesu, končni izhod'
+        - Tlačni preizkus na vrhu nazivnega delovnega območja 4-6 PSI
+        - Strogo testiranje zrakotesnosti in vzdržljivosti pred pošiljanjem
 global_ops_section:
   tagline: Globalni doseg
   title_html: Ena znamka, <span class="text-white/90">dostava po vsem svetu</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay služi družinam in poslovnim strankam po vsem svetu <strong class="text-white">felizbay.com</strong>. Naročila na drobno, veleprodajo in proizvodnjo OEM/ODM skrbi naša ekipa – dosegite nas kadar koli na <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Zbirke bazenov

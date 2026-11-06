@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Pacchetti completi
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Ogni set da piscina viene fornito con una pompa ad aria elettrica, un kit di riparazione e una custodia.
       icon: tabler:package
     - title: Dimensioni personalizzate
       description: Dimensioni, colori e coperture OEM per marchi, distributori e progetti di ospitalità.
@@ -64,7 +64,7 @@ steps2_values:
       description: Costruzione Drop Stitch ad alta pressione, testata al limite superiore della pressione nominale, prima di qualsiasi spedizione in piscina.
       icon: tabler:settings
     - title: Supporto che dura tutta la stagione
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: 'Domande, pezzi di ricambio o garanzia: raggiungici in qualsiasi momento all''indirizzo info@felizbay.com.'
       icon: tabler:headset
 steps2_milestones:
   title: Pietre miliari
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — rispondiamo entro un giorno lavorativo.
     - title: Sito web
       description: 'felizbay.com: esplora le nostre piscine e richiedi un preventivo.'
     - title: OEM/all'ingrosso
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Team di tecnici esperti
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Conoscenza professionale del punto goccia e dei materiali PVC
+        - Precisione artigianale nel taglio, saldatura e assemblaggio
+        - Formazione continua per padroneggiare le ultime tecnologie produttive
     - title: Attrezzature di produzione avanzate
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Attrezzatura da taglio di precisione per pannelli in tessuto accurati
+        - Saldatura a caldo ad alta precisione per cuciture ermetiche e durevoli
+        - Apparecchiature professionali per prove di pressione e tenuta all'aria
     - title: Sistema di gestione maturo
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Processi di produzione standardizzati con standard di qualità chiari
+        - Filosofia della produzione snella che riduce gli sprechi e migliora l'efficienza
+        - Gestione efficiente della catena di fornitura con fornitori affidabili
     - title: Controllo di qualità rigoroso
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Ispezione multistadio: materia prima, in lavorazione, finale in uscita'
+        - Test di pressione al massimo dell'intervallo di lavoro nominale di 4-6 PSI
+        - Test rigorosi di tenuta all'aria e durata prima della spedizione
 global_ops_section:
   tagline: Portata globale
   title_html: Un marchio, <span class="text-white/90">spedizione in tutto il mondo</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: 'Felizbay serve famiglie e clienti aziendali in tutto il mondo da <strong class="text-white">felizbay.com</strong>. Gli ordini al dettaglio, all''ingrosso e la produzione OEM/ODM sono tutti gestiti dal nostro team: raggiungici in qualsiasi momento <strong class="text-white">info@felizbay.com</strong>.'
   stats:
     - value: '4'
       label: Collezioni di piscine

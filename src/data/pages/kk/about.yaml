@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Толық пакеттер
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Әрбір бассейн жиынтығы электрлік ауа сорғымен, жөндеу жинағымен және сақтауға арналған сөмкемен бірге келеді.
       icon: tabler:package
     - title: Арнайы өлшемдер
       description: Брендтерге, дистрибьюторларға және қонақжайлылық жобаларына арналған OEM өлшемдері, түстері және мұқабалары.
@@ -64,7 +64,7 @@ steps2_values:
       description: Кез келген бассейнге жіберілмес бұрын оның номиналды қысымының жоғарғы шегінде сыналған жоғары қысымды Drop Stitch конструкциясы.
       icon: tabler:settings
     - title: Маусымнан асып түсетін қолдау
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Сұрақтар, қосалқы бөлшектер немесе кепілдік — бізге кез келген уақытта info@felizbay.com мекенжайы бойынша хабарласыңыз.
       icon: tabler:headset
 steps2_milestones:
   title: Белгілер
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Электрондық пошта
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — біз бір жұмыс күні ішінде жауап береміз.
     - title: Веб-сайт
       description: felizbay.com — бассейндерімізді шолып, баға сұраңыз.
     - title: OEM / Көтерме
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Тәжірибелі техниктер командасы
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Тамшылатып тігіс және ПВХ материалдары бойынша кәсіби білім
+        - Кесу, дәнекерлеу және құрастырудағы дәл шеберлік
+        - Өндірістің соңғы технологияларын меңгеруге үздіксіз оқыту
     - title: Жетілдірілген өндіріс жабдығы
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Дәл мата панельдері үшін дәл кесетін жабдық
+        - Ауа өткізбейтін, берік тігістер үшін жоғары дәлдіктегі жылумен дәнекерлеу
+        - Қысым мен герметикалық сынау үшін кәсіби жабдық
     - title: Жетілген басқару жүйесі
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Сапа стандарттары айқын стандартталған өндірістік процестер
+        - Қалдықтарды азайтатын және тиімділікті арттыратын үнемді өндіріс философиясы
+        - Сенімді жеткізушілермен жеткізу тізбегін тиімді басқару
     - title: Қатаң сапаны бақылау
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Көп сатылы тексеру: шикізат, технологиялық, соңғы шығыс'
+        - 4-6 PSI номиналды жұмыс диапазонының жоғарғы жағында қысымды сынау
+        - Жеткізу алдында қатаң герметикалық және беріктік сынағы
 global_ops_section:
   tagline: Жаһандық қол жеткізу
   title_html: Бір бренд, <span class="text-white/90">дүниежүзілік тасымалдау</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Фелизбай бүкіл әлем бойынша отбасылар мен бизнес клиенттеріне қызмет көрсетеді <strong class="text-white">felizbay.com</strong>. Бөлшек тапсырыстарды, көтерме сауданы және OEM/ODM өндірісін біздің команда өңдейді - бізге кез келген уақытта хабарласыңыз. <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Бассейн топтамалары

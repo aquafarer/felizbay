@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Täielikud paketid
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Iga basseinikomplektiga on kaasas elektriline õhupump, remondikomplekt ja hoiukott.
       icon: tabler:package
     - title: Kohandatud suurused
       description: OEM-i suurused, värvid ja kaaned kaubamärkide, turustajate ja hotellindusprojektide jaoks.
@@ -64,7 +64,7 @@ steps2_values:
       description: Kõrgsurve Drop Stitch konstruktsioon, mida on testitud selle nimirõhu ülempiiril, enne basseini saatmist.
       icon: tabler:settings
     - title: Toetus, mis kestab kauem kui hooaeg
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Küsimused, varuosad või garantii – võtke meiega igal ajal ühendust aadressil info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Verstapostid
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Meil
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — vastame ühe tööpäeva jooksul.
     - title: Veebisait
       description: felizbay.com — sirvige meie basseine ja küsige hinnapakkumist.
     - title: OEM / hulgimüük
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Kogenud tehnikute meeskond
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Erialased teadmised tilkpistest ja PVC materjalidest
+        - Täpne meisterlikkus lõikamisel, keevitamisel ja monteerimisel
+        - Pidev koolitus uusimate tootmistehnoloogiate valdamiseks
     - title: Täiustatud tootmisseadmed
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Täppislõikeseadmed täpsete kangapaneelide jaoks
+        - Kõrge täpsusega kuumkeevitus õhukindlate, vastupidavate õmbluste jaoks
+        - Professionaalsed rõhu- ja õhutiheduse testimisseadmed
     - title: Küps juhtimissüsteem
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardiseeritud tootmisprotsessid selgete kvaliteedistandarditega
+        - Lean tootmisfilosoofia, mis vähendab jäätmeid ja parandab tõhusust
+        - Tõhus tarneahela juhtimine usaldusväärsete tarnijatega
     - title: Range kvaliteedikontroll
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Mitmeastmeline kontroll: tooraine, protsessis, lõplik väljaminek'
+        - Rõhu testimine 4–6 PSI töövahemiku tipus
+        - Enne saatmist range õhutiheduse ja vastupidavuse testimine
 global_ops_section:
   tagline: Globaalne haare
   title_html: Üks kaubamärk, <span class="text-white/90">ülemaailmne saatmine</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay teenindab peresid ja ärikliente kogu maailmas alates <strong class="text-white">felizbay.com</strong>. Jaetellimuste, hulgimüügi ja OEM/ODM tootmisega tegeleb meie meeskond – võtke meiega ühendust igal ajal aadressil <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Basseini kollektsioonid

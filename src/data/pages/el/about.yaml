@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Ολοκληρωμένα πακέτα
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Κάθε σετ πισίνας συνοδεύεται από ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης.
       icon: tabler:package
     - title: Προσαρμοσμένα μεγέθη
       description: Μεγέθη, χρώματα και καλύμματα OEM για μάρκες, διανομείς και έργα φιλοξενίας.
@@ -64,7 +64,7 @@ steps2_values:
       description: Κατασκευή Drop Stitch υψηλής πίεσης, δοκιμασμένη στο ανώτατο όριο της ονομαστικής της πίεσης, πριν από οποιαδήποτε πλοία πισίνας.
       icon: tabler:settings
     - title: Υποστήριξη που διαρκεί περισσότερο από τη σεζόν
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Ερωτήσεις, ανταλλακτικά ή εγγύηση — επικοινωνήστε μαζί μας ανά πάσα στιγμή στο info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Ορόσημα
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — απαντάμε εντός μίας εργάσιμης ημέρας.
     - title: Δικτυακός τόπος
       description: felizbay.com — περιηγηθείτε στις πισίνες μας και ζητήστε μια προσφορά.
     - title: OEM / Χονδρική
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Ομάδα έμπειρων τεχνικών
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Επαγγελματική γνώση σταγονοβελονιάς και υλικών PVC
+        - Ακριβής δεξιοτεχνία στην κοπή, τη συγκόλληση και τη συναρμολόγηση
+        - Συνεχής εκπαίδευση για τον έλεγχο των πιο πρόσφατων τεχνολογιών παραγωγής
     - title: Προηγμένος Εξοπλισμός Παραγωγής
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Εξοπλισμός κοπής ακριβείας για υφασμάτινα πάνελ ακριβείας
+        - Συγκόλληση θερμότητας υψηλής ακρίβειας για αεροστεγείς, ανθεκτικές ραφές
+        - Επαγγελματικός εξοπλισμός δοκιμών πίεσης και αεροστεγανότητας
     - title: Σύστημα ώριμης διαχείρισης
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Τυποποιημένες διαδικασίες παραγωγής με σαφή πρότυπα ποιότητας
+        - Φιλοσοφία λιτής παραγωγής που μειώνει τα απόβλητα και βελτιώνει την απόδοση
+        - Αποτελεσματική διαχείριση της εφοδιαστικής αλυσίδας με αξιόπιστους προμηθευτές
     - title: Αυστηρός Ποιοτικός Έλεγχος
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Επιθεώρηση πολλαπλών σταδίων: πρώτη ύλη, εν εξελίξει, τελική εξερχόμενη'
+        - Δοκιμή πίεσης στην κορυφή της ονομαστικής περιοχής εργασίας 4-6 PSI
+        - Αυστηρός έλεγχος αεροστεγανότητας και ανθεκτικότητας πριν από την αποστολή
 global_ops_section:
   tagline: Παγκόσμια Απήχηση
   title_html: Μία μάρκα, <span class="text-white/90">παγκόσμια αποστολή</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Το Felizbay εξυπηρετεί οικογένειες και επιχειρηματικούς πελάτες σε όλο τον κόσμο από <strong class="text-white">felizbay.com</strong>. Οι παραγγελίες λιανικής, η χονδρική και η κατασκευή OEM/ODM διεκπεραιώνονται από την ομάδα μας — επικοινωνήστε μαζί μας ανά πάσα στιγμή στο <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Συλλογές πισίνας

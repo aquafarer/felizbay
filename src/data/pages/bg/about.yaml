@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Пълни пакети
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Всеки комплект за плувен басейн се доставя с електрическа въздушна помпа, ремонтен комплект и чанта за съхранение.
       icon: tabler:package
     - title: Персонализирани размери
       description: OEM размери, цветове и корици за марки, дистрибутори и хотелиерски проекти.
@@ -64,7 +64,7 @@ steps2_values:
       description: Конструкция Drop Stitch с високо налягане, тествана при горната граница на номиналното си налягане, преди да бъде изпратен басейн.
       icon: tabler:settings
     - title: Поддръжка, която надживява сезона
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Въпроси, резервни части или гаранция – свържете се с нас по всяко време на info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Важни етапи
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Имейл
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — отговаряме в рамките на един работен ден.
     - title: уебсайт
       description: felizbay.com — прегледайте нашите басейни и поискайте оферта.
     - title: OEM / търговия на едро
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Екип от опитни техници
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Професионални познания по drop stitch и PVC материали
+        - Прецизна изработка при рязане, заваряване и сглобяване
+        - Непрекъснато обучение за усвояване на най-новите производствени технологии
     - title: Усъвършенствано производствено оборудване
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Оборудване за прецизно рязане за точни платнени панели
+        - Високопрецизно топлинно заваряване за херметични, издръжливи шевове
+        - Професионално оборудване за изпитване на налягане и херметичност
     - title: Зряла система за управление
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Стандартизирани производствени процеси с ясни стандарти за качество
+        - Философия за икономично производство, намаляваща отпадъците и подобряваща ефективността
+        - Ефективно управление на веригата за доставки с надеждни доставчици
     - title: Стриктен контрол на качеството
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Многоетапна инспекция: суровина, в процеса, крайна изходяща'
+        - Тестване под налягане в горната част на номиналния работен диапазон 4-6 PSI
+        - Строго тестване за херметичност и издръжливост преди изпращане
 global_ops_section:
   tagline: Глобален обхват
   title_html: Една марка, <span class="text-white/90">доставка по целия свят</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay обслужва семейства и бизнес клиенти по целия свят от <strong class="text-white">felizbay.com</strong>. Поръчките на дребно, търговията на едро и OEM/ODM производството се обработват от нашия екип – свържете се с нас по всяко време на <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Колекции басейн

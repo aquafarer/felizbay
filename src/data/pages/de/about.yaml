@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komplettpakete
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Jedes Schwimmbecken-Set wird mit einer elektrischen Luftpumpe, einem Reparaturset und einer Aufbewahrungstasche geliefert.
       icon: tabler:package
     - title: Sondergrößen
       description: OEM-Größen, -Farben und -Bezüge für Marken, Händler und Gastronomieprojekte.
@@ -64,7 +64,7 @@ steps2_values:
       description: Hochdruck-Drop-Stitch-Konstruktion, getestet an der Obergrenze des Nenndrucks, bevor der Pool ausgeliefert wird.
       icon: tabler:settings
     - title: Unterstützung, die die Saison überdauert
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Fragen, Ersatzteile oder Garantie – erreichen Sie uns jederzeit unter info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Meilensteine
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-Mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com – wir antworten innerhalb eines Werktages.
     - title: Webseite
       description: felizbay.com – stöbern Sie in unseren Pools und fordern Sie ein Angebot an.
     - title: OEM / Großhandel
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Erfahrenes Technikerteam
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Fachliche Kenntnisse von Dropstitch- und PVC-Materialien
+        - Präzise Handwerkskunst beim Schneiden, Schweißen und Zusammenbauen
+        - Kontinuierliche Weiterbildung zur Beherrschung der neuesten Produktionstechnologien
     - title: Fortschrittliche Produktionsausrüstung
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Präzisionsschneidegeräte für präzise Stoffbahnen
+        - Hochpräzises Heißschweißen für luftdichte, langlebige Nähte
+        - Professionelle Druck- und Luftdichtheitsprüfgeräte
     - title: Ausgereiftes Managementsystem
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardisierte Produktionsprozesse mit klaren Qualitätsstandards
+        - Lean-Production-Philosophie reduziert Verschwendung und verbessert die Effizienz
+        - Effizientes Supply Chain Management mit zuverlässigen Lieferanten
     - title: Strenge Qualitätskontrolle
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Mehrstufige Inspektion: Rohmaterial, In-Prozess, Endausgang'
+        - Druckprüfung im oberen Bereich des Nennarbeitsbereichs von 4–6 PSI
+        - Vor dem Versand werden strenge Luftdichtheits- und Haltbarkeitstests durchgeführt
 global_ops_section:
   tagline: Globale Reichweite
   title_html: Eine Marke, <span class="text-white/90">Weltweiter Versand</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay bedient Familien und Geschäftskunden weltweit <strong class="text-white">felizbay.com</strong>. Einzelhandelsbestellungen, Großhandel und OEM/ODM-Fertigung werden von unserem Team abgewickelt – erreichen Sie uns jederzeit unter <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Pool-Kollektionen

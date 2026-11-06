@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komplett csomagok
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Minden medencekészlethez tartozik egy elektromos légszivattyú, javítókészlet és tárolótáska.
       icon: tabler:package
     - title: Egyedi méretek
       description: OEM méretek, színek és burkolatok márkákhoz, forgalmazókhoz és vendéglátó projektekhez.
@@ -64,7 +64,7 @@ steps2_values:
       description: Nagynyomású Drop Stitch konstrukció, amelyet a névleges nyomás felső határán teszteltek, mielőtt bármilyen medence kiszállna.
       icon: tabler:settings
     - title: Támogatás, amely túlmutat a szezonon
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Kérdései, pótalkatrészei vagy garancia – forduljon hozzánk bármikor az info@felizbay.com címen.
       icon: tabler:headset
 steps2_milestones:
   title: Mérföldkövek
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — egy munkanapon belül válaszolunk.
     - title: Weboldal
       description: felizbay.com — böngésszen medencéink között, és kérjen árajánlatot.
     - title: OEM / nagykereskedelem
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Tapasztalt technikus csapat
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Cseppöltés és PVC anyagok szakmai ismerete
+        - Precíz kivitelezés a vágásban, hegesztésben és összeszerelésben
+        - Folyamatos képzés a legújabb gyártási technológiák elsajátítására
     - title: Fejlett gyártóberendezések
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Precíziós vágóberendezés pontos szövetpanelekhez
+        - Nagy pontosságú hőhegesztés a légmentes, tartós varratokért
+        - Professzionális nyomás- és légtömörség-vizsgáló berendezések
     - title: Érett irányítási rendszer
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Szabványosított gyártási folyamatok világos minőségi előírásokkal
+        - Lean termelési filozófia, amely csökkenti a hulladékot és javítja a hatékonyságot
+        - Hatékony ellátásilánc-menedzsment megbízható beszállítókkal
     - title: Szigorú minőség-ellenőrzés
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Többlépcsős ellenőrzés: nyersanyag, folyamat közben, végső kimenő'
+        - Nyomásvizsgálat a névleges 4-6 PSI üzemi tartomány tetején
+        - Szállítás előtt szigorú légzárási és tartóssági vizsgálat
 global_ops_section:
   tagline: Global Reach
   title_html: Egy márka, <span class="text-white/90">világméretű szállítás</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: 'A Felizbay családokat és üzleti ügyfeleket szolgál ki világszerte <strong class="text-white">felizbay.com</strong>. A kiskereskedelmi rendeléseket, a nagykereskedelmet és az OEM/ODM gyártást csapatunk kezeli – bármikor elérhet minket a következő címen: <strong class="text-white">info@felizbay.com</strong>.'
   stats:
     - value: '4'
       label: Medence kollekciók

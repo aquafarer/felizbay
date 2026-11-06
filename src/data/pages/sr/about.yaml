@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Kompletni paketi
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Сваки сет за базен се испоручује са електричном пумпом за ваздух, комплетом за поправку и торбом за одлагање.
       icon: tabler:package
     - title: Prilagođene veličine
       description: OEM veličine, boje i poklopci za brendove, distributere i ugostiteljske projekte.
@@ -64,7 +64,7 @@ steps2_values:
       description: Konstrukcija Drop Stitch visokog pritiska, testirana pri gornjoj granici svog nominalnog pritiska, pre bilo kakvog bazena.
       icon: tabler:settings
     - title: Podrška koja nadmašuje sezonu
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Питања, резервни делови или гаранција — обратите нам се у било ком тренутку на инфо@фелизбаи.цом.
       icon: tabler:headset
 steps2_milestones:
   title: Prekretnice
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Email
-      description: info@felizbay.com — we reply within one business day.
+      description: инфо@фелизбаи.цом — одговарамо у року од једног радног дана.
     - title: Vebsite
       description: felizbai.com — pregledajte naše bazene i zatražite ponudu.
     - title: OEM / Veleprodaja
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Tim iskusnih tehničara
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Професионално познавање дроп шавова и ПВЦ материјала
+        - Прецизно умеће у резању, заваривању и монтажи
+        - Континуирана обука за савладавање најновијих производних технологија
     - title: Napredna proizvodna oprema
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Опрема за прецизно сечење за прецизне панеле од тканине
+        - Високо прецизно топлотно заваривање за херметичке, издржљиве шавове
+        - Професионална опрема за испитивање притиска и непропусности
     - title: Sistem zrelog upravljanja
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Стандардизовани производни процеси са јасним стандардима квалитета
+        - Филозофија витке производње која смањује отпад и побољшава ефикасност
+        - Ефикасно управљање ланцем снабдевања са поузданим добављачима
     - title: Stroga kontrola kvaliteta
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Вишестепена инспекција: сировина, у процесу, коначни излаз'
+        - Испитивање притиска на врху номиналног радног опсега од 4-6 ПСИ
+        - Строго испитивање непропусности и издржљивости пре испоруке
 global_ops_section:
   tagline: Global Reach
   title_html: Jedan brend, <span class="text-white/90">slanje širom sveta</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Фелизбаи опслужује породице и пословне клијенте широм света <strong class="text-white">felizbay.com</strong>. Малопродајне поруџбине, велепродаја и ОЕМ/ОДМ производњу обавља наш тим — контактирајте нас у било ком тренутку <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Kolekcije bazena

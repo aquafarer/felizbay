@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Täydelliset paketit
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Jokaisen uima-allassetin mukana toimitetaan sähköinen ilmapumppu, korjaussarja ja säilytyspussi.
       icon: tabler:package
     - title: Mukautetut koot
       description: OEM-koot, värit ja kannet brändeille, jakelijoille ja majoitusprojekteille.
@@ -64,7 +64,7 @@ steps2_values:
       description: Korkeapaineinen Drop Stitch-rakenne, joka on testattu nimellispaineen ylärajalla ennen uima-altaan lähettämistä.
       icon: tabler:settings
     - title: Tuki, joka kestää kauden
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Kysymyksiä, varaosia tai takuuta – ota meihin yhteyttä milloin tahansa osoitteessa info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Virstanpylväät
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: Sähköposti
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — vastaamme yhden arkipäivän kuluessa.
     - title: Verkkosivusto
       description: felizbay.com — selaa altaamme ja pyydä tarjous.
     - title: OEM / tukkumyynti
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Kokenut teknikkotiimi
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Ammattituntemus pudotusompeleista ja PVC-materiaaleista
+        - Tarkkaa ammattitaitoa leikkauksessa, hitsauksessa ja kokoonpanossa
+        - Jatkuva koulutus uusimpien tuotantotekniikoiden hallitsemiseksi
     - title: Edistyneet tuotantolaitteet
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Tarkkuusleikkauslaitteet tarkkoihin kangaspaneeleihin
+        - Erittäin tarkka lämpöhitsaus ilmatiiviille, kestäville saumoille
+        - Ammattimainen paine- ja ilmatiiviystestauslaitteet
     - title: Aikuinen hallintajärjestelmä
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardoidut tuotantoprosessit ja selkeät laatustandardit
+        - Lean tuotantofilosofia vähentää hukkaa ja parantaa tehokkuutta
+        - Tehokas toimitusketjun hallinta luotettavien toimittajien kanssa
     - title: Tiukka laadunvalvonta
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Monivaiheinen tarkastus: raaka-aine, keskeneräinen, lopullinen lähtö'
+        - Painetestaus nimellisarvoisen 4-6 PSI-työalueen yläosassa
+        - Tiukka ilmatiiviys ja kestävyystestaus ennen toimitusta
 global_ops_section:
   tagline: Maailmanlaajuinen kattavuus
   title_html: Yksi merkki, <span class="text-white/90">maailmanlaajuinen toimitus</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay palvelee perheitä ja yritysasiakkaita maailmanlaajuisesti <strong class="text-white">felizbay.com</strong>. Tiimimme hoitaa vähittäismyyntitilaukset, tukkukaupan ja OEM/ODM-valmistuksen – ota meihin yhteyttä milloin tahansa osoitteessa <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Allas kokoelmat

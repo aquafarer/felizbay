@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Komplette pakker
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Hvert svømmebassengsett leveres med en elektrisk luftpumpe, reparasjonssett og oppbevaringspose.
       icon: tabler:package
     - title: Egendefinerte størrelser
       description: OEM-størrelser, farger og deksler for merker, distributører og gjestfrihetsprosjekter.
@@ -64,7 +64,7 @@ steps2_values:
       description: Høytrykks Drop Stitch-konstruksjon, testet ved øvre grense for det nominelle trykket, før bassenget sendes.
       icon: tabler:settings
     - title: Støtte som varer ut sesongen
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: Spørsmål, reservedeler eller garanti — nå oss når som helst på info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: Milepæler
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-post
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — vi svarer innen én virkedag.
     - title: Nettsted
       description: felizbay.com — bla gjennom våre bassenger og be om et tilbud.
     - title: OEM / Engros
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Erfarent teknikerteam
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Fagkunnskap om dropsting og PVC-materialer
+        - Nøyaktig håndverk innen skjæring, sveising og montering
+        - Kontinuerlig opplæring for å mestre de nyeste produksjonsteknologiene
     - title: Avansert produksjonsutstyr
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Presisjonsskjæreutstyr for nøyaktige stoffpaneler
+        - Varmesveising med høy presisjon for lufttette, holdbare sømmer
+        - Profesjonelt utstyr for trykk- og lufttetthetstesting
     - title: Modent styringssystem
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Standardiserte produksjonsprosesser med klare kvalitetsstandarder
+        - Lean produksjonsfilosofi som reduserer avfall og forbedrer effektiviteten
+        - Effektiv forsyningskjedestyring med pålitelige leverandører
     - title: Streng kvalitetskontroll
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Flertrinns inspeksjon: råmateriale, i prosess, endelig utgående'
+        - Trykktesting på toppen av det rangerte 4-6 PSI arbeidsområdet
+        - Streng lufttetthets- og holdbarhetstesting før forsendelse
 global_ops_section:
   tagline: Global rekkevidde
   title_html: Ett merke, <span class="text-white/90">verdensomspennende frakt</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay betjener familier og bedriftskunder over hele verden fra <strong class="text-white">felizbay.com</strong>. Detaljhandelsordrer, engros- og OEM/ODM-produksjon håndteres av teamet vårt – nå oss når som helst på <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Bassengsamlinger

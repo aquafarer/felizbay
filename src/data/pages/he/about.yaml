@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: חבילות שלמות
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: כל סט בריכת שחייה נשלח עם משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון.
       icon: tabler:package
     - title: גדלים מותאמים אישית
       description: גדלים, צבעים וכיסויים OEM עבור מותגים, מפיצים ופרויקטי אירוח.
@@ -64,7 +64,7 @@ steps2_values:
       description: בניית Drop Stitch בלחץ גבוה, נבדקה בגבול העליון של הלחץ המדורג שלה, לפני כל ספינת בריכה.
       icon: tabler:settings
     - title: תמיכה שנמשכת לאורך העונה
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: שאלות, חלקי חילוף או אחריות - פנו אלינו בכל עת בכתובת info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
   title: אבני דרך
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: אֶלֶקטרוֹנִי
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com - אנו משיבים תוך יום עסקים אחד.
     - title: אֲתַר אִינטֶרנֶט
       description: felizbay.com - דפדף בבריכות שלנו ובקש הצעת מחיר.
     - title: OEM / סיטונאי
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: צוות טכנאים מנוסה
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - ידע מקצועי בחומרי תפר טיפה וחומרי PVC
+        - אומנות מדויקת בחיתוך, ריתוך והרכבה
+        - הכשרה מתמשכת לשליטה בטכנולוגיות הייצור העדכניות ביותר
     - title: ציוד ייצור מתקדם
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - ציוד חיתוך מדויק ללוחות בד מדויקים
+        - ריתוך חום ברמת דיוק גבוהה לתפרים אטומים ועמידים
+        - ציוד מקצועי לבדיקת לחץ ואטימות
     - title: מערכת ניהול בוגרת
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - תהליכי ייצור מתוקננים עם תקני איכות ברורים
+        - פילוסופיית ייצור רזה הפחתת פסולת ושיפור היעילות
+        - ניהול שרשרת אספקה ​​יעיל עם ספקים אמינים
     - title: בקרת איכות קפדנית
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'בדיקה רב-שלבית: חומר גלם, בתהליך, יוצא סופי'
+        - בדיקת לחץ בחלק העליון של טווח העבודה המדורג 4-6 PSI
+        - בדיקת אטימות ועמידות קפדנית לפני המשלוח
 global_ops_section:
   tagline: טווח הגעה עולמי
   title_html: מותג אחד, <span class="text-white/90">משלוח לכל העולם</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay משרתת משפחות ולקוחות עסקיים ברחבי העולם מ <strong class="text-white">felizbay.com</strong>. הזמנות קמעונאיות, סיטונאות וייצור OEM/ODM מטופלות כולם על ידי הצוות שלנו - הגע אלינו בכל עת בכתובת <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: אוספי בריכות

@@ -42,7 +42,7 @@ features3_more:
   isAfterContent: true
   items:
     - title: Volledige pakketten
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag.
+      description: Elke zwembadset wordt geleverd met een elektrische luchtpomp, reparatieset en opbergtas.
       icon: tabler:package
     - title: Aangepaste formaten
       description: OEM-maten, kleuren en covers voor merken, distributeurs en horecaprojecten.
@@ -64,7 +64,7 @@ steps2_values:
       description: Hogedruk-drop-stitch-constructie, getest op de bovengrens van de nominale druk, voordat er zwembadschepen worden verzonden.
       icon: tabler:settings
     - title: Ondersteuning die het seizoen overleeft
-      description: Questions, spare parts, or warranty — reach us any time at info@felizbay.com.
+      description: 'Vragen, reserveonderdelen of garantie: neem contact met ons op via info@felizbay.com.'
       icon: tabler:headset
 steps2_milestones:
   title: Mijlpalen
@@ -86,7 +86,7 @@ features2_locations:
   columns: 3
   items:
     - title: E-mail
-      description: info@felizbay.com — we reply within one business day.
+      description: info@felizbay.com — wij antwoorden binnen één werkdag.
     - title: Website
       description: felizbay.com — blader door onze zwembaden en vraag een offerte aan.
     - title: OEM/groothandel
@@ -114,28 +114,28 @@ production_section:
   cards:
     - title: Ervaren techniciteam
       items:
-        - Professional knowledge of drop stitch and PVC materials
-        - Precise craftsmanship in cutting, welding, and assembly
-        - Continuous training to master the latest production technologies
+        - Professionele kennis van drop stitch- en PVC-materialen
+        - Nauwkeurig vakmanschap bij het snijden, lassen en monteren
+        - Continue opleiding om de nieuwste productietechnologieën onder de knie te krijgen
     - title: Geavanceerde productieapparatuur
       items:
-        - Precision cutting equipment for accurate fabric panels
-        - High-precision heat welding for airtight, durable seams
-        - Professional pressure and airtightness testing equipment
+        - Precisiesnijapparatuur voor nauwkeurige stoffen panelen
+        - Uiterst nauwkeurig hittelassen voor luchtdichte, duurzame naden
+        - Professionele druk- en luchtdichtheidstestapparatuur
     - title: Volwassen managementsysteem
       items:
-        - Standardized production processes with clear quality standards
-        - Lean production philosophy reducing waste and improving efficiency
-        - Efficient supply chain management with reliable suppliers
+        - Gestandaardiseerde productieprocessen met duidelijke kwaliteitsnormen
+        - Lean productiefilosofie, vermindering van verspilling en verbetering van de efficiëntie
+        - Efficiënt supply chain management met betrouwbare leveranciers
     - title: Strenge kwaliteitscontrole
       items:
-        - 'Multi-stage inspection: raw material, in-process, final outgoing'
-        - Pressure testing at the top of the rated 4-6 PSI working range
-        - Strict airtightness and durability testing before shipping
+        - 'Meerfasige inspectie: grondstof, in verwerking, definitieve uitgaande'
+        - Druktesten aan de bovenkant van het nominale werkbereik van 4-6 PSI
+        - Strikte luchtdichtheids- en duurzaamheidstests vóór verzending
 global_ops_section:
   tagline: Mondiaal bereik
   title_html: Eén merk, <span class="text-white/90">wereldwijde verzending</span>
-  description_html: Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.
+  description_html: Felizbay bedient gezinnen en zakelijke klanten wereldwijd <strong class="text-white">felizbay.com</strong>. Detailhandelsbestellingen, groothandel en OEM/ODM-productie worden allemaal door ons team afgehandeld. U kunt ons op elk gewenst moment bereiken <strong class="text-white">info@felizbay.com</strong>.
   stats:
     - value: '4'
       label: Zwembadcollecties
