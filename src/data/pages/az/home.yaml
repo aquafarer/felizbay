@@ -36,7 +36,7 @@ features:
       description: 'İki qatlı PVC drop stitch parça, ailənin tam mövsümü boyunca deşilmələrə və UV məruz qalmasına müqavimət göstərmək üçün hazırlanmışdır.'
       icon: tabler:shield
     - title: Tam Paket
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Hər üzgüçülük hovuzu dəsti elektrik hava nasosu, təmir dəsti və saxlama çantası ilə gəlir. Dəyirmi boz model üçün quraşdırılmış örtük ayrıca satılır.
       icon: tabler:box
     - title: Təhlükəsizlik şüurlu dizayn
       description: 'EN 16582-1 və ASTM F2666 standartlarına istinad edən yaşayış hovuzunun dizaynı — modelə aid təhlükəsizlik məlumatı məhsul sənədlərində verilmişdir. Daimi böyüklərin nəzarəti həmişə tələb olunur.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hovuza nə daxildir?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Hər bir Felizbay hovuz dəstinə elektrik hava nasosu, təmir dəsti və saxlama çantası daxildir. Qapaqlar və filtr nasosları ayrı satılır.
       icon: tabler:box
       category: all
     - title: Hansı ölçülər mövcuddur?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Onlayn olaraq biz dəyirmi və SPA kolleksiyalarından sabit ölçülü pərakəndə satış dəstləri satırıq. Tam zavod çeşidi - eni 10 m-ə qədər dairəvi hovuzlar, 6 × 5 m-ə qədər düzbucaqlı hovuzlar və SPA vannaları - topdansatış proqramımız vasitəsilə mövcuddur.
       icon: tabler:ruler-2
       category: all
     - title: Hovuz hansı səthlərdə dayana bilər?

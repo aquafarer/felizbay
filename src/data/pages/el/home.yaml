@@ -36,7 +36,7 @@ features:
       description: 'Ύφασμα PVC drop stitch διπλής στρώσης, σχεδιασμένο για να αντιστέκεται στα τρυπήματα και στην έκθεση UV για μια πλήρη σεζόν οικογενειακής χρήσης.'
       icon: tabler:shield
     - title: Ολοκληρωμένο Πακέτο
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Κάθε σετ πισίνας συνοδεύεται από ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Ένα τοποθετημένο κάλυμμα για το στρογγυλό γκρι μοντέλο πωλείται χωριστά.
       icon: tabler:box
     - title: Σχεδιασμός Ασφαλείας-Συνειδητός
       description: 'Σχεδιασμός οικιακής πισίνας με αναφορά στα πρότυπα EN 16582-1 και ASTM F2666 — πληροφορίες ασφαλείας για συγκεκριμένο μοντέλο παρέχονται στην τεκμηρίωση του προϊόντος. Απαιτείται πάντα η συνεχής επίβλεψη από ενήλικα.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Τι περιλαμβάνει η πισίνα;
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Κάθε σετ πισίνας Felizbay περιλαμβάνει ηλεκτρική αντλία αέρα, κιτ επισκευής και τσάντα αποθήκευσης. Τα καλύμματα και οι αντλίες φίλτρων πωλούνται χωριστά.
       icon: tabler:box
       category: all
     - title: Τι μεγέθη είναι διαθέσιμα;
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Διαδικτυακά πουλάμε σετ λιανικής σταθερού μεγέθους από τις συλλογές γύρου και SPA. Η πλήρης εργοστασιακή σειρά — στρογγυλές πισίνες πλάτους έως 10 m, ορθογώνιες πισίνες έως 6 × 5 m και μπανιέρες SPA — διατίθεται μέσω του προγράμματος χονδρικής μας.
       icon: tabler:ruler-2
       category: all
     - title: Σε ποιες επιφάνειες μπορεί να σταθεί η πισίνα;

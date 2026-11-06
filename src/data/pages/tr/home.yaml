@@ -36,7 +36,7 @@ features:
       description: 'Çift katmanlı PVC drop stitch kumaş, tüm sezon boyunca aile kullanımı boyunca delinmelere ve UV''ye maruz kalmaya karşı dayanıklı olacak şekilde tasarlanmıştır.'
       icon: tabler:shield
     - title: Komple Paket
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Her yüzme havuzu seti elektrikli hava pompası, tamir seti ve saklama çantasıyla birlikte gönderilir. Yuvarlak gri model için takılı kapak ayrı olarak satılır.
       icon: tabler:box
     - title: Güvenlik Bilincine Sahip Tasarım
       description: 'EN 16582-1 ve ASTM F2666''yı referans alan konut havuzu tasarımı — modele özel güvenlik bilgileri ürün belgelerinde verilmektedir. Sürekli yetişkin gözetimi her zaman gereklidir.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Havuza neler dahil?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Her Felizbay yüzme havuzu setinde elektrikli hava pompası, tamir seti ve saklama çantası bulunur. Kapaklar ve filtre pompaları ayrı satılır.
       icon: tabler:box
       category: all
     - title: Hangi boyutlar mevcut?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Çevrimiçi olarak yuvarlak ve SPA koleksiyonlarından sabit boyutlu perakende setler satıyoruz. Genişliği 10 m'ye kadar yuvarlak havuzlar, 6 × 5 m'ye kadar dikdörtgen havuzlar ve SPA küvetlerinden oluşan tüm fabrika yelpazesi toptan satış programımız aracılığıyla mevcuttur.
       icon: tabler:ruler-2
       category: all
     - title: Havuz hangi yüzeylerde durabilir?

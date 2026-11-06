@@ -36,7 +36,7 @@ features:
       description: 'Kaksikerroksinen PVC drop stitch -kangas, joka on suunniteltu kestämään puhkaisuja ja UV-altistusta koko perhekäytön ajan.'
       icon: tabler:shield
     - title: Täydellinen paketti
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Jokaisen uima-allassetin mukana toimitetaan sähköinen ilmapumppu, korjaussarja ja säilytyspussi. Pyöreän harmaamalliin asennettu kansi myydään erikseen.
       icon: tabler:box
     - title: Turvallisuustietoinen suunnittelu
       description: 'Asuin uima-altaan suunnittelu, jossa viitataan standardeihin EN 16582-1 ja ASTM F2666 – mallikohtaiset turvallisuustiedot on annettu tuotedokumentaatiossa. Jatkuva aikuisen valvonta vaaditaan aina.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mitä altaan hintaan sisältyy?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Jokainen Felizbayn uima-allassetti sisältää sähköisen ilmapumpun, korjaussarjan ja säilytyspussin. Kannet ja suodatinpumput myydään erikseen.
       icon: tabler:box
       category: all
     - title: Mitä kokoja on saatavilla?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Verkkokaupassa myymme kiinteän kokoisia vähittäismyyntisarjoja pyöreä- ja SPA-kokoelmista. Koko tehdasvalikoima – pyöreät altaat halkaisijaltaan jopa 10 m, suorakaiteen muotoiset altaat 6 × 5 m ja SPA-altaat – on saatavilla tukkumyyntiohjelmastamme.
       icon: tabler:ruler-2
       category: all
     - title: Millä pinnoilla allas voi seistä?

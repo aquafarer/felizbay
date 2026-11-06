@@ -36,7 +36,7 @@ features:
       description: 'Tejido PVC drop stitch de doble capa, diseñado para resistir pinchazos y exposición UV durante una temporada completa de uso familiar.'
       icon: tabler:shield
     - title: Paquete completo
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Cada juego de piscina se envía con una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. La funda ajustada para el modelo redondo gris se vende por separado.
       icon: tabler:box
     - title: Diseño consciente de la seguridad
       description: 'Diseño de piscina residencial que hace referencia a EN 16582-1 y ASTM F2666: la información de seguridad específica del modelo se proporciona en la documentación del producto. Siempre se requiere la supervisión constante de un adulto.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: ¿Qué incluye la piscina?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Cada juego de piscina Felizbay incluye una bomba de aire eléctrica, un kit de reparación y una bolsa de almacenamiento. Las cubiertas y las bombas de filtrado se venden por separado.
       icon: tabler:box
       category: all
     - title: ¿Qué tallas hay disponibles?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: En línea vendemos conjuntos minoristas de tamaño fijo de las colecciones redondas y SPA. La gama completa de fábrica (piscinas redondas de hasta 10 m de ancho, piscinas rectangulares de hasta 6 × 5 m y bañeras de SPA) está disponible a través de nuestro programa mayorista.
       icon: tabler:ruler-2
       category: all
     - title: ¿Sobre qué superficies se puede apoyar la piscina?

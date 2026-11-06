@@ -36,7 +36,7 @@ features:
       description: 'Tecido PVC drop stitch de camada dupla, projetado para resistir a perfurações e exposição ao UV durante uma temporada completa de uso familiar.'
       icon: tabler:shield
     - title: Pacote Completo
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Cada conjunto de piscina vem com uma bomba de ar elétrica, kit de reparo e bolsa de armazenamento. Uma capa ajustada para o modelo redondo cinza é vendida separadamente.
       icon: tabler:box
     - title: Design consciente da segurança
       description: 'Projeto de piscina residencial com referência a EN 16582-1 e ASTM F2666 — informações de segurança específicas do modelo são fornecidas na documentação do produto. A supervisão constante de um adulto é sempre necessária.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: O que está incluído na piscina?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Cada conjunto de piscina Felizbay inclui uma bomba de ar elétrica, um kit de reparo e uma bolsa de armazenamento. As tampas e as bombas de filtro são vendidas separadamente.
       icon: tabler:box
       category: all
     - title: Quais tamanhos estão disponíveis?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Online vendemos conjuntos de tamanho fixo das coleções Round e SPA. A gama completa de fábrica – piscinas redondas até 10 m de diâmetro, piscinas rectangulares até 6 × 5 m e banheiras SPA – está disponível através do nosso programa de venda grossista.
       icon: tabler:ruler-2
       category: all
     - title: Em quais superfícies a piscina pode ficar?

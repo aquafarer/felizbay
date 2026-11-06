@@ -36,7 +36,7 @@ features:
       description: 'Doppellagiges PVC-Drop-Stitch-Gewebe, das so konstruiert ist, dass es eine ganze Saison lang im Familienbereich stichfest und UV-Strahlung ausgesetzt ist.'
       icon: tabler:shield
     - title: Komplettpaket
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Jedes Schwimmbecken-Set wird mit einer elektrischen Luftpumpe, einem Reparaturset und einer Aufbewahrungstasche geliefert. Ein passender Bezug für das runde graue Modell ist separat erhältlich.
       icon: tabler:box
     - title: Sicherheitsbewusstes Design
       description: 'Design von Wohnpools unter Bezugnahme auf EN 16582-1 und ASTM F2666 – modellspezifische Sicherheitsinformationen finden Sie in der Produktdokumentation. Ständige Aufsicht durch Erwachsene ist immer erforderlich.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Was ist im Pool enthalten?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Zu jedem Felizbay-Schwimmbeckenset gehören eine elektrische Luftpumpe, ein Reparaturset und eine Aufbewahrungstasche. Abdeckungen und Filterpumpen sind separat erhältlich.
       icon: tabler:box
       category: all
     - title: Welche Größen sind verfügbar?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Online verkaufen wir Einzelhandelssets mit fester Größe aus den Kollektionen rund und SPA. Das gesamte Werkssortiment – ​​runde Pools bis 10 m Durchmesser, rechteckige Pools bis 6 × 5 m und SPA-Wannen – ist über unser Großhandelsprogramm erhältlich.
       icon: tabler:ruler-2
       category: all
     - title: Auf welchen Untergründen kann der Pool stehen?

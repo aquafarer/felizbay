@@ -36,7 +36,7 @@ features:
       description: 'Tessuto Drop Stitch in PVC a doppio strato, progettato per resistere alle forature e all''esposizione ai raggi UV durante un''intera stagione di utilizzo in famiglia.'
       icon: tabler:shield
     - title: Pacchetto completo
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Ogni set da piscina viene fornito con una pompa ad aria elettrica, un kit di riparazione e una custodia. Una copertura attrezzata per il modello rotondo grigio è venduta separatamente.
       icon: tabler:box
     - title: Design attento alla sicurezza
       description: 'Progettazione di piscine residenziali con riferimento a EN 16582-1 e ASTM F2666: le informazioni sulla sicurezza specifiche del modello sono fornite nella documentazione del prodotto. È sempre necessaria la costante supervisione di un adulto.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Cosa è incluso nella piscina?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Ogni set da piscina Felizbay include una pompa ad aria elettrica, un kit di riparazione e una custodia. I coperchi e le pompe filtro sono venduti separatamente.
       icon: tabler:box
       category: all
     - title: Quali taglie sono disponibili?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Vendiamo online set di vendita al dettaglio di dimensioni fisse delle collezioni tondi e SPA. La gamma completa di fabbrica – piscine rotonde fino a 10 m di diametro, piscine rettangolari fino a 6 × 5 m e vasche SPA – è disponibile attraverso il nostro programma di vendita all'ingrosso.
       icon: tabler:ruler-2
       category: all
     - title: Su quali superfici può poggiare la piscina?

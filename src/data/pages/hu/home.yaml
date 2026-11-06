@@ -36,7 +36,7 @@ features:
       description: 'Kétrétegű PVC drop stitch szövet, amelyet úgy terveztek, hogy ellenálljon a szúrásoknak és a UV expozíciónak a teljes családi használat során.'
       icon: tabler:shield
     - title: Komplett csomag
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Minden medencekészlethez tartozik egy elektromos légszivattyú, javítókészlet és tárolótáska. A körszürke modellhez külön megvásárolható egy felszerelt burkolat.
       icon: tabler:box
     - title: Biztonságtudatos tervezés
       description: 'A lakómedencék tervezése az EN 16582-1 és az ASTM F2666 szabványnak megfelelően – a modellspecifikus biztonsági információk a termékdokumentációban találhatók. Állandó felnőtt felügyelet szükséges.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mit tartalmaz a medence?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Minden Felizbay medencekészlet tartalmaz egy elektromos légszivattyút, egy javítókészletet és egy tárolótáskát. A burkolatok és a szűrőszivattyúk külön vásárolhatók meg.
       icon: tabler:box
       category: all
     - title: Milyen méretek kaphatók?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Online forgalmazunk fix méretű kiskereskedelmi készleteket a kerek és SPA kollekcióból. A teljes gyári választék – kerek medencék 10 m-ig, négyszögletes medencék 6 × 5 m-ig és SPA kádak – elérhető nagykereskedelmi programunkon keresztül.
       icon: tabler:ruler-2
       category: all
     - title: Milyen felületeken állhat a medence?

@@ -36,7 +36,7 @@ features:
       description: 'Двухслойная ткань PVC drop stitch, разработанная для защиты от проколов и воздействия UV в течение всего сезона семейного использования.'
       icon: tabler:shield
     - title: Полный пакет
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Каждый комплект для бассейна поставляется с электрическим воздушным насосом, ремонтным комплектом и сумкой для хранения. Встроенная крышка для круглой модели серого цвета продается отдельно.
       icon: tabler:box
     - title: Дизайн, ориентированный на безопасность
       description: 'Конструкция бассейна для жилых помещений соответствует стандартам EN 16582-1 и ASTM F2666 — информация о безопасности для конкретной модели представлена ​​в документации к продукту. Всегда необходим постоянный присмотр взрослых.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Что входит в стоимость бассейна?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Каждый комплект для бассейна Felizbay включает в себя электрический воздушный насос, ремонтный комплект и сумку для хранения. Крышки и фильтр-насосы продаются отдельно.
       icon: tabler:box
       category: all
     - title: Какие размеры доступны?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Интернет-магазин продает в розницу наборы фиксированного размера из коллекций Round и SPA. Полный заводской ассортимент — круглые бассейны диаметром до 10 м, прямоугольные бассейны размером до 6×5 м и СПА-ванны — доступен через нашу оптовую программу.
       icon: tabler:ruler-2
       category: all
     - title: На каких поверхностях может стоять бассейн?

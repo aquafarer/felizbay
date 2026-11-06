@@ -36,7 +36,7 @@ features:
       description: 'Dwuwarstwowy materiał PVC drop stitch, zaprojektowany tak, aby był odporny na przebicia i narażenie na działanie UV przez cały sezon rodzinnego użytkowania.'
       icon: tabler:shield
     - title: Kompletny pakiet
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Każdy zestaw do basenu jest dostarczany z elektryczną pompką powietrza, zestawem naprawczym i torbą do przechowywania. Dopasowany pokrowiec do okrągłego, szarego modelu sprzedawany jest osobno.
       icon: tabler:box
     - title: Projekt uwzględniający bezpieczeństwo
       description: 'Projekt basenu mieszkalnego zgodny z normami EN 16582-1 i ASTM F2666 — informacje dotyczące bezpieczeństwa dotyczące konkretnego modelu znajdują się w dokumentacji produktu. Zawsze wymagany jest stały nadzór osoby dorosłej.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Co jest wliczone w cenę basenu?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Każdy zestaw basenowy Felizbay zawiera elektryczną pompkę powietrza, zestaw naprawczy i torbę do przechowywania. Pokrywy i pompy filtrujące sprzedawane są osobno.
       icon: tabler:box
       category: all
     - title: Jakie rozmiary są dostępne?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: W internecie prowadzimy sprzedaż detaliczną kompletów o stałym rozmiarze z kolekcji Round i SPA. Pełna oferta fabryczna – baseny okrągłe o średnicy do 10 m, baseny prostokątne do 6×5 m oraz wanny SPA – dostępna jest w naszym programie hurtowym.
       icon: tabler:ruler-2
       category: all
     - title: Na jakich powierzchniach może stać basen?

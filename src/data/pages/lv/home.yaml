@@ -36,7 +36,7 @@ features:
       description: 'Divslāņu PVC drop stitch audums, kas izstrādāts tā, lai tas izturētu caurduršanu un UV iedarbību visas ģimenes lietošanas laikā.'
       icon: tabler:shield
     - title: Pilnīga pakete
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Katrs peldbaseina komplekts tiek piegādāts ar elektrisko gaisa sūkni, remonta komplektu un uzglabāšanas somu. Apaļpelēkajam modelim piestiprināts vāks tiek pārdots atsevišķi.
       icon: tabler:box
     - title: Drošību apzinīgs dizains
       description: 'Dzīvojamo baseinu dizains, kas atbilst EN 16582-1 un ASTM F2666 — modeļa specifiskā drošības informācija ir sniegta produkta dokumentācijā. Vienmēr nepieciešama pastāvīga pieaugušo uzraudzība.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kas ir iekļauts baseinā?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Katrā Felizbay peldbaseina komplektā ietilpst elektriskais gaisa sūknis, remonta komplekts un uzglabāšanas soma. Pārsegi un filtru sūkņi tiek pārdoti atsevišķi.
       icon: tabler:box
       category: all
     - title: Kādi izmēri ir pieejami?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Tiešsaistē pārdodam fiksēta izmēra mazumtirdzniecības komplektus no apaļajām un SPA kolekcijām. Pilns rūpnīcas klāsts — apaļie baseini ar diametru līdz 10 m, taisnstūrveida baseini līdz 6 × 5 m un SPA vannas — ir pieejams mūsu vairumtirdzniecības programmā.
       icon: tabler:ruler-2
       category: all
     - title: Uz kādām virsmām baseins var stāvēt?

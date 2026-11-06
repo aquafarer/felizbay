@@ -36,7 +36,7 @@ features:
       description: 'Двуслойна материя PVC drop stitch, проектирана да издържа на пробиви и излагане на UV през целия сезон на семейна употреба.'
       icon: tabler:shield
     - title: Пълен пакет
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Всеки комплект за плувен басейн се доставя с електрическа въздушна помпа, ремонтен комплект и чанта за съхранение. Вталена калъфка за кръглия сив модел се продава отделно.
       icon: tabler:box
     - title: Дизайн, съобразен с безопасността
       description: 'Проектиране на жилищен басейн с препратка към EN 16582-1 и ASTM F2666 — специфична за модела информация за безопасност е предоставена в документацията на продукта. Винаги е необходим постоянен надзор от възрастен.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Какво е включено в басейна?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Всеки комплект за плувен басейн Felizbay включва електрическа въздушна помпа, ремонтен комплект и чанта за съхранение. Капаците и филтърните помпи се продават отделно.
       icon: tabler:box
       category: all
     - title: Какви размери са налични?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Онлайн продаваме комплекти на дребно с фиксирани размери от кръглата и SPA колекции. Пълната фабрична гама — кръгли басейни с размери до 10 м, правоъгълни басейни с размери до 6 × 5 м и СПА вани — се предлага чрез нашата програма за продажба на едро.
       icon: tabler:ruler-2
       category: all
     - title: На какви повърхности може да стои басейнът?

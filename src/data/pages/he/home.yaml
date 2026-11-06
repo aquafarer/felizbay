@@ -36,7 +36,7 @@ features:
       description: 'בד PVC drop stitch שכבתית כפולה, תוכנן לעמוד בפני פנצ''רים וחשיפה ל-UV דרך עונה מלאה של שימוש משפחתי.'
       icon: tabler:shield
     - title: חבילה שלמה
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: כל סט בריכת שחייה נשלח עם משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. כיסוי מותאם לדגם האפור העגול נמכר בנפרד.
       icon: tabler:box
     - title: עיצוב מודע לבטיחות
       description: 'תכנון בריכה למגורים בהתייחס ל-EN 16582-1 ו-ASTM F2666 - מידע בטיחות ספציפי לדגם מסופק בתיעוד המוצר. תמיד נדרשת השגחת מבוגר מתמדת.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: מה כלול בבריכה?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: כל סט בריכת שחייה של Felizbay כולל משאבת אוויר חשמלית, ערכת תיקון ושקית אחסון. כיסויים ומשאבות סינון נמכרים בנפרד.
       icon: tabler:box
       category: all
     - title: אילו גדלים זמינים?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: באינטרנט אנו מוכרים סטים קמעונאיים בגודל קבוע מקולקציית העגול והספא. מגוון המפעלים המלא - בריכות עגולות בקוטר של עד 10 מ', בריכות מלבניות עד 6 × 5 מ' ואמבטיות ספא ​​- זמין דרך התוכנית הסיטונאית שלנו.
       icon: tabler:ruler-2
       category: all
     - title: על אילו משטחים הבריכה יכולה לעמוד?

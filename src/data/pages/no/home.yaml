@@ -36,7 +36,7 @@ features:
       description: 'Dobbeltlags PVC drop stitch-stoff, konstruert for å motstå punkteringer og UV-eksponering gjennom en hel sesong med familiebruk.'
       icon: tabler:shield
     - title: Komplett pakke
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Hvert svømmebassengsett leveres med en elektrisk luftpumpe, reparasjonssett og oppbevaringspose. Et montert deksel for den runde grå modellen selges separat.
       icon: tabler:box
     - title: Sikkerhetsbevisst design
       description: 'Utforming av boligbasseng som refererer til EN 16582-1 og ASTM F2666 — modellspesifikk sikkerhetsinformasjon er gitt i produktdokumentasjonen. Konstant tilsyn av voksne er alltid nødvendig.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hva følger med bassenget?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Hvert Felizbay svømmebassengsett inkluderer en elektrisk luftpumpe, et reparasjonssett og en oppbevaringspose. Deksler og filterpumper selges separat.
       icon: tabler:box
       category: all
     - title: Hvilke størrelser er tilgjengelige?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: På nett selger vi butikksett i fast størrelse fra rund- og SPA-kolleksjonene. Hele fabrikkutvalget – runde bassenger med en diameter på opptil 10 m, rektangulære bassenger på opptil 6 × 5 m og SPA-badekar – er tilgjengelig gjennom vårt grossistprogram.
       icon: tabler:ruler-2
       category: all
     - title: Hvilke overflater kan bassenget stå på?

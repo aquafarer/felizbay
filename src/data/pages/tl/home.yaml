@@ -36,7 +36,7 @@ features:
       description: 'Double-layer na PVC drop stitch na tela, na idinisenyo upang labanan ang mga butas at UV exposure sa buong panahon ng paggamit ng pamilya.'
       icon: tabler:shield
     - title: Kumpletong Package
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Bawat swim-pool set ay nagpapadala ng electric air pump, repair kit, at storage bag. Ang isang angkop na takip para sa bilog na kulay abong modelo ay ibinebenta nang hiwalay.
       icon: tabler:box
     - title: Disenyo na Nakababatid sa Kaligtasan
       description: 'Ang disenyo ng residential pool na tumutukoy sa EN 16582-1 at ASTM F2666 — ang impormasyon sa kaligtasan na partikular sa modelo ay ibinibigay sa dokumentasyon ng produkto. Ang patuloy na pangangasiwa ng may sapat na gulang ay palaging kinakailangan.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Ano ang kasama sa pool?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Bawat Felizbay swim-pool set ay may kasamang electric air pump, repair kit, at storage bag. Ang mga cover at filter na bomba ay ibinebenta nang hiwalay.
       icon: tabler:box
       category: all
     - title: Anong mga sukat ang magagamit?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Online, nagbebenta kami ng fixed-size na retail set mula sa round at SPA na mga koleksyon. Ang buong hanay ng pabrika — mga bilog na pool hanggang 10 m ang lapad, mga rectangular na pool hanggang 6 × 5 m, at mga SPA tub — ay available sa pamamagitan ng aming pakyawan na programa.
       icon: tabler:ruler-2
       category: all
     - title: Anong mga ibabaw ang maaaring tumayo sa pool?

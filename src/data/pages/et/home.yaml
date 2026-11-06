@@ -36,7 +36,7 @@ features:
       description: 'Kahekihiline PVC drop stitch kangas, mis on konstrueeritud nii, et see talub torke ja UV kokkupuudet terve pere kasutushooaja jooksul.'
       icon: tabler:shield
     - title: Täielik pakett
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Iga basseinikomplektiga on kaasas elektriline õhupump, remondikomplekt ja hoiukott. Ümmarguse halli mudeli jaoks on müügil eraldi kate.
       icon: tabler:box
     - title: Ohutustundlik disain
       description: 'Elamu basseini projekt, mis viitab standarditele EN 16582-1 ja ASTM F2666 – mudelispetsiifiline ohutusteave on toodud toote dokumentatsioonis. Alati on vajalik täiskasvanu pidev järelevalve.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Mis on basseiniga kaasas?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Iga Felizbay basseinikomplekt sisaldab elektrilist õhupumpa, remondikomplekti ja hoiukotti. Kaaned ja filtripumbad müüakse eraldi.
       icon: tabler:box
       category: all
     - title: Mis suurused on saadaval?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Internetis müüme fikseeritud suurusega jaemüügikomplekte ümmargustest ja SPA-kollektsioonidest. Kogu tehasevalik – ümmargused basseinid läbimõõduga kuni 10 m, ristkülikukujulised basseinid kuni 6 × 5 m ja SPA vannid – on saadaval meie hulgimüügiprogrammi kaudu.
       icon: tabler:ruler-2
       category: all
     - title: Millistel pindadel võib bassein seista?

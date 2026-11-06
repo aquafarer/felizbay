@@ -36,7 +36,7 @@ features:
       description: 'Ikki qavatli PVC drop stitch mato, oilaviy foydalanishning to''liq mavsumi davomida teshilish va UV ta''siriga qarshi turish uchun ishlab chiqilgan.'
       icon: tabler:shield
     - title: Toʻliq toʻplam
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Har bir suzish havzasi to'plami elektr havo pompasi, ta'mirlash to'plami va saqlash sumkasi bilan birga keladi. Dumaloq kulrang model uchun o'rnatilgan qopqoq alohida sotiladi.
       icon: tabler:box
     - title: Xavfsizlik nuqtai nazaridan dizayn
       description: 'EN 16582-1 va ASTM F2666 standartlariga mos keladigan turar-joy hovuzining dizayni - modelga oid xavfsizlik ma''lumotlari mahsulot hujjatlarida keltirilgan. Doimiy kattalar nazorati doimo talab qilinadi.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hovuzga nima kiradi?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Har bir Felizbay suzish havzasi to'plamida elektr havo nasosi, ta'mirlash to'plami va saqlash sumkasi mavjud. Qopqoqlar va filtr nasoslari alohida sotiladi.
       icon: tabler:box
       category: all
     - title: Qanday o'lchamlar mavjud?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Onlaynda biz dumaloq va SPA to'plamlaridan qat'iy o'lchamdagi chakana to'plamlarni sotamiz. To'liq zavod assortimenti - 10 m gacha bo'lgan dumaloq hovuzlar, 6 × 5 m gacha bo'lgan to'rtburchaklar hovuzlar va SPA vannalari - bizning ulgurji dasturimiz orqali mavjud.
       icon: tabler:ruler-2
       category: all
     - title: Hovuz qanday sirtlarda turishi mumkin?

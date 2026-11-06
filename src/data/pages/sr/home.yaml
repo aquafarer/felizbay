@@ -36,7 +36,7 @@ features:
       description: 'Dvoslojni PVC drop stitch tkanina, projektovana da se odupre probojima i UV izloženost kroz celu sezonu porodične upotrebe.'
       icon: tabler:shield
     - title: Kompletan paket
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Сваки сет за базен се испоручује са електричном пумпом за ваздух, комплетом за поправку и торбом за одлагање. Поклопац за округли сиви модел се продаје засебно.
       icon: tabler:box
     - title: Dizajn sa svešću o bezbednosti
       description: 'Referenca za dizajn stambenog bazena EN 16582-1 i ASTM F2666 — bezbednosne informacije specifične za model su date u dokumentaciji proizvoda. Uvek je potreban stalni nadzor odraslih.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Šta je uključeno u bazen?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Сваки Фелизбаи сет за базен укључује електричну ваздушну пумпу, комплет за поправку и торбу за одлагање. Поклопци и филтер пумпе се продају засебно.
       icon: tabler:box
       category: all
     - title: Koje veličine su dostupne?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Онлине продајемо малопродајне сетове фиксне величине из округлих и СПА колекција. Комплетан фабрички асортиман — округли базени до 10 м у пречнику, правоугаони базени до 6 × 5 м и СПА каде — доступан је преко нашег велепродајног програма.
       icon: tabler:ruler-2
       category: all
     - title: Na kojim površinama može da stoji bazen?

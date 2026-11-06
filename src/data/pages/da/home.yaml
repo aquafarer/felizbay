@@ -36,7 +36,7 @@ features:
       description: 'Dobbelt-lags PVC drop stitch stof, konstrueret til at modstå punkteringer og UV-eksponering gennem en hel sæson med familiebrug.'
       icon: tabler:shield
     - title: Komplet pakke
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Hvert svømmebassinsæt leveres med en elektrisk luftpumpe, reparationssæt og opbevaringstaske. Et monteret betræk til den runde grå model sælges separat.
       icon: tabler:box
     - title: Sikkerhedsbevidst design
       description: 'Pooldesign til beboelse, der refererer til EN 16582-1 og ASTM F2666 — modelspecifik sikkerhedsinformation findes i produktdokumentationen. Konstant voksenopsyn er altid påkrævet.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Hvad er inkluderet i poolen?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Hvert Felizbay svømmebassinsæt inkluderer en elektrisk luftpumpe, et reparationssæt og en opbevaringstaske. Dæksler og filterpumper sælges separat.
       icon: tabler:box
       category: all
     - title: Hvilke størrelser er tilgængelige?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Online sælger vi detailsæt i fast størrelse fra rund- og SPA-kollektionerne. Hele fabrikssortimentet - runde pools op til 10 m tværs, rektangulære pools op til 6 × 5 m og spabade - er tilgængelig gennem vores engros-program.
       icon: tabler:ruler-2
       category: all
     - title: Hvilke overflader kan poolen stå på?

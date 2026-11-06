@@ -36,7 +36,7 @@ features:
       description: 'Dvoslojna tkanina PVC drop stitch, zasnovana tako, da je odporna na vbode in izpostavljenost UV skozi celotno sezono družinske uporabe.'
       icon: tabler:shield
     - title: Celoten paket
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Vsak komplet za bazen je opremljen z električno zračno črpalko, kompletom za popravilo in torbo za shranjevanje. Prilegajoča se prevleka za okrogel siv model se prodaja ločeno.
       icon: tabler:box
     - title: Varnostno ozaveščena zasnova
       description: 'Zasnova stanovanjskega bazena, ki se sklicuje na EN 16582-1 in ASTM F2666 — varnostne informacije, specifične za model, so na voljo v dokumentaciji izdelka. Vedno je potreben stalen nadzor odrasle osebe.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kaj je vključeno v bazen?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Vsak komplet za bazen Felizbay vključuje električno zračno črpalko, komplet za popravilo in torbo za shranjevanje. Pokrovi in ​​filtrske črpalke se prodajajo ločeno.
       icon: tabler:box
       category: all
     - title: Katere velikosti so na voljo?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Na spletu prodajamo maloprodajne komplete fiksnih velikosti iz kolekcij okrogla in SPA. Celoten tovarniški program - okrogli bazeni do 10 m premera, pravokotni bazeni do 6 × 5 m in SPA kadi - je na voljo v našem veleprodajnem programu.
       icon: tabler:ruler-2
       category: all
     - title: Na katerih površinah lahko stoji bazen?

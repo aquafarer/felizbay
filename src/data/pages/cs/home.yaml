@@ -36,7 +36,7 @@ features:
       description: 'Dvouvrstvá tkanina PVC drop stitch, navržená tak, aby odolala propíchnutí a vystavení UV po celou sezónu rodinného používání.'
       icon: tabler:shield
     - title: Kompletní balíček
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Každý bazénový set je dodáván s elektrickou vzduchovou pumpou, opravnou sadou a úložným vakem. Nasazený kryt pro kulatý šedý model se prodává samostatně.
       icon: tabler:box
     - title: Design s vědomím bezpečnosti
       description: 'Návrh obytného bazénu s odkazem na EN 16582-1 a ASTM F2666 – bezpečnostní informace specifické pro daný model jsou uvedeny v dokumentaci produktu. Vždy je nutný neustálý dohled dospělé osoby.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Co je součástí bazénu?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Každá sada bazénů Felizbay obsahuje elektrickou vzduchovou pumpu, opravnou sadu a úložnou tašku. Kryty a filtrační čerpadla se prodávají samostatně.
       icon: tabler:box
       category: all
     - title: Jaké velikosti jsou k dispozici?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Online prodáváme maloobchodní sady pevné velikosti z kolekcí round a SPA. Celý výrobní sortiment – ​​kulaté bazény do 10 m, obdélníkové bazény do 6 × 5 m a SPA vany – je k dispozici prostřednictvím našeho velkoobchodního programu.
       icon: tabler:ruler-2
       category: all
     - title: Na jakých plochách může bazén stát?

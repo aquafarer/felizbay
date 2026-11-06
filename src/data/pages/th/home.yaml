@@ -36,7 +36,7 @@ features:
       description: 'ผ้า PVC drop stitch สองชั้น ออกแบบมาเพื่อต้านทานการเจาะทะลุและการสัมผัสกับ UV ตลอดการใช้งานทั้งครอบครัว'
       icon: tabler:shield
     - title: แพ็คเกจที่สมบูรณ์
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: ชุดสระว่ายน้ำทุกชุดมาพร้อมกับปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ ฝาครอบเข้ารูปสำหรับรุ่นทรงกลมสีเทาจำหน่ายแยกต่างหาก
       icon: tabler:box
     - title: การออกแบบที่คำนึงถึงความปลอดภัย
       description: 'การออกแบบสระว่ายน้ำสำหรับที่อยู่อาศัยอ้างอิง EN 16582-1 และ ASTM F2666 — ข้อมูลด้านความปลอดภัยเฉพาะรุ่นมีอยู่ในเอกสารประกอบของผลิตภัณฑ์ จำเป็นต้องมีการดูแลจากผู้ใหญ่อย่างต่อเนื่อง'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: มีอะไรรวมอยู่ในสระว่ายน้ำ?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: ชุดสระว่ายน้ำ Felizbay ทุกชุดประกอบด้วยปั๊มลมไฟฟ้า ชุดซ่อม และถุงเก็บของ ฝาครอบและปั๊มกรองจำหน่ายแยกต่างหาก
       icon: tabler:box
       category: all
     - title: มีขนาดอะไรบ้าง?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: ทางออนไลน์เราจำหน่ายชุดขายปลีกขนาดคงที่จากคอลเลกชั่น Round และ SPA กลุ่มผลิตภัณฑ์จากโรงงานทั้งหมด ได้แก่ สระทรงกลมยาวถึง 10 ม. สระสี่เหลี่ยมยาวถึง 6 × 5 ม. และอ่างสปา มีจำหน่ายผ่านโปรแกรมขายส่งของเรา
       icon: tabler:ruler-2
       category: all
     - title: สระน้ำสามารถยืนบนพื้นผิวใดได้บ้าง?

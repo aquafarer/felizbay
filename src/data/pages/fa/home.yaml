@@ -36,7 +36,7 @@ features:
       description: 'پارچه دولایه PVC drop stitch، مهندسی شده برای مقاومت در برابر سوراخ شدن و قرار گرفتن در معرض UV در طول یک فصل کامل استفاده خانوادگی.'
       icon: tabler:shield
     - title: پکیج کامل
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: هر مجموعه استخر شنا با پمپ باد برقی، کیت تعمیر و کیسه ذخیره سازی حمل می شود. روکش نصب شده برای مدل خاکستری گرد به صورت جداگانه فروخته می شود.
       icon: tabler:box
     - title: طراحی ایمنی-آگاهانه
       description: 'ارجاع به طراحی استخر مسکونی EN 16582-1 و ASTM F2666 — اطلاعات ایمنی مدل خاص در مستندات محصول ارائه شده است. نظارت مداوم بزرگسالان همیشه مورد نیاز است.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: چه چیزی همراه استخر است؟
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: هر مجموعه استخر Felizbay شامل یک پمپ باد برقی، یک کیت تعمیر و یک کیسه ذخیره سازی است. روکش ها و فیلتر پمپ ها به صورت جداگانه فروخته می شوند.
       icon: tabler:box
       category: all
     - title: چه اندازه هایی موجود است؟
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: ما به صورت آنلاین مجموعه های خرده فروشی با اندازه ثابت را از مجموعه های گرد و SPA می فروشیم. محدوده کامل کارخانه - استخرهای گرد تا 10 متر، استخرهای مستطیلی تا 6 × 5 متر و وان های آبگرم - از طریق برنامه عمده فروشی ما در دسترس است.
       icon: tabler:ruler-2
       category: all
     - title: استخر روی چه سطوحی می تواند بایستد؟

@@ -36,7 +36,7 @@ features:
       description: 'Kain PVC drop stitch lapis ganda, dirancang untuk tahan terhadap tusukan dan paparan UV selama penggunaan keluarga selama satu musim penuh.'
       icon: tabler:shield
     - title: Paket Lengkap
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Setiap set kolam renang dilengkapi dengan pompa udara listrik, peralatan perbaikan, dan tas penyimpanan. Sarung pas untuk model abu-abu bulat dijual terpisah.
       icon: tabler:box
     - title: Desain Sadar Keselamatan
       description: 'Referensi desain kolam perumahan EN 16582-1 dan ASTM F2666 — informasi keselamatan khusus model disediakan dalam dokumentasi produk. Pengawasan orang dewasa yang konstan selalu diperlukan.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Apa saja yang termasuk dalam kolam renang?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Setiap set kolam renang Felizbay dilengkapi dengan pompa udara listrik, perlengkapan perbaikan, dan tas penyimpanan. Penutup dan pompa filter dijual terpisah.
       icon: tabler:box
       category: all
     - title: Ukuran apa yang tersedia?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Secara online kami menjual set retail ukuran tetap dari koleksi round dan SPA. Rangkaian lengkap pabrik — kolam bundar dengan lebar hingga 10 m, kolam persegi panjang hingga 6 × 5 m, dan bak SPA — tersedia melalui program grosir kami.
       icon: tabler:ruler-2
       category: all
     - title: Pada permukaan apa kolam dapat berdiri?

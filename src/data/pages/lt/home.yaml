@@ -36,7 +36,7 @@ features:
       description: 'Dvisluoksnis PVC drop stitch audinys, sukurtas taip, kad būtų atsparus pradūrimams ir UV poveikiui per visą šeimos naudojimo sezoną.'
       icon: tabler:shield
     - title: Pilnas paketas
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: Kiekviename baseino komplekte yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Apvalaus pilko modelio užvalkalas parduodamas atskirai.
       icon: tabler:box
     - title: Saugumo požiūriu sąmoningas dizainas
       description: 'Gyvenamojo baseino projektas, atitinkantis EN 16582-1 ir ASTM F2666 – konkrečiam modeliui būdinga saugos informacija pateikiama gaminio dokumentacijoje. Visada reikalinga nuolatinė suaugusiųjų priežiūra.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: Kas įskaičiuota į baseiną?
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: Kiekviename Felizbay baseino rinkinyje yra elektrinis oro siurblys, remonto rinkinys ir laikymo krepšys. Dangteliai ir filtrų siurbliai parduodami atskirai.
       icon: tabler:box
       category: all
     - title: Kokie dydžiai galimi?
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: Internetu prekiaujame fiksuoto dydžio mažmeninės prekybos rinkiniais iš apvalių ir SPA kolekcijų. Visas gamyklos asortimentas – apvalūs baseinai iki 10 m skersmens, stačiakampiai baseinai iki 6 × 5 m ir SPA kubilai – yra mūsų didmeninės prekybos programoje.
       icon: tabler:ruler-2
       category: all
     - title: Ant kokių paviršių gali stovėti baseinas?

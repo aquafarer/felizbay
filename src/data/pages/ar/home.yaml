@@ -36,7 +36,7 @@ features:
       description: 'نسيج PVC drop stitch مزدوج الطبقة، مصمم لمقاومة الثقوب والتعرض لـ UV خلال موسم كامل من الاستخدام العائلي.'
       icon: tabler:shield
     - title: حزمة كاملة
-      description: Every swim-pool set ships with an electric air pump, repair kit, and storage bag. A fitted cover for the round grey model is sold separately.
+      description: تأتي كل مجموعة حمام سباحة مزودة بمضخة هواء كهربائية ومجموعة إصلاح وحقيبة تخزين. يُباع الغطاء المناسب للطراز الرمادي المستدير بشكل منفصل.
       icon: tabler:box
     - title: تصميم مراعٍ للسلامة
       description: 'مرجع تصميم حمام السباحة السكني EN 16582-1 وASTM F2666 - يتم توفير معلومات السلامة الخاصة بالطراز في وثائق المنتج. مطلوب دائمًا إشراف الكبار المستمر.'
@@ -117,11 +117,11 @@ faqs:
       icon: tabler:package
       category: all
     - title: ما الذي يتم تضمينه مع المسبح؟
-      description: Every Felizbay swim-pool set includes an electric air pump, a repair kit, and a storage bag. Covers and filter pumps are sold separately.
+      description: تشتمل كل مجموعة من حمامات السباحة Felizbay على مضخة هواء كهربائية ومجموعة أدوات إصلاح وحقيبة تخزين. تُباع الأغطية ومضخات الفلتر بشكل منفصل.
       icon: tabler:box
       category: all
     - title: ما هي الأحجام المتوفرة؟
-      description: Online we sell fixed-size retail sets from the round and SPA collections. The full factory range — round pools up to 10 m across, rectangular pools up to 6 × 5 m, and SPA tubs — is available through our wholesale program.
+      description: نبيع عبر الإنترنت مجموعات البيع بالتجزئة ذات الحجم الثابت من المجموعات المستديرة ومجموعات SPA. تتوفر مجموعة المصنع الكاملة - المسابح الدائرية التي يصل عرضها إلى 10 أمتار، والمسابح المستطيلة التي يصل عرضها إلى 6 × 5 أمتار، وأحواض السبا - من خلال برنامج البيع بالجملة الخاص بنا.
       icon: tabler:ruler-2
       category: all
     - title: ما هي الأسطح التي يمكن أن يقف عليها حمام السباحة؟
