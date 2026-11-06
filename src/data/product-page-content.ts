@@ -431,7 +431,7 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
     assurance: [
       {
         titleKey: 'product.assuranceIncluded',
-        text: 'Tub shell with built-in inflatable seats and a 5 mm insulated thermal bottom. Heating and filtration units are sold separately.',
+        text: 'Tub shell with built-in inflatable seats and a 5 mm insulated thermal bottom, plus a 1000W electric air pump, repair kit, and storage bag. Heating and filtration units are sold separately.',
       },
       {
         titleKey: 'product.assuranceDelivery',
@@ -468,7 +468,13 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
     ],
     fitNotice: HOT_TUB_FIT_NOTICE,
     fixedSetSize: 'Ø 2 × 0.8 m (factory item RS2018, 10 cm drop-stitch wall)',
-    packageIncluded: ['Built-in integrated inflatable seats', '5 mm insulated thermal bottom base'],
+    packageIncluded: [
+      'Built-in integrated inflatable seats',
+      '5 mm insulated thermal bottom base',
+      '1000W electric air pump',
+      'Repair kit',
+      'Storage bag',
+    ],
     packageRequired: [
       'An external heating unit for hot soaking (sold separately)',
       'A flat, level surface rated for the filled weight',

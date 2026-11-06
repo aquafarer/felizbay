@@ -23,6 +23,8 @@ Measuring only the pool itself is a common pitfall in small-space planning — o
   - Easy access for manual skimmers, brush cleaning, and filter pump hose connections.
   - Unobstructed access to inflation valves and drainage ports.
 
+Note: the recommended clearance varies by scenario and pool model — a compact-yard pool can tighten the buffer toward 0.5 m, while larger pools or setups with lounging space need the full 1 m or more.
+
 ## 3. Ground Levelness & Surface Preparation
 
 A small slope can cause big problems in a filled pool.

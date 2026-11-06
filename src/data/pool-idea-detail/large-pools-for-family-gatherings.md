@@ -33,7 +33,7 @@ For comfortable socializing, allow roughly **1.0–1.5 m² (10–15 sq ft) of wa
 
 A large pool needs more than just a footprint matching its exterior size. To ensure safe party flow and easy access, properly plan your backyard layout:
 
-- **Clear perimeter zone:** Allow a minimum of 1.2 to 2.0 meters (4 to 6.5 feet) of unobstructed clearance on all four sides of the pool.
+- **Clear perimeter zone:** Allow a minimum of 1.2 to 2.0 meters (4 to 6.5 feet) of unobstructed clearance on all four sides of the pool. Large gathering pools sit at the top of this range because seating, walkways, and supervising-adult sightlines all live in that buffer; smaller models need less, as detailed in the [space planning guide](/guides/how-much-space-do-you-need-for-an-inflatable-pool/).
 - **Functional zones around the pool:**
   - **Towel & seating area:** Keep lounge chairs and dry zones outside the direct splash zone.
   - **Equipment zone:** Allocate a dedicated 1 m × 1 m dry area for filter pumps and chemical dispensers away from heavy foot traffic.

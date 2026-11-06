@@ -14,7 +14,7 @@ Proper spatial planning is the first step toward a seamless and enjoyable backya
 - **Site selection principles:**
   - **Flat, level surface:** Choose a firm, level area completely free of sharp objects (rocks, twigs, or debris). We recommend using a heavy-duty ground cloth underneath the pool.
   - **Sunlight & privacy:** Position the pool in a spot that receives plenty of sunlight while being sheltered from harsh winds. Consider neighbor privacy and easy access to water lines and drainage.
-  - **Clear clearance zone:** Maintain a clear pathway of at least 1 to 1.5 meters around all sides of the pool for easy entry, exit, lounging, and routine maintenance.
+  - **Clear clearance zone:** Maintain a clear pathway of at least 1 to 1.5 meters around all sides of the pool for easy entry, exit, lounging, and routine maintenance. The exact buffer varies by scenario and model — compact pools in tighter yards can work with less, while larger family pools with lounging space need more. The [space planning guide](/guides/how-much-space-do-you-need-for-an-inflatable-pool/) breaks down per-size recommendations.
 
 - **Actual usable space:**
   - Traditional soft-sided inflatable pools feature sloped inner walls that eat into your actual swimming area. Felizbay utilizes high-density [drop-stitch technology](/guides/what-is-a-drop-stitch-inflatable-pool/), resulting in firm, upright, ultra-rigid side walls.

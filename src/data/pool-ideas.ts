@@ -650,3 +650,61 @@ export const POOL_IDEAS: PoolIdea[] = [
 ];
 
 export const findPoolIdea = (slug: string): PoolIdea | undefined => POOL_IDEAS.find((i) => i.slug === slug);
+
+/**
+ * i18n key map for the consumer scenario cards shown on the homepages.
+ * Titles / descriptions / image ALTs are localized via the `ideas.*` UI keys in
+ * src/data/site/i18n-config.json (audit 2026-11-06 §13.1 — localized homepages
+ * previously rendered the English pool-ideas strings). Keys missing from a
+ * language fall back to the EN source strings.
+ */
+export const SCENARIO_UI_KEYS: Record<string, { title: string; desc: string; alt: string }> = {
+  'large-pools-for-family-gatherings': {
+    title: 'ideas.titleLargeGatherings',
+    desc: 'ideas.descLargeGatherings',
+    alt: 'ideas.altLargeGatherings',
+  },
+  'pools-for-water-fitness-and-recreation': {
+    title: 'ideas.titleWaterFitness',
+    desc: 'ideas.descWaterFitness',
+    alt: 'ideas.altWaterFitness',
+  },
+  'pools-for-pet-families': {
+    title: 'ideas.titlePetFamilies',
+    desc: 'ideas.descPetFamilies',
+    alt: 'ideas.altPetFamilies',
+  },
+  'cold-plunge-and-recovery-pools': {
+    title: 'ideas.titleColdPlunge',
+    desc: 'ideas.descColdPlunge',
+    alt: 'ideas.altColdPlunge',
+  },
+  'pools-for-dink-households': {
+    title: 'ideas.titleDinkHouseholds',
+    desc: 'ideas.descDinkHouseholds',
+    alt: 'ideas.altDinkHouseholds',
+  },
+  'townhome-and-compact-yard-pools': {
+    title: 'ideas.titleTownhomes',
+    desc: 'ideas.descTownhomes',
+    alt: 'ideas.altTownhomes',
+  },
+  'pools-for-retirees-and-empty-nesters': {
+    title: 'ideas.titleRetirees',
+    desc: 'ideas.descRetirees',
+    alt: 'ideas.altRetirees',
+  },
+};
+
+/** Localized card strings for a scenario shown on a homepage. */
+export function localizePoolIdeaCard(
+  idea: PoolIdea,
+  t: (key: string) => string
+): { title: string; desc: string; alt: string } {
+  const keys = SCENARIO_UI_KEYS[idea.slug];
+  return {
+    title: (keys && t(keys.title)) || idea.navTitle,
+    desc: (keys && t(keys.desc)) || idea.intro[0],
+    alt: (keys && t(keys.alt)) || idea.imageAlt || idea.title,
+  };
+}
