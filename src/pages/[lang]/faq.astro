@@ -71,7 +71,7 @@ for (const g of [...guides, ...procurementGuides]) guideTitleBySlug[g.slug] = g.
                 {(item.relatedProducts.length > 0 || item.relatedGuides.length > 0) && (
                   <div class="flex flex-wrap items-center gap-2 pt-1">
                     <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
-                      Related
+                      {t('faq.related')}
                     </span>
                     {item.relatedProducts.map((slug) =>
                       productBySlug[slug] ? (

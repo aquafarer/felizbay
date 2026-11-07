@@ -30,6 +30,7 @@ import { languages, defaultLang } from '~/i18n/config';
 import { localizeHref } from '~/i18n/routing';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 import { PRODUCT_PAGE_DETAILS } from '~/data/product-page-content';
+import { localizeFaqEntries } from '~/lib/faq-l10n';
 import PurchaseAssurance from '~/components/product/PurchaseAssurance.astro';
 import FitGuide from '~/components/product/FitGuide.astro';
 import PackageContents from '~/components/product/PackageContents.astro';
@@ -63,7 +64,10 @@ const rec = recRaw ? localizeProduct(recRaw, lang) : undefined;
 // old `product.ai_faq || rec?.ai_faq` always resolved to [] and silently dropped
 // the FAQ block and FAQPage JSON-LD on every localized PDP. Prefer whichever
 // array is non-empty.
-const faqs = (product.ai_faq?.length ?? 0) > 0 ? product.ai_faq : (rec?.ai_faq ?? []);
+const faqs = localizeFaqEntries(
+  (product.ai_faq?.length ?? 0) > 0 ? product.ai_faq : (rec?.ai_faq ?? []),
+  lang || defaultLang
+);
 // Canonical + og:url must include the language prefix on localized pages;
 // without it every non-EN product page canonicalizes to the EN URL and
 // deindexes itself.
