@@ -23,7 +23,7 @@ import { poolSeries, poolAccessories, PRICE_BASIS_NOTE } from '~/data/pool-catal
 import { getProductCompliance } from '~/data/product-compliance';
 import { localizeProduct } from '~/utils/product-i18n';
 import { localizeProductData } from '~/lib/product-l10n';
-import { PRODUCT_CONTENT_L10N } from '~/lib/product-content-l10n';
+import { PRODUCT_CONTENT_L10N, localizeProductDetail } from '~/lib/product-content-l10n';
 import { marked } from 'marked';
 import { guides } from '~/data/guides';
 import { languages, defaultLang } from '~/i18n/config';
@@ -163,7 +163,7 @@ const hasVariant =
     : undefined;
 
 // ---- Product detail page V2 (per2.txt 13-module template, all pool products) ----
-const detailV2 = PRODUCT_PAGE_DETAILS[product.slug];
+const detailV2 = localizeProductDetail(PRODUCT_PAGE_DETAILS[product.slug], lang);
 const isDetailV2 = detailV2 !== undefined;
 const DETAIL_UI_KEYS = [
   'product.assuranceIncluded',
