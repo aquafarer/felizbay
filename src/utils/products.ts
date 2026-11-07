@@ -77,6 +77,7 @@ const getNormalizedProduct = async (product: CollectionEntry<'product'>): Promis
     draft,
     metadata,
     Content,
+    body: product.body,
     readingTime: remarkPluginFrontmatter?.readingTime,
     environment,
     water_condition,

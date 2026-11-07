@@ -23,7 +23,8 @@ import { poolSeries, poolAccessories, PRICE_BASIS_NOTE } from '~/data/pool-catal
 import { getProductCompliance } from '~/data/product-compliance';
 import { localizeProduct } from '~/utils/product-i18n';
 import { localizeProductData } from '~/lib/product-l10n';
-import { PRODUCT_CONTENT_L10N, localizeProductDetail } from '~/lib/product-content-l10n';
+import { localizeProductDetail } from '~/lib/product-content-l10n';
+import { localizeMdxBody, localizeText } from '~/lib/product-body-l10n';
 import { marked } from 'marked';
 import { guides } from '~/data/guides';
 import { languages, defaultLang } from '~/i18n/config';
@@ -60,6 +61,8 @@ const { product: rawProduct } = Astro.props as Props;
 const product = localizeProductData(rawProduct, lang);
 const recRaw = productRecords.find((p) => p.id === product.slug);
 const rec = recRaw ? localizeProduct(recRaw, lang) : undefined;
+// Round 4: localized MDX body (block-level dictionary); undefined -> keep <Content/>
+const localizedBody = localizeMdxBody(product.body, lang || defaultLang);
 // MDX frontmatter carries no ai_faq (defaults to a truthy empty array), so the
 // old `product.ai_faq || rec?.ai_faq` always resolved to [] and silently dropped
 // the FAQ block and FAQPage JSON-LD on every localized PDP. Prefer whichever
@@ -203,6 +206,12 @@ const DETAIL_UI_KEYS = [
   'product.faqTitle',
   'product.retailPrice',
   'product.buyNow',
+  'product.retailCardIntro',
+  'product.retailCardFixedNote',
+  'product.retailCardConfirmNote',
+  'product.retailCardOtherSizes',
+  'product.retailCardWholesaleList',
+  'product.useCasesLabel',
 ];
 const detailUi: Record<string, string> = Object.fromEntries(DETAIL_UI_KEYS.map((k) => [k, t(k) || k]));
 
@@ -523,7 +532,11 @@ const specGroups = detailV2
                 </div>
               </div>
             ) : null}
-            {product.price?.note && <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{product.price.note}</p>}
+            {product.price?.note && (
+              <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">
+                {localizeText(product.price.note, lang || defaultLang) ?? product.price.note}
+              </p>
+            )}
           </div>
 
           {/* Key Specs Grid */}
@@ -593,10 +606,13 @@ const specGroups = detailV2
   {(product.definition || rec) && (
     <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
       <Tldr
-        summary={product.definition || rec?.definition}
+        summary={localizeText(product.definition || rec?.definition, lang || defaultLang) ?? ''}
         points={[
-          `${product.audience || rec?.audience}`,
-          `Use cases: ${(product.ai_use_cases || rec?.ai_use_cases || []).slice(0, 3).join(', ')}`,
+          `${localizeText(product.audience || rec?.audience, lang || defaultLang) ?? ''}`,
+          `${t('product.useCasesLabel')}: ${(product.ai_use_cases || rec?.ai_use_cases || [])
+            .slice(0, 3)
+            .map((u: string) => localizeText(u, lang || defaultLang) ?? u)
+            .join(', ')}`,
         ]}
       />
     </section>
@@ -634,13 +650,13 @@ const specGroups = detailV2
   )}
 
   {/* Content (MDX) */}
-  {(PRODUCT_CONTENT_L10N[lang]?.[product.slug] || product.Content) && (
+  {(localizedBody || product.Content) && (
     <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-16">
-        {PRODUCT_CONTENT_L10N[lang]?.[product.slug] ? (
+        {localizedBody ? (
           <div
             class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none"
-            set:html={marked.parse(PRODUCT_CONTENT_L10N[lang]![product.slug])}
+            set:html={marked.parse(localizedBody)}
           />
         ) : (
           <div class="prose prose-gray dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-li:text-gray-600 dark:prose-li:text-slate-400 prose-strong:text-gray-900 dark:prose-strong:text-slate-200 prose-ul:space-y-2 max-w-none">
@@ -682,7 +698,7 @@ const specGroups = detailV2
           {t('product.howCompares')}
         </h2>
         <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">
-          {product.ai_comparison || rec?.ai_comparison}
+          {localizeText(product.ai_comparison || rec?.ai_comparison, lang || defaultLang)}
         </p>
       </div>
     </section>
@@ -701,8 +717,11 @@ const specGroups = detailV2
       showFob={!product.sku}
       currencyNote={
         product.sku
-          ? 'Individual availability and pricing on request — contact us for single-piece options.'
-          : PRICE_BASIS_NOTE
+          ? localizeText(
+              'Individual availability and pricing on request — contact us for single-piece options.',
+              lang || defaultLang
+            )
+          : localizeText(PRICE_BASIS_NOTE, lang || defaultLang)
       }
     />
   )}

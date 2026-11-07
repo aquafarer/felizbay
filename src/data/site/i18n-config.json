@@ -238,7 +238,13 @@
     "product.retailIntro": "Fixed-size sets that ship directly to your door — one factory size per set, with pump, repair kit, and storage bag included. Every model in this section can be purchased as a single piece.",
     "product.wholesaleIntro": "Collections produced for business buyers — vacation rentals, glamping sites, hotels, and resellers. Prices are wholesale FOB (FOB Qingdao, price basis 20 pcs per item); factory size ranges are listed in the specs table. Not available as single-piece retail purchases.",
     "product.wholesaleFob": "Wholesale FOB",
-    "faq.related": "Related"
+    "faq.related": "Related",
+    "product.retailCardIntro": "This page sells one fixed-size retail set (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, as listed in the specifications above.",
+    "product.retailCardConfirmNote": "— the exact dimensions of this set are confirmed with your order, so ask us before you buy if you need them upfront.",
+    "product.retailCardOtherSizes": "If you need a different size, other factory sizes from this series are available through our commercial program on the",
+    "product.retailCardWholesaleList": "wholesale price list",
+    "product.useCasesLabel": "Use cases"
   },
   "de": {
     "v2.problem": "Das Problem",
@@ -479,7 +485,13 @@
     "product.retailIntro": "Sets mit fester Größe, die direkt an Ihre Tür geliefert werden — eine Werksgröße pro Set, mit Pumpe, Reparaturset und Aufbewahrungstasche im Lieferumfang enthalten. Jedes Modell in diesem Abschnitt kann als Einzelstück erworben werden.",
     "product.wholesaleIntro": "Kollektionen für Geschäftskäufer — Ferienwohnungen, Glamping-Sites, Hotels und Wiederverkäufer. Die Preise sind Großhandel FOB (FOB Qingdao, Preisbasis 20 Stück pro Artikel); Werksgrößenbereiche sind in der Spezifikationstabelle aufgeführt. Nicht als Einzelhandelseinkäufe erhältlich.",
     "product.wholesaleFob": "Großhandel FOB",
-    "faq.related": "Verwandt"
+    "faq.related": "Verwandt",
+    "product.retailCardIntro": "Auf dieser Seite wird ein Einzelhandelsset mit fester Größe (SKU {sku}) verkauft.",
+    "product.retailCardFixedNote": "— {Größe}, wie in den Spezifikationen oben aufgeführt.",
+    "product.retailCardConfirmNote": "— Die genauen Abmessungen dieses Sets werden bei Ihrer Bestellung bestätigt. Fragen Sie uns daher vor dem Kauf, ob Sie diese im Voraus benötigen.",
+    "product.retailCardOtherSizes": "Wenn Sie eine andere Größe benötigen, sind andere Werksgrößen dieser Serie über unser kommerzielles Programm auf der erhältlich",
+    "product.retailCardWholesaleList": "Großhandelspreisliste",
+    "product.useCasesLabel": "Anwendungsfälle"
   },
   "pt": {
     "nav.products": "Produtos",
@@ -720,7 +732,13 @@
     "product.retailIntro": "Conjuntos de tamanho fixo que são enviados diretamente para a sua porta — um tamanho de fábrica por conjunto, com bomba, kit de reparo e bolsa de armazenamento incluídos. Cada modelo nesta secção pode ser comprado como uma única peça.",
     "product.wholesaleIntro": "Coleções produzidas para compradores empresariais — aluguéis de férias, sites de glamping, hotéis e revendedores. Os preços são FOB por atacado (FOB Qingdao, base de preço 20 unidades por item); as faixas de tamanho da fábrica estão listadas na tabela de especificações. Não disponível como compras de varejo de peça única.",
     "product.wholesaleFob": "Atacado FOB",
-    "faq.related": "Relacionado"
+    "faq.related": "Relacionado",
+    "product.retailCardIntro": "Esta página vende um conjunto de varejo de tamanho fixo (SKU {sku})",
+    "product.retailCardFixedNote": "— {tamanho}, conforme listado nas especificações acima.",
+    "product.retailCardConfirmNote": "- as dimensões exatas deste conjunto são confirmadas com o seu pedido, então pergunte-nos antes de comprar se precisar deles com antecedência.",
+    "product.retailCardOtherSizes": "Caso necessite de um tamanho diferente, outros tamanhos de fábrica desta série estão disponíveis através do nosso programa comercial no",
+    "product.retailCardWholesaleList": "lista de preços no atacado",
+    "product.useCasesLabel": "Casos de uso"
   },
   "fr": {
     "v2.problem": "Le problème",
@@ -961,7 +979,13 @@
     "product.retailIntro": "Ensembles de taille fixe expédiés directement à votre porte — une taille d'usine par ensemble, avec pompe, kit de réparation et sac de rangement inclus. Chaque modèle de cette section peut être acheté en une seule pièce.",
     "product.wholesaleIntro": "Collections produites pour les acheteurs professionnels : locations de vacances, sites de glamping, hôtels et revendeurs. Les prix sont FOB de gros (FOB Qingdao, base de prix 20 pièces par article) ; les plages de tailles d'usine sont répertoriées dans le tableau des spécifications. Non disponible en tant qu'achats au détail d'une seule pièce.",
     "product.wholesaleFob": "FOB en gros",
-    "faq.related": "En rapport"
+    "faq.related": "En rapport",
+    "product.retailCardIntro": "Cette page vend un ensemble de vente au détail de taille fixe (SKU {sku})",
+    "product.retailCardFixedNote": "— {taille}, comme indiqué dans les spécifications ci-dessus.",
+    "product.retailCardConfirmNote": "— les dimensions exactes de cet ensemble sont confirmées lors de votre commande, alors demandez-nous avant d'acheter si vous en avez besoin à l'avance.",
+    "product.retailCardOtherSizes": "Si vous avez besoin d'une taille différente, d'autres tailles d'usine de cette série sont disponibles via notre programme commercial sur le",
+    "product.retailCardWholesaleList": "liste de prix de gros",
+    "product.useCasesLabel": "Cas d'utilisation"
   },
   "es": {
     "nav.products": "Productos",
@@ -1202,7 +1226,13 @@
     "product.retailIntro": "Juegos de tamaño fijo que se envían directamente a su puerta: un tamaño de fábrica por juego, con bomba, kit de reparación y bolsa de almacenamiento incluidos. Todos los modelos de esta sección se pueden adquirir como una sola pieza.",
     "product.wholesaleIntro": "Colecciones producidas para compradores de empresas: alquileres vacacionales, sitios de glamping, hoteles y revendedores. Los precios son FOB al por mayor (FOB Qingdao, precio base 20 unidades por artículo); Los rangos de tamaño de fábrica se enumeran en la tabla de especificaciones. No disponible como compras minoristas de una sola pieza.",
     "product.wholesaleFob": "MANDO al por mayor",
-    "faq.related": "Relacionado"
+    "faq.related": "Relacionado",
+    "product.retailCardIntro": "Esta página vende un juego minorista de tamaño fijo (SKU {sku})",
+    "product.retailCardFixedNote": "— {tamaño}, como se indica en las especificaciones anteriores.",
+    "product.retailCardConfirmNote": "— las dimensiones exactas de este juego se confirman con su pedido, así que pregúntenos antes de comprar si las necesita por adelantado.",
+    "product.retailCardOtherSizes": "Si necesita un tamaño diferente, otros tamaños de fábrica de esta serie están disponibles a través de nuestro programa comercial en la página",
+    "product.retailCardWholesaleList": "lista de precios al por mayor",
+    "product.useCasesLabel": "Casos de uso"
   },
   "it": {
     "nav.products": "Prodotti",
@@ -1443,7 +1473,13 @@
     "product.retailIntro": "Set di dimensioni fisse spediti direttamente a casa tua: una dimensione di fabbrica per set, con pompa, kit di riparazione e custodia inclusi. Ogni modello presente in questa sezione può essere acquistato come pezzo unico.",
     "product.wholesaleIntro": "Collezioni prodotte per acquirenti aziendali: case vacanze, glamping, hotel e rivenditori. I prezzi sono FOB all'ingrosso (FOB Qingdao, prezzo base 20 pezzi per articolo); gli intervalli di dimensioni di fabbrica sono elencati nella tabella delle specifiche. Non disponibile come acquisto al dettaglio a pezzo singolo.",
     "product.wholesaleFob": "FOB all'ingrosso",
-    "faq.related": "Imparentato"
+    "faq.related": "Imparentato",
+    "product.retailCardIntro": "Questa pagina vende un set al dettaglio di dimensioni fisse (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, come elencato nelle specifiche sopra.",
+    "product.retailCardConfirmNote": "— le dimensioni esatte di questo set sono confermate con il tuo ordine, quindi chiedici prima di acquistare se ne hai bisogno in anticipo.",
+    "product.retailCardOtherSizes": "Se hai bisogno di una dimensione diversa, sono disponibili altre dimensioni di fabbrica di questa serie tramite il nostro programma commerciale su",
+    "product.retailCardWholesaleList": "listino prezzi all'ingrosso",
+    "product.useCasesLabel": "Casi d'uso"
   },
   "ru": {
     "nav.products": "Товары",
@@ -1684,7 +1720,13 @@
     "product.retailIntro": "Наборы фиксированного размера, которые доставляются прямо к вашей двери — каждый комплект включает один заводской размер, включая насос, ремонтный комплект и сумку для хранения. Любую модель из этого раздела можно приобрести в единственном экземпляре.",
     "product.wholesaleIntro": "Коллекции созданы для бизнес-покупателей — объектов для аренды на время отпуска, мест для глэмпинга, отелей и торговых посредников. Цены указаны оптовым FOB (FOB Циндао, цена 20 шт. за единицу); Заводские размеры указаны в таблице технических характеристик. Недоступно для розничной покупки поштучно.",
     "product.wholesaleFob": "Оптовая продажа на условиях ФОБ",
-    "faq.related": "Связанный"
+    "faq.related": "Связанный",
+    "product.retailCardIntro": "На этой странице продается один розничный набор фиксированного размера (SKU {sku}).",
+    "product.retailCardFixedNote": "— {размер}, как указано в характеристиках выше.",
+    "product.retailCardConfirmNote": "— точные размеры этого набора подтверждены при вашем заказе, поэтому перед покупкой спросите нас, нужны ли они вам заранее.",
+    "product.retailCardOtherSizes": "Если вам нужен другой размер, другие заводские размеры из этой серии доступны через нашу коммерческую программу на сайте",
+    "product.retailCardWholesaleList": "оптовый прайс-лист",
+    "product.useCasesLabel": "Варианты использования"
   },
   "pl": {
     "nav.products": "Produkty",
@@ -1925,7 +1967,13 @@
     "product.retailIntro": "Zestawy o stałym rozmiarze wysyłane bezpośrednio do Twoich drzwi — jeden rozmiar fabryczny na zestaw, z pompką, zestawem naprawczym i torbą do przechowywania. Każdy model w tym dziale można kupić w pojedynczych egzemplarzach.",
     "product.wholesaleIntro": "Kolekcje stworzone dla odbiorców biznesowych — obiektów wynajmu wakacyjnego, obiektów typu glamping, hoteli i sprzedawców. Ceny są hurtowe FOB (FOB Qingdao, podstawa ceny 20 sztuk za sztukę); fabryczne zakresy rozmiarów są wymienione w tabeli specyfikacji. Niedostępne w sprzedaży detalicznej pojedynczych sztuk.",
     "product.wholesaleFob": "Hurtownia FOB",
-    "faq.related": "Powiązany"
+    "faq.related": "Powiązany",
+    "product.retailCardIntro": "Na tej stronie sprzedawany jest jeden zestaw detaliczny o stałym rozmiarze (SKU {sku})",
+    "product.retailCardFixedNote": "— {rozmiar}, zgodnie z powyższymi specyfikacjami.",
+    "product.retailCardConfirmNote": "— dokładne wymiary tego zestawu są potwierdzone w zamówieniu, dlatego przed zakupem zapytaj nas, czy potrzebujesz ich od razu.",
+    "product.retailCardOtherSizes": "Jeśli potrzebujesz innego rozmiaru, inne rozmiary fabryczne z tej serii są dostępne w naszym programie handlowym na stronie",
+    "product.retailCardWholesaleList": "cennik hurtowy",
+    "product.useCasesLabel": "Przypadki użycia"
   },
   "ar": {
     "nav.products": "المنتجات",
@@ -2166,7 +2214,13 @@
     "product.retailIntro": "مجموعات ذات حجم ثابت يتم شحنها مباشرة إلى باب منزلك - حجم مصنع واحد لكل مجموعة، مع مضخة، ومجموعة إصلاح، وحقيبة تخزين متضمنة. يمكن شراء كل موديل في هذا القسم كقطعة واحدة.",
     "product.wholesaleIntro": "المجموعات المُنتجة للمشترين من الشركات - إيجارات العطلات، ومواقع التخييم الفخمة، والفنادق، والبائعين. الأسعار بالجملة FOB (FOB Qingdao، أساس السعر 20 قطعة لكل منتج)؛ نطاقات حجم المصنع مدرجة في جدول المواصفات. غير متوفر كمشتريات التجزئة قطعة واحدة.",
     "product.wholesaleFob": "فوب بالجملة",
-    "faq.related": "متعلق ب"
+    "faq.related": "متعلق ب",
+    "product.retailCardIntro": "تبيع هذه الصفحة مجموعة بيع بالتجزئة واحدة ذات حجم ثابت (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}، كما هو مذكور في المواصفات أعلاه.",
+    "product.retailCardConfirmNote": "- تم تأكيد الأبعاد الدقيقة لهذه المجموعة من خلال طلبك، لذا اسألنا قبل الشراء إذا كنت في حاجة إليها مقدمًا.",
+    "product.retailCardOtherSizes": "إذا كنت بحاجة إلى حجم مختلف، تتوفر أحجام المصنع الأخرى من هذه السلسلة من خلال برنامجنا التجاري على",
+    "product.retailCardWholesaleList": "قائمة أسعار الجملة",
+    "product.useCasesLabel": "حالات الاستخدام"
   },
   "nl": {
     "nav.products": "Producten",
@@ -2407,7 +2461,13 @@
     "product.retailIntro": "Sets met een vast formaat die rechtstreeks naar uw deur worden verzonden - één fabrieksmaat per set, inclusief pomp, reparatieset en opbergtas. Elk model in deze sectie kan per stuk worden gekocht.",
     "product.wholesaleIntro": "Collecties gemaakt voor zakelijke kopers: vakantiewoningen, glampings, hotels en wederverkopers. Prijzen zijn groothandel FOB (FOB Qingdao, prijsbasis 20 stuks per stuk); Het fabrieksgroottebereik staat vermeld in de specificatietabel. Niet verkrijgbaar als detailhandelsaankoop per stuk.",
     "product.wholesaleFob": "Groothandel FOB",
-    "faq.related": "Verwant"
+    "faq.related": "Verwant",
+    "product.retailCardIntro": "Op deze pagina wordt één retailset met een vast formaat verkocht (SKU {sku})",
+    "product.retailCardFixedNote": "— {maat}, zoals vermeld in de bovenstaande specificaties.",
+    "product.retailCardConfirmNote": "— de exacte afmetingen van deze set worden bevestigd bij uw bestelling, dus vraag ons voordat u koopt of u ze van tevoren nodig heeft.",
+    "product.retailCardOtherSizes": "Als u een andere maat nodig heeft, zijn andere fabrieksmaten uit deze serie verkrijgbaar via ons commerciële programma op de website",
+    "product.retailCardWholesaleList": "groothandelsprijslijst",
+    "product.useCasesLabel": "Gebruiksgevallen"
   },
   "sv": {
     "nav.products": "Produkter",
@@ -2648,7 +2708,13 @@
     "product.retailIntro": "Set i fast storlek som skickas direkt till din dörr - en fabriksstorlek per set, med pump, reparationssats och förvaringsväska ingår. Varje modell i denna sektion kan köpas som ett stycke.",
     "product.wholesaleIntro": "Samlingar producerade för företagsköpare — semesterbostäder, glampingplatser, hotell och återförsäljare. Priserna är grossist FOB (FOB Qingdao, prisbas 20 st per artikel); fabriksstorleksintervall anges i specstabellen. Ej tillgängligt som detaljhandelsköp i ett stycke.",
     "product.wholesaleFob": "Grossist FOB",
-    "faq.related": "Släkt"
+    "faq.related": "Släkt",
+    "product.retailCardIntro": "Den här sidan säljer ett detaljhandelsset med fast storlek (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, som anges i specifikationerna ovan.",
+    "product.retailCardConfirmNote": "— de exakta måtten på denna uppsättning bekräftas med din beställning, så fråga oss innan du köper om du behöver dem i förväg.",
+    "product.retailCardOtherSizes": "Om du behöver en annan storlek finns andra fabriksstorlekar från denna serie tillgängliga via vårt kommersiella program på",
+    "product.retailCardWholesaleList": "grossistprislista",
+    "product.useCasesLabel": "Användningsfall"
   },
   "no": {
     "nav.products": "Produkter",
@@ -2889,7 +2955,13 @@
     "product.retailIntro": "Sett i fast størrelse som sendes direkte til døren din - én fabrikkstørrelse per sett, med pumpe, reparasjonssett og oppbevaringspose inkludert. Hver modell i denne delen kan kjøpes som ett stykke.",
     "product.wholesaleIntro": "Samlinger produsert for bedriftskjøpere – ferieutleie, glampingsteder, hoteller og forhandlere. Prisene er engros FOB (FOB Qingdao, prisgrunnlag 20 stk per vare); fabrikkstørrelsesområder er oppført i spesifikasjonstabellen. Ikke tilgjengelig som detaljkjøp i ett stykke.",
     "product.wholesaleFob": "Engros FOB",
-    "faq.related": "Beslektet"
+    "faq.related": "Beslektet",
+    "product.retailCardIntro": "Denne siden selger ett detaljhandelssett i fast størrelse (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, som oppført i spesifikasjonene ovenfor.",
+    "product.retailCardConfirmNote": "— de nøyaktige dimensjonene til dette settet bekreftes med bestillingen din, så spør oss før du kjøper hvis du trenger dem på forhånd.",
+    "product.retailCardOtherSizes": "Hvis du trenger en annen størrelse, er andre fabrikkstørrelser fra denne serien tilgjengelige gjennom vårt kommersielle program på",
+    "product.retailCardWholesaleList": "engrosprisliste",
+    "product.useCasesLabel": "Brukssaker"
   },
   "el": {
     "nav.products": "Προϊόντα",
@@ -3130,7 +3202,13 @@
     "product.retailIntro": "Σετ σταθερού μεγέθους που αποστέλλονται απευθείας στην πόρτα σας — ένα εργοστασιακό μέγεθος ανά σετ, με αντλία, κιτ επισκευής και τσάντα αποθήκευσης. Κάθε μοντέλο σε αυτήν την ενότητα μπορεί να αγοραστεί ως ένα μόνο κομμάτι.",
     "product.wholesaleIntro": "Συλλογές που παράγονται για επιχειρηματίες αγοραστές — ενοικιάσεις διακοπών, ιστοσελίδες για γκάμπινγκ, ξενοδοχεία και μεταπωλητές. Οι τιμές είναι χονδρικής FOB (FOB Qingdao, βάση τιμής 20 τμχ ανά τεμάχιο). Οι σειρές εργοστασιακών μεγεθών παρατίθενται στον πίνακα προδιαγραφών. Δεν διατίθεται για αγορές λιανικής με ένα κομμάτι.",
     "product.wholesaleFob": "Χονδρική FOB",
-    "faq.related": "Συγγενεύων"
+    "faq.related": "Συγγενεύων",
+    "product.retailCardIntro": "Αυτή η σελίδα πουλάει ένα σετ λιανικής σταθερού μεγέθους (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, όπως αναφέρεται στις παραπάνω προδιαγραφές.",
+    "product.retailCardConfirmNote": "— οι ακριβείς διαστάσεις αυτού του σετ επιβεβαιώνονται με την παραγγελία σας, γι' αυτό ρωτήστε μας πριν αγοράσετε εάν τις χρειάζεστε εκ των προτέρων.",
+    "product.retailCardOtherSizes": "Εάν χρειάζεστε διαφορετικό μέγεθος, άλλα εργοστασιακά μεγέθη αυτής της σειράς είναι διαθέσιμα μέσω του εμπορικού μας προγράμματος στο",
+    "product.retailCardWholesaleList": "τιμοκατάλογος χονδρικής",
+    "product.useCasesLabel": "Θήκες χρήσης"
   },
   "fi": {
     "nav.products": "Tuotteet",
@@ -3371,7 +3449,13 @@
     "product.retailIntro": "Kiinteän kokoiset sarjat, jotka toimitetaan suoraan kotiovellesi – yksi tehdaskoko sarjaa kohden, mukana pumppu, korjaussarja ja säilytyspussi. Jokainen tässä osiossa oleva malli voidaan ostaa yhtenä kappaleena.",
     "product.wholesaleIntro": "Kokoelmat tuotettu yritysostajalle — loma-asunnot, glamping-sivustot, hotellit ja jälleenmyyjät. Hinnat ovat tukku FOB (FOB Qingdao, hintaperuste 20 kpl per tuote); tehdaskokoalueet on lueteltu teknisissä taulukoissa. Ei saatavilla yksiosaisena vähittäismyyntinä.",
     "product.wholesaleFob": "Tukku FOB",
-    "faq.related": "Liittyvät"
+    "faq.related": "Liittyvät",
+    "product.retailCardIntro": "Tällä sivulla myydään yksi kiinteäkokoinen vähittäismyyntisarja (SKU {sku})",
+    "product.retailCardFixedNote": "— {koko}, kuten yllä olevissa tiedoissa on lueteltu.",
+    "product.retailCardConfirmNote": "— Tämän sarjan tarkat mitat vahvistetaan tilauksesi yhteydessä, joten kysy meiltä ennen ostamista, tarvitsetko niitä etukäteen.",
+    "product.retailCardOtherSizes": "Jos tarvitset eri kokoa, muita tämän sarjan tehdaskokoja on saatavana kaupallisen ohjelmamme kautta osoitteessa",
+    "product.retailCardWholesaleList": "tukkuhinnasto",
+    "product.useCasesLabel": "Käyttötapaukset"
   },
   "da": {
     "nav.products": "Produkter",
@@ -3612,7 +3696,13 @@
     "product.retailIntro": "Sæt i fast størrelse, der sendes direkte til din dør - en fabriksstørrelse pr. sæt, med pumpe, reparationssæt og opbevaringstaske inkluderet. Hver model i denne sektion kan købes samlet.",
     "product.wholesaleIntro": "Samlinger produceret til erhvervskøbere - ferieboliger, glampingsteder, hoteller og forhandlere. Priserne er engros FOB (FOB Qingdao, prisgrundlag 20 stk pr. vare); fabriksstørrelsesintervaller er angivet i specifikationstabellen. Ikke tilgængelig som detailkøb i ét stykke.",
     "product.wholesaleFob": "Engros FOB",
-    "faq.related": "Relateret"
+    "faq.related": "Relateret",
+    "product.retailCardIntro": "Denne side sælger ét detailsæt i fast størrelse (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, som angivet i specifikationerne ovenfor.",
+    "product.retailCardConfirmNote": "— de nøjagtige dimensioner af dette sæt er bekræftet med din ordre, så spørg os, før du køber, hvis du har brug for dem på forhånd.",
+    "product.retailCardOtherSizes": "Hvis du har brug for en anden størrelse, er andre fabriksstørrelser fra denne serie tilgængelige via vores kommercielle program på",
+    "product.retailCardWholesaleList": "engrosprisliste",
+    "product.useCasesLabel": "Brug cases"
   },
   "th": {
     "nav.signIn": "เข้าสู่ระบบ",
@@ -3853,7 +3943,13 @@
     "product.retailIntro": "ชุดขนาดตายตัวที่จัดส่งตรงถึงประตูบ้านคุณ - หนึ่งขนาดโรงงานต่อชุด พร้อมปั๊ม ชุดซ่อม และถุงเก็บของ ทุกรุ่นในส่วนนี้สามารถซื้อเป็นชิ้นเดียวได้",
     "product.wholesaleIntro": "คอลเลกชันที่ผลิตขึ้นสำหรับผู้ซื้อทางธุรกิจ เช่น ที่พักตากอากาศ สถานที่ตั้งแคมป์ โรงแรม และผู้ค้าปลีก ราคาขายส่ง FOB (FOB ชิงเต่า ราคาพื้นฐาน 20 ชิ้นต่อรายการ); ช่วงขนาดโรงงานแสดงอยู่ในตารางข้อมูลจำเพาะ ไม่สามารถจำหน่ายเป็นการซื้อปลีกชิ้นเดียว",
     "product.wholesaleFob": "การขายส่งเอฟโอบี",
-    "faq.related": "ที่เกี่ยวข้อง"
+    "faq.related": "ที่เกี่ยวข้อง",
+    "product.retailCardIntro": "หน้านี้ขายชุดขายปลีกขนาดคงที่หนึ่งชุด (SKU {sku})",
+    "product.retailCardFixedNote": "— {ขนาด} ตามที่ระบุไว้ในข้อกำหนดข้างต้น",
+    "product.retailCardConfirmNote": "— ขนาดที่แน่นอนของชุดนี้ได้รับการยืนยันจากคำสั่งซื้อของคุณ ดังนั้น โปรดสอบถามเราก่อนตัดสินใจซื้อหากคุณต้องการล่วงหน้า",
+    "product.retailCardOtherSizes": "หากคุณต้องการขนาดอื่น ขนาดโรงงานอื่นๆ จากซีรีส์นี้มีจำหน่ายผ่านโปรแกรมเชิงพาณิชย์ของเราที่",
+    "product.retailCardWholesaleList": "รายการราคาขายส่ง",
+    "product.useCasesLabel": "กรณีการใช้งาน"
   },
   "tr": {
     "nav.signIn": "Giriş Yap",
@@ -4094,7 +4190,13 @@
     "product.retailIntro": "Doğrudan kapınıza gönderilen sabit boyutlu setler; pompa, tamir seti ve saklama çantasıyla birlikte set başına bir fabrika boyutu. Bu bölümdeki her model tek parça olarak satın alınabilir.",
     "product.wholesaleIntro": "Kiralık tatil yerleri, glamping siteleri, oteller ve bayiler gibi ticari alıcılar için üretilen koleksiyonlar. Fiyatlar toptan FOB'dur (FOB Qingdao, fiyat bazında ürün başına 20 adet); fabrika boyut aralıkları özellikler tablosunda listelenmiştir. Tek parça perakende alımları mevcut değildir.",
     "product.wholesaleFob": "Toptan FOB",
-    "faq.related": "İlgili"
+    "faq.related": "İlgili",
+    "product.retailCardIntro": "Bu sayfada bir adet sabit boyutlu perakende seti satılmaktadır (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, yukarıdaki teknik özelliklerde listelendiği gibi.",
+    "product.retailCardConfirmNote": "— Bu setin tam boyutları siparişinizle birlikte onaylanır, bu nedenle satın almadan önce bunlara ihtiyacınız olup olmadığını bize sorun.",
+    "product.retailCardOtherSizes": "Farklı bir boyuta ihtiyacınız varsa, bu serideki diğer fabrika boyutları ticari programımız aracılığıyla mevcuttur.",
+    "product.retailCardWholesaleList": "toptan fiyat listesi",
+    "product.useCasesLabel": "Kullanım durumları"
   },
   "id": {
     "nav.signIn": "Masuk",
@@ -4335,7 +4437,13 @@
     "product.retailIntro": "Set ukuran tetap yang dikirim langsung ke rumah Anda — satu ukuran pabrik per set, termasuk pompa, kit perbaikan, dan tas penyimpanan. Setiap model di bagian ini dapat dibeli sebagai satu kesatuan.",
     "product.wholesaleIntro": "Koleksi yang diproduksi untuk pembeli bisnis — persewaan liburan, tempat glamping, hotel, dan pengecer. Harga adalah FOB grosir (FOB Qingdao, harga dasar 20 pcs per item); rentang ukuran pabrik tercantum dalam tabel spesifikasi. Tidak tersedia sebagai pembelian eceran satuan.",
     "product.wholesaleFob": "FOB grosir",
-    "faq.related": "Terkait"
+    "faq.related": "Terkait",
+    "product.retailCardIntro": "Halaman ini menjual satu set retail ukuran tetap (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, sebagaimana tercantum dalam spesifikasi di atas.",
+    "product.retailCardConfirmNote": "— dimensi pasti dari set ini dikonfirmasikan dengan pesanan Anda, jadi tanyakan kepada kami sebelum membeli apakah Anda membutuhkannya terlebih dahulu.",
+    "product.retailCardOtherSizes": "Jika Anda memerlukan ukuran yang berbeda, ukuran pabrik lain dari seri ini tersedia melalui program komersial kami di",
+    "product.retailCardWholesaleList": "daftar harga grosir",
+    "product.useCasesLabel": "Kasus penggunaan"
   },
   "cs": {
     "nav.signIn": "Přihlásit se",
@@ -4576,7 +4684,13 @@
     "product.retailIntro": "Sady pevné velikosti, které se dodávají přímo k vašim dveřím – jedna tovární velikost na sadu, včetně pumpy, sady na opravu a úložného vaku. Každý model v této sekci lze zakoupit jako jeden kus.",
     "product.wholesaleIntro": "Kolekce vytvořené pro obchodní zákazníky – rekreační pronájmy, glampingové weby, hotely a prodejce. Ceny jsou velkoobchodní FOB (FOB Qingdao, cenový základ 20 ks za položku); rozsahy továrních velikostí jsou uvedeny v tabulce specifikací. Není k dispozici jako maloobchodní nákupy po jednom kuse.",
     "product.wholesaleFob": "Velkoobchod FOB",
-    "faq.related": "Související"
+    "faq.related": "Související",
+    "product.retailCardIntro": "Tato stránka prodává jednu maloobchodní sadu pevné velikosti (SKU {sku})",
+    "product.retailCardFixedNote": "— {velikost}, jak je uvedeno ve specifikacích výše.",
+    "product.retailCardConfirmNote": "— přesné rozměry této sady jsou potvrzeny vaší objednávkou, proto se nás před nákupem zeptejte, zda je potřebujete.",
+    "product.retailCardOtherSizes": "Pokud potřebujete jinou velikost, další tovární velikosti z této řady jsou k dispozici prostřednictvím našeho obchodního programu na",
+    "product.retailCardWholesaleList": "velkoobchodní ceník",
+    "product.useCasesLabel": "Případy použití"
   },
   "hr": {
     "nav.signIn": "Prijava",
@@ -4817,7 +4931,13 @@
     "product.retailIntro": "Setovi fiksne veličine koji se isporučuju izravno na vaša vrata — jedna tvornička veličina po setu, s uključenom pumpom, kompletom za popravak i vrećicom za pohranu. Svaki model u ovom odjeljku može se kupiti kao pojedinačni komad.",
     "product.wholesaleIntro": "Kolekcije proizvedene za poslovne kupce — smještaj za odmor, mjesta za glamping, hotele i preprodavače. Cijene su veleprodajne FOB (FOB Qingdao, cijena je 20 komada po artiklu); tvornički rasponi veličina navedeni su u tablici specifikacija. Nije dostupno kao pojedinačni komad u maloprodaji.",
     "product.wholesaleFob": "Veleprodaja FOB",
-    "faq.related": "Povezano"
+    "faq.related": "Povezano",
+    "product.retailCardIntro": "Ova stranica prodaje jedan maloprodajni set fiksne veličine (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, kao što je navedeno u gornjim specifikacijama.",
+    "product.retailCardConfirmNote": "— točne dimenzije ovog seta potvrđene su vašom narudžbom, pa nas prije kupnje pitajte trebaju li vam unaprijed.",
+    "product.retailCardOtherSizes": "Ako trebate drugu veličinu, druge tvorničke veličine iz ove serije dostupne su putem našeg komercijalnog programa na",
+    "product.retailCardWholesaleList": "veleprodajni cjenik",
+    "product.useCasesLabel": "Slučajevi upotrebe"
   },
   "hu": {
     "nav.signIn": "Bejelentkezés",
@@ -5058,7 +5178,13 @@
     "product.retailIntro": "Fix méretű készletek, amelyeket közvetlenül az ajtóhoz szállítanak – készletenként egy gyári méret, szivattyúval, javítókészlettel és tárolótáskával. Ebben a részben minden modell egy darabként is megvásárolható.",
     "product.wholesaleIntro": "Vállalkozási vásárlók számára készült kollekciók – nyaralók, glamping-helyek, szállodák és viszonteladók. Az árak nagykereskedelmi FOB (FOB Qingdao, ár alap 20 db / tétel); A gyári mérettartományokat a specifikációs táblázat tartalmazza. Kiskereskedelmi egy darabban nem vásárolható meg.",
     "product.wholesaleFob": "Nagykereskedelmi FOB",
-    "faq.related": "Összefüggő"
+    "faq.related": "Összefüggő",
+    "product.retailCardIntro": "Ez az oldal egy fix méretű kiskereskedelmi készletet árul (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, a fenti specifikációk szerint.",
+    "product.retailCardConfirmNote": "— ennek a készletnek a pontos méreteit megrendelésénél visszaigazoljuk, ezért vásárlás előtt kérdezze meg, hogy szüksége van-e rájuk.",
+    "product.retailCardOtherSizes": "Ha más méretre van szüksége, a sorozat további gyári méretei is elérhetők kereskedelmi programunkon keresztül",
+    "product.retailCardWholesaleList": "nagykereskedelmi árlista",
+    "product.useCasesLabel": "Használati esetek"
   },
   "ro": {
     "nav.signIn": "Autentificare",
@@ -5299,7 +5425,13 @@
     "product.retailIntro": "Seturi de dimensiuni fixe care se livrează direct la ușa dvs. - o dimensiune din fabrică per set, cu pompă, kit de reparații și geantă de depozitare incluse. Fiecare model din această secțiune poate fi achiziționat ca o singură piesă.",
     "product.wholesaleIntro": "Colecții produse pentru cumpărători de afaceri — închirieri de vacanță, site-uri de glamping, hoteluri și revânzători. Prețurile sunt FOB cu ridicata (FOB Qingdao, preț bazat 20 buc per articol); intervalele de dimensiuni din fabrică sunt listate în tabelul cu specificații. Nu este disponibil ca achiziții cu amănuntul dintr-o singură bucată.",
     "product.wholesaleFob": "Comerț cu ridicata FOB",
-    "faq.related": "Înrudit"
+    "faq.related": "Înrudit",
+    "product.retailCardIntro": "Această pagină vinde un set cu amănuntul de dimensiuni fixe (SKU {sku})",
+    "product.retailCardFixedNote": "— {dimensiune}, așa cum este listat în specificațiile de mai sus.",
+    "product.retailCardConfirmNote": "— dimensiunile exacte ale acestui set sunt confirmate odată cu comanda dumneavoastră, așa că întrebați-ne înainte de a cumpăra dacă aveți nevoie de ele în avans.",
+    "product.retailCardOtherSizes": "Dacă aveți nevoie de o dimensiune diferită, alte dimensiuni din fabrică din această serie sunt disponibile prin programul nostru comercial de pe",
+    "product.retailCardWholesaleList": "lista de preturi cu ridicata",
+    "product.useCasesLabel": "Cazuri de utilizare"
   },
   "sk": {
     "nav.signIn": "Prihlásiť sa",
@@ -5540,7 +5672,13 @@
     "product.retailIntro": "Súpravy s pevnou veľkosťou, ktoré sa dodávajú priamo k vašim dverám – jedna výrobná veľkosť na súpravu, vrátane pumpy, súpravy na opravu a úložného vrecka. Každý model v tejto sekcii je možné zakúpiť ako jeden kus.",
     "product.wholesaleIntro": "Kolekcie vytvorené pre obchodných zákazníkov – dovolenkové prenájmy, glampingové stránky, hotely a predajcovia. Ceny sú veľkoobchodné FOB (FOB Qingdao, cenový základ 20 ks za položku); rozsahy veľkostí z výroby sú uvedené v tabuľke špecifikácií. Nie je k dispozícii ako maloobchodný nákup po jednom kuse.",
     "product.wholesaleFob": "Veľkoobchod FOB",
-    "faq.related": "Súvisiace"
+    "faq.related": "Súvisiace",
+    "product.retailCardIntro": "Táto stránka predáva jednu maloobchodnú súpravu pevnej veľkosti (SKU {sku})",
+    "product.retailCardFixedNote": "— {veľkosť}, ako je uvedené v špecifikáciách vyššie.",
+    "product.retailCardConfirmNote": "— presné rozmery tejto sady sú potvrdené vašou objednávkou, preto sa nás pred kúpou opýtajte, či ich potrebujete.",
+    "product.retailCardOtherSizes": "Ak potrebujete inú veľkosť, iné výrobné veľkosti z tejto série sú dostupné prostredníctvom nášho obchodného programu na stránke",
+    "product.retailCardWholesaleList": "Veľkoobchodná cena",
+    "product.useCasesLabel": "Prípady použitia"
   },
   "bg": {
     "nav.signIn": "Вход",
@@ -5781,7 +5919,13 @@
     "product.retailIntro": "Комплекти с фиксиран размер, които се доставят директно до вашата врата — един фабричен размер на комплект, с включени помпа, ремонтен комплект и чанта за съхранение. Всеки модел в този раздел може да бъде закупен като единична бройка.",
     "product.wholesaleIntro": "Колекции, създадени за бизнес купувачи — ваканционни имоти под наем, места за глемпинг, хотели и дистрибутори. Цените са FOB на едро (FOB Кингдао, ценова база 20 бр. на артикул); фабричните размери са посочени в таблицата със спецификациите. Не се предлага като покупка на дребно на единична бройка.",
     "product.wholesaleFob": "Търговия на едро FOB",
-    "faq.related": "Свързани"
+    "faq.related": "Свързани",
+    "product.retailCardIntro": "Тази страница продава един комплект за продажба на дребно с фиксиран размер (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, както е посочено в спецификациите по-горе.",
+    "product.retailCardConfirmNote": "— точните размери на този комплект се потвърждават с вашата поръчка, така че попитайте ни преди да купите дали имате нужда от тях предварително.",
+    "product.retailCardOtherSizes": "Ако имате нужда от различен размер, други фабрични размери от тази серия са налични чрез нашата търговска програма на",
+    "product.retailCardWholesaleList": "ценова листа на едро",
+    "product.useCasesLabel": "Случаи на употреба"
   },
   "sl": {
     "nav.signIn": "Prijava",
@@ -6022,7 +6166,13 @@
     "product.retailIntro": "Kompleti fiksne velikosti, ki se pošljejo neposredno do vaših vrat — ena tovarniška velikost na komplet, vključno s črpalko, kompletom za popravilo in vrečko za shranjevanje. Vsak model v tem razdelku je mogoče kupiti kot en kos.",
     "product.wholesaleIntro": "Zbirke, izdelane za poslovne kupce — počitniške najemnine, glampinge, hotele in preprodajalce. Cene so veleprodajne FOB (FOB Qingdao, osnova cene 20 kosov na kos); tovarniške velikosti so navedene v tabeli specifikacij. Ni na voljo v maloprodaji po enem kosu.",
     "product.wholesaleFob": "Veleprodaja FOB",
-    "faq.related": "Povezano"
+    "faq.related": "Povezano",
+    "product.retailCardIntro": "Na tej strani se prodaja en maloprodajni komplet fiksne velikosti (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, kot je navedeno v zgornjih specifikacijah.",
+    "product.retailCardConfirmNote": "— točne dimenzije tega kompleta so potrjene z vašim naročilom, zato nas pred nakupom vprašajte, ali jih potrebujete vnaprej.",
+    "product.retailCardOtherSizes": "Če potrebujete drugo velikost, so druge tovarniške velikosti iz te serije na voljo v našem komercialnem programu na",
+    "product.retailCardWholesaleList": "veleprodajni cenik",
+    "product.useCasesLabel": "Primeri uporabe"
   },
   "sr": {
     "nav.signIn": "Prijava",
@@ -6263,7 +6413,13 @@
     "product.retailIntro": "Сетови фиксне величине који се испоручују директно на ваша врата — једна фабричка величина по комплету, са укљученим пумпом, комплетом за поправку и торбом за складиштење. Сваки модел у овом одељку може се купити као један комад.",
     "product.wholesaleIntro": "Колекције произведене за пословне купце — изнајмљивања за одмор, глампинг локације, хотеле и препродавце. Цене су велепродајне ФОБ (ФОБ Кингдао, основа цене 20 ком по артиклу); фабрички распони величина су наведени у табели са спецификацијама. Није доступно као појединачна малопродаја.",
     "product.wholesaleFob": "Велепродаја ФОБ",
-    "faq.related": "Релатед"
+    "faq.related": "Релатед",
+    "product.retailCardIntro": "Ова страница продаје један малопродајни сет фиксне величине (СКУ {ску})",
+    "product.retailCardFixedNote": "— {сизе}, као што је наведено у горе наведеним спецификацијама.",
+    "product.retailCardConfirmNote": "— тачне димензије овог сета су потврђене уз вашу наруџбу, па нас пре куповине питајте да ли су вам потребне унапред.",
+    "product.retailCardOtherSizes": "Ако вам је потребна друга величина, друге фабричке величине из ове серије доступне су преко нашег комерцијалног програма на",
+    "product.retailCardWholesaleList": "велепродајни ценовник",
+    "product.useCasesLabel": "Случајеви употребе"
   },
   "lt": {
     "nav.signIn": "Prisijungti",
@@ -6504,7 +6660,13 @@
     "product.retailIntro": "Fiksuoto dydžio rinkiniai, siunčiami tiesiai į jūsų duris – vienas gamyklinis dydis kiekviename komplekte, kartu su pompa, remonto rinkiniu ir laikymo krepšiu. Kiekvieną šio skyriaus modelį galima įsigyti kaip vieną.",
     "product.wholesaleIntro": "Kolekcijos, skirtos verslo pirkėjams – nuomai atostogoms, pramogų svetainėms, viešbučiams ir perpardavėjams. Kainos didmeninės FOB (FOB Qingdao, kaina 20 vnt už prekę); gamykliniai dydžių diapazonai nurodyti specifikacijų lentelėje. Negalima įsigyti vienetų mažmeninėje prekyboje.",
     "product.wholesaleFob": "Didmeninė prekyba FOB",
-    "faq.related": "Susiję"
+    "faq.related": "Susiję",
+    "product.retailCardIntro": "Šiame puslapyje parduodamas vienas fiksuoto dydžio mažmeninis rinkinys (SKU {sku})",
+    "product.retailCardFixedNote": "— {dydis}, kaip nurodyta anksčiau pateiktose specifikacijose.",
+    "product.retailCardConfirmNote": "— tikslūs šio rinkinio matmenys patvirtinami kartu su užsakymu, todėl prieš pirkdami paklauskite mūsų, ar jų reikia iš anksto.",
+    "product.retailCardOtherSizes": "Jei jums reikia kitokio dydžio, kitus gamyklinius šios serijos dydžius rasite mūsų komercinėje programoje adresu",
+    "product.retailCardWholesaleList": "didmeninis kainoraštis",
+    "product.useCasesLabel": "Naudojimo atvejai"
   },
   "lv": {
     "nav.signIn": "Pieteikties",
@@ -6745,7 +6907,13 @@
     "product.retailIntro": "Fiksēta izmēra komplekti, kas tiek piegādāti tieši līdz jūsu durvīm — viens rūpnīcas izmērs katrā komplektā ar sūkni, remonta komplektu un uzglabāšanas maisiņu. Katru šīs sadaļas modeli var iegādāties kā atsevišķu gabalu.",
     "product.wholesaleIntro": "Kolekcijas, kas ražotas biznesa pircējiem — īrei brīvdienām, apskates vietām, viesnīcām un tālākpārdevējiem. Cenas ir vairumtirdzniecības FOB (FOB Qingdao, cenas pamatā 20 gab par preci); rūpnīcas izmēru diapazoni ir norādīti specifikāciju tabulā. Nav pieejams kā vienas gabala mazumtirdzniecības pirkums.",
     "product.wholesaleFob": "Vairumtirdzniecība FOB",
-    "faq.related": "Saistīts"
+    "faq.related": "Saistīts",
+    "product.retailCardIntro": "Šajā lapā tiek pārdots viens fiksēta izmēra mazumtirdzniecības komplekts (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, kā norādīts iepriekš norādītajās specifikācijās.",
+    "product.retailCardConfirmNote": "— Precīzi šī komplekta izmēri ir apstiprināti ar jūsu pasūtījumu, tāpēc pirms pirkšanas jautājiet mums, vai jums tie ir nepieciešami jau iepriekš.",
+    "product.retailCardOtherSizes": "Ja jums ir nepieciešams cits izmērs, citi rūpnīcas izmēri no šīs sērijas ir pieejami mūsu komerciālajā programmā vietnē",
+    "product.retailCardWholesaleList": "vairumtirdzniecības cenrādis",
+    "product.useCasesLabel": "Lietošanas gadījumi"
   },
   "et": {
     "nav.signIn": "Logi sisse",
@@ -6986,7 +7154,13 @@
     "product.retailIntro": "Fikseeritud suurusega komplektid, mis tarnitakse otse teie ukseni – üks tehasesuurus komplekti kohta koos pumba, remondikomplekti ja hoiukotiga. Iga selle jaotise mudelit saab osta ühe tükina.",
     "product.wholesaleIntro": "Kollektsioonid, mis on toodetud äriostjatele — puhkuseks üüritud üürimiskohad, glampingi saidid, hotellid ja edasimüüjad. Hinnad on hulgimüügi FOB (FOB Qingdao, hinna alus 20 tk kauba kohta); tehase suurusvahemikud on toodud tehniliste andmete tabelis. Pole saadaval ühes tükis jaemüügis.",
     "product.wholesaleFob": "FOB hulgimüük",
-    "faq.related": "Seotud"
+    "faq.related": "Seotud",
+    "product.retailCardIntro": "Sellel lehel müüakse ühte fikseeritud suurusega jaemüügikomplekti (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, nagu on loetletud ülaltoodud tehnilistes andmetes.",
+    "product.retailCardConfirmNote": "— selle komplekti täpsed mõõdud kinnitatakse teie tellimusega, seega küsige meilt enne ostmist, kas vajate neid juba ette.",
+    "product.retailCardOtherSizes": "Kui vajate teist suurust, on selle seeria teised tehasesuurused saadaval meie kommertsprogrammi kaudu aadressil",
+    "product.retailCardWholesaleList": "hulgimüügi hinnakiri",
+    "product.useCasesLabel": "Kasutusjuhtumid"
   },
   "he": {
     "nav.signIn": "התחברות",
@@ -7227,7 +7401,13 @@
     "product.retailIntro": "סטים בגודל קבוע הנשלחים ישירות לדלת שלך - גודל מפעל אחד לכל סט, עם משאבה, ערכת תיקון ושקית אחסון כלולים. ניתן לרכוש כל דגם בסעיף זה כמקשה אחת.",
     "product.wholesaleIntro": "אוספים שהופקו עבור קונים עסקיים - השכרות נופש, אתרי גלמפינג, בתי מלון ומשווקים. המחירים הם FOB סיטונאי (FOB Qingdao, בסיס מחיר 20 יח' לפריט); טווחי הגודל של המפעל מפורטים בטבלת המפרט. לא זמין כרכישות קמעונאיות של חלק אחד.",
     "product.wholesaleFob": "FOB סיטונאי",
-    "faq.related": "קָשׁוּר"
+    "faq.related": "קָשׁוּר",
+    "product.retailCardIntro": "דף זה מוכר סט קמעונאי אחד בגודל קבוע (מק\"ט {sku})",
+    "product.retailCardFixedNote": "— {size}, כפי שמופיע במפרטים למעלה.",
+    "product.retailCardConfirmNote": "- המידות המדויקות של סט זה מאושרות עם ההזמנה שלך, אז שאל אותנו לפני שאתה קונה אם אתה צריך אותם מראש.",
+    "product.retailCardOtherSizes": "אם אתה צריך גודל אחר, גדלים אחרים במפעל מסדרה זו זמינים דרך התוכנית המסחרית שלנו ב-",
+    "product.retailCardWholesaleList": "מחירון סיטונאי",
+    "product.useCasesLabel": "מקרי שימוש"
   },
   "ms": {
     "nav.signIn": "Log Masuk",
@@ -7468,7 +7648,13 @@
     "product.retailIntro": "Set bersaiz tetap yang dihantar terus ke pintu anda — satu saiz kilang bagi setiap set, dengan pam, kit pembaikan dan beg penyimpanan disertakan. Setiap model dalam bahagian ini boleh dibeli sebagai satu keping.",
     "product.wholesaleIntro": "Koleksi yang dihasilkan untuk pembeli perniagaan — sewaan percutian, tapak glamping, hotel dan penjual semula. Harga adalah FOB borong (FOB Qingdao, harga asas 20 pcs setiap item); julat saiz kilang disenaraikan dalam jadual spesifikasi. Tidak tersedia sebagai pembelian runcit sekeping.",
     "product.wholesaleFob": "Borong FOB",
-    "faq.related": "Berkaitan"
+    "faq.related": "Berkaitan",
+    "product.retailCardIntro": "Halaman ini menjual satu set runcit saiz tetap (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, seperti yang disenaraikan dalam spesifikasi di atas.",
+    "product.retailCardConfirmNote": "— dimensi tepat set ini disahkan dengan pesanan anda, jadi tanya kami sebelum anda membeli jika anda memerlukannya terlebih dahulu.",
+    "product.retailCardOtherSizes": "Jika anda memerlukan saiz yang berbeza, saiz kilang lain daripada siri ini boleh didapati melalui program komersial kami di",
+    "product.retailCardWholesaleList": "senarai harga borong",
+    "product.useCasesLabel": "Kes guna"
   },
   "tl": {
     "nav.signIn": "Mag-sign In",
@@ -7709,7 +7895,13 @@
     "product.retailIntro": "Fixed-size set na direktang nagpapadala sa iyong pinto — isang factory size bawat set, na may kasamang pump, repair kit, at storage bag. Ang bawat modelo sa seksyong ito ay maaaring mabili bilang isang piraso.",
     "product.wholesaleIntro": "Mga koleksyon na ginawa para sa mga mamimili ng negosyo — mga pagpapaupa sa bakasyon, glamping site, hotel, at reseller. Ang mga presyo ay pakyawan FOB (FOB Qingdao, batayan ng presyo 20 pcs bawat item); Ang mga hanay ng laki ng pabrika ay nakalista sa talahanayan ng mga detalye. Hindi available bilang isang pirasong retail na pagbili.",
     "product.wholesaleFob": "Pakyawan FOB",
-    "faq.related": "Kaugnay"
+    "faq.related": "Kaugnay",
+    "product.retailCardIntro": "Ang page na ito ay nagbebenta ng isang fixed-size na retail set (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, gaya ng nakalista sa mga detalye sa itaas.",
+    "product.retailCardConfirmNote": "— ang eksaktong mga sukat ng set na ito ay nakumpirma sa iyong order, kaya tanungin kami bago ka bumili kung kailangan mo ang mga ito nang maaga.",
+    "product.retailCardOtherSizes": "Kung kailangan mo ng ibang laki, ang iba pang laki ng pabrika mula sa seryeng ito ay makukuha sa pamamagitan ng aming komersyal na programa sa",
+    "product.retailCardWholesaleList": "listahan ng presyo ng pakyawan",
+    "product.useCasesLabel": "Mga kaso ng paggamit"
   },
   "kk": {
     "nav.products": "Өнімдер",
@@ -7950,7 +8142,13 @@
     "product.retailIntro": "Тікелей есігіңізге жеткізілетін бекітілген өлшемді жинақтар — әрбір жинаққа бір зауыт өлшемі, сорғы, жөндеу жинағы және сақтау сөмкесі кіреді. Бұл бөлімдегі әрбір үлгіні бір бөлік ретінде сатып алуға болады.",
     "product.wholesaleIntro": "Іскерлік сатып алушыларға арналған коллекциялар — демалыстарды жалға алу, глампинг сайттары, қонақ үйлер және сатушылар. Бағалар көтерме FOB (FOB Циндао, баға негізі бір затқа 20 дана); зауыттық өлшем ауқымдары техникалық сипаттамалар кестесінде берілген. Бір бөлікті бөлшек сатып алу ретінде қол жетімді емес.",
     "product.wholesaleFob": "Көтерме FOB",
-    "faq.related": "Қатысты"
+    "faq.related": "Қатысты",
+    "product.retailCardIntro": "Бұл бетте бір бекітілген өлшемді бөлшек сауда жиынтығы (SKU {sku}) сатылады",
+    "product.retailCardFixedNote": "— {size}, жоғарыдағы сипаттамаларда көрсетілгендей.",
+    "product.retailCardConfirmNote": "— бұл жиынтықтың нақты өлшемдері тапсырысыңызбен расталады, сондықтан сатып алмас бұрын бізден олардың сізге қажет екенін сұраңыз.",
+    "product.retailCardOtherSizes": "Егер сізге басқа өлшем қажет болса, осы сериядағы басқа зауыт өлшемдері біздің коммерциялық бағдарламамыз арқылы қол жетімді",
+    "product.retailCardWholesaleList": "көтерме бағалар тізімі",
+    "product.useCasesLabel": "Қолдану жағдайлары"
   },
   "uz": {
     "nav.products": "Mahsulotlar",
@@ -8191,7 +8389,13 @@
     "product.retailIntro": "Toʻgʻridan-toʻgʻri eshigingizga yetkazib beriladigan oʻzgarmas oʻlchamdagi toʻplamlar – har bir toʻplamga bitta zavod oʻlchami, nasos, taʼmirlash toʻplami va saqlash xaltasi kiritilgan. Ushbu bo'limdagi har bir modelni bitta bo'lak sifatida sotib olish mumkin.",
     "product.wholesaleIntro": "Biznes xaridorlari uchun ishlab chiqarilgan to'plamlar - dam olish joylari, glamping saytlari, mehmonxonalar va sotuvchilar. Narxlar ulgurji FOB (FOB Qingdao, narx asosi har bir element uchun 20 dona); zavod o'lchamlari diapazonlari texnik xususiyatlar jadvalida keltirilgan. Bir qismli chakana xaridlar sifatida mavjud emas.",
     "product.wholesaleFob": "Ulgurji FOB",
-    "faq.related": "Aloqador"
+    "faq.related": "Aloqador",
+    "product.retailCardIntro": "Bu sahifada bitta qattiq oʻlchamli chakana toʻplam sotiladi (SKU {sku})",
+    "product.retailCardFixedNote": "— {size}, yuqoridagi spetsifikatsiyalarda keltirilgan.",
+    "product.retailCardConfirmNote": "— ushbu toʻplamning aniq oʻlchamlari buyurtmangiz bilan tasdiqlangan, shuning uchun sotib olishdan oldin bizga kerakmi yoki yoʻqligini soʻrang.",
+    "product.retailCardOtherSizes": "Agar sizga boshqa o'lcham kerak bo'lsa, ushbu seriyadagi boshqa zavod o'lchamlari bizning tijorat dasturimiz orqali mavjud",
+    "product.retailCardWholesaleList": "ulgurji narxlar ro'yxati",
+    "product.useCasesLabel": "Foydalanish holatlari"
   },
   "uk": {
     "nav.products": "Продукти",
@@ -8432,7 +8636,13 @@
     "product.retailIntro": "Набори фіксованого розміру, які доставляються прямо до ваших дверей — один заводський розмір на комплект разом із насосом, ремонтним набором і сумкою для зберігання. Кожну модель у цьому розділі можна придбати окремо.",
     "product.wholesaleIntro": "Колекції створені для бізнес-покупців — житла для відпочинку, місць для глемпінгу, готелів і торгових посередників. Ціни вказані оптом FOB (FOB Qingdao, ціна базується 20 штук за одиницю); заводські розміри вказані в таблиці характеристик. Недоступно для роздрібної покупки окремо.",
     "product.wholesaleFob": "Опт FOB",
-    "faq.related": "Пов'язані"
+    "faq.related": "Пов'язані",
+    "product.retailCardIntro": "На цій сторінці продається один роздрібний набір фіксованого розміру (артикул {sku})",
+    "product.retailCardFixedNote": "— {size}, як зазначено в специфікаціях вище.",
+    "product.retailCardConfirmNote": "— точні розміри цього набору підтверджуються вашим замовленням, тому перед покупкою запитайте нас, чи потрібні вони вам.",
+    "product.retailCardOtherSizes": "Якщо вам потрібен інший розмір, інші заводські розміри з цієї серії доступні через нашу комерційну програму на сайті",
+    "product.retailCardWholesaleList": "оптовий прайс лист",
+    "product.useCasesLabel": "Випадки використання"
   },
   "az": {
     "nav.products": "Məhsullar",
@@ -8673,7 +8883,13 @@
     "product.retailIntro": "Birbaşa qapınıza göndərilən sabit ölçülü dəstlər - nasos, təmir dəsti və saxlama çantası daxil olmaqla hər dəst üçün bir zavod ölçüsü. Bu bölmədəki hər bir modeli tək parça olaraq almaq olar.",
     "product.wholesaleIntro": "İşgüzar alıcılar üçün hazırlanmış kolleksiyalar - tətil icarələri, glampinq saytları, otellər və satıcılar. Qiymətlər topdansatış FOB (FOB Qingdao, qiymət əsasında hər bir maddə üçün 20 ədəd); zavod ölçü diapazonları spesifikasiyalar cədvəlində verilmişdir. Tək parça pərakəndə alış kimi mövcud deyil.",
     "product.wholesaleFob": "Topdan FOB",
-    "faq.related": "Əlaqədar"
+    "faq.related": "Əlaqədar",
+    "product.retailCardIntro": "Bu səhifə bir sabit ölçülü pərakəndə satış dəsti (SKU {sku}) satır",
+    "product.retailCardFixedNote": "— {size}, yuxarıdakı spesifikasiyalarda qeyd edildiyi kimi.",
+    "product.retailCardConfirmNote": "— bu dəstin dəqiq ölçüləri sifarişinizlə təsdiqlənir, ona görə də əvvəlcədən ehtiyacınız olub-olmadığını satın almadan əvvəl bizdən soruşun.",
+    "product.retailCardOtherSizes": "Fərqli ölçüyə ehtiyacınız varsa, bu seriyadan olan digər zavod ölçüləri bizim kommersiya proqramımız vasitəsilə əldə edilə bilər",
+    "product.retailCardWholesaleList": "topdansatış qiymət siyahısı",
+    "product.useCasesLabel": "İstifadə halları"
   },
   "fa": {
     "nav.products": "محصولات",
@@ -8914,6 +9130,12 @@
     "product.retailIntro": "مجموعه‌های با اندازه ثابت که مستقیماً به درب شما ارسال می‌شوند - یک اندازه کارخانه در هر مجموعه، همراه با پمپ، کیت تعمیر و کیسه ذخیره‌سازی. هر مدل در این بخش را می توان به صورت تکی خریداری کرد.",
     "product.wholesaleIntro": "مجموعه‌های تولید شده برای خریداران تجاری - اجاره تعطیلات، سایت‌های گلمپینگ، هتل‌ها و فروشندگان. قیمت ها به صورت عمده فروشی FOB (FOB Qingdao، قیمت پایه 20 عدد در هر مورد) است. محدوده اندازه کارخانه در جدول مشخصات ذکر شده است. به صورت خرده فروشی تک تکه موجود نیست.",
     "product.wholesaleFob": "FOB عمده فروشی",
-    "faq.related": "مرتبط"
+    "faq.related": "مرتبط",
+    "product.retailCardIntro": "این صفحه یک مجموعه خرده فروشی با اندازه ثابت (SKU {sku}) می فروشد",
+    "product.retailCardFixedNote": "- {size}، همانطور که در مشخصات بالا ذکر شده است.",
+    "product.retailCardConfirmNote": "- ابعاد دقیق این مجموعه با سفارش شما تایید می شود، بنابراین قبل از خرید اگر به آن نیاز دارید از ما بپرسید.",
+    "product.retailCardOtherSizes": "اگر به اندازه دیگری نیاز دارید، سایزهای کارخانه دیگر از این سری از طریق برنامه تجاری ما در دسترس هستند",
+    "product.retailCardWholesaleList": "لیست قیمت عمده فروشی",
+    "product.useCasesLabel": "موارد استفاده کنید"
   }
 }

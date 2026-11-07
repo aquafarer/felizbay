@@ -271,14 +271,13 @@ const firstDiagramSvg = firstDiagramInput ? renderSizeDiagramSvg(firstDiagramInp
         <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 p-5 md:p-6">
           <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100">{ui['product.fitCheckerTitle']}</h3>
           <p class="mt-3 text-sm leading-relaxed text-gray-600 dark:text-slate-400">
-            This page sells one fixed-size retail set (SKU <span class="font-mono font-semibold">{retailSku}</span>)
+            {ui['product.retailCardIntro'].replace('{sku}', retailSku)}
             {fixedSize
-              ? ` — ${fixedSize}, as listed in the specifications above.`
-              : ' — the exact dimensions of this set are confirmed with your order, so ask us before you buy if you need them upfront.'}{' '}
-            If you need a different size, other factory sizes from this series are available through our commercial
-            program on the{' '}
+              ? ` ${ui['product.retailCardFixedNote'].replace('{size}', fixedSize)}`
+              : ` ${ui['product.retailCardConfirmNote']}`}{' '}
+            {ui['product.retailCardOtherSizes']}{' '}
             <a href={wholesaleHref || '/products/specs/'} class="font-semibold underline">
-              wholesale price list
+              {ui['product.retailCardWholesaleList']}
             </a>
             .
           </p>
