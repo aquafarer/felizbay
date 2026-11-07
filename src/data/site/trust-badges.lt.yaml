@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Saugumas išbandytas
+    desc: Sukurta remiantis EN 16582-1 ir ASTM F2666; konkretaus modelio saugos informacija pateikiama gaminio dokumentacijoje.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Kokybės vadybos sistema sertifikuota SGS.
+    variant: cert
+  - icon: "✦"
+    title: Išbandytas slėgis
+    desc: Kiekvienas baseinas prieš išvažiuojant iš gamyklos patikrintas pripūtimo.
+    variant: standard
+  - icon: "☆"
+    title: 2 metų garantija
+    desc: Ribota garantija siūlėms, vožtuvams ir audiniams nuo gamybos defektų.
+    variant: warranty
+  - icon: "⚖"
+    title: Medžiagos atitiktis
+    desc: PVC medžiagos, gautos pagal REACH reikalavimus atitinkančias formules; atitikties dokumentus galima gauti paprašius.
+    variant: material

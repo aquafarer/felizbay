@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: geprüfte Sicherheit
+    desc: Entworfen unter Bezugnahme auf EN 16582-1 und ASTM F2666; modellspezifische Sicherheitsinformationen in der Produktdokumentation.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Von SGS zertifiziertes Qualitätsmanagementsystem.
+    variant: cert
+  - icon: "✦"
+    title: Druckgeprüft
+    desc: Jeder Pool wurde vor dem Verlassen des Werks auf Inflation getestet.
+    variant: standard
+  - icon: "☆"
+    title: 2 Jahre Garantie
+    desc: Beschränkte Garantie auf Nähte, Ventile und Gewebe gegen Herstellungsfehler.
+    variant: warranty
+  - icon: "⚖"
+    title: Materielle Konformität
+    desc: PVC-Materialien aus REACH-konformen Formulierungen; Konformitätsdokumentation auf Anfrage erhältlich.
+    variant: material

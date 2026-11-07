@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Sikkerhetstestet
+    desc: Designet med referanse til EN 16582-1 og ASTM F2666; modellspesifikk sikkerhetsinformasjon følger med i produktdokumentasjonen.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Kvalitetsstyringssystem sertifisert av SGS.
+    variant: cert
+  - icon: "✦"
+    title: Trykktestet
+    desc: Hvert basseng er inflasjonstestet før det forlater fabrikken.
+    variant: standard
+  - icon: "☆"
+    title: 2-års garanti
+    desc: Begrenset garanti på sømmer, ventiler og stoff mot produksjonsfeil.
+    variant: warranty
+  - icon: "⚖"
+    title: Materialoverholdelse
+    desc: PVC-materialer hentet med REACH-kompatible formuleringer; samsvarsdokumentasjon tilgjengelig på forespørsel.
+    variant: material

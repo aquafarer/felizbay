@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Xavfsizlik sinovi
+    desc: EN 16582-1 va ASTM F2666 ga mos ravishda ishlab chiqilgan; mahsulot hujjatlarida modelga xos xavfsizlik ma'lumotlari.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001: 2015'
+    desc: SGS tomonidan sertifikatlangan sifat menejmenti tizimi.
+    variant: cert
+  - icon: "✦"
+    title: Bosim sinovi
+    desc: Har bir hovuz inflyatsiyasi zavoddan chiqishdan oldin sinovdan o'tkaziladi.
+    variant: standard
+  - icon: "☆"
+    title: 2 Yil Kafolat
+    desc: Ishlab chiqarish nuqsonlariga qarshi tikuvlar, klapanlar va matolarga cheklangan kafolat.
+    variant: warranty
+  - icon: "⚖"
+    title: Materiallarga muvofiqligi
+    desc: REACH-mos keladigan formulalar bilan olingan PVX materiallari; muvofiqlik hujjatlari so'rov bo'yicha mavjud.
+    variant: material

@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Ohutus Testitud
+    desc: Kavandatud vastavalt standarditele EN 16582-1 ja ASTM F2666; mudelispetsiifiline ohutusteave tarnitakse toote dokumentatsioonis.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: SGS sertifitseeritud kvaliteedijuhtimissüsteem.
+    variant: cert
+  - icon: "✦"
+    title: Surve testitud
+    desc: Iga basseini inflatsiooni testitakse enne tehasest lahkumist.
+    variant: standard
+  - icon: "☆"
+    title: 2-aastane garantii
+    desc: Piiratud garantii õmblustele, ventiilidele ja kangale tootmisdefektide vastu.
+    variant: warranty
+  - icon: "⚖"
+    title: Materjali vastavus
+    desc: PVC materjalid, mis on hangitud REACH-nõuetele vastavate koostistega; nõuetele vastavuse dokumendid.
+    variant: material

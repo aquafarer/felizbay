@@ -1,0 +1,42 @@
+origin:
+  tagline: Onze oorsprong
+  heading: "Gebouwd voor de zomer,<br />\n<span class=\"text-sky-600\">ontworpen om lang mee te gaan</span>"
+  paragraphs:
+    - 'Felizbay begon met een simpele frustratie: opblaasbare zwembaden die doorzakten, lekten en maar één seizoen meegingen. Wij geloofden dat een zwembad beter kon zijn: stijf genoeg om baantjes in te zwemmen, sterk genoeg om jaar na jaar te overleven en nog steeds klein genoeg om in de winter binnen op te bergen.'
+    - Drop-stitch-constructie was het antwoord. Duizenden interne draden houden de wanden stevig vast onder druk, waardoor een stoffen zwembad de structuur krijgt van een zwembad met harde zijkanten.
+    - 'Elk Felizbay-zwembad is rond die kern gebouwd: kwaliteitsmaterialen, beproefde constructie en eerlijke techniek, tegen een prijs die een gezin kan rechtvaardigen.'
+    - Felizbay is ontworpen en beheerd door <strong>Aquafarer LLC</strong>, VS. Onze zwembaden worden geproduceerd door een langdurige productiepartner in Qingdao, China, en elke eenheid wordt 100% onder druk getest voordat deze wordt verzonden.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay drop-stitch zwembad
+
+philosophy:
+  tagline: Onze filosofie
+  heading: Eenvoudig, duurzaam, eerlijk
+  description: 'Een zwembad is een belofte: vul het op de eerste warme zomerdag en het werkt. Alles wat we ontwerpen dient die belofte.'
+  cards:
+    - emoji: "🌊"
+      title: Stijf, niet doorhangend
+      description: Drop-stitch-wanden worden stijf opgeblazen en behouden hun vorm bij volledige waterdruk. Geen scheve muren, geen doorzakkende waterlijn, geen verloren diepte.
+    - emoji: "🔧"
+      title: Gebouwd om lang mee te gaan, niet om te vervangen
+      description: Het meest duurzame zwembad is het zwembad dat je niet weggooit. UV-bestendig, lekbestendig PVC en kwaliteitsventielen betekenen seizoenen van gebruik, niet één zomer.
+    - emoji: "🏆"
+      title: Zomer eenvoudig gemaakt
+      description: Snel op te blazen, tien minuten op te vouwen. Geen gereedschap, geen frames, geen installatieploeg. Zwemmen zou het makkelijke gedeelte moeten zijn.
+
+design:
+  tagline: Ontwerpfilosofie
+  heading: "Ontworpen vanuit de<br />\n<span class=\"text-sky-600\">water naar buiten</span>"
+  paragraphs:
+    - 'Elk Felizbay-zwembad begint met één vraag: <em>wat doet het water ermee?</em> Volledige waterdruk, UV-blootstelling, chloorchemie, grondafval: we ontwerpen voor alles en bouwen er vervolgens boven.'
+    - Onze drop-stitch-kamers zijn ruim boven de werkdruk beoordeeld, zodat een warme middag een naad niet overbelast. Ons PVC is gelamineerd met UV-stabilisatoren, omdat zonlicht (en niet lekke banden) de meeste opblaasbare zwembaden doodt.
+    - Wij ontwerpen niet op prijs. We ontwerpen tot op een faalpunt en bouwen er vervolgens ver voorbij.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay-zwembadontwerp
+  stats:
+    - value: 100%
+      label: "onder druk getest<br />vóór het inpakken"
+    - value: 4–6
+      label: "PSI-geclassificeerd<br />werkdruk"
+    - value: 5–15
+      label: "minuut<br />inflatie"

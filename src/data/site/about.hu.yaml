@@ -1,0 +1,42 @@
+origin:
+  tagline: Eredetünk
+  heading: "Nyárra épült,<br />\n<span class=\"text-sky-600\">tartósra tervezték</span>"
+  paragraphs:
+    - 'Felizbay egy egyszerű frusztrációval kezdett: felfújható medencék, amelyek megereszkedtek, kiszivárogtak, és egyetlen szezonig bírták. Úgy gondoltuk, hogy egy medence lehet jobb is – elég merev ahhoz, hogy köröket úszhasson benne, elég szilárd ahhoz, hogy évről évre túlélje, és még mindig elég kicsi ahhoz, hogy télen bent tároljuk.'
+    - Az ejtőöltés-konstrukció volt a válasz. Több ezer belső menet merevre rögzíti a falakat nyomás alatt, így a szövetmedence olyan szerkezetet ad, mint egy kemény oldalú.
+    - 'Minden Felizbay medence erre a magra épül: minőségi anyagok, tesztelt konstrukció és becsületes tervezés, olyan áron, amelyet egy család igazolhat.'
+    - A Felizbay tervezte és üzemelteti <strong>Aquafarer LLC</strong>, USA. Medenceinket egy hosszú távú gyártó partnerünk gyártja Qingdaóban, Kínában, és minden egységet 100%-os nyomáspróbának vetnek alá szállítás előtt.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay ejtőöltéses medence
+
+philosophy:
+  tagline: Filozófiánk
+  heading: Egyszerű, tartós, őszinte
+  description: 'A medence ígéret: töltse meg a nyár első forró napján, és működik. Minden, amit tervezünk, ezt az ígéretet szolgálja.'
+  cards:
+    - emoji: "🌊"
+      title: Merev, nem megereszkedett
+      description: Az öltéses falak merevre fújódnak fel, és teljes víznyomás mellett is megtartják alakjukat. Nincsenek dőlt falak, nincs megereszkedett vízvonal, nincs elveszett mélység.
+    - emoji: "🔧"
+      title: Tartósra készült, nem cserélhető
+      description: A legfenntarthatóbb medence az, amelyet nem dob ki. Az UV-álló, szúrásálló PVC és minőségi szelepek évszakokat jelentenek, nem egy nyarat.
+    - emoji: "🏆"
+      title: Nyár egyszerűen
+      description: Gyorsan felfújható, tíz perc alatt összecsukható. Nincsenek szerszámok, nincsenek keretek, nincs szerelőcsapat. Az úszás legyen a könnyű rész.
+
+design:
+  tagline: Tervezési filozófia
+  heading: "Tervezve a<br />\n<span class=\"text-sky-600\">víz kifelé</span>"
+  paragraphs:
+    - 'Minden Felizbay medence egy kérdéssel kezdődik: <em>mit csinál vele a víz?</em> Teljes víznyomás, UV-sugárzás, klórkémia, földi törmelék – mindezt megtervezzük, majd fölé építjük.'
+    - Cseppöltéses kamráink jóval az üzemi nyomás felett vannak, így a forró délután nem terheli túl a varrást. PVC-nket UV-stabilizátorokkal lamináltuk, mert a napfény – nem a szúrások – az, ami a legtöbb felfújható medencét megöli.
+    - Nem árszintre tervezünk. Egy kudarcpontig tervezünk, majd jóval túllépünk rajta.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay medence kialakítása
+  stats:
+    - value: 100%
+      label: "nyomáspróbázott<br />csomagolás előtt"
+    - value: 4–6
+      label: "PSI besorolású<br />üzemi nyomás"
+    - value: 5–15
+      label: "perc<br />infláció"

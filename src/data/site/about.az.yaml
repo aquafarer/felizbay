@@ -1,0 +1,42 @@
+origin:
+  tagline: Mənşəyimiz
+  heading: "Yay üçün tikilib,<br />\n<span class=\"text-sky-600\">davam etmək üçün hazırlanmışdır</span>"
+  paragraphs:
+    - 'Felizbay sadə bir məyusluqla başladı: sallanan, sızan və bir mövsüm davam edən şişmə hovuzlar. Hovuzun daha yaxşı ola biləcəyinə inanırdıq - dövrələrdə üzmək üçün kifayət qədər sərt, ildən-ilə sağ qalmaq üçün kifayət qədər sərt və qışda içəridə saxlamaq üçün kifayət qədər kiçik.'
+    - Drop stitch tikintisi cavab oldu. Minlərlə daxili iplər divarları təzyiq altında möhkəm bağlayır və parça hovuzuna sərt tərəfli bir quruluş verir.
+    - 'Hər bir Felizbay hovuzu bu əsas ətrafında qurulur: keyfiyyətli materiallar, sınaqdan keçirilmiş tikinti və dürüst mühəndislik, bir ailənin haqq qazandıra biləcəyi qiymətə.'
+    - Felizbay tərəfindən dizayn və idarə olunur <strong>Aquafarer LLC</strong>, ABŞ. Hovuzlarımız Çinin Qingdao şəhərində uzunmüddətli istehsal tərəfdaşı tərəfindən istehsal olunur və hər bir vahid göndərilməzdən əvvəl 100% təzyiq sınaqdan keçirilir.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay damcı tikiş hovuzu
+
+philosophy:
+  tagline: Bizim Fəlsəfəmiz
+  heading: Sadə, davamlı, dürüst
+  description: 'Hovuz bir sözdür: onu yayın ilk isti günündə doldurun və işləyir. Dizayn etdiyimiz hər şey bu vədlərə xidmət edir.'
+  cards:
+    - emoji: "🌊"
+      title: Sərt, Saggy Deyil
+      description: Drop stitch divarları sərt şəkildə şişirilir və formalarını tam su təzyiqində saxlayır. Nə əyilmiş divarlar, nə sallanan su xətti, nə də itirilmiş dərinlik.
+    - emoji: "🔧"
+      title: Əvəz etmək üçün deyil, Sonuna qədər tikilmişdir
+      description: Ən davamlı hovuz atmadığınız hovuzdur. UV şüalarına davamlı, deşməyə davamlı PVC və keyfiyyətli klapanlar bir yay deyil, istifadə mövsümləri deməkdir.
+    - emoji: "🏆"
+      title: Sadə Yay
+      description: Tez şişirilir, qatlanmaq üçün on dəqiqə. Alətlər, çərçivələr, quraşdırma işçiləri yoxdur. Üzgüçülük asan hissə olmalıdır.
+
+design:
+  tagline: Dizayn Fəlsəfəsi
+  heading: "-dən dizayn edilmişdir<br />\n<span class=\"text-sky-600\">xaricə su</span>"
+  paragraphs:
+    - 'Hər Felizbay hovuzu bir sualla başlayır: <em>su ona nə edir?</em> Tam su təzyiqi, ultrabənövşəyi şüalara məruz qalma, xlor kimyası, torpaq zibilləri - biz bunların hamısı üçün dizayn edirik, sonra onun üzərində qururuq.'
+    - Düşən dikiş kameralarımız iş təzyiqindən xeyli yüksəkdir, buna görə də isti günorta bir tikişi həddindən artıq gərginləşdirməz. Bizim PVC UV stabilizatorları ilə laminatlaşdırılmışdır, çünki günəş işığı - deşilmələr deyil - əksər şişmə hovuzları öldürür.
+    - Biz qiymət nöqtəsinə dizayn etmirik. Uğursuzluq nöqtəsinə qədər dizayn edirik - sonra onu yaxşı keçin.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay hovuz dizaynı
+  stats:
+    - value: 100%
+      label: "təzyiqlə sınaqdan keçirilmişdir<br />qablaşdırmadan əvvəl"
+    - value: 4–6
+      label: "PSI qiymətləndirilib<br />iş təzyiqi"
+    - value: 5–15
+      label: "dəqiqə<br />inflyasiya"

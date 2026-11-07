@@ -1,0 +1,42 @@
+origin:
+  tagline: Náš původ
+  heading: "Stvořeno na léto,<br />\n<span class=\"text-sky-600\">navržený tak, aby vydržel</span>"
+  paragraphs:
+    - 'Felizbay začal jednoduchou frustrací: nafukovací bazény, které se prohýbaly, prosakovaly a vydržely jedinou sezónu. Věřili jsme, že bazén by mohl být lepší – dostatečně pevný, aby v něm mohl plavat, dostatečně pevný, aby přežil rok co rok, a stále dostatečně malý, aby se v zimě skladoval uvnitř.'
+    - Odpovědí byla konstrukce kapkového stehu. Tisíce vnitřních závitů zajišťují pevné stěny pod tlakem, což dává látkovému bazénu strukturu s pevnými stranami.
+    - 'Každý bazén Felizbay je postaven na tomto jádru: kvalitní materiály, testovaná konstrukce a poctivé inženýrství za cenu, kterou si rodina dokáže ospravedlnit.'
+    - Felizbay je navržen a provozován společností <strong>Aquafarer LLC</strong>, USA. Naše bazény vyrábí dlouhodobý výrobní partner v Qingdao v Číně a každá jednotka je před odesláním 100% tlakově testována.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay drop steh pool
+
+philosophy:
+  tagline: Naše filozofie
+  heading: Jednoduché, odolné, poctivé
+  description: 'Bazén je příslib: naplňte ho první horký letní den a funguje to. Vše, co navrhujeme, tomuto slibu slouží.'
+  cards:
+    - emoji: "🌊"
+      title: Pevné, ne prověšené
+      description: Stěny padacího stehu se pevně nafouknou a drží svůj tvar při plném tlaku vody. Žádné šikmé stěny, žádná pokleslá vodní linie, žádná ztracená hloubka.
+    - emoji: "🔧"
+      title: Vyrobeno tak, aby vydrželo, nenahradilo
+      description: Nejudržitelnější bazén je ten, který nevyhazujete. PVC odolné proti UV záření, propíchnutí a kvalitní ventily znamenají období používání, ne jedno léto.
+    - emoji: "🏆"
+      title: Zjednodušené léto
+      description: Rychle nafouknout, deset minut složit. Žádné nástroje, žádné rámy, žádná montážní četa. Plavání by mělo být nejjednodušší částí.
+
+design:
+  tagline: Filozofie designu
+  heading: "Navrženo z<br />\n<span class=\"text-sky-600\">voda směrem ven</span>"
+  paragraphs:
+    - 'Každý bazén Felizbay začíná jednou otázkou: <em>co s tím dělá voda?</em> Plný tlak vody, vystavení UV záření, chemie chloru, zemní úlomky – to vše navrhneme a nad tím stavíme.'
+    - Naše vyšívací komory jsou dimenzovány vysoko nad pracovní tlak, takže horké odpoledne příliš nezatěžuje šev. Naše PVC je laminováno UV stabilizátory, protože většinu nafukovacích bazénů zabíjí sluneční světlo – nikoli propíchnutí.
+    - Nenavrhujeme do cenové hladiny. Navrhujeme až do bodu selhání – pak ho dobře překonáme.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Design bazénu Felizbay
+  stats:
+    - value: 100%
+      label: "tlakově testováno<br />před balením"
+    - value: 4–6
+      label: "Hodnocení PSI<br />pracovní tlak"
+    - value: 5–15
+      label: "minuta<br />inflace"

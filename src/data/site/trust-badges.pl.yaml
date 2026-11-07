@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Testowane pod kątem bezpieczeństwa
+    desc: Zaprojektowane w odniesieniu do EN 16582-1 i ASTM F2666; Informacje dotyczące bezpieczeństwa dotyczące konkretnego modelu znajdują się w dokumentacji produktu.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: System zarządzania jakością certyfikowany przez SGS.
+    variant: cert
+  - icon: "✦"
+    title: Testowane ciśnieniowo
+    desc: Każdy basen jest testowany pod kątem napompowania przed opuszczeniem fabryki.
+    variant: standard
+  - icon: "☆"
+    title: 2-letnia gwarancja
+    desc: Ograniczona gwarancja na szwy, zawory i tkaninę obejmująca wady produkcyjne.
+    variant: warranty
+  - icon: "⚖"
+    title: Zgodność materiałowa
+    desc: Materiały PVC pochodzące z receptur zgodnych z REACH; dokumentacja zgodności dostępna na żądanie.
+    variant: material

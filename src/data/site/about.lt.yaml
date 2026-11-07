@@ -1,0 +1,42 @@
+origin:
+  tagline: Mūsų kilmė
+  heading: "Sukurta vasarai,<br />\n<span class=\"text-sky-600\">sukurta taip, kad tarnautų</span>"
+  paragraphs:
+    - 'Felizbay prasidėjo nuo paprasto nusivylimo: pripučiami baseinai, kurie nusmuko, nutekėjo ir truko vieną sezoną. Tikėjome, kad baseinas gali būti geresnis – pakankamai standus, kad būtų galima plaukti ratus, pakankamai tvirtas, kad išgyventų metai iš metų, ir vis dar pakankamai mažas, kad žiemą jį būtų galima laikyti viduje.'
+    - Dygsnio konstrukcija buvo atsakymas. Tūkstančiai vidinių sriegių užfiksuoja sienas standžiai veikiant slėgiui, suteikdami audinio baseinui kietos pusės struktūrą.
+    - 'Kiekvienas Felizbay baseinas yra pastatytas aplink tą pagrindą: kokybiškos medžiagos, patikrinta konstrukcija ir sąžininga inžinerija, už kainą, kurią šeima gali pateisinti.'
+    - Felizbay sukūrė ir eksploatuoja <strong>Aquafarer LLC</strong>, JAV. Mūsų baseinus gamina ilgalaikis gamybos partneris Čingdao mieste, Kinijoje, o kiekvienas įrenginys yra 100 % patikrintas prieš išsiunčiant.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay dygsnio baseinas
+
+philosophy:
+  tagline: Mūsų filosofija
+  heading: Paprasta, patvari, sąžininga
+  description: 'Baseinas yra pažadas: užpildykite jį pirmą karštą vasaros dieną ir jis veiks. Viskas, ką mes projektuojame, tarnauja šiam pažadui.'
+  cards:
+    - emoji: "🌊"
+      title: Tvirtas, nenuobodus
+      description: Dygsnio sienelės pripučiamos standžios ir išlaiko savo formą esant visiškam vandens slėgiui. Jokių pasvirusių sienų, jokios nukritusios vandens linijos, jokio prarasto gylio.
+    - emoji: "🔧"
+      title: Sukurtas taip, kad tarnautų, o ne pakeistų
+      description: Pats tvariausias baseinas yra tas, kurio neišmesite. UV atsparus, nepraduriamas PVC ir kokybiški vožtuvai reiškia naudojimo sezonus, o ne vieną vasarą.
+    - emoji: "🏆"
+      title: Paprasta vasara
+      description: Greitai pripučiama, dešimt minučių sulankstoma. Jokių įrankių, be rėmų, jokios montavimo komandos. Plaukimas turėtų būti lengviausia dalis.
+
+design:
+  tagline: Dizaino filosofija
+  heading: "Sukurta iš<br />\n<span class=\"text-sky-600\">vanduo į išorę</span>"
+  paragraphs:
+    - 'Kiekvienas Felizbay baseinas prasideda vienu klausimu: <em>ką su juo daro vanduo?</em> Visas vandens slėgis, UV spinduliai, chloro chemija, žemės šiukšlės – suprojektuojame visa tai, tada statome virš jo.'
+    - Mūsų nuleidžiamo dygsnio kameros yra įvertintos gerokai virš darbinio slėgio, todėl karšta popietė neperkrauna siūlės. Mūsų PVC yra laminuotas UV stabilizatoriais, nes saulės šviesa, o ne pradūrimai, žudo daugumą pripučiamų baseinų.
+    - Projektuojame ne pagal kainą. Projektuojame iki gedimo taško – tada statome gerokai toliau.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay baseino dizainas
+  stats:
+    - value: 100%
+      label: "patikrintas slėgiu<br />prieš pakuojant"
+    - value: 4–6
+      label: "PSI reitingas<br />darbinis slėgis"
+    - value: 5–15
+      label: "minutę<br />infliacija"

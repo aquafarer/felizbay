@@ -1,0 +1,42 @@
+origin:
+  tagline: Notre origine
+  heading: "Construit pour l'été,<br />\n<span class=\"text-sky-600\">conçu pour durer</span>"
+  paragraphs:
+    - 'Felizbay a commencé avec une simple frustration : des piscines gonflables qui s''affaissaient, qui fuyaient et qui n''ont duré qu''une seule saison. Nous pensions qu''une piscine pouvait être meilleure : suffisamment rigide pour y faire des longueurs, suffisamment solide pour survivre année après année et suffisamment petite pour être rangée à l''intérieur en hiver.'
+    - La construction en point tombant était la réponse. Des milliers de fils internes bloquent les parois rigides sous pression, donnant à une piscine en tissu la structure d'une piscine à parois rigides.
+    - 'Chaque piscine Felizbay est construite autour de ce noyau : des matériaux de qualité, une construction testée et une ingénierie honnête, à un prix qu''une famille peut justifier.'
+    - Felizbay est conçu et exploité par <strong>Aquafarer LLC</strong>, États-Unis. Nos piscines sont produites par un partenaire de fabrication de longue date à Qingdao, en Chine, et chaque unité est testée à 100 % sous pression avant d'être expédiée.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Piscine à points tombés Felizbay
+
+philosophy:
+  tagline: Notre philosophie
+  heading: Simple, durable, honnête
+  description: 'Une piscine est une promesse : remplissez-la dès les premières chaudes journées d’été et ça marche. Tout ce que nous concevons répond à cette promesse.'
+  cards:
+    - emoji: "🌊"
+      title: Rigide, pas affaissé
+      description: Les parois Drop Stitch se gonflent de manière rigide et conservent leur forme à pleine pression de l'eau. Pas de murs penchés, pas de ligne d'eau affaissée, pas de perte de profondeur.
+    - emoji: "🔧"
+      title: Construit pour durer, pas pour remplacer
+      description: La piscine la plus durable est celle qu’on ne jette pas. Le PVC résistant aux UV et aux perforations et les valves de qualité signifient des saisons d'utilisation, pas un seul été.
+    - emoji: "🏆"
+      title: L'été simplifié
+      description: Rapide à gonfler, dix minutes à replier. Pas d'outils, pas de cadres, pas d'équipe d'installation. La natation devrait être la partie la plus facile.
+
+design:
+  tagline: Philosophie de conception
+  heading: "Conçu à partir du<br />\n<span class=\"text-sky-600\">eau vers l'extérieur</span>"
+  paragraphs:
+    - 'Chaque piscine Felizbay commence par une question : <em>que lui fait l''eau ?</em> Pleine pression de l’eau, exposition aux UV, chimie du chlore, débris du sol – nous concevons pour tout cela, puis construisons au-dessus.'
+    - Nos chambres à points tombants sont bien supérieures à la pression de travail, de sorte qu'un après-midi chaud ne sollicite pas trop une couture. Notre PVC est laminé avec des stabilisants UV, car la lumière du soleil, et non les perforations, tue la plupart des piscines gonflables.
+    - Nous ne concevons pas en fonction d’un prix. Nous concevons jusqu’à un point d’échec, puis nous construisons bien au-delà.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Conception de piscine Felizbay
+  stats:
+    - value: 100%
+      label: "testé sous pression<br />avant d'emballer"
+    - value: 4–6
+      label: "Classé PSI<br />pression de travail"
+    - value: 5–15
+      label: "minute<br />gonflement "

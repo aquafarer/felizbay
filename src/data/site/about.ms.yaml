@@ -1,0 +1,42 @@
+origin:
+  tagline: Asal Kita
+  heading: "Dibina untuk musim panas,<br />\n<span class=\"text-sky-600\">direka bentuk untuk bertahan</span>"
+  paragraphs:
+    - 'Felizbay bermula dengan kekecewaan mudah: kolam kembung yang mengendur, bocor dan bertahan selama satu musim. Kami percaya kolam boleh menjadi lebih baik — cukup tegar untuk berenang, cukup kuat untuk bertahan tahun demi tahun, dan masih cukup kecil untuk disimpan di dalam rumah pada musim sejuk.'
+    - Pembinaan jahitan jatuh adalah jawapannya. Beribu-ribu benang dalaman mengunci dinding tegar di bawah tekanan, memberikan struktur fabrik seperti yang keras.
+    - 'Setiap kolam Felizbay dibina berdasarkan teras itu: bahan berkualiti, pembinaan yang diuji dan kejuruteraan yang jujur, pada harga yang boleh dibenarkan oleh keluarga.'
+    - Felizbay direka dan dikendalikan oleh <strong>Aquafarer LLC</strong>, Amerika Syarikat. Kumpulan kami dihasilkan oleh rakan kongsi pembuatan jangka panjang di Qingdao, China, dan setiap unit diuji tekanan 100% sebelum dihantar.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Kolam jahitan jatuh Felizbay
+
+philosophy:
+  tagline: Falsafah Kami
+  heading: Mudah, tahan lama, jujur
+  description: 'Kolam adalah janji: isikannya pada hari panas pertama musim panas dan ia berfungsi. Semua yang kami reka bentuk memenuhi janji itu.'
+  cards:
+    - emoji: "🌊"
+      title: Tegar, Tidak Kendur
+      description: Dinding jahitan jatuh mengembang tegar dan tahan bentuknya pada tekanan air penuh. Tiada dinding condong, tiada tali air yang kendur, tiada kedalaman yang hilang.
+    - emoji: "🔧"
+      title: Dibina untuk Kekal, Bukan untuk Diganti
+      description: Kolam yang paling mampan ialah kolam yang tidak anda buang. PVC kalis UV, tahan tusukan dan injap berkualiti bermakna musim penggunaan, bukan satu musim panas.
+    - emoji: "🏆"
+      title: Musim Panas Dibuat Mudah
+      description: Cepat mengembang, sepuluh minit untuk dilipat. Tiada alatan, tiada bingkai, tiada krew pemasangan. Berenang sepatutnya menjadi bahagian yang mudah.
+
+design:
+  tagline: Falsafah Reka Bentuk
+  heading: "Direka daripada<br />\n<span class=\"text-sky-600\">air ke luar</span>"
+  paragraphs:
+    - 'Setiap kolam Felizbay bermula dengan satu soalan: <em>apa guna air kepadanya?</em> Tekanan air penuh, pendedahan UV, kimia klorin, serpihan tanah — kami mereka bentuk untuk semua itu, kemudian membina di atasnya.'
+    - Ruang jahitan jatuh kami dinilai jauh melebihi tekanan kerja, jadi waktu petang yang panas tidak terlalu menekankan jahitan. PVC kami dilapisi dengan penstabil UV, kerana cahaya matahari — bukan tusukan — adalah yang membunuh kebanyakan kolam kembung.
+    - Kami tidak mereka bentuk kepada titik harga. Kami mereka bentuk ke titik kegagalan — kemudian membina dengan baik melepasinya.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Reka bentuk kolam Felizbay
+  stats:
+    - value: 100%
+      label: "diuji tekanan<br />sebelum mengemas"
+    - value: 4–6
+      label: "PSI dinilai<br />tekanan kerja"
+    - value: 5–15
+      label: "minit<br />inflasi"

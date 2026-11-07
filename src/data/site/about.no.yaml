@@ -1,0 +1,42 @@
+origin:
+  tagline: Vår opprinnelse
+  heading: "Bygget for sommeren,<br />\n<span class=\"text-sky-600\">konstruert for å vare</span>"
+  paragraphs:
+    - 'Felizbay startet med en enkel frustrasjon: oppblåsbare bassenger som sank, lekket og varte en enkelt sesong. Vi trodde et basseng kunne vært bedre - stivt nok til å svømme runder i, tøft nok til å overleve år etter år, og fortsatt lite nok til å lagre innendørs om vinteren.'
+    - Drop stitch-konstruksjon var svaret. Tusenvis av innvendige tråder låser veggene stive under trykk, og gir et stoffbasseng strukturen til et hardsidet.
+    - 'Hvert Felizbay-basseng er bygget rundt den kjernen: kvalitetsmaterialer, testet konstruksjon og ærlig konstruksjon, til en pris en familie kan rettferdiggjøre.'
+    - Felizbay er designet og drevet av <strong>Aquafarer LLC</strong>, USA. Bassengene våre produseres av en langsiktig produksjonspartner i Qingdao, Kina, og hver enhet er 100 % trykktestet før den sendes.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay drop stitch basseng
+
+philosophy:
+  tagline: Vår filosofi
+  heading: Enkel, holdbar, ærlig
+  description: 'Et basseng er et løfte: fyll det på den første varme sommerdagen og det fungerer. Alt vi designer tjener dette løftet.'
+  cards:
+    - emoji: "🌊"
+      title: Stiv, ikke saggy
+      description: Dropsting-vegger blåses opp stive og holder formen ved fullt vanntrykk. Ingen skjeve vegger, ingen hengende vannlinje, ingen tapt dybde.
+    - emoji: "🔧"
+      title: Bygget for å vare, ikke for å erstatte
+      description: Det mest bærekraftige bassenget er det du ikke kaster. UV-bestandig, punkteringsbestandig PVC og kvalitetsventiler betyr sesonger med bruk, ikke én sommer.
+    - emoji: "🏆"
+      title: Sommer gjort enkelt
+      description: Rask å blåse opp, ti minutter å brette sammen. Ingen verktøy, ingen rammer, ingen installasjonsmannskap. Svømming skal være den enkle delen.
+
+design:
+  tagline: Designfilosofi
+  heading: "Designet fra<br />\n<span class=\"text-sky-600\">vann utover</span>"
+  paragraphs:
+    - 'Hver Felizbay-pool starter med ett spørsmål: <em>hva gjør vannet med det?</em> Fullt vanntrykk, UV-eksponering, klorkjemi, jordrester – vi designer for alt, og bygger deretter over det.'
+    - Våre fallsømskamre er vurdert godt over arbeidstrykket, så en varm ettermiddag belaster ikke en søm. PVC-en vår er laminert med UV-stabilisatorer, fordi sollys – ikke punkteringer – er det som dreper de fleste oppblåsbare bassenger.
+    - Vi designer ikke til et prisnivå. Vi designer til et feilpunkt – så bygger vi langt forbi det.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay bassengdesign
+  stats:
+    - value: 100%
+      label: "trykktestet<br />før pakking"
+    - value: 4–6
+      label: "PSI vurdert<br />arbeidspress"
+    - value: 5–15
+      label: "minutt<br />inflasjon"

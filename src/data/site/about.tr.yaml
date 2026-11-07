@@ -1,0 +1,42 @@
+origin:
+  tagline: Kökenimiz
+  heading: "Yaz için tasarlandı<br />\n<span class=\"text-sky-600\">dayanacak şekilde tasarlandı</span>"
+  paragraphs:
+    - 'Felizbay basit bir hayal kırıklığıyla başladı: sarkan, sızdıran ve bir sezon dayanabilen şişme havuzlar. Bir havuzun daha iyi olabileceğine inandık; turlar halinde yüzilebilecek kadar sert, yıllar boyu hayatta kalabilecek kadar sağlam ve kışın kapalı alanda saklanabilecek kadar küçük.'
+    - Cevap damla dikiş yapısıydı. Binlerce iç iplik, duvarları basınç altında sert bir şekilde kilitleyerek kumaş havuza sert kenarlı bir yapı kazandırır.
+    - 'Her Felizbay havuzu bu temel etrafında inşa edilmiştir: kaliteli malzemeler, test edilmiş yapı ve dürüst mühendislik; bir ailenin haklı çıkarabileceği bir fiyata.'
+    - Felizbay tarafından tasarlanmış ve işletilmektedir. <strong>Aquafarer LLC</strong>, ABD. Havuzlarımız Çin'in Qingdao kentindeki uzun vadeli bir üretim ortağımız tarafından üretilmekte ve her ünite gönderilmeden önce %100 basınç testinden geçirilmektedir.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay damla dikiş havuzu
+
+philosophy:
+  tagline: Felsefemiz
+  heading: Basit, dayanıklı, dürüst
+  description: 'Havuz bir vaattir: Yazın ilk sıcak gününde doldurun ve işe yarasın. Tasarladığımız her şey bu vaadi yerine getiriyor.'
+  cards:
+    - emoji: "🌊"
+      title: Sert, Sarkık Değil
+      description: Damla dikişli duvarlar sert bir şekilde şişer ve tam su basıncında şeklini korur. Eğik duvarlar yok, sarkan su hattı yok, derinlik kaybı yok.
+    - emoji: "🔧"
+      title: Değiştirilmek İçin Değil, Uzun Süre Dayanacak Şekilde Üretildi
+      description: En sürdürülebilir havuz, atmadığınız havuzdur. UV ışınlarına dayanıklı, delinmeye karşı dayanıklı PVC ve kaliteli valfler bir yaz değil, mevsimsel kullanım anlamına gelir.
+    - emoji: "🏆"
+      title: Yaz Kolaylaştı
+      description: Hızlı şişirilir, katlanması on dakika sürer. Alet yok, çerçeve yok, kurulum ekibi yok. Yüzme işin kolay kısmı olmalı.
+
+design:
+  tagline: Tasarım Felsefesi
+  heading: "Şundan tasarlandı:<br />\n<span class=\"text-sky-600\">su dışarı doğru</span>"
+  paragraphs:
+    - 'Her Felizbay havuzu bir soruyla başlar: <em>su ona ne yapıyor?</em> Tam su basıncı, UV ışınlarına maruz kalma, klor kimyası, toprak döküntüsü; bunların hepsini tasarlıyor, sonra bunların üzerine inşa ediyoruz.'
+    - Düşürme dikiş odalarımız çalışma basıncının oldukça üzerinde derecelendirilmiştir, bu nedenle sıcak bir öğleden sonra dikişte aşırı stres yaratmaz. PVC'miz UV dengeleyicilerle lamine edilmiştir, çünkü şişirilebilir havuzların çoğunu öldüren şey delikler değil güneş ışığıdır.
+    - Belirli bir fiyat noktasına göre tasarım yapmıyoruz. Bir başarısızlık noktasına kadar tasarlıyoruz ve daha sonra bu noktayı aşarak inşa ediyoruz.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay havuz tasarımı
+  stats:
+    - value: 100%
+      label: "basınç testi yapılmış<br />paketlemeden önce"
+    - value: 4–6
+      label: "PSI dereceli<br />çalışma basıncı"
+    - value: 5–15
+      label: "dakika<br />enflasyon"

@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Preizkušena varnost
+    desc: Zasnovano v skladu z EN 16582-1 in ASTM F2666; Varnostne informacije, specifične za model, so priložene dokumentaciji izdelka.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Sistem vodenja kakovosti certificiran s strani SGS.
+    variant: cert
+  - icon: "✦"
+    title: Tlačno preizkušeno
+    desc: Vsak bazen je testiran na napihnjenost, preden zapusti tovarno.
+    variant: standard
+  - icon: "☆"
+    title: 2-letna garancija
+    desc: Omejena garancija za šive, ventile in tkanino proti proizvodnim napakam.
+    variant: warranty
+  - icon: "⚖"
+    title: Materialna skladnost
+    desc: PVC materiali, pridobljeni s formulacijami, skladnimi z REACH; dokumentacija o skladnosti je na voljo na zahtevo.
+    variant: material

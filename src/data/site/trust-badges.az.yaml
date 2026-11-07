@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Təhlükəsizlik Testi
+    desc: EN 16582-1 və ASTM F2666-ya istinadla hazırlanmışdır; məhsul sənədlərində modelə xas təhlükəsizlik məlumatı göndərilir.
+    variant: cert
+  - icon: "⚙"
+    title: 'İSO 9001:2015'
+    desc: SGS tərəfindən sertifikatlaşdırılmış keyfiyyət idarəetmə sistemi.
+    variant: cert
+  - icon: "✦"
+    title: Təzyiq Testi
+    desc: Hər hovuz inflyasiyası fabrikdən çıxmazdan əvvəl sınaqdan keçirilir.
+    variant: standard
+  - icon: "☆"
+    title: 2 il Zəmanət
+    desc: İstehsal qüsurlarına qarşı tikişlərə, klapanlara və parçaya məhdud zəmanət.
+    variant: warranty
+  - icon: "⚖"
+    title: Materiala uyğunluq
+    desc: REACH-ə uyğun formulalar ilə qaynaqlanan PVC materiallar; tələb əsasında mövcud uyğunluq sənədləri.
+    variant: material

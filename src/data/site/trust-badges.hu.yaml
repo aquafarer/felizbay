@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Biztonság tesztelve
+    desc: Az EN 16582-1 és az ASTM F2666 szabvány szerint tervezték; modellspecifikus biztonsági információk a termékdokumentációban találhatók.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: SGS által tanúsított minőségirányítási rendszer.
+    variant: cert
+  - icon: "✦"
+    title: Nyomás tesztelve
+    desc: Minden medence felfújását tesztelték, mielőtt elhagyná a gyárat.
+    variant: standard
+  - icon: "☆"
+    title: 2 év garancia
+    desc: Korlátozott garancia a varratokra, szelepekre és szövetekre a gyártási hibák ellen.
+    variant: warranty
+  - icon: "⚖"
+    title: Anyagmegfelelőség
+    desc: REACH-kompatibilis készítményekből származó PVC anyagok; megfelelőségi dokumentáció kérésre elérhető.
+    variant: material

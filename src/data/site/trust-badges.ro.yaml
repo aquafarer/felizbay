@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Siguranță testată
+    desc: Proiectat cu referire la EN 16582-1 și ASTM F2666; informațiile de siguranță specifice modelului sunt incluse în documentația produsului.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Sistem de management al calitatii certificat de SGS.
+    variant: cert
+  - icon: "✦"
+    title: Testat la presiune
+    desc: Fiecare piscină a fost testată înainte de a ieși din fabrică.
+    variant: standard
+  - icon: "☆"
+    title: 2 ani garanție
+    desc: Garanție limitată pentru cusături, supape și țesături împotriva defectelor de fabricație.
+    variant: warranty
+  - icon: "⚖"
+    title: Conformitatea materialului
+    desc: Materiale PVC provenite din formulări conforme cu REACH; documentație de conformitate disponibilă la cerere.
+    variant: material

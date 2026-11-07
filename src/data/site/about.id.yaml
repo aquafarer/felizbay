@@ -1,0 +1,42 @@
+origin:
+  tagline: Asal Usul Kami
+  heading: "Dibangun untuk musim panas,<br />\n<span class=\"text-sky-600\">dirancang untuk bertahan lama</span>"
+  paragraphs:
+    - 'Felizbay memulai dengan rasa frustrasi yang sederhana: kolam tiup yang melorot, bocor, dan bertahan selama satu musim. Kami yakin kolam bisa menjadi lebih baik — cukup kokoh untuk berenang beberapa putaran, cukup kuat untuk bertahan hidup tahun demi tahun, dan masih cukup kecil untuk disimpan di dalam ruangan saat musim dingin.'
+    - Konstruksi jahitan jatuh adalah jawabannya. Ribuan benang internal mengunci dinding menjadi kaku di bawah tekanan, memberikan struktur sisi keras pada kumpulan kain.
+    - 'Setiap kolam Felizbay dibangun berdasarkan inti tersebut: bahan berkualitas, konstruksi teruji, dan teknik yang jujur, dengan harga yang dapat dibenarkan oleh sebuah keluarga.'
+    - Felizbay dirancang dan dioperasikan oleh <strong>Aquafarer LLC</strong>, AS. Kolam kami diproduksi oleh mitra manufaktur jangka panjang di Qingdao, Tiongkok, dan setiap unit diuji tekanannya 100% sebelum dikirim.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Kolam jahitan jatuhkan Felizbay
+
+philosophy:
+  tagline: Filosofi Kami
+  heading: Sederhana, tahan lama, jujur
+  description: 'Sebuah kolam adalah sebuah janji: isilah pada hari pertama musim panas dan itu berhasil. Segala sesuatu yang kami desain memenuhi janji itu.'
+  cards:
+    - emoji: "🌊"
+      title: Kaku, Tidak Kendor
+      description: Dinding jahitan jatuh menjadi kaku dan mempertahankan bentuknya pada tekanan air penuh. Tidak ada tembok yang miring, tidak ada saluran air yang kendur, tidak ada kedalaman yang hilang.
+    - emoji: "🔧"
+      title: Dibangun untuk Tahan Lama, Bukan untuk Menggantikan
+      description: Kolam yang paling ramah lingkungan adalah kolam yang tidak Anda buang. PVC tahan UV, tahan tusukan, dan katup berkualitas berarti penggunaan pada musim, bukan musim panas.
+    - emoji: "🏆"
+      title: Musim Panas Menjadi Sederhana
+      description: Cepat mengembang, sepuluh menit untuk dilipat. Tanpa alat, tanpa bingkai, tanpa kru instalasi. Berenang seharusnya menjadi bagian yang mudah.
+
+design:
+  tagline: Filsafat Desain
+  heading: "Dirancang dari<br />\n<span class=\"text-sky-600\">air ke arah luar</span>"
+  paragraphs:
+    - 'Setiap kumpulan Felizbay dimulai dengan satu pertanyaan: <em>apa pengaruh air terhadapnya?</em> Tekanan air penuh, paparan sinar UV, kandungan kimia klorin, puing-puing tanah — kami merancang semuanya, lalu membangun di atasnya.'
+    - Ruang jahitan lepas kami memiliki nilai jauh di atas tekanan kerja, sehingga siang hari yang panas tidak membuat jahitan menjadi terlalu tertekan. PVC kami dilaminasi dengan stabilisator UV, karena sinar matahari — bukan tusukan — yang membunuh sebagian besar kolam tiup.
+    - Kami tidak mendesain dengan harga tertentu. Kami merancang hingga mencapai titik kegagalan - kemudian membangunnya dengan baik.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Desain kolam Felizbay
+  stats:
+    - value: 100%
+      label: "diuji tekanan<br />sebelum pengepakan"
+    - value: 4–6
+      label: "dinilai PSI<br />tekanan kerja"
+    - value: 5–15
+      label: "menit<br />inflasi"

@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Keamanan Diuji
+    desc: Dirancang dengan mengacu pada EN 16582-1 dan ASTM F2666; informasi keselamatan khusus model dikirimkan dalam dokumentasi produk.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Sistem manajemen mutu disertifikasi oleh SGS.
+    variant: cert
+  - icon: "✦"
+    title: Tekanan Diuji
+    desc: Setiap kumpulan diuji inflasi sebelum meninggalkan pabrik.
+    variant: standard
+  - icon: "☆"
+    title: Garansi 2 Tahun
+    desc: Garansi terbatas pada jahitan, katup, dan kain terhadap cacat produksi.
+    variant: warranty
+  - icon: "⚖"
+    title: Kepatuhan Materi
+    desc: Bahan PVC bersumber dengan formulasi yang sesuai dengan REACH; dokumentasi kepatuhan tersedia berdasarkan permintaan.
+    variant: material

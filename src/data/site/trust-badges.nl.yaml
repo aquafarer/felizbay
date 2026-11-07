@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Veiligheid getest
+    desc: Ontworpen met verwijzing naar EN 16582-1 en ASTM F2666; modelspecifieke veiligheidsinformatie wordt meegeleverd in de productdocumentatie.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO9001:2015'
+    desc: Kwaliteitsmanagementsysteem gecertificeerd door SGS.
+    variant: cert
+  - icon: "✦"
+    title: Druk getest
+    desc: Elk zwembad wordt op inflatie getest voordat het de fabriek verlaat.
+    variant: standard
+  - icon: "☆"
+    title: 2 jaar garantie
+    desc: Beperkte garantie op naden, kleppen en stof tegen fabricagefouten.
+    variant: warranty
+  - icon: "⚖"
+    title: Naleving van materiaal
+    desc: PVC-materialen afkomstig van REACH-conforme formuleringen; nalevingsdocumentatie op aanvraag verkrijgbaar.
+    variant: material

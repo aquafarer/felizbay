@@ -1,0 +1,42 @@
+origin:
+  tagline: Bizning kelib chiqishi
+  heading: "Yoz uchun qurilgan,<br />\n<span class=\"text-sky-600\">davom etishi uchun ishlab chiqilgan</span>"
+  paragraphs:
+    - 'Felizbay oddiy umidsizlik bilan boshladi: osilgan, suv oqadigan va bir mavsum davom etadigan shishiriladigan hovuzlar. Biz basseyn yaxshiroq bo''lishi mumkinligiga ishongan edik - suzish uchun etarlicha qattiq, yildan-yilga omon qolish uchun etarlicha qattiq va qishda yopiq joylarda saqlash uchun etarlicha kichik.'
+    - Drop stitch konstruktsiyasi javob bo'ldi. Minglab ichki iplar devorlarni bosim ostida qattiq yopib qo'yadi va mato hovuziga qattiq qirrali strukturani beradi.
+    - 'Har bir Felizbay hovuzi ana shu yadro atrofida qurilgan: sifatli materiallar, sinovdan o''tgan qurilish va halol muhandislik, oila oqlay oladigan narxda.'
+    - Felizbay tomonidan ishlab chiqilgan va boshqariladi <strong>Aquafarer LLC</strong>, AQSh. Hovuzlarimiz Xitoyning Qingdao shahridagi uzoq muddatli ishlab chiqarish hamkori tomonidan ishlab chiqariladi va har bir birlik jo'natilishidan oldin 100% bosim sinovidan o'tkaziladi.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay tomchi tikuv hovuzi
+
+philosophy:
+  tagline: Bizning Falsafamiz
+  heading: Oddiy, bardoshli, halol
+  description: 'Hovuz - bu va''da: uni yozning birinchi issiq kunida to''ldiring va u ishlaydi. Biz loyihalashtirgan hamma narsa bu va''daga xizmat qiladi.'
+  cards:
+    - emoji: "🌊"
+      title: Qattiq, Saggy emas
+      description: To'qilgan tikuv devorlari qattiq shishiradi va ularning shaklini to'liq suv bosimida ushlab turadi. Suyangan devorlar, sarkma suv liniyasi, yo'qolgan chuqurlik yo'q.
+    - emoji: "🔧"
+      title: O'zgartirish uchun emas, oxirigacha qurilgan
+      description: Eng barqaror basseyn bu siz tashlamaydigan hovuzdir. UVga chidamli, teshilishga chidamli PVX va sifatli klapanlar bir yoz emas, balki foydalanish mavsumini bildiradi.
+    - emoji: "🏆"
+      title: Yoz soddalashtirilgan
+      description: Tez shishiradi, yig'ish uchun o'n daqiqa. Asboblar, ramkalar, o'rnatish brigadasi yo'q. Suzish oson qism bo'lishi kerak.
+
+design:
+  tagline: Dizayn falsafasi
+  heading: "dan ishlab chiqilgan<br />\n<span class=\"text-sky-600\">tashqariga suv</span>"
+  paragraphs:
+    - 'Har bir Felizbay hovuzi bitta savol bilan boshlanadi: <em>suv unga nima qiladi?</em> To''liq suv bosimi, UV ta''siri, xlor kimyosi, tuproq qoldiqlari - biz bularning barchasini loyihalashtiramiz, keyin uning ustiga quramiz.'
+    - Bizning tikuv kameralarimiz ish bosimidan ancha yuqori baholanadi, shuning uchun issiq tushdan keyin tikuvni ortiqcha yuklamaydi. Bizning PVX UV stabilizatorlari bilan laminatlangan, chunki quyosh nuri - teshilish emas - ko'pchilik shishiriladigan hovuzlarni o'ldiradi.
+    - Biz narx nuqtasini loyihalashtirmaymiz. Biz nosozlik nuqtasini loyihalashtiramiz - keyin uni yaxshi o'tib quramiz.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay basseyni dizayni
+  stats:
+    - value: 100%
+      label: "bosim sinovidan o'tgan<br />qadoqlashdan oldin"
+    - value: 4–6
+      label: "PSI reytingi<br />ish bosimi"
+    - value: 5–15
+      label: "daqiqa<br />inflyatsiya"

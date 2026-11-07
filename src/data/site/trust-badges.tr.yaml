@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Güvenlik Testi Yapıldı
+    desc: EN 16582-1 ve ASTM F2666 referans alınarak tasarlanmıştır; modele özel güvenlik bilgileri ürün belgelerinde bulunur.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Kalite yönetim sistemi SGS tarafından onaylanmıştır.
+    variant: cert
+  - icon: "✦"
+    title: Basınç Testi Yapıldı
+    desc: Her havuz fabrikadan çıkmadan önce şişirme testine tabi tutulur.
+    variant: standard
+  - icon: "☆"
+    title: 2 Yıl Garanti
+    desc: Dikişler, valfler ve kumaşta üretim hatalarına karşı sınırlı garanti.
+    variant: warranty
+  - icon: "⚖"
+    title: Malzeme Uyumluluğu
+    desc: REACH uyumlu formülasyonlarla tedarik edilen PVC malzemeler; uyumluluk belgeleri istek üzerine sağlanır.
+    variant: material

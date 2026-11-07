@@ -1,0 +1,42 @@
+origin:
+  tagline: Nasze pochodzenie
+  heading: "Zbudowany na lato,<br />\n<span class=\"text-sky-600\">zaprojektowane tak, aby przetrwać</span>"
+  paragraphs:
+    - 'Felizbay zaczął od prostej frustracji: nadmuchiwane baseny, które zapadały się, przeciekały i przetrwały jeden sezon. Wierzyliśmy, że basen mógłby być lepszy — wystarczająco sztywny, aby można było w nim pływać, wystarczająco wytrzymały, aby przetrwać rok po roku, a jednocześnie wystarczająco mały, aby zimą przechowywać go w pomieszczeniu.'
+    - Odpowiedzią była konstrukcja ściegu opadającego. Tysiące wewnętrznych gwintów utrzymuje ścianki sztywne pod naciskiem, nadając basenowi tkaninowemu strukturę basenu o twardych ściankach.
+    - 'Każdy basen Felizbay zbudowany jest wokół tego rdzenia: wysokiej jakości materiałów, przetestowanej konstrukcji i uczciwej inżynierii, za cenę, którą może uzasadnić rodzina.'
+    - Felizbay został zaprojektowany i obsługiwany przez <strong>Aquafarer LLC</strong>, Stany Zjednoczone. Nasze baseny są produkowane przez wieloletniego partnera produkcyjnego w Qingdao w Chinach, a każdy egzemplarz przed wysyłką jest w 100% testowany ciśnieniowo.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Basen ściegowy Felizbay
+
+philosophy:
+  tagline: Nasza filozofia
+  heading: Proste, trwałe, uczciwe
+  description: 'Basen to obietnica: napełnij go w pierwszy upalny dzień lata i zadziała. Wszystko, co projektujemy, spełnia tę obietnicę.'
+  cards:
+    - emoji: "🌊"
+      title: Sztywne, nie obwisłe
+      description: Ściany ściegu kropelkowego nadmuchują się sztywnie i zachowują swój kształt przy pełnym ciśnieniu wody. Żadnych pochylonych ścian, żadnych opadających linii wodnych, żadnej utraty głębokości.
+    - emoji: "🔧"
+      title: Zbudowany z myślą o trwałości, a nie do zastąpienia
+      description: Najbardziej zrównoważony basen to ten, którego się nie wyrzuca. Odporne na promieniowanie UV i przebicie PCV oraz wysokiej jakości zawory oznaczają sezonowość użytkowania, a nie jedno lato.
+    - emoji: "🏆"
+      title: Lato w prosty sposób
+      description: Szybkie nadmuchanie, dziesięć minut na złożenie. Bez narzędzi, bez ram, bez ekipy montażowej. Pływanie powinno być tą łatwą częścią.
+
+design:
+  tagline: Filozofia projektowania
+  heading: "Zaprojektowane z<br />\n<span class=\"text-sky-600\">wodę na zewnątrz</span>"
+  paragraphs:
+    - 'Każdy basen Felizbay zaczyna się od jednego pytania: <em>co z tym robi woda?</em> Pełne ciśnienie wody, ekspozycja na promieniowanie UV, skład chemiczny chloru, gruz gruntowy — projektujemy pod kątem tego wszystkiego, a następnie budujemy nad nim.'
+    - Nasze komory do ściegu kroplowego mają parametry znacznie wyższe od ciśnienia roboczego, więc gorące popołudnie nie powoduje nadmiernego naprężenia szwu. Nasze PCV jest laminowane stabilizatorami UV, ponieważ światło słoneczne – a nie przebicia – jest tym, co zabija większość nadmuchiwanych basenów.
+    - Nie projektujemy kierując się ceną. Projektujemy aż do punktu awarii, a następnie budujemy dalej.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Projekt basenu Felizbay
+  stats:
+    - value: 100%
+      label: "testowany ciśnieniowo<br />przed pakowaniem"
+    - value: 4–6
+      label: "Ocena PSI<br />ciśnienie robocze"
+    - value: 5–15
+      label: "chwila<br />inflacja"

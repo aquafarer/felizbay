@@ -1,0 +1,42 @@
+origin:
+  tagline: Meie päritolu
+  heading: "Ehitatud suveks,<br />\n<span class=\"text-sky-600\">konstrueeritud kestma</span>"
+  paragraphs:
+    - 'Felizbay alustas lihtsa pettumusega: täispuhutavad basseinid, mis longusid, lekkisid ja kestsid ühe hooaja. Uskusime, et bassein võiks olla parem – piisavalt jäik, et selles ringe ujuda, piisavalt vastupidav, et aasta-aastalt ellu jääda, ja siiski piisavalt väike, et seda talvel siseruumides hoida.'
+    - Vastuseks oli tilkpistega ehitus. Tuhanded sisekeermed lukustavad seinad surve all jäigaks, andes kangabasseinile kõvapoolse struktuuri.
+    - 'Iga Felizbay bassein on ehitatud selle tuuma ümber: kvaliteetsed materjalid, testitud konstruktsioon ja aus projekteerimine hinnaga, mida perekond õigustab.'
+    - Felizbay kujundas ja haldab <strong>Aquafarer LLC</strong>, USA. Meie basseine toodab Hiinas Qingdaos asuv pikaajaline tootmispartner ja iga üksus on enne tarnimist 100% survetestitud.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay tilkpistega bassein
+
+philosophy:
+  tagline: Meie filosoofia
+  heading: Lihtne, vastupidav, aus
+  description: 'Bassein on lubadus: täitke see esimesel kuumal suvepäeval ja see töötab. Kõik, mida me kujundame, täidab seda lubadust.'
+  cards:
+    - emoji: "🌊"
+      title: Jäik, mitte lodev
+      description: Ripppisteseinad paisuvad jäigaks ja hoiavad oma kuju täieliku veesurve juures. Ei mingeid kaldus seinu, ei longu veepiiri ega kadunud sügavust.
+    - emoji: "🔧"
+      title: Ehitatud kestma, mitte asendamiseks
+      description: Kõige jätkusuutlikum bassein on see, mida te ära ei viska. UV-kindel, torkekindel PVC ja kvaliteetventiilid tähendavad kasutushooaegu, mitte ühte suve.
+    - emoji: "🏆"
+      title: Lihtne suvi
+      description: Kiiresti täis pumbatav, kümme minutit kokkuklapitav. Ei mingeid tööriistu, raame ega paigaldusmeeskonda. Ujumine peaks olema lihtne osa.
+
+design:
+  tagline: Disaini filosoofia
+  heading: "Disainitud alates<br />\n<span class=\"text-sky-600\">vesi väljapoole</span>"
+  paragraphs:
+    - 'Iga Felizbay bassein algab ühe küsimusega: <em>mida vesi sellega teeb?</em> Täielik veesurve, UV-kiirgus, kloorikeemia, pinnasejäätmed – me projekteerime selle kõige jaoks, seejärel ehitame selle kohale.'
+    - Meie tilkpistekambrid on töörõhust tunduvalt kõrgemad, nii et kuum pärastlõuna ei koorma õmblust üle. Meie PVC on lamineeritud UV-stabilisaatoritega, sest päikesevalgus, mitte läbitorked, tapab enamiku täispuhutavatest basseinidest.
+    - Me ei projekteeri hinnapunkti järgi. Projekteerime rikkepunktini – siis ehitame sellest kaugelt mööda.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay basseini disain
+  stats:
+    - value: 100%
+      label: "rõhuga testitud<br />enne pakkimist"
+    - value: 4–6
+      label: "PSI reiting<br />töörõhk"
+    - value: 5–15
+      label: "minut<br />inflatsiooni"

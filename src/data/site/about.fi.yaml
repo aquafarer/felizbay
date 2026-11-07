@@ -1,0 +1,42 @@
+origin:
+  tagline: Alkuperämme
+  heading: "Kesää varten rakennettu,<br />\n<span class=\"text-sky-600\">suunniteltu kestämään</span>"
+  paragraphs:
+    - 'Felizbay aloitti yksinkertaisella turhautumisella: puhallettavat uima-altaat, jotka painuivat, vuotivat ja kestivät yhden kauden. Uskoimme, että allas voisi olla parempi – riittävän jäykkä uidakseen siinä, tarpeeksi kestävä selviytyäkseen vuodesta toiseen ja silti tarpeeksi pieni säilytettäväksi sisätiloissa talvella.'
+    - Pudotusommelrakenne oli vastaus. Tuhannet sisäkierteet lukitsevat seinät jäykiksi paineen alaisena ja antavat kangasaltaalle kovasivuisen rakenteen.
+    - 'Jokainen Felizbay uima-allas on rakennettu tämän ytimen ympärille: laadukkaat materiaalit, testattu rakenne ja rehellinen suunnittelu hintaan, jonka perhe voi oikeuttaa.'
+    - Felizbay on suunnitellut ja käyttänyt <strong>Aquafarer LLC</strong>, USA. Altaamme valmistaa pitkäaikainen valmistuskumppani Qingdaossa, Kiinassa, ja jokainen yksikkö on 100 % painetestattu ennen toimitusta.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay pudotusommelallas
+
+philosophy:
+  tagline: Filosofiamme
+  heading: Yksinkertainen, kestävä, rehellinen
+  description: 'Allas on lupaus: täytä se kesän ensimmäisenä kuumana päivänä ja se toimii. Kaikki suunnittelemamme palvelee tätä lupausta.'
+  cards:
+    - emoji: "🌊"
+      title: Jäykkä, ei roikkuva
+      description: Pudotusommelseinät puhalletaan jäykiksi ja pitävät muotonsa täydellä vedenpaineella. Ei kaltevia seiniä, ei painuvaa vesirajaa, ei menetettyä syvyyttä.
+    - emoji: "🔧"
+      title: Rakennettu kestämään, ei vaihdettavaksi
+      description: Kestävin uima-allas on se, jota et heitä pois. UV-kestävä, puhkaisunkestävä PVC ja laadukkaat venttiilit tarkoittavat käyttökausia, eivät yhtä kesää.
+    - emoji: "🏆"
+      title: Kesä tehty yksinkertaiseksi
+      description: Nopeasti täytettävä, kymmenen minuuttia taitettava. Ei työkaluja, ei kehyksiä, ei asennusryhmää. Uinnin pitäisi olla helppo osa.
+
+design:
+  tagline: Suunnittelufilosofia
+  heading: "Suunniteltu alkaen<br />\n<span class=\"text-sky-600\">vettä ulospäin</span>"
+  paragraphs:
+    - 'Jokainen Felizbay allas alkaa yhdellä kysymyksellä: <em>mitä vesi tekee sille?</em> Täysi vedenpaine, UV-altistus, kloorikemia, maajätteet – suunnittelemme kaiken ja rakennamme sen päälle.'
+    - Pudotusommelkammiomme on mitoitettu reilusti työpaineen yläpuolelle, joten kuuma iltapäivä ei ylikuormita saumaa. PVCmme on laminoitu UV-stabilisaattoreilla, koska auringonvalo – ei puhkaisu – tappaa useimmat puhallettavat uima-altaat.
+    - Emme suunnittele hintapisteeseen. Suunnittelemme epäonnistumispisteeseen asti – rakennamme sitten sen yli.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay uima-altaan suunnittelu
+  stats:
+    - value: 100%
+      label: "painetestattu<br />ennen pakkaamista"
+    - value: 4–6
+      label: "PSI-luokitus<br />työpaine"
+    - value: 5–15
+      label: "minuutti<br />inflaatio"

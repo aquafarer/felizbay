@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: נבדק בטיחות
+    desc: עוצב בהתייחס ל-EN 16582-1 ו-ASTM F2666; מידע בטיחות ספציפי לדגם מופיע בתיעוד המוצר.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: מערכת ניהול איכות מאושרת על ידי SGS.
+    variant: cert
+  - icon: "✦"
+    title: נבדק לחץ
+    desc: כל בריכה נבדקה לפני שהיא עוזבת את המפעל.
+    variant: standard
+  - icon: "☆"
+    title: שנתיים אחריות
+    desc: אחריות מוגבלת על תפרים, שסתומים ובדים נגד פגמי ייצור.
+    variant: warranty
+  - icon: "⚖"
+    title: תאימות לחומרים
+    desc: חומרי PVC שמקורם בתכשירים תואמי REACH; תיעוד תאימות זמין לפי בקשה.
+    variant: material

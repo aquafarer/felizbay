@@ -1,0 +1,42 @@
+origin:
+  tagline: La nostra origine
+  heading: "Costruito per l'estate,<br />\n<span class=\"text-sky-600\">progettato per durare</span>"
+  paragraphs:
+    - 'Felizbay iniziò con una semplice frustrazione: piscine gonfiabili che si afflosciavano, perdevano acqua e duravano una sola stagione. Credevamo che una piscina potesse essere migliore: abbastanza rigida da poterci nuotare, abbastanza resistente da sopravvivere anno dopo anno e comunque abbastanza piccola da poter essere conservata al chiuso in inverno.'
+    - La risposta è stata la costruzione del punto goccia. Migliaia di fili interni bloccano le pareti rigide sotto pressione, conferendo alla piscina in tessuto la struttura di una piscina dai lati rigidi.
+    - 'Ogni piscina Felizbay è costruita attorno a questo nucleo: materiali di qualità, costruzione testata e ingegneria onesta, a un prezzo che una famiglia può giustificare.'
+    - Felizbay è progettato e gestito da <strong>Aquafarer LLC</strong>, Stati Uniti. Le nostre piscine sono prodotte da un partner produttivo di lunga data a Qingdao, in Cina, e ogni unità viene testata a pressione al 100% prima della spedizione.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Piscina a punto goccia Felizbay
+
+philosophy:
+  tagline: La nostra filosofia
+  heading: Semplice, durevole, onesto
+  description: 'Una piscina è una promessa: riempila il primo giorno caldo d''estate e funziona. Tutto ciò che progettiamo mantiene questa promessa.'
+  cards:
+    - emoji: "🌊"
+      title: Rigido, non cedevole
+      description: Le pareti con punto goccia si gonfiano rigidamente e mantengono la loro forma alla massima pressione dell'acqua. Nessuna parete inclinata, nessuna linea di galleggiamento cedevole, nessuna perdita di profondità.
+    - emoji: "🔧"
+      title: Costruito per durare, non per sostituire
+      description: La piscina più sostenibile è quella che non si butta via. Il PVC resistente ai raggi UV e alle forature e le valvole di qualità significano stagioni di utilizzo, non un'estate.
+    - emoji: "🏆"
+      title: L'estate resa semplice
+      description: Veloce da gonfiare, dieci minuti per ripiegare. Nessuno strumento, nessuna cornice, nessuna squadra di installazione. Il nuoto dovrebbe essere la parte facile.
+
+design:
+  tagline: Filosofia progettuale
+  heading: "Progettato dal<br />\n<span class=\"text-sky-600\">acqua verso l'esterno</span>"
+  paragraphs:
+    - 'Ogni piscina Felizbay inizia con una domanda: <em>cosa gli fa l''acqua?</em> Piena pressione dell''acqua, esposizione ai raggi UV, chimica del cloro, detriti del terreno: progettiamo per tutto questo, quindi costruiamo sopra di esso.'
+    - Le nostre camere per punto goccia sono valutate ben al di sopra della pressione di esercizio, quindi un pomeriggio caldo non sovraccarica una cucitura. Il nostro PVC è laminato con stabilizzatori UV, perché la luce del sole, e non le forature, è ciò che uccide la maggior parte delle piscine gonfiabili.
+    - Non progettiamo in base a un prezzo. Progettiamo fino al punto di fallimento, quindi costruiamo ben oltre quel punto.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Progettazione della piscina Felizbay
+  stats:
+    - value: 100%
+      label: "testato a pressione<br />prima dell'imballaggio"
+    - value: 4–6
+      label: "Valutato PSI<br />pressione di esercizio"
+    - value: 5–15
+      label: "minuto<br />inflazione"

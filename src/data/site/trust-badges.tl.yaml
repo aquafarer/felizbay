@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Sinubok ang Kaligtasan
+    desc: Dinisenyo na may reference sa EN 16582-1 at ASTM F2666; ipinapadala ang impormasyon sa kaligtasan na partikular sa modelo sa dokumentasyon ng produkto.
+    variant: cert
+  - icon: "⚙"
+    title: 'Mo - Fr: 09:00 - 18:00'
+    desc: Sistema ng pamamahala ng kalidad na sertipikado ng SGS.
+    variant: cert
+  - icon: "✦"
+    title: Nasubok ang Presyon
+    desc: Ang bawat pool inflation-tested bago ito umalis sa pabrika.
+    variant: standard
+  - icon: "☆"
+    title: 2-Taon na Warranty
+    desc: Limitadong warranty sa mga tahi, balbula, at tela laban sa mga depekto sa pagmamanupaktura.
+    variant: warranty
+  - icon: "⚖"
+    title: Pagsunod sa Materyal
+    desc: Mga materyales na PVC na galing sa mga formulation na sumusunod sa REACH; available ang dokumentasyon ng pagsunod kapag hiniling.
+    variant: material

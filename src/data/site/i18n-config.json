@@ -234,7 +234,10 @@
     "ideas.titleRetirees": "Pools for Retirees & Empty Nesters",
     "ideas.descRetirees": "A cool soak on a warm afternoon, gentle movement for stiff joints, and a magnet for visiting grandchildren — without the upkeep of a permanent pool.",
     "ideas.altRetirees": "A retired couple enjoying a warm soak in a round Felizbay pool in a flower-filled garden at golden hour.",
-    "nav.footNote": "Premium drop stitch inflatable pools by Felizbay. Designed and operated by Aquafarer LLC, USA."
+    "nav.footNote": "Premium drop stitch inflatable pools by Felizbay. Designed and operated by Aquafarer LLC, USA.",
+    "product.retailIntro": "Fixed-size sets that ship directly to your door — one factory size per set, with pump, repair kit, and storage bag included. Every model in this section can be purchased as a single piece.",
+    "product.wholesaleIntro": "Collections produced for business buyers — vacation rentals, glamping sites, hotels, and resellers. Prices are wholesale FOB (FOB Qingdao, price basis 20 pcs per item); factory size ranges are listed in the specs table. Not available as single-piece retail purchases.",
+    "product.wholesaleFob": "Wholesale FOB"
   },
   "de": {
     "v2.problem": "Das Problem",
@@ -471,7 +474,10 @@
     "ideas.titleRetirees": "Pools für Rentner und leere Nester",
     "ideas.descRetirees": "Ein kühles Bad an einem warmen Nachmittag, sanfte Bewegung gegen steife Gelenke und ein Magnet für den Besuch der Enkelkinder – ohne die Wartung eines permanenten Pools.",
     "ideas.altRetirees": "Ein Rentnerehepaar genießt zur goldenen Stunde ein warmes Bad in einem runden Felizbay-Pool in einem blumengeschmückten Garten.",
-    "nav.footNote": "Aufblasbare Premium-Drop-Stitch-Pools von Felizbay. Entworfen und betrieben von Aquafarer LLC, USA."
+    "nav.footNote": "Aufblasbare Premium-Drop-Stitch-Pools von Felizbay. Entworfen und betrieben von Aquafarer LLC, USA.",
+    "product.retailIntro": "Sets mit fester Größe, die direkt an Ihre Tür geliefert werden — eine Werksgröße pro Set, mit Pumpe, Reparaturset und Aufbewahrungstasche im Lieferumfang enthalten. Jedes Modell in diesem Abschnitt kann als Einzelstück erworben werden.",
+    "product.wholesaleIntro": "Kollektionen für Geschäftskäufer — Ferienwohnungen, Glamping-Sites, Hotels und Wiederverkäufer. Die Preise sind Großhandel FOB (FOB Qingdao, Preisbasis 20 Stück pro Artikel); Werksgrößenbereiche sind in der Spezifikationstabelle aufgeführt. Nicht als Einzelhandelseinkäufe erhältlich.",
+    "product.wholesaleFob": "Großhandel FOB"
   },
   "pt": {
     "nav.products": "Produtos",
@@ -708,7 +714,10 @@
     "ideas.titleRetirees": "Piscinas para aposentados e nesters vazios",
     "ideas.descRetirees": "Um banho fresco em uma tarde quente, movimentos suaves para articulações rígidas e um ímã para netos visitantes – sem a manutenção de uma piscina permanente.",
     "ideas.altRetirees": "Um casal de aposentados desfrutando de um banho quente em uma piscina redonda de Felizbay em um jardim repleto de flores na hora dourada.",
-    "nav.footNote": "Piscinas infláveis ​​premium com ponto drop da Felizbay. Projetado e operado pela Aquafarer LLC, EUA."
+    "nav.footNote": "Piscinas infláveis ​​premium com ponto drop da Felizbay. Projetado e operado pela Aquafarer LLC, EUA.",
+    "product.retailIntro": "Conjuntos de tamanho fixo que são enviados diretamente para a sua porta — um tamanho de fábrica por conjunto, com bomba, kit de reparo e bolsa de armazenamento incluídos. Cada modelo nesta secção pode ser comprado como uma única peça.",
+    "product.wholesaleIntro": "Coleções produzidas para compradores empresariais — aluguéis de férias, sites de glamping, hotéis e revendedores. Os preços são FOB por atacado (FOB Qingdao, base de preço 20 unidades por item); as faixas de tamanho da fábrica estão listadas na tabela de especificações. Não disponível como compras de varejo de peça única.",
+    "product.wholesaleFob": "Atacado FOB"
   },
   "fr": {
     "v2.problem": "Le problème",
@@ -945,7 +954,10 @@
     "ideas.titleRetirees": "Piscines pour retraités et enfants vides",
     "ideas.descRetirees": "Un bain frais par une chaude après-midi, un mouvement doux pour les articulations raides et un aimant pour les petits-enfants en visite – sans l'entretien d'une piscine permanente.",
     "ideas.altRetirees": "Un couple de retraités profitant d'un bain chaud dans une piscine ronde Felizbay dans un jardin fleuri à l'heure dorée.",
-    "nav.footNote": "Piscines gonflables premium drop stitch par Felizbay. Conçu et exploité par Aquafarer LLC, États-Unis."
+    "nav.footNote": "Piscines gonflables premium drop stitch par Felizbay. Conçu et exploité par Aquafarer LLC, États-Unis.",
+    "product.retailIntro": "Ensembles de taille fixe expédiés directement à votre porte — une taille d'usine par ensemble, avec pompe, kit de réparation et sac de rangement inclus. Chaque modèle de cette section peut être acheté en une seule pièce.",
+    "product.wholesaleIntro": "Collections produites pour les acheteurs professionnels : locations de vacances, sites de glamping, hôtels et revendeurs. Les prix sont FOB de gros (FOB Qingdao, base de prix 20 pièces par article) ; les plages de tailles d'usine sont répertoriées dans le tableau des spécifications. Non disponible en tant qu'achats au détail d'une seule pièce.",
+    "product.wholesaleFob": "FOB en gros"
   },
   "es": {
     "nav.products": "Productos",
@@ -1182,7 +1194,10 @@
     "ideas.titleRetirees": "Piscinas para jubilados y personas con nidos vacíos",
     "ideas.descRetirees": "Un baño fresco en una tarde cálida, un movimiento suave para las articulaciones rígidas y un imán para las visitas de los nietos, sin el mantenimiento de una piscina permanente.",
     "ideas.altRetirees": "Una pareja de jubilados disfrutando de un baño caliente en una piscina redonda de Felizbay en un jardín lleno de flores en la hora dorada.",
-    "nav.footNote": "Piscinas hinchables premium drop stitch de Felizbay. Diseñado y operado por Aquafarer LLC, EE. UU."
+    "nav.footNote": "Piscinas hinchables premium drop stitch de Felizbay. Diseñado y operado por Aquafarer LLC, EE. UU.",
+    "product.retailIntro": "Juegos de tamaño fijo que se envían directamente a su puerta: un tamaño de fábrica por juego, con bomba, kit de reparación y bolsa de almacenamiento incluidos. Todos los modelos de esta sección se pueden adquirir como una sola pieza.",
+    "product.wholesaleIntro": "Colecciones producidas para compradores de empresas: alquileres vacacionales, sitios de glamping, hoteles y revendedores. Los precios son FOB al por mayor (FOB Qingdao, precio base 20 unidades por artículo); Los rangos de tamaño de fábrica se enumeran en la tabla de especificaciones. No disponible como compras minoristas de una sola pieza.",
+    "product.wholesaleFob": "MANDO al por mayor"
   },
   "it": {
     "nav.products": "Prodotti",
@@ -1419,7 +1434,10 @@
     "ideas.titleRetirees": "Piscine per pensionati e nidificanti vuoti",
     "ideas.descRetirees": "Un bagno fresco in un pomeriggio caldo, movimenti delicati per le articolazioni rigide e una calamita per la visita dei nipoti, senza la manutenzione di una piscina permanente.",
     "ideas.altRetirees": "Una coppia di pensionati che si gode un caldo bagno in una piscina rotonda di Felizbay in un giardino fiorito all'ora d'oro.",
-    "nav.footNote": "Piscine gonfiabili Premium Drop Stitch di Felizbay. Progettato e gestito da Aquafarer LLC, USA."
+    "nav.footNote": "Piscine gonfiabili Premium Drop Stitch di Felizbay. Progettato e gestito da Aquafarer LLC, USA.",
+    "product.retailIntro": "Set di dimensioni fisse spediti direttamente a casa tua: una dimensione di fabbrica per set, con pompa, kit di riparazione e custodia inclusi. Ogni modello presente in questa sezione può essere acquistato come pezzo unico.",
+    "product.wholesaleIntro": "Collezioni prodotte per acquirenti aziendali: case vacanze, glamping, hotel e rivenditori. I prezzi sono FOB all'ingrosso (FOB Qingdao, prezzo base 20 pezzi per articolo); gli intervalli di dimensioni di fabbrica sono elencati nella tabella delle specifiche. Non disponibile come acquisto al dettaglio a pezzo singolo.",
+    "product.wholesaleFob": "FOB all'ingrosso"
   },
   "ru": {
     "nav.products": "Товары",
@@ -1656,7 +1674,10 @@
     "ideas.titleRetirees": "Бассейны для пенсионеров и пустующих гнезд",
     "ideas.descRetirees": "Прохладное купание в теплый полдень, нежное движение для затекших суставов и магнит для посещения внуков — без постоянного ухода за бассейном.",
     "ideas.altRetirees": "Пара пенсионеров наслаждается теплым купанием в круглом бассейне Фелизбей в цветущем саду в золотой час.",
-    "nav.footNote": "Надувные бассейны премиум-класса с капельной строчкой от Felizbay. Разработан и эксплуатируется компанией Aquafarer LLC, США."
+    "nav.footNote": "Надувные бассейны премиум-класса с капельной строчкой от Felizbay. Разработан и эксплуатируется компанией Aquafarer LLC, США.",
+    "product.retailIntro": "Наборы фиксированного размера, которые доставляются прямо к вашей двери — каждый комплект включает один заводской размер, включая насос, ремонтный комплект и сумку для хранения. Любую модель из этого раздела можно приобрести в единственном экземпляре.",
+    "product.wholesaleIntro": "Коллекции созданы для бизнес-покупателей — объектов для аренды на время отпуска, мест для глэмпинга, отелей и торговых посредников. Цены указаны оптовым FOB (FOB Циндао, цена 20 шт. за единицу); Заводские размеры указаны в таблице технических характеристик. Недоступно для розничной покупки поштучно.",
+    "product.wholesaleFob": "Оптовая продажа на условиях ФОБ"
   },
   "pl": {
     "nav.products": "Produkty",
@@ -1893,7 +1914,10 @@
     "ideas.titleRetirees": "Baseny dla emerytów i pustych gniazdowców",
     "ideas.descRetirees": "Chłodna kąpiel w ciepłe popołudnie, delikatny ruch dla sztywnych stawów i magnes na odwiedziny wnuków – bez konieczności utrzymywania stałego basenu.",
     "ideas.altRetirees": "Para emerytów ciesząca się ciepłą kąpielą w okrągłym basenie Felizbay w pełnym kwiatów ogrodzie o złotej godzinie.",
-    "nav.footNote": "Nadmuchiwane baseny klasy premium firmy Felizbay. Zaprojektowany i obsługiwany przez Aquafarer LLC, USA."
+    "nav.footNote": "Nadmuchiwane baseny klasy premium firmy Felizbay. Zaprojektowany i obsługiwany przez Aquafarer LLC, USA.",
+    "product.retailIntro": "Zestawy o stałym rozmiarze wysyłane bezpośrednio do Twoich drzwi — jeden rozmiar fabryczny na zestaw, z pompką, zestawem naprawczym i torbą do przechowywania. Każdy model w tym dziale można kupić w pojedynczych egzemplarzach.",
+    "product.wholesaleIntro": "Kolekcje stworzone dla odbiorców biznesowych — obiektów wynajmu wakacyjnego, obiektów typu glamping, hoteli i sprzedawców. Ceny są hurtowe FOB (FOB Qingdao, podstawa ceny 20 sztuk za sztukę); fabryczne zakresy rozmiarów są wymienione w tabeli specyfikacji. Niedostępne w sprzedaży detalicznej pojedynczych sztuk.",
+    "product.wholesaleFob": "Hurtownia FOB"
   },
   "ar": {
     "nav.products": "المنتجات",
@@ -2130,7 +2154,10 @@
     "ideas.titleRetirees": "حمامات للمتقاعدين والعشائر الفارغة",
     "ideas.descRetirees": "حمام سباحة بارد في فترة ما بعد الظهيرة الدافئة، وحركة لطيفة للمفاصل المتصلبة، ومغناطيس لزيارة الأحفاد - دون صيانة حوض سباحة دائم.",
     "ideas.altRetirees": "زوجان متقاعدان يستمتعان بالاستحمام الدافئ في مسبح Felizbay الدائري في حديقة مليئة بالأزهار في الساعة الذهبية.",
-    "nav.footNote": "حمامات سباحة قابلة للنفخ ذات غرز متدلية ممتازة من Felizbay. تم تصميمه وتشغيله بواسطة شركة Aquafarer LLC، الولايات المتحدة الأمريكية."
+    "nav.footNote": "حمامات سباحة قابلة للنفخ ذات غرز متدلية ممتازة من Felizbay. تم تصميمه وتشغيله بواسطة شركة Aquafarer LLC، الولايات المتحدة الأمريكية.",
+    "product.retailIntro": "مجموعات ذات حجم ثابت يتم شحنها مباشرة إلى باب منزلك - حجم مصنع واحد لكل مجموعة، مع مضخة، ومجموعة إصلاح، وحقيبة تخزين متضمنة. يمكن شراء كل موديل في هذا القسم كقطعة واحدة.",
+    "product.wholesaleIntro": "المجموعات المُنتجة للمشترين من الشركات - إيجارات العطلات، ومواقع التخييم الفخمة، والفنادق، والبائعين. الأسعار بالجملة FOB (FOB Qingdao، أساس السعر 20 قطعة لكل منتج)؛ نطاقات حجم المصنع مدرجة في جدول المواصفات. غير متوفر كمشتريات التجزئة قطعة واحدة.",
+    "product.wholesaleFob": "فوب بالجملة"
   },
   "nl": {
     "nav.products": "Producten",
@@ -2367,7 +2394,10 @@
     "ideas.titleRetirees": "Zwembaden voor gepensioneerden en lege nesters",
     "ideas.descRetirees": "Een verkoelende duik op een warme middag, zachte bewegingen voor stijve gewrichten en een magneet voor bezoekende kleinkinderen – zonder het onderhoud van een permanent zwembad.",
     "ideas.altRetirees": "Een gepensioneerd echtpaar geniet tijdens het gouden uur van een warme duik in een rond Felizbay-zwembad in een bloemrijke tuin.",
-    "nav.footNote": "Premium drop-stitch opblaasbare zwembaden van Felizbay. Ontworpen en beheerd door Aquafarer LLC, VS."
+    "nav.footNote": "Premium drop-stitch opblaasbare zwembaden van Felizbay. Ontworpen en beheerd door Aquafarer LLC, VS.",
+    "product.retailIntro": "Sets met een vast formaat die rechtstreeks naar uw deur worden verzonden - één fabrieksmaat per set, inclusief pomp, reparatieset en opbergtas. Elk model in deze sectie kan per stuk worden gekocht.",
+    "product.wholesaleIntro": "Collecties gemaakt voor zakelijke kopers: vakantiewoningen, glampings, hotels en wederverkopers. Prijzen zijn groothandel FOB (FOB Qingdao, prijsbasis 20 stuks per stuk); Het fabrieksgroottebereik staat vermeld in de specificatietabel. Niet verkrijgbaar als detailhandelsaankoop per stuk.",
+    "product.wholesaleFob": "Groothandel FOB"
   },
   "sv": {
     "nav.products": "Produkter",
@@ -2604,7 +2634,10 @@
     "ideas.titleRetirees": "Pooler för pensionärer och tomboende",
     "ideas.descRetirees": "En sval blöt på en varm eftermiddag, mjuk rörelse för stela leder och en magnet för besökande barnbarn - utan underhåll av en permanent pool.",
     "ideas.altRetirees": "Ett pensionerat par som njuter av ett varmt bad i en rund Felizbay-pool i en blomsterfylld trädgård vid gyllene timmen.",
-    "nav.footNote": "Uppblåsbara pooler i premium dropstitch från Felizbay. Designad och drivs av Aquafarer LLC, USA."
+    "nav.footNote": "Uppblåsbara pooler i premium dropstitch från Felizbay. Designad och drivs av Aquafarer LLC, USA.",
+    "product.retailIntro": "Set i fast storlek som skickas direkt till din dörr - en fabriksstorlek per set, med pump, reparationssats och förvaringsväska ingår. Varje modell i denna sektion kan köpas som ett stycke.",
+    "product.wholesaleIntro": "Samlingar producerade för företagsköpare — semesterbostäder, glampingplatser, hotell och återförsäljare. Priserna är grossist FOB (FOB Qingdao, prisbas 20 st per artikel); fabriksstorleksintervall anges i specstabellen. Ej tillgängligt som detaljhandelsköp i ett stycke.",
+    "product.wholesaleFob": "Grossist FOB"
   },
   "no": {
     "nav.products": "Produkter",
@@ -2841,7 +2874,10 @@
     "ideas.titleRetirees": "Bassenger for pensjonister og tomme Nesters",
     "ideas.descRetirees": "En kjølig bløtlegging på en varm ettermiddag, milde bevegelser for stive ledd, og en magnet for besøkende barnebarn – uten vedlikehold av et permanent basseng.",
     "ideas.altRetirees": "Et pensjonert par nyter et varmt bad i et rundt Felizbay-basseng i en blomsterfylt hage ved golden hour.",
-    "nav.footNote": "Premium drop stitch oppblåsbare bassenger fra Felizbay. Designet og drevet av Aquafarer LLC, USA."
+    "nav.footNote": "Premium drop stitch oppblåsbare bassenger fra Felizbay. Designet og drevet av Aquafarer LLC, USA.",
+    "product.retailIntro": "Sett i fast størrelse som sendes direkte til døren din - én fabrikkstørrelse per sett, med pumpe, reparasjonssett og oppbevaringspose inkludert. Hver modell i denne delen kan kjøpes som ett stykke.",
+    "product.wholesaleIntro": "Samlinger produsert for bedriftskjøpere – ferieutleie, glampingsteder, hoteller og forhandlere. Prisene er engros FOB (FOB Qingdao, prisgrunnlag 20 stk per vare); fabrikkstørrelsesområder er oppført i spesifikasjonstabellen. Ikke tilgjengelig som detaljkjøp i ett stykke.",
+    "product.wholesaleFob": "Engros FOB"
   },
   "el": {
     "nav.products": "Προϊόντα",
@@ -3078,7 +3114,10 @@
     "ideas.titleRetirees": "Πισίνες για Συνταξιούχους & Άδειους Φωλιωτούς",
     "ideas.descRetirees": "Δροσερό μούσκεμα ένα ζεστό απόγευμα, απαλή κίνηση για δύσκαμπτες αρθρώσεις και μαγνήτης για επίσκεψη στα εγγόνια — χωρίς τη συντήρηση μιας μόνιμης πισίνας.",
     "ideas.altRetirees": "Ένα ζευγάρι συνταξιούχων που απολαμβάνει ένα ζεστό μούσκεμα σε μια στρογγυλή πισίνα Felizbay σε έναν γεμάτο λουλούδια κήπο τη χρυσή ώρα.",
-    "nav.footNote": "Φουσκωτές πισίνες Premium drop stitch της Felizbay. Σχεδιάστηκε και λειτουργεί από την Aquafarer LLC, ΗΠΑ."
+    "nav.footNote": "Φουσκωτές πισίνες Premium drop stitch της Felizbay. Σχεδιάστηκε και λειτουργεί από την Aquafarer LLC, ΗΠΑ.",
+    "product.retailIntro": "Σετ σταθερού μεγέθους που αποστέλλονται απευθείας στην πόρτα σας — ένα εργοστασιακό μέγεθος ανά σετ, με αντλία, κιτ επισκευής και τσάντα αποθήκευσης. Κάθε μοντέλο σε αυτήν την ενότητα μπορεί να αγοραστεί ως ένα μόνο κομμάτι.",
+    "product.wholesaleIntro": "Συλλογές που παράγονται για επιχειρηματίες αγοραστές — ενοικιάσεις διακοπών, ιστοσελίδες για γκάμπινγκ, ξενοδοχεία και μεταπωλητές. Οι τιμές είναι χονδρικής FOB (FOB Qingdao, βάση τιμής 20 τμχ ανά τεμάχιο). Οι σειρές εργοστασιακών μεγεθών παρατίθενται στον πίνακα προδιαγραφών. Δεν διατίθεται για αγορές λιανικής με ένα κομμάτι.",
+    "product.wholesaleFob": "Χονδρική FOB"
   },
   "fi": {
     "nav.products": "Tuotteet",
@@ -3315,7 +3354,10 @@
     "ideas.titleRetirees": "Uima-altaat eläkeläisille ja tyhjille pesäilijöille",
     "ideas.descRetirees": "Viileä liotus lämpimänä iltapäivänä, lempeä liike jäykille nivelille ja magneetti vieraileville lastenlapsille – ilman pysyvän uima-altaan ylläpitoa.",
     "ideas.altRetirees": "Eläkkeellä oleva pariskunta nauttii lämpimästä levosta pyöreässä Felizbayn uima-altaassa kukkien täyttämässä puutarhassa kultaisena hetkenä.",
-    "nav.footNote": "Felizbayn korkealuokkaiset pudotusommel puhallettavat altaat. Suunnittelija ja operoi Aquafarer LLC, USA."
+    "nav.footNote": "Felizbayn korkealuokkaiset pudotusommel puhallettavat altaat. Suunnittelija ja operoi Aquafarer LLC, USA.",
+    "product.retailIntro": "Kiinteän kokoiset sarjat, jotka toimitetaan suoraan kotiovellesi – yksi tehdaskoko sarjaa kohden, mukana pumppu, korjaussarja ja säilytyspussi. Jokainen tässä osiossa oleva malli voidaan ostaa yhtenä kappaleena.",
+    "product.wholesaleIntro": "Kokoelmat tuotettu yritysostajalle — loma-asunnot, glamping-sivustot, hotellit ja jälleenmyyjät. Hinnat ovat tukku FOB (FOB Qingdao, hintaperuste 20 kpl per tuote); tehdaskokoalueet on lueteltu teknisissä taulukoissa. Ei saatavilla yksiosaisena vähittäismyyntinä.",
+    "product.wholesaleFob": "Tukku FOB"
   },
   "da": {
     "nav.products": "Produkter",
@@ -3552,7 +3594,10 @@
     "ideas.titleRetirees": "Puljer for pensionister og tomme beboere",
     "ideas.descRetirees": "En kølig opblødning på en varm eftermiddag, blide bevægelser for stive led og en magnet for besøgende børnebørn - uden vedligeholdelse af en permanent pool.",
     "ideas.altRetirees": "Et pensioneret par, der nyder et varmt bad i en rund Felizbay-pool i en blomsterfyldt have på den gyldne time.",
-    "nav.footNote": "Premium drop stitch oppustelige pools fra Felizbay. Designet og drevet af Aquafarer LLC, USA."
+    "nav.footNote": "Premium drop stitch oppustelige pools fra Felizbay. Designet og drevet af Aquafarer LLC, USA.",
+    "product.retailIntro": "Sæt i fast størrelse, der sendes direkte til din dør - en fabriksstørrelse pr. sæt, med pumpe, reparationssæt og opbevaringstaske inkluderet. Hver model i denne sektion kan købes samlet.",
+    "product.wholesaleIntro": "Samlinger produceret til erhvervskøbere - ferieboliger, glampingsteder, hoteller og forhandlere. Priserne er engros FOB (FOB Qingdao, prisgrundlag 20 stk pr. vare); fabriksstørrelsesintervaller er angivet i specifikationstabellen. Ikke tilgængelig som detailkøb i ét stykke.",
+    "product.wholesaleFob": "Engros FOB"
   },
   "th": {
     "nav.signIn": "เข้าสู่ระบบ",
@@ -3789,7 +3834,10 @@
     "ideas.titleRetirees": "สระว่ายน้ำสำหรับผู้เกษียณอายุและผู้ว่างงาน",
     "ideas.descRetirees": "แช่เย็นในช่วงบ่ายอันอบอุ่น เคลื่อนไหวเบาๆ สำหรับข้อต่อที่แข็ง และเป็นแม่เหล็กสำหรับเยี่ยมหลาน โดยไม่ต้องดูแลสระน้ำถาวร",
     "ideas.altRetirees": "คู่รักวัยเกษียณกำลังเพลิดเพลินกับการแช่ตัวในสระน้ำ Felizbay ทรงกลมในสวนที่เต็มไปด้วยดอกไม้ในช่วงเวลาทอง",
-    "nav.footNote": "สระน้ำเป่าลมแบบหยดน้ำระดับพรีเมียมจาก Felizbay ออกแบบและดำเนินการโดย Aquafarer LLC สหรัฐอเมริกา"
+    "nav.footNote": "สระน้ำเป่าลมแบบหยดน้ำระดับพรีเมียมจาก Felizbay ออกแบบและดำเนินการโดย Aquafarer LLC สหรัฐอเมริกา",
+    "product.retailIntro": "ชุดขนาดตายตัวที่จัดส่งตรงถึงประตูบ้านคุณ - หนึ่งขนาดโรงงานต่อชุด พร้อมปั๊ม ชุดซ่อม และถุงเก็บของ ทุกรุ่นในส่วนนี้สามารถซื้อเป็นชิ้นเดียวได้",
+    "product.wholesaleIntro": "คอลเลกชันที่ผลิตขึ้นสำหรับผู้ซื้อทางธุรกิจ เช่น ที่พักตากอากาศ สถานที่ตั้งแคมป์ โรงแรม และผู้ค้าปลีก ราคาขายส่ง FOB (FOB ชิงเต่า ราคาพื้นฐาน 20 ชิ้นต่อรายการ); ช่วงขนาดโรงงานแสดงอยู่ในตารางข้อมูลจำเพาะ ไม่สามารถจำหน่ายเป็นการซื้อปลีกชิ้นเดียว",
+    "product.wholesaleFob": "การขายส่งเอฟโอบี"
   },
   "tr": {
     "nav.signIn": "Giriş Yap",
@@ -4026,7 +4074,10 @@
     "ideas.titleRetirees": "Emekliler ve Boş Yuvacılar için Havuzlar",
     "ideas.descRetirees": "Sıcak bir öğleden sonra serin bir ıslanma, sert eklemler için hafif bir hareket ve torunları ziyaret etmek için bir mıknatıs - kalıcı bir havuzun bakımına gerek kalmadan.",
     "ideas.altRetirees": "Emekli bir çift, altın saatte çiçeklerle dolu bir bahçedeki yuvarlak Felizbay havuzunda sıcacık bir serinliğin tadını çıkarıyor.",
-    "nav.footNote": "Felizbay'dan birinci sınıf damla dikişli şişme havuzlar. Aquafarer LLC, ABD tarafından tasarlanmış ve işletilmektedir."
+    "nav.footNote": "Felizbay'dan birinci sınıf damla dikişli şişme havuzlar. Aquafarer LLC, ABD tarafından tasarlanmış ve işletilmektedir.",
+    "product.retailIntro": "Doğrudan kapınıza gönderilen sabit boyutlu setler; pompa, tamir seti ve saklama çantasıyla birlikte set başına bir fabrika boyutu. Bu bölümdeki her model tek parça olarak satın alınabilir.",
+    "product.wholesaleIntro": "Kiralık tatil yerleri, glamping siteleri, oteller ve bayiler gibi ticari alıcılar için üretilen koleksiyonlar. Fiyatlar toptan FOB'dur (FOB Qingdao, fiyat bazında ürün başına 20 adet); fabrika boyut aralıkları özellikler tablosunda listelenmiştir. Tek parça perakende alımları mevcut değildir.",
+    "product.wholesaleFob": "Toptan FOB"
   },
   "id": {
     "nav.signIn": "Masuk",
@@ -4263,7 +4314,10 @@
     "ideas.titleRetirees": "Kolam untuk Pensiunan & Orang yang Bersarang Kosong",
     "ideas.descRetirees": "Berendam sejuk di sore hari yang hangat, gerakan lembut untuk persendian yang kaku, dan menjadi magnet bagi cucu yang berkunjung — tanpa harus memelihara kolam permanen.",
     "ideas.altRetirees": "Sepasang suami istri pensiunan menikmati berendam air hangat di kolam bundar Felizbay di taman yang dipenuhi bunga pada jam emas.",
-    "nav.footNote": "Kolam tiup jahitan jatuh premium dari Felizbay. Dirancang dan dioperasikan oleh Aquafarer LLC, AS."
+    "nav.footNote": "Kolam tiup jahitan jatuh premium dari Felizbay. Dirancang dan dioperasikan oleh Aquafarer LLC, AS.",
+    "product.retailIntro": "Set ukuran tetap yang dikirim langsung ke rumah Anda — satu ukuran pabrik per set, termasuk pompa, kit perbaikan, dan tas penyimpanan. Setiap model di bagian ini dapat dibeli sebagai satu kesatuan.",
+    "product.wholesaleIntro": "Koleksi yang diproduksi untuk pembeli bisnis — persewaan liburan, tempat glamping, hotel, dan pengecer. Harga adalah FOB grosir (FOB Qingdao, harga dasar 20 pcs per item); rentang ukuran pabrik tercantum dalam tabel spesifikasi. Tidak tersedia sebagai pembelian eceran satuan.",
+    "product.wholesaleFob": "FOB grosir"
   },
   "cs": {
     "nav.signIn": "Přihlásit se",
@@ -4500,7 +4554,10 @@
     "ideas.titleRetirees": "Bazény pro důchodce a prázdné hnízda",
     "ideas.descRetirees": "Chladivé namočení v teplém odpoledni, jemný pohyb pro ztuhlé klouby a magnet na návštěvu vnoučat – bez údržby trvalého bazénu.",
     "ideas.altRetirees": "Důchodový pár, který si užívá teplé koupele v kulatém bazénu Felizbay v zahradě plné květin ve zlaté hodině.",
-    "nav.footNote": "Prémiové nafukovací bazény s kapkovým stehem od Felizbay. Navrženo a provozováno společností Aquafarer LLC, USA."
+    "nav.footNote": "Prémiové nafukovací bazény s kapkovým stehem od Felizbay. Navrženo a provozováno společností Aquafarer LLC, USA.",
+    "product.retailIntro": "Sady pevné velikosti, které se dodávají přímo k vašim dveřím – jedna tovární velikost na sadu, včetně pumpy, sady na opravu a úložného vaku. Každý model v této sekci lze zakoupit jako jeden kus.",
+    "product.wholesaleIntro": "Kolekce vytvořené pro obchodní zákazníky – rekreační pronájmy, glampingové weby, hotely a prodejce. Ceny jsou velkoobchodní FOB (FOB Qingdao, cenový základ 20 ks za položku); rozsahy továrních velikostí jsou uvedeny v tabulce specifikací. Není k dispozici jako maloobchodní nákupy po jednom kuse.",
+    "product.wholesaleFob": "Velkoobchod FOB"
   },
   "hr": {
     "nav.signIn": "Prijava",
@@ -4737,7 +4794,10 @@
     "ideas.titleRetirees": "Bazeni za umirovljenike & Empty Nesters",
     "ideas.descRetirees": "Hladno namakanje u toplo poslijepodne, nježni pokreti za ukočene zglobove i magnet za posjet unucima — bez održavanja stalnog bazena.",
     "ideas.altRetirees": "Umirovljeni par uživa u toplom kupanju u okruglom Felizbay bazenu u vrtu punom cvijeća u zlatnom satu.",
-    "nav.footNote": "Premium drop stitch bazeni na napuhavanje tvrtke Felizbay. Dizajnirao i upravlja Aquafarer LLC, SAD."
+    "nav.footNote": "Premium drop stitch bazeni na napuhavanje tvrtke Felizbay. Dizajnirao i upravlja Aquafarer LLC, SAD.",
+    "product.retailIntro": "Setovi fiksne veličine koji se isporučuju izravno na vaša vrata — jedna tvornička veličina po setu, s uključenom pumpom, kompletom za popravak i vrećicom za pohranu. Svaki model u ovom odjeljku može se kupiti kao pojedinačni komad.",
+    "product.wholesaleIntro": "Kolekcije proizvedene za poslovne kupce — smještaj za odmor, mjesta za glamping, hotele i preprodavače. Cijene su veleprodajne FOB (FOB Qingdao, cijena je 20 komada po artiklu); tvornički rasponi veličina navedeni su u tablici specifikacija. Nije dostupno kao pojedinačni komad u maloprodaji.",
+    "product.wholesaleFob": "Veleprodaja FOB"
   },
   "hu": {
     "nav.signIn": "Bejelentkezés",
@@ -4974,7 +5034,10 @@
     "ideas.titleRetirees": "Medencék nyugdíjasoknak és üres fészkelőknek",
     "ideas.descRetirees": "Hűvös áztatás egy meleg délutánon, gyengéd mozgás a merev ízületekért és mágnes az unokák meglátogatásához – állandó medence karbantartása nélkül.",
     "ideas.altRetirees": "Nyugdíjas házaspár meleg fürdőzést élvez a kerek Felizbay medencében egy virágokkal teli kertben aranyórában.",
-    "nav.footNote": "Felizbay prémium öltéses felfújható medencék. Tervezője és üzemeltetője az Aquafarer LLC, USA."
+    "nav.footNote": "Felizbay prémium öltéses felfújható medencék. Tervezője és üzemeltetője az Aquafarer LLC, USA.",
+    "product.retailIntro": "Fix méretű készletek, amelyeket közvetlenül az ajtóhoz szállítanak – készletenként egy gyári méret, szivattyúval, javítókészlettel és tárolótáskával. Ebben a részben minden modell egy darabként is megvásárolható.",
+    "product.wholesaleIntro": "Vállalkozási vásárlók számára készült kollekciók – nyaralók, glamping-helyek, szállodák és viszonteladók. Az árak nagykereskedelmi FOB (FOB Qingdao, ár alap 20 db / tétel); A gyári mérettartományokat a specifikációs táblázat tartalmazza. Kiskereskedelmi egy darabban nem vásárolható meg.",
+    "product.wholesaleFob": "Nagykereskedelmi FOB"
   },
   "ro": {
     "nav.signIn": "Autentificare",
@@ -5211,7 +5274,10 @@
     "ideas.titleRetirees": "Bazine pentru pensionari și pentru cei care ne-au gol",
     "ideas.descRetirees": "O baie rece într-o după-amiază caldă, mișcare blândă pentru articulații rigide și un magnet pentru vizitarea nepoților - fără întreținerea unei piscine permanente.",
     "ideas.altRetirees": "Un cuplu de pensionari care se bucură de o baie caldă într-o piscină rotundă Felizbay, într-o grădină plină de flori, la ora de aur.",
-    "nav.footNote": "Piscine gonflabile premium cu cusătură drop de la Felizbay. Proiectat și operat de Aquafarer LLC, SUA."
+    "nav.footNote": "Piscine gonflabile premium cu cusătură drop de la Felizbay. Proiectat și operat de Aquafarer LLC, SUA.",
+    "product.retailIntro": "Seturi de dimensiuni fixe care se livrează direct la ușa dvs. - o dimensiune din fabrică per set, cu pompă, kit de reparații și geantă de depozitare incluse. Fiecare model din această secțiune poate fi achiziționat ca o singură piesă.",
+    "product.wholesaleIntro": "Colecții produse pentru cumpărători de afaceri — închirieri de vacanță, site-uri de glamping, hoteluri și revânzători. Prețurile sunt FOB cu ridicata (FOB Qingdao, preț bazat 20 buc per articol); intervalele de dimensiuni din fabrică sunt listate în tabelul cu specificații. Nu este disponibil ca achiziții cu amănuntul dintr-o singură bucată.",
+    "product.wholesaleFob": "Comerț cu ridicata FOB"
   },
   "sk": {
     "nav.signIn": "Prihlásiť sa",
@@ -5448,7 +5514,10 @@
     "ideas.titleRetirees": "Bazény pre dôchodcov a prázdnych hniezdičov",
     "ideas.descRetirees": "Chladivé popoludnie v teplom popoludňajších hodinách, jemný pohyb pre stuhnuté kĺby a magnet na návštevu vnúčat – bez údržby stáleho bazéna.",
     "ideas.altRetirees": "Dôchodcovský pár si v zlatej hodine užíva teplý kúpeľ v okrúhlom bazéne Felizbay v záhrade plnej kvetov.",
-    "nav.footNote": "Prémiové nafukovacie bazény s padacím stehom od Felizbay. Navrhnuté a prevádzkované spoločnosťou Aquafarer LLC, USA."
+    "nav.footNote": "Prémiové nafukovacie bazény s padacím stehom od Felizbay. Navrhnuté a prevádzkované spoločnosťou Aquafarer LLC, USA.",
+    "product.retailIntro": "Súpravy s pevnou veľkosťou, ktoré sa dodávajú priamo k vašim dverám – jedna výrobná veľkosť na súpravu, vrátane pumpy, súpravy na opravu a úložného vrecka. Každý model v tejto sekcii je možné zakúpiť ako jeden kus.",
+    "product.wholesaleIntro": "Kolekcie vytvorené pre obchodných zákazníkov – dovolenkové prenájmy, glampingové stránky, hotely a predajcovia. Ceny sú veľkoobchodné FOB (FOB Qingdao, cenový základ 20 ks za položku); rozsahy veľkostí z výroby sú uvedené v tabuľke špecifikácií. Nie je k dispozícii ako maloobchodný nákup po jednom kuse.",
+    "product.wholesaleFob": "Veľkoobchod FOB"
   },
   "bg": {
     "nav.signIn": "Вход",
@@ -5685,7 +5754,10 @@
     "ideas.titleRetirees": "Басейни за пенсионери и празни гнезда",
     "ideas.descRetirees": "Прохладно накисване в топъл следобед, нежно движение за схванати стави и магнит за посещение на внуци - без поддръжката на постоянен басейн.",
     "ideas.altRetirees": "Пенсионирана двойка, която се наслаждава на топла вода в кръгъл басейн Felizbay в пълна с цветя градина в златния час.",
-    "nav.footNote": "Първокласни надуваеми басейни от Felizbay. Проектиран и управляван от Aquafarer LLC, САЩ."
+    "nav.footNote": "Първокласни надуваеми басейни от Felizbay. Проектиран и управляван от Aquafarer LLC, САЩ.",
+    "product.retailIntro": "Комплекти с фиксиран размер, които се доставят директно до вашата врата — един фабричен размер на комплект, с включени помпа, ремонтен комплект и чанта за съхранение. Всеки модел в този раздел може да бъде закупен като единична бройка.",
+    "product.wholesaleIntro": "Колекции, създадени за бизнес купувачи — ваканционни имоти под наем, места за глемпинг, хотели и дистрибутори. Цените са FOB на едро (FOB Кингдао, ценова база 20 бр. на артикул); фабричните размери са посочени в таблицата със спецификациите. Не се предлага като покупка на дребно на единична бройка.",
+    "product.wholesaleFob": "Търговия на едро FOB"
   },
   "sl": {
     "nav.signIn": "Prijava",
@@ -5922,7 +5994,10 @@
     "ideas.titleRetirees": "Bazeni za upokojence & Empty Nesters",
     "ideas.descRetirees": "Hladno namakanje v toplem popoldnevu, nežno gibanje za otrdele sklepe in magnet za obisk vnukov – brez vzdrževanja stalnega bazena.",
     "ideas.altRetirees": "Upokojeni par ob zlati uri uživa v toplem namakanju v okroglem bazenu Felizbay na vrtu, polnem cvetja.",
-    "nav.footNote": "Vrhunski napihljivi bazeni Felizbay. Oblikoval in upravlja Aquafarer LLC, ZDA."
+    "nav.footNote": "Vrhunski napihljivi bazeni Felizbay. Oblikoval in upravlja Aquafarer LLC, ZDA.",
+    "product.retailIntro": "Kompleti fiksne velikosti, ki se pošljejo neposredno do vaših vrat — ena tovarniška velikost na komplet, vključno s črpalko, kompletom za popravilo in vrečko za shranjevanje. Vsak model v tem razdelku je mogoče kupiti kot en kos.",
+    "product.wholesaleIntro": "Zbirke, izdelane za poslovne kupce — počitniške najemnine, glampinge, hotele in preprodajalce. Cene so veleprodajne FOB (FOB Qingdao, osnova cene 20 kosov na kos); tovarniške velikosti so navedene v tabeli specifikacij. Ni na voljo v maloprodaji po enem kosu.",
+    "product.wholesaleFob": "Veleprodaja FOB"
   },
   "sr": {
     "nav.signIn": "Prijava",
@@ -6159,7 +6234,10 @@
     "ideas.titleRetirees": "Базени за пензионере и празне гнезде",
     "ideas.descRetirees": "Хладно намакање у топлом поподневу, нежни покрети за укочене зглобове и магнет за посету унуцима - без одржавања сталног базена.",
     "ideas.altRetirees": "Пар у пензији који ужива у топлом купању у округлом базену Фелизбаи у врту пуној цвећа у златни час.",
-    "nav.footNote": "Врхунски базени на надувавање са шавом од Фелизбаи-а. Дизајнирао и управља Акуафарер ЛЛЦ, САД."
+    "nav.footNote": "Врхунски базени на надувавање са шавом од Фелизбаи-а. Дизајнирао и управља Акуафарер ЛЛЦ, САД.",
+    "product.retailIntro": "Сетови фиксне величине који се испоручују директно на ваша врата — једна фабричка величина по комплету, са укљученим пумпом, комплетом за поправку и торбом за складиштење. Сваки модел у овом одељку може се купити као један комад.",
+    "product.wholesaleIntro": "Колекције произведене за пословне купце — изнајмљивања за одмор, глампинг локације, хотеле и препродавце. Цене су велепродајне ФОБ (ФОБ Кингдао, основа цене 20 ком по артиклу); фабрички распони величина су наведени у табели са спецификацијама. Није доступно као појединачна малопродаја.",
+    "product.wholesaleFob": "Велепродаја ФОБ"
   },
   "lt": {
     "nav.signIn": "Prisijungti",
@@ -6396,7 +6474,10 @@
     "ideas.titleRetirees": "Baseinai pensininkams ir tuščiagalviams",
     "ideas.descRetirees": "Vėsus mirkymas šiltą popietę, švelnus judesys sustingusiems sąnariams ir magnetas aplankyti anūkus – be nuolatinio baseino priežiūros.",
     "ideas.altRetirees": "Į pensiją išėjusi pora aukso valandą mėgaujasi šiltu mirkymu apvaliame Felizbėjaus baseine gėlių pilname sode.",
-    "nav.footNote": "Aukščiausios kokybės pripučiami baseinai iš Felizbay. Sukūrė ir eksploatuoja Aquafarer LLC, JAV."
+    "nav.footNote": "Aukščiausios kokybės pripučiami baseinai iš Felizbay. Sukūrė ir eksploatuoja Aquafarer LLC, JAV.",
+    "product.retailIntro": "Fiksuoto dydžio rinkiniai, siunčiami tiesiai į jūsų duris – vienas gamyklinis dydis kiekviename komplekte, kartu su pompa, remonto rinkiniu ir laikymo krepšiu. Kiekvieną šio skyriaus modelį galima įsigyti kaip vieną.",
+    "product.wholesaleIntro": "Kolekcijos, skirtos verslo pirkėjams – nuomai atostogoms, pramogų svetainėms, viešbučiams ir perpardavėjams. Kainos didmeninės FOB (FOB Qingdao, kaina 20 vnt už prekę); gamykliniai dydžių diapazonai nurodyti specifikacijų lentelėje. Negalima įsigyti vienetų mažmeninėje prekyboje.",
+    "product.wholesaleFob": "Didmeninė prekyba FOB"
   },
   "lv": {
     "nav.signIn": "Pieteikties",
@@ -6633,7 +6714,10 @@
     "ideas.titleRetirees": "Baseini pensionāriem un tukšiem nesteriem",
     "ideas.descRetirees": "Vēsa mērcēšana siltā pēcpusdienā, maigas kustības stīvām locītavām un magnēts mazbērnu apmeklēšanai — bez pastāvīga baseina uzturēšanas.",
     "ideas.altRetirees": "Pensionāru pāris zelta stundā bauda siltu peldi apaļā Felizbajas baseinā ziediem piepildītā dārzā.",
-    "nav.footNote": "Premium klases piepūšamie baseini no Felizbay. Projektēja un ekspluatē Aquafarer LLC, ASV."
+    "nav.footNote": "Premium klases piepūšamie baseini no Felizbay. Projektēja un ekspluatē Aquafarer LLC, ASV.",
+    "product.retailIntro": "Fiksēta izmēra komplekti, kas tiek piegādāti tieši līdz jūsu durvīm — viens rūpnīcas izmērs katrā komplektā ar sūkni, remonta komplektu un uzglabāšanas maisiņu. Katru šīs sadaļas modeli var iegādāties kā atsevišķu gabalu.",
+    "product.wholesaleIntro": "Kolekcijas, kas ražotas biznesa pircējiem — īrei brīvdienām, apskates vietām, viesnīcām un tālākpārdevējiem. Cenas ir vairumtirdzniecības FOB (FOB Qingdao, cenas pamatā 20 gab par preci); rūpnīcas izmēru diapazoni ir norādīti specifikāciju tabulā. Nav pieejams kā vienas gabala mazumtirdzniecības pirkums.",
+    "product.wholesaleFob": "Vairumtirdzniecība FOB"
   },
   "et": {
     "nav.signIn": "Logi sisse",
@@ -6870,7 +6954,10 @@
     "ideas.titleRetirees": "Basseinid pensionäridele ja tühjadele pesitsejatele",
     "ideas.descRetirees": "Jahe leotus soojal pärastlõunal, õrn liikumine jäikade liigeste jaoks ja magnet lastelastele külla – ilma püsiva basseini hooldamiseta.",
     "ideas.altRetirees": "Pensionärist paar naudib kuldsel tunnil lilledega täidetud aias ümmarguses Felizbay basseinis sooja leotamist.",
-    "nav.footNote": "Felizbay esmaklassilised tilkpistega täispuhutavad basseinid. Projekteeris ja haldab Aquafarer LLC, USA."
+    "nav.footNote": "Felizbay esmaklassilised tilkpistega täispuhutavad basseinid. Projekteeris ja haldab Aquafarer LLC, USA.",
+    "product.retailIntro": "Fikseeritud suurusega komplektid, mis tarnitakse otse teie ukseni – üks tehasesuurus komplekti kohta koos pumba, remondikomplekti ja hoiukotiga. Iga selle jaotise mudelit saab osta ühe tükina.",
+    "product.wholesaleIntro": "Kollektsioonid, mis on toodetud äriostjatele — puhkuseks üüritud üürimiskohad, glampingi saidid, hotellid ja edasimüüjad. Hinnad on hulgimüügi FOB (FOB Qingdao, hinna alus 20 tk kauba kohta); tehase suurusvahemikud on toodud tehniliste andmete tabelis. Pole saadaval ühes tükis jaemüügis.",
+    "product.wholesaleFob": "FOB hulgimüük"
   },
   "he": {
     "nav.signIn": "התחברות",
@@ -7107,7 +7194,10 @@
     "ideas.titleRetirees": "בריכות לגמלאים ולגנרים ריקים",
     "ideas.descRetirees": "טבילה קרירה אחר צהריים חמים, תנועה עדינה למפרקים נוקשים ומגנט לביקור נכדים - ללא תחזוקה של בריכה קבועה.",
     "ideas.altRetirees": "זוג פנסיונרים נהנה מטבילה חמימה בבריכת פליזביי עגולה בגן מלא פרחים בשעת הזהב.",
-    "nav.footNote": "בריכות מתנפחות פרימיום drop stitch של חברת Felizbay. עוצב ומופעל על ידי Aquafarer LLC, ארה\"ב."
+    "nav.footNote": "בריכות מתנפחות פרימיום drop stitch של חברת Felizbay. עוצב ומופעל על ידי Aquafarer LLC, ארה\"ב.",
+    "product.retailIntro": "סטים בגודל קבוע הנשלחים ישירות לדלת שלך - גודל מפעל אחד לכל סט, עם משאבה, ערכת תיקון ושקית אחסון כלולים. ניתן לרכוש כל דגם בסעיף זה כמקשה אחת.",
+    "product.wholesaleIntro": "אוספים שהופקו עבור קונים עסקיים - השכרות נופש, אתרי גלמפינג, בתי מלון ומשווקים. המחירים הם FOB סיטונאי (FOB Qingdao, בסיס מחיר 20 יח' לפריט); טווחי הגודל של המפעל מפורטים בטבלת המפרט. לא זמין כרכישות קמעונאיות של חלק אחד.",
+    "product.wholesaleFob": "FOB סיטונאי"
   },
   "ms": {
     "nav.signIn": "Log Masuk",
@@ -7344,7 +7434,10 @@
     "ideas.titleRetirees": "Kolam untuk Pesara & Nesters Kosong",
     "ideas.descRetirees": "Rendam sejuk pada waktu petang yang hangat, pergerakan lembut untuk sendi yang kaku, dan magnet untuk cucu yang melawat — tanpa penjagaan kolam kekal.",
     "ideas.altRetirees": "Sepasang suami isteri bersara sedang berendam hangat di kolam bulat Felizbay di taman yang dipenuhi bunga pada waktu emas.",
-    "nav.footNote": "Kolam kembung jahitan titisan premium oleh Felizbay. Direka dan dikendalikan oleh Aquafarer LLC, Amerika Syarikat."
+    "nav.footNote": "Kolam kembung jahitan titisan premium oleh Felizbay. Direka dan dikendalikan oleh Aquafarer LLC, Amerika Syarikat.",
+    "product.retailIntro": "Set bersaiz tetap yang dihantar terus ke pintu anda — satu saiz kilang bagi setiap set, dengan pam, kit pembaikan dan beg penyimpanan disertakan. Setiap model dalam bahagian ini boleh dibeli sebagai satu keping.",
+    "product.wholesaleIntro": "Koleksi yang dihasilkan untuk pembeli perniagaan — sewaan percutian, tapak glamping, hotel dan penjual semula. Harga adalah FOB borong (FOB Qingdao, harga asas 20 pcs setiap item); julat saiz kilang disenaraikan dalam jadual spesifikasi. Tidak tersedia sebagai pembelian runcit sekeping.",
+    "product.wholesaleFob": "Borong FOB"
   },
   "tl": {
     "nav.signIn": "Mag-sign In",
@@ -7581,7 +7674,10 @@
     "ideas.titleRetirees": "Mga Pool para sa mga Retire at Empty Nesters",
     "ideas.descRetirees": "Isang malamig na pagbabad sa isang mainit na hapon, banayad na paggalaw para sa matigas na mga kasukasuan, at isang magnet para sa pagbisita sa mga apo — nang walang pangangalaga ng isang permanenteng pool.",
     "ideas.altRetirees": "Isang retiradong mag-asawa na nag-eenjoy sa mainit na pagbabad sa isang bilog na Felizbay pool sa isang hardin na puno ng bulaklak sa ginintuang oras.",
-    "nav.footNote": "Premium drop stitch inflatable pool ni Felizbay. Dinisenyo at pinamamahalaan ng Aquafarer LLC, USA."
+    "nav.footNote": "Premium drop stitch inflatable pool ni Felizbay. Dinisenyo at pinamamahalaan ng Aquafarer LLC, USA.",
+    "product.retailIntro": "Fixed-size set na direktang nagpapadala sa iyong pinto — isang factory size bawat set, na may kasamang pump, repair kit, at storage bag. Ang bawat modelo sa seksyong ito ay maaaring mabili bilang isang piraso.",
+    "product.wholesaleIntro": "Mga koleksyon na ginawa para sa mga mamimili ng negosyo — mga pagpapaupa sa bakasyon, glamping site, hotel, at reseller. Ang mga presyo ay pakyawan FOB (FOB Qingdao, batayan ng presyo 20 pcs bawat item); Ang mga hanay ng laki ng pabrika ay nakalista sa talahanayan ng mga detalye. Hindi available bilang isang pirasong retail na pagbili.",
+    "product.wholesaleFob": "Pakyawan FOB"
   },
   "kk": {
     "nav.products": "Өнімдер",
@@ -7818,7 +7914,10 @@
     "ideas.titleRetirees": "Зейнеткерлер мен бос ұяларға арналған бассейндер",
     "ideas.descRetirees": "Жылы түсте салқын суға түсу, қатты буындар үшін жұмсақ қозғалыс және немерелеріне бару үшін магнит - тұрақты бассейнді күтпестен.",
     "ideas.altRetirees": "Зейнеткер ерлі-зайыптылар алтын сағатта гүлге толы бақтағы дөңгелек Фелизбай бассейнінде жылы суға шомылуда.",
-    "nav.footNote": "Фелизбайдың премиум тігілген үрлемелі бассейндері. Aquafarer LLC, АҚШ әзірлеген және басқарған."
+    "nav.footNote": "Фелизбайдың премиум тігілген үрлемелі бассейндері. Aquafarer LLC, АҚШ әзірлеген және басқарған.",
+    "product.retailIntro": "Тікелей есігіңізге жеткізілетін бекітілген өлшемді жинақтар — әрбір жинаққа бір зауыт өлшемі, сорғы, жөндеу жинағы және сақтау сөмкесі кіреді. Бұл бөлімдегі әрбір үлгіні бір бөлік ретінде сатып алуға болады.",
+    "product.wholesaleIntro": "Іскерлік сатып алушыларға арналған коллекциялар — демалыстарды жалға алу, глампинг сайттары, қонақ үйлер және сатушылар. Бағалар көтерме FOB (FOB Циндао, баға негізі бір затқа 20 дана); зауыттық өлшем ауқымдары техникалық сипаттамалар кестесінде берілген. Бір бөлікті бөлшек сатып алу ретінде қол жетімді емес.",
+    "product.wholesaleFob": "Көтерме FOB"
   },
   "uz": {
     "nav.products": "Mahsulotlar",
@@ -8055,7 +8154,10 @@
     "ideas.titleRetirees": "Pensionerlar va bo'sh Nesterlar uchun hovuzlar",
     "ideas.descRetirees": "Issiq tushdan keyin salqin ho'llash, qattiq bo'g'inlar uchun yumshoq harakat va nevaralarni ziyorat qilish uchun magnit - doimiy hovuzni parvarish qilmasdan.",
     "ideas.altRetirees": "Nafaqaga chiqqan er-xotin, oltin soatda gullarga to'la bog'dagi dumaloq Felizbay hovuzida iliq suv ichishdan zavqlanishmoqda.",
-    "nav.footNote": "Felizbay tomonidan yuqori sifatli tomchi tikilgan shishiriladigan hovuzlar. Aquafarer MChJ tomonidan ishlab chiqilgan va boshqariladi, AQSh."
+    "nav.footNote": "Felizbay tomonidan yuqori sifatli tomchi tikilgan shishiriladigan hovuzlar. Aquafarer MChJ tomonidan ishlab chiqilgan va boshqariladi, AQSh.",
+    "product.retailIntro": "Toʻgʻridan-toʻgʻri eshigingizga yetkazib beriladigan oʻzgarmas oʻlchamdagi toʻplamlar – har bir toʻplamga bitta zavod oʻlchami, nasos, taʼmirlash toʻplami va saqlash xaltasi kiritilgan. Ushbu bo'limdagi har bir modelni bitta bo'lak sifatida sotib olish mumkin.",
+    "product.wholesaleIntro": "Biznes xaridorlari uchun ishlab chiqarilgan to'plamlar - dam olish joylari, glamping saytlari, mehmonxonalar va sotuvchilar. Narxlar ulgurji FOB (FOB Qingdao, narx asosi har bir element uchun 20 dona); zavod o'lchamlari diapazonlari texnik xususiyatlar jadvalida keltirilgan. Bir qismli chakana xaridlar sifatida mavjud emas.",
+    "product.wholesaleFob": "Ulgurji FOB"
   },
   "uk": {
     "nav.products": "Продукти",
@@ -8292,7 +8394,10 @@
     "ideas.titleRetirees": "Пули для пенсіонерів і порожніх гнізд",
     "ideas.descRetirees": "Прохолода в теплий полудень, м’які рухи для заціпеніння суглобів і магніт для відвідування онуків — без підтримки постійного басейну.",
     "ideas.altRetirees": "Пара пенсіонерів насолоджується теплою ванною в круглому басейні Felizbay у квітучому саду в золоту годину.",
-    "nav.footNote": "Надувні басейни преміум-класу Felizbay. Розроблено та експлуатується Aquafarer LLC, США."
+    "nav.footNote": "Надувні басейни преміум-класу Felizbay. Розроблено та експлуатується Aquafarer LLC, США.",
+    "product.retailIntro": "Набори фіксованого розміру, які доставляються прямо до ваших дверей — один заводський розмір на комплект разом із насосом, ремонтним набором і сумкою для зберігання. Кожну модель у цьому розділі можна придбати окремо.",
+    "product.wholesaleIntro": "Колекції створені для бізнес-покупців — житла для відпочинку, місць для глемпінгу, готелів і торгових посередників. Ціни вказані оптом FOB (FOB Qingdao, ціна базується 20 штук за одиницю); заводські розміри вказані в таблиці характеристик. Недоступно для роздрібної покупки окремо.",
+    "product.wholesaleFob": "Опт FOB"
   },
   "az": {
     "nav.products": "Məhsullar",
@@ -8529,7 +8634,10 @@
     "ideas.titleRetirees": "Təqaüdçülər və Boş Nesterlər üçün hovuzlar",
     "ideas.descRetirees": "İsti bir günortadan sonra sərin islatmaq, sərt oynaqlar üçün yumşaq hərəkət və nəvələri ziyarət etmək üçün bir maqnit - daimi hovuza qulluq etmədən.",
     "ideas.altRetirees": "Təqaüdçü cütlük qızıl saatda çiçəklərlə dolu bağçada yuvarlaq Felizbəy hovuzunda isti islatmaqdan həzz alır.",
-    "nav.footNote": "Felizbay tərəfindən Premium drop stitch şişmə hovuzlar. Aquafarer MMC, ABŞ tərəfindən dizayn edilmiş və idarə edilmişdir."
+    "nav.footNote": "Felizbay tərəfindən Premium drop stitch şişmə hovuzlar. Aquafarer MMC, ABŞ tərəfindən dizayn edilmiş və idarə edilmişdir.",
+    "product.retailIntro": "Birbaşa qapınıza göndərilən sabit ölçülü dəstlər - nasos, təmir dəsti və saxlama çantası daxil olmaqla hər dəst üçün bir zavod ölçüsü. Bu bölmədəki hər bir modeli tək parça olaraq almaq olar.",
+    "product.wholesaleIntro": "İşgüzar alıcılar üçün hazırlanmış kolleksiyalar - tətil icarələri, glampinq saytları, otellər və satıcılar. Qiymətlər topdansatış FOB (FOB Qingdao, qiymət əsasında hər bir maddə üçün 20 ədəd); zavod ölçü diapazonları spesifikasiyalar cədvəlində verilmişdir. Tək parça pərakəndə alış kimi mövcud deyil.",
+    "product.wholesaleFob": "Topdan FOB"
   },
   "fa": {
     "nav.products": "محصولات",
@@ -8766,6 +8874,9 @@
     "ideas.titleRetirees": "استخرهایی برای بازنشستگان و آشیانه‌های خالی",
     "ideas.descRetirees": "خیساندن خنک در یک بعد از ظهر گرم، حرکت ملایم برای مفاصل سفت، و آهنربا برای بازدید از نوه‌ها - بدون نگهداری از استخر دائمی.",
     "ideas.altRetirees": "یک زوج بازنشسته که در ساعت طلایی در یک استخر گرد فلیزبای در باغی پر از گل از غوطه ور شدن گرم لذت می برند.",
-    "nav.footNote": "استخرهای بادی با دوخت قطره ای درجه یک توسط Felizbay. طراحی و اجرا توسط Aquafarer LLC، ایالات متحده آمریکا."
+    "nav.footNote": "استخرهای بادی با دوخت قطره ای درجه یک توسط Felizbay. طراحی و اجرا توسط Aquafarer LLC، ایالات متحده آمریکا.",
+    "product.retailIntro": "مجموعه‌های با اندازه ثابت که مستقیماً به درب شما ارسال می‌شوند - یک اندازه کارخانه در هر مجموعه، همراه با پمپ، کیت تعمیر و کیسه ذخیره‌سازی. هر مدل در این بخش را می توان به صورت تکی خریداری کرد.",
+    "product.wholesaleIntro": "مجموعه‌های تولید شده برای خریداران تجاری - اجاره تعطیلات، سایت‌های گلمپینگ، هتل‌ها و فروشندگان. قیمت ها به صورت عمده فروشی FOB (FOB Qingdao، قیمت پایه 20 عدد در هر مورد) است. محدوده اندازه کارخانه در جدول مشخصات ذکر شده است. به صورت خرده فروشی تک تکه موجود نیست.",
+    "product.wholesaleFob": "FOB عمده فروشی"
   }
 }

@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Sigurnost ispitana
+    desc: Dizajnirano u skladu s EN 16582-1 i ASTM F2666; sigurnosne informacije specifične za model isporučuju se u dokumentaciji proizvoda.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Sustav upravljanja kvalitetom certificiran od strane SGS-a.
+    variant: cert
+  - icon: "✦"
+    title: Ispitano na pritisak
+    desc: Svaki bazen testiran na napuhavanje prije nego napusti tvornicu.
+    variant: standard
+  - icon: "☆"
+    title: 2-godišnje jamstvo
+    desc: Ograničeno jamstvo na šavove, ventile i tkaninu protiv grešaka u proizvodnji.
+    variant: warranty
+  - icon: "⚖"
+    title: Sukladnost materijala
+    desc: PVC materijali dobiveni formulacijama sukladnim REACH-u; dokumentacija o sukladnosti dostupna na zahtjev.
+    variant: material

@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Pārbaudīta drošība
+    desc: Izstrādāts saskaņā ar EN 16582-1 un ASTM F2666; modeļa specifiskā drošības informācija ir iekļauta produkta dokumentācijā.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: SGS sertificēta kvalitātes vadības sistēma.
+    variant: cert
+  - icon: "✦"
+    title: Pārbaudīts spiediens
+    desc: Katrs baseins ir pārbaudīts, pirms tas tiek izvests no rūpnīcas.
+    variant: standard
+  - icon: "☆"
+    title: 2 gadu garantija
+    desc: Ierobežota garantija šuvēm, vārstiem un audumam pret ražošanas defektiem.
+    variant: warranty
+  - icon: "⚖"
+    title: Materiāla atbilstība
+    desc: PVC materiāli, kas iegūti ar REACH prasībām atbilstošiem preparātiem; atbilstības dokumentācija ir pieejama pēc pieprasījuma.
+    variant: material

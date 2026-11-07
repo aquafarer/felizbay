@@ -145,13 +145,15 @@ const catalogSections = [
     id: 'retail',
     title: t('product.retail') || 'Retail',
     intro:
+      t('product.retailIntro') ||
       'Fixed-size sets that ship directly to your door — one factory size per set, with pump, repair kit, and storage bag included. Every model in this section can be purchased as a single piece.',
     cards: retailCards,
   },
   {
     id: 'business',
-    title: 'Wholesale FOB',
+    title: t('product.wholesaleFob') || 'Wholesale FOB',
     intro:
+      t('product.wholesaleIntro') ||
       'Collections produced for business buyers — vacation rentals, glamping sites, hotels, and resellers. Prices are wholesale FOB (FOB Qingdao, price basis 20 pcs per item); factory size ranges are listed in the specs table. Not available as single-piece retail purchases.',
     cards: businessCards,
   },

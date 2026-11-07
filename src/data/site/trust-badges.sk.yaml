@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Bezpečnosť Testovaná
+    desc: Navrhnuté s odkazom na EN 16582-1 a ASTM F2666; bezpečnostné informácie špecifické pre daný model sa dodávajú v dokumentácii k produktu.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Systém manažérstva kvality certifikovaný spoločnosťou SGS.
+    variant: cert
+  - icon: "✦"
+    title: Tlakovo testované
+    desc: Každý bazén bol pred opustením továrne testovaný na nafukovanie.
+    variant: standard
+  - icon: "☆"
+    title: 2-ročná záruka
+    desc: Obmedzená záruka na švy, ventily a tkaninu na výrobné chyby.
+    variant: warranty
+  - icon: "⚖"
+    title: Materiálová zhoda
+    desc: PVC materiály získané s formuláciami v súlade s REACH; dokumentácia o zhode je k dispozícii na požiadanie.
+    variant: material

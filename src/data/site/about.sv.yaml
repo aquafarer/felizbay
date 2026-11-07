@@ -1,0 +1,42 @@
+origin:
+  tagline: Vårt ursprung
+  heading: "Byggd för sommaren,<br />\n<span class=\"text-sky-600\">konstruerad för att hålla</span>"
+  paragraphs:
+    - 'Felizbay började med en enkel frustration: uppblåsbara pooler som föll, läckte och varade en enda säsong. Vi trodde att en pool kunde vara bättre - styv nog att simma varv i, tuff nog att överleva år efter år och fortfarande tillräckligt liten för att förvaras inomhus på vintern.'
+    - Drop stitch-konstruktion var svaret. Tusentals invändiga trådar låser väggarna stela under tryck, vilket ger en tygpool strukturen som en hårdsidig.
+    - 'Varje Felizbay-pool är byggd kring den kärnan: kvalitetsmaterial, beprövad konstruktion och ärlig ingenjörskonst, till ett pris som en familj kan motivera.'
+    - Felizbay är designad och drivs av <strong>Aquafarer LLC</strong>, USA. Våra pooler tillverkas av en långsiktig tillverkningspartner i Qingdao, Kina, och varje enhet är 100 % trycktestad innan den skickas.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay drop stitch pool
+
+philosophy:
+  tagline: Vår filosofi
+  heading: Enkel, hållbar, ärlig
+  description: 'En pool är ett löfte: fyll den på sommarens första varma dag och den fungerar. Allt vi designar tjänar det löftet.'
+  cards:
+    - emoji: "🌊"
+      title: Stel, inte hängig
+      description: Dropstygns väggar blåser upp styva och håller sin form vid fullt vattentryck. Inga lutande väggar, ingen hängande vattenledning, inget förlorat djup.
+    - emoji: "🔧"
+      title: Byggd för att hålla, inte för att ersätta
+      description: Den mest hållbara poolen är den du inte slänger. UV-beständig, punkteringsbeständig PVC och kvalitetsventiler innebär säsonger av användning, inte en sommar.
+    - emoji: "🏆"
+      title: Sommaren gjort enkel
+      description: Snabb att blåsa upp, tio minuter att vika undan. Inga verktyg, inga ramar, ingen installationspersonal. Simning ska vara den enkla delen.
+
+design:
+  tagline: Designfilosofi
+  heading: "Designad från<br />\n<span class=\"text-sky-600\">vatten utåt</span>"
+  paragraphs:
+    - 'Varje Felizbay-pool börjar med en fråga: <em>vad gör vattnet med det?</em> Fullt vattentryck, UV-exponering, klorkemi, malt skräp – vi designar för allt och bygger sedan ovanför det.'
+    - Våra fallstygnskammare är klassade långt över arbetstrycket, så en varm eftermiddag överbelastas inte en söm. Vår PVC är laminerad med UV-stabilisatorer, eftersom solljus – inte punkteringar – är det som dödar de flesta uppblåsbara pooler.
+    - Vi designar inte till en prisnivå. Vi designar till ett misslyckande – sedan bygger vi långt förbi det.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay pooldesign
+  stats:
+    - value: 100%
+      label: "tryckprovad<br />innan packning"
+    - value: 4–6
+      label: "PSI betygsatt<br />arbetstryck"
+    - value: 5–15
+      label: "minut<br />inflation"

@@ -1,0 +1,42 @@
+origin:
+  tagline: Mūsu izcelsme
+  heading: "Būvēts vasarai,<br />\n<span class=\"text-sky-600\">izstrādāts tā, lai tas būtu izturīgs</span>"
+  paragraphs:
+    - 'Felizbay sāka ar vienkāršu neapmierinātību: piepūšamie baseini, kas nokrita, noplūda un ilga vienu sezonu. Mēs uzskatījām, ka baseins varētu būt labāks — pietiekami stingrs, lai tajā varētu peldēt, pietiekami izturīgs, lai izdzīvotu gadu no gada, un joprojām ir pietiekami mazs, lai ziemā to varētu uzglabāt iekštelpās.'
+    - Pilndūriena konstrukcija bija atbilde. Tūkstošiem iekšējo vītņu nofiksē sienas stingras zem spiediena, piešķirot auduma baseinam cietās puses struktūru.
+    - 'Katrs Felizbay baseins ir veidots ap šo kodolu: kvalitatīvi materiāli, pārbaudīta konstrukcija un godīga inženierija par cenu, ko ģimene var attaisnot.'
+    - Felizbay projektēja un ekspluatē <strong>Aquafarer LLC</strong>, ASV. Mūsu baseinus ražo ilgtermiņa ražošanas partneris Qingdao, Ķīnā, un katrai vienībai pirms nosūtīšanas tiek veikta 100% spiediena pārbaude.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay šuvju baseins
+
+philosophy:
+  tagline: Mūsu filozofija
+  heading: Vienkāršs, izturīgs, godīgs
+  description: 'Baseins ir solījums: piepildiet to pirmajā vasaras karstajā dienā, un tas darbojas. Viss, ko mēs izstrādājam, kalpo šim solījumam.'
+  cards:
+    - emoji: "🌊"
+      title: Stingrs, nav nokarens
+      description: Dūriena sienas piepūšas stingras un saglabā savu formu pie pilna ūdens spiediena. Nav slīpu sienu, nav nokarenas ūdens līnijas, nav zaudēta dziļuma.
+    - emoji: "🔧"
+      title: Izstrādāts, lai kalpotu, nevis aizstātu
+      description: Ilgtspējīgākais baseins ir tas, kuru neizmetat. UV izturīgi, caurduršanas izturīgi PVC un kvalitatīvi vārsti nozīmē lietošanas sezonu, nevis vienu vasaru.
+    - emoji: "🏆"
+      title: Vasara Made Simple
+      description: Ātri uzpūšams, desmit minūtes atlokāms. Nav instrumentu, nav rāmju, nav uzstādīšanas brigādes. Peldēšanai vajadzētu būt vieglākajai daļai.
+
+design:
+  tagline: Dizaina filozofija
+  heading: "Izstrādāts no<br />\n<span class=\"text-sky-600\">ūdens uz āru</span>"
+  paragraphs:
+    - 'Katrs Felizbay baseins sākas ar vienu jautājumu: <em>ko ūdens tam nodara?</em> Pilns ūdens spiediens, ultravioletā starojuma iedarbība, hlora ķīmija, zemes atkritumi — mēs projektējam to visu un pēc tam būvējam virs tā.'
+    - Mūsu nolaižamās dūriena kameras ir novērtētas krietni virs darba spiediena, tāpēc karstā pēcpusdienā šuve netiek pārmērīgi noslogota. Mūsu PVC ir laminēts ar UV stabilizatoriem, jo ​​saules gaisma, nevis caurumi, ir tas, kas nogalina lielāko daļu piepūšamo baseinu.
+    - Mēs neprojektējam pēc cenas. Mēs projektējam līdz atteices punktam — pēc tam būvējam krietni tālāk.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay baseina dizains
+  stats:
+    - value: 100%
+      label: "pārbaudīts ar spiedienu<br />pirms iepakošanas"
+    - value: 4–6
+      label: "PSI novērtēts<br />darba spiediens"
+    - value: 5–15
+      label: "minūte<br />inflācija"

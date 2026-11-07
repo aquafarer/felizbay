@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Säkerhetstestad
+    desc: Designad med hänvisning till EN 16582-1 och ASTM F2666; modellspecifik säkerhetsinformation medföljer i produktdokumentationen.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Kvalitetsledningssystem certifierat av SGS.
+    variant: cert
+  - icon: "✦"
+    title: Trycktestad
+    desc: Varje pool har testats innan den lämnar fabriken.
+    variant: standard
+  - icon: "☆"
+    title: 2-års garanti
+    desc: Begränsad garanti på sömmar, ventiler och tyg mot tillverkningsfel.
+    variant: warranty
+  - icon: "⚖"
+    title: Materialöverensstämmelse
+    desc: PVC-material som kommer från REACH-kompatibla formuleringar; överensstämmelsedokumentation tillgänglig på begäran.
+    variant: material

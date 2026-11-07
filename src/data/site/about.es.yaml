@@ -1,0 +1,42 @@
+origin:
+  tagline: Nuestro origen
+  heading: "Construido para el verano,<br />\n<span class=\"text-sky-600\">diseñado para durar</span>"
+  paragraphs:
+    - 'Felizbay comenzó con una simple frustración: piscinas inflables que se hundían, goteaban y duraban una sola temporada. Creíamos que una piscina podría ser mejor: lo suficientemente rígida para nadar, lo suficientemente resistente para sobrevivir año tras año y lo suficientemente pequeña como para guardarla en el interior en invierno.'
+    - La construcción con punto caído fue la respuesta. Miles de hilos internos bloquean las paredes rígidas bajo presión, dando a una piscina de tela la estructura de una piscina de lados duros.
+    - 'Cada piscina Felizbay está construida alrededor de ese núcleo: materiales de calidad, construcción probada e ingeniería honesta, a un precio que una familia puede justificar.'
+    - Felizbay está diseñado y operado por <strong>Aquafarer LLC</strong>, EE.UU. Nuestras piscinas son producidas por un socio de fabricación a largo plazo en Qingdao, China, y cada unidad se prueba al 100% antes de enviarse.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Piscina de punto de caída Felizbay
+
+philosophy:
+  tagline: Nuestra Filosofía
+  heading: Sencillo, duradero, honesto
+  description: 'Una piscina es una promesa: llénala el primer día caluroso del verano y funcionará. Todo lo que diseñamos cumple esa promesa.'
+  cards:
+    - emoji: "🌊"
+      title: Rígido, no caído
+      description: Las paredes de punto caído se inflan rígidamente y mantienen su forma a plena presión del agua. Sin paredes inclinadas, sin líneas de agua hundidas, sin pérdida de profundidad.
+    - emoji: "🔧"
+      title: Construido para durar, no para reemplazar
+      description: La piscina más sostenible es la que no se tira. El PVC resistente a los rayos UV y a las perforaciones y las válvulas de calidad significan temporadas de uso, no un verano.
+    - emoji: "🏆"
+      title: Verano hecho simple
+      description: Rápido de inflar, diez minutos para plegar. Sin herramientas, sin marcos, sin equipo de instalación. Nadar debería ser la parte fácil.
+
+design:
+  tagline: Filosofía del diseño
+  heading: "Diseñado desde el<br />\n<span class=\"text-sky-600\">agua hacia afuera</span>"
+  paragraphs:
+    - 'Cada piscina Felizbay comienza con una pregunta: <em>¿Qué le hace el agua?</em> Presión total del agua, exposición a los rayos UV, química del cloro, escombros del suelo: diseñamos para todo y luego construimos sobre ellos.'
+    - Nuestras cámaras de costura están clasificadas muy por encima de la presión de trabajo, por lo que una tarde calurosa no sobrecarga la costura. Nuestro PVC está laminado con estabilizadores UV, porque la luz del sol (no los pinchazos) es lo que mata la mayoría de las piscinas inflables.
+    - No diseñamos a un precio determinado. Diseñamos hasta un punto de falla y luego construimos mucho más allá de ese punto.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Diseño de piscina Felizbay
+  stats:
+    - value: 100%
+      label: "probado a presión<br />antes de empacar"
+    - value: 4–6
+      label: "Clasificación PSI<br />presión de trabajo"
+    - value: 5–15
+      label: "minuto<br />inflación"

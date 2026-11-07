@@ -1,0 +1,42 @@
+origin:
+  tagline: Naš izvor
+  heading: "Zgrajen za poletje,<br />\n<span class=\"text-sky-600\">zasnovana tako, da traja</span>"
+  paragraphs:
+    - 'Felizbay je začel s preprosto frustracijo: napihljivi bazeni, ki so se povesili, puščali in zdržali eno sezono. Verjeli smo, da je bazen lahko boljši – dovolj tog, da lahko v njem plavate kroge, dovolj trden, da preživite leto za letom, in še vedno dovolj majhen, da ga lahko pozimi shranite v zaprtih prostorih.'
+    - Odgovor je bila konstrukcija s padajočim šivom. Na tisoče notranjih niti trdno zaklene stene pod pritiskom, kar daje bazenu tkanine strukturo trdne.
+    - 'Vsak bazen Felizbay je zgrajen okoli tega jedra: kakovostni materiali, preizkušena konstrukcija in pošten inženiring, po ceni, ki jo družina lahko upraviči.'
+    - Felizbay je oblikoval in upravlja <strong>Aquafarer LLC</strong>, ZDA. Naše bazene izdeluje dolgoročni proizvodni partner v mestu Qingdao na Kitajskem in vsaka enota je pred odpremo 100-odstotno preizkušena pod pritiskom.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay bazen s padajočimi šivi
+
+philosophy:
+  tagline: Naša filozofija
+  heading: Enostavno, vzdržljivo, iskreno
+  description: 'Bazen je obljuba: napolnite ga na prvi vroč poletni dan in deluje. Vse, kar oblikujemo, služi tej obljubi.'
+  cards:
+    - emoji: "🌊"
+      title: Togo, ne povešeno
+      description: Stene s kapljivim šivom se trdno napihnejo in ohranijo svojo obliko pri polnem vodnem pritisku. Brez nagnjenih sten, brez povešene vodne črte, brez izgubljene globine.
+    - emoji: "🔧"
+      title: Zgrajena za dolgotrajno uporabo, ne za zamenjavo
+      description: Najbolj trajnosten bazen je tisti, ki ga ne zavržete. UV-odporen PVC, odporen na predrtje in kakovostni ventili pomenijo sezono uporabe, ne eno poletje.
+    - emoji: "🏆"
+      title: Preprosto poletje
+      description: Hitro za napihovanje, deset minut za zlaganje. Brez orodja, brez okvirjev, brez osebja za namestitev. Plavanje bi moralo biti lažji del.
+
+design:
+  tagline: Filozofija oblikovanja
+  heading: "Zasnovan iz<br />\n<span class=\"text-sky-600\">vodo navzven</span>"
+  paragraphs:
+    - 'Vsak bazen Felizbay se začne z enim vprašanjem: <em>kaj mu naredi voda?</em> Polni vodni pritisk, izpostavljenost UV-žarkom, kemija klora, zemeljski odpadki – za vse to načrtujemo, nato nadgradimo.'
+    - Naše komore za kapljični šiv so ocenjene precej nad delovni tlak, tako da vroče popoldne ne preobremeni šiva. Naš PVC je laminiran z UV-stabilizatorji, saj je sončna svetloba tista, ki uniči večino napihljivih bazenov, ne preluknja.
+    - Ne oblikujemo po nizki ceni. Načrtujemo do točke neuspeha – nato gradimo precej čez to.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Dizajn bazena Felizbay
+  stats:
+    - value: 100%
+      label: "tlačno testiran<br />pred pakiranjem"
+    - value: 4–6
+      label: "PSI ocenjeno<br />delovni tlak"
+    - value: 5–15
+      label: "minuta<br />inflacija"

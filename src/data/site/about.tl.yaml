@@ -1,0 +1,42 @@
+origin:
+  tagline: Ang Ating Pinagmulan
+  heading: "Itinayo para sa tag-araw,<br />\n<span class=\"text-sky-600\">ininhinyero upang tumagal</span>"
+  paragraphs:
+    - 'Nagsimula ang Felizbay sa isang simpleng pagkabigo: mga inflatable pool na lumubog, tumutulo, at tumagal ng isang season. Naniniwala kami na ang isang pool ay maaaring maging mas mahusay - sapat na matibay upang lumangoy, sapat na matigas upang mabuhay taon-taon, at sapat pa rin upang mag-imbak sa loob ng bahay sa taglamig.'
+    - Drop stitch construction ang solusyon. Libu - libong mga panloob na mga thread i - lock ang mga pader matibay sa ilalim ng presyon, na nagbibigay ng isang tela pool ang istraktura ng isang hard - panig isa.
+    - 'Ang bawat pool ng Felizbay ay itinayo sa paligid ng core na iyon: mga de-kalidad na materyales, nasubok na konstruksyon, at tapat na engineering, sa presyong maaaring bigyang-katwiran ng isang pamilya.'
+    - Ang Felizbay ay dinisenyo at pinamamahalaan ng <strong>Aquafarer LLC</strong>, USA. Ang aming mga pool ay ginawa ng isang pangmatagalang kasosyo sa pagmamanupaktura sa Qingdao, China, at bawat unit ay 100% na sinusuri ang presyon bago ito ipadala.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: 'Email: info@Felizbay.com'
+
+philosophy:
+  tagline: Ang aming Pilosopiya
+  heading: Simple, matibay, tapat
+  description: 'Ang isang pool ay isang pangako: punan ito sa unang mainit na araw ng tag-araw at ito ay gumagana. Lahat ng aming idinisenyo ay nagsisilbi sa pangakong iyon.'
+  cards:
+    - emoji: "🌊"
+      title: Matigas, Hindi Saggy
+      description: Ang mga drop stitch na pader ay pumutok nang matibay at hawakan ang kanilang hugis sa buong presyon ng tubig. Walang nakasandal na pader, walang lumulubog na linya ng tubig, walang nawawalang lalim.
+    - emoji: "🔧"
+      title: Built to Last, Not to replace
+      description: Ang pinakasustainable pool ay ang hindi mo itinatapon. Ang PVC-resistant, puncture-resistant PVC at mga de-kalidad na balbula ay nangangahulugan ng mga panahon ng paggamit, hindi isang tag-araw.
+    - emoji: "🏆"
+      title: Ginawa Simple ang Tag-init
+      description: Mabilis na pumutok, sampung minuto upang tupi. Walang tool, walang frame, walang installation crew. Ang paglangoy ay dapat na madaling bahagi.
+
+design:
+  tagline: Pilosopiya ng Disenyo
+  heading: "Dinisenyo mula sa<br />\n<span class=\"text-sky-600\">tubig palabas</span>"
+  paragraphs:
+    - 'Ang bawat Felizbay pool ay nagsisimula sa isang tanong: <em>ano ang ginagawa ng tubig dito?</em> Full water pressure, UV exposure, chlorine chemistry, ground debris — nagdidisenyo kami para sa lahat ng ito, pagkatapos ay nagtatayo sa itaas nito.'
+    - Ang aming mga drop stitch chambers ay na-rate na mas mataas sa working pressure, kaya ang mainit na hapon ay hindi nakaka-stress sa isang tahi. Ang aming PVC ay nakalamina ng mga UV stabilizer, dahil ang sikat ng araw — hindi mga butas — ang pumapatay sa karamihan ng mga inflatable na pool.
+    - Hindi kami nagdidisenyo sa isang punto ng presyo. Nagdidisenyo kami sa isang punto ng kabiguan — pagkatapos ay buuin ito nang maayos.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Disenyo ng pool ng Felizbay
+  stats:
+    - value: 100%
+      label: "nasubok sa presyon<br />bago mag-impake"
+    - value: 4–6
+      label: "Na-rate ang PSI<br />presyon sa pagtatrabaho"
+    - value: 5–15
+      label: "minuto<br />inflation"

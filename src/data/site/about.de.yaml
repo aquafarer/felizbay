@@ -1,0 +1,42 @@
+origin:
+  tagline: Unsere Herkunft
+  heading: "Für den Sommer gebaut,<br />\n<span class=\"text-sky-600\">auf Langlebigkeit ausgelegt</span>"
+  paragraphs:
+    - 'Felizbay begann mit einer einfachen Frustration: aufblasbare Pools, die durchsackten, durchsickerten und eine einzige Saison dauerten. Wir glaubten, dass ein Pool besser sein könnte — starr genug, um Runden zu schwimmen, robust genug, um Jahr für Jahr zu überleben, und immer noch klein genug, um im Winter drinnen zu lagern.'
+    - Drop-Stitch-Konstruktion war die Antwort. Tausende von Innengewinden verschließen die Wände unter Druck starr und verleihen einem Stoffpool die Struktur eines Hartschalenpools.
+    - 'Jeder Felizbay-Pool ist um diesen Kern herum gebaut: hochwertige Materialien, geprüfte Konstruktion und ehrliche Technik zu einem Preis, den eine Familie rechtfertigen kann.'
+    - Felizbay wird entwickelt und betrieben von <strong>Aquafarer LLC</strong>, USA. Unsere Pools werden von einem langjährigen Fertigungspartner in Qingdao, China, hergestellt und jede Einheit wird vor dem Versand zu 100 % druckgeprüft.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Felizbay Drop Stitch Pool
+
+philosophy:
+  tagline: Unsere Philosophie
+  heading: Einfach, langlebig, ehrlich
+  description: 'Ein Pool ist ein Versprechen: Füllen Sie ihn am ersten heißen Tag des Sommers und es funktioniert. Alles, was wir entwerfen, erfüllt dieses Versprechen.'
+  cards:
+    - emoji: "🌊"
+      title: Starr, nicht schlaff
+      description: Fallende Maschenwände blasen starr auf und halten ihre Form bei vollem Wasserdruck. Keine schiefen Wände, keine durchhängende Wasserlinie, keine verlorene Tiefe.
+    - emoji: "🔧"
+      title: Für die Ewigkeit gebaut, nicht zu ersetzen
+      description: Der nachhaltigste Pool ist der, den Sie nicht wegwerfen. UV-beständige, durchstichsichere PVC- und Qualitätsventile bedeuten Jahreszeiten des Gebrauchs, nicht einen Sommer.
+    - emoji: "🏆"
+      title: Sommer leicht gemacht
+      description: Schnelles Aufblasen, zehn Minuten zum Wegklappen. Keine Werkzeuge, keine Rahmen, kein Montagepersonal. Schwimmen sollte der einfache Teil sein.
+
+design:
+  tagline: Gestaltungsphilosophy
+  heading: "Entworfen aus dem<br />\n<span class=\"text-sky-600\">wasser nach außen</span>"
+  paragraphs:
+    - 'Jeder Felizbay-Pool beginnt mit einer Frage: <em>was macht das Wasser damit?</em> Voller Wasserdruck, UV-Belastung, Chlorchemie, Bodenschutt — wir entwerfen für alles und bauen dann darüber.'
+    - Unsere Fallstichkammern sind weit über dem Arbeitsdruck bewertet, so dass ein heißer Nachmittag eine Naht nicht überstrapaziert. Unser PVC ist mit UV-Stabilisatoren kaschiert, denn Sonnenlicht — nicht Pannen — tötet die meisten aufblasbaren Pools.
+    - Wir entwerfen nicht zu einem Preis. Wir entwerfen bis zu einem Fehlerpunkt — dann bauen wir weit darüber hinaus.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Felizbay Pooldesign
+  stats:
+    - value: 100%
+      label: "Druckgeprüft<br />vor dem Verpacken"
+    - value: 4–6
+      label: "Psi-bewertet<br />Betriebsdruck "
+    - value: 5–15
+      label: "Minute<br />Inflation"

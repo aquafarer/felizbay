@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Sikkerhedstestet
+    desc: Designet med reference til EN 16582-1 og ASTM F2666; modelspecifikke sikkerhedsoplysninger leveres i produktdokumentationen.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO 9001:2015'
+    desc: Kvalitetsstyringssystem certificeret af SGS.
+    variant: cert
+  - icon: "✦"
+    title: Tryktestet
+    desc: Hver pulje er testet, før den forlader fabrikken.
+    variant: standard
+  - icon: "☆"
+    title: 2-års garanti
+    desc: Begrænset garanti på sømme, ventiler og stof mod fabrikationsfejl.
+    variant: warranty
+  - icon: "⚖"
+    title: Materialeoverholdelse
+    desc: PVC-materialer fremskaffet med REACH-kompatible formuleringer; overensstemmelsesdokumentation tilgængelig på anmodning.
+    variant: material

@@ -1,0 +1,42 @@
+origin:
+  tagline: Originea noastră
+  heading: "Construit pentru vară,<br />\n<span class=\"text-sky-600\">proiectat pentru a dura</span>"
+  paragraphs:
+    - 'Felizbay a început cu o simplă frustrare: piscine gonflabile care s-au lăsat, s-au scurs și au durat un singur sezon. Am crezut că o piscină ar putea fi mai bună - suficient de rigidă pentru a înota, suficient de rezistentă pentru a supraviețui an de an și încă suficient de mică pentru a fi depozitată în interior iarna.'
+    - Răspunsul a fost construcția cu cusături. Mii de fire interioare blochează pereții rigizi sub presiune, dând unui bazin de țesătură structura unuia cu fețe dure.
+    - 'Fiecare piscină Felizbay este construită în jurul acestui nucleu: materiale de calitate, construcție testată și inginerie sinceră, la un preț pe care o familie îl poate justifica.'
+    - Felizbay este proiectat și operat de <strong>Aquafarer LLC</strong>, STATELE UNITE ALE AMERICII. Piscinele noastre sunt produse de un partener de producție pe termen lung din Qingdao, China, iar fiecare unitate este testată 100% la presiune înainte de a fi expediată.
+  image: /images/pools/rectangular-pool-1.jpg
+  image_alt: Piscina cu cusături de picătură Felizbay
+
+philosophy:
+  tagline: Filosofia noastră
+  heading: Simplu, durabil, sincer
+  description: 'O piscină este o promisiune: umpleți-o în prima zi fierbinte de vară și funcționează. Tot ceea ce proiectăm respectă această promisiune.'
+  cards:
+    - emoji: "🌊"
+      title: Rigid, nu Saggy
+      description: Pereții cusături se umflă rigid și își mențin forma la presiunea maximă a apei. Fără pereți înclinați, fără linie de apă lăsată, fără adâncime pierdută.
+    - emoji: "🔧"
+      title: Construit pentru a dura, pentru a nu înlocui
+      description: Cea mai sustenabilă piscină este cea pe care nu o arunci. PVC rezistent la UV, rezistent la perforare și supape de calitate înseamnă anotimpuri de utilizare, nu o vară.
+    - emoji: "🏆"
+      title: Vara simplă
+      description: Rapid de umflat, zece minute de pliat. Fără unelte, fără rame, fără echipaj de instalare. Înotul ar trebui să fie partea ușoară.
+
+design:
+  tagline: Filosofia Designului
+  heading: "Proiectat din<br />\n<span class=\"text-sky-600\">apa spre exterior</span>"
+  paragraphs:
+    - 'Fiecare piscină Felizbay începe cu o singură întrebare: <em>ce ii face apa?</em> Presiunea maximă a apei, expunerea la UV, chimia clorului, resturile de pământ – proiectăm pentru toate acestea, apoi construim deasupra.'
+    - Camerele noastre de cusături sunt evaluate cu mult peste presiunea de lucru, astfel încât o după-amiază fierbinte nu suprasolicita o cusătură. PVC-ul nostru este laminat cu stabilizatori UV, deoarece lumina soarelui - nu perforațiile - este cea care ucide majoritatea piscinelor gonflabile.
+    - Noi nu proiectăm la un punct de preț. Proiectăm până la un punct de eșec – apoi construim cu mult peste acesta.
+  image: /images/pools/round-grey-pool-1.webp
+  image_alt: Designul piscinei Felizbay
+  stats:
+    - value: 100%
+      label: "testat la presiune<br />înainte de a împacheta"
+    - value: 4–6
+      label: "Evaluat PSI<br />presiunea de lucru"
+    - value: 5–15
+      label: "minut<br />inflatia"

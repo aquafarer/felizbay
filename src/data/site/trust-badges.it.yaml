@@ -1,0 +1,21 @@
+badges:
+  - icon: "✔"
+    title: Sicurezza testata
+    desc: Progettato con riferimento a EN 16582-1 e ASTM F2666; le informazioni sulla sicurezza specifiche del modello vengono fornite nella documentazione del prodotto.
+    variant: cert
+  - icon: "⚙"
+    title: 'ISO9001:2015'
+    desc: Sistema di gestione della qualità certificato da SGS.
+    variant: cert
+  - icon: "✦"
+    title: Testato a pressione
+    desc: Ogni piscina viene testata per l'inflazione prima di lasciare la fabbrica.
+    variant: standard
+  - icon: "☆"
+    title: Garanzia di 2 anni
+    desc: Garanzia limitata su cuciture, valvole e tessuto contro difetti di fabbricazione.
+    variant: warranty
+  - icon: "⚖"
+    title: Conformità dei materiali
+    desc: Materiali in PVC provenienti da formulazioni conformi al REACH; documentazione di conformità disponibile su richiesta.
+    variant: material
