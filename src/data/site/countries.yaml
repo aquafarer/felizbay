@@ -1,5 +1,5 @@
 # ver: 1
-# Unified country data with translations for all 6 locales
+# Unified country data with translations for all 37 locales
 # value: canonical English name (used as form submission value)
 # tel: international dialing code
 countries:
@@ -10,6 +10,38 @@ countries:
       de: Afghanistan
       es: Afganistán
       pt: Afeganistão
+      it: Afghanistan
+      ar: أفغانستان
+      ru: Афганистан
+      pl: Afganistan
+      nl: Afghanistan
+      sv: Afghanistan
+      no: Afghanistan
+      el: Αφγανιστάν
+      fi: Afganistan
+      da: Afghanistan
+      cs: Afghánistán
+      th: อัฟกานิสถาน
+      hr: Afganistan
+      tl: Afghanistan
+      hu: Afganisztán
+      ro: Afganistan
+      sk: Afganistan
+      bg: Афганистан
+      sl: Afganistan
+      sr: Avganistan
+      tr: Afganistan
+      id: Afganistan
+      he: אפגניסטן
+      ms: Afghanistan
+      lt: Afganistanas
+      lv: Afganistāna
+      et: Afganistan
+      kk: Ауғанстан
+      uz: Afgʻoniston
+      uk: Афганістан
+      az: Əfqanıstan
+      fa: افغانستان
     tel: +93
   - value: Albania
     label:
@@ -18,6 +50,38 @@ countries:
       de: Albanien
       es: Albania
       pt: Albânia
+      it: Albania
+      ar: ألبانيا
+      ru: Албания
+      pl: Albania
+      nl: Albanië
+      sv: Albanien
+      no: Albania
+      el: Αλβανία
+      fi: Albania
+      da: Albanien
+      cs: Albánie
+      th: แอลเบเนีย
+      hr: Albanija
+      tl: Albania
+      hu: Albánia
+      ro: Albania
+      sk: Albánsko
+      bg: Албания
+      sl: Albanija
+      sr: Albanija
+      tr: Arnavutluk
+      id: Albania
+      he: אלבניה
+      ms: Albania
+      lt: Albanija
+      lv: Albānija
+      et: Albaania
+      kk: Албания
+      uz: Albaniya
+      uk: Албанія
+      az: Albaniya
+      fa: آلبانی
     tel: +355
   - value: Algeria
     label:
@@ -26,6 +90,38 @@ countries:
       de: Algerien
       es: Argelia
       pt: Argélia
+      it: Algeria
+      ar: الجزائر
+      ru: Алжир
+      pl: Algieria
+      nl: Algerije
+      sv: Algeriet
+      no: Algerie
+      el: Αλγερία
+      fi: Algeria
+      da: Algeriet
+      cs: Alžírsko
+      th: แอลจีเรีย
+      hr: Alžir
+      tl: Algeria
+      hu: Algéria
+      ro: Algeria
+      sk: Alžírsko
+      bg: Алжир
+      sl: Alžirija
+      sr: Alžir
+      tr: Cezayir
+      id: Aljazair
+      he: אלג׳יריה
+      ms: Algeria
+      lt: Alžyras
+      lv: Alžīrija
+      et: Alžeeria
+      kk: Алжир
+      uz: Jazoir
+      uk: Алжир
+      az: Əlcəzair
+      fa: الجزایر
     tel: +213
   - value: Andorra
     label:
@@ -34,6 +130,38 @@ countries:
       de: Andorra
       es: Andorra
       pt: Andorra
+      it: Andorra
+      ar: أندورا
+      ru: Андорра
+      pl: Andora
+      nl: Andorra
+      sv: Andorra
+      no: Andorra
+      el: Ανδόρα
+      fi: Andorra
+      da: Andorra
+      cs: Andorra
+      th: อันดอร์รา
+      hr: Andora
+      tl: Andorra
+      hu: Andorra
+      ro: Andorra
+      sk: Andorra
+      bg: Андора
+      sl: Andora
+      sr: Andora
+      tr: Andorra
+      id: Andorra
+      he: אנדורה
+      ms: Andorra
+      lt: Andora
+      lv: Andora
+      et: Andorra
+      kk: Андорра
+      uz: Andorra
+      uk: Андорра
+      az: Andorra
+      fa: آندورا
     tel: +376
   - value: Angola
     label:
@@ -42,6 +170,38 @@ countries:
       de: Angola
       es: Angola
       pt: Angola
+      it: Angola
+      ar: أنغولا
+      ru: Ангола
+      pl: Angola
+      nl: Angola
+      sv: Angola
+      no: Angola
+      el: Αγκόλα
+      fi: Angola
+      da: Angola
+      cs: Angola
+      th: แองโกลา
+      hr: Angola
+      tl: Angola
+      hu: Angola
+      ro: Angola
+      sk: Angola
+      bg: Ангола
+      sl: Angola
+      sr: Angola
+      tr: Angola
+      id: Angola
+      he: אנגולה
+      ms: Angola
+      lt: Angola
+      lv: Angola
+      et: Angola
+      kk: Ангола
+      uz: Angola
+      uk: Ангола
+      az: Anqola
+      fa: آنگولا
     tel: +244
   - value: Antigua and Barbuda
     label:
@@ -50,6 +210,38 @@ countries:
       de: Antigua und Barbuda
       es: Antigua y Barbuda
       pt: Antígua e Barbuda
+      it: Antigua e Barbuda
+      ar: أنتيغوا وبربودا
+      ru: Антигуа и Барбуда
+      pl: Antigua i Barbuda
+      nl: Antigua en Barbuda
+      sv: Antigua och Barbuda
+      no: Antigua og Barbuda
+      el: Αντίγκουα και Μπαρμπούντα
+      fi: Antigua ja Barbuda
+      da: Antigua og Barbuda
+      cs: Antigua a Barbuda
+      th: แอนติกาและบาร์บูดา
+      hr: Antigva i Barbuda
+      tl: Antigua & Barbuda
+      hu: Antigua és Barbuda
+      ro: Antigua și Barbuda
+      sk: Antigua a Barbuda
+      bg: Антигуа и Барбуда
+      sl: Antigva in Barbuda
+      sr: Antigva i Barbuda
+      tr: Antigua ve Barbuda
+      id: Antigua dan Barbuda
+      he: אנטיגואה וברבודה
+      ms: Antigua dan Barbuda
+      lt: Antigva ir Barbuda
+      lv: Antigva un Barbuda
+      et: Antigua ja Barbuda
+      kk: Антигуа және Барбуда
+      uz: Antigua va Barbuda
+      uk: Антигуа і Барбуда
+      az: Antiqua və Barbuda
+      fa: آنتیگوا و باربودا
     tel: +1-268
   - value: Argentina
     label:
@@ -58,6 +250,38 @@ countries:
       de: Argentinien
       es: Argentina
       pt: Argentina
+      it: Argentina
+      ar: الأرجنتين
+      ru: Аргентина
+      pl: Argentyna
+      nl: Argentinië
+      sv: Argentina
+      no: Argentina
+      el: Αργεντινή
+      fi: Argentiina
+      da: Argentina
+      cs: Argentina
+      th: อาร์เจนตินา
+      hr: Argentina
+      tl: Argentina
+      hu: Argentína
+      ro: Argentina
+      sk: Argentína
+      bg: Аржентина
+      sl: Argentina
+      sr: Argentina
+      tr: Arjantin
+      id: Argentina
+      he: ארגנטינה
+      ms: Argentina
+      lt: Argentina
+      lv: Argentīna
+      et: Argentina
+      kk: Аргентина
+      uz: Argentina
+      uk: Аргентина
+      az: Argentina
+      fa: آرژانتین
     tel: +54
   - value: Armenia
     label:
@@ -66,6 +290,38 @@ countries:
       de: Armenien
       es: Armenia
       pt: Armênia
+      it: Armenia
+      ar: أرمينيا
+      ru: Армения
+      pl: Armenia
+      nl: Armenië
+      sv: Armenien
+      no: Armenia
+      el: Αρμενία
+      fi: Armenia
+      da: Armenien
+      cs: Arménie
+      th: อาร์เมเนีย
+      hr: Armenija
+      tl: Armenia
+      hu: Örményország
+      ro: Armenia
+      sk: Arménsko
+      bg: Армения
+      sl: Armenija
+      sr: Jermenija
+      tr: Ermenistan
+      id: Armenia
+      he: ארמניה
+      ms: Armenia
+      lt: Armėnija
+      lv: Armēnija
+      et: Armeenia
+      kk: Армения
+      uz: Armaniston
+      uk: Вірменія
+      az: Ermənistan
+      fa: ارمنستان
     tel: +374
   - value: Australia
     label:
@@ -74,6 +330,38 @@ countries:
       de: Australien
       es: Australia
       pt: Austrália
+      it: Australia
+      ar: أستراليا
+      ru: Австралия
+      pl: Australia
+      nl: Australië
+      sv: Australien
+      no: Australia
+      el: Αυστραλία
+      fi: Australia
+      da: Australien
+      cs: Austrálie
+      th: ออสเตรเลีย
+      hr: Australija
+      tl: Australia
+      hu: Ausztrália
+      ro: Australia
+      sk: Austrália
+      bg: Австралия
+      sl: Avstralija
+      sr: Australija
+      tr: Avustralya
+      id: Australia
+      he: אוסטרליה
+      ms: Australia
+      lt: Australija
+      lv: Austrālija
+      et: Austraalia
+      kk: Аустралия
+      uz: Avstraliya
+      uk: Австралія
+      az: Avstraliya
+      fa: استرالیا
     tel: +61
   - value: Austria
     label:
@@ -82,6 +370,38 @@ countries:
       de: Österreich
       es: Austria
       pt: Áustria
+      it: Austria
+      ar: النمسا
+      ru: Австрия
+      pl: Austria
+      nl: Oostenrijk
+      sv: Österrike
+      no: Østerrike
+      el: Αυστρία
+      fi: Itävalta
+      da: Østrig
+      cs: Rakousko
+      th: ออสเตรีย
+      hr: Austrija
+      tl: Austria
+      hu: Ausztria
+      ro: Austria
+      sk: Rakúsko
+      bg: Австрия
+      sl: Avstrija
+      sr: Austrija
+      tr: Avusturya
+      id: Austria
+      he: אוסטריה
+      ms: Austria
+      lt: Austrija
+      lv: Austrija
+      et: Austria
+      kk: Аустрия
+      uz: Avstriya
+      uk: Австрія
+      az: Avstriya
+      fa: اتریش
     tel: +43
   - value: Azerbaijan
     label:
@@ -90,6 +410,38 @@ countries:
       de: Aserbaidschan
       es: Azerbaiyán
       pt: Azerbaijão
+      it: Azerbaigian
+      ar: أذربيجان
+      ru: Азербайджан
+      pl: Azerbejdżan
+      nl: Azerbeidzjan
+      sv: Azerbajdzjan
+      no: Aserbajdsjan
+      el: Αζερμπαϊτζάν
+      fi: Azerbaidžan
+      da: Aserbajdsjan
+      cs: Ázerbájdžán
+      th: อาเซอร์ไบจาน
+      hr: Azerbajdžan
+      tl: Azerbaijan
+      hu: Azerbajdzsán
+      ro: Azerbaidjan
+      sk: Azerbajdžan
+      bg: Азербайджан
+      sl: Azerbajdžan
+      sr: Azerbejdžan
+      tr: Azerbaycan
+      id: Azerbaijan
+      he: אזרבייג׳ן
+      ms: Azerbaijan
+      lt: Azerbaidžanas
+      lv: Azerbaidžāna
+      et: Aserbaidžaan
+      kk: Әзірбайжан
+      uz: Ozarbayjon
+      uk: Азербайджан
+      az: Azərbaycan
+      fa: جمهوری آذربایجان
     tel: +994
   - value: Bahamas
     label:
@@ -98,6 +450,38 @@ countries:
       de: Bahamas
       es: Bahamas
       pt: Bahamas
+      it: Bahamas
+      ar: جزر البهاما
+      ru: Багамы
+      pl: Bahamy
+      nl: Bahama’s
+      sv: Bahamas
+      no: Bahamas
+      el: Μπαχάμες
+      fi: Bahama
+      da: Bahamas
+      cs: Bahamy
+      th: บาฮามาส
+      hr: Bahami
+      tl: Bahamas
+      hu: Bahama-szigetek
+      ro: Bahamas
+      sk: Bahamy
+      bg: Бахамски острови
+      sl: Bahami
+      sr: Bahami
+      tr: Bahamalar
+      id: Bahama
+      he: איי בהאמה
+      ms: Bahamas
+      lt: Bahamos
+      lv: Bahamu salas
+      et: Bahama
+      kk: Багам аралдары
+      uz: Bagama orollari
+      uk: Багамські Острови
+      az: Baham adaları
+      fa: باهاما
     tel: +1-242
   - value: Bahrain
     label:
@@ -106,6 +490,38 @@ countries:
       de: Bahrain
       es: Baréin
       pt: Bahrein
+      it: Bahrein
+      ar: البحرين
+      ru: Бахрейн
+      pl: Bahrajn
+      nl: Bahrein
+      sv: Bahrain
+      no: Bahrain
+      el: Μπαχρέιν
+      fi: Bahrain
+      da: Bahrain
+      cs: Bahrajn
+      th: บาห์เรน
+      hr: Bahrein
+      tl: Bahrain
+      hu: Bahrein
+      ro: Bahrain
+      sk: Bahrajn
+      bg: Бахрейн
+      sl: Bahrajn
+      sr: Bahrein
+      tr: Bahreyn
+      id: Bahrain
+      he: בחריין
+      ms: Bahrain
+      lt: Bahreinas
+      lv: Bahreina
+      et: Bahrein
+      kk: Бахрейн
+      uz: Bahrayn
+      uk: Бахрейн
+      az: Bəhreyn
+      fa: بحرین
     tel: +973
   - value: Bangladesh
     label:
@@ -114,6 +530,38 @@ countries:
       de: Bangladesch
       es: Bangladesh
       pt: Bangladesh
+      it: Bangladesh
+      ar: بنغلاديش
+      ru: Бангладеш
+      pl: Bangladesz
+      nl: Bangladesh
+      sv: Bangladesh
+      no: Bangladesh
+      el: Μπανγκλαντές
+      fi: Bangladesh
+      da: Bangladesh
+      cs: Bangladéš
+      th: บังกลาเทศ
+      hr: Bangladeš
+      tl: Bangladesh
+      hu: Banglades
+      ro: Bangladesh
+      sk: Bangladéš
+      bg: Бангладеш
+      sl: Bangladeš
+      sr: Bangladeš
+      tr: Bangladeş
+      id: Bangladesh
+      he: בנגלדש
+      ms: Bangladesh
+      lt: Bangladešas
+      lv: Bangladeša
+      et: Bangladesh
+      kk: Бангладеш
+      uz: Bangladesh
+      uk: Бангладеш
+      az: Banqladeş
+      fa: بنگلادش
     tel: +880
   - value: Barbados
     label:
@@ -122,6 +570,38 @@ countries:
       de: Barbados
       es: Barbados
       pt: Barbados
+      it: Barbados
+      ar: بربادوس
+      ru: Барбадос
+      pl: Barbados
+      nl: Barbados
+      sv: Barbados
+      no: Barbados
+      el: Μπαρμπέιντος
+      fi: Barbados
+      da: Barbados
+      cs: Barbados
+      th: บาร์เบโดส
+      hr: Barbados
+      tl: Barbados
+      hu: Barbados
+      ro: Barbados
+      sk: Barbados
+      bg: Барбадос
+      sl: Barbados
+      sr: Barbados
+      tr: Barbados
+      id: Barbados
+      he: ברבדוס
+      ms: Barbados
+      lt: Barbadosas
+      lv: Barbadosa
+      et: Barbados
+      kk: Барбадос
+      uz: Barbados
+      uk: Барбадос
+      az: Barbados
+      fa: باربادوس
     tel: +1-246
   - value: Belarus
     label:
@@ -130,6 +610,38 @@ countries:
       de: Belarus
       es: Bielorrusia
       pt: Bielorrússia
+      it: Bielorussia
+      ar: بيلاروس
+      ru: Беларусь
+      pl: Białoruś
+      nl: Belarus
+      sv: Belarus
+      no: Belarus
+      el: Λευκορωσία
+      fi: Valko-Venäjä
+      da: Belarus
+      cs: Bělorusko
+      th: เบลารุส
+      hr: Bjelorusija
+      tl: Belarus
+      hu: Belarusz
+      ro: Belarus
+      sk: Bielorusko
+      bg: Беларус
+      sl: Belorusija
+      sr: Belorusija
+      tr: Belarus
+      id: Belarus
+      he: בלארוס
+      ms: Belarus
+      lt: Baltarusija
+      lv: Baltkrievija
+      et: Valgevene
+      kk: Беларусь
+      uz: Belarus
+      uk: Білорусь
+      az: Belarus
+      fa: بلاروس
     tel: +375
   - value: Belgium
     label:
@@ -138,6 +650,38 @@ countries:
       de: Belgien
       es: Bélgica
       pt: Bélgica
+      it: Belgio
+      ar: بلجيكا
+      ru: Бельгия
+      pl: Belgia
+      nl: België
+      sv: Belgien
+      no: Belgia
+      el: Βέλγιο
+      fi: Belgia
+      da: Belgien
+      cs: Belgie
+      th: เบลเยียม
+      hr: Belgija
+      tl: Belgium
+      hu: Belgium
+      ro: Belgia
+      sk: Belgicko
+      bg: Белгия
+      sl: Belgija
+      sr: Belgija
+      tr: Belçika
+      id: Belgia
+      he: בלגיה
+      ms: Belgium
+      lt: Belgija
+      lv: Beļģija
+      et: Belgia
+      kk: Бельгия
+      uz: Belgiya
+      uk: Бельгія
+      az: Belçika
+      fa: بلژیک
     tel: +32
   - value: Belize
     label:
@@ -146,6 +690,38 @@ countries:
       de: Belize
       es: Belice
       pt: Belize
+      it: Belize
+      ar: بليز
+      ru: Белиз
+      pl: Belize
+      nl: Belize
+      sv: Belize
+      no: Belize
+      el: Μπελίζ
+      fi: Belize
+      da: Belize
+      cs: Belize
+      th: เบลีซ
+      hr: Belize
+      tl: Belize
+      hu: Belize
+      ro: Belize
+      sk: Belize
+      bg: Белиз
+      sl: Belize
+      sr: Belize
+      tr: Belize
+      id: Belize
+      he: בליז
+      ms: Belize
+      lt: Belizas
+      lv: Beliza
+      et: Belize
+      kk: Белиз
+      uz: Beliz
+      uk: Беліз
+      az: Beliz
+      fa: بلیز
     tel: +501
   - value: Benin
     label:
@@ -154,6 +730,38 @@ countries:
       de: Benin
       es: Benín
       pt: Benim
+      it: Benin
+      ar: بنين
+      ru: Бенин
+      pl: Benin
+      nl: Benin
+      sv: Benin
+      no: Benin
+      el: Μπενίν
+      fi: Benin
+      da: Benin
+      cs: Benin
+      th: เบนิน
+      hr: Benin
+      tl: Benin
+      hu: Benin
+      ro: Benin
+      sk: Benin
+      bg: Бенин
+      sl: Benin
+      sr: Benin
+      tr: Benin
+      id: Benin
+      he: בנין
+      ms: Benin
+      lt: Beninas
+      lv: Benina
+      et: Benin
+      kk: Бенин
+      uz: Benin
+      uk: Бенін
+      az: Benin
+      fa: بنین
     tel: +229
   - value: Bhutan
     label:
@@ -162,6 +770,38 @@ countries:
       de: Bhutan
       es: Bután
       pt: Butão
+      it: Bhutan
+      ar: بوتان
+      ru: Бутан
+      pl: Bhutan
+      nl: Bhutan
+      sv: Bhutan
+      no: Bhutan
+      el: Μπουτάν
+      fi: Bhutan
+      da: Bhutan
+      cs: Bhútán
+      th: ภูฏาน
+      hr: Butan
+      tl: Bhutan
+      hu: Bhután
+      ro: Bhutan
+      sk: Bhután
+      bg: Бутан
+      sl: Butan
+      sr: Butan
+      tr: Butan
+      id: Bhutan
+      he: בהוטן
+      ms: Bhutan
+      lt: Butanas
+      lv: Butāna
+      et: Bhutan
+      kk: Бутан
+      uz: Butan
+      uk: Бутан
+      az: Butan
+      fa: بوتان
     tel: +975
   - value: Bolivia
     label:
@@ -170,6 +810,38 @@ countries:
       de: Bolivien
       es: Bolivia
       pt: Bolívia
+      it: Bolivia
+      ar: بوليفيا
+      ru: Боливия
+      pl: Boliwia
+      nl: Bolivia
+      sv: Bolivia
+      no: Bolivia
+      el: Βολιβία
+      fi: Bolivia
+      da: Bolivia
+      cs: Bolívie
+      th: โบลิเวีย
+      hr: Bolivija
+      tl: Bolivia
+      hu: Bolívia
+      ro: Bolivia
+      sk: Bolívia
+      bg: Боливия
+      sl: Bolivija
+      sr: Bolivija
+      tr: Bolivya
+      id: Bolivia
+      he: בוליביה
+      ms: Bolivia
+      lt: Bolivija
+      lv: Bolīvija
+      et: Boliivia
+      kk: Боливия
+      uz: Boliviya
+      uk: Болівія
+      az: Boliviya
+      fa: بولیوی
     tel: +591
   - value: Bosnia and Herzegovina
     label:
@@ -178,6 +850,38 @@ countries:
       de: Bosnien und Herzegowina
       es: Bosnia y Herzegovina
       pt: Bósnia e Herzegovina
+      it: Bosnia ed Erzegovina
+      ar: البوسنة والهرسك
+      ru: Босния и Герцеговина
+      pl: Bośnia i Hercegowina
+      nl: Bosnië en Herzegovina
+      sv: Bosnien och Hercegovina
+      no: Bosnia-Hercegovina
+      el: Βοσνία - Ερζεγοβίνη
+      fi: Bosnia ja Hertsegovina
+      da: Bosnien-Hercegovina
+      cs: Bosna a Hercegovina
+      th: บอสเนียและเฮอร์เซโกวีนา
+      hr: Bosna i Hercegovina
+      tl: Bosnia and Herzegovina
+      hu: Bosznia-Hercegovina
+      ro: Bosnia și Herțegovina
+      sk: Bosna a Hercegovina
+      bg: Босна и Херцеговина
+      sl: Bosna in Hercegovina
+      sr: Bosna i Hercegovina
+      tr: Bosna-Hersek
+      id: Bosnia dan Herzegovina
+      he: בוסניה והרצגובינה
+      ms: Bosnia dan Herzegovina
+      lt: Bosnija ir Hercegovina
+      lv: Bosnija un Hercegovina
+      et: Bosnia ja Hertsegoviina
+      kk: Босния және Герцеговина
+      uz: Bosniya va Gertsegovina
+      uk: Боснія і Герцеговина
+      az: Bosniya və Herseqovina
+      fa: بوسنی و هرزگوین
     tel: +387
   - value: Botswana
     label:
@@ -186,6 +890,38 @@ countries:
       de: Botsuana
       es: Botsuana
       pt: Botsuana
+      it: Botswana
+      ar: بوتسوانا
+      ru: Ботсвана
+      pl: Botswana
+      nl: Botswana
+      sv: Botswana
+      no: Botswana
+      el: Μποτσουάνα
+      fi: Botswana
+      da: Botswana
+      cs: Botswana
+      th: บอตสวานา
+      hr: Bocvana
+      tl: Botswana
+      hu: Botswana
+      ro: Botswana
+      sk: Botswana
+      bg: Ботсвана
+      sl: Bocvana
+      sr: Bocvana
+      tr: Botsvana
+      id: Botswana
+      he: בוטסואנה
+      ms: Botswana
+      lt: Botsvana
+      lv: Botsvāna
+      et: Botswana
+      kk: Ботсвана
+      uz: Botsvana
+      uk: Ботсвана
+      az: Botsvana
+      fa: بوتسوانا
     tel: +267
   - value: Brazil
     label:
@@ -194,6 +930,38 @@ countries:
       de: Brasilien
       es: Brasil
       pt: Brasil
+      it: Brasile
+      ar: البرازيل
+      ru: Бразилия
+      pl: Brazylia
+      nl: Brazilië
+      sv: Brasilien
+      no: Brasil
+      el: Βραζιλία
+      fi: Brasilia
+      da: Brasilien
+      cs: Brazílie
+      th: บราซิล
+      hr: Brazil
+      tl: Brazil
+      hu: Brazília
+      ro: Brazilia
+      sk: Brazília
+      bg: Бразилия
+      sl: Brazilija
+      sr: Brazil
+      tr: Brezilya
+      id: Brasil
+      he: ברזיל
+      ms: Brazil
+      lt: Brazilija
+      lv: Brazīlija
+      et: Brasiilia
+      kk: Бразилия
+      uz: Braziliya
+      uk: Бразилія
+      az: Braziliya
+      fa: برزیل
     tel: +55
   - value: Brunei
     label:
@@ -202,6 +970,38 @@ countries:
       de: Brunei
       es: Brunéi
       pt: Brunei
+      it: Brunei
+      ar: بروناي
+      ru: Бруней
+      pl: Brunei
+      nl: Brunei
+      sv: Brunei
+      no: Brunei
+      el: Μπρουνέι
+      fi: Brunei
+      da: Brunei
+      cs: Brunej
+      th: บรูไน
+      hr: Brunej
+      tl: Brunei
+      hu: Brunei
+      ro: Brunei
+      sk: Brunej
+      bg: Бруней Даруссалам
+      sl: Brunej
+      sr: Brunej
+      tr: Brunei
+      id: Brunei
+      he: ברוניי
+      ms: Brunei
+      lt: Brunėjus
+      lv: Bruneja
+      et: Brunei
+      kk: Бруней
+      uz: Bruney
+      uk: Бруней
+      az: Bruney
+      fa: برونئی
     tel: +673
   - value: Bulgaria
     label:
@@ -210,6 +1010,38 @@ countries:
       de: Bulgarien
       es: Bulgaria
       pt: Bulgária
+      it: Bulgaria
+      ar: بلغاريا
+      ru: Болгария
+      pl: Bułgaria
+      nl: Bulgarije
+      sv: Bulgarien
+      no: Bulgaria
+      el: Βουλγαρία
+      fi: Bulgaria
+      da: Bulgarien
+      cs: Bulharsko
+      th: บัลแกเรีย
+      hr: Bugarska
+      tl: Bulgaria
+      hu: Bulgária
+      ro: Bulgaria
+      sk: Bulharsko
+      bg: България
+      sl: Bolgarija
+      sr: Bugarska
+      tr: Bulgaristan
+      id: Bulgaria
+      he: בולגריה
+      ms: Bulgaria
+      lt: Bulgarija
+      lv: Bulgārija
+      et: Bulgaaria
+      kk: Болгария
+      uz: Bolgariya
+      uk: Болгарія
+      az: Bolqarıstan
+      fa: بلغارستان
     tel: +359
   - value: Burkina Faso
     label:
@@ -218,6 +1050,38 @@ countries:
       de: Burkina Faso
       es: Burkina Faso
       pt: Burquina Faso
+      it: Burkina Faso
+      ar: بوركينا فاسو
+      ru: Буркина-Фасо
+      pl: Burkina Faso
+      nl: Burkina Faso
+      sv: Burkina Faso
+      no: Burkina Faso
+      el: Μπουρκίνα Φάσο
+      fi: Burkina Faso
+      da: Burkina Faso
+      cs: Burkina Faso
+      th: บูร์กินาฟาโซ
+      hr: Burkina Faso
+      tl: Burkina Faso
+      hu: Burkina Faso
+      ro: Burkina Faso
+      sk: Burkina Faso
+      bg: Буркина Фасо
+      sl: Burkina Faso
+      sr: Burkina Faso
+      tr: Burkina Faso
+      id: Burkina Faso
+      he: בורקינה פאסו
+      ms: Burkina Faso
+      lt: Burkina Fasas
+      lv: Burkinafaso
+      et: Burkina Faso
+      kk: Буркина-Фасо
+      uz: Burkina-Faso
+      uk: Буркіна-Фасо
+      az: Burkina Faso
+      fa: بورکینافاسو
     tel: +226
   - value: Burundi
     label:
@@ -226,6 +1090,38 @@ countries:
       de: Burundi
       es: Burundi
       pt: Burundi
+      it: Burundi
+      ar: بوروندي
+      ru: Бурунди
+      pl: Burundi
+      nl: Burundi
+      sv: Burundi
+      no: Burundi
+      el: Μπουρούντι
+      fi: Burundi
+      da: Burundi
+      cs: Burundi
+      th: บุรุนดี
+      hr: Burundi
+      tl: Burundi
+      hu: Burundi
+      ro: Burundi
+      sk: Burundi
+      bg: Бурунди
+      sl: Burundi
+      sr: Burundi
+      tr: Burundi
+      id: Burundi
+      he: בורונדי
+      ms: Burundi
+      lt: Burundis
+      lv: Burundija
+      et: Burundi
+      kk: Бурунди
+      uz: Burundi
+      uk: Бурунді
+      az: Burundi
+      fa: بوروندی
     tel: +257
   - value: Cabo Verde
     label:
@@ -234,6 +1130,38 @@ countries:
       de: Kap Verde
       es: Cabo Verde
       pt: Cabo Verde
+      it: Capo Verde
+      ar: الرأس الأخضر
+      ru: Кабо-Верде
+      pl: Republika Zielonego Przylądka
+      nl: Kaapverdië
+      sv: Kap Verde
+      no: Kapp Verde
+      el: Πράσινο Ακρωτήριο
+      fi: Kap Verde
+      da: Kap Verde
+      cs: Kapverdy
+      th: เคปเวิร์ด
+      hr: Zelenortska Republika
+      tl: Cape Verde
+      hu: Zöld-foki Köztársaság
+      ro: Capul Verde
+      sk: Kapverdy
+      bg: Кабо Верде
+      sl: Zelenortski otoki
+      sr: Zelenortska Ostrva
+      tr: Cabo Verde
+      id: Tanjung Verde
+      he: כף ורדה
+      ms: Cape Verde
+      lt: Žaliasis Kyšulys
+      lv: Kaboverde
+      et: Roheneemesaared
+      kk: Кабо-Верде
+      uz: Kabo-Verde
+      uk: Кабо-Верде
+      az: Kabo-Verde
+      fa: کیپ‌ورد
     tel: +238
   - value: Cambodia
     label:
@@ -242,6 +1170,38 @@ countries:
       de: Kambodscha
       es: Camboya
       pt: Camboja
+      it: Cambogia
+      ar: كمبوديا
+      ru: Камбоджа
+      pl: Kambodża
+      nl: Cambodja
+      sv: Kambodja
+      no: Kambodsja
+      el: Καμπότζη
+      fi: Kambodža
+      da: Cambodja
+      cs: Kambodža
+      th: กัมพูชา
+      hr: Kambodža
+      tl: Cambodia
+      hu: Kambodzsa
+      ro: Cambodgia
+      sk: Kambodža
+      bg: Камбоджа
+      sl: Kambodža
+      sr: Kambodža
+      tr: Kamboçya
+      id: Kamboja
+      he: קמבודיה
+      ms: Kemboja
+      lt: Kambodža
+      lv: Kambodža
+      et: Kambodža
+      kk: Камбоджа
+      uz: Kambodja
+      uk: Камбоджа
+      az: Kamboca
+      fa: کامبوج
     tel: +855
   - value: Cameroon
     label:
@@ -250,6 +1210,38 @@ countries:
       de: Kamerun
       es: Camerún
       pt: Camarões
+      it: Camerun
+      ar: الكاميرون
+      ru: Камерун
+      pl: Kamerun
+      nl: Kameroen
+      sv: Kamerun
+      no: Kamerun
+      el: Καμερούν
+      fi: Kamerun
+      da: Cameroun
+      cs: Kamerun
+      th: แคเมอรูน
+      hr: Kamerun
+      tl: Cameroon
+      hu: Kamerun
+      ro: Camerun
+      sk: Kamerun
+      bg: Камерун
+      sl: Kamerun
+      sr: Kamerun
+      tr: Kamerun
+      id: Kamerun
+      he: קמרון
+      ms: Cameroon
+      lt: Kamerūnas
+      lv: Kamerūna
+      et: Kamerun
+      kk: Камерун
+      uz: Kamerun
+      uk: Камерун
+      az: Kamerun
+      fa: کامرون
     tel: +237
   - value: Canada
     label:
@@ -258,6 +1250,38 @@ countries:
       de: Kanada
       es: Canadá
       pt: Canadá
+      it: Canada
+      ar: كندا
+      ru: Канада
+      pl: Kanada
+      nl: Canada
+      sv: Kanada
+      no: Canada
+      el: Καναδάς
+      fi: Kanada
+      da: Canada
+      cs: Kanada
+      th: แคนาดา
+      hr: Kanada
+      tl: Canada
+      hu: Kanada
+      ro: Canada
+      sk: Kanada
+      bg: Канада
+      sl: Kanada
+      sr: Kanada
+      tr: Kanada
+      id: Kanada
+      he: קנדה
+      ms: Kanada
+      lt: Kanada
+      lv: Kanāda
+      et: Kanada
+      kk: Канада
+      uz: Kanada
+      uk: Канада
+      az: Kanada
+      fa: کانادا
     tel: +1
   - value: Central African Republic
     label:
@@ -266,6 +1290,38 @@ countries:
       de: Zentralafrikanische Republik
       es: República Centroafricana
       pt: República Centro-Africana
+      it: Repubblica Centrafricana
+      ar: جمهورية أفريقيا الوسطى
+      ru: Центрально-Африканская Республика
+      pl: Republika Środkowoafrykańska
+      nl: Centraal-Afrikaanse Republiek
+      sv: Centralafrikanska republiken
+      no: Den sentralafrikanske republikk
+      el: Κεντροαφρικανική Δημοκρατία
+      fi: Keski-Afrikan tasavalta
+      da: Den Centralafrikanske Republik
+      cs: Středoafrická republika
+      th: สาธารณรัฐแอฟริกากลาง
+      hr: Srednjoafrička Republika
+      tl: Central African Republic
+      hu: Közép-afrikai Köztársaság
+      ro: Republica Centrafricană
+      sk: Stredoafrická republika
+      bg: Централноафриканска република
+      sl: Srednjeafriška republika
+      sr: Centralnoafrička Republika
+      tr: Orta Afrika Cumhuriyeti
+      id: Republik Afrika Tengah
+      he: הרפובליקה המרכז-אפריקאית
+      ms: Republik Afrika Tengah
+      lt: Centrinės Afrikos Respublika
+      lv: Centrālāfrikas Republika
+      et: Kesk-Aafrika Vabariik
+      kk: Орталық Африка Республикасы
+      uz: Markaziy Afrika Respublikasi
+      uk: Центральноафриканська Республіка
+      az: Mərkəzi Afrika Respublikası
+      fa: جمهوری افریقای مرکزی
     tel: +236
   - value: Chad
     label:
@@ -274,6 +1330,38 @@ countries:
       de: Tschad
       es: Chad
       pt: Chade
+      it: Ciad
+      ar: تشاد
+      ru: Чад
+      pl: Czad
+      nl: Tsjaad
+      sv: Tchad
+      no: Tsjad
+      el: Τσαντ
+      fi: Tšad
+      da: Tchad
+      cs: Čad
+      th: ชาด
+      hr: Čad
+      tl: Chad
+      hu: Csád
+      ro: Ciad
+      sk: Čad
+      bg: Чад
+      sl: Čad
+      sr: Čad
+      tr: Çad
+      id: Chad
+      he: צ׳אד
+      ms: Chad
+      lt: Čadas
+      lv: Čada
+      et: Tšaad
+      kk: Чад
+      uz: Chad
+      uk: Чад
+      az: Çad
+      fa: چاد
     tel: +235
   - value: Chile
     label:
@@ -282,6 +1370,38 @@ countries:
       de: Chile
       es: Chile
       pt: Chile
+      it: Cile
+      ar: تشيلي
+      ru: Чили
+      pl: Chile
+      nl: Chili
+      sv: Chile
+      no: Chile
+      el: Χιλή
+      fi: Chile
+      da: Chile
+      cs: Chile
+      th: ชิลี
+      hr: Čile
+      tl: Chile
+      hu: Chile
+      ro: Chile
+      sk: Čile
+      bg: Чили
+      sl: Čile
+      sr: Čile
+      tr: Şili
+      id: Cile
+      he: צ׳ילה
+      ms: Chile
+      lt: Čilė
+      lv: Čīle
+      et: Tšiili
+      kk: Чили
+      uz: Chili
+      uk: Чилі
+      az: Çili
+      fa: شیلی
     tel: +56
   - value: China
     label:
@@ -290,6 +1410,38 @@ countries:
       de: China
       es: China
       pt: China
+      it: Cina
+      ar: الصين
+      ru: Китай
+      pl: Chiny
+      nl: China
+      sv: Kina
+      no: Kina
+      el: Κίνα
+      fi: Kiina
+      da: Kina
+      cs: Čína
+      th: จีน
+      hr: Kina
+      tl: China
+      hu: Kína
+      ro: China
+      sk: Čína
+      bg: Китай
+      sl: Kitajska
+      sr: Kina
+      tr: Çin
+      id: Tiongkok
+      he: סין
+      ms: China
+      lt: Kinija
+      lv: Ķīna
+      et: Hiina
+      kk: Қытай
+      uz: Xitoy
+      uk: Китай
+      az: Çin
+      fa: چین
     tel: +86
   - value: Colombia
     label:
@@ -298,6 +1450,38 @@ countries:
       de: Kolumbien
       es: Colombia
       pt: Colômbia
+      it: Colombia
+      ar: كولومبيا
+      ru: Колумбия
+      pl: Kolumbia
+      nl: Colombia
+      sv: Colombia
+      no: Colombia
+      el: Κολομβία
+      fi: Kolumbia
+      da: Colombia
+      cs: Kolumbie
+      th: โคลอมเบีย
+      hr: Kolumbija
+      tl: Colombia
+      hu: Kolumbia
+      ro: Columbia
+      sk: Kolumbia
+      bg: Колумбия
+      sl: Kolumbija
+      sr: Kolumbija
+      tr: Kolombiya
+      id: Kolombia
+      he: קולומביה
+      ms: Colombia
+      lt: Kolumbija
+      lv: Kolumbija
+      et: Colombia
+      kk: Колумбия
+      uz: Kolumbiya
+      uk: Колумбія
+      az: Kolumbiya
+      fa: کلمبیا
     tel: +57
   - value: Comoros
     label:
@@ -306,6 +1490,38 @@ countries:
       de: Komoren
       es: Comoras
       pt: Comores
+      it: Comore
+      ar: جزر القمر
+      ru: Коморы
+      pl: Komory
+      nl: Comoren
+      sv: Komorerna
+      no: Komorene
+      el: Κομόρες
+      fi: Komorit
+      da: Comorerne
+      cs: Komory
+      th: คอโมโรส
+      hr: Komori
+      tl: Comoros
+      hu: Comore-szigetek
+      ro: Comore
+      sk: Komory
+      bg: Коморски острови
+      sl: Komori
+      sr: Komorska Ostrva
+      tr: Komorlar
+      id: Komoro
+      he: קומורו
+      ms: Comoros
+      lt: Komorai
+      lv: Komoru salas
+      et: Komoorid
+      kk: Комор аралдары
+      uz: Komor orollari
+      uk: Комори
+      az: Komor adaları
+      fa: کومور
     tel: +269
   - value: Congo
     label:
@@ -314,6 +1530,38 @@ countries:
       de: Kongo
       es: Congo
       pt: Congo
+      it: Congo-Brazzaville
+      ar: الكونغو - برازافيل
+      ru: Конго - Браззавиль
+      pl: Kongo
+      nl: Congo-Brazzaville
+      sv: Kongo-Brazzaville
+      no: Kongo-Brazzaville
+      el: Κονγκό - Μπραζαβίλ
+      fi: Kongon tasavalta
+      da: Congo-Brazzaville
+      cs: Kongo – Brazzaville
+      th: คองโก - บราซซาวิล
+      hr: Kongo - Brazzaville
+      tl: Congo - Brazzaville
+      hu: Kongó – Brazzaville
+      ro: Congo - Brazzaville
+      sk: Konžská republika
+      bg: Конго (Бразавил)
+      sl: Kongo - Brazzaville
+      sr: Kongo - Brazavil
+      tr: Kongo - Brazavil
+      id: Kongo - Brazzaville
+      he: קונגו - ברזאויל
+      ms: Congo - Brazzaville
+      lt: Kongas-Brazavilis
+      lv: Kongo (Brazavila)
+      et: Kongo Vabariik
+      kk: Конго-Браззавиль Республикасы
+      uz: Kongo – Brazzavil
+      uk: Конго – Браззавіль
+      az: Konqo - Brazzavil
+      fa: کنگو - برازویل
     tel: +242
   - value: Costa Rica
     label:
@@ -322,6 +1570,38 @@ countries:
       de: Costa Rica
       es: Costa Rica
       pt: Costa Rica
+      it: Costa Rica
+      ar: كوستاريكا
+      ru: Коста-Рика
+      pl: Kostaryka
+      nl: Costa Rica
+      sv: Costa Rica
+      no: Costa Rica
+      el: Κόστα Ρίκα
+      fi: Costa Rica
+      da: Costa Rica
+      cs: Kostarika
+      th: คอสตาริกา
+      hr: Kostarika
+      tl: Costa Rica
+      hu: Costa Rica
+      ro: Costa Rica
+      sk: Kostarika
+      bg: Коста Рика
+      sl: Kostarika
+      sr: Kostarika
+      tr: Kosta Rika
+      id: Kosta Rika
+      he: קוסטה ריקה
+      ms: Costa Rica
+      lt: Kosta Rika
+      lv: Kostarika
+      et: Costa Rica
+      kk: Коста-Рика
+      uz: Kosta-Rika
+      uk: Коста-Рика
+      az: Kosta Rika
+      fa: کاستاریکا
     tel: +506
   - value: Côte d'Ivoire
     label:
@@ -330,6 +1610,38 @@ countries:
       de: Elfenbeinküste
       es: Costa de Marfil
       pt: Costa do Marfim
+      it: Costa d’Avorio
+      ar: ساحل العاج
+      ru: Кот-д’Ивуар
+      pl: Côte d’Ivoire
+      nl: Ivoorkust
+      sv: Elfenbenskusten
+      no: Elfenbenskysten
+      el: Ακτή Ελεφαντοστού
+      fi: Norsunluurannikko
+      da: Elfenbenskysten
+      cs: Pobřeží slonoviny
+      th: โกตดิวัวร์
+      hr: Obala Bjelokosti
+      tl: Côte d’Ivoire
+      hu: Elefántcsontpart
+      ro: Côte d’Ivoire
+      sk: Pobrežie Slonoviny
+      bg: Кот д’Ивоар
+      sl: Slonokoščena obala
+      sr: Obala Slonovače (Kot d’Ivoar)
+      tr: Côte d’Ivoire
+      id: Côte d’Ivoire
+      he: חוף השנהב
+      ms: Cote d’Ivoire
+      lt: Dramblio Kaulo Krantas
+      lv: Kotdivuāra
+      et: Elevandiluurannik
+      kk: Кот-д’Ивуар
+      uz: Kot-d’Ivuar
+      uk: Кот-дʼІвуар
+      az: Kotd’ivuar
+      fa: ساحل عاج
     tel: +225
   - value: Croatia
     label:
@@ -338,6 +1650,38 @@ countries:
       de: Kroatien
       es: Croacia
       pt: Croácia
+      it: Croazia
+      ar: كرواتيا
+      ru: Хорватия
+      pl: Chorwacja
+      nl: Kroatië
+      sv: Kroatien
+      no: Kroatia
+      el: Κροατία
+      fi: Kroatia
+      da: Kroatien
+      cs: Chorvatsko
+      th: โครเอเชีย
+      hr: Hrvatska
+      tl: Croatia
+      hu: Horvátország
+      ro: Croația
+      sk: Chorvátsko
+      bg: Хърватия
+      sl: Hrvaška
+      sr: Hrvatska
+      tr: Hırvatistan
+      id: Kroasia
+      he: קרואטיה
+      ms: Croatia
+      lt: Kroatija
+      lv: Horvātija
+      et: Horvaatia
+      kk: Хорватия
+      uz: Xorvatiya
+      uk: Хорватія
+      az: Xorvatiya
+      fa: کرواسی
     tel: +385
   - value: Cuba
     label:
@@ -346,6 +1690,38 @@ countries:
       de: Kuba
       es: Cuba
       pt: Cuba
+      it: Cuba
+      ar: كوبا
+      ru: Куба
+      pl: Kuba
+      nl: Cuba
+      sv: Kuba
+      no: Cuba
+      el: Κούβα
+      fi: Kuuba
+      da: Cuba
+      cs: Kuba
+      th: คิวบา
+      hr: Kuba
+      tl: Cuba
+      hu: Kuba
+      ro: Cuba
+      sk: Kuba
+      bg: Куба
+      sl: Kuba
+      sr: Kuba
+      tr: Küba
+      id: Kuba
+      he: קובה
+      ms: Cuba
+      lt: Kuba
+      lv: Kuba
+      et: Kuuba
+      kk: Куба
+      uz: Kuba
+      uk: Куба
+      az: Kuba
+      fa: کوبا
     tel: +53
   - value: Cyprus
     label:
@@ -354,6 +1730,38 @@ countries:
       de: Zypern
       es: Chipre
       pt: Chipre
+      it: Cipro
+      ar: قبرص
+      ru: Кипр
+      pl: Cypr
+      nl: Cyprus
+      sv: Cypern
+      no: Kypros
+      el: Κύπρος
+      fi: Kypros
+      da: Cypern
+      cs: Kypr
+      th: ไซปรัส
+      hr: Cipar
+      tl: Cyprus
+      hu: Ciprus
+      ro: Cipru
+      sk: Cyprus
+      bg: Кипър
+      sl: Ciper
+      sr: Kipar
+      tr: Kıbrıs
+      id: Siprus
+      he: קפריסין
+      ms: Cyprus
+      lt: Kipras
+      lv: Kipra
+      et: Küpros
+      kk: Кипр
+      uz: Kipr
+      uk: Кіпр
+      az: Kipr
+      fa: قبرس
     tel: +357
   - value: Czech Republic
     label:
@@ -362,6 +1770,38 @@ countries:
       de: Tschechische Republik
       es: República Checa
       pt: República Tcheca
+      it: Cechia
+      ar: التشيك
+      ru: Чехия
+      pl: Czechy
+      nl: Tsjechië
+      sv: Tjeckien
+      no: Tsjekkia
+      el: Τσεχία
+      fi: Tšekki
+      da: Tjekkiet
+      cs: Česko
+      th: เช็ก
+      hr: Češka
+      tl: Czechia
+      hu: Csehország
+      ro: Cehia
+      sk: Česko
+      bg: Чехия
+      sl: Češka
+      sr: Češka
+      tr: Çekya
+      id: Ceko
+      he: צ׳כיה
+      ms: Czechia
+      lt: Čekija
+      lv: Čehija
+      et: Tšehhi
+      kk: Чехия
+      uz: Chexiya
+      uk: Чехія
+      az: Çexiya
+      fa: چک
     tel: +420
   - value: Denmark
     label:
@@ -370,6 +1810,38 @@ countries:
       de: Dänemark
       es: Dinamarca
       pt: Dinamarca
+      it: Danimarca
+      ar: الدانمرك
+      ru: Дания
+      pl: Dania
+      nl: Denemarken
+      sv: Danmark
+      no: Danmark
+      el: Δανία
+      fi: Tanska
+      da: Danmark
+      cs: Dánsko
+      th: เดนมาร์ก
+      hr: Danska
+      tl: Denmark
+      hu: Dánia
+      ro: Danemarca
+      sk: Dánsko
+      bg: Дания
+      sl: Danska
+      sr: Danska
+      tr: Danimarka
+      id: Denmark
+      he: דנמרק
+      ms: Denmark
+      lt: Danija
+      lv: Dānija
+      et: Taani
+      kk: Дания
+      uz: Daniya
+      uk: Данія
+      az: Danimarka
+      fa: دانمارک
     tel: +45
   - value: Djibouti
     label:
@@ -378,6 +1850,38 @@ countries:
       de: Dschibuti
       es: Yibuti
       pt: Djibuti
+      it: Gibuti
+      ar: جيبوتي
+      ru: Джибути
+      pl: Dżibuti
+      nl: Djibouti
+      sv: Djibouti
+      no: Djibouti
+      el: Τζιμπουτί
+      fi: Djibouti
+      da: Djibouti
+      cs: Džibutsko
+      th: จิบูตี
+      hr: Džibuti
+      tl: Djibouti
+      hu: Dzsibuti
+      ro: Djibouti
+      sk: Džibutsko
+      bg: Джибути
+      sl: Džibuti
+      sr: Džibuti
+      tr: Cibuti
+      id: Jibuti
+      he: ג׳יבוטי
+      ms: Djibouti
+      lt: Džibutis
+      lv: Džibutija
+      et: Djibouti
+      kk: Джибути
+      uz: Jibuti
+      uk: Джибуті
+      az: Cibuti
+      fa: جیبوتی
     tel: +253
   - value: Dominica
     label:
@@ -386,6 +1890,38 @@ countries:
       de: Dominica
       es: Dominica
       pt: Dominica
+      it: Dominica
+      ar: دومينيكا
+      ru: Доминика
+      pl: Dominika
+      nl: Dominica
+      sv: Dominica
+      no: Dominica
+      el: Ντομίνικα
+      fi: Dominica
+      da: Dominica
+      cs: Dominika
+      th: โดมินิกา
+      hr: Dominika
+      tl: Dominica
+      hu: Dominika
+      ro: Dominica
+      sk: Dominika
+      bg: Доминика
+      sl: Dominika
+      sr: Dominika
+      tr: Dominika
+      id: Dominika
+      he: דומיניקה
+      ms: Dominica
+      lt: Dominika
+      lv: Dominika
+      et: Dominica
+      kk: Доминика
+      uz: Dominika
+      uk: Домініка
+      az: Dominika
+      fa: دومینیکا
     tel: +1-767
   - value: Dominican Republic
     label:
@@ -394,6 +1930,38 @@ countries:
       de: Dominikanische Republik
       es: República Dominicana
       pt: República Dominicana
+      it: Repubblica Dominicana
+      ar: جمهورية الدومينيكان
+      ru: Доминиканская Республика
+      pl: Dominikana
+      nl: Dominicaanse Republiek
+      sv: Dominikanska republiken
+      no: Den dominikanske republikk
+      el: Δομινικανή Δημοκρατία
+      fi: Dominikaaninen tasavalta
+      da: Den Dominikanske Republik
+      cs: Dominikánská republika
+      th: สาธารณรัฐโดมินิกัน
+      hr: Dominikanska Republika
+      tl: Dominican Republic
+      hu: Dominikai Köztársaság
+      ro: Republica Dominicană
+      sk: Dominikánska republika
+      bg: Доминиканска република
+      sl: Dominikanska republika
+      sr: Dominikanska Republika
+      tr: Dominik Cumhuriyeti
+      id: Republik Dominika
+      he: הרפובליקה הדומיניקנית
+      ms: Republik Dominica
+      lt: Dominikos Respublika
+      lv: Dominikāna
+      et: Dominikaani Vabariik
+      kk: Доминикан Республикасы
+      uz: Dominikan Respublikasi
+      uk: Домініканська Республіка
+      az: Dominikan Respublikası
+      fa: جمهوری دومینیکن
     tel: +1-809
   - value: DR Congo
     label:
@@ -402,6 +1970,38 @@ countries:
       de: Demokratische Republik Kongo
       es: República Democrática del Congo
       pt: República Democrática do Congo
+      it: Congo - Kinshasa
+      ar: الكونغو - كينشاسا
+      ru: Конго - Киншаса
+      pl: Demokratyczna Republika Konga
+      nl: Congo-Kinshasa
+      sv: Kongo-Kinshasa
+      no: Kongo
+      el: Κονγκό - Κινσάσα
+      fi: Kongon demokraattinen tasavalta
+      da: Congo-Kinshasa
+      cs: Kongo – Kinshasa
+      th: คองโก - กินชาซา
+      hr: Kongo - Kinshasa
+      tl: Congo - Kinshasa
+      hu: Kongó – Kinshasa
+      ro: Congo - Kinshasa
+      sk: Konžská demokratická republika
+      bg: Конго (Киншаса)
+      sl: Demokratična republika Kongo
+      sr: Kongo - Kinšasa
+      tr: Kongo - Kinşasa
+      id: Kongo - Kinshasa
+      he: קונגו - קינשאסה
+      ms: Congo - Kinshasa
+      lt: Kongas-Kinšasa
+      lv: Kongo (Kinšasa)
+      et: Kongo DV
+      kk: Конго
+      uz: Kongo – Kinshasa
+      uk: Конго – Кіншаса
+      az: Konqo - Kinşasa
+      fa: کنگو - کینشاسا
     tel: +243
   - value: Ecuador
     label:
@@ -410,6 +2010,38 @@ countries:
       de: Ecuador
       es: Ecuador
       pt: Equador
+      it: Ecuador
+      ar: الإكوادور
+      ru: Эквадор
+      pl: Ekwador
+      nl: Ecuador
+      sv: Ecuador
+      no: Ecuador
+      el: Ισημερινός
+      fi: Ecuador
+      da: Ecuador
+      cs: Ekvádor
+      th: เอกวาดอร์
+      hr: Ekvador
+      tl: Ecuador
+      hu: Ecuador
+      ro: Ecuador
+      sk: Ekvádor
+      bg: Еквадор
+      sl: Ekvador
+      sr: Ekvador
+      tr: Ekvador
+      id: Ekuador
+      he: אקוודור
+      ms: Ecuador
+      lt: Ekvadoras
+      lv: Ekvadora
+      et: Ecuador
+      kk: Эквадор
+      uz: Ekvador
+      uk: Еквадор
+      az: Ekvador
+      fa: اکوادور
     tel: +593
   - value: Egypt
     label:
@@ -418,6 +2050,38 @@ countries:
       de: Ägypten
       es: Egipto
       pt: Egito
+      it: Egitto
+      ar: مصر
+      ru: Египет
+      pl: Egipt
+      nl: Egypte
+      sv: Egypten
+      no: Egypt
+      el: Αίγυπτος
+      fi: Egypti
+      da: Egypten
+      cs: Egypt
+      th: อียิปต์
+      hr: Egipat
+      tl: Egypt
+      hu: Egyiptom
+      ro: Egipt
+      sk: Egypt
+      bg: Египет
+      sl: Egipt
+      sr: Egipat
+      tr: Mısır
+      id: Mesir
+      he: מצרים
+      ms: Mesir
+      lt: Egiptas
+      lv: Ēģipte
+      et: Egiptus
+      kk: Мысыр
+      uz: Misr
+      uk: Єгипет
+      az: Misir
+      fa: مصر
     tel: +20
   - value: El Salvador
     label:
@@ -426,6 +2090,38 @@ countries:
       de: El Salvador
       es: El Salvador
       pt: El Salvador
+      it: El Salvador
+      ar: السلفادور
+      ru: Сальвадор
+      pl: Salwador
+      nl: El Salvador
+      sv: El Salvador
+      no: El Salvador
+      el: Ελ Σαλβαδόρ
+      fi: El Salvador
+      da: El Salvador
+      cs: Salvador
+      th: เอลซัลวาดอร์
+      hr: Salvador
+      tl: El Salvador
+      hu: Salvador
+      ro: El Salvador
+      sk: Salvádor
+      bg: Салвадор
+      sl: Salvador
+      sr: Salvador
+      tr: El Salvador
+      id: El Salvador
+      he: אל סלבדור
+      ms: El Salvador
+      lt: Salvadoras
+      lv: Salvadora
+      et: El Salvador
+      kk: Сальвадор
+      uz: Salvador
+      uk: Сальвадор
+      az: Salvador
+      fa: السالوادور
     tel: +503
   - value: Equatorial Guinea
     label:
@@ -434,6 +2130,38 @@ countries:
       de: Äquatorialguinea
       es: Guinea Ecuatorial
       pt: Guiné Equatorial
+      it: Guinea Equatoriale
+      ar: غينيا الاستوائية
+      ru: Экваториальная Гвинея
+      pl: Gwinea Równikowa
+      nl: Equatoriaal-Guinea
+      sv: Ekvatorialguinea
+      no: Ekvatorial-Guinea
+      el: Ισημερινή Γουινέα
+      fi: Päiväntasaajan Guinea
+      da: Ækvatorialguinea
+      cs: Rovníková Guinea
+      th: อิเควทอเรียลกินี
+      hr: Ekvatorska Gvineja
+      tl: Equatorial Guinea
+      hu: Egyenlítői-Guinea
+      ro: Guineea Ecuatorială
+      sk: Rovníková Guinea
+      bg: Екваториална Гвинея
+      sl: Ekvatorialna Gvineja
+      sr: Ekvatorijalna Gvineja
+      tr: Ekvator Ginesi
+      id: Guinea Ekuatorial
+      he: גינאה המשוונית
+      ms: Guinea Khatulistiwa
+      lt: Pusiaujo Gvinėja
+      lv: Ekvatoriālā Gvineja
+      et: Ekvatoriaal-Guinea
+      kk: Экваторлық Гвинея
+      uz: Ekvatorial Gvineya
+      uk: Екваторіальна Гвінея
+      az: Ekvatorial Qvineya
+      fa: گینهٔ استوایی
     tel: +240
   - value: Eritrea
     label:
@@ -442,6 +2170,38 @@ countries:
       de: Eritrea
       es: Eritrea
       pt: Eritreia
+      it: Eritrea
+      ar: إريتريا
+      ru: Эритрея
+      pl: Erytrea
+      nl: Eritrea
+      sv: Eritrea
+      no: Eritrea
+      el: Ερυθραία
+      fi: Eritrea
+      da: Eritrea
+      cs: Eritrea
+      th: เอริเทรีย
+      hr: Eritreja
+      tl: Eritrea
+      hu: Eritrea
+      ro: Eritreea
+      sk: Eritrea
+      bg: Еритрея
+      sl: Eritreja
+      sr: Eritreja
+      tr: Eritre
+      id: Eritrea
+      he: אריתריאה
+      ms: Eritrea
+      lt: Eritrėja
+      lv: Eritreja
+      et: Eritrea
+      kk: Эритрея
+      uz: Eritreya
+      uk: Еритрея
+      az: Eritreya
+      fa: اریتره
     tel: +291
   - value: Estonia
     label:
@@ -450,6 +2210,38 @@ countries:
       de: Estland
       es: Estonia
       pt: Estônia
+      it: Estonia
+      ar: إستونيا
+      ru: Эстония
+      pl: Estonia
+      nl: Estland
+      sv: Estland
+      no: Estland
+      el: Εσθονία
+      fi: Viro
+      da: Estland
+      cs: Estonsko
+      th: เอสโตเนีย
+      hr: Estonija
+      tl: Estonia
+      hu: Észtország
+      ro: Estonia
+      sk: Estónsko
+      bg: Естония
+      sl: Estonija
+      sr: Estonija
+      tr: Estonya
+      id: Estonia
+      he: אסטוניה
+      ms: Estonia
+      lt: Estija
+      lv: Igaunija
+      et: Eesti
+      kk: Эстония
+      uz: Estoniya
+      uk: Естонія
+      az: Estoniya
+      fa: استونی
     tel: +372
   - value: Eswatini
     label:
@@ -458,6 +2250,38 @@ countries:
       de: Eswatini
       es: Suazilandia
       pt: Essuatíni
+      it: Eswatini
+      ar: إسواتيني
+      ru: Эсватини
+      pl: Eswatini
+      nl: Eswatini
+      sv: Eswatini
+      no: Eswatini
+      el: Εσουατίνι
+      fi: Eswatini
+      da: Eswatini
+      cs: Eswatini
+      th: เอสวาตีนี
+      hr: Esvatini
+      tl: Swaziland
+      hu: Szváziföld
+      ro: Eswatini
+      sk: Eswatini
+      bg: Есватини
+      sl: Esvatini
+      sr: Svazilend
+      tr: Esvatini
+      id: eSwatini
+      he: אסוואטיני
+      ms: Eswatini
+      lt: Svazilandas
+      lv: Svatini
+      et: Svaasimaa
+      kk: Эсватини
+      uz: Svazilend
+      uk: Есватіні
+      az: Esvatini
+      fa: اسواتینی
     tel: +268
   - value: Ethiopia
     label:
@@ -466,6 +2290,38 @@ countries:
       de: Äthiopien
       es: Etiopía
       pt: Etiópia
+      it: Etiopia
+      ar: إثيوبيا
+      ru: Эфиопия
+      pl: Etiopia
+      nl: Ethiopië
+      sv: Etiopien
+      no: Etiopia
+      el: Αιθιοπία
+      fi: Etiopia
+      da: Etiopien
+      cs: Etiopie
+      th: เอธิโอเปีย
+      hr: Etiopija
+      tl: Ethiopia
+      hu: Etiópia
+      ro: Etiopia
+      sk: Etiópia
+      bg: Етиопия
+      sl: Etiopija
+      sr: Etiopija
+      tr: Etiyopya
+      id: Etiopia
+      he: אתיופיה
+      ms: Ethiopia
+      lt: Etiopija
+      lv: Etiopija
+      et: Etioopia
+      kk: Эфиопия
+      uz: Efiopiya
+      uk: Ефіопія
+      az: Efiopiya
+      fa: اتیوپی
     tel: +251
   - value: Fiji
     label:
@@ -474,6 +2330,38 @@ countries:
       de: Fidschi
       es: Fiyi
       pt: Fiji
+      it: Figi
+      ar: فيجي
+      ru: Фиджи
+      pl: Fidżi
+      nl: Fiji
+      sv: Fiji
+      no: Fiji
+      el: Φίτζι
+      fi: Fidži
+      da: Fiji
+      cs: Fidži
+      th: ฟิจิ
+      hr: Fidži
+      tl: Fiji
+      hu: Fidzsi
+      ro: Fiji
+      sk: Fidži
+      bg: Фиджи
+      sl: Fidži
+      sr: Fidži
+      tr: Fiji
+      id: Fiji
+      he: פיג׳י
+      ms: Fiji
+      lt: Fidžis
+      lv: Fidži
+      et: Fidži
+      kk: Фиджи
+      uz: Fiji
+      uk: Фіджі
+      az: Fici
+      fa: فیجی
     tel: +679
   - value: Finland
     label:
@@ -482,6 +2370,38 @@ countries:
       de: Finnland
       es: Finlandia
       pt: Finlândia
+      it: Finlandia
+      ar: فنلندا
+      ru: Финляндия
+      pl: Finlandia
+      nl: Finland
+      sv: Finland
+      no: Finland
+      el: Φινλανδία
+      fi: Suomi
+      da: Finland
+      cs: Finsko
+      th: ฟินแลนด์
+      hr: Finska
+      tl: Finland
+      hu: Finnország
+      ro: Finlanda
+      sk: Fínsko
+      bg: Финландия
+      sl: Finska
+      sr: Finska
+      tr: Finlandiya
+      id: Finlandia
+      he: פינלנד
+      ms: Finland
+      lt: Suomija
+      lv: Somija
+      et: Soome
+      kk: Финляндия
+      uz: Finlandiya
+      uk: Фінляндія
+      az: Finlandiya
+      fa: فنلاند
     tel: +358
   - value: France
     label:
@@ -490,6 +2410,38 @@ countries:
       de: Frankreich
       es: Francia
       pt: França
+      it: Francia
+      ar: فرنسا
+      ru: Франция
+      pl: Francja
+      nl: Frankrijk
+      sv: Frankrike
+      no: Frankrike
+      el: Γαλλία
+      fi: Ranska
+      da: Frankrig
+      cs: Francie
+      th: ฝรั่งเศส
+      hr: Francuska
+      tl: France
+      hu: Franciaország
+      ro: Franța
+      sk: Francúzsko
+      bg: Франция
+      sl: Francija
+      sr: Francuska
+      tr: Fransa
+      id: Prancis
+      he: צרפת
+      ms: Perancis
+      lt: Prancūzija
+      lv: Francija
+      et: Prantsusmaa
+      kk: Франция
+      uz: Fransiya
+      uk: Франція
+      az: Fransa
+      fa: فرانسه
     tel: +33
   - value: Gabon
     label:
@@ -498,6 +2450,38 @@ countries:
       de: Gabun
       es: Gabón
       pt: Gabão
+      it: Gabon
+      ar: الغابون
+      ru: Габон
+      pl: Gabon
+      nl: Gabon
+      sv: Gabon
+      no: Gabon
+      el: Γκαμπόν
+      fi: Gabon
+      da: Gabon
+      cs: Gabon
+      th: กาบอง
+      hr: Gabon
+      tl: Gabon
+      hu: Gabon
+      ro: Gabon
+      sk: Gabon
+      bg: Габон
+      sl: Gabon
+      sr: Gabon
+      tr: Gabon
+      id: Gabon
+      he: גבון
+      ms: Gabon
+      lt: Gabonas
+      lv: Gabona
+      et: Gabon
+      kk: Габон
+      uz: Gabon
+      uk: Габон
+      az: Qabon
+      fa: گابن
     tel: +241
   - value: Gambia
     label:
@@ -506,6 +2490,38 @@ countries:
       de: Gambia
       es: Gambia
       pt: Gâmbia
+      it: Gambia
+      ar: غامبيا
+      ru: Гамбия
+      pl: Gambia
+      nl: Gambia
+      sv: Gambia
+      no: Gambia
+      el: Γκάμπια
+      fi: Gambia
+      da: Gambia
+      cs: Gambie
+      th: แกมเบีย
+      hr: Gambija
+      tl: Gambia
+      hu: Gambia
+      ro: Gambia
+      sk: Gambia
+      bg: Гамбия
+      sl: Gambija
+      sr: Gambija
+      tr: Gambiya
+      id: Gambia
+      he: גמביה
+      ms: Gambia
+      lt: Gambija
+      lv: Gambija
+      et: Gambia
+      kk: Гамбия
+      uz: Gambiya
+      uk: Гамбія
+      az: Qambiya
+      fa: گامبیا
     tel: +220
   - value: Georgia
     label:
@@ -514,6 +2530,38 @@ countries:
       de: Georgien
       es: Georgia
       pt: Geórgia
+      it: Georgia
+      ar: جورجيا
+      ru: Грузия
+      pl: Gruzja
+      nl: Georgië
+      sv: Georgien
+      no: Georgia
+      el: Γεωργία
+      fi: Georgia
+      da: Georgien
+      cs: Gruzie
+      th: จอร์เจีย
+      hr: Gruzija
+      tl: Georgia
+      hu: Grúzia
+      ro: Georgia
+      sk: Gruzínsko
+      bg: Грузия
+      sl: Gruzija
+      sr: Gruzija
+      tr: Gürcistan
+      id: Georgia
+      he: גאורגיה
+      ms: Georgia
+      lt: Gruzija
+      lv: Gruzija
+      et: Gruusia
+      kk: Грузия
+      uz: Gruziya
+      uk: Грузія
+      az: Gürcüstan
+      fa: گرجستان
     tel: +995
   - value: Germany
     label:
@@ -522,6 +2570,38 @@ countries:
       de: Deutschland
       es: Alemania
       pt: Alemanha
+      it: Germania
+      ar: ألمانيا
+      ru: Германия
+      pl: Niemcy
+      nl: Duitsland
+      sv: Tyskland
+      no: Tyskland
+      el: Γερμανία
+      fi: Saksa
+      da: Tyskland
+      cs: Německo
+      th: เยอรมนี
+      hr: Njemačka
+      tl: Germany
+      hu: Németország
+      ro: Germania
+      sk: Nemecko
+      bg: Германия
+      sl: Nemčija
+      sr: Nemačka
+      tr: Almanya
+      id: Jerman
+      he: גרמניה
+      ms: Jerman
+      lt: Vokietija
+      lv: Vācija
+      et: Saksamaa
+      kk: Германия
+      uz: Germaniya
+      uk: Німеччина
+      az: Almaniya
+      fa: آلمان
     tel: +49
   - value: Ghana
     label:
@@ -530,6 +2610,38 @@ countries:
       de: Ghana
       es: Ghana
       pt: Gana
+      it: Ghana
+      ar: غانا
+      ru: Гана
+      pl: Ghana
+      nl: Ghana
+      sv: Ghana
+      no: Ghana
+      el: Γκάνα
+      fi: Ghana
+      da: Ghana
+      cs: Ghana
+      th: กานา
+      hr: Gana
+      tl: Ghana
+      hu: Ghána
+      ro: Ghana
+      sk: Ghana
+      bg: Гана
+      sl: Gana
+      sr: Gana
+      tr: Gana
+      id: Ghana
+      he: גאנה
+      ms: Ghana
+      lt: Gana
+      lv: Gana
+      et: Ghana
+      kk: Гана
+      uz: Gana
+      uk: Гана
+      az: Qana
+      fa: غنا
     tel: +233
   - value: Greece
     label:
@@ -538,6 +2650,38 @@ countries:
       de: Griechenland
       es: Grecia
       pt: Grécia
+      it: Grecia
+      ar: اليونان
+      ru: Греция
+      pl: Grecja
+      nl: Griekenland
+      sv: Grekland
+      no: Hellas
+      el: Ελλάδα
+      fi: Kreikka
+      da: Grækenland
+      cs: Řecko
+      th: กรีซ
+      hr: Grčka
+      tl: Greece
+      hu: Görögország
+      ro: Grecia
+      sk: Grécko
+      bg: Гърция
+      sl: Grčija
+      sr: Grčka
+      tr: Yunanistan
+      id: Yunani
+      he: יוון
+      ms: Greece
+      lt: Graikija
+      lv: Grieķija
+      et: Kreeka
+      kk: Грекия
+      uz: Gretsiya
+      uk: Греція
+      az: Yunanıstan
+      fa: یونان
     tel: +30
   - value: Grenada
     label:
@@ -546,6 +2690,38 @@ countries:
       de: Grenada
       es: Granada
       pt: Granada
+      it: Grenada
+      ar: غرينادا
+      ru: Гренада
+      pl: Grenada
+      nl: Grenada
+      sv: Grenada
+      no: Grenada
+      el: Γρενάδα
+      fi: Grenada
+      da: Grenada
+      cs: Grenada
+      th: เกรเนดา
+      hr: Grenada
+      tl: Grenada
+      hu: Grenada
+      ro: Grenada
+      sk: Grenada
+      bg: Гренада
+      sl: Grenada
+      sr: Grenada
+      tr: Grenada
+      id: Grenada
+      he: גרנדה
+      ms: Grenada
+      lt: Grenada
+      lv: Grenāda
+      et: Grenada
+      kk: Гренада
+      uz: Grenada
+      uk: Гренада
+      az: Qrenada
+      fa: گرنادا
     tel: +1-473
   - value: Guatemala
     label:
@@ -554,6 +2730,38 @@ countries:
       de: Guatemala
       es: Guatemala
       pt: Guatemala
+      it: Guatemala
+      ar: غواتيمالا
+      ru: Гватемала
+      pl: Gwatemala
+      nl: Guatemala
+      sv: Guatemala
+      no: Guatemala
+      el: Γουατεμάλα
+      fi: Guatemala
+      da: Guatemala
+      cs: Guatemala
+      th: กัวเตมาลา
+      hr: Gvatemala
+      tl: Guatemala
+      hu: Guatemala
+      ro: Guatemala
+      sk: Guatemala
+      bg: Гватемала
+      sl: Gvatemala
+      sr: Gvatemala
+      tr: Guatemala
+      id: Guatemala
+      he: גואטמלה
+      ms: Guatemala
+      lt: Gvatemala
+      lv: Gvatemala
+      et: Guatemala
+      kk: Гватемала
+      uz: Gvatemala
+      uk: Гватемала
+      az: Qvatemala
+      fa: گواتمالا
     tel: +502
   - value: Guinea
     label:
@@ -562,6 +2770,38 @@ countries:
       de: Guinea
       es: Guinea
       pt: Guiné
+      it: Guinea
+      ar: غينيا
+      ru: Гвинея
+      pl: Gwinea
+      nl: Guinee
+      sv: Guinea
+      no: Guinea
+      el: Γουινέα
+      fi: Guinea
+      da: Guinea
+      cs: Guinea
+      th: กินี
+      hr: Gvineja
+      tl: Guinea
+      hu: Guinea
+      ro: Guineea
+      sk: Guinea
+      bg: Гвинея
+      sl: Gvineja
+      sr: Gvineja
+      tr: Gine
+      id: Guinea
+      he: גינאה
+      ms: Guinea
+      lt: Gvinėja
+      lv: Gvineja
+      et: Guinea
+      kk: Гвинея
+      uz: Gvineya
+      uk: Гвінея
+      az: Qvineya
+      fa: گینه
     tel: +224
   - value: Guinea-Bissau
     label:
@@ -570,6 +2810,38 @@ countries:
       de: Guinea-Bissau
       es: Guinea-Bisáu
       pt: Guiné-Bissau
+      it: Guinea-Bissau
+      ar: غينيا بيساو
+      ru: Гвинея-Бисау
+      pl: Gwinea Bissau
+      nl: Guinee-Bissau
+      sv: Guinea-Bissau
+      no: Guinea-Bissau
+      el: Γουινέα Μπισάου
+      fi: Guinea-Bissau
+      da: Guinea-Bissau
+      cs: Guinea-Bissau
+      th: กินี-บิสเซา
+      hr: Gvineja Bisau
+      tl: Guinea-Bissau
+      hu: Bissau-Guinea
+      ro: Guineea-Bissau
+      sk: Guinea-Bissau
+      bg: Гвинея-Бисау
+      sl: Gvineja Bissau
+      sr: Gvineja-Bisao
+      tr: Gine-Bissau
+      id: Guinea-Bissau
+      he: גינאה-ביסאו
+      ms: Guinea Bissau
+      lt: Bisau Gvinėja
+      lv: Gvineja-Bisava
+      et: Guinea-Bissau
+      kk: Гвинея-Бисау
+      uz: Gvineya-Bisau
+      uk: Гвінея-Бісау
+      az: Qvineya-Bisau
+      fa: گینهٔ بیسائو
     tel: +245
   - value: Guyana
     label:
@@ -578,6 +2850,38 @@ countries:
       de: Guyana
       es: Guyana
       pt: Guiana
+      it: Guyana
+      ar: غيانا
+      ru: Гайана
+      pl: Gujana
+      nl: Guyana
+      sv: Guyana
+      no: Guyana
+      el: Γουιάνα
+      fi: Guyana
+      da: Guyana
+      cs: Guyana
+      th: กายอานา
+      hr: Gvajana
+      tl: Guyana
+      hu: Guyana
+      ro: Guyana
+      sk: Guyana
+      bg: Гаяна
+      sl: Gvajana
+      sr: Gvajana
+      tr: Guyana
+      id: Guyana
+      he: גיאנה
+      ms: Guyana
+      lt: Gajana
+      lv: Gajāna
+      et: Guyana
+      kk: Гайана
+      uz: Gayana
+      uk: Гаяна
+      az: Qayana
+      fa: گویان
     tel: +592
   - value: Haiti
     label:
@@ -586,6 +2890,38 @@ countries:
       de: Haiti
       es: Haití
       pt: Haiti
+      it: Haiti
+      ar: هايتي
+      ru: Гаити
+      pl: Haiti
+      nl: Haïti
+      sv: Haiti
+      no: Haiti
+      el: Αϊτή
+      fi: Haiti
+      da: Haiti
+      cs: Haiti
+      th: เฮติ
+      hr: Haiti
+      tl: Haiti
+      hu: Haiti
+      ro: Haiti
+      sk: Haiti
+      bg: Хаити
+      sl: Haiti
+      sr: Haiti
+      tr: Haiti
+      id: Haiti
+      he: האיטי
+      ms: Haiti
+      lt: Haitis
+      lv: Haiti
+      et: Haiti
+      kk: Гаити
+      uz: Gaiti
+      uk: Гаїті
+      az: Haiti
+      fa: هائیتی
     tel: +509
   - value: Honduras
     label:
@@ -594,6 +2930,38 @@ countries:
       de: Honduras
       es: Honduras
       pt: Honduras
+      it: Honduras
+      ar: هندوراس
+      ru: Гондурас
+      pl: Honduras
+      nl: Honduras
+      sv: Honduras
+      no: Honduras
+      el: Ονδούρα
+      fi: Honduras
+      da: Honduras
+      cs: Honduras
+      th: ฮอนดูรัส
+      hr: Honduras
+      tl: Honduras
+      hu: Honduras
+      ro: Honduras
+      sk: Honduras
+      bg: Хондурас
+      sl: Honduras
+      sr: Honduras
+      tr: Honduras
+      id: Honduras
+      he: הונדורס
+      ms: Honduras
+      lt: Hondūras
+      lv: Hondurasa
+      et: Honduras
+      kk: Гондурас
+      uz: Gonduras
+      uk: Гондурас
+      az: Honduras
+      fa: هندوراس
     tel: +504
   - value: Hungary
     label:
@@ -602,6 +2970,38 @@ countries:
       de: Ungarn
       es: Hungría
       pt: Hungria
+      it: Ungheria
+      ar: هنغاريا
+      ru: Венгрия
+      pl: Węgry
+      nl: Hongarije
+      sv: Ungern
+      no: Ungarn
+      el: Ουγγαρία
+      fi: Unkari
+      da: Ungarn
+      cs: Maďarsko
+      th: ฮังการี
+      hr: Mađarska
+      tl: Hungary
+      hu: Magyarország
+      ro: Ungaria
+      sk: Maďarsko
+      bg: Унгария
+      sl: Madžarska
+      sr: Mađarska
+      tr: Macaristan
+      id: Hungaria
+      he: הונגריה
+      ms: Hungary
+      lt: Vengrija
+      lv: Ungārija
+      et: Ungari
+      kk: Венгрия
+      uz: Vengriya
+      uk: Угорщина
+      az: Macarıstan
+      fa: مجارستان
     tel: +36
   - value: Iceland
     label:
@@ -610,6 +3010,38 @@ countries:
       de: Island
       es: Islandia
       pt: Islândia
+      it: Islanda
+      ar: آيسلندا
+      ru: Исландия
+      pl: Islandia
+      nl: IJsland
+      sv: Island
+      no: Island
+      el: Ισλανδία
+      fi: Islanti
+      da: Island
+      cs: Island
+      th: ไอซ์แลนด์
+      hr: Island
+      tl: Iceland
+      hu: Izland
+      ro: Islanda
+      sk: Island
+      bg: Исландия
+      sl: Islandija
+      sr: Island
+      tr: İzlanda
+      id: Islandia
+      he: איסלנד
+      ms: Iceland
+      lt: Islandija
+      lv: Islande
+      et: Island
+      kk: Исландия
+      uz: Islandiya
+      uk: Ісландія
+      az: İslandiya
+      fa: ایسلند
     tel: +354
   - value: India
     label:
@@ -618,6 +3050,38 @@ countries:
       de: Indien
       es: India
       pt: Índia
+      it: India
+      ar: الهند
+      ru: Индия
+      pl: Indie
+      nl: India
+      sv: Indien
+      no: India
+      el: Ινδία
+      fi: Intia
+      da: Indien
+      cs: Indie
+      th: อินเดีย
+      hr: Indija
+      tl: India
+      hu: India
+      ro: India
+      sk: India
+      bg: Индия
+      sl: Indija
+      sr: Indija
+      tr: Hindistan
+      id: India
+      he: הודו
+      ms: India
+      lt: Indija
+      lv: Indija
+      et: India
+      kk: Үндістан
+      uz: Hindiston
+      uk: Індія
+      az: Hindistan
+      fa: هند
     tel: +91
   - value: Indonesia
     label:
@@ -626,6 +3090,38 @@ countries:
       de: Indonesien
       es: Indonesia
       pt: Indonésia
+      it: Indonesia
+      ar: إندونيسيا
+      ru: Индонезия
+      pl: Indonezja
+      nl: Indonesië
+      sv: Indonesien
+      no: Indonesia
+      el: Ινδονησία
+      fi: Indonesia
+      da: Indonesien
+      cs: Indonésie
+      th: อินโดนีเซีย
+      hr: Indonezija
+      tl: Indonesia
+      hu: Indonézia
+      ro: Indonezia
+      sk: Indonézia
+      bg: Индонезия
+      sl: Indonezija
+      sr: Indonezija
+      tr: Endonezya
+      id: Indonesia
+      he: אינדונזיה
+      ms: Indonesia
+      lt: Indonezija
+      lv: Indonēzija
+      et: Indoneesia
+      kk: Индонезия
+      uz: Indoneziya
+      uk: Індонезія
+      az: İndoneziya
+      fa: اندونزی
     tel: +62
   - value: Iran
     label:
@@ -634,6 +3130,38 @@ countries:
       de: Iran
       es: Irán
       pt: Irã
+      it: Iran
+      ar: إيران
+      ru: Иран
+      pl: Iran
+      nl: Iran
+      sv: Iran
+      no: Iran
+      el: Ιράν
+      fi: Iran
+      da: Iran
+      cs: Írán
+      th: อิหร่าน
+      hr: Iran
+      tl: Iran
+      hu: Irán
+      ro: Iran
+      sk: Irán
+      bg: Иран
+      sl: Iran
+      sr: Iran
+      tr: İran
+      id: Iran
+      he: איראן
+      ms: Iran
+      lt: Iranas
+      lv: Irāna
+      et: Iraan
+      kk: Иран
+      uz: Eron
+      uk: Іран
+      az: İran
+      fa: ایران
     tel: +98
   - value: Iraq
     label:
@@ -642,6 +3170,38 @@ countries:
       de: Irak
       es: Irak
       pt: Iraque
+      it: Iraq
+      ar: العراق
+      ru: Ирак
+      pl: Irak
+      nl: Irak
+      sv: Irak
+      no: Irak
+      el: Ιράκ
+      fi: Irak
+      da: Irak
+      cs: Irák
+      th: อิรัก
+      hr: Irak
+      tl: Iraq
+      hu: Irak
+      ro: Irak
+      sk: Irak
+      bg: Ирак
+      sl: Irak
+      sr: Irak
+      tr: Irak
+      id: Irak
+      he: עיראק
+      ms: Iraq
+      lt: Irakas
+      lv: Irāka
+      et: Iraak
+      kk: Ирак
+      uz: Iroq
+      uk: Ірак
+      az: İraq
+      fa: عراق
     tel: +964
   - value: Ireland
     label:
@@ -650,6 +3210,38 @@ countries:
       de: Irland
       es: Irlanda
       pt: Irlanda
+      it: Irlanda
+      ar: أيرلندا
+      ru: Ирландия
+      pl: Irlandia
+      nl: Ierland
+      sv: Irland
+      no: Irland
+      el: Ιρλανδία
+      fi: Irlanti
+      da: Irland
+      cs: Irsko
+      th: ไอร์แลนด์
+      hr: Irska
+      tl: Ireland
+      hu: Írország
+      ro: Irlanda
+      sk: Írsko
+      bg: Ирландия
+      sl: Irska
+      sr: Irska
+      tr: İrlanda
+      id: Irlandia
+      he: אירלנד
+      ms: Ireland
+      lt: Airija
+      lv: Īrija
+      et: Iirimaa
+      kk: Ирландия
+      uz: Irlandiya
+      uk: Ірландія
+      az: İrlandiya
+      fa: ایرلند
     tel: +353
   - value: Israel
     label:
@@ -658,6 +3250,38 @@ countries:
       de: Israel
       es: Israel
       pt: Israel
+      it: Israele
+      ar: إسرائيل
+      ru: Израиль
+      pl: Izrael
+      nl: Israël
+      sv: Israel
+      no: Israel
+      el: Ισραήλ
+      fi: Israel
+      da: Israel
+      cs: Izrael
+      th: อิสราเอล
+      hr: Izrael
+      tl: Israel
+      hu: Izrael
+      ro: Israel
+      sk: Izrael
+      bg: Израел
+      sl: Izrael
+      sr: Izrael
+      tr: İsrail
+      id: Israel
+      he: ישראל
+      ms: Israel
+      lt: Izraelis
+      lv: Izraēla
+      et: Iisrael
+      kk: Израиль
+      uz: Isroil
+      uk: Ізраїль
+      az: İsrail
+      fa: اسرائیل
     tel: +972
   - value: Italy
     label:
@@ -666,6 +3290,38 @@ countries:
       de: Italien
       es: Italia
       pt: Itália
+      it: Italia
+      ar: إيطاليا
+      ru: Италия
+      pl: Włochy
+      nl: Italië
+      sv: Italien
+      no: Italia
+      el: Ιταλία
+      fi: Italia
+      da: Italien
+      cs: Itálie
+      th: อิตาลี
+      hr: Italija
+      tl: Italy
+      hu: Olaszország
+      ro: Italia
+      sk: Taliansko
+      bg: Италия
+      sl: Italija
+      sr: Italija
+      tr: İtalya
+      id: Italia
+      he: איטליה
+      ms: Itali
+      lt: Italija
+      lv: Itālija
+      et: Itaalia
+      kk: Италия
+      uz: Italiya
+      uk: Італія
+      az: İtaliya
+      fa: ایتالیا
     tel: +39
   - value: Jamaica
     label:
@@ -674,6 +3330,38 @@ countries:
       de: Jamaika
       es: Jamaica
       pt: Jamaica
+      it: Giamaica
+      ar: جامايكا
+      ru: Ямайка
+      pl: Jamajka
+      nl: Jamaica
+      sv: Jamaica
+      no: Jamaica
+      el: Τζαμάικα
+      fi: Jamaika
+      da: Jamaica
+      cs: Jamajka
+      th: จาเมกา
+      hr: Jamajka
+      tl: Jamaica
+      hu: Jamaica
+      ro: Jamaica
+      sk: Jamajka
+      bg: Ямайка
+      sl: Jamajka
+      sr: Jamajka
+      tr: Jamaika
+      id: Jamaika
+      he: ג׳מייקה
+      ms: Jamaica
+      lt: Jamaika
+      lv: Jamaika
+      et: Jamaica
+      kk: Ямайка
+      uz: Yamayka
+      uk: Ямайка
+      az: Yamayka
+      fa: جامائیکا
     tel: +1-876
   - value: Japan
     label:
@@ -682,6 +3370,38 @@ countries:
       de: Japan
       es: Japón
       pt: Japão
+      it: Giappone
+      ar: اليابان
+      ru: Япония
+      pl: Japonia
+      nl: Japan
+      sv: Japan
+      no: Japan
+      el: Ιαπωνία
+      fi: Japani
+      da: Japan
+      cs: Japonsko
+      th: ญี่ปุ่น
+      hr: Japan
+      tl: Japan
+      hu: Japán
+      ro: Japonia
+      sk: Japonsko
+      bg: Япония
+      sl: Japonska
+      sr: Japan
+      tr: Japonya
+      id: Jepang
+      he: יפן
+      ms: Jepun
+      lt: Japonija
+      lv: Japāna
+      et: Jaapan
+      kk: Жапония
+      uz: Yaponiya
+      uk: Японія
+      az: Yaponiya
+      fa: ژاپن
     tel: +81
   - value: Jordan
     label:
@@ -690,6 +3410,38 @@ countries:
       de: Jordanien
       es: Jordania
       pt: Jordânia
+      it: Giordania
+      ar: الأردن
+      ru: Иордания
+      pl: Jordania
+      nl: Jordanië
+      sv: Jordanien
+      no: Jordan
+      el: Ιορδανία
+      fi: Jordania
+      da: Jordan
+      cs: Jordánsko
+      th: จอร์แดน
+      hr: Jordan
+      tl: Jordan
+      hu: Jordánia
+      ro: Iordania
+      sk: Jordánsko
+      bg: Йордания
+      sl: Jordanija
+      sr: Jordan
+      tr: Ürdün
+      id: Yordania
+      he: ירדן
+      ms: Jordan
+      lt: Jordanija
+      lv: Jordānija
+      et: Jordaania
+      kk: Иордания
+      uz: Iordaniya
+      uk: Йорданія
+      az: İordaniya
+      fa: اردن
     tel: +962
   - value: Kazakhstan
     label:
@@ -698,6 +3450,38 @@ countries:
       de: Kasachstan
       es: Kazajistán
       pt: Cazaquistão
+      it: Kazakistan
+      ar: كازاخستان
+      ru: Казахстан
+      pl: Kazachstan
+      nl: Kazachstan
+      sv: Kazakstan
+      no: Kasakhstan
+      el: Καζακστάν
+      fi: Kazakstan
+      da: Kasakhstan
+      cs: Kazachstán
+      th: คาซัคสถาน
+      hr: Kazahstan
+      tl: Kazakhstan
+      hu: Kazahsztán
+      ro: Kazahstan
+      sk: Kazachstan
+      bg: Казахстан
+      sl: Kazahstan
+      sr: Kazahstan
+      tr: Kazakistan
+      id: Kazakhstan
+      he: קזחסטן
+      ms: Kazakhstan
+      lt: Kazachstanas
+      lv: Kazahstāna
+      et: Kasahstan
+      kk: Қазақстан
+      uz: Qozogʻiston
+      uk: Казахстан
+      az: Qazaxıstan
+      fa: قزاقستان
     tel: +7
   - value: Kenya
     label:
@@ -706,6 +3490,38 @@ countries:
       de: Kenia
       es: Kenia
       pt: Quênia
+      it: Kenya
+      ar: كينيا
+      ru: Кения
+      pl: Kenia
+      nl: Kenia
+      sv: Kenya
+      no: Kenya
+      el: Κένυα
+      fi: Kenia
+      da: Kenya
+      cs: Keňa
+      th: เคนยา
+      hr: Kenija
+      tl: Kenya
+      hu: Kenya
+      ro: Kenya
+      sk: Keňa
+      bg: Кения
+      sl: Kenija
+      sr: Kenija
+      tr: Kenya
+      id: Kenya
+      he: קניה
+      ms: Kenya
+      lt: Kenija
+      lv: Kenija
+      et: Keenia
+      kk: Кения
+      uz: Keniya
+      uk: Кенія
+      az: Keniya
+      fa: کنیا
     tel: +254
   - value: Kiribati
     label:
@@ -714,6 +3530,38 @@ countries:
       de: Kiribati
       es: Kiribati
       pt: Quiribati
+      it: Kiribati
+      ar: كيريباتي
+      ru: Кирибати
+      pl: Kiribati
+      nl: Kiribati
+      sv: Kiribati
+      no: Kiribati
+      el: Κιριμπάτι
+      fi: Kiribati
+      da: Kiribati
+      cs: Kiribati
+      th: คิริบาส
+      hr: Kiribati
+      tl: Kiribati
+      hu: Kiribati
+      ro: Kiribati
+      sk: Kiribati
+      bg: Кирибати
+      sl: Kiribati
+      sr: Kiribati
+      tr: Kiribati
+      id: Kiribati
+      he: קיריבאטי
+      ms: Kiribati
+      lt: Kiribatis
+      lv: Kiribati
+      et: Kiribati
+      kk: Кирибати
+      uz: Kiribati
+      uk: Кірибаті
+      az: Kiribati
+      fa: کیریباتی
     tel: +686
   - value: Kuwait
     label:
@@ -722,6 +3570,38 @@ countries:
       de: Kuwait
       es: Kuwait
       pt: Kuwait
+      it: Kuwait
+      ar: الكويت
+      ru: Кувейт
+      pl: Kuwejt
+      nl: Koeweit
+      sv: Kuwait
+      no: Kuwait
+      el: Κουβέιτ
+      fi: Kuwait
+      da: Kuwait
+      cs: Kuvajt
+      th: คูเวต
+      hr: Kuvajt
+      tl: Kuwait
+      hu: Kuvait
+      ro: Kuweit
+      sk: Kuvajt
+      bg: Кувейт
+      sl: Kuvajt
+      sr: Kuvajt
+      tr: Kuveyt
+      id: Kuwait
+      he: כווית
+      ms: Kuwait
+      lt: Kuveitas
+      lv: Kuveita
+      et: Kuveit
+      kk: Кувейт
+      uz: Quvayt
+      uk: Кувейт
+      az: Küveyt
+      fa: کویت
     tel: +965
   - value: Kyrgyzstan
     label:
@@ -730,6 +3610,38 @@ countries:
       de: Kirgisistan
       es: Kirguistán
       pt: Quirguistão
+      it: Kirghizistan
+      ar: قيرغيزستان
+      ru: Киргизия
+      pl: Kirgistan
+      nl: Kirgizië
+      sv: Kirgizistan
+      no: Kirgisistan
+      el: Κιργιστάν
+      fi: Kirgisia
+      da: Kirgisistan
+      cs: Kyrgyzstán
+      th: คีร์กีซสถาน
+      hr: Kirgistan
+      tl: Kyrgyzstan
+      hu: Kirgizisztán
+      ro: Kârgâzstan
+      sk: Kirgizsko
+      bg: Киргизстан
+      sl: Kirgizistan
+      sr: Kirgistan
+      tr: Kırgızistan
+      id: Kirgizstan
+      he: קירגיזסטן
+      ms: Kyrgyzstan
+      lt: Kirgizija
+      lv: Kirgizstāna
+      et: Kõrgõzstan
+      kk: Қырғызстан
+      uz: Qirgʻiziston
+      uk: Киргизстан
+      az: Qırğızıstan
+      fa: قرقیزستان
     tel: +996
   - value: Laos
     label:
@@ -738,6 +3650,38 @@ countries:
       de: Laos
       es: Laos
       pt: Laos
+      it: Laos
+      ar: لاوس
+      ru: Лаос
+      pl: Laos
+      nl: Laos
+      sv: Laos
+      no: Laos
+      el: Λάος
+      fi: Laos
+      da: Laos
+      cs: Laos
+      th: ลาว
+      hr: Laos
+      tl: Laos
+      hu: Laosz
+      ro: Laos
+      sk: Laos
+      bg: Лаос
+      sl: Laos
+      sr: Laos
+      tr: Laos
+      id: Laos
+      he: לאוס
+      ms: Laos
+      lt: Laosas
+      lv: Laosa
+      et: Laos
+      kk: Лаос
+      uz: Laos
+      uk: Лаос
+      az: Laos
+      fa: لائوس
     tel: +856
   - value: Latvia
     label:
@@ -746,6 +3690,38 @@ countries:
       de: Lettland
       es: Letonia
       pt: Letônia
+      it: Lettonia
+      ar: لاتفيا
+      ru: Латвия
+      pl: Łotwa
+      nl: Letland
+      sv: Lettland
+      no: Latvia
+      el: Λετονία
+      fi: Latvia
+      da: Letland
+      cs: Lotyšsko
+      th: ลัตเวีย
+      hr: Latvija
+      tl: Latvia
+      hu: Lettország
+      ro: Letonia
+      sk: Lotyšsko
+      bg: Латвия
+      sl: Latvija
+      sr: Letonija
+      tr: Letonya
+      id: Latvia
+      he: לטביה
+      ms: Latvia
+      lt: Latvija
+      lv: Latvija
+      et: Läti
+      kk: Латвия
+      uz: Latviya
+      uk: Латвія
+      az: Latviya
+      fa: لتونی
     tel: +371
   - value: Lebanon
     label:
@@ -754,6 +3730,38 @@ countries:
       de: Libanon
       es: Líbano
       pt: Líbano
+      it: Libano
+      ar: لبنان
+      ru: Ливан
+      pl: Liban
+      nl: Libanon
+      sv: Libanon
+      no: Libanon
+      el: Λίβανος
+      fi: Libanon
+      da: Libanon
+      cs: Libanon
+      th: เลบานอน
+      hr: Libanon
+      tl: Lebanon
+      hu: Libanon
+      ro: Liban
+      sk: Libanon
+      bg: Ливан
+      sl: Libanon
+      sr: Liban
+      tr: Lübnan
+      id: Lebanon
+      he: לבנון
+      ms: Lubnan
+      lt: Libanas
+      lv: Libāna
+      et: Liibanon
+      kk: Ливан
+      uz: Livan
+      uk: Ліван
+      az: Livan
+      fa: لبنان
     tel: +961
   - value: Lesotho
     label:
@@ -762,6 +3770,38 @@ countries:
       de: Lesotho
       es: Lesoto
       pt: Lesoto
+      it: Lesotho
+      ar: ليسوتو
+      ru: Лесото
+      pl: Lesotho
+      nl: Lesotho
+      sv: Lesotho
+      no: Lesotho
+      el: Λεσότο
+      fi: Lesotho
+      da: Lesotho
+      cs: Lesotho
+      th: เลโซโท
+      hr: Lesoto
+      tl: Lesotho
+      hu: Lesotho
+      ro: Lesotho
+      sk: Lesotho
+      bg: Лесото
+      sl: Lesoto
+      sr: Lesoto
+      tr: Lesotho
+      id: Lesotho
+      he: לסוטו
+      ms: Lesotho
+      lt: Lesotas
+      lv: Lesoto
+      et: Lesotho
+      kk: Лесото
+      uz: Lesoto
+      uk: Лесото
+      az: Lesoto
+      fa: لسوتو
     tel: +266
   - value: Liberia
     label:
@@ -770,6 +3810,38 @@ countries:
       de: Liberia
       es: Liberia
       pt: Libéria
+      it: Liberia
+      ar: ليبيريا
+      ru: Либерия
+      pl: Liberia
+      nl: Liberia
+      sv: Liberia
+      no: Liberia
+      el: Λιβερία
+      fi: Liberia
+      da: Liberia
+      cs: Libérie
+      th: ไลบีเรีย
+      hr: Liberija
+      tl: Liberia
+      hu: Libéria
+      ro: Liberia
+      sk: Libéria
+      bg: Либерия
+      sl: Liberija
+      sr: Liberija
+      tr: Liberya
+      id: Liberia
+      he: ליבריה
+      ms: Liberia
+      lt: Liberija
+      lv: Libērija
+      et: Libeeria
+      kk: Либерия
+      uz: Liberiya
+      uk: Ліберія
+      az: Liberiya
+      fa: لیبریا
     tel: +231
   - value: Libya
     label:
@@ -778,6 +3850,38 @@ countries:
       de: Libyen
       es: Libia
       pt: Líbia
+      it: Libia
+      ar: ليبيا
+      ru: Ливия
+      pl: Libia
+      nl: Libië
+      sv: Libyen
+      no: Libya
+      el: Λιβύη
+      fi: Libya
+      da: Libyen
+      cs: Libye
+      th: ลิเบีย
+      hr: Libija
+      tl: Libya
+      hu: Líbia
+      ro: Libia
+      sk: Líbya
+      bg: Либия
+      sl: Libija
+      sr: Libija
+      tr: Libya
+      id: Libya
+      he: לוב
+      ms: Libya
+      lt: Libija
+      lv: Lībija
+      et: Liibüa
+      kk: Ливия
+      uz: Liviya
+      uk: Лівія
+      az: Liviya
+      fa: لیبی
     tel: +218
   - value: Liechtenstein
     label:
@@ -786,6 +3890,38 @@ countries:
       de: Liechtenstein
       es: Liechtenstein
       pt: Liechtenstein
+      it: Liechtenstein
+      ar: ليختنشتاين
+      ru: Лихтенштейн
+      pl: Liechtenstein
+      nl: Liechtenstein
+      sv: Liechtenstein
+      no: Liechtenstein
+      el: Λιχτενστάιν
+      fi: Liechtenstein
+      da: Liechtenstein
+      cs: Lichtenštejnsko
+      th: ลิกเตนสไตน์
+      hr: Lihtenštajn
+      tl: Liechtenstein
+      hu: Liechtenstein
+      ro: Liechtenstein
+      sk: Lichtenštajnsko
+      bg: Лихтенщайн
+      sl: Lihtenštajn
+      sr: Lihtenštajn
+      tr: Liechtenstein
+      id: Liechtenstein
+      he: ליכטנשטיין
+      ms: Liechtenstein
+      lt: Lichtenšteinas
+      lv: Lihtenšteina
+      et: Liechtenstein
+      kk: Лихтенштейн
+      uz: Lixtenshteyn
+      uk: Ліхтенштейн
+      az: Lixtenşteyn
+      fa: لیختن‌اشتاین
     tel: +423
   - value: Lithuania
     label:
@@ -794,6 +3930,38 @@ countries:
       de: Litauen
       es: Lituania
       pt: Lituânia
+      it: Lituania
+      ar: ليتوانيا
+      ru: Литва
+      pl: Litwa
+      nl: Litouwen
+      sv: Litauen
+      no: Litauen
+      el: Λιθουανία
+      fi: Liettua
+      da: Litauen
+      cs: Litva
+      th: ลิทัวเนีย
+      hr: Litva
+      tl: Lithuania
+      hu: Litvánia
+      ro: Lituania
+      sk: Litva
+      bg: Литва
+      sl: Litva
+      sr: Litvanija
+      tr: Litvanya
+      id: Lituania
+      he: ליטא
+      ms: Lithuania
+      lt: Lietuva
+      lv: Lietuva
+      et: Leedu
+      kk: Литва
+      uz: Litva
+      uk: Литва
+      az: Litva
+      fa: لیتوانی
     tel: +370
   - value: Luxembourg
     label:
@@ -802,6 +3970,38 @@ countries:
       de: Luxemburg
       es: Luxemburgo
       pt: Luxemburgo
+      it: Lussemburgo
+      ar: لوكسمبورغ
+      ru: Люксембург
+      pl: Luksemburg
+      nl: Luxemburg
+      sv: Luxemburg
+      no: Luxemburg
+      el: Λουξεμβούργο
+      fi: Luxemburg
+      da: Luxembourg
+      cs: Lucembursko
+      th: ลักเซมเบิร์ก
+      hr: Luksemburg
+      tl: Luxembourg
+      hu: Luxemburg
+      ro: Luxemburg
+      sk: Luxembursko
+      bg: Люксембург
+      sl: Luksemburg
+      sr: Luksemburg
+      tr: Lüksemburg
+      id: Luksemburg
+      he: לוקסמבורג
+      ms: Luxembourg
+      lt: Liuksemburgas
+      lv: Luksemburga
+      et: Luksemburg
+      kk: Люксембург
+      uz: Lyuksemburg
+      uk: Люксембург
+      az: Lüksemburq
+      fa: لوکزامبورگ
     tel: +352
   - value: Madagascar
     label:
@@ -810,6 +4010,38 @@ countries:
       de: Madagaskar
       es: Madagascar
       pt: Madagáscar
+      it: Madagascar
+      ar: مدغشقر
+      ru: Мадагаскар
+      pl: Madagaskar
+      nl: Madagaskar
+      sv: Madagaskar
+      no: Madagaskar
+      el: Μαδαγασκάρη
+      fi: Madagaskar
+      da: Madagaskar
+      cs: Madagaskar
+      th: มาดากัสการ์
+      hr: Madagaskar
+      tl: Madagascar
+      hu: Madagaszkár
+      ro: Madagascar
+      sk: Madagaskar
+      bg: Мадагаскар
+      sl: Madagaskar
+      sr: Madagaskar
+      tr: Madagaskar
+      id: Madagaskar
+      he: מדגסקר
+      ms: Madagaskar
+      lt: Madagaskaras
+      lv: Madagaskara
+      et: Madagaskar
+      kk: Мадагаскар
+      uz: Madagaskar
+      uk: Мадагаскар
+      az: Madaqaskar
+      fa: ماداگاسکار
     tel: +261
   - value: Malawi
     label:
@@ -818,6 +4050,38 @@ countries:
       de: Malawi
       es: Malawi
       pt: Maláui
+      it: Malawi
+      ar: ملاوي
+      ru: Малави
+      pl: Malawi
+      nl: Malawi
+      sv: Malawi
+      no: Malawi
+      el: Μαλάουι
+      fi: Malawi
+      da: Malawi
+      cs: Malawi
+      th: มาลาวี
+      hr: Malavi
+      tl: Malawi
+      hu: Malawi
+      ro: Malawi
+      sk: Malawi
+      bg: Малави
+      sl: Malavi
+      sr: Malavi
+      tr: Malavi
+      id: Malawi
+      he: מלאווי
+      ms: Malawi
+      lt: Malavis
+      lv: Malāvija
+      et: Malawi
+      kk: Малави
+      uz: Malavi
+      uk: Малаві
+      az: Malavi
+      fa: مالاوی
     tel: +265
   - value: Malaysia
     label:
@@ -826,6 +4090,38 @@ countries:
       de: Malaysia
       es: Malasia
       pt: Malásia
+      it: Malaysia
+      ar: ماليزيا
+      ru: Малайзия
+      pl: Malezja
+      nl: Maleisië
+      sv: Malaysia
+      no: Malaysia
+      el: Μαλαισία
+      fi: Malesia
+      da: Malaysia
+      cs: Malajsie
+      th: มาเลเซีย
+      hr: Malezija
+      tl: Malaysia
+      hu: Malajzia
+      ro: Malaysia
+      sk: Malajzia
+      bg: Малайзия
+      sl: Malezija
+      sr: Malezija
+      tr: Malezya
+      id: Malaysia
+      he: מלזיה
+      ms: Malaysia
+      lt: Malaizija
+      lv: Malaizija
+      et: Malaisia
+      kk: Малайзия
+      uz: Malayziya
+      uk: Малайзія
+      az: Malayziya
+      fa: مالزی
     tel: +60
   - value: Maldives
     label:
@@ -834,6 +4130,38 @@ countries:
       de: Malediven
       es: Maldivas
       pt: Maldivas
+      it: Maldive
+      ar: جزر المالديف
+      ru: Мальдивы
+      pl: Malediwy
+      nl: Maldiven
+      sv: Maldiverna
+      no: Maldivene
+      el: Μαλδίβες
+      fi: Malediivit
+      da: Maldiverne
+      cs: Maledivy
+      th: มัลดีฟส์
+      hr: Maldivi
+      tl: Maldives
+      hu: Maldív-szigetek
+      ro: Maldive
+      sk: Maldivy
+      bg: Малдиви
+      sl: Maldivi
+      sr: Maldivi
+      tr: Maldivler
+      id: Maladewa
+      he: האיים המלדיביים
+      ms: Maldives
+      lt: Maldyvai
+      lv: Maldīvija
+      et: Maldiivid
+      kk: Мальдив аралдары
+      uz: Maldiv orollari
+      uk: Мальдіви
+      az: Maldiv adaları
+      fa: مالدیو
     tel: +960
   - value: Mali
     label:
@@ -842,6 +4170,38 @@ countries:
       de: Mali
       es: Malí
       pt: Mali
+      it: Mali
+      ar: مالي
+      ru: Мали
+      pl: Mali
+      nl: Mali
+      sv: Mali
+      no: Mali
+      el: Μάλι
+      fi: Mali
+      da: Mali
+      cs: Mali
+      th: มาลี
+      hr: Mali
+      tl: Mali
+      hu: Mali
+      ro: Mali
+      sk: Mali
+      bg: Мали
+      sl: Mali
+      sr: Mali
+      tr: Mali
+      id: Mali
+      he: מאלי
+      ms: Mali
+      lt: Malis
+      lv: Mali
+      et: Mali
+      kk: Мали
+      uz: Mali
+      uk: Малі
+      az: Mali
+      fa: مالی
     tel: +223
   - value: Malta
     label:
@@ -850,6 +4210,38 @@ countries:
       de: Malta
       es: Malta
       pt: Malta
+      it: Malta
+      ar: مالطا
+      ru: Мальта
+      pl: Malta
+      nl: Malta
+      sv: Malta
+      no: Malta
+      el: Μάλτα
+      fi: Malta
+      da: Malta
+      cs: Malta
+      th: มอลตา
+      hr: Malta
+      tl: Malta
+      hu: Málta
+      ro: Malta
+      sk: Malta
+      bg: Малта
+      sl: Malta
+      sr: Malta
+      tr: Malta
+      id: Malta
+      he: מלטה
+      ms: Malta
+      lt: Malta
+      lv: Malta
+      et: Malta
+      kk: Мальта
+      uz: Malta
+      uk: Мальта
+      az: Malta
+      fa: مالت
     tel: +356
   - value: Marshall Islands
     label:
@@ -858,6 +4250,38 @@ countries:
       de: Marshallinseln
       es: Islas Marshall
       pt: Ilhas Marshall
+      it: Isole Marshall
+      ar: جزر مارشال
+      ru: Маршалловы о-ва
+      pl: Wyspy Marshalla
+      nl: Marshalleilanden
+      sv: Marshallöarna
+      no: Marshalløyene
+      el: Νήσοι Μάρσαλ
+      fi: Marshallinsaaret
+      da: Marshalløerne
+      cs: Marshallovy ostrovy
+      th: หมู่เกาะมาร์แชลล์
+      hr: Maršalovi Otoci
+      tl: Marshall Islands
+      hu: Marshall-szigetek
+      ro: Insulele Marshall
+      sk: Marshallove ostrovy
+      bg: Маршалови острови
+      sl: Marshallovi otoki
+      sr: Maršalska Ostrva
+      tr: Marshall Adaları
+      id: Kepulauan Marshall
+      he: איי מרשל
+      ms: Kepulauan Marshall
+      lt: Maršalo Salos
+      lv: Māršala salas
+      et: Marshalli Saared
+      kk: Маршалл аралдары
+      uz: Marshall orollari
+      uk: Маршаллові Острови
+      az: Marşal adaları
+      fa: جزایر مارشال
     tel: +692
   - value: Mauritania
     label:
@@ -866,6 +4290,38 @@ countries:
       de: Mauretanien
       es: Mauritania
       pt: Mauritânia
+      it: Mauritania
+      ar: موريتانيا
+      ru: Мавритания
+      pl: Mauretania
+      nl: Mauritanië
+      sv: Mauretanien
+      no: Mauritania
+      el: Μαυριτανία
+      fi: Mauritania
+      da: Mauretanien
+      cs: Mauritánie
+      th: มอริเตเนีย
+      hr: Mauretanija
+      tl: Mauritania
+      hu: Mauritánia
+      ro: Mauritania
+      sk: Mauritánia
+      bg: Мавритания
+      sl: Mavretanija
+      sr: Mauritanija
+      tr: Moritanya
+      id: Mauritania
+      he: מאוריטניה
+      ms: Mauritania
+      lt: Mauritanija
+      lv: Mauritānija
+      et: Mauritaania
+      kk: Мавритания
+      uz: Mavritaniya
+      uk: Мавританія
+      az: Mavritaniya
+      fa: موریتانی
     tel: +222
   - value: Mauritius
     label:
@@ -874,6 +4330,38 @@ countries:
       de: Mauritius
       es: Mauricio
       pt: Maurício
+      it: Mauritius
+      ar: موريشيوس
+      ru: Маврикий
+      pl: Mauritius
+      nl: Mauritius
+      sv: Mauritius
+      no: Mauritius
+      el: Μαυρίκιος
+      fi: Mauritius
+      da: Mauritius
+      cs: Mauricius
+      th: มอริเชียส
+      hr: Mauricijus
+      tl: Mauritius
+      hu: Mauritius
+      ro: Mauritius
+      sk: Maurícius
+      bg: Мавриций
+      sl: Mavricij
+      sr: Mauricijus
+      tr: Mauritius
+      id: Mauritius
+      he: מאוריציוס
+      ms: Mauritius
+      lt: Mauricijus
+      lv: Maurīcija
+      et: Mauritius
+      kk: Маврикий
+      uz: Mavrikiy
+      uk: Маврикій
+      az: Mavriki
+      fa: موریس
     tel: +230
   - value: Mexico
     label:
@@ -882,6 +4370,38 @@ countries:
       de: Mexiko
       es: México
       pt: México
+      it: Messico
+      ar: المكسيك
+      ru: Мексика
+      pl: Meksyk
+      nl: Mexico
+      sv: Mexiko
+      no: Mexico
+      el: Μεξικό
+      fi: Meksiko
+      da: Mexico
+      cs: Mexiko
+      th: เม็กซิโก
+      hr: Meksiko
+      tl: Mexico
+      hu: Mexikó
+      ro: Mexic
+      sk: Mexiko
+      bg: Мексико
+      sl: Mehika
+      sr: Meksiko
+      tr: Meksika
+      id: Meksiko
+      he: מקסיקו
+      ms: Mexico
+      lt: Meksika
+      lv: Meksika
+      et: Mehhiko
+      kk: Мексика
+      uz: Meksika
+      uk: Мексика
+      az: Meksika
+      fa: مکزیک
     tel: +52
   - value: Micronesia
     label:
@@ -890,6 +4410,38 @@ countries:
       de: Mikronesien
       es: Micronesia
       pt: Micronésia
+      it: Micronesia
+      ar: ميكرونيزيا
+      ru: Федеративные Штаты Микронезии
+      pl: Mikronezja
+      nl: Micronesia
+      sv: Mikronesien
+      no: Mikronesiaføderasjonen
+      el: Μικρονησία
+      fi: Mikronesia
+      da: Mikronesien
+      cs: Mikronésie
+      th: ไมโครนีเซีย
+      hr: Mikronezija
+      tl: Micronesia
+      hu: Mikronézia
+      ro: Micronezia
+      sk: Mikronézia
+      bg: Микронезия
+      sl: Mikronezija
+      sr: Mikronezija
+      tr: Mikronezya
+      id: Mikronesia
+      he: מיקרונזיה
+      ms: Micronesia
+      lt: Mikronezija
+      lv: Mikronēzija
+      et: Mikroneesia
+      kk: Микронезия
+      uz: Mikroneziya
+      uk: Мікронезія
+      az: Mikroneziya
+      fa: میکرونزی
     tel: +691
   - value: Moldova
     label:
@@ -898,6 +4450,38 @@ countries:
       de: Republik Moldau
       es: Moldavia
       pt: Moldávia
+      it: Moldavia
+      ar: مولدوفا
+      ru: Молдова
+      pl: Mołdawia
+      nl: Moldavië
+      sv: Moldavien
+      no: Moldova
+      el: Μολδαβία
+      fi: Moldova
+      da: Moldova
+      cs: Moldavsko
+      th: มอลโดวา
+      hr: Moldavija
+      tl: Moldova
+      hu: Moldova
+      ro: Republica Moldova
+      sk: Moldavsko
+      bg: Молдова
+      sl: Moldavija
+      sr: Moldavija
+      tr: Moldova
+      id: Moldova
+      he: מולדובה
+      ms: Moldova
+      lt: Moldova
+      lv: Moldova
+      et: Moldova
+      kk: Молдова
+      uz: Moldova
+      uk: Молдова
+      az: Moldova
+      fa: مولداوی
     tel: +373
   - value: Monaco
     label:
@@ -906,6 +4490,38 @@ countries:
       de: Monaco
       es: Mónaco
       pt: Mônaco
+      it: Monaco
+      ar: موناكو
+      ru: Монако
+      pl: Monako
+      nl: Monaco
+      sv: Monaco
+      no: Monaco
+      el: Μονακό
+      fi: Monaco
+      da: Monaco
+      cs: Monako
+      th: โมนาโก
+      hr: Monako
+      tl: Monaco
+      hu: Monaco
+      ro: Monaco
+      sk: Monako
+      bg: Монако
+      sl: Monako
+      sr: Monako
+      tr: Monako
+      id: Monako
+      he: מונקו
+      ms: Monaco
+      lt: Monakas
+      lv: Monako
+      et: Monaco
+      kk: Монако
+      uz: Monako
+      uk: Монако
+      az: Monako
+      fa: موناکو
     tel: +377
   - value: Mongolia
     label:
@@ -914,6 +4530,38 @@ countries:
       de: Mongolei
       es: Mongolia
       pt: Mongólia
+      it: Mongolia
+      ar: منغوليا
+      ru: Монголия
+      pl: Mongolia
+      nl: Mongolië
+      sv: Mongoliet
+      no: Mongolia
+      el: Μογγολία
+      fi: Mongolia
+      da: Mongoliet
+      cs: Mongolsko
+      th: มองโกเลีย
+      hr: Mongolija
+      tl: Mongolia
+      hu: Mongólia
+      ro: Mongolia
+      sk: Mongolsko
+      bg: Монголия
+      sl: Mongolija
+      sr: Mongolija
+      tr: Moğolistan
+      id: Mongolia
+      he: מונגוליה
+      ms: Mongolia
+      lt: Mongolija
+      lv: Mongolija
+      et: Mongoolia
+      kk: Моңғолия
+      uz: Mongoliya
+      uk: Монголія
+      az: Monqolustan
+      fa: مغولستان
     tel: +976
   - value: Montenegro
     label:
@@ -922,6 +4570,38 @@ countries:
       de: Montenegro
       es: Montenegro
       pt: Montenegro
+      it: Montenegro
+      ar: الجبل الأسود
+      ru: Черногория
+      pl: Czarnogóra
+      nl: Montenegro
+      sv: Montenegro
+      no: Montenegro
+      el: Μαυροβούνιο
+      fi: Montenegro
+      da: Montenegro
+      cs: Černá Hora
+      th: มอนเตเนโกร
+      hr: Crna Gora
+      tl: Montenegro
+      hu: Montenegró
+      ro: Muntenegru
+      sk: Čierna Hora
+      bg: Черна гора
+      sl: Črna gora
+      sr: Crna Gora
+      tr: Karadağ
+      id: Montenegro
+      he: מונטנגרו
+      ms: Montenegro
+      lt: Juodkalnija
+      lv: Melnkalne
+      et: Montenegro
+      kk: Черногория
+      uz: Chernogoriya
+      uk: Чорногорія
+      az: Monteneqro
+      fa: مونته‌نگرو
     tel: +382
   - value: Morocco
     label:
@@ -930,6 +4610,38 @@ countries:
       de: Marokko
       es: Marruecos
       pt: Marrocos
+      it: Marocco
+      ar: المغرب
+      ru: Марокко
+      pl: Maroko
+      nl: Marokko
+      sv: Marocko
+      no: Marokko
+      el: Μαρόκο
+      fi: Marokko
+      da: Marokko
+      cs: Maroko
+      th: โมร็อกโก
+      hr: Maroko
+      tl: Morocco
+      hu: Marokkó
+      ro: Maroc
+      sk: Maroko
+      bg: Мароко
+      sl: Maroko
+      sr: Maroko
+      tr: Fas
+      id: Maroko
+      he: מרוקו
+      ms: Maghribi
+      lt: Marokas
+      lv: Maroka
+      et: Maroko
+      kk: Марокко
+      uz: Marokash
+      uk: Марокко
+      az: Mərakeş
+      fa: مراکش
     tel: +212
   - value: Mozambique
     label:
@@ -938,6 +4650,38 @@ countries:
       de: Mosambik
       es: Mozambique
       pt: Moçambique
+      it: Mozambico
+      ar: موزمبيق
+      ru: Мозамбик
+      pl: Mozambik
+      nl: Mozambique
+      sv: Moçambique
+      no: Mosambik
+      el: Μοζαμβίκη
+      fi: Mosambik
+      da: Mozambique
+      cs: Mosambik
+      th: โมซัมบิก
+      hr: Mozambik
+      tl: Mozambique
+      hu: Mozambik
+      ro: Mozambic
+      sk: Mozambik
+      bg: Мозамбик
+      sl: Mozambik
+      sr: Mozambik
+      tr: Mozambik
+      id: Mozambik
+      he: מוזמביק
+      ms: Mozambique
+      lt: Mozambikas
+      lv: Mozambika
+      et: Mosambiik
+      kk: Мозамбик
+      uz: Mozambik
+      uk: Мозамбік
+      az: Mozambik
+      fa: موزامبیک
     tel: +258
   - value: Myanmar
     label:
@@ -946,6 +4690,38 @@ countries:
       de: Myanmar
       es: Myanmar
       pt: Mianmar
+      it: Myanmar (Birmania)
+      ar: ميانمار (بورما)
+      ru: Мьянма (Бирма)
+      pl: Mjanma (Birma)
+      nl: Myanmar (Birma)
+      sv: Myanmar (Burma)
+      no: Myanmar (Burma)
+      el: Μιανμάρ (Βιρμανία)
+      fi: Myanmar (Burma)
+      da: Myanmar (Burma)
+      cs: Myanmar (Barma)
+      th: เมียนมา (พม่า)
+      hr: Mjanmar (Burma)
+      tl: Myanmar (Burma)
+      hu: Mianmar
+      ro: Myanmar (Birmania)
+      sk: Mjanmarsko
+      bg: Мианмар (Бирма)
+      sl: Mjanmar (Burma)
+      sr: Mijanmar (Burma)
+      tr: Myanmar (Burma)
+      id: Myanmar (Burma)
+      he: מיאנמר (בורמה)
+      ms: Myanmar (Burma)
+      lt: Mianmaras (Birma)
+      lv: Mjanma (Birma)
+      et: Myanmar (Birma)
+      kk: Мьянма (Бирма)
+      uz: Myanma (Birma)
+      uk: Мʼянма (Бірма)
+      az: Myanma
+      fa: میانمار (برمه)
     tel: +95
   - value: Namibia
     label:
@@ -954,6 +4730,38 @@ countries:
       de: Namibia
       es: Namibia
       pt: Namíbia
+      it: Namibia
+      ar: ناميبيا
+      ru: Намибия
+      pl: Namibia
+      nl: Namibië
+      sv: Namibia
+      no: Namibia
+      el: Ναμίμπια
+      fi: Namibia
+      da: Namibia
+      cs: Namibie
+      th: นามิเบีย
+      hr: Namibija
+      tl: Namibia
+      hu: Namíbia
+      ro: Namibia
+      sk: Namíbia
+      bg: Намибия
+      sl: Namibija
+      sr: Namibija
+      tr: Namibya
+      id: Namibia
+      he: נמיביה
+      ms: Namibia
+      lt: Namibija
+      lv: Namībija
+      et: Namiibia
+      kk: Намибия
+      uz: Namibiya
+      uk: Намібія
+      az: Namibiya
+      fa: نامیبیا
     tel: +264
   - value: Nauru
     label:
@@ -962,6 +4770,38 @@ countries:
       de: Nauru
       es: Nauru
       pt: Nauru
+      it: Nauru
+      ar: ناورو
+      ru: Науру
+      pl: Nauru
+      nl: Nauru
+      sv: Nauru
+      no: Nauru
+      el: Ναουρού
+      fi: Nauru
+      da: Nauru
+      cs: Nauru
+      th: นาอูรู
+      hr: Nauru
+      tl: Nauru
+      hu: Nauru
+      ro: Nauru
+      sk: Nauru
+      bg: Науру
+      sl: Nauru
+      sr: Nauru
+      tr: Nauru
+      id: Nauru
+      he: נאורו
+      ms: Nauru
+      lt: Nauru
+      lv: Nauru
+      et: Nauru
+      kk: Науру
+      uz: Nauru
+      uk: Науру
+      az: Nauru
+      fa: نائورو
     tel: +674
   - value: Nepal
     label:
@@ -970,6 +4810,38 @@ countries:
       de: Nepal
       es: Nepal
       pt: Nepal
+      it: Nepal
+      ar: نيبال
+      ru: Непал
+      pl: Nepal
+      nl: Nepal
+      sv: Nepal
+      no: Nepal
+      el: Νεπάλ
+      fi: Nepal
+      da: Nepal
+      cs: Nepál
+      th: เนปาล
+      hr: Nepal
+      tl: Nepal
+      hu: Nepál
+      ro: Nepal
+      sk: Nepál
+      bg: Непал
+      sl: Nepal
+      sr: Nepal
+      tr: Nepal
+      id: Nepal
+      he: נפאל
+      ms: Nepal
+      lt: Nepalas
+      lv: Nepāla
+      et: Nepal
+      kk: Непал
+      uz: Nepal
+      uk: Непал
+      az: Nepal
+      fa: نپال
     tel: +977
   - value: Netherlands
     label:
@@ -978,6 +4850,38 @@ countries:
       de: Niederlande
       es: Países Bajos
       pt: Países Baixos
+      it: Paesi Bassi
+      ar: هولندا
+      ru: Нидерланды
+      pl: Holandia
+      nl: Nederland
+      sv: Nederländerna
+      no: Nederland
+      el: Κάτω Χώρες
+      fi: Alankomaat
+      da: Nederlandene
+      cs: Nizozemsko
+      th: เนเธอร์แลนด์
+      hr: Nizozemska
+      tl: Netherlands
+      hu: Hollandia
+      ro: Țările de Jos
+      sk: Holandsko
+      bg: Нидерландия
+      sl: Nizozemska
+      sr: Holandija
+      tr: Hollanda
+      id: Belanda
+      he: הולנד
+      ms: Belanda
+      lt: Nyderlandai
+      lv: Nīderlande
+      et: Holland
+      kk: Нидерланд
+      uz: Niderlandiya
+      uk: Нідерланди
+      az: Niderland
+      fa: هلند
     tel: +31
   - value: New Zealand
     label:
@@ -986,6 +4890,38 @@ countries:
       de: Neuseeland
       es: Nueva Zelanda
       pt: Nova Zelândia
+      it: Nuova Zelanda
+      ar: نيوزيلندا
+      ru: Новая Зеландия
+      pl: Nowa Zelandia
+      nl: Nieuw-Zeeland
+      sv: Nya Zeeland
+      no: New Zealand
+      el: Νέα Ζηλανδία
+      fi: Uusi-Seelanti
+      da: New Zealand
+      cs: Nový Zéland
+      th: นิวซีแลนด์
+      hr: Novi Zeland
+      tl: New Zealand
+      hu: Új-Zéland
+      ro: Noua Zeelandă
+      sk: Nový Zéland
+      bg: Нова Зеландия
+      sl: Nova Zelandija
+      sr: Novi Zeland
+      tr: Yeni Zelanda
+      id: Selandia Baru
+      he: ניו זילנד
+      ms: New Zealand
+      lt: Naujoji Zelandija
+      lv: Jaunzēlande
+      et: Uus-Meremaa
+      kk: Жаңа Зеландия
+      uz: Yangi Zelandiya
+      uk: Нова Зеландія
+      az: Yeni Zelandiya
+      fa: نیوزیلند
     tel: +64
   - value: Nicaragua
     label:
@@ -994,6 +4930,38 @@ countries:
       de: Nicaragua
       es: Nicaragua
       pt: Nicarágua
+      it: Nicaragua
+      ar: نيكاراغوا
+      ru: Никарагуа
+      pl: Nikaragua
+      nl: Nicaragua
+      sv: Nicaragua
+      no: Nicaragua
+      el: Νικαράγουα
+      fi: Nicaragua
+      da: Nicaragua
+      cs: Nikaragua
+      th: นิการากัว
+      hr: Nikaragva
+      tl: Nicaragua
+      hu: Nicaragua
+      ro: Nicaragua
+      sk: Nikaragua
+      bg: Никарагуа
+      sl: Nikaragva
+      sr: Nikaragva
+      tr: Nikaragua
+      id: Nikaragua
+      he: ניקרגואה
+      ms: Nicaragua
+      lt: Nikaragva
+      lv: Nikaragva
+      et: Nicaragua
+      kk: Никарагуа
+      uz: Nikaragua
+      uk: Нікарагуа
+      az: Nikaraqua
+      fa: نیکاراگوئه
     tel: +505
   - value: Niger
     label:
@@ -1002,6 +4970,38 @@ countries:
       de: Niger
       es: Níger
       pt: Níger
+      it: Niger
+      ar: النيجر
+      ru: Нигер
+      pl: Niger
+      nl: Niger
+      sv: Niger
+      no: Niger
+      el: Νίγηρας
+      fi: Niger
+      da: Niger
+      cs: Niger
+      th: ไนเจอร์
+      hr: Niger
+      tl: Niger
+      hu: Niger
+      ro: Niger
+      sk: Niger
+      bg: Нигер
+      sl: Niger
+      sr: Niger
+      tr: Nijer
+      id: Niger
+      he: ניז׳ר
+      ms: Niger
+      lt: Nigeris
+      lv: Nigēra
+      et: Niger
+      kk: Нигер
+      uz: Niger
+      uk: Нігер
+      az: Niger
+      fa: نیجر
     tel: +227
   - value: Nigeria
     label:
@@ -1010,6 +5010,38 @@ countries:
       de: Nigeria
       es: Nigeria
       pt: Nigéria
+      it: Nigeria
+      ar: نيجيريا
+      ru: Нигерия
+      pl: Nigeria
+      nl: Nigeria
+      sv: Nigeria
+      no: Nigeria
+      el: Νιγηρία
+      fi: Nigeria
+      da: Nigeria
+      cs: Nigérie
+      th: ไนจีเรีย
+      hr: Nigerija
+      tl: Nigeria
+      hu: Nigéria
+      ro: Nigeria
+      sk: Nigéria
+      bg: Нигерия
+      sl: Nigerija
+      sr: Nigerija
+      tr: Nijerya
+      id: Nigeria
+      he: ניגריה
+      ms: Nigeria
+      lt: Nigerija
+      lv: Nigērija
+      et: Nigeeria
+      kk: Нигерия
+      uz: Nigeriya
+      uk: Нігерія
+      az: Nigeriya
+      fa: نیجریه
     tel: +234
   - value: North Korea
     label:
@@ -1018,6 +5050,38 @@ countries:
       de: Nordkorea
       es: Corea del Norte
       pt: Coreia do Norte
+      it: Corea del Nord
+      ar: كوريا الشمالية
+      ru: КНДР
+      pl: Korea Północna
+      nl: Noord-Korea
+      sv: Nordkorea
+      no: Nord-Korea
+      el: Βόρεια Κορέα
+      fi: Pohjois-Korea
+      da: Nordkorea
+      cs: Severní Korea
+      th: เกาหลีเหนือ
+      hr: Sjeverna Koreja
+      tl: Hilagang Korea
+      hu: Észak-Korea
+      ro: Coreea de Nord
+      sk: Severná Kórea
+      bg: Северна Корея
+      sl: Severna Koreja
+      sr: Severna Koreja
+      tr: Kuzey Kore
+      id: Korea Utara
+      he: קוריאה הצפונית
+      ms: Korea Utara
+      lt: Šiaurės Korėja
+      lv: Ziemeļkoreja
+      et: Põhja-Korea
+      kk: Солтүстік Корея
+      uz: Shimoliy Koreya
+      uk: Північна Корея
+      az: Şimali Koreya
+      fa: کرهٔ شمالی
     tel: +850
   - value: North Macedonia
     label:
@@ -1026,6 +5090,38 @@ countries:
       de: Nordmazedonien
       es: Macedonia del Norte
       pt: Macedônia do Norte
+      it: Macedonia del Nord
+      ar: مقدونيا الشمالية
+      ru: Северная Македония
+      pl: Macedonia Północna
+      nl: Noord-Macedonië
+      sv: Nordmakedonien
+      no: Nord-Makedonia
+      el: Βόρεια Μακεδονία
+      fi: Pohjois-Makedonia
+      da: Nordmakedonien
+      cs: Severní Makedonie
+      th: มาซิโดเนียเหนือ
+      hr: Sjeverna Makedonija
+      tl: North Macedonia
+      hu: Észak-Macedónia
+      ro: Macedonia de Nord
+      sk: Severné Macedónsko
+      bg: Северна Македония
+      sl: Severna Makedonija
+      sr: Severna Makedonija
+      tr: Kuzey Makedonya
+      id: Makedonia Utara
+      he: מקדוניה הצפונית
+      ms: Macedonia Utara
+      lt: Šiaurės Makedonija
+      lv: Ziemeļmaķedonija
+      et: Põhja-Makedoonia
+      kk: Солтүстік Македония
+      uz: Shimoliy Makedoniya
+      uk: Північна Македонія
+      az: Şimali Makedoniya
+      fa: مقدونیهٔ شمالی
     tel: +389
   - value: Norway
     label:
@@ -1034,6 +5130,38 @@ countries:
       de: Norwegen
       es: Noruega
       pt: Noruega
+      it: Norvegia
+      ar: النرويج
+      ru: Норвегия
+      pl: Norwegia
+      nl: Noorwegen
+      sv: Norge
+      no: Norge
+      el: Νορβηγία
+      fi: Norja
+      da: Norge
+      cs: Norsko
+      th: นอร์เวย์
+      hr: Norveška
+      tl: Norway
+      hu: Norvégia
+      ro: Norvegia
+      sk: Nórsko
+      bg: Норвегия
+      sl: Norveška
+      sr: Norveška
+      tr: Norveç
+      id: Norwegia
+      he: נורווגיה
+      ms: Norway
+      lt: Norvegija
+      lv: Norvēģija
+      et: Norra
+      kk: Норвегия
+      uz: Norvegiya
+      uk: Норвегія
+      az: Norveç
+      fa: نروژ
     tel: +47
   - value: Oman
     label:
@@ -1042,6 +5170,38 @@ countries:
       de: Oman
       es: Omán
       pt: Omã
+      it: Oman
+      ar: عُمان
+      ru: Оман
+      pl: Oman
+      nl: Oman
+      sv: Oman
+      no: Oman
+      el: Ομάν
+      fi: Oman
+      da: Oman
+      cs: Omán
+      th: โอมาน
+      hr: Oman
+      tl: Oman
+      hu: Omán
+      ro: Oman
+      sk: Omán
+      bg: Оман
+      sl: Oman
+      sr: Oman
+      tr: Umman
+      id: Oman
+      he: עומאן
+      ms: Oman
+      lt: Omanas
+      lv: Omāna
+      et: Omaan
+      kk: Оман
+      uz: Ummon
+      uk: Оман
+      az: Oman
+      fa: عمان
     tel: +968
   - value: Pakistan
     label:
@@ -1050,6 +5210,38 @@ countries:
       de: Pakistan
       es: Pakistán
       pt: Paquistão
+      it: Pakistan
+      ar: باكستان
+      ru: Пакистан
+      pl: Pakistan
+      nl: Pakistan
+      sv: Pakistan
+      no: Pakistan
+      el: Πακιστάν
+      fi: Pakistan
+      da: Pakistan
+      cs: Pákistán
+      th: ปากีสถาน
+      hr: Pakistan
+      tl: Pakistan
+      hu: Pakisztán
+      ro: Pakistan
+      sk: Pakistan
+      bg: Пакистан
+      sl: Pakistan
+      sr: Pakistan
+      tr: Pakistan
+      id: Pakistan
+      he: פקיסטן
+      ms: Pakistan
+      lt: Pakistanas
+      lv: Pakistāna
+      et: Pakistan
+      kk: Пәкістан
+      uz: Pokiston
+      uk: Пакистан
+      az: Pakistan
+      fa: پاکستان
     tel: +92
   - value: Palau
     label:
@@ -1058,6 +5250,38 @@ countries:
       de: Palau
       es: Palaos
       pt: Palau
+      it: Palau
+      ar: بالاو
+      ru: Палау
+      pl: Palau
+      nl: Palau
+      sv: Palau
+      no: Palau
+      el: Παλάου
+      fi: Palau
+      da: Palau
+      cs: Palau
+      th: ปาเลา
+      hr: Palau
+      tl: Palau
+      hu: Palau
+      ro: Palau
+      sk: Palau
+      bg: Палау
+      sl: Palav
+      sr: Palau
+      tr: Palau
+      id: Palau
+      he: פלאו
+      ms: Palau
+      lt: Palau
+      lv: Palau
+      et: Belau
+      kk: Палау
+      uz: Palau
+      uk: Палау
+      az: Palau
+      fa: پالائو
     tel: +680
   - value: Panama
     label:
@@ -1066,6 +5290,38 @@ countries:
       de: Panama
       es: Panamá
       pt: Panamá
+      it: Panama
+      ar: بنما
+      ru: Панама
+      pl: Panama
+      nl: Panama
+      sv: Panama
+      no: Panama
+      el: Παναμάς
+      fi: Panama
+      da: Panama
+      cs: Panama
+      th: ปานามา
+      hr: Panama
+      tl: Panama
+      hu: Panama
+      ro: Panama
+      sk: Panama
+      bg: Панама
+      sl: Panama
+      sr: Panama
+      tr: Panama
+      id: Panama
+      he: פנמה
+      ms: Panama
+      lt: Panama
+      lv: Panama
+      et: Panama
+      kk: Панама
+      uz: Panama
+      uk: Панама
+      az: Panama
+      fa: پاناما
     tel: +507
   - value: Papua New Guinea
     label:
@@ -1074,6 +5330,38 @@ countries:
       de: Papua-Neuguinea
       es: Papúa Nueva Guinea
       pt: Papua-Nova Guiné
+      it: Papua Nuova Guinea
+      ar: بابوا غينيا الجديدة
+      ru: Папуа — Новая Гвинея
+      pl: Papua-Nowa Gwinea
+      nl: Papoea-Nieuw-Guinea
+      sv: Papua Nya Guinea
+      no: Papua Ny-Guinea
+      el: Παπούα Νέα Γουινέα
+      fi: Papua-Uusi-Guinea
+      da: Papua Ny Guinea
+      cs: Papua-Nová Guinea
+      th: ปาปัวนิวกินี
+      hr: Papua Nova Gvineja
+      tl: Papua New Guinea
+      hu: Pápua Új-Guinea
+      ro: Papua-Noua Guinee
+      sk: Papua-Nová Guinea
+      bg: Папуа-Нова Гвинея
+      sl: Papua Nova Gvineja
+      sr: Papua Nova Gvineja
+      tr: Papua Yeni Gine
+      id: Papua Nugini
+      he: פפואה גינאה החדשה
+      ms: Papua New Guinea
+      lt: Papua Naujoji Gvinėja
+      lv: Papua-Jaungvineja
+      et: Paapua Uus-Guinea
+      kk: Папуа — Жаңа Гвинея
+      uz: Papua – Yangi Gvineya
+      uk: Папуа-Нова Гвінея
+      az: Papua-Yeni Qvineya
+      fa: پاپوا گینهٔ نو
     tel: +675
   - value: Paraguay
     label:
@@ -1082,6 +5370,38 @@ countries:
       de: Paraguay
       es: Paraguay
       pt: Paraguai
+      it: Paraguay
+      ar: باراغواي
+      ru: Парагвай
+      pl: Paragwaj
+      nl: Paraguay
+      sv: Paraguay
+      no: Paraguay
+      el: Παραγουάη
+      fi: Paraguay
+      da: Paraguay
+      cs: Paraguay
+      th: ปารากวัย
+      hr: Paragvaj
+      tl: Paraguay
+      hu: Paraguay
+      ro: Paraguay
+      sk: Paraguaj
+      bg: Парагвай
+      sl: Paragvaj
+      sr: Paragvaj
+      tr: Paraguay
+      id: Paraguay
+      he: פרגוואי
+      ms: Paraguay
+      lt: Paragvajus
+      lv: Paragvaja
+      et: Paraguay
+      kk: Парагвай
+      uz: Paragvay
+      uk: Парагвай
+      az: Paraqvay
+      fa: پاراگوئه
     tel: +595
   - value: Peru
     label:
@@ -1090,6 +5410,38 @@ countries:
       de: Peru
       es: Perú
       pt: Peru
+      it: Perù
+      ar: بيرو
+      ru: Перу
+      pl: Peru
+      nl: Peru
+      sv: Peru
+      no: Peru
+      el: Περού
+      fi: Peru
+      da: Peru
+      cs: Peru
+      th: เปรู
+      hr: Peru
+      tl: Peru
+      hu: Peru
+      ro: Peru
+      sk: Peru
+      bg: Перу
+      sl: Peru
+      sr: Peru
+      tr: Peru
+      id: Peru
+      he: פרו
+      ms: Peru
+      lt: Peru
+      lv: Peru
+      et: Peruu
+      kk: Перу
+      uz: Peru
+      uk: Перу
+      az: Peru
+      fa: پرو
     tel: +51
   - value: Philippines
     label:
@@ -1098,6 +5450,38 @@ countries:
       de: Philippinen
       es: Filipinas
       pt: Filipinas
+      it: Filippine
+      ar: الفلبين
+      ru: Филиппины
+      pl: Filipiny
+      nl: Filipijnen
+      sv: Filippinerna
+      no: Filippinene
+      el: Φιλιππίνες
+      fi: Filippiinit
+      da: Filippinerne
+      cs: Filipíny
+      th: ฟิลิปปินส์
+      hr: Filipini
+      tl: Pilipinas
+      hu: Fülöp-szigetek
+      ro: Filipine
+      sk: Filipíny
+      bg: Филипини
+      sl: Filipini
+      sr: Filipini
+      tr: Filipinler
+      id: Filipina
+      he: הפיליפינים
+      ms: Filipina
+      lt: Filipinai
+      lv: Filipīnas
+      et: Filipiinid
+      kk: Филиппин аралдары
+      uz: Filippin
+      uk: Філіппіни
+      az: Filippin
+      fa: فیلیپین
     tel: +63
   - value: Poland
     label:
@@ -1106,6 +5490,38 @@ countries:
       de: Polen
       es: Polonia
       pt: Polônia
+      it: Polonia
+      ar: بولندا
+      ru: Польша
+      pl: Polska
+      nl: Polen
+      sv: Polen
+      no: Polen
+      el: Πολωνία
+      fi: Puola
+      da: Polen
+      cs: Polsko
+      th: โปแลนด์
+      hr: Poljska
+      tl: Poland
+      hu: Lengyelország
+      ro: Polonia
+      sk: Poľsko
+      bg: Полша
+      sl: Poljska
+      sr: Poljska
+      tr: Polonya
+      id: Polandia
+      he: פולין
+      ms: Poland
+      lt: Lenkija
+      lv: Polija
+      et: Poola
+      kk: Польша
+      uz: Polsha
+      uk: Польща
+      az: Polşa
+      fa: لهستان
     tel: +48
   - value: Portugal
     label:
@@ -1114,6 +5530,38 @@ countries:
       de: Portugal
       es: Portugal
       pt: Portugal
+      it: Portogallo
+      ar: البرتغال
+      ru: Португалия
+      pl: Portugalia
+      nl: Portugal
+      sv: Portugal
+      no: Portugal
+      el: Πορτογαλία
+      fi: Portugali
+      da: Portugal
+      cs: Portugalsko
+      th: โปรตุเกส
+      hr: Portugal
+      tl: Portugal
+      hu: Portugália
+      ro: Portugalia
+      sk: Portugalsko
+      bg: Португалия
+      sl: Portugalska
+      sr: Portugalija
+      tr: Portekiz
+      id: Portugal
+      he: פורטוגל
+      ms: Portugal
+      lt: Portugalija
+      lv: Portugāle
+      et: Portugal
+      kk: Португалия
+      uz: Portugaliya
+      uk: Португалія
+      az: Portuqaliya
+      fa: پرتغال
     tel: +351
   - value: Qatar
     label:
@@ -1122,6 +5570,38 @@ countries:
       de: Katar
       es: Catar
       pt: Catar
+      it: Qatar
+      ar: قطر
+      ru: Катар
+      pl: Katar
+      nl: Qatar
+      sv: Qatar
+      no: Qatar
+      el: Κατάρ
+      fi: Qatar
+      da: Qatar
+      cs: Katar
+      th: กาตาร์
+      hr: Katar
+      tl: Qatar
+      hu: Katar
+      ro: Qatar
+      sk: Katar
+      bg: Катар
+      sl: Katar
+      sr: Katar
+      tr: Katar
+      id: Qatar
+      he: קטאר
+      ms: Qatar
+      lt: Kataras
+      lv: Katara
+      et: Katar
+      kk: Катар
+      uz: Qatar
+      uk: Катар
+      az: Qətər
+      fa: قطر
     tel: +974
   - value: Romania
     label:
@@ -1130,6 +5610,38 @@ countries:
       de: Rumänien
       es: Rumania
       pt: Romênia
+      it: Romania
+      ar: رومانيا
+      ru: Румыния
+      pl: Rumunia
+      nl: Roemenië
+      sv: Rumänien
+      no: Romania
+      el: Ρουμανία
+      fi: Romania
+      da: Rumænien
+      cs: Rumunsko
+      th: โรมาเนีย
+      hr: Rumunjska
+      tl: Romania
+      hu: Románia
+      ro: România
+      sk: Rumunsko
+      bg: Румъния
+      sl: Romunija
+      sr: Rumunija
+      tr: Romanya
+      id: Rumania
+      he: רומניה
+      ms: Romania
+      lt: Rumunija
+      lv: Rumānija
+      et: Rumeenia
+      kk: Румыния
+      uz: Ruminiya
+      uk: Румунія
+      az: Rumıniya
+      fa: رومانی
     tel: +40
   - value: Russia
     label:
@@ -1138,6 +5650,38 @@ countries:
       de: Russland
       es: Rusia
       pt: Rússia
+      it: Russia
+      ar: روسيا
+      ru: Россия
+      pl: Rosja
+      nl: Rusland
+      sv: Ryssland
+      no: Russland
+      el: Ρωσία
+      fi: Venäjä
+      da: Rusland
+      cs: Rusko
+      th: รัสเซีย
+      hr: Rusija
+      tl: Russia
+      hu: Oroszország
+      ro: Rusia
+      sk: Rusko
+      bg: Русия
+      sl: Rusija
+      sr: Rusija
+      tr: Rusya
+      id: Rusia
+      he: רוסיה
+      ms: Rusia
+      lt: Rusija
+      lv: Krievija
+      et: Venemaa
+      kk: Ресей
+      uz: Rossiya
+      uk: Росія
+      az: Rusiya
+      fa: روسیه
     tel: +7
   - value: Rwanda
     label:
@@ -1146,6 +5690,38 @@ countries:
       de: Ruanda
       es: Ruanda
       pt: Ruanda
+      it: Ruanda
+      ar: رواندا
+      ru: Руанда
+      pl: Rwanda
+      nl: Rwanda
+      sv: Rwanda
+      no: Rwanda
+      el: Ρουάντα
+      fi: Ruanda
+      da: Rwanda
+      cs: Rwanda
+      th: รวันดา
+      hr: Ruanda
+      tl: Rwanda
+      hu: Ruanda
+      ro: Rwanda
+      sk: Rwanda
+      bg: Руанда
+      sl: Ruanda
+      sr: Ruanda
+      tr: Ruanda
+      id: Rwanda
+      he: רואנדה
+      ms: Rwanda
+      lt: Ruanda
+      lv: Ruanda
+      et: Rwanda
+      kk: Руанда
+      uz: Ruanda
+      uk: Руанда
+      az: Ruanda
+      fa: رواندا
     tel: +250
   - value: Saint Kitts and Nevis
     label:
@@ -1154,6 +5730,38 @@ countries:
       de: St. Kitts und Nevis
       es: San Cristóbal y Nieves
       pt: São Cristóvão e Neves
+      it: Saint Kitts e Nevis
+      ar: سانت كيتس ونيفيس
+      ru: Сент-Китс и Невис
+      pl: Saint Kitts i Nevis
+      nl: Saint Kitts en Nevis
+      sv: S:t Kitts och Nevis
+      no: Saint Kitts og Nevis
+      el: Σεν Κιτς και Νέβις
+      fi: Saint Kitts ja Nevis
+      da: Saint Kitts og Nevis
+      cs: Svatý Kryštof a Nevis
+      th: เซนต์คิตส์และเนวิส
+      hr: Sveti Kristofor i Nevis
+      tl: St. Kitts & Nevis
+      hu: Saint Kitts és Nevis
+      ro: Saint Kitts și Nevis
+      sk: Svätý Krištof a Nevis
+      bg: Сейнт Китс и Невис
+      sl: Sveti Krištof in Nevis
+      sr: Sent Kits i Nevis
+      tr: Saint Kitts ve Nevis
+      id: Saint Kitts dan Nevis
+      he: סנט קיטס ונוויס
+      ms: Saint Kitts dan Nevis
+      lt: Sent Kitsas ir Nevis
+      lv: Sentkitsa un Nevisa
+      et: Saint Kitts ja Nevis
+      kk: Сент-Китс және Невис
+      uz: Sent-Kits va Nevis
+      uk: Сент-Кітс і Невіс
+      az: Sent-Kits və Nevis
+      fa: سنت کیتس و نویس
     tel: +1-869
   - value: Saint Lucia
     label:
@@ -1162,6 +5770,38 @@ countries:
       de: St. Lucia
       es: Santa Lucía
       pt: Santa Lúcia
+      it: Saint Lucia
+      ar: سانت لوسيا
+      ru: Сент-Люсия
+      pl: Saint Lucia
+      nl: Saint Lucia
+      sv: S:t Lucia
+      no: St. Lucia
+      el: Αγία Λουκία
+      fi: Saint Lucia
+      da: Saint Lucia
+      cs: Svatá Lucie
+      th: เซนต์ลูเซีย
+      hr: Sveta Lucija
+      tl: Saint Lucia
+      hu: Saint Lucia
+      ro: Sfânta Lucia
+      sk: Svätá Lucia
+      bg: Сейнт Лусия
+      sl: Sveta Lucija
+      sr: Sveta Lucija
+      tr: Saint Lucia
+      id: Saint Lucia
+      he: סנט לוסיה
+      ms: Saint Lucia
+      lt: Sent Lusija
+      lv: Sentlūsija
+      et: Saint Lucia
+      kk: Сент-Люсия
+      uz: Sent-Lyusiya
+      uk: Сент-Люсія
+      az: Sent-Lusiya
+      fa: سنت لوسیا
     tel: +1-758
   - value: Saint Vincent and the Grenadines
     label:
@@ -1170,6 +5810,38 @@ countries:
       de: St. Vincent und die Grenadinen
       es: San Vicente y las Granadinas
       pt: São Vicente e Granadinas
+      it: Saint Vincent e Grenadine
+      ar: سانت فنسنت وجزر غرينادين
+      ru: Сент-Винсент и Гренадины
+      pl: Saint Vincent i Grenadyny
+      nl: Saint Vincent en de Grenadines
+      sv: S:t Vincent och Grenadinerna
+      no: St. Vincent og Grenadinene
+      el: Άγιος Βικέντιος και Γρεναδίνες
+      fi: Saint Vincent ja Grenadiinit
+      da: Saint Vincent og Grenadinerne
+      cs: Svatý Vincenc a Grenadiny
+      th: เซนต์วินเซนต์และเกรนาดีนส์
+      hr: Sveti Vincent i Grenadini
+      tl: St. Vincent & Grenadines
+      hu: Saint Vincent és a Grenadine-szigetek
+      ro: Saint Vincent și Grenadinele
+      sk: Svätý Vincent a Grenadíny
+      bg: Сейнт Винсънт и Гренадини
+      sl: Sveti Vincencij in Grenadine
+      sr: Sent Vinsent i Grenadini
+      tr: Saint Vincent ve Grenadinler
+      id: Saint Vincent dan Grenadine
+      he: סנט וינסנט והגרנדינים
+      ms: Saint Vincent dan Grenadines
+      lt: Šventasis Vincentas ir Grenadinai
+      lv: Sentvinsenta un Grenadīnas
+      et: Saint Vincent ja Grenadiinid
+      kk: Сент-Винсент және Гренадин аралдары
+      uz: Sent-Vinsent va Grenadin
+      uk: Сент-Вінсент і Гренадіни
+      az: Sent-Vinsent və Qrenadinlər
+      fa: سنت وینسنت و گرنادین
     tel: +1-784
   - value: Samoa
     label:
@@ -1178,6 +5850,38 @@ countries:
       de: Samoa
       es: Samoa
       pt: Samoa
+      it: Samoa
+      ar: ساموا
+      ru: Самоа
+      pl: Samoa
+      nl: Samoa
+      sv: Samoa
+      no: Samoa
+      el: Σαμόα
+      fi: Samoa
+      da: Samoa
+      cs: Samoa
+      th: ซามัว
+      hr: Samoa
+      tl: Samoa
+      hu: Szamoa
+      ro: Samoa
+      sk: Samoa
+      bg: Самоа
+      sl: Samoa
+      sr: Samoa
+      tr: Samoa
+      id: Samoa
+      he: סמואה
+      ms: Samoa
+      lt: Samoa
+      lv: Samoa
+      et: Samoa
+      kk: Самоа
+      uz: Samoa
+      uk: Самоа
+      az: Samoa
+      fa: ساموآ
     tel: +685
   - value: San Marino
     label:
@@ -1186,6 +5890,38 @@ countries:
       de: San Marino
       es: San Marino
       pt: San Marino
+      it: San Marino
+      ar: سان مارينو
+      ru: Сан-Марино
+      pl: San Marino
+      nl: San Marino
+      sv: San Marino
+      no: San Marino
+      el: Άγιος Μαρίνος
+      fi: San Marino
+      da: San Marino
+      cs: San Marino
+      th: ซานมาริโน
+      hr: San Marino
+      tl: San Marino
+      hu: San Marino
+      ro: San Marino
+      sk: San Maríno
+      bg: Сан Марино
+      sl: San Marino
+      sr: San Marino
+      tr: San Marino
+      id: San Marino
+      he: סן מרינו
+      ms: San Marino
+      lt: San Marinas
+      lv: Sanmarīno
+      et: San Marino
+      kk: Сан-Марино
+      uz: San-Marino
+      uk: Сан-Марино
+      az: San-Marino
+      fa: سان‌مارینو
     tel: +378
   - value: Sao Tome and Principe
     label:
@@ -1194,6 +5930,38 @@ countries:
       de: São Tomé und Príncipe
       es: Santo Tomé y Príncipe
       pt: São Tomé e Príncipe
+      it: São Tomé e Príncipe
+      ar: ساو تومي وبرينسيبي
+      ru: Сан-Томе и Принсипи
+      pl: Wyspy Świętego Tomasza i Książęca
+      nl: Sao Tomé en Principe
+      sv: São Tomé och Príncipe
+      no: São Tomé og Príncipe
+      el: Σάο Τομέ και Πρίνσιπε
+      fi: São Tomé ja Príncipe
+      da: São Tomé og Príncipe
+      cs: Svatý Tomáš a Princův ostrov
+      th: เซาตูเมและปรินซิปี
+      hr: Sveti Toma i Princip
+      tl: São Tomé & Príncipe
+      hu: São Tomé és Príncipe
+      ro: São Tomé și Príncipe
+      sk: Svätý Tomáš a Princov ostrov
+      bg: Сао Томе и Принсипи
+      sl: Sveti Tomaž in Princ
+      sr: Sao Tome i Principe
+      tr: Sao Tome ve Principe
+      id: Sao Tome dan Principe
+      he: סאו טומה ופרינסיפה
+      ms: Sao Tome dan Principe
+      lt: San Tomė ir Prinsipė
+      lv: Santome un Prinsipi
+      et: São Tomé ja Príncipe
+      kk: Сан-Томе және Принсипи
+      uz: San-Tome va Prinsipi
+      uk: Сан-Томе і Принсіпі
+      az: San-Tome və Prinsipi
+      fa: سائوتومه و پرینسیپ
     tel: +239
   - value: Saudi Arabia
     label:
@@ -1202,6 +5970,38 @@ countries:
       de: Saudi-Arabien
       es: Arabia Saudita
       pt: Arábia Saudita
+      it: Arabia Saudita
+      ar: المملكة العربية السعودية
+      ru: Саудовская Аравия
+      pl: Arabia Saudyjska
+      nl: Saoedi-Arabië
+      sv: Saudiarabien
+      no: Saudi-Arabia
+      el: Σαουδική Αραβία
+      fi: Saudi-Arabia
+      da: Saudi-Arabien
+      cs: Saúdská Arábie
+      th: ซาอุดีอาระเบีย
+      hr: Saudijska Arabija
+      tl: Saudi Arabia
+      hu: Szaúd-Arábia
+      ro: Arabia Saudită
+      sk: Saudská Arábia
+      bg: Саудитска Арабия
+      sl: Saudova Arabija
+      sr: Saudijska Arabija
+      tr: Suudi Arabistan
+      id: Arab Saudi
+      he: ערב הסעודית
+      ms: Arab Saudi
+      lt: Saudo Arabija
+      lv: Saūda Arābija
+      et: Saudi Araabia
+      kk: Сауд Арабиясы
+      uz: Saudiya Arabistoni
+      uk: Саудівська Аравія
+      az: Səudiyyə Ərəbistanı
+      fa: عربستان سعودی
     tel: +966
   - value: Senegal
     label:
@@ -1210,6 +6010,38 @@ countries:
       de: Senegal
       es: Senegal
       pt: Senegal
+      it: Senegal
+      ar: السنغال
+      ru: Сенегал
+      pl: Senegal
+      nl: Senegal
+      sv: Senegal
+      no: Senegal
+      el: Σενεγάλη
+      fi: Senegal
+      da: Senegal
+      cs: Senegal
+      th: เซเนกัล
+      hr: Senegal
+      tl: Senegal
+      hu: Szenegál
+      ro: Senegal
+      sk: Senegal
+      bg: Сенегал
+      sl: Senegal
+      sr: Senegal
+      tr: Senegal
+      id: Senegal
+      he: סנגל
+      ms: Senegal
+      lt: Senegalas
+      lv: Senegāla
+      et: Senegal
+      kk: Сенегал
+      uz: Senegal
+      uk: Сенегал
+      az: Seneqal
+      fa: سنگال
     tel: +221
   - value: Serbia
     label:
@@ -1218,6 +6050,38 @@ countries:
       de: Serbien
       es: Serbia
       pt: Sérvia
+      it: Serbia
+      ar: صربيا
+      ru: Сербия
+      pl: Serbia
+      nl: Servië
+      sv: Serbien
+      no: Serbia
+      el: Σερβία
+      fi: Serbia
+      da: Serbien
+      cs: Srbsko
+      th: เซอร์เบีย
+      hr: Srbija
+      tl: Serbia
+      hu: Szerbia
+      ro: Serbia
+      sk: Srbsko
+      bg: Сърбия
+      sl: Srbija
+      sr: Srbija
+      tr: Sırbistan
+      id: Serbia
+      he: סרביה
+      ms: Serbia
+      lt: Serbija
+      lv: Serbija
+      et: Serbia
+      kk: Сербия
+      uz: Serbiya
+      uk: Сербія
+      az: Serbiya
+      fa: صربستان
     tel: +381
   - value: Seychelles
     label:
@@ -1226,6 +6090,38 @@ countries:
       de: Seychellen
       es: Seychelles
       pt: Seicheles
+      it: Seychelles
+      ar: سيشل
+      ru: Сейшельские о-ва
+      pl: Seszele
+      nl: Seychellen
+      sv: Seychellerna
+      no: Seychellene
+      el: Σεϋχέλλες
+      fi: Seychellit
+      da: Seychellerne
+      cs: Seychely
+      th: เซเชลส์
+      hr: Sejšeli
+      tl: Seychelles
+      hu: Seychelle-szigetek
+      ro: Seychelles
+      sk: Seychely
+      bg: Сейшели
+      sl: Sejšeli
+      sr: Sejšeli
+      tr: Seyşeller
+      id: Seychelles
+      he: איי סיישל
+      ms: Seychelles
+      lt: Seišeliai
+      lv: Seišelu salas
+      et: Seišellid
+      kk: Сейшель аралдары
+      uz: Seyshel orollari
+      uk: Сейшельські Острови
+      az: Seyşel adaları
+      fa: سیشل
     tel: +248
   - value: Sierra Leone
     label:
@@ -1234,6 +6130,38 @@ countries:
       de: Sierra Leone
       es: Sierra Leona
       pt: Serra Leoa
+      it: Sierra Leone
+      ar: سيراليون
+      ru: Сьерра-Леоне
+      pl: Sierra Leone
+      nl: Sierra Leone
+      sv: Sierra Leone
+      no: Sierra Leone
+      el: Σιέρα Λεόνε
+      fi: Sierra Leone
+      da: Sierra Leone
+      cs: Sierra Leone
+      th: เซียร์ราลีโอน
+      hr: Sijera Leone
+      tl: Sierra Leone
+      hu: Sierra Leone
+      ro: Sierra Leone
+      sk: Sierra Leone
+      bg: Сиера Леоне
+      sl: Sierra Leone
+      sr: Sijera Leone
+      tr: Sierra Leone
+      id: Sierra Leone
+      he: סיירה לאון
+      ms: Sierra Leone
+      lt: Siera Leonė
+      lv: Sjerraleone
+      et: Sierra Leone
+      kk: Сьерра-Леоне
+      uz: Syerra-Leone
+      uk: Сьєрра-Леоне
+      az: Syerra-Leone
+      fa: سیرالئون
     tel: +232
   - value: Singapore
     label:
@@ -1242,6 +6170,38 @@ countries:
       de: Singapur
       es: Singapur
       pt: Singapura
+      it: Singapore
+      ar: سنغافورة
+      ru: Сингапур
+      pl: Singapur
+      nl: Singapore
+      sv: Singapore
+      no: Singapore
+      el: Σιγκαπούρη
+      fi: Singapore
+      da: Singapore
+      cs: Singapur
+      th: สิงคโปร์
+      hr: Singapur
+      tl: Singapore
+      hu: Szingapúr
+      ro: Singapore
+      sk: Singapur
+      bg: Сингапур
+      sl: Singapur
+      sr: Singapur
+      tr: Singapur
+      id: Singapura
+      he: סינגפור
+      ms: Singapura
+      lt: Singapūras
+      lv: Singapūra
+      et: Singapur
+      kk: Сингапур
+      uz: Singapur
+      uk: Сінгапур
+      az: Sinqapur
+      fa: سنگاپور
     tel: +65
   - value: Slovakia
     label:
@@ -1250,6 +6210,38 @@ countries:
       de: Slowakei
       es: Eslovaquia
       pt: Eslováquia
+      it: Slovacchia
+      ar: سلوفاكيا
+      ru: Словакия
+      pl: Słowacja
+      nl: Slowakije
+      sv: Slovakien
+      no: Slovakia
+      el: Σλοβακία
+      fi: Slovakia
+      da: Slovakiet
+      cs: Slovensko
+      th: สโลวะเกีย
+      hr: Slovačka
+      tl: Slovakia
+      hu: Szlovákia
+      ro: Slovacia
+      sk: Slovensko
+      bg: Словакия
+      sl: Slovaška
+      sr: Slovačka
+      tr: Slovakya
+      id: Slovakia
+      he: סלובקיה
+      ms: Slovakia
+      lt: Slovakija
+      lv: Slovākija
+      et: Slovakkia
+      kk: Словакия
+      uz: Slovakiya
+      uk: Словаччина
+      az: Slovakiya
+      fa: اسلواکی
     tel: +421
   - value: Slovenia
     label:
@@ -1258,6 +6250,38 @@ countries:
       de: Slowenien
       es: Eslovenia
       pt: Eslovênia
+      it: Slovenia
+      ar: سلوفينيا
+      ru: Словения
+      pl: Słowenia
+      nl: Slovenië
+      sv: Slovenien
+      no: Slovenia
+      el: Σλοβενία
+      fi: Slovenia
+      da: Slovenien
+      cs: Slovinsko
+      th: สโลวีเนีย
+      hr: Slovenija
+      tl: Slovenia
+      hu: Szlovénia
+      ro: Slovenia
+      sk: Slovinsko
+      bg: Словения
+      sl: Slovenija
+      sr: Slovenija
+      tr: Slovenya
+      id: Slovenia
+      he: סלובניה
+      ms: Slovenia
+      lt: Slovėnija
+      lv: Slovēnija
+      et: Sloveenia
+      kk: Словения
+      uz: Sloveniya
+      uk: Словенія
+      az: Sloveniya
+      fa: اسلوونی
     tel: +386
   - value: Solomon Islands
     label:
@@ -1266,6 +6290,38 @@ countries:
       de: Salomonen
       es: Islas Salomón
       pt: Ilhas Salomão
+      it: Isole Salomone
+      ar: جزر سليمان
+      ru: Соломоновы о-ва
+      pl: Wyspy Salomona
+      nl: Salomonseilanden
+      sv: Salomonöarna
+      no: Salomonøyene
+      el: Νήσοι Σολομώντος
+      fi: Salomonsaaret
+      da: Salomonøerne
+      cs: Šalamounovy ostrovy
+      th: หมู่เกาะโซโลมอน
+      hr: Salomonovi Otoci
+      tl: Solomon Islands
+      hu: Salamon-szigetek
+      ro: Insulele Solomon
+      sk: Šalamúnove ostrovy
+      bg: Соломонови острови
+      sl: Salomonovi otoki
+      sr: Solomonska Ostrva
+      tr: Solomon Adaları
+      id: Kepulauan Solomon
+      he: איי שלמה
+      ms: Kepulauan Solomon
+      lt: Saliamono Salos
+      lv: Zālamana salas
+      et: Saalomoni Saared
+      kk: Соломон аралдары
+      uz: Solomon orollari
+      uk: Соломонові Острови
+      az: Solomon adaları
+      fa: جزایر سلیمان
     tel: +677
   - value: Somalia
     label:
@@ -1274,6 +6330,38 @@ countries:
       de: Somalia
       es: Somalia
       pt: Somália
+      it: Somalia
+      ar: الصومال
+      ru: Сомали
+      pl: Somalia
+      nl: Somalië
+      sv: Somalia
+      no: Somalia
+      el: Σομαλία
+      fi: Somalia
+      da: Somalia
+      cs: Somálsko
+      th: โซมาเลีย
+      hr: Somalija
+      tl: Somalia
+      hu: Szomália
+      ro: Somalia
+      sk: Somálsko
+      bg: Сомалия
+      sl: Somalija
+      sr: Somalija
+      tr: Somali
+      id: Somalia
+      he: סומליה
+      ms: Somalia
+      lt: Somalis
+      lv: Somālija
+      et: Somaalia
+      kk: Сомали
+      uz: Somali
+      uk: Сомалі
+      az: Somali
+      fa: سومالی
     tel: +252
   - value: South Africa
     label:
@@ -1282,6 +6370,38 @@ countries:
       de: Südafrika
       es: Sudáfrica
       pt: África do Sul
+      it: Sudafrica
+      ar: جنوب أفريقيا
+      ru: Южно-Африканская Республика
+      pl: Republika Południowej Afryki
+      nl: Zuid-Afrika
+      sv: Sydafrika
+      no: Sør-Afrika
+      el: Νότια Αφρική
+      fi: Etelä-Afrikka
+      da: Sydafrika
+      cs: Jihoafrická republika
+      th: แอฟริกาใต้
+      hr: Južnoafrička Republika
+      tl: South Africa
+      hu: Dél-afrikai Köztársaság
+      ro: Africa de Sud
+      sk: Južná Afrika
+      bg: Южна Африка
+      sl: Južnoafriška republika
+      sr: Južnoafrička Republika
+      tr: Güney Afrika
+      id: Afrika Selatan
+      he: דרום אפריקה
+      ms: Afrika Selatan
+      lt: Pietų Afrika
+      lv: Dienvidāfrikas Republika
+      et: Lõuna-Aafrika Vabariik
+      kk: Оңтүстік Африка
+      uz: Janubiy Afrika Respublikasi
+      uk: Південно-Африканська Республіка
+      az: Cənub Afrika
+      fa: افریقای جنوبی
     tel: +27
   - value: South Korea
     label:
@@ -1290,6 +6410,38 @@ countries:
       de: Südkorea
       es: Corea del Sur
       pt: Coreia do Sul
+      it: Corea del Sud
+      ar: كوريا الجنوبية
+      ru: Республика Корея
+      pl: Korea Południowa
+      nl: Zuid-Korea
+      sv: Sydkorea
+      no: Sør-Korea
+      el: Νότια Κορέα
+      fi: Etelä-Korea
+      da: Sydkorea
+      cs: Jižní Korea
+      th: เกาหลีใต้
+      hr: Južna Koreja
+      tl: Timog Korea
+      hu: Dél-Korea
+      ro: Coreea de Sud
+      sk: Južná Kórea
+      bg: Южна Корея
+      sl: Južna Koreja
+      sr: Južna Koreja
+      tr: Güney Kore
+      id: Korea Selatan
+      he: קוריאה הדרומית
+      ms: Korea Selatan
+      lt: Pietų Korėja
+      lv: Dienvidkoreja
+      et: Lõuna-Korea
+      kk: Оңтүстік Корея
+      uz: Janubiy Koreya
+      uk: Південна Корея
+      az: Cənubi Koreya
+      fa: کرهٔ جنوبی
     tel: +82
   - value: South Sudan
     label:
@@ -1298,6 +6450,38 @@ countries:
       de: Südsudan
       es: Sudán del Sur
       pt: Sudão do Sul
+      it: Sud Sudan
+      ar: جنوب السودان
+      ru: Южный Судан
+      pl: Sudan Południowy
+      nl: Zuid-Soedan
+      sv: Sydsudan
+      no: Sør-Sudan
+      el: Νότιο Σουδάν
+      fi: Etelä-Sudan
+      da: Sydsudan
+      cs: Jižní Súdán
+      th: ซูดานใต้
+      hr: Južni Sudan
+      tl: Timog Sudan
+      hu: Dél-Szudán
+      ro: Sudanul de Sud
+      sk: Južný Sudán
+      bg: Южен Судан
+      sl: Južni Sudan
+      sr: Južni Sudan
+      tr: Güney Sudan
+      id: Sudan Selatan
+      he: דרום סודן
+      ms: Sudan Selatan
+      lt: Pietų Sudanas
+      lv: Dienvidsudāna
+      et: Lõuna-Sudaan
+      kk: Оңтүстік Судан
+      uz: Janubiy Sudan
+      uk: Південний Судан
+      az: Cənubi Sudan
+      fa: سودان جنوبی
     tel: +211
   - value: Spain
     label:
@@ -1306,6 +6490,38 @@ countries:
       de: Spanien
       es: España
       pt: Espanha
+      it: Spagna
+      ar: إسبانيا
+      ru: Испания
+      pl: Hiszpania
+      nl: Spanje
+      sv: Spanien
+      no: Spania
+      el: Ισπανία
+      fi: Espanja
+      da: Spanien
+      cs: Španělsko
+      th: สเปน
+      hr: Španjolska
+      tl: Spain
+      hu: Spanyolország
+      ro: Spania
+      sk: Španielsko
+      bg: Испания
+      sl: Španija
+      sr: Španija
+      tr: İspanya
+      id: Spanyol
+      he: ספרד
+      ms: Sepanyol
+      lt: Ispanija
+      lv: Spānija
+      et: Hispaania
+      kk: Испания
+      uz: Ispaniya
+      uk: Іспанія
+      az: İspaniya
+      fa: اسپانیا
     tel: +34
   - value: Sri Lanka
     label:
@@ -1314,6 +6530,38 @@ countries:
       de: Sri Lanka
       es: Sri Lanka
       pt: Sri Lanka
+      it: Sri Lanka
+      ar: سريلانكا
+      ru: Шри-Ланка
+      pl: Sri Lanka
+      nl: Sri Lanka
+      sv: Sri Lanka
+      no: Sri Lanka
+      el: Σρι Λάνκα
+      fi: Sri Lanka
+      da: Sri Lanka
+      cs: Srí Lanka
+      th: ศรีลังกา
+      hr: Šri Lanka
+      tl: Sri Lanka
+      hu: Srí Lanka
+      ro: Sri Lanka
+      sk: Srí Lanka
+      bg: Шри Ланка
+      sl: Šrilanka
+      sr: Šri Lanka
+      tr: Sri Lanka
+      id: Sri Lanka
+      he: סרי לנקה
+      ms: Sri Lanka
+      lt: Šri Lanka
+      lv: Šrilanka
+      et: Sri Lanka
+      kk: Шри-Ланка
+      uz: Shri-Lanka
+      uk: Шрі-Ланка
+      az: Şri-Lanka
+      fa: سری‌لانکا
     tel: +94
   - value: Sudan
     label:
@@ -1322,6 +6570,38 @@ countries:
       de: Sudan
       es: Sudán
       pt: Sudão
+      it: Sudan
+      ar: السودان
+      ru: Судан
+      pl: Sudan
+      nl: Soedan
+      sv: Sudan
+      no: Sudan
+      el: Σουδάν
+      fi: Sudan
+      da: Sudan
+      cs: Súdán
+      th: ซูดาน
+      hr: Sudan
+      tl: Sudan
+      hu: Szudán
+      ro: Sudan
+      sk: Sudán
+      bg: Судан
+      sl: Sudan
+      sr: Sudan
+      tr: Sudan
+      id: Sudan
+      he: סודן
+      ms: Sudan
+      lt: Sudanas
+      lv: Sudāna
+      et: Sudaan
+      kk: Судан
+      uz: Sudan
+      uk: Судан
+      az: Sudan
+      fa: سودان
     tel: +249
   - value: Suriname
     label:
@@ -1330,6 +6610,38 @@ countries:
       de: Suriname
       es: Surinam
       pt: Suriname
+      it: Suriname
+      ar: سورينام
+      ru: Суринам
+      pl: Surinam
+      nl: Suriname
+      sv: Surinam
+      no: Surinam
+      el: Σουρινάμ
+      fi: Suriname
+      da: Surinam
+      cs: Surinam
+      th: ซูรินาเม
+      hr: Surinam
+      tl: Suriname
+      hu: Suriname
+      ro: Suriname
+      sk: Surinam
+      bg: Суринам
+      sl: Surinam
+      sr: Surinam
+      tr: Surinam
+      id: Suriname
+      he: סורינאם
+      ms: Surinam
+      lt: Surinamas
+      lv: Surinama
+      et: Suriname
+      kk: Суринам
+      uz: Surinam
+      uk: Суринам
+      az: Surinam
+      fa: سورینام
     tel: +597
   - value: Sweden
     label:
@@ -1338,6 +6650,38 @@ countries:
       de: Schweden
       es: Suecia
       pt: Suécia
+      it: Svezia
+      ar: السويد
+      ru: Швеция
+      pl: Szwecja
+      nl: Zweden
+      sv: Sverige
+      no: Sverige
+      el: Σουηδία
+      fi: Ruotsi
+      da: Sverige
+      cs: Švédsko
+      th: สวีเดน
+      hr: Švedska
+      tl: Sweden
+      hu: Svédország
+      ro: Suedia
+      sk: Švédsko
+      bg: Швеция
+      sl: Švedska
+      sr: Švedska
+      tr: İsveç
+      id: Swedia
+      he: שוודיה
+      ms: Sweden
+      lt: Švedija
+      lv: Zviedrija
+      et: Rootsi
+      kk: Швеция
+      uz: Shvetsiya
+      uk: Швеція
+      az: İsveç
+      fa: سوئد
     tel: +46
   - value: Switzerland
     label:
@@ -1346,6 +6690,38 @@ countries:
       de: Schweiz
       es: Suiza
       pt: Suíça
+      it: Svizzera
+      ar: سويسرا
+      ru: Швейцария
+      pl: Szwajcaria
+      nl: Zwitserland
+      sv: Schweiz
+      no: Sveits
+      el: Ελβετία
+      fi: Sveitsi
+      da: Schweiz
+      cs: Švýcarsko
+      th: สวิตเซอร์แลนด์
+      hr: Švicarska
+      tl: Switzerland
+      hu: Svájc
+      ro: Elveția
+      sk: Švajčiarsko
+      bg: Швейцария
+      sl: Švica
+      sr: Švajcarska
+      tr: İsviçre
+      id: Swiss
+      he: שווייץ
+      ms: Switzerland
+      lt: Šveicarija
+      lv: Šveice
+      et: Šveits
+      kk: Швейцария
+      uz: Shveytsariya
+      uk: Швейцарія
+      az: İsveçrə
+      fa: سوئیس
     tel: +41
   - value: Syria
     label:
@@ -1354,6 +6730,38 @@ countries:
       de: Syrien
       es: Siria
       pt: Síria
+      it: Siria
+      ar: سوريا
+      ru: Сирия
+      pl: Syria
+      nl: Syrië
+      sv: Syrien
+      no: Syria
+      el: Συρία
+      fi: Syyria
+      da: Syrien
+      cs: Sýrie
+      th: ซีเรีย
+      hr: Sirija
+      tl: Syria
+      hu: Szíria
+      ro: Siria
+      sk: Sýria
+      bg: Сирия
+      sl: Sirija
+      sr: Sirija
+      tr: Suriye
+      id: Suriah
+      he: סוריה
+      ms: Syria
+      lt: Sirija
+      lv: Sīrija
+      et: Süüria
+      kk: Сирия
+      uz: Suriya
+      uk: Сирія
+      az: Suriya
+      fa: سوریه
     tel: +963
   - value: Tajikistan
     label:
@@ -1362,6 +6770,38 @@ countries:
       de: Tadschikistan
       es: Tayikistán
       pt: Tajiquistão
+      it: Tagikistan
+      ar: طاجيكستان
+      ru: Таджикистан
+      pl: Tadżykistan
+      nl: Tadzjikistan
+      sv: Tadzjikistan
+      no: Tadsjikistan
+      el: Τατζικιστάν
+      fi: Tadžikistan
+      da: Tadsjikistan
+      cs: Tádžikistán
+      th: ทาจิกิสถาน
+      hr: Tadžikistan
+      tl: Tajikistan
+      hu: Tádzsikisztán
+      ro: Tadjikistan
+      sk: Tadžikistan
+      bg: Таджикистан
+      sl: Tadžikistan
+      sr: Tadžikistan
+      tr: Tacikistan
+      id: Tajikistan
+      he: טג׳יקיסטן
+      ms: Tajikistan
+      lt: Tadžikija
+      lv: Tadžikistāna
+      et: Tadžikistan
+      kk: Тәжікстан
+      uz: Tojikiston
+      uk: Таджикистан
+      az: Tacikistan
+      fa: تاجیکستان
     tel: +992
   - value: Tanzania
     label:
@@ -1370,6 +6810,38 @@ countries:
       de: Tansania
       es: Tanzania
       pt: Tanzânia
+      it: Tanzania
+      ar: تنزانيا
+      ru: Танзания
+      pl: Tanzania
+      nl: Tanzania
+      sv: Tanzania
+      no: Tanzania
+      el: Τανζανία
+      fi: Tansania
+      da: Tanzania
+      cs: Tanzanie
+      th: แทนซาเนีย
+      hr: Tanzanija
+      tl: Tanzania
+      hu: Tanzánia
+      ro: Tanzania
+      sk: Tanzánia
+      bg: Танзания
+      sl: Tanzanija
+      sr: Tanzanija
+      tr: Tanzanya
+      id: Tanzania
+      he: טנזניה
+      ms: Tanzania
+      lt: Tanzanija
+      lv: Tanzānija
+      et: Tansaania
+      kk: Танзания
+      uz: Tanzaniya
+      uk: Танзанія
+      az: Tanzaniya
+      fa: تانزانیا
     tel: +255
   - value: Thailand
     label:
@@ -1378,6 +6850,38 @@ countries:
       de: Thailand
       es: Tailandia
       pt: Tailândia
+      it: Thailandia
+      ar: تايلاند
+      ru: Таиланд
+      pl: Tajlandia
+      nl: Thailand
+      sv: Thailand
+      no: Thailand
+      el: Ταϊλάνδη
+      fi: Thaimaa
+      da: Thailand
+      cs: Thajsko
+      th: ไทย
+      hr: Tajland
+      tl: Thailand
+      hu: Thaiföld
+      ro: Thailanda
+      sk: Thajsko
+      bg: Тайланд
+      sl: Tajska
+      sr: Tajland
+      tr: Tayland
+      id: Thailand
+      he: תאילנד
+      ms: Thailand
+      lt: Tailandas
+      lv: Taizeme
+      et: Tai
+      kk: Таиланд
+      uz: Tailand
+      uk: Таїланд
+      az: Tailand
+      fa: تایلند
     tel: +66
   - value: Timor-Leste
     label:
@@ -1386,6 +6890,38 @@ countries:
       de: Osttimor
       es: Timor Oriental
       pt: Timor-Leste
+      it: Timor Est
+      ar: تيمور - ليشتي
+      ru: Восточный Тимор
+      pl: Timor Wschodni
+      nl: Oost-Timor
+      sv: Östtimor
+      no: Øst-Timor
+      el: Τιμόρ-Λέστε
+      fi: Itä-Timor
+      da: Timor-Leste
+      cs: Východní Timor
+      th: ติมอร์-เลสเต
+      hr: Timor-Leste
+      tl: Timor-Leste
+      hu: Kelet-Timor
+      ro: Timor-Leste
+      sk: Východný Timor
+      bg: Тимор Лесте
+      sl: Timor-Leste
+      sr: Timor-Leste (Istočni Timor)
+      tr: Timor-Leste
+      id: Timor Leste
+      he: טימור-לסטה
+      ms: Timor-Leste
+      lt: Rytų Timoras
+      lv: Austrumtimora
+      et: Ida-Timor
+      kk: Тимор-Лесте
+      uz: Timor-Leste
+      uk: Тимор-Лешті
+      az: Şərqi Timor
+      fa: تیمور-لسته
     tel: +670
   - value: Togo
     label:
@@ -1394,6 +6930,38 @@ countries:
       de: Togo
       es: Togo
       pt: Togo
+      it: Togo
+      ar: توغو
+      ru: Того
+      pl: Togo
+      nl: Togo
+      sv: Togo
+      no: Togo
+      el: Τόγκο
+      fi: Togo
+      da: Togo
+      cs: Togo
+      th: โตโก
+      hr: Togo
+      tl: Togo
+      hu: Togo
+      ro: Togo
+      sk: Togo
+      bg: Того
+      sl: Togo
+      sr: Togo
+      tr: Togo
+      id: Togo
+      he: טוגו
+      ms: Togo
+      lt: Togas
+      lv: Togo
+      et: Togo
+      kk: Того
+      uz: Togo
+      uk: Того
+      az: Toqo
+      fa: توگو
     tel: +228
   - value: Tonga
     label:
@@ -1402,6 +6970,38 @@ countries:
       de: Tonga
       es: Tonga
       pt: Tonga
+      it: Tonga
+      ar: تونغا
+      ru: Тонга
+      pl: Tonga
+      nl: Tonga
+      sv: Tonga
+      no: Tonga
+      el: Τόνγκα
+      fi: Tonga
+      da: Tonga
+      cs: Tonga
+      th: ตองกา
+      hr: Tonga
+      tl: Tonga
+      hu: Tonga
+      ro: Tonga
+      sk: Tonga
+      bg: Тонга
+      sl: Tonga
+      sr: Tonga
+      tr: Tonga
+      id: Tonga
+      he: טונגה
+      ms: Tonga
+      lt: Tonga
+      lv: Tonga
+      et: Tonga
+      kk: Тонга
+      uz: Tonga
+      uk: Тонга
+      az: Tonqa
+      fa: تونگا
     tel: +676
   - value: Trinidad and Tobago
     label:
@@ -1410,6 +7010,38 @@ countries:
       de: Trinidad und Tobago
       es: Trinidad y Tobago
       pt: Trinidad e Tobago
+      it: Trinidad e Tobago
+      ar: ترينيداد وتوباغو
+      ru: Тринидад и Тобаго
+      pl: Trynidad i Tobago
+      nl: Trinidad en Tobago
+      sv: Trinidad och Tobago
+      no: Trinidad og Tobago
+      el: Τρινιντάντ και Τομπάγκο
+      fi: Trinidad ja Tobago
+      da: Trinidad og Tobago
+      cs: Trinidad a Tobago
+      th: ตรินิแดดและโตเบโก
+      hr: Trinidad i Tobago
+      tl: Trinidad & Tobago
+      hu: Trinidad és Tobago
+      ro: Trinidad și Tobago
+      sk: Trinidad a Tobago
+      bg: Тринидад и Тобаго
+      sl: Trinidad in Tobago
+      sr: Trinidad i Tobago
+      tr: Trinidad ve Tobago
+      id: Trinidad dan Tobago
+      he: טרינידד וטובגו
+      ms: Trinidad dan Tobago
+      lt: Trinidadas ir Tobagas
+      lv: Trinidāda un Tobāgo
+      et: Trinidad ja Tobago
+      kk: Тринидад және Тобаго
+      uz: Trinidad va Tobago
+      uk: Тринідад і Тобаго
+      az: Trinidad və Tobaqo
+      fa: ترینیداد و توباگو
     tel: +1-868
   - value: Tunisia
     label:
@@ -1418,6 +7050,38 @@ countries:
       de: Tunesien
       es: Túnez
       pt: Tunísia
+      it: Tunisia
+      ar: تونس
+      ru: Тунис
+      pl: Tunezja
+      nl: Tunesië
+      sv: Tunisien
+      no: Tunisia
+      el: Τυνησία
+      fi: Tunisia
+      da: Tunesien
+      cs: Tunisko
+      th: ตูนิเซีย
+      hr: Tunis
+      tl: Tunisia
+      hu: Tunézia
+      ro: Tunisia
+      sk: Tunisko
+      bg: Тунис
+      sl: Tunizija
+      sr: Tunis
+      tr: Tunus
+      id: Tunisia
+      he: תוניסיה
+      ms: Tunisia
+      lt: Tunisas
+      lv: Tunisija
+      et: Tuneesia
+      kk: Тунис
+      uz: Tunis
+      uk: Туніс
+      az: Tunis
+      fa: تونس
     tel: +216
   - value: Turkey
     label:
@@ -1426,6 +7090,38 @@ countries:
       de: Türkei
       es: Turquía
       pt: Turquia
+      it: Turchia
+      ar: تركيا
+      ru: Турция
+      pl: Turcja
+      nl: Turkije
+      sv: Turkiet
+      no: Tyrkia
+      el: Τουρκία
+      fi: Turkki
+      da: Tyrkiet
+      cs: Turecko
+      th: ตุรกี
+      hr: Turska
+      tl: Türkiye
+      hu: Törökország
+      ro: Turcia
+      sk: Turecko
+      bg: Турция
+      sl: Turčija
+      sr: Turska
+      tr: Türkiye
+      id: Turki
+      he: טורקיה
+      ms: Turkiye
+      lt: Turkija
+      lv: Turcija
+      et: Türgi
+      kk: Түркия
+      uz: Turkiya
+      uk: Туреччина
+      az: Türkiyə
+      fa: ترکیه
     tel: +90
   - value: Turkmenistan
     label:
@@ -1434,6 +7130,38 @@ countries:
       de: Turkmenistan
       es: Turkmenistán
       pt: Turcomenistão
+      it: Turkmenistan
+      ar: تركمانستان
+      ru: Туркменистан
+      pl: Turkmenistan
+      nl: Turkmenistan
+      sv: Turkmenistan
+      no: Turkmenistan
+      el: Τουρκμενιστάν
+      fi: Turkmenistan
+      da: Turkmenistan
+      cs: Turkmenistán
+      th: เติร์กเมนิสถาน
+      hr: Turkmenistan
+      tl: Turkmenistan
+      hu: Türkmenisztán
+      ro: Turkmenistan
+      sk: Turkménsko
+      bg: Туркменистан
+      sl: Turkmenistan
+      sr: Turkmenistan
+      tr: Türkmenistan
+      id: Turkmenistan
+      he: טורקמניסטן
+      ms: Turkmenistan
+      lt: Turkmėnistanas
+      lv: Turkmenistāna
+      et: Türkmenistan
+      kk: Түрікменстан
+      uz: Turkmaniston
+      uk: Туркменістан
+      az: Türkmənistan
+      fa: ترکمنستان
     tel: +993
   - value: Tuvalu
     label:
@@ -1442,6 +7170,38 @@ countries:
       de: Tuvalu
       es: Tuvalu
       pt: Tuvalu
+      it: Tuvalu
+      ar: توفالو
+      ru: Тувалу
+      pl: Tuvalu
+      nl: Tuvalu
+      sv: Tuvalu
+      no: Tuvalu
+      el: Τουβαλού
+      fi: Tuvalu
+      da: Tuvalu
+      cs: Tuvalu
+      th: ตูวาลู
+      hr: Tuvalu
+      tl: Tuvalu
+      hu: Tuvalu
+      ro: Tuvalu
+      sk: Tuvalu
+      bg: Тувалу
+      sl: Tuvalu
+      sr: Tuvalu
+      tr: Tuvalu
+      id: Tuvalu
+      he: טובאלו
+      ms: Tuvalu
+      lt: Tuvalu
+      lv: Tuvalu
+      et: Tuvalu
+      kk: Тувалу
+      uz: Tuvalu
+      uk: Тувалу
+      az: Tuvalu
+      fa: تووالو
     tel: +688
   - value: Uganda
     label:
@@ -1450,6 +7210,38 @@ countries:
       de: Uganda
       es: Uganda
       pt: Uganda
+      it: Uganda
+      ar: أوغندا
+      ru: Уганда
+      pl: Uganda
+      nl: Oeganda
+      sv: Uganda
+      no: Uganda
+      el: Ουγκάντα
+      fi: Uganda
+      da: Uganda
+      cs: Uganda
+      th: ยูกันดา
+      hr: Uganda
+      tl: Uganda
+      hu: Uganda
+      ro: Uganda
+      sk: Uganda
+      bg: Уганда
+      sl: Uganda
+      sr: Uganda
+      tr: Uganda
+      id: Uganda
+      he: אוגנדה
+      ms: Uganda
+      lt: Uganda
+      lv: Uganda
+      et: Uganda
+      kk: Уганда
+      uz: Uganda
+      uk: Уганда
+      az: Uqanda
+      fa: اوگاندا
     tel: +256
   - value: Ukraine
     label:
@@ -1458,6 +7250,38 @@ countries:
       de: Ukraine
       es: Ucrania
       pt: Ucrânia
+      it: Ucraina
+      ar: أوكرانيا
+      ru: Украина
+      pl: Ukraina
+      nl: Oekraïne
+      sv: Ukraina
+      no: Ukraina
+      el: Ουκρανία
+      fi: Ukraina
+      da: Ukraine
+      cs: Ukrajina
+      th: ยูเครน
+      hr: Ukrajina
+      tl: Ukraine
+      hu: Ukrajna
+      ro: Ucraina
+      sk: Ukrajina
+      bg: Украйна
+      sl: Ukrajina
+      sr: Ukrajina
+      tr: Ukrayna
+      id: Ukraina
+      he: אוקראינה
+      ms: Ukraine
+      lt: Ukraina
+      lv: Ukraina
+      et: Ukraina
+      kk: Украина
+      uz: Ukraina
+      uk: Україна
+      az: Ukrayna
+      fa: اوکراین
     tel: +380
   - value: United Arab Emirates
     label:
@@ -1466,6 +7290,38 @@ countries:
       de: Vereinigte Arabische Emirate
       es: Emiratos Árabes Unidos
       pt: Emirados Árabes Unidos
+      it: Emirati Arabi Uniti
+      ar: الإمارات العربية المتحدة
+      ru: ОАЭ
+      pl: Zjednoczone Emiraty Arabskie
+      nl: Verenigde Arabische Emiraten
+      sv: Förenade Arabemiraten
+      no: De forente arabiske emirater
+      el: Ηνωμένα Αραβικά Εμιράτα
+      fi: Arabiemiirikunnat
+      da: De Forenede Arabiske Emirater
+      cs: Spojené arabské emiráty
+      th: สหรัฐอาหรับเอมิเรตส์
+      hr: Ujedinjeni Arapski Emirati
+      tl: United Arab Emirates
+      hu: Egyesült Arab Emírségek
+      ro: Emiratele Arabe Unite
+      sk: Spojené arabské emiráty
+      bg: Обединени арабски емирства
+      sl: Združeni arabski emirati
+      sr: Ujedinjeni Arapski Emirati
+      tr: Birleşik Arap Emirlikleri
+      id: Uni Emirat Arab
+      he: איחוד האמירויות הערביות
+      ms: Emiriah Arab Bersatu
+      lt: Jungtiniai Arabų Emyratai
+      lv: Apvienotie Arābu Emirāti
+      et: Araabia Ühendemiraadid
+      kk: Біріккен Араб Әмірліктері
+      uz: Birlashgan Arab Amirliklari
+      uk: Обʼєднані Арабські Емірати
+      az: Birləşmiş Ərəb Əmirlikləri
+      fa: امارات متحدهٔ عربی
     tel: +971
   - value: United Kingdom
     label:
@@ -1474,6 +7330,38 @@ countries:
       de: Vereinigtes Königreich
       es: Reino Unido
       pt: Reino Unido
+      it: Regno Unito
+      ar: المملكة المتحدة
+      ru: Великобритания
+      pl: Wielka Brytania
+      nl: Verenigd Koninkrijk
+      sv: Storbritannien
+      no: Storbritannia
+      el: Ηνωμένο Βασίλειο
+      fi: Iso-Britannia
+      da: Storbritannien
+      cs: Spojené království
+      th: สหราชอาณาจักร
+      hr: Ujedinjeno Kraljevstvo
+      tl: United Kingdom
+      hu: Egyesült Királyság
+      ro: Regatul Unit
+      sk: Spojené kráľovstvo
+      bg: Обединеното кралство
+      sl: Združeno kraljestvo
+      sr: Ujedinjeno Kraljevstvo
+      tr: Birleşik Krallık
+      id: Inggris Raya
+      he: בריטניה
+      ms: United Kingdom
+      lt: Jungtinė Karalystė
+      lv: Apvienotā Karaliste
+      et: Ühendkuningriik
+      kk: Ұлыбритания
+      uz: Buyuk Britaniya
+      uk: Велика Британія
+      az: Birləşmiş Krallıq
+      fa: بریتانیا
     tel: +44
   - value: United States
     label:
@@ -1482,6 +7370,38 @@ countries:
       de: Vereinigte Staaten
       es: Estados Unidos
       pt: Estados Unidos
+      it: Stati Uniti
+      ar: الولايات المتحدة
+      ru: Соединенные Штаты
+      pl: Stany Zjednoczone
+      nl: Verenigde Staten
+      sv: USA
+      no: USA
+      el: Ηνωμένες Πολιτείες
+      fi: Yhdysvallat
+      da: USA
+      cs: Spojené státy
+      th: สหรัฐอเมริกา
+      hr: Sjedinjene Američke Države
+      tl: Estados Unidos
+      hu: Egyesült Államok
+      ro: Statele Unite ale Americii
+      sk: Spojené štáty
+      bg: Съединени щати
+      sl: Združene države Amerike
+      sr: Sjedinjene Države
+      tr: Amerika Birleşik Devletleri
+      id: Amerika Serikat
+      he: ארצות הברית
+      ms: Amerika Syarikat
+      lt: Jungtinės Valstijos
+      lv: Amerikas Savienotās Valstis
+      et: Ameerika Ühendriigid
+      kk: Америка Құрама Штаттары
+      uz: Amerika Qo‘shma Shtatlari
+      uk: Сполучені Штати
+      az: Amerika Birləşmiş Ştatları
+      fa: ایالات متحده
     tel: +1
   - value: Uruguay
     label:
@@ -1490,6 +7410,38 @@ countries:
       de: Uruguay
       es: Uruguay
       pt: Uruguai
+      it: Uruguay
+      ar: أورغواي
+      ru: Уругвай
+      pl: Urugwaj
+      nl: Uruguay
+      sv: Uruguay
+      no: Uruguay
+      el: Ουρουγουάη
+      fi: Uruguay
+      da: Uruguay
+      cs: Uruguay
+      th: อุรุกวัย
+      hr: Urugvaj
+      tl: Uruguay
+      hu: Uruguay
+      ro: Uruguay
+      sk: Uruguaj
+      bg: Уругвай
+      sl: Urugvaj
+      sr: Urugvaj
+      tr: Uruguay
+      id: Uruguay
+      he: אורוגוואי
+      ms: Uruguay
+      lt: Urugvajus
+      lv: Urugvaja
+      et: Uruguay
+      kk: Уругвай
+      uz: Urugvay
+      uk: Уругвай
+      az: Uruqvay
+      fa: اروگوئه
     tel: +598
   - value: Uzbekistan
     label:
@@ -1498,6 +7450,38 @@ countries:
       de: Usbekistan
       es: Uzbekistán
       pt: Uzbequistão
+      it: Uzbekistan
+      ar: أوزبكستان
+      ru: Узбекистан
+      pl: Uzbekistan
+      nl: Oezbekistan
+      sv: Uzbekistan
+      no: Usbekistan
+      el: Ουζμπεκιστάν
+      fi: Uzbekistan
+      da: Usbekistan
+      cs: Uzbekistán
+      th: อุซเบกิสถาน
+      hr: Uzbekistan
+      tl: Uzbekistan
+      hu: Üzbegisztán
+      ro: Uzbekistan
+      sk: Uzbekistan
+      bg: Узбекистан
+      sl: Uzbekistan
+      sr: Uzbekistan
+      tr: Özbekistan
+      id: Uzbekistan
+      he: אוזבקיסטן
+      ms: Uzbekistan
+      lt: Uzbekistanas
+      lv: Uzbekistāna
+      et: Usbekistan
+      kk: Өзбекстан
+      uz: Oʻzbekiston
+      uk: Узбекистан
+      az: Özbəkistan
+      fa: ازبکستان
     tel: +998
   - value: Vanuatu
     label:
@@ -1506,6 +7490,38 @@ countries:
       de: Vanuatu
       es: Vanuatu
       pt: Vanuatu
+      it: Vanuatu
+      ar: فانواتو
+      ru: Вануату
+      pl: Vanuatu
+      nl: Vanuatu
+      sv: Vanuatu
+      no: Vanuatu
+      el: Βανουάτου
+      fi: Vanuatu
+      da: Vanuatu
+      cs: Vanuatu
+      th: วานูอาตู
+      hr: Vanuatu
+      tl: Vanuatu
+      hu: Vanuatu
+      ro: Vanuatu
+      sk: Vanuatu
+      bg: Вануату
+      sl: Vanuatu
+      sr: Vanuatu
+      tr: Vanuatu
+      id: Vanuatu
+      he: ונואטו
+      ms: Vanuatu
+      lt: Vanuatu
+      lv: Vanuatu
+      et: Vanuatu
+      kk: Вануату
+      uz: Vanuatu
+      uk: Вануату
+      az: Vanuatu
+      fa: وانواتو
     tel: +678
   - value: Venezuela
     label:
@@ -1514,6 +7530,38 @@ countries:
       de: Venezuela
       es: Venezuela
       pt: Venezuela
+      it: Venezuela
+      ar: فنزويلا
+      ru: Венесуэла
+      pl: Wenezuela
+      nl: Venezuela
+      sv: Venezuela
+      no: Venezuela
+      el: Βενεζουέλα
+      fi: Venezuela
+      da: Venezuela
+      cs: Venezuela
+      th: เวเนซุเอลา
+      hr: Venezuela
+      tl: Venezuela
+      hu: Venezuela
+      ro: Venezuela
+      sk: Venezuela
+      bg: Венецуела
+      sl: Venezuela
+      sr: Venecuela
+      tr: Venezuela
+      id: Venezuela
+      he: ונצואלה
+      ms: Venezuela
+      lt: Venesuela
+      lv: Venecuēla
+      et: Venezuela
+      kk: Венесуэла
+      uz: Venesuela
+      uk: Венесуела
+      az: Venesuela
+      fa: ونزوئلا
     tel: +58
   - value: Vietnam
     label:
@@ -1522,6 +7570,38 @@ countries:
       de: Vietnam
       es: Vietnam
       pt: Vietnã
+      it: Vietnam
+      ar: فيتنام
+      ru: Вьетнам
+      pl: Wietnam
+      nl: Vietnam
+      sv: Vietnam
+      no: Vietnam
+      el: Βιετνάμ
+      fi: Vietnam
+      da: Vietnam
+      cs: Vietnam
+      th: เวียดนาม
+      hr: Vijetnam
+      tl: Vietnam
+      hu: Vietnám
+      ro: Vietnam
+      sk: Vietnam
+      bg: Виетнам
+      sl: Vietnam
+      sr: Vijetnam
+      tr: Vietnam
+      id: Vietnam
+      he: וייטנאם
+      ms: Vietnam
+      lt: Vietnamas
+      lv: Vjetnama
+      et: Vietnam
+      kk: Вьетнам
+      uz: Vyetnam
+      uk: Вʼєтнам
+      az: Vyetnam
+      fa: ویتنام
     tel: +84
   - value: Yemen
     label:
@@ -1530,6 +7610,38 @@ countries:
       de: Jemen
       es: Yemen
       pt: Iêmen
+      it: Yemen
+      ar: اليمن
+      ru: Йемен
+      pl: Jemen
+      nl: Jemen
+      sv: Jemen
+      no: Jemen
+      el: Υεμένη
+      fi: Jemen
+      da: Yemen
+      cs: Jemen
+      th: เยเมน
+      hr: Jemen
+      tl: Yemen
+      hu: Jemen
+      ro: Yemen
+      sk: Jemen
+      bg: Йемен
+      sl: Jemen
+      sr: Jemen
+      tr: Yemen
+      id: Yaman
+      he: תימן
+      ms: Yaman
+      lt: Jemenas
+      lv: Jemena
+      et: Jeemen
+      kk: Йемен
+      uz: Yaman
+      uk: Ємен
+      az: Yəmən
+      fa: یمن
     tel: +967
   - value: Zambia
     label:
@@ -1538,6 +7650,38 @@ countries:
       de: Sambia
       es: Zambia
       pt: Zâmbia
+      it: Zambia
+      ar: زامبيا
+      ru: Замбия
+      pl: Zambia
+      nl: Zambia
+      sv: Zambia
+      no: Zambia
+      el: Ζάμπια
+      fi: Sambia
+      da: Zambia
+      cs: Zambie
+      th: แซมเบีย
+      hr: Zambija
+      tl: Zambia
+      hu: Zambia
+      ro: Zambia
+      sk: Zambia
+      bg: Замбия
+      sl: Zambija
+      sr: Zambija
+      tr: Zambiya
+      id: Zambia
+      he: זמביה
+      ms: Zambia
+      lt: Zambija
+      lv: Zambija
+      et: Sambia
+      kk: Замбия
+      uz: Zambiya
+      uk: Замбія
+      az: Zambiya
+      fa: زامبیا
     tel: +260
   - value: Zimbabwe
     label:
@@ -1546,6 +7690,38 @@ countries:
       de: Simbabwe
       es: Zimbabue
       pt: Zimbábue
+      it: Zimbabwe
+      ar: زيمبابوي
+      ru: Зимбабве
+      pl: Zimbabwe
+      nl: Zimbabwe
+      sv: Zimbabwe
+      no: Zimbabwe
+      el: Ζιμπάμπουε
+      fi: Zimbabwe
+      da: Zimbabwe
+      cs: Zimbabwe
+      th: ซิมบับเว
+      hr: Zimbabve
+      tl: Zimbabwe
+      hu: Zimbabwe
+      ro: Zimbabwe
+      sk: Zimbabwe
+      bg: Зимбабве
+      sl: Zimbabve
+      sr: Zimbabve
+      tr: Zimbabve
+      id: Zimbabwe
+      he: זימבבואה
+      ms: Zimbabwe
+      lt: Zimbabvė
+      lv: Zimbabve
+      et: Zimbabwe
+      kk: Зимбабве
+      uz: Zimbabve
+      uk: Зімбабве
+      az: Zimbabve
+      fa: زیمبابوه
     tel: +263
   - value: Holy See
     label:
@@ -1554,6 +7730,38 @@ countries:
       de: Heiliger Stuhl
       es: Santa Sede
       pt: Santa Sé
+      it: Città del Vaticano
+      ar: الفاتيكان
+      ru: Ватикан
+      pl: Watykan
+      nl: Vaticaanstad
+      sv: Vatikanstaten
+      no: Vatikanstaten
+      el: Βατικανό
+      fi: Vatikaani
+      da: Vatikanstaten
+      cs: Vatikán
+      th: นครวาติกัน
+      hr: Vatikan
+      tl: Vatican City
+      hu: Vatikán
+      ro: Statul Cetății Vaticanului
+      sk: Vatikán
+      bg: Ватикан
+      sl: Vatikan
+      sr: Vatikan
+      tr: Vatikan
+      id: Vatikan
+      he: הוותיקן
+      ms: Kota Vatican
+      lt: Vatikano Miesto Valstybė
+      lv: Vatikāns
+      et: Vatikan
+      kk: Ватикан
+      uz: Vatikan
+      uk: Ватикан
+      az: Vatikan
+      fa: واتیکان
     tel: +379
   - value: State of Palestine
     label:
@@ -1562,4 +7770,36 @@ countries:
       de: Palästina
       es: Palestina
       pt: Palestina
+      it: Territori Palestinesi
+      ar: الأراضي الفلسطينية
+      ru: Палестинские территории
+      pl: Terytoria Palestyńskie
+      nl: Palestijnse gebieden
+      sv: Palestinska territorierna
+      no: Det palestinske området
+      el: Παλαιστινιακά Εδάφη
+      fi: Palestiinalaisalue
+      da: De palæstinensiske områder
+      cs: Palestinská území
+      th: ดินแดนปาเลสไตน์
+      hr: Palestinsko područje
+      tl: Palestinian Territories
+      hu: Palesztin Autonómia
+      ro: Teritoriile Palestiniene
+      sk: Palestínske územia
+      bg: Палестински територии
+      sl: Palestinsko ozemlje
+      sr: Palestinske teritorije
+      tr: Filistin Bölgeleri
+      id: Wilayah Palestina
+      he: השטחים הפלסטיניים
+      ms: Wilayah Palestin
+      lt: Palestinos teritorija
+      lv: Palestīnas teritorijas
+      et: Palestiina alad
+      kk: Палестина аймақтары
+      uz: Falastin hududlari
+      uk: Палестинські території
+      az: Fələstin Əraziləri
+      fa: سرزمین‌های فلسطینی
     tel: +970
