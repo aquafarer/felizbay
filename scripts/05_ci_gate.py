@@ -34,10 +34,15 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from langdetect_lite import is_mismatch  # noqa: E402
 
-LOCALES = {"en", "fr", "de", "es", "pt", "it", "ar", "ru", "pl", "cs", "nl", "sv", "no", "el", "fi", "da"}
+# 全部 37 个站点语言（16 已毕业 + 第五批 21 语言 2026-11-09 毕业，TECH.md §16.4-5）
+LOCALES = {
+    "en", "fr", "de", "es", "pt", "it", "ar", "ru", "pl", "cs", "nl", "sv", "no", "el", "fi", "da",
+    "hu", "ro", "sk", "bg", "sl", "sr", "tr", "id", "ms", "th", "tl",
+    "he", "uk", "kk", "uz", "az", "fa", "hr", "et", "lt", "lv",
+}
 
 # 跨语言 canonical 折叠是本站设计（本地页 → EN 根），G 检查时两边都去语言前缀比较
-STRIP_LOCALE = {"fr", "de", "es", "pt", "it", "ar", "ru", "pl", "cs", "nl", "sv", "no", "el", "fi", "da", "zh"}
+STRIP_LOCALE = (LOCALES - {"en"}) | {"zh"}
 
 
 def strip_locale(p):

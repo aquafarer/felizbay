@@ -1,13 +1,20 @@
 """Minimal dependency-free language detection for the SEO build gate.
 
 Detects the dominant language of a text sample using Unicode character
-blocks plus stop-word statistics. Supports the 17 site locales
-(en, de, pt, fr, es, it, ru, pl, cs, ar, nl, sv, no, el, fi, da, ja)
-plus a zh fallback for CJK text without kana.
-
+blocks plus stop-word statistics. Stop-word tables cover the 16 site
+locales (en, de, pt, fr, es, it, ru, pl, cs, ar, nl, sv, no, el, fi, da);
 ja is detected via kana (hiragana/katakana occur only in Japanese, so
-they win over the zh CJK fallback even in short strings); it has no
-Latin stop-words because Japanese prose is kana-dominant.
+they win over the zh CJK fallback even in short strings), zh via a CJK
+fallback for CJK text without kana; he/th are detected at script level.
+
+For the 21 fifth-batch locales (TECH.md §16.4-5) there are no stop-word
+tables, so detection cannot tell them apart from close relatives
+(bg/sr/uk/kk share the Cyrillic block -> "ru", fa shares the Arabic
+block -> "ar", Latin newcomers get misclassified as pt/fi/cs etc.).
+For those, is_mismatch only flags cross-script mismatches (a Latin page
+rendering Cyrillic/Arabic/Greek/Hebrew/Thai text); same-script-family
+detections are forgiven, while det == "en" (EN residue) still reports a
+mismatch so the gate keeps its A-X translation-gap signal.
 
 API: is_mismatch(expected, text, min_conf=0.0) -> (bool, str|None, float)
 """
@@ -15,13 +22,17 @@ API: is_mismatch(expected, text, min_conf=0.0) -> (bool, str|None, float)
 import re
 
 _ARABIC = "ar"
+_HEBREW = "he"
 _GREEK = "el"
+_THAI = "th"
 _CYRILLIC = "ru"
 _JAPANESE = "ja"
 _CJK = "zh"
 
 NON_LATIN_BLOCKS = [
     (_ARABIC, re.compile("[\u0600-\u06FF]")),
+    (_HEBREW, re.compile("[\u0590-\u05FF]")),
+    (_THAI, re.compile("[\u0E00-\u0E7F]")),
     (_GREEK, re.compile("[\u0370-\u03FF]")),
     (_CYRILLIC, re.compile("[\u0400-\u04FF]")),
     (_CJK, re.compile("[\u4E00-\u9FFF\u3400-\u4DBF]")),
@@ -156,6 +167,34 @@ def has_kana(text):
     return bool(_KANA.search(text or ""))
 
 
+# 检测器可细分的语言：停止词表 16 语言 + ja（假名）/zh（汉字兜底）脚本级判定
+_SUPPORTED = set(STOPWORDS) | {_JAPANESE, _CJK}
+
+# 脚本族映射：第五批毕业的 21 个新语言（TECH.md §16.4-5）没有停止词表，检测器
+# 无法在族内细分（bg/sr/uk/kk 共享西里尔块→ru，fa 共享阿拉伯块→ar，拉丁新语
+# 言会被 pt/fi/cs 等停止词误判）。对这些语言 is_mismatch 只做跨族判定：拉丁页
+# 显示西里尔/阿拉伯/希腊/希伯来/泰文才是结构事故；det="en"（正文仍是英文）
+# 不经族豁免，保留 A-X 翻译缺口信号
+SCRIPT_FAMILY = {
+    "ru": "cyrillic", "bg": "cyrillic", "uk": "cyrillic", "kk": "cyrillic",
+    "ar": "arabic", "fa": "arabic",
+    "el": "greek",
+    "he": "hebrew",
+    "th": "thai",
+    "ja": "cjk", "zh": "cjk",
+}
+
+# 塞尔维亚语双文字（digraphia）：本站内容西里尔/拉丁混用（terms 西里尔、
+# contact/faq 拉丁），任一脚本族命中即视为同族
+_DUAL_FAMILY = {"sr": {"cyrillic", "latin"}}
+
+
+def _families(lang):
+    if lang in _DUAL_FAMILY:
+        return _DUAL_FAMILY[lang]
+    return {SCRIPT_FAMILY.get(lang, "latin")}
+
+
 def is_mismatch(expected, text, min_conf=0.0):
     """Return (mismatch, detected_lang, confidence).
 
@@ -167,6 +206,13 @@ def is_mismatch(expected, text, min_conf=0.0):
     if not det:
         return False, None, 0.0
     mism = det != expected
+    if (
+        mism
+        and det != "en"
+        and expected not in _SUPPORTED
+        and _families(det) & _families(expected)
+    ):
+        mism = False
     if conf < min_conf:
         mism = False
     return mism, det, conf
