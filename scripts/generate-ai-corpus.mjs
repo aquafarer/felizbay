@@ -13,7 +13,45 @@ const PAGES_MAX_BYTES = 25 * 1024 * 1024;
 
 const MODEL = '@cf/baai/bge-m3';
 const DIMENSIONS = 1024;
-const LANGS = ['en', 'fr', 'de', 'es', 'pt', 'it', 'ar', 'ru', 'pl', 'nl', 'sv', 'no', 'el', 'fi', 'da', 'cs'];
+const LANGS = [
+  'en',
+  'fr',
+  'de',
+  'es',
+  'pt',
+  'it',
+  'ar',
+  'ru',
+  'pl',
+  'nl',
+  'sv',
+  'no',
+  'el',
+  'fi',
+  'da',
+  'cs',
+  'az',
+  'bg',
+  'et',
+  'fa',
+  'he',
+  'hr',
+  'hu',
+  'id',
+  'kk',
+  'lt',
+  'lv',
+  'ms',
+  'ro',
+  'sk',
+  'sl',
+  'sr',
+  'th',
+  'tl',
+  'tr',
+  'uk',
+  'uz',
+];
 const SKIP_PREFIXES = ['en/', 'llms/', 'internal/', 'keystatic/', 'admin/', 'login/'];
 const THIN_TEXT = 400;
 const CHUNK_TARGET = 1600;

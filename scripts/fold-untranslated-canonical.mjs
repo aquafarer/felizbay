@@ -103,6 +103,39 @@ const STOPWORDS = {
   fi: ['ja', 'on', 'ei', 'se', 'että', 'niin', 'kuin', 'ovat', 'toi', 'hän', 'minä', 'sinä', 'tämä', 'mitä'],
   // pl 毕业清单 §16.4-4：波兰语停用词（token 正则 [a-zà-ÿ] 不含 ą/ć/ę/ł/ń/ś/ź/ż，选词避开这些字母）
   pl: ['na', 'do', 'jest', 'oraz', 'dla', 'jak', 'ale', 'czy', 'przez', 'bez', 'ten', 'tego', 'tym', 'tak', 'nie'],
+  // 第五批毕业 §16.4-5（2026-11-09，21 语言）：拉丁字母新语言停用词。
+  // token 正则 [a-zà-ÿ] 只覆盖 a-z 与 Latin-1 变音（á/é/í/ó/ö/ü/ú/ý/õ/ç/â/î/û/è/ê/å/ä/ø…），
+  // 不含 Latin Extended（ı/ğ/ş/ő/ű/ā/ē/ī/ū/ą/č/ė/į/ų/ə/ł/ń/ś/ź/ž/đ…），选词一律避开。
+  // 语义：命中数用于 en 判定与 locHits 对照；歧义/零命中 → 不折叠（安全方向）。
+  hr: ['je', 'na', 'za', 'se', 'da', 'od', 'do', 'su', 'koji', 'kao', 'ili', 'bez', 'uz', 'nisu', 'bio'],
+  sl: ['je', 'na', 'za', 'se', 'da', 'ali', 'tudi', 'kot', 'iz', 'pri', 'od', 'do', 'bil', 'niso'],
+  sk: ['na', 'je', 'sa', 'pre', 'ale', 'ako', 'pri', 'od', 'do', 'alebo', 'jeho', 'jej', 'len', 'pod', 'nad', 'sú'],
+  hu: ['és', 'az', 'egy', 'hogy', 'nem', 'van', 'volt', 'még', 'csak', 'vagy', 'mint', 'akkor', 'erre'],
+  ro: ['de', 'la', 'în', 'cu', 'un', 'pe', 'pentru', 'din', 'care', 'este', 'sau', 'dar', 'prin', 'sunt'],
+  tr: ['ve', 'bir', 'bu', 'ile', 'daha', 'olarak', 'gibi', 'ama', 'veya', 'her', 'sonra', 'çok', 'öyle'],
+  id: [
+    'dan',
+    'yang',
+    'untuk',
+    'dengan',
+    'adalah',
+    'ini',
+    'itu',
+    'atau',
+    'tidak',
+    'dari',
+    'pada',
+    'akan',
+    'kami',
+    'ada',
+  ],
+  ms: ['dan', 'yang', 'untuk', 'dengan', 'ini', 'itu', 'atau', 'tidak', 'dari', 'pada', 'akan', 'kami', 'ada', 'ialah'],
+  tl: ['ang', 'ng', 'sa', 'mga', 'para', 'hindi', 'ito', 'kung', 'naman', 'din', 'lang'],
+  lt: ['ir', 'kad', 'yra', 'bei', 'arba', 'tik', 'kaip', 'nuo', 'iki', 'dar', 'jau', 'nes'],
+  lv: ['un', 'ir', 'ka', 'ar', 'no', 'uz', 'par', 'bet', 'vai', 'tad', 'tik', 'jau', 'kas', 'kur'],
+  et: ['ja', 'on', 'ei', 'et', 'se', 'kui', 'see', 'ning', 'aga', 'või', 'ka', 'kas', 'mis', 'siis'],
+  az: ['bir', 'bu', 'üçün', 'daha', 'sonra', 'olan', 'kimi', 'amma', 'eyni', 'onlar'],
+  uz: ['va', 'bir', 'bu', 'uchun', 'bilan', 'emas', 'ham', 'yoki', 'keyin', 'har'],
 };
 
 const LANGS = [
@@ -158,6 +191,9 @@ const NON_LATIN = [
     'cs',
     /[\u010C\u010D\u010E\u010F\u011A\u011B\u0147\u0148\u0158\u0159\u0160\u0161\u0164\u0165\u016E\u016F\u017D\u017E]/g,
   ],
+  // 第五批毕业 §16.4-5：泰文/希伯来文非拉丁通道（kk/sr/bg/uk→ru 西里尔范围、fa→ar 阿拉伯范围已覆盖）
+  ['th', /[\u0E00-\u0E7F]/g],
+  ['he', /[\u0590-\u05FF]/g],
 ];
 
 function stopwordHits(text) {

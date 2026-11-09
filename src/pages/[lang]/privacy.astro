@@ -27,6 +27,27 @@ import PrivacyFi from '~/components/legal/privacy.fi.astro';
 import PrivacyPl from '~/components/legal/privacy.pl.astro';
 import PrivacyAr from '~/components/legal/privacy.ar.astro';
 import PrivacyPt from '~/components/legal/privacy.pt.astro';
+import PrivacyAz from '~/components/legal/privacy.az.astro';
+import PrivacyBg from '~/components/legal/privacy.bg.astro';
+import PrivacyEt from '~/components/legal/privacy.et.astro';
+import PrivacyFa from '~/components/legal/privacy.fa.astro';
+import PrivacyHe from '~/components/legal/privacy.he.astro';
+import PrivacyHr from '~/components/legal/privacy.hr.astro';
+import PrivacyHu from '~/components/legal/privacy.hu.astro';
+import PrivacyId from '~/components/legal/privacy.id.astro';
+import PrivacyKk from '~/components/legal/privacy.kk.astro';
+import PrivacyLt from '~/components/legal/privacy.lt.astro';
+import PrivacyLv from '~/components/legal/privacy.lv.astro';
+import PrivacyMs from '~/components/legal/privacy.ms.astro';
+import PrivacyRo from '~/components/legal/privacy.ro.astro';
+import PrivacySk from '~/components/legal/privacy.sk.astro';
+import PrivacySl from '~/components/legal/privacy.sl.astro';
+import PrivacySr from '~/components/legal/privacy.sr.astro';
+import PrivacyTh from '~/components/legal/privacy.th.astro';
+import PrivacyTl from '~/components/legal/privacy.tl.astro';
+import PrivacyTr from '~/components/legal/privacy.tr.astro';
+import PrivacyUk from '~/components/legal/privacy.uk.astro';
+import PrivacyUz from '~/components/legal/privacy.uz.astro';
 const Body: any =
   (
     {
@@ -45,6 +66,27 @@ const Body: any =
       pl: PrivacyPl,
       ar: PrivacyAr,
       pt: PrivacyPt,
+      az: PrivacyAz,
+      bg: PrivacyBg,
+      et: PrivacyEt,
+      fa: PrivacyFa,
+      he: PrivacyHe,
+      hr: PrivacyHr,
+      hu: PrivacyHu,
+      id: PrivacyId,
+      kk: PrivacyKk,
+      lt: PrivacyLt,
+      lv: PrivacyLv,
+      ms: PrivacyMs,
+      ro: PrivacyRo,
+      sk: PrivacySk,
+      sl: PrivacySl,
+      sr: PrivacySr,
+      th: PrivacyTh,
+      tl: PrivacyTl,
+      tr: PrivacyTr,
+      uk: PrivacyUk,
+      uz: PrivacyUz,
     } as Record<string, any>
   )[lang] || null;
 
@@ -121,6 +163,104 @@ const META: Record<string, { title: string; description: string }> = {
   pt: {
     title: `Política de Privacidade — ${SITE.name}`,
     description: 'Felizbay política de privacidade. Saiba como coletamos, usamos e protegemos seus dados pessoais.',
+  },
+  az: {
+    title: 'Məxfilik Siyasəti — Felizbay',
+    description:
+      'Felizbay məxfilik siyasəti. Şəxsi məlumatlarınızı necə topladığımızı, istifadə etdiyimizi və qoruduğumuzu öyrənin.',
+  },
+  bg: {
+    title: 'Политика за поверителност — Felizbay',
+    description:
+      'Политика за поверителност на Felizbay. Научете как събираме, използваме и защитаваме вашите лични данни.',
+  },
+  et: {
+    title: 'Privaatsuspoliitika — Felizbay',
+    description: 'Felizbay privacy policy. Siit saate teada, kuidas me teie isikuandmeid kogume, kasutame ja kaitseme.',
+  },
+  fa: {
+    title: 'سیاست حفظ حریم خصوصی — Felizbay',
+    description: 'سیاست حفظ حریم خصوصی Felizbay. با نحوه جمع آوری، استفاده و محافظت از داده های شخصی شما آشنا شوید.',
+  },
+  he: {
+    title: 'מדיניות פרטיות — Felizbay',
+    description: 'מדיניות הפרטיות של Felizbay. למד כיצד אנו אוספים, משתמשים ומגנים על הנתונים האישיים שלך.',
+  },
+  hr: {
+    title: 'Politika privatnosti — Felizbay',
+    description:
+      'Felizbayova politika privatnosti. Saznajte kako prikupljamo, koristimo i štitimo vaše osobne podatke.',
+  },
+  hu: {
+    title: 'Adatvédelmi szabályzat — Felizbay',
+    description:
+      'Felizbay adatvédelmi szabályzata. Ismerje meg, hogyan gyűjtjük, használjuk és védjük személyes adatait.',
+  },
+  id: {
+    title: 'Kebijakan Privasi — Felizbay',
+    description:
+      'Kebijakan privasi Felizbay. Pelajari cara kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.',
+  },
+  kk: {
+    title: 'Құпиялық саясаты — Felizbay',
+    description:
+      'Felizbay құпиялылық саясаты. Жеке деректеріңізді қалай жинайтынымызды, пайдаланатынымызды және қорғайтынымызды біліңіз.',
+  },
+  lt: {
+    title: 'Privatumo politika — Felizbay',
+    description:
+      'Felizbay privatumo politika. Sužinokite, kaip renkame, naudojame ir saugome jūsų asmeninius duomenis.',
+  },
+  lv: {
+    title: 'Privātuma politika — Felizbay',
+    description:
+      'Felizbay privātuma politika. Uzziniet, kā mēs apkopojam, izmantojam un aizsargājam jūsu personas datus.',
+  },
+  ms: {
+    title: 'Dasar Privasi — Felizbay',
+    description: 'dasar privasi Felizbay. Ketahui cara kami mengumpul, menggunakan dan melindungi data peribadi anda.',
+  },
+  ro: {
+    title: 'Politica de confidențialitate — Felizbay',
+    description:
+      'Politica de confidențialitate Felizbay. Aflați cum colectăm, utilizăm și vă protejăm datele personale.',
+  },
+  sk: {
+    title: 'Zásady ochrany osobných údajov — Felizbay',
+    description:
+      'Zásady ochrany osobných údajov spoločnosti Felizbay. Zistite, ako zhromažďujeme, používame a chránime vaše osobné údaje.',
+  },
+  sl: {
+    title: 'Politika zasebnosti — Felizbay',
+    description: 'Politika zasebnosti Felizbay. Preberite, kako zbiramo, uporabljamo in varujemo vaše osebne podatke.',
+  },
+  sr: {
+    title: 'Политика приватности — Felizbay',
+    description: 'Felizbay политика приватности. Сазнајте како прикупљамо, користимо и штитимо ваше личне податке.',
+  },
+  th: {
+    title: 'นโยบายความเป็นส่วนตัว — Felizbay',
+    description: 'Felizbay นโยบายความเป็นส่วนตัว เรียนรู้ว่าเรารวบรวม ใช้ และปกป้องข้อมูลส่วนบุคคลของคุณอย่างไร',
+  },
+  tl: {
+    title: 'Patakaran sa Privacy — Felizbay',
+    description:
+      'Patakaran sa privacy ng Felizbay. Alamin kung paano namin kinokolekta, ginagamit, at pinoprotektahan ang iyong personal na data.',
+  },
+  tr: {
+    title: 'Gizlilik Politikası — Felizbay',
+    description:
+      'Felizbay gizlilik ilkesi. Kişisel verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.',
+  },
+  uk: {
+    title: 'Політика конфіденційності — Felizbay',
+    description:
+      'Політика конфіденційності Felizbay. Дізнайтеся, як ми збираємо, використовуємо та захищаємо ваші особисті дані.',
+  },
+  uz: {
+    title: 'Maxfiylik siyosati — Felizbay',
+    description:
+      'Felizbay maxfiylik siyosati. Shaxsiy maʼlumotlaringizni qanday toʻplashimiz, ishlatishimiz va himoya qilishimizni bilib oling.',
   },
 };
 const meta = META[lang] || META.en;

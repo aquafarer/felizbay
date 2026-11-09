@@ -27,6 +27,27 @@ import TermsFi from '~/components/legal/terms.fi.astro';
 import TermsPl from '~/components/legal/terms.pl.astro';
 import TermsAr from '~/components/legal/terms.ar.astro';
 import TermsPt from '~/components/legal/terms.pt.astro';
+import TermsAz from '~/components/legal/terms.az.astro';
+import TermsBg from '~/components/legal/terms.bg.astro';
+import TermsEt from '~/components/legal/terms.et.astro';
+import TermsFa from '~/components/legal/terms.fa.astro';
+import TermsHe from '~/components/legal/terms.he.astro';
+import TermsHr from '~/components/legal/terms.hr.astro';
+import TermsHu from '~/components/legal/terms.hu.astro';
+import TermsId from '~/components/legal/terms.id.astro';
+import TermsKk from '~/components/legal/terms.kk.astro';
+import TermsLt from '~/components/legal/terms.lt.astro';
+import TermsLv from '~/components/legal/terms.lv.astro';
+import TermsMs from '~/components/legal/terms.ms.astro';
+import TermsRo from '~/components/legal/terms.ro.astro';
+import TermsSk from '~/components/legal/terms.sk.astro';
+import TermsSl from '~/components/legal/terms.sl.astro';
+import TermsSr from '~/components/legal/terms.sr.astro';
+import TermsTh from '~/components/legal/terms.th.astro';
+import TermsTl from '~/components/legal/terms.tl.astro';
+import TermsTr from '~/components/legal/terms.tr.astro';
+import TermsUk from '~/components/legal/terms.uk.astro';
+import TermsUz from '~/components/legal/terms.uz.astro';
 const Body: any =
   (
     {
@@ -45,6 +66,27 @@ const Body: any =
       pl: TermsPl,
       ar: TermsAr,
       pt: TermsPt,
+      az: TermsAz,
+      bg: TermsBg,
+      et: TermsEt,
+      fa: TermsFa,
+      he: TermsHe,
+      hr: TermsHr,
+      hu: TermsHu,
+      id: TermsId,
+      kk: TermsKk,
+      lt: TermsLt,
+      lv: TermsLv,
+      ms: TermsMs,
+      ro: TermsRo,
+      sk: TermsSk,
+      sl: TermsSl,
+      sr: TermsSr,
+      th: TermsTh,
+      tl: TermsTl,
+      tr: TermsTr,
+      uk: TermsUk,
+      uz: TermsUz,
     } as Record<string, any>
   )[lang] || null;
 
@@ -113,6 +155,90 @@ const META: Record<string, { title: string; description: string }> = {
   pt: {
     title: `Termos e Condições — ${SITE.name}`,
     description: 'Felizbay termos e condições que regem o uso de nosso site e serviços.',
+  },
+  az: {
+    title: 'Qaydalar və Şərtlər — Felizbay',
+    description: 'Felizbay veb saytımızdan və xidmətlərimizdən istifadəni tənzimləyən şərtlər.',
+  },
+  bg: {
+    title: 'Правила и условия — Felizbay',
+    description: 'Правила и условия на Felizbay, уреждащи използването на нашия уебсайт и услуги.',
+  },
+  et: {
+    title: 'Tingimused — Felizbay',
+    description: 'Felizbay nõuded ja tingimused, mis reguleerivad meie veebisaidi ja teenuste kasutamist.',
+  },
+  fa: {
+    title: 'شرایط و ضوابط — Felizbay',
+    description: 'شرایط و ضوابط Felizbay حاکم بر استفاده از وب سایت و خدمات ما است.',
+  },
+  he: {
+    title: 'תנאים והגבלות — Felizbay',
+    description: 'תנאים והגבלות של Felizbay המסדירים את השימוש באתר ובשירותים שלנו.',
+  },
+  hr: {
+    title: 'Odredbe i uvjeti — Felizbay',
+    description: 'Uvjeti i odredbe Felizbaya koji reguliraju korištenje naše web stranice i usluga.',
+  },
+  hu: {
+    title: 'Általános Szerződési Feltételek — Felizbay',
+    description: 'A Felizbay weboldalunk és szolgáltatásaink használatára vonatkozó feltételek.',
+  },
+  id: {
+    title: 'Syarat dan Ketentuan — Felizbay',
+    description: 'Syarat dan ketentuan Felizbay yang mengatur penggunaan situs web dan layanan kami.',
+  },
+  kk: {
+    title: 'Ережелер мен шарттар — Felizbay',
+    description: 'Felizbay біздің веб-сайт пен қызметтерді пайдалануды реттейтін ережелер мен шарттар.',
+  },
+  lt: {
+    title: 'Taisyklės ir sąlygos — Felizbay',
+    description: 'Felizbay taisyklės ir sąlygos, reglamentuojančios naudojimąsi mūsų svetaine ir paslaugomis.',
+  },
+  lv: {
+    title: 'Noteikumi un nosacījumi — Felizbay',
+    description: 'Felizbay noteikumi un nosacījumi, kas regulē mūsu vietnes un pakalpojumu izmantošanu.',
+  },
+  ms: {
+    title: 'Terma dan Syarat — Felizbay',
+    description: 'Terma dan syarat Felizbay yang mengawal penggunaan laman web dan perkhidmatan kami.',
+  },
+  ro: {
+    title: 'Termeni și condiții — Felizbay',
+    description: 'Termenii și condițiile Felizbay care guvernează utilizarea site-ului și serviciilor noastre.',
+  },
+  sk: {
+    title: 'Zmluvné podmienky — Felizbay',
+    description: 'Podmienky používania našej webovej stránky a služieb spoločnosti Felizbay.',
+  },
+  sl: {
+    title: 'Pogoji in določila — Felizbay',
+    description: 'Pogoji in določila Felizbay, ki urejajo uporabo našega spletnega mesta in storitev.',
+  },
+  sr: {
+    title: 'Услови и одредбе — Felizbay',
+    description: 'Felizbay одредбе и услови који регулишу коришћење наше веб странице и услуга.',
+  },
+  th: {
+    title: 'ข้อกำหนดและเงื่อนไข — Felizbay',
+    description: 'ข้อกำหนดและเงื่อนไขของ Felizbay ที่ควบคุมการใช้เว็บไซต์และบริการของเรา',
+  },
+  tl: {
+    title: 'Mga Tuntunin at Kundisyon — Felizbay',
+    description: 'Mga tuntunin at kundisyon ng Felizbay na namamahala sa paggamit ng aming website at mga serbisyo.',
+  },
+  tr: {
+    title: 'Şartlar ve Koşullar — Felizbay',
+    description: 'Felizbay web sitemizin ve hizmetlerimizin kullanımını düzenleyen hüküm ve koşullar.',
+  },
+  uk: {
+    title: 'Правила та умови — Felizbay',
+    description: 'Умови Felizbay, що регулюють використання нашого веб-сайту та послуг.',
+  },
+  uz: {
+    title: 'Foydalanish shartlari — Felizbay',
+    description: 'Felizbay bizning veb-saytimiz va xizmatlarimizdan foydalanishni tartibga soluvchi shartlar.',
   },
 };
 const meta = META[lang] || META.en;

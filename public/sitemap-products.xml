@@ -17,7 +17,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/products/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/products/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/products/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/products/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/products/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/products/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/products/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/products/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/products/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/products/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/products/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/products/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/products/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/products/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/products/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/products/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/products/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/products/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/products/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/products/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/products/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/products/compare/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/compare/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/compare/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
@@ -38,7 +59,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-round/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-round/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/products/hot-tub-round/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/products/hot-tub-round/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/products/hot-tub-square-rect/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/hot-tub-square-rect/"/>
@@ -56,7 +98,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/hot-tub-square-rect/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/hot-tub-square-rect/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/products/hot-tub-square-rect/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/products/hot-tub-square-rect/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/products/rectangular-drop-stitch-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/rectangular-drop-stitch-pool/"/>
@@ -74,7 +137,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/rectangular-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/rectangular-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/products/rectangular-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/products/rectangular-drop-stitch-pool/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/products/round-blue-drop-stitch-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/round-blue-drop-stitch-pool/"/>
@@ -92,7 +176,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-blue-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-blue-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/products/round-blue-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/products/round-blue-drop-stitch-pool/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/products/round-grey-drop-stitch-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/round-grey-drop-stitch-pool/"/>
@@ -110,7 +215,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/round-grey-drop-stitch-pool/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/round-grey-drop-stitch-pool/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/products/round-grey-drop-stitch-pool/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/products/round-grey-drop-stitch-pool/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/products/specs/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/specs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/specs/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>

@@ -354,6 +354,490 @@ export const PRODUCT_L10N: Record<string, ProductL10n> = {
     labels: {},
     cats: { pool: 'Nafukovací bazény' },
   },
+  az: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Düzbucaqlı Şişmə Drop Stitch Üzgüçülük Hovuzu',
+      'round-blue-drop-stitch-pool': 'Dəyirmi Mavi Şişmə Drop Stitch Üzgüçülük Hovuzu',
+      'round-grey-drop-stitch-pool': 'Dəyirmi Boz Şişmə Drop Stitch Üzgüçülük Hovuzu',
+      'hot-tub-square-rect': 'Quraşdırılmış Oturacaqlarla Kvadrat və Düzbucaqlı Düşmə Hovuzu',
+      'hot-tub-round': 'Quraşdırılmış Oturacaqlarla Dairəvi Düşmə Hovuzu',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Ailə ölçülü düzbucaqlı şişmə damcılı üzgüçülük hovuzu - tez şişirilir, sərt divarlar, kiçik paketlər.',
+      'round-blue-drop-stitch-pool':
+        'Dairəvi mavi şişmə damcılı üzgüçülük hovuzu - sərt yüksək təzyiqli divarları olan klassik ailə hovuzu.',
+      'round-grey-drop-stitch-pool':
+        'Premium dəyirmi boz rəngli şişmə damcılı üzgüçülük hovuzu — müasir görünüş, sərt divarlar, isteğe uyğun uyğun örtük.',
+      'hot-tub-square-rect':
+        'Quraşdırılmış oturacaqları və 5 mm izolyasiya edilmiş dibi olan izolyasiya edilmiş damcı tikişli islatma hovuzu - 1,5 × 1,5 × 0,8 m-dən 3 × 2 × 1 m-ə qədər kvadrat və düzbucaqlı modellər. Xarici qızdırıcıya qoşulur (daxil deyil).',
+      'hot-tub-round':
+        'Quraşdırılmış oturacaqları və 5 mm izolyasiya edilmiş dibi olan yığcam yuvarlaq şişmə hovuz - onlayn dəst sabit Ø 2 × 0,8 m modeldir (zavod məhsulu RS2018, divar 10 sm). Xarici qızdırıcı ilə cütləşir (qızdırıcı daxil deyil).',
+    },
+    labels: {},
+    cats: { pool: 'Şişmə hovuzlar' },
+  },
+  bg: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Правоъгълен надуваем плувен басейн с падащ шев',
+      'round-blue-drop-stitch-pool': 'Кръгъл син надуваем плувен басейн с падащ шев',
+      'round-grey-drop-stitch-pool': 'Кръгъл сив надуваем плувен басейн с падащ шев',
+      'hot-tub-square-rect': 'Квадратни и правоъгълни хидравлични басейни с вградени седалки',
+      'hot-tub-round': 'Кръгъл падащ шев басейн за накисване с вградени седалки',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Правоъгълен надуваем плувен басейн със семеен размер — бърз за надуване, твърди стени, малки опаковки.',
+      'round-blue-drop-stitch-pool':
+        'Кръгъл син надуваем плувен басейн с падащ шев — класически семеен басейн с твърди стени с високо налягане.',
+      'round-grey-drop-stitch-pool':
+        'Първокласен кръгъл сив надуваем плувен басейн с капачки — модерен външен вид, твърди стени, подходящо покривало по избор.',
+      'hot-tub-square-rect':
+        'Изолиран падащ шев басейн за накисване с вградени седалки и 5 mm изолирано дъно — квадратни и правоъгълни модели от 1,5 × 1,5 × 0,8 m до 3 × 2 × 1 m. Свързва се към външен нагревател (не е включен).',
+      'hot-tub-round':
+        'Компактен кръгъл надуваем басейн с вградени седалки и 5 mm изолирано дъно — онлайн комплектът е фиксираният модел Ø 2 × 0,8 m (фабричен артикул RS2018, 10 cm стена). Сдвоява се с външен нагревател (нагревателят не е включен).',
+    },
+    labels: {},
+    cats: { pool: 'Надуваеми басейни' },
+  },
+  et: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Ristkülikukujuline täispuhutav Drop Stitch bassein',
+      'round-blue-drop-stitch-pool': 'Ümmargune sinine täispuhutav Drop Stitch bassein',
+      'round-grey-drop-stitch-pool': 'Ümmargune hall täispuhutav Drop Stitch bassein',
+      'hot-tub-square-rect': 'Ruudukujuline ja ristkülikukujuline sisseehitatud istmetega leotusbassein',
+      'hot-tub-round': 'Ümmargune sisseehitatud istmetega leotusbassein',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Peresuuruses ristkülikukujuline täispuhutav tilkpistega bassein – kiiresti täispuhutav, jäigad seinad, pakitakse väikeseks.',
+      'round-blue-drop-stitch-pool':
+        'Ümmargune sinine täispuhutav tilkpistega bassein — klassikaline jäikade kõrgsurveseintega perebassein.',
+      'round-grey-drop-stitch-pool':
+        'Esmaklassiline ümmargune hall täispuhutav tilkpistega bassein – kaasaegne välimus, jäigad seinad, valikuline sobiv kate.',
+      'hot-tub-square-rect':
+        'Isoleeritud tilkpistega leotusbassein sisseehitatud istmete ja 5 mm isoleeritud põhjaga — ruudu- ja ristkülikukujulised mudelid 1,5 × 1,5 × 0,8 m kuni 3 × 2 × 1 m. Ühendab välise küttekehaga (ei kuulu komplekti).',
+      'hot-tub-round':
+        'Kompaktne ümmargune täispuhutav ujumisbassein sisseehitatud istmete ja 5 mm isolatsiooniga põhjaga — online komplekt on fikseeritud Ø 2 × 0,8 m mudel (tehasetoode RS2018, 10 cm sein). Paarib välise küttekehaga (küttekeha ei kuulu komplekti).',
+    },
+    labels: {},
+    cats: { pool: 'Täispuhutavad basseinid' },
+  },
+  fa: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'استخر بادی قطره ای مستطیل شکل',
+      'round-blue-drop-stitch-pool': 'استخر بادی قطره ای گرد آبی',
+      'round-grey-drop-stitch-pool': 'استخر بادی قطره ای گرد خاکستری',
+      'hot-tub-square-rect': 'استخر قطره‌ای مربع و مستطیل شکل با صندلی‌های توکار',
+      'hot-tub-round': 'استخر خیساندن قطره ای گرد با صندلی های توکار',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'استخر بادی مستطیلی با دوخت قطره ای در اندازه خانوادگی - دیوارهای سفت و محکم برای باد کردن سریع، بسته های کوچک.',
+      'round-blue-drop-stitch-pool':
+        'استخر بادی قطره ای گرد آبی - یک استخر کلاسیک خانوادگی با دیوارهای سفت و سخت با فشار بالا.',
+      'round-grey-drop-stitch-pool':
+        'استخر بادی بادی بادی خاکستری خاکستری - ظاهری مدرن، دیوارهای سفت و سخت، پوشش همسان اختیاری.',
+      'hot-tub-square-rect':
+        'استخر خیساندن قطره دوخت عایق با صندلی های توکار و کف 5 میلی متری عایق - مدل های مربع و مستطیل از 1.5 × 1.5 × 0.8 متر تا 3 × 2 × 1 متر. به بخاری خارجی متصل می شود (شامل نمی شود).',
+      'hot-tub-round':
+        'استخر بادی گرد جمع و جور با صندلی های توکار و کف 5 میلی متری عایق - مجموعه آنلاین مدل ثابت Ø 2 × 0.8 متر است (کالای کارخانه RS2018، دیوار 10 سانتی متری). جفت با بخاری خارجی (بخاری شامل نمی شود).',
+    },
+    labels: {},
+    cats: { pool: 'استخرهای بادی' },
+  },
+  he: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'בריכת שחייה מלבנית מתנפחת Drop Stitch',
+      'round-blue-drop-stitch-pool': 'בריכת שחייה עגולה כחולה מתנפחת Drop Stitch',
+      'round-grey-drop-stitch-pool': 'בריכת שחייה מתנפחת מתנפחת אפור עגולה',
+      'hot-tub-square-rect': 'בריכת טבילה מרובעת ומלבנית עם מושבים מובנים',
+      'hot-tub-round': 'בריכת טבילה עגולה עם מושבים מובנים',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'בריכת שחייה מלבנית מתנפחת מתנפחת בגודל משפחתי - מהירה לניפוח, קירות קשיחים, לארוז בקטנה.',
+      'round-blue-drop-stitch-pool':
+        'בריכת שחיה מתנפחת כחולה עגולה מתנפחת - בריכה משפחתית קלאסית עם קירות קשיחים בלחץ גבוה.',
+      'round-grey-drop-stitch-pool':
+        'בריכת שחיה מתנפחת אפורה עגולה פרימיום מתנפחת - מראה מודרני, קירות קשיחים, כיסוי תואם אופציונלי.',
+      'hot-tub-square-rect':
+        "בריכת טבילה מבודדת עם מושבים מובנים ותחתית מבודדת 5 מ\"מ - דגמים מרובעים ומלבניים מ-1.5 × 1.5 × 0.8 מ' עד 3 × 2 × 1 מ'. מתחבר למחמם חיצוני (לא כלול).",
+      'hot-tub-round':
+        'בריכת טבילה עגולה ומתנפחת קומפקטית עם מושבים מובנים ותחתית מבודדת 5 מ"מ - הסט המקוון הוא הדגם הקבוע Ø 2 × 0.8 מ\' (פריט מפעל RS2018, קיר 10 ס"מ). שילוב עם תנור חימום חיצוני (מחמם לא כלול).',
+    },
+    labels: {},
+    cats: { pool: 'בריכות מתנפחות' },
+  },
+  hr: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Pravokutni bazen za plivanje na napuhavanje',
+      'round-blue-drop-stitch-pool': 'Okrugli plavi bazen za plivanje na napuhavanje',
+      'round-grey-drop-stitch-pool': 'Okrugli sivi bazen za plivanje na napuhavanje',
+      'hot-tub-square-rect': 'Kvadratni i pravokutni bazen za kupanje s ugrađenim sjedalima',
+      'hot-tub-round': 'Okrugli bazen za kupanje s ugrađenim sjedalima',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Pravokutni bazen za kupanje na napuhavanje obiteljske veličine — brzo se napuhava, krutih stijenki, pakiranja su mala.',
+      'round-blue-drop-stitch-pool':
+        'Okrugli plavi bazen za plivanje na napuhavanje — klasični obiteljski bazen s krutim visokotlačnim stijenama.',
+      'round-grey-drop-stitch-pool':
+        'Vrhunski okrugli sivi bazen za plivanje s šavovima na napuhavanje — moderan izgled, krute stijenke, izborna odgovarajuća navlaka.',
+      'hot-tub-square-rect':
+        'Izolirani bazen za kupanje s ugrađenim sjedalima i 5 mm izoliranim dnom — kvadratni i pravokutni modeli od 1,5 × 1,5 × 0,8 m do 3 × 2 × 1 m. Spaja se na vanjski grijač (nije uključen).',
+      'hot-tub-round':
+        'Kompaktni okrugli bazen za kupanje na napuhavanje s ugrađenim sjedalima i dnom s izolacijom od 5 mm — online set je fiksni model Ø 2 × 0,8 m (tvornička stavka RS2018, 10 cm stijenke). Spaja se s vanjskim grijačem (grijač nije uključen).',
+    },
+    labels: {},
+    cats: { pool: 'Bazeni na napuhavanje' },
+  },
+  hu: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Téglalap alakú felfújható cseppöltésű úszómedence',
+      'round-blue-drop-stitch-pool': 'Kerek kék felfújható cseppöltésű úszómedence',
+      'round-grey-drop-stitch-pool': 'Kerek szürke felfújható cseppöltésű úszómedence',
+      'hot-tub-square-rect': 'Négyzet alakú és téglalap alakú cseppöltésű áztatómedence beépített ülésekkel',
+      'hot-tub-round': 'Kerek cseppöltésű áztatómedence beépített ülésekkel',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Családi méretű, téglalap alakú, felfújható, öltéses úszómedence – gyorsan felfújható, merev falakkal, kicsiben elfér.',
+      'round-blue-drop-stitch-pool':
+        'Kerek, kék, felfújható öltéses úszómedence — klasszikus családi medence merev, nagynyomású falakkal.',
+      'round-grey-drop-stitch-pool':
+        'Prémium kerek, szürke, felfújható öltéses úszómedence – modern megjelenés, merev falak, opcionálisan hozzáillő huzat.',
+      'hot-tub-square-rect':
+        'Szigetelt varrással ellátott áztatómedence beépített ülésekkel és 5 mm-es szigetelt fenékkel – négyzet és téglalap alakú modellek 1,5 × 1,5 × 0,8 m-től 3 × 2 × 1 m-ig. Külső fűtőtesthez csatlakoztatható (nem tartozék).',
+      'hot-tub-round':
+        'Kompakt kerek, felfújható áztatómedence beépített ülőfelületekkel és 5 mm-es szigetelt fenékkel – az online készlet a fix Ø 2 × 0,8 m-es modell (RS2018 gyári cikk, 10 cm-es fal). Külső fűtéssel párosítható (a fűtőelem nem tartozék).',
+    },
+    labels: {},
+    cats: { pool: 'Felfújható medencék' },
+  },
+  id: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Kolam Renang Drop Stitch Tiup Persegi Panjang',
+      'round-blue-drop-stitch-pool': 'Kolam Renang Drop Stitch Tiup Biru Bulat',
+      'round-grey-drop-stitch-pool': 'Kolam Renang Drop Stitch Tiup Bulat Abu-abu',
+      'hot-tub-square-rect': 'Kolam Perendaman Drop-Stitch Persegi dan Persegi Panjang dengan Kursi Bawaan',
+      'hot-tub-round': 'Kolam Perendaman Jahitan Bulat dengan Kursi Bawaan',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Kolam renang tiup berbentuk persegi panjang ukuran keluarga — cepat mengembang, dinding kaku, dikemas kecil.',
+      'round-blue-drop-stitch-pool':
+        'Kolam renang tiup drop stitch bulat berwarna biru — kolam keluarga klasik dengan dinding bertekanan tinggi yang kaku.',
+      'round-grey-drop-stitch-pool':
+        'Kolam renang tiup drop stitch abu-abu bulat premium — tampilan modern, dinding kaku, penutup opsional yang serasi.',
+      'hot-tub-square-rect':
+        'Kolam rendam jahitan lepas berinsulasi dengan tempat duduk internal dan dasar berinsulasi 5 mm — model persegi dan persegi panjang dari 1,5 × 1,5 × 0,8 m hingga 3 × 2 × 1 m. Terhubung ke pemanas eksternal (tidak termasuk).',
+      'hot-tub-round':
+        'Kolam rendam tiup bundar kompak dengan tempat duduk internal dan alas berinsulasi 5 mm — perangkat online adalah model tetap Ø 2 × 0,8 m (item pabrik RS2018, dinding 10 cm). Pasangkan dengan pemanas eksternal (pemanas tidak termasuk).',
+    },
+    labels: {},
+    cats: { pool: 'Kolam Tiup' },
+  },
+  kk: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Тік бұрышты үрлемелі тігісті жүзу бассейні',
+      'round-blue-drop-stitch-pool': 'Дөңгелек көк үрленетін тігісті жүзу бассейні',
+      'round-grey-drop-stitch-pool': 'Дөңгелек сұр үрленетін тігісті жүзу бассейні',
+      'hot-tub-square-rect': 'Кірістірілген орындықтары бар төртбұрышты және тікбұрышты суға арналған бассейн',
+      'hot-tub-round': 'Кірістірілген орындықтары бар дөңгелек тігілген суға арналған бассейн',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Отбасылық өлшемді тікбұрышты үрленетін тігісті жүзу бассейні - тез үрленетін, қатты қабырғалар, шағын пакеттер.',
+      'round-blue-drop-stitch-pool':
+        'Дөңгелек көк үрленетін тігісті жүзу бассейні - қатты жоғары қысымды қабырғалары бар классикалық отбасылық бассейн.',
+      'round-grey-drop-stitch-pool':
+        'Премиум дөңгелек сұр үрленетін тігілген жүзу бассейні — заманауи көрініс, қатты қабырғалар, қосымша сәйкес келетін қақпақ.',
+      'hot-tub-square-rect':
+        'Кірістірілген отырғыштары және 5 мм оқшауланған түбі бар оқшауланған тігісті суға арналған бассейн - 1,5 × 1,5 × 0,8 м-ден 3 × 2 × 1 м-ге дейін шаршы және тікбұрышты модельдер. Сыртқы жылытқышқа қосылады (жинаққа кірмейді).',
+      'hot-tub-round':
+        'Кірістірілген орындықтары және 5 мм оқшауланған түбі бар ықшам дөңгелек үрленетін суға арналған бассейн — желілік жиынтық бекітілген Ø 2 × 0,8 м моделі (RS2018 зауыттық позициясы, қабырғасы 10 см). Сыртқы жылытқышпен жұпталады (жылытқыш кірмейді).',
+    },
+    labels: {},
+    cats: { pool: 'Үрлемелі бассейндер' },
+  },
+  lt: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Stačiakampis pripučiamas Drop Stitch baseinas',
+      'round-blue-drop-stitch-pool': 'Apvalus mėlynas pripučiamas Drop Stitch baseinas',
+      'round-grey-drop-stitch-pool': 'Apvalus pilkas pripučiamas Drop Stitch baseinas',
+      'hot-tub-square-rect': 'Kvadratinis ir stačiakampis „drop-stitch“ baseinas su įmontuotomis sėdynėmis',
+      'hot-tub-round': 'Apvalus „drop-stitch“ baseinas su įmontuotomis sėdynėmis',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Šeimos dydžio stačiakampis pripučiamas dygsnio baseinas – greitai pripučiamas, standžios sienos, mažos pakuotės.',
+      'round-blue-drop-stitch-pool':
+        'Apvalus mėlynas pripučiamas dygsnio baseinas – klasikinis šeimos baseinas su standžiomis aukšto slėgio sienelėmis.',
+      'round-grey-drop-stitch-pool':
+        'Aukščiausios kokybės apvalios pilkos spalvos pripučiamas dygsnio baseinas – šiuolaikiška išvaizda, tvirtos sienos, pasirinktinai tinkamas užvalkalas.',
+      'hot-tub-square-rect':
+        'Izoliuotas dygsnio mirkymo baseinas su įmontuotomis sėdynėmis ir 5 mm izoliuotu dugnu – kvadratiniai ir stačiakampiai modeliai nuo 1,5 × 1,5 × 0,8 m iki 3 × 2 × 1 m. Jungiamas prie išorinio šildytuvo (į komplektą neįeina).',
+      'hot-tub-round':
+        'Kompaktiškas apvalus pripučiamas baseinas su įmontuotomis sėdynėmis ir 5 mm izoliuotu dugnu – internetinis rinkinys yra fiksuotas Ø 2 × 0,8 m modelis (gamyklinė prekė RS2018, 10 cm sienelė). Poros su išoriniu šildytuvu (šildytuvas neįeina).',
+    },
+    labels: {},
+    cats: { pool: 'Pripučiami baseinai' },
+  },
+  lv: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Taisnstūra formas piepūšamais peldbaseins',
+      'round-blue-drop-stitch-pool': 'Apaļš zils piepūšamais pilināms peldbaseins',
+      'round-grey-drop-stitch-pool': 'Apaļš pelēks piepūšamais peldbaseins',
+      'hot-tub-square-rect': 'Kvadrātveida un taisnstūrveida izšūšanas baseins ar iebūvētiem sēdekļiem',
+      'hot-tub-round': 'Apaļš izšūšanas baseins ar iebūvētiem sēdekļiem',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Ģimenes izmēra taisnstūrveida piepūšamais peldbaseins ar nolaižamo dūrienu — ātri piepūšams, stingras sienas, kas ir mazas.',
+      'round-blue-drop-stitch-pool':
+        'Apaļš zils piepūšamais pilināmais peldbaseins — klasisks ģimenes baseins ar stingrām augstspiediena sienām.',
+      'round-grey-drop-stitch-pool':
+        'Augstākās kvalitātes apaļš pelēks piepūšamais peldbaseins ar nolaižamo dūrienu — moderns izskats, stingras sienas, pēc izvēles pieskaņots segums.',
+      'hot-tub-square-rect':
+        'Izolēts pilināmais baseins ar iebūvētiem sēdekļiem un 5 mm izolētu dibenu — kvadrātveida un taisnstūrveida modeļi no 1,5 × 1,5 × 0,8 m līdz 3 × 2 × 1 m. Savieno ar ārējo sildītāju (nav iekļauts).',
+      'hot-tub-round':
+        'Kompakts apaļš piepūšamais baseins ar iebūvētiem sēdekļiem un 5 mm izolētu dibenu — tiešsaistes komplektā ir fiksēts Ø 2 × 0,8 m modelis (rūpnīcas prece RS2018, 10 cm siena). Pārī ar ārējo sildītāju (sildītājs nav iekļauts komplektā).',
+    },
+    labels: {},
+    cats: { pool: 'Piepūšamie baseini' },
+  },
+  ms: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Kolam Renang Jahitan Jahitan Kembung Segiempat',
+      'round-blue-drop-stitch-pool': 'Kolam Renang Jahitan Jahitan Kembung Biru Bulat',
+      'round-grey-drop-stitch-pool': 'Kolam Renang Jahitan Jahitan Kembung Kelabu Bulat',
+      'hot-tub-square-rect': 'Kolam Rendaman Jahitan Jahitan Persegi dan Segi Empat dengan Tempat Duduk Terbina Dalam',
+      'hot-tub-round': 'Kolam Rendaman Jahitan Jahitan Bulat dengan Tempat Duduk Terbina Dalam',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Kolam renang jahitan jatuh kembung segi empat tepat bersaiz keluarga — cepat mengembang, dinding tegar, dibungkus kecil.',
+      'round-blue-drop-stitch-pool':
+        'Kolam renang jahitan jatuh kembung biru bulat — kolam keluarga klasik dengan dinding tekanan tinggi yang tegar.',
+      'round-grey-drop-stitch-pool':
+        'Kolam renang jahitan jatuh kembung bulat premium berwarna kelabu — rupa moden, dinding tegar, penutup padanan pilihan.',
+      'hot-tub-square-rect':
+        'Kolam rendaman titisan jatuh terlindung dengan tempat duduk terbina dalam dan bahagian bawah berpenebat 5 mm — model segi empat sama dan segi empat tepat daripada 1.5 × 1.5 × 0.8 m hingga 3 × 2 × 1 m. Menyambung kepada pemanas luaran (tidak termasuk).',
+      'hot-tub-round':
+        'Kolam rendaman kembung bulat padat dengan tempat duduk terbina dalam dan bahagian bawah penebat 5 mm — set dalam talian ialah model tetap Ø 2 × 0.8 m (item kilang RS2018, dinding 10 cm). Pasangkan dengan pemanas luaran (tidak termasuk pemanas).',
+    },
+    labels: {},
+    cats: { pool: 'Kolam Kembung' },
+  },
+  ro: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Piscină gonflabilă dreptunghiulară Drop Stitch',
+      'round-blue-drop-stitch-pool': 'Piscina Gonflabila Rotunda Albastra Drop Stitch',
+      'round-grey-drop-stitch-pool': 'Piscină gonflabilă, rotundă, cu cusătură de picătură, gri',
+      'hot-tub-square-rect':
+        'Piscină de înmuiere pătrată și dreptunghiulară cu cusătură picătură cu scaune încorporate',
+      'hot-tub-round': 'Piscină de înmuiere rotundă cu cusături încorporate cu scaune încorporate',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Piscină gonflabilă dreptunghiulară cu cusături de picătură de dimensiunea unei familii — rapid de umflat, pereți rigizi, se împachetează mici.',
+      'round-blue-drop-stitch-pool':
+        'Piscina gonflabilă, rotundă, albastră, cu cusături, o piscină clasică de familie, cu pereți rigizi de înaltă presiune.',
+      'round-grey-drop-stitch-pool':
+        'Piscina gonflabilă premium rotundă gri cu cusături de picătură — aspect modern, pereți rigizi, capac opțional asortat.',
+      'hot-tub-square-rect':
+        'Piscină izolată cu cusătură, cu scaune încorporate și fund izolat de 5 mm — modele pătrate și dreptunghiulare de la 1,5 × 1,5 × 0,8 m până la 3 × 2 × 1 m. Se conectează la un încălzitor extern (nu este inclus).',
+      'hot-tub-round':
+        'Piscina gonflabilă rotundă compactă cu scaune încorporate și fund izolat de 5 mm — setul online este modelul fix Ø 2 × 0,8 m (articol din fabrică RS2018, perete de 10 cm). Perechi cu un încălzitor extern (încălzitor nu este inclus).',
+    },
+    labels: {},
+    cats: { pool: 'Piscine gonflabile' },
+  },
+  sk: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Obdĺžnikový nafukovací bazén typu drop Stitch',
+      'round-blue-drop-stitch-pool': 'Okrúhly modrý nafukovací bazén typu drop Stitch',
+      'round-grey-drop-stitch-pool': 'Okrúhly sivý nafukovací bazén typu drop Stitch',
+      'hot-tub-square-rect': 'Štvorcový a obdĺžnikový bazén so vstavanými sedadlami',
+      'hot-tub-round': 'Okrúhly bazén so vstavanými sedadlami',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Obdĺžnikový nafukovací bazén s prešívaním pre rodinu – rýchlo sa nafúkne, pevné steny, zbaliteľné v malom množstve.',
+      'round-blue-drop-stitch-pool':
+        'Okrúhly modrý nafukovací bazén s prešívaným stehom — klasický rodinný bazén s pevnými vysokotlakovými stenami.',
+      'round-grey-drop-stitch-pool':
+        'Prémiový okrúhly sivý nafukovací bazén s prešívaným stehom – moderný vzhľad, pevné steny, voliteľný zodpovedajúci kryt.',
+      'hot-tub-square-rect':
+        'Izolovaný ponorný bazén so zabudovanými sedadlami a 5 mm izolovaným dnom – štvorcové a obdĺžnikové modely od 1,5 × 1,5 × 0,8 m do 3 × 2 × 1 m. Pripája sa k externému ohrievaču (nie je súčasťou dodávky).',
+      'hot-tub-round':
+        'Kompaktný okrúhly nafukovací bazénik so zabudovanými sedadlami a 5 mm izolovaným dnom — online set je pevný model Ø 2 × 0,8 m (výrobná položka RS2018, 10 cm stena). Pár s externým ohrievačom (ohrievač nie je súčasťou dodávky).',
+    },
+    labels: {},
+    cats: { pool: 'Nafukovacie bazény' },
+  },
+  sl: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Pravokotni napihljivi plavalni bazen',
+      'round-blue-drop-stitch-pool': 'Okrogel, moder napihljiv plavalni bazen',
+      'round-grey-drop-stitch-pool': 'Okrogel siv napihljiv plavalni bazen s padajočim šivom',
+      'hot-tub-square-rect': 'Kvadratni in pravokotni bazen za namakanje z vgrajenimi sedeži',
+      'hot-tub-round': 'Okrogel padajoči bazen z vgrajenimi sedeži',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Pravokoten napihljiv plavalni bazen družinske velikosti - hitro napihovanje, toge stene, pakiranje je majhno.',
+      'round-blue-drop-stitch-pool':
+        'Okrogel moder napihljiv plavalni bazen s kapljivim šivom — klasičen družinski bazen s trdimi visokotlačnimi stenami.',
+      'round-grey-drop-stitch-pool':
+        'Vrhunski okrogel siv napihljiv plavalni bazen s kapljivim šivom — moderen videz, toge stene, izbirna ujemajoča se prevleka.',
+      'hot-tub-square-rect':
+        'Izoliran bazen za namakanje s padajočim šivom z vgrajenimi sedeži in 5 mm izoliranim dnom — kvadratni in pravokotni modeli od 1,5 × 1,5 × 0,8 m do 3 × 2 × 1 m. Povezuje se z zunanjim grelcem (ni priložen).',
+      'hot-tub-round':
+        'Kompakten okrogel napihljiv bazen za namakanje z vgrajenimi sedeži in 5 mm izoliranim dnom — spletni set je fiksni model Ø 2 × 0,8 m (tovarniški artikel RS2018, 10 cm stene). Kombinira se z zunanjim grelcem (grelec ni priložen).',
+    },
+    labels: {},
+    cats: { pool: 'Napihljivi bazeni' },
+  },
+  sr: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Правоугаони базен на надувавање Дроп Ститцх',
+      'round-blue-drop-stitch-pool': 'Округли плави базен за пливање на надувавање',
+      'round-grey-drop-stitch-pool': 'Округли сиви базен на надувавање',
+      'hot-tub-square-rect': 'Квадратни и правоугаони базен за намакање са убодним шавовима са уграђеним седиштима',
+      'hot-tub-round': 'Округли базен за намакање са убодним шавовима са уграђеним седиштима',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Правоугаони базен на надувавање породичне величине — брзо се надувава, чврсти зидови, мали пакети.',
+      'round-blue-drop-stitch-pool':
+        'Округли плави базен за пливање на надувавање — класичан породични базен са чврстим зидовима под високим притиском.',
+      'round-grey-drop-stitch-pool':
+        'Премиум округли сиви базен за пливање на надувавање — модеран изглед, чврсти зидови, опциони одговарајући поклопац.',
+      'hot-tub-square-rect':
+        'Изоловани базен за намакање са уграђеним седиштима и изолованим дном од 5 мм — квадратни и правоугаони модели од 1,5 × 1,5 × 0,8 м до 3 × 2 × 1 м. Повезује се на спољни грејач (није укључен).',
+      'hot-tub-round':
+        'Kompaktni okrugli bazen na naduvavanje sa ugrađenim sedištima i izolovanim dnom od 5 mm — onlajn set je fiksni model Ø 2 × 0,8 m (fabrički artikal RS2018, zid 10 cm). Uparuje se sa spoljnim grejačem (grejač nije uključen).',
+    },
+    labels: {},
+    cats: { pool: 'Базени на надувавање' },
+  },
+  th: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'สระว่ายน้ำแบบวางตะเข็บทรงสี่เหลี่ยม',
+      'round-blue-drop-stitch-pool': 'สระว่ายน้ำทรงหยดน้ำสีน้ำเงินทรงกลม',
+      'round-grey-drop-stitch-pool': 'สระว่ายน้ำทรงหยดน้ำสีเทาทรงกลม',
+      'hot-tub-square-rect': 'สระแช่ตัวทรงสี่เหลี่ยมและสี่เหลี่ยมพร้อมที่นั่งในตัว',
+      'hot-tub-round': 'สระแช่ตัวแบบเย็บแบบกลมพร้อมที่นั่งในตัว',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'สระว่ายน้ำแบบเป่าลมทรงสี่เหลี่ยมขนาดครอบครัว ขนาดครอบครัว ผนังแข็งแรง พองตัวได้รวดเร็ว และมีขนาดเล็กลง',
+      'round-blue-drop-stitch-pool':
+        'สระว่ายน้ำทรงหยดน้ำทรงกลมสีน้ำเงิน — สระน้ำสำหรับครอบครัวแบบคลาสสิกพร้อมผนังแรงดันสูงที่แข็งแกร่ง',
+      'round-grey-drop-stitch-pool':
+        'สระว่ายน้ำแบบเป่าลมทรงกลมสีเทาระดับพรีเมี่ยม — รูปลักษณ์ทันสมัย ผนังแข็งแรง เลือกฝาครอบที่เข้าชุดได้',
+      'hot-tub-square-rect':
+        'สระแช่ตัวแบบปักหล่นหุ้มฉนวนพร้อมที่นั่งในตัวและก้นหุ้มฉนวน 5 มม. — รุ่นสี่เหลี่ยมจัตุรัสและสี่เหลี่ยมผืนผ้าตั้งแต่ 1.5 × 1.5 × 0.8 ม. ถึง 3 × 2 × 1 ม. เชื่อมต่อกับเครื่องทำความร้อนภายนอก (ไม่รวม)',
+      'hot-tub-round':
+        'สระน้ำเป่าลมทรงกลมขนาดกะทัดรัดพร้อมที่นั่งในตัวและก้นหุ้มฉนวน 5 มม. — ชุดออนไลน์เป็นรุ่นคงที่ Ø 2 × 0.8 ม. (สินค้าจากโรงงาน RS2018 ผนัง 10 ซม.) จับคู่กับเครื่องทำความร้อนภายนอก (ไม่รวมเครื่องทำความร้อน)',
+    },
+    labels: {},
+    cats: { pool: 'สระน้ำเป่าลม' },
+  },
+  tl: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Parihabang Inflatable Drop Stitch Swimming Pool',
+      'round-blue-drop-stitch-pool': 'Pag - ikot ng Blue Inflatable Drop Stitch Swimming Pool',
+      'round-grey-drop-stitch-pool': 'Round Gray Inflatable Drop Stitch Swimming Pool',
+      'hot-tub-square-rect': 'Square at Rectangular Drop-Stitch Soaking Pool na may Mga Built-In na Upuan',
+      'hot-tub-round': 'Round Drop-Stitch Soaking Pool na may Mga Built-In na Upuan',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Family-size rectangular inflatable drop stitch swimming pool — mabilis na pumutok, matigas na pader, maliit na nakaimpake.',
+      'round-blue-drop-stitch-pool':
+        'Round blue inflatable drop stitch swimming pool — isang klasikong pool ng pamilya na may matibay na high-pressure na pader.',
+      'round-grey-drop-stitch-pool':
+        'Premium round gray inflatable drop stitch swimming pool — modernong hitsura, matibay na pader, opsyonal na katugmang takip.',
+      'hot-tub-square-rect':
+        'Insulated drop-stitch soaking pool na may built-in na upuan at 5 mm insulated bottom — parisukat at hugis-parihaba na mga modelo mula 1.5 × 1.5 × 0.8 m hanggang 3 × 2 × 1 m. Kumokonekta sa isang panlabas na pampainit (hindi kasama).',
+      'hot-tub-round':
+        'Compact round inflatable soaking pool na may built-in na upuan at 5 mm insulated bottom — ang online set ay ang fixed Ø 2 × 0.8 m na modelo (factory item RS2018, 10 cm wall). Mga pares sa isang panlabas na pampainit (hindi kasama ang pampainit).',
+    },
+    labels: {},
+    cats: { pool: 'Mga Inflatable Pool' },
+  },
+  tr: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Dikdörtgen Şişme Damla Dikiş Yüzme Havuzu',
+      'round-blue-drop-stitch-pool': 'Yuvarlak Mavi Şişme Damla Dikiş Yüzme Havuzu',
+      'round-grey-drop-stitch-pool': 'Yuvarlak Gri Şişme Damla Dikiş Yüzme Havuzu',
+      'hot-tub-square-rect': 'Yerleşik Koltuklu Kare ve Dikdörtgen Damla Dikiş Islatma Havuzu',
+      'hot-tub-round': 'Yerleşik Koltuklu Yuvarlak Damla Dikişli Havuz',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Aile boyutunda dikdörtgen şişirilebilir damla dikişli yüzme havuzu - hızlı şişer, sert duvarlar, küçük bir şekilde toplanır.',
+      'round-blue-drop-stitch-pool':
+        'Yuvarlak mavi şişme damla dikişli yüzme havuzu — sert, yüksek basınçlı duvarlara sahip klasik bir aile havuzu.',
+      'round-grey-drop-stitch-pool':
+        'Birinci sınıf yuvarlak gri şişme damla dikişli yüzme havuzu — modern görünüm, sert duvarlar, isteğe bağlı uyumlu kapak.',
+      'hot-tub-square-rect':
+        "Yerleşik koltuklara ve 5 mm yalıtımlı tabana sahip yalıtımlı damla dikişli ıslatma havuzu — 1,5 × 1,5 × 0,8 m'den 3 × 2 × 1 m'ye kadar kare ve dikdörtgen modeller. Harici bir ısıtıcıya bağlanır (dahil değildir).",
+      'hot-tub-round':
+        'Yerleşik koltuklara ve 5 mm yalıtımlı tabana sahip kompakt yuvarlak şişme havuz — çevrimiçi set, sabit Ø 2 × 0,8 m modelidir (fabrika ürünü RS2018, 10 cm duvar). Harici bir ısıtıcıyla eşleşir (ısıtıcı dahil değildir).',
+    },
+    labels: {},
+    cats: { pool: 'Şişme Havuzlar' },
+  },
+  uk: {
+    titles: {
+      'rectangular-drop-stitch-pool': 'Прямокутний надувний плавальний басейн',
+      'round-blue-drop-stitch-pool': 'Круглий блакитний надувний плавальний басейн',
+      'round-grey-drop-stitch-pool': 'Круглий сірий надувний плавальний басейн',
+      'hot-tub-square-rect': 'Квадратний і прямокутний басейн із вбудованими сидіннями',
+      'hot-tub-round': 'Круглий басейн із вбудованими сидіннями',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        'Прямокутний надувний плавальний басейн сімейного розміру — швидко надувається, жорсткі стінки, компактна упаковка.',
+      'round-blue-drop-stitch-pool':
+        'Круглий синій надувний басейн з крапельним стічком — класичний сімейний басейн з жорсткими стінками високого тиску.',
+      'round-grey-drop-stitch-pool':
+        'Круглий сірий надувний плавальний басейн преміум-класу — сучасний вигляд, жорсткі стінки, додаткове покриття в тон.',
+      'hot-tub-square-rect':
+        'Утеплений басейн із вбудованими сидіннями та ізольованим дном 5 мм — квадратні та прямокутні моделі від 1,5 × 1,5 × 0,8 м до 3 × 2 × 1 м. Підключається до зовнішнього обігрівача (не входить в комплект).',
+      'hot-tub-round':
+        'Компактний круглий надувний басейн з вбудованими сидіннями та утепленим дном 5 мм — онлайн набір фіксована модель Ø 2 × 0,8 м (заводська арт. RS2018, стінка 10 см). Поєднується із зовнішнім обігрівачем (обігрівач в комплект не входить).',
+    },
+    labels: {},
+    cats: { pool: 'Надувні басейни' },
+  },
+  uz: {
+    titles: {
+      'rectangular-drop-stitch-pool': "To'rtburchaklar shishiriladigan tomchi tikuvli suzish havzasi",
+      'round-blue-drop-stitch-pool': 'Dumaloq moviy shishiriladigan tomchi tikuvli suzish havzasi',
+      'round-grey-drop-stitch-pool': 'Dumaloq kulrang shishiriladigan tomchi tikuvli suzish havzasi',
+      'hot-tub-square-rect': "O'rnatilgan o'rindiqli kvadrat va to'rtburchaklar cho'zilgan cho'milish havzasi",
+      'hot-tub-round': 'Oʻrnatilgan oʻrindiqli dumaloq choʻzilgan suv havzasi',
+    },
+    summaries: {
+      'rectangular-drop-stitch-pool':
+        "Oilaviy o'lchamdagi to'rtburchaklar shaklidagi shishiriladigan tikilgan suzish havzasi - tez shishiradi, qattiq devorlar, kichik paketlar.",
+      'round-blue-drop-stitch-pool':
+        "Dumaloq ko'k shishiriladigan suzish havzasi - qattiq yuqori bosimli devorlarga ega klassik oilaviy basseyn.",
+      'round-grey-drop-stitch-pool':
+        "Premium dumaloq kulrang shishiriladigan tikilgan suzish havzasi - zamonaviy ko'rinish, qattiq devorlar, ixtiyoriy mos keladigan qopqoq.",
+      'hot-tub-square-rect':
+        "O'rnatilgan o'rindiqli va 5 mm izolyatsiyalangan pastki qismli izolyatsiyalangan tomchi tikish ho'llash hovuzi - 1,5 × 1,5 × 0,8 m dan 3 × 2 × 1 m gacha bo'lgan kvadrat va to'rtburchaklar modellar. Tashqi isitgichga ulanadi (qo'shilmaydi).",
+      'hot-tub-round':
+        "O'rnatilgan o'rindiqlari va 5 mm izolyatsiyalangan pastki qismi bo'lgan ixcham dumaloq shishiriladigan suv havzasi - onlayn to'plam Ø 2 × 0,8 m o'lchamdagi fiksatsiyalangan modeldir (RS2018 zavod elementi, devori 10 sm). Tashqi isitgich bilan juftlik (isitgich qo'shilmaydi).",
+    },
+    labels: {},
+    cats: { pool: 'Puflanadigan basseynlar' },
+  },
 };
 
 const SKILL_L10N: Record<string, Record<string, string>> = {};

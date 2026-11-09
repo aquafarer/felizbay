@@ -51,8 +51,45 @@ function normalizePath(p) {
   return t === '/' ? '/' : t + '/';
 }
 
-// P1-D：降级语言整体 noindex + 移出 sitemap/hreflang；hreflang alternates 只为背书语言输出（cs/sv/da/el/no/ru/nl/fi/pl/ar/pt 已毕业，清单见 TECH.md §16.4）
-const LANGS = ['fr', 'de', 'es', 'it', 'cs', 'sv', 'da', 'el', 'no', 'ru', 'nl', 'fi', 'pl', 'ar', 'pt'];
+// P1-D：全部 37 语言已毕业（第五批 21 语言 2026-11-09，清单见 TECH.md §16.4），hreflang alternates 为所有背书语言输出
+const LANGS = [
+  'fr',
+  'de',
+  'es',
+  'it',
+  'cs',
+  'sv',
+  'da',
+  'el',
+  'no',
+  'ru',
+  'nl',
+  'fi',
+  'pl',
+  'ar',
+  'pt',
+  'az',
+  'bg',
+  'et',
+  'fa',
+  'he',
+  'hr',
+  'hu',
+  'id',
+  'kk',
+  'lt',
+  'lv',
+  'ms',
+  'ro',
+  'sk',
+  'sl',
+  'sr',
+  'th',
+  'tl',
+  'tr',
+  'uk',
+  'uz',
+];
 
 function hreflangLinks(urlPath, pages) {
   const m = /^\/([a-z]{2})\/(.*)$/.exec(urlPath);

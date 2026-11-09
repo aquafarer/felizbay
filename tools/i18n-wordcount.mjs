@@ -12,23 +12,29 @@ const MIN = seoCfg.minWordsToIndex ?? 400;
 const routes = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 if (!routes.length)
   routes.push(
-    'de/factory/capacity',
-    'fr/factory/capacity',
-    'es/factory/capacity',
-    'it/factory/capacity',
-    'cs/factory/capacity',
-    'sv/factory/capacity',
-    'da/factory/capacity',
-    'el/factory/capacity',
-    'no/factory/capacity',
-    'ru/factory/capacity',
-    'nl/factory/capacity',
-    'fi/factory/capacity',
-    'pl/factory/capacity',
-    'ar/factory/capacity',
-    'pt/factory/capacity',
-    'ja/factory/capacity',
-    'factory/capacity'
+    'products',
+    'guides',
+    'about',
+    'de/products',
+    'fr/products',
+    'es/products',
+    'it/products',
+    'cs/products',
+    'sv/products',
+    'da/products',
+    'el/products',
+    'no/products',
+    'ru/products',
+    'nl/products',
+    'fi/products',
+    'pl/products',
+    'ar/products',
+    'pt/products',
+    'th/products',
+    'he/products',
+    'uk/products',
+    'fa/products',
+    'az/products'
   );
 console.log('MIN_WORDS_TO_INDEX =', MIN);
 

@@ -9,7 +9,6 @@
     "^/(?:[a-z]{2}/)?ai-context/?$",
     "^/(?:[a-z]{2}/)?search/?$",
     "^/(?:[a-z]{2}/)?internal/seo/",
-    "^/(?:bg|et|he|hr|hu|id|ko|lt|lv|ms|ro|sk|sl|sr|th|tl|tr|zh)(?:/|$)",
     "^/en/"
   ],
   "paths": ["/terms"]

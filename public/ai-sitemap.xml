@@ -17,7 +17,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/about/"/>
@@ -35,7 +56,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/about/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/about/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/about/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/about/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/about/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/about/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/about/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/about/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/about/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/about/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/about/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/about/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/about/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/about/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/about/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/about/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/about/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/about/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/about/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/about/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/about/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/about/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/about/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/about/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/products/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/products/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/products/"/>
@@ -53,7 +95,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/products/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/products/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/products/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/products/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/products/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/products/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/products/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/products/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/products/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/products/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/products/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/products/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/products/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/products/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/products/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/products/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/products/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/products/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/products/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/products/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/products/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/products/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/products/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/products/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/products/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/faq/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/faq/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/faq/"/>
@@ -71,7 +134,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/faq/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/faq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/faq/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/faq/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/faq/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/faq/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/faq/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/faq/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/faq/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/faq/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/faq/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/faq/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/faq/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/faq/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/faq/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/faq/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/faq/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/faq/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/faq/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/faq/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/faq/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/faq/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/faq/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/faq/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/faq/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/guides/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
@@ -95,7 +179,28 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://felizbay.com/fi/contact/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://felizbay.com/pl/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://felizbay.com/ar/contact/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://felizbay.com/pt/contact/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://felizbay.com/az/contact/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://felizbay.com/bg/contact/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://felizbay.com/et/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://felizbay.com/fa/contact/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://felizbay.com/he/contact/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://felizbay.com/hr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://felizbay.com/hu/contact/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://felizbay.com/id/contact/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://felizbay.com/kk/contact/"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://felizbay.com/lt/contact/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://felizbay.com/lv/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://felizbay.com/ms/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://felizbay.com/ro/contact/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://felizbay.com/sk/contact/"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://felizbay.com/sl/contact/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://felizbay.com/sr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://felizbay.com/th/contact/"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://felizbay.com/tl/contact/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://felizbay.com/tr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://felizbay.com/uk/contact/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://felizbay.com/uz/contact/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://felizbay.com/request-quotation/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/request-quotation/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/request-quotation/"/><priority>0.5</priority><changefreq>monthly</changefreq></url>

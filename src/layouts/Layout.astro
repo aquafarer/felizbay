@@ -54,7 +54,7 @@ const FONT_SUBSET_BY_LANG: Record<string, string> = {
   uk: interCyrillic,
   el: interGreek,
 };
-// P1-D：只为完整本地化并毕业的语言背书（cs 2026-09-27、sv/da/el/no/ru 2026-09-28、nl/fi/pl/ar/pt 2026-09-28、ja 2026-09-29 毕业，清单见 TECH.md §16.4），其余语言整体 noindex（见 seo-suppress.json）
+// P1-D：只为完整本地化并毕业的语言背书（cs 2026-09-27、sv/da/el/no/ru 2026-09-28、nl/fi/pl/ar/pt 2026-09-28、ja 2026-09-29 毕业、第五批 21 语言 2026-11-09 毕业，清单见 TECH.md §16.4），/en/ 镜像路径整体 noindex（见 seo-suppress.json）
 const FULLY_LOCALIZED = [
   'en',
   'de',
@@ -72,6 +72,27 @@ const FULLY_LOCALIZED = [
   'pl',
   'ar',
   'pt',
+  'az',
+  'bg',
+  'et',
+  'fa',
+  'he',
+  'hr',
+  'hu',
+  'id',
+  'kk',
+  'lt',
+  'lv',
+  'ms',
+  'ro',
+  'sk',
+  'sl',
+  'sr',
+  'th',
+  'tl',
+  'tr',
+  'uk',
+  'uz',
 ];
 export interface Props {
   metadata?: MetaDataType;

@@ -27,6 +27,27 @@ import DisclaimerFi from '~/components/legal/disclaimer.fi.astro';
 import DisclaimerPl from '~/components/legal/disclaimer.pl.astro';
 import DisclaimerAr from '~/components/legal/disclaimer.ar.astro';
 import DisclaimerPt from '~/components/legal/disclaimer.pt.astro';
+import DisclaimerAz from '~/components/legal/disclaimer.az.astro';
+import DisclaimerBg from '~/components/legal/disclaimer.bg.astro';
+import DisclaimerEt from '~/components/legal/disclaimer.et.astro';
+import DisclaimerFa from '~/components/legal/disclaimer.fa.astro';
+import DisclaimerHe from '~/components/legal/disclaimer.he.astro';
+import DisclaimerHr from '~/components/legal/disclaimer.hr.astro';
+import DisclaimerHu from '~/components/legal/disclaimer.hu.astro';
+import DisclaimerId from '~/components/legal/disclaimer.id.astro';
+import DisclaimerKk from '~/components/legal/disclaimer.kk.astro';
+import DisclaimerLt from '~/components/legal/disclaimer.lt.astro';
+import DisclaimerLv from '~/components/legal/disclaimer.lv.astro';
+import DisclaimerMs from '~/components/legal/disclaimer.ms.astro';
+import DisclaimerRo from '~/components/legal/disclaimer.ro.astro';
+import DisclaimerSk from '~/components/legal/disclaimer.sk.astro';
+import DisclaimerSl from '~/components/legal/disclaimer.sl.astro';
+import DisclaimerSr from '~/components/legal/disclaimer.sr.astro';
+import DisclaimerTh from '~/components/legal/disclaimer.th.astro';
+import DisclaimerTl from '~/components/legal/disclaimer.tl.astro';
+import DisclaimerTr from '~/components/legal/disclaimer.tr.astro';
+import DisclaimerUk from '~/components/legal/disclaimer.uk.astro';
+import DisclaimerUz from '~/components/legal/disclaimer.uz.astro';
 const Body: any =
   (
     {
@@ -45,6 +66,27 @@ const Body: any =
       pl: DisclaimerPl,
       ar: DisclaimerAr,
       pt: DisclaimerPt,
+      az: DisclaimerAz,
+      bg: DisclaimerBg,
+      et: DisclaimerEt,
+      fa: DisclaimerFa,
+      he: DisclaimerHe,
+      hr: DisclaimerHr,
+      hu: DisclaimerHu,
+      id: DisclaimerId,
+      kk: DisclaimerKk,
+      lt: DisclaimerLt,
+      lv: DisclaimerLv,
+      ms: DisclaimerMs,
+      ro: DisclaimerRo,
+      sk: DisclaimerSk,
+      sl: DisclaimerSl,
+      sr: DisclaimerSr,
+      th: DisclaimerTh,
+      tl: DisclaimerTl,
+      tr: DisclaimerTr,
+      uk: DisclaimerUk,
+      uz: DisclaimerUz,
     } as Record<string, any>
   )[lang] || null;
 
@@ -125,6 +167,109 @@ const META: Record<string, { title: string; description: string }> = {
     title: `Isenção de responsabilidade médica — ${SITE.name}`,
     description:
       'Isenção de responsabilidade médica para produtos e serviços Felizbay. Informações apenas para fins informativos e educacionais.',
+  },
+  az: {
+    title: 'Tibbi İmtina — Felizbay',
+    description:
+      'Felizbay məhsulları və xidmətləri üçün tibbi imtina. Yalnız məlumat və təhsil məqsədləri üçün məlumat.',
+  },
+  bg: {
+    title: 'Медицински отказ от отговорност — Felizbay',
+    description:
+      'Медицински отказ от отговорност за продукти и услуги на Felizbay. Информация само за информационни и образователни цели.',
+  },
+  et: {
+    title: 'Meditsiiniline vastutusest loobumine — Felizbay',
+    description:
+      'Meditsiiniline vastutusest loobumine Felizbay toodete ja teenuste kohta. Teave ainult informatiivsel ja hariduslikul eesmärgil.',
+  },
+  fa: {
+    title: 'سلب مسئولیت پزشکی — Felizbay',
+    description: 'سلب مسئولیت پزشکی برای محصولات و خدمات Felizbay. اطلاعات فقط برای مقاصد اطلاعاتی و آموزشی.',
+  },
+  he: {
+    title: 'כתב ויתור רפואי — Felizbay',
+    description: 'כתב ויתור רפואי למוצרים ושירותים של Felizbay. מידע למטרות מידע וחינוכיות בלבד.',
+  },
+  hr: {
+    title: 'Medicinsko odricanje od odgovornosti — Felizbay',
+    description:
+      'Medicinsko odricanje od odgovornosti za Felizbay proizvode i usluge. Informacije samo u informativne i obrazovne svrhe.',
+  },
+  hu: {
+    title: 'Orvosi felelősség kizárása — Felizbay',
+    description:
+      'Orvosi nyilatkozat a Felizbay termékekről és szolgáltatásokról. Információk csak tájékoztató és oktatási célokat szolgálnak.',
+  },
+  id: {
+    title: 'Penafian Medis — Felizbay',
+    description:
+      'Penafian medis untuk produk dan layanan Felizbay. Informasi hanya untuk tujuan informasi dan pendidikan.',
+  },
+  kk: {
+    title: 'Медициналық жауапкершіліктен бас тарту — Felizbay',
+    description:
+      'Felizbay өнімдері мен қызметтері үшін медициналық жауапкершіліктен бас тарту. Ақпарат тек ақпараттық және білім беру мақсатында.',
+  },
+  lt: {
+    title: 'Medicinos atsisakymas — Felizbay',
+    description:
+      'Medicinos atsakomybės apribojimas dėl Felizbay produktų ir paslaugų. Informacija tik informaciniais ir švietimo tikslais.',
+  },
+  lv: {
+    title: 'Medicīniskā atruna — Felizbay',
+    description:
+      'Medicīniskā atruna par Felizbay produktiem un pakalpojumiem. Informācija tikai informatīviem un izglītojošiem nolūkiem.',
+  },
+  ms: {
+    title: 'Penafian Perubatan — Felizbay',
+    description:
+      'Penafian perubatan untuk produk dan perkhidmatan Felizbay. Maklumat untuk tujuan maklumat dan pendidikan sahaja.',
+  },
+  ro: {
+    title: 'Disclaimer medical — Felizbay',
+    description:
+      'Exonerare medicală pentru produsele și serviciile Felizbay. Informații doar în scop informativ și educațional.',
+  },
+  sk: {
+    title: 'Lekárske odmietnutie zodpovednosti — Felizbay',
+    description:
+      'Lekárske vylúčenie zodpovednosti za produkty a služby Felizbay. Informácie len na informačné a vzdelávacie účely.',
+  },
+  sl: {
+    title: 'Medicinska zavrnitev odgovornosti — Felizbay',
+    description:
+      'Medicinska zavrnitev odgovornosti za izdelke in storitve Felizbay. Informacije samo za informativne in izobraževalne namene.',
+  },
+  sr: {
+    title: 'Медицал Дисцлаимер — Felizbay',
+    description:
+      'Медицинско одрицање одговорности за Felizbay производе и услуге. Информације само у информативне и образовне сврхе.',
+  },
+  th: {
+    title: 'ข้อสงวนสิทธิ์ทางการแพทย์ — Felizbay',
+    description:
+      'ข้อจำกัดความรับผิดชอบทางการแพทย์สำหรับผลิตภัณฑ์และบริการของ Felizbay ข้อมูลเพื่อวัตถุประสงค์ในการให้ข้อมูลและการศึกษาเท่านั้น',
+  },
+  tl: {
+    title: 'Disclaimer — Felizbay',
+    description:
+      'Medikal na disclaimer para sa mga produkto at serbisyo ng Felizbay. Impormasyon para sa mga layuning pang-impormasyon at pang-edukasyon lamang.',
+  },
+  tr: {
+    title: 'Tıbbi Sorumluluk Reddi — Felizbay',
+    description:
+      'Felizbay ürün ve hizmetlerine ilişkin tıbbi sorumluluk reddi beyanı. Yalnızca bilgilendirme ve eğitim amaçlı bilgiler.',
+  },
+  uk: {
+    title: 'Медична відмова від відповідальності — Felizbay',
+    description:
+      'Медична відмова від відповідальності щодо продуктів і послуг Felizbay. Інформація лише для інформаційних та освітніх цілей.',
+  },
+  uz: {
+    title: 'Tibbiy javobgarlikdan voz kechish — Felizbay',
+    description:
+      "Felizbay mahsulotlari va xizmatlari uchun tibbiy rad etish. Ma'lumot faqat ma'lumot va ta'lim maqsadlarida.",
   },
 };
 const meta = META[lang] || META.en;
