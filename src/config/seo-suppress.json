@@ -13,5 +13,5 @@
   "compareAllowlist": [],
   "compareRegex": "^\\/(?:[a-z]{2}\\/)?compare\\/([^/]+)\\/?$",
   "minWordsToIndex": 100,
-  "paths": ["/terms"]
+  "paths": []
 }
