@@ -32,6 +32,11 @@
 /search/*
   Cache-Control: public, max-age=0, s-maxage=300
 
+# HSTS: site is HTTPS-only (www→apex 301, CF Always Use HTTPS).
+# Deliberately NO preload directive — semi-irreversible, add only after a
+# full-subdomain HTTPS audit. CSP intentionally absent: heavy inline scripts
+# (Astro islands + Turnstile + CF beacon) would require nonce/hash work.
 /*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
   Cache-Control: public, max-age=0, s-maxage=3600
   CDN-Cache-Control: public, max-age=3600
