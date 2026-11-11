@@ -2174,3 +2174,11 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - 误报机理：langdetect 对这 12 语言模型弱，gate 正文样本（title+h1+前 1200 字符）混入 frontmatter EN 规格表（Shape/Model/Wall thickness…全语言统一 EN 渲染）后检测翻转为 en（conf 0.42-0.9）；扩大采样窗口则部分语言翻转为近亲误判（et→fi、tl→pt、lt→pl、sk/sl→cs），更不可用。
 
 **修复**：A 检查对 PDP 正文改用确定性词典覆盖判定——`localizeMdxBody` 逐块查词典，**源块全覆盖 = 正文机械性全翻译**。gate 启动时加载 5 个 PDP MDX 非表格块 + 词典：全覆盖 → 跳过正文统计检测（仅保留 title/h1 单独校验）；有缺口 → 确定性 `[X]`（精确到块数）+ 统计检测照跑作补充。结果：告警 105→80，`[X]`/翻译缺口清零，阻断 0；剩余 80 条全为 `[C]` 薄内容（产品列表页 220-290 / 法律页 290-394 / 计算器 243 / ai-answer-center 159 等，全语言结构性特征，warn-only 设计内，非缺口）。
+
+### 19.13 全站默认 og:image (`0dab689`)
+
+审计发现**首页（根 + 37 语言）及全部无图页无 og:image**——社交分享（WhatsApp/Facebook/LinkedIn）无预览图。根因：`Metadata.astro` 的 `defaultOgImage` prop 与 config 管线俱在，但 `config.yaml` 无 `metadata.openGraph` 节，lodash merge 后 `images: []`，`buildOpenGraph()` 返回 undefined。
+
+**修复**：`config.yaml` `metadata.openGraph.images[0]` 指向现有工厂图 `round-grey-pool-1.webp`（绝对 URL → `adaptOpenGraphImages` remote 分支原样使用，与既有 228 个页级 og 图行为一致）。merge 链保证页级图照常覆盖默认（PDP og 验证未污染），twitter card 由 `summary` 自动升 `summary_large_image`。
+
+**结果**：og:image 覆盖 228→602/662 页；余 60 页全为 noindex（keystatic 管理页/重定向壳）；可索引页缺图 0。生产已验（首页 og:image 200 image/webp）。附带核查：og:image 本地资产 5 个全部存在；JSON-LD 类型分布健康（Product 114/ProductGroup 76/Article 38/BreadcrumbList 396/FAQPage 364，PDP 全带 Product 载荷）；search-index.json 65 条合法；`/news/` 与 rss.xml 为 news-worker 动态渲染（D1 无新闻时 0 items 属内容状态非接线缺陷）。
