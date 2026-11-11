@@ -2142,3 +2142,13 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 - **语义修正 (6 PSI = 工作上限)**: 37 份 about.yaml "Pressure testing **above** the rated 4-5 PSI working range" → "**at the top of** the rated 4-6 PSI working range" (EN + 36 语言同句英文); procurement-guides "tested above its operating point" → "tested at the top of its operating range" + "Why test at 6 PSI" Q/A 重写; drop-stitch-core.md "never inflation targets" 句删除改为 QC-hold 表述; 5 个 PDP mdx 安全段 "safety ratings, not inflation targets" 矛盾措辞删除 ("are factory safety ratings"); hot-tub ×2 QC 行 → "factory quality-control hold at the top of the 4–6 PSI operating range"。
 - **排除项**: TECH.md 历史记录、docs/ai-visibility-baseline.md (dated 快照)、`.cache/` 翻译缓存、`src/i18n/generated/` (构建再生成)、`Ø 4–5 m` 尺寸 / `4–5 tonnes` / guides.ts 4.5 PSI 热天例子等非压力 4–5 保留。
 - **收尾阻塞**: 原版 PDF 数字修订 (5–8/15 → 4–6/8) 待工厂提供修订版手册 (页面披露已足够, 不阻塞发布); 其余同 19.8。
+
+### 19.10 泰文分词低估修复 + 全站孤儿扫描 (2026-11-11, `ec33c87`)
+
+全站审计发现的**真 SEO bug**: 泰文无词间空格, 全站 6 处空白分词器系统性低估泰文页 ~4-5 倍:
+
+- **实锤受害页**: `th/disclaimer` 97 空白词 < `minWordsToIndex: 100` 阈值 → 被 `generate-sitemaps.mjs` 逐出全部 sitemap, 但页面 index,follow + 自指 canonical — 可索引却无 sitemap 入口, 孤儿化。实际内容 467 词当量 (2241 泰文字符)。
+- **险情**: th/privacy (135) / th/terms (150) 距运行期 noindex 兜底线仅 32-50 词余量。
+- **修复口径 (6 处统一)**: `words = 非泰空白 tokens + floor(泰文字符 / 5)`; 折算率 5 字符/词由四个实页校准 (terms≈5.22 / privacy≈5.36 / disclaimer≈5.84 / products≈3.73)。落点: `generate-sitemaps.mjs` (sitemap 纳入, 决定性) / `seo-suppress.ts` (运行期 noindex) / `05_ci_gate.py` (C 测量) / `i18n-wordcount.mjs` / `analyzer.ts` / `news-render.ts` (readingTime)。
+- **孤儿判定法**: index,follow + canonical 自指 + 不在任何 sitemap。扫描脚本路径归一化两踩坑 (sitemap `<loc>` 去协议域名后仍带前导斜杠, 与 dist 相对路径不匹配 → 536 全量误报)。修复后全站唯一孤儿即 th/disclaimer, 修复后归零。
+- **验证**: sitemap 536→537 URL (th/disclaimer 回归, hreflang 38 条往返齐全); gate 告警 108→105 (3 条泰文假 C 消除; 余 th/products 284 词为准确计数, 与各语言产品列表页 220-380 词同特征, warn-only)。CI 三 workflow 全绿; 生产复验 sitemap 含 th/disclaimer + 页面 200/自指/无 noindex。
