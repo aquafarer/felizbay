@@ -2193,3 +2193,13 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **gate**：0 阻断 / 81 告警（+1：`[C] /terms/ 295 词`——法律页薄内容与 /disclaimer/ 381 同特征，warn-only）。da/no terms 重复 title `[E]` 为存量（两种语言法律术语同用 "Vilkår og betingelser"，hreflang 正确无碍）。
 - **canonical 链**：607 页全查无链（A→B→C）/无 404 目标；4 条良性残留（404 页 canonical、keystatic 相对 canonical、en/search 镜像→noindex search——均设计内）。
 - **审计脚本坑**：URL 归一化前导斜杠 bug 本轮第三次出现（canonical/hreflang 绝对 URL 去域名后带 `/`，与 dist 相对键不匹配）——662 页全图分析前必须统一归一化。
+
+### 19.15 内链图可达性审计 + footer Disclaimer 接线 (`d76cdae`)
+
+662 页 dist 全量内链图分析（BFS 自根页，区别于 sitemap 孤儿——链接孤儿 = sitemap 在册但无内链入链，Google 抓取优先级受损）：
+
+- **发现**：37 个 `/disclaimer/` 页（根 + 36 语言）**零内链入链**——footer secondaryLinks 有 Terms/Privacy/Returns & Warranty 但从未接线 Disclaimer。纯接线缺口：`nav.disclaimer` 翻译 40/40 生成 ui 文件全在（de "Medizinischer Haftungsausschluss"、th "ข้อจำกัดความรับผิดชอบทางการแพทย์" 等），Footer navTextMap 也早有 `'Medical Disclaimer': 'nav.disclaimer'` 映射。
+- **修复**：`navigation.yaml` secondaryLinks 补 Medical Disclaimer → `/disclaimer/`。生产四语言（en/de/th/ar）footer 链接验证全部本地化生效。
+- **结果**：链接孤儿 45→8；**537/537 真实 HTML sitemap 页全部经内链可达**，最大爬深 3 层。余 8 = 7 个 sitemap XML 机器文件（robots.txt 引用，非 HTML 链接对象）+ `/ai-answer-center/`（AI 面向端点，经 llms.txt + sitemap + geo-intent 发现，刻意不入人类导航——若未来要人类入口，建议从 /faq/ 或 /support/ 接线）。
+- **附带核查**：canonical 链 607 页 0 链/0 死目标；/en/ 镜像内链 40 条全部来自 /en/ 页自身导航（无害）；404 页/keystatic 相对 canonical/search 镜像 4 条良性残留维持不变。
+- **方法论**：链接图 BFS 用 dist 静态 HTML 抽取（`<a href>` 全量），内链含 noindex 页作爬取路径；sitemap 页集来自 dist 7 个 sitemap `<loc>`。
