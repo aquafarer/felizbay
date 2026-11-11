@@ -2164,3 +2164,13 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 - **遗留路由**：`/blog/`、`/factory/`、`/de/blog/` 生产 404 —— 2026-10 boat-content 清理的既定设计（不重引入 LEGACY_REDIRECTS），内部链接 0 断链，维持现状。
 - **安全响应头**：`public/_headers` `/*` 块新增 `Strict-Transport-Security: max-age=31536000; includeSubDomains`（刻意**不带 preload**，需全子域 HTTPS 审计后再加；CSP 刻意缺席——Astro 内联 islands + Turnstile + CF beacon 需 nonce/hash 改造，记录为延后项）。生产已验证响应头生效。原有 nosniff/XFO/referrer-policy/permissions-policy 齐全。
 - **CI 教训**：`72653e3` Build & Deploy 因 TECH.md 未过 prettier 失败（`Add-Content` 追加后必须 `npx prettier --write TECH.md` 再提交）；下一个提交已修复。另：docs-only 提交也会跑完整 deploy 流程。
+
+### 19.12 gate PDP 误报治理：确定性词典覆盖检查 (`710386b`)
+
+gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 PDP：az/et/hu/id/lt/lv/ms/sk/sl/tl/tr/uz 的 hot-tub-round / hot-tub-square-rect / rectangular-drop-stitch-pool）经全量核查**全部为 langdetect 误报**：
+
+- `product-mdx.l10n.json` 36 语言 × 38 块（53 源块去重，2 个 MDX 表格块设计保持 EN）全部真翻译；
+- id/ms/hu/uz 渲染正文人工抽查均为纯目标语言；
+- 误报机理：langdetect 对这 12 语言模型弱，gate 正文样本（title+h1+前 1200 字符）混入 frontmatter EN 规格表（Shape/Model/Wall thickness…全语言统一 EN 渲染）后检测翻转为 en（conf 0.42-0.9）；扩大采样窗口则部分语言翻转为近亲误判（et→fi、tl→pt、lt→pl、sk/sl→cs），更不可用。
+
+**修复**：A 检查对 PDP 正文改用确定性词典覆盖判定——`localizeMdxBody` 逐块查词典，**源块全覆盖 = 正文机械性全翻译**。gate 启动时加载 5 个 PDP MDX 非表格块 + 词典：全覆盖 → 跳过正文统计检测（仅保留 title/h1 单独校验）；有缺口 → 确定性 `[X]`（精确到块数）+ 统计检测照跑作补充。结果：告警 105→80，`[X]`/翻译缺口清零，阻断 0；剩余 80 条全为 `[C]` 薄内容（产品列表页 220-290 / 法律页 290-394 / 计算器 243 / ai-answer-center 159 等，全语言结构性特征，warn-only 设计内，非缺口）。
