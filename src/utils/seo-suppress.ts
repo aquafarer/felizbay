@@ -32,7 +32,15 @@ export function countWords(html: string): number {
     .replace(/<(script|style|nav|header|footer|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z#0-9]+;/gi, ' ');
-  return text.split(/\s+/).filter(Boolean).length;
+  // 泰文无词间空格：空白分词低估 ~4-5 倍；泰文字符按 5 字符/词折算（与 generate-sitemaps/05_ci_gate 同口径）
+  const thaiChars = (text.match(/[\u0E00-\u0E7F]/g) || []).length;
+  if (!thaiChars) return text.split(/\s+/).filter(Boolean).length;
+  return (
+    text
+      .replace(/[\u0E00-\u0E7F]/g, ' ')
+      .split(/\s+/)
+      .filter(Boolean).length + Math.floor(thaiChars / 5)
+  );
 }
 
 export interface IndexDecision {

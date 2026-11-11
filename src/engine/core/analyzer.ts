@@ -135,5 +135,13 @@ export function stripHtml(text: string): string {
 }
 
 function countWords(text: string): number {
-  return text.split(/\s+/).filter(Boolean).length;
+  // 泰文无词间空格：空白分词低估 ~4-5 倍；泰文字符按 5 字符/词折算（与 generate-sitemaps 同口径）
+  const thaiChars = (text.match(/[\u0E00-\u0E7F]/g) || []).length;
+  if (!thaiChars) return text.split(/\s+/).filter(Boolean).length;
+  return (
+    text
+      .replace(/[\u0E00-\u0E7F]/g, ' ')
+      .split(/\s+/)
+      .filter(Boolean).length + Math.floor(thaiChars / 5)
+  );
 }

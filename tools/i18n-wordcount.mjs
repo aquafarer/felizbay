@@ -50,7 +50,15 @@ function seo(p) {
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-  return { noindex, words: clean.split(/\s+/).filter(Boolean).length };
+  // 泰文无词间空格：空白分词低估 ~4-5 倍；泰文字符按 5 字符/词折算（与 generate-sitemaps 同口径）
+  const thaiChars = (clean.match(/[\u0E00-\u0E7F]/g) || []).length;
+  const words = thaiChars
+    ? clean
+        .replace(/[\u0E00-\u0E7F]/g, ' ')
+        .split(/\s+/)
+        .filter(Boolean).length + Math.floor(thaiChars / 5)
+    : clean.split(/\s+/).filter(Boolean).length;
+  return { noindex, words };
 }
 for (const p of routes) {
   try {

@@ -226,7 +226,11 @@ export const categorySlug = toSlug;
 export const tagSlug = toSlug;
 
 export function readingTime(body: string): number {
-  const words = (body || '').trim().split(/\s+/).filter(Boolean).length;
+  // 泰文无词间空格：空白分词低估 ~4-5 倍；泰文字符按 5 字符/词折算（与 generate-sitemaps 同口径）
+  const thaiChars = ((body || '').match(/[\u0E00-\u0E7F]/g) || []).length;
+  const words = thaiChars
+    ? Math.floor(thaiChars / 5) + (body || '').replace(/[\u0E00-\u0E7F]/g, ' ').trim().split(/\s+/).filter(Boolean).length
+    : (body || '').trim().split(/\s+/).filter(Boolean).length;
   if (words === 0) return 1;
   return Math.max(1, Math.round(words / 200));
 }

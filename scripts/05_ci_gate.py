@@ -44,6 +44,9 @@ LOCALES = {
 # 跨语言 canonical 折叠是本站设计（本地页 → EN 根），G 检查时两边都去语言前缀比较
 STRIP_LOCALE = (LOCALES - {"en"}) | {"zh"}
 
+# 泰文字符区间（无词间空格文字，见 count_words）
+THAI_CHARS = re.compile(r"[\u0E00-\u0E7F]")
+
 
 def strip_locale(p):
     seg = p.strip("/").split("/")
@@ -93,6 +96,16 @@ def main_text(html):
     chunk = TAG_STRIP.sub(" ", m.group(1) if m else body)
     chunk = re.sub(r"<!--.*?-->", " ", chunk, flags=re.S)
     return " ".join(re.sub(r"<[^>]+>", " ", chunk).split())
+
+
+def count_words(text):
+    """泰文无词间空格：空白分词低估 ~4-5 倍（th/disclaimer 曾以 97 空白词被误逐出 sitemap）。
+    泰文字符按 5 字符/词折算（实测校准：th/terms≈5.2 / privacy≈5.4 / disclaimer≈5.8 / products≈3.7），
+    与 generate-sitemaps.mjs / seo-suppress.ts 同口径。"""
+    thai = len(THAI_CHARS.findall(text))
+    if not thai:
+        return len(text.split())
+    return len(THAI_CHARS.sub(" ", text).split()) + thai // 5
 
 
 def attr(html, pat, default=""):
@@ -156,7 +169,7 @@ def main():
         canonical = attr(html, r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']*)["\']')
         h1s = [re.sub(r"<[^>]+>", " ", h).strip() for h in re.findall(r"<h1\b[^>]*>(.*?)</h1>", html, re.S | re.I)]
         text = main_text(html)
-        words = len(text.split())
+        words = count_words(text)
         noindex = "noindex" in robots.lower()
         expected = locale_of(rel)
         in_sitemap = path_key in sitemap_paths
