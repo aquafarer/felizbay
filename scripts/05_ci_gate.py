@@ -47,6 +47,36 @@ STRIP_LOCALE = (LOCALES - {"en"}) | {"zh"}
 # 泰文字符区间（无词间空格文字，见 count_words）
 THAI_CHARS = re.compile(r"[\u0E00-\u0E7F]")
 
+# PDP 正文块（表格块除外——MDX 表格设计保持 EN）与块级翻译词典。
+# A 检查的 PDP 正文缺口用词典覆盖做确定性判定（见 A 检查内注释）。
+_REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_PRODUCTS_DIR = os.path.join(_REPO, "src", "content", "products")
+_MDX_L10N_PATH = os.path.join(_REPO, "src", "data", "product-mdx.l10n.json")
+
+
+def _load_pdp_non_table_blocks():
+    out = {}
+    try:
+        for fn in sorted(os.listdir(_PRODUCTS_DIR)):
+            if not fn.endswith(".mdx"):
+                continue
+            raw = open(os.path.join(_PRODUCTS_DIR, fn), encoding="utf-8").read()
+            parts = re.split(r"^---\s*$", raw, maxsplit=2, flags=re.M)
+            body = parts[2] if len(parts) == 3 else raw
+            blocks = [b.strip() for b in re.split(r"\n{2,}", body.strip()) if b.strip()]
+            out[fn[:-4]] = [b for b in blocks if not re.search(r"^\s*\|", b, re.M)]
+    except OSError:
+        pass
+    return out
+
+
+PDP_NON_TABLE_BLOCKS = _load_pdp_non_table_blocks()
+try:
+    with open(_MDX_L10N_PATH, encoding="utf-8") as _f:
+        MDX_L10N = json.load(_f)
+except (OSError, json.JSONDecodeError):
+    MDX_L10N = {}
+
 
 def strip_locale(p):
     seg = p.strip("/").split("/")
@@ -181,16 +211,39 @@ def main():
         if "A" not in skip and words >= 30 and not noindex:
             if lang and lang != expected:
                 err("A", f"<html lang=\"{lang}\"> 与 URL locale \"{expected}\" 不符")
-            sample = " ".join([title, " ".join(h1s), text[:1200]])
-            mism, det, conf = is_mismatch(expected, sample)
-            if mism and det == "en" and expected != "en":
-                # 背书语言（fr/de/es/it）页面正文仍是英文 = 内容翻译缺口。
-                # 不阻断（存量普遍存在，阻断会让闸门失去信号价值），输出清单供内容工程排期；
-                # 阻断项只保留结构错误（lang 属性不符 / 语言串台）。
-                trans_gap.append(f"{rel}\t{expected}\t{title[:100]}")
-                warnings.append(f"[X] {rel} — locale={expected} 内容仍是英文（未翻译），conf={conf}　title={title[:60]!r}")
-            elif mism:
-                err("A", f"locale={expected} 但实际语种为 {det}（语言串台），conf={conf}　title={title[:60]!r}")
+            # PDP 正文改用确定性词典覆盖检查（2026-11-11 治误报）：langdetect 对
+            # az/et/hu/id/lt/lv/ms/sk/sl/tl/tr/uz 12 个拉丁语言模型弱，正文样本混入
+            # frontmatter EN 规格表后 25 页全量误报"内容仍是英文"（人工核查词典
+            # 36 语言 × 38 块全部真翻译，页面正文均已是目标语言）。localizeMdxBody
+            # 逐块查词典，源块全覆盖 = 正文机械性全翻译，统计检测只剩噪声。
+            pdp_blocks = PDP_NON_TABLE_BLOCKS.get(
+                path_key.split("/products/")[-1], None
+            ) if "/products/" in path_key and expected != "en" else None
+            run_body_stats = True
+            if pdp_blocks:
+                ldict = MDX_L10N.get(expected, {})
+                missing = [b for b in pdp_blocks if not ldict.get(b) or ldict.get(b) == b]
+                if missing:
+                    # 真缺口：精确到块（确定性），统计检测照跑作补充信号
+                    trans_gap.append(f"{rel}\t{expected}\tPDP {len(missing)}/{len(pdp_blocks)} blocks untranslated")
+                    warnings.append(
+                        f"[X] {rel} — PDP 正文 {len(missing)}/{len(pdp_blocks)} 块未翻译"
+                        f"（product-mdx.l10n.json[{expected}] 缺失，确定性检查）"
+                    )
+                else:
+                    # 全覆盖：跳过正文统计检测（langdetect 误报源），title/h1 校验保留
+                    run_body_stats = False
+            if run_body_stats:
+                sample = " ".join([title, " ".join(h1s), text[:1200]])
+                mism, det, conf = is_mismatch(expected, sample)
+                if mism and det == "en" and expected != "en":
+                    # 背书语言（fr/de/es/it）页面正文仍是英文 = 内容翻译缺口。
+                    # 不阻断（存量普遍存在，阻断会让闸门失去信号价值），输出清单供内容工程排期；
+                    # 阻断项只保留结构错误（lang 属性不符 / 语言串台）。
+                    trans_gap.append(f"{rel}\t{expected}\t{title[:100]}")
+                    warnings.append(f"[X] {rel} — locale={expected} 内容仍是英文（未翻译），conf={conf}　title={title[:60]!r}")
+                elif mism:
+                    err("A", f"locale={expected} 但实际语种为 {det}（语言串台），conf={conf}　title={title[:60]!r}")
             # 单独校验 title 与 H1：实测到 /ar/people/ 正文是阿拉伯语但 title 是希腊语，
             # 合并样本会被正文“稀释”而漏报，因此必须单独跑一道。
             for field, val in (("title", title), ("h1", " ".join(h1s))):
