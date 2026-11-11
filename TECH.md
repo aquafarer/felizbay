@@ -2182,3 +2182,14 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 **修复**：`config.yaml` `metadata.openGraph.images[0]` 指向现有工厂图 `round-grey-pool-1.webp`（绝对 URL → `adaptOpenGraphImages` remote 分支原样使用，与既有 228 个页级 og 图行为一致）。merge 链保证页级图照常覆盖默认（PDP og 验证未污染），twitter card 由 `summary` 自动升 `summary_large_image`。
 
 **结果**：og:image 覆盖 228→602/662 页；余 60 页全为 noindex（keystatic 管理页/重定向壳）；可索引页缺图 0。生产已验（首页 og:image 200 image/webp）。附带核查：og:image 本地资产 5 个全部存在；JSON-LD 类型分布健康（Product 114/ProductGroup 76/Article 38/BreadcrumbList 396/FAQPage 364，PDP 全带 Product 载荷）；search-index.json 65 条合法；`/news/` 与 rss.xml 为 news-worker 动态渲染（D1 无新闻时 0 items 属内容状态非接线缺陷）。
+
+### 19.14 结构审计：hreflang 互惠全量核查 + 根 /terms/ 解除抑制 (`9b5e643`)
+
+全站结构审计（662 页 dist 静态图分析，非抽样）：
+
+- **hreflang 互惠**：8898 对 alternate 全量核查（规则：P 声明 L→X 时 X 须自指 L→X，簇内互指含自指的 Google 规范）。发现 **36 条 HREFLANG_TO_NOINDEX**——36 个 `{lang}/terms/` 页的 hreflang en 与 x-default 指向 noindex 的根 `/terms/`（hreflang 目标必须可索引，规范违规）。
+- **根因**：`seo-suppress.json` 与 `sitemap-exclude.json` 双配置 `paths: ["/terms"]` 均源自初始提交（34 语言时代遗留）；36 个本地化 terms 页全部可索引在册，姊妹法律页 `/disclaimer/` 从未被抑制——不对称为遗留非决策（TECH.md 无任何 /terms noindex 决策记录，prod-smoke 无相关断言）。
+- **修复**：双配置 `paths` 清空（regex 不动）。根 `/terms/` 转 index,follow 自指 canonical 并入 sitemap（537→538 URL）；`/en/terms/` 维持 noindex 镜像 canonical→根（同 /en/disclaimer/ 模式）。生产验证：/terms/ 200 indexable、sitemap 538、de/terms 的 en-alt 目标 200。
+- **gate**：0 阻断 / 81 告警（+1：`[C] /terms/ 295 词`——法律页薄内容与 /disclaimer/ 381 同特征，warn-only）。da/no terms 重复 title `[E]` 为存量（两种语言法律术语同用 "Vilkår og betingelser"，hreflang 正确无碍）。
+- **canonical 链**：607 页全查无链（A→B→C）/无 404 目标；4 条良性残留（404 页 canonical、keystatic 相对 canonical、en/search 镜像→noindex search——均设计内）。
+- **审计脚本坑**：URL 归一化前导斜杠 bug 本轮第三次出现（canonical/hreflang 绝对 URL 去域名后带 `/`，与 dist 相对键不匹配）——662 页全图分析前必须统一归一化。
