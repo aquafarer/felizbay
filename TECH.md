@@ -2152,3 +2152,15 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 - **修复口径 (6 处统一)**: `words = 非泰空白 tokens + floor(泰文字符 / 5)`; 折算率 5 字符/词由四个实页校准 (terms≈5.22 / privacy≈5.36 / disclaimer≈5.84 / products≈3.73)。落点: `generate-sitemaps.mjs` (sitemap 纳入, 决定性) / `seo-suppress.ts` (运行期 noindex) / `05_ci_gate.py` (C 测量) / `i18n-wordcount.mjs` / `analyzer.ts` / `news-render.ts` (readingTime)。
 - **孤儿判定法**: index,follow + canonical 自指 + 不在任何 sitemap。扫描脚本路径归一化两踩坑 (sitemap `<loc>` 去协议域名后仍带前导斜杠, 与 dist 相对路径不匹配 → 536 全量误报)。修复后全站唯一孤儿即 th/disclaimer, 修复后归零。
 - **验证**: sitemap 536→537 URL (th/disclaimer 回归, hreflang 38 条往返齐全); gate 告警 108→105 (3 条泰文假 C 消除; 余 th/products 284 词为准确计数, 与各语言产品列表页 220-380 词同特征, warn-only)。CI 三 workflow 全绿; 生产复验 sitemap 含 th/disclaimer + 页面 200/自指/无 noindex。
+
+### 19.11 全站质量审计收尾轮 (2026-11-11, `4bce3f6`)
+
+泰文修复后的全站扫描结果（662 页 dist + 生产复验）：
+
+- **乱码**：dist 662 页 U+FFFD 扫描 0 命中。
+- **JSON-LD**：3314 个 ld+json 块全部 JSON.parse 通过，0 解析失败。
+- **图片 alt**：3258 个 `<img>` 全部带 alt，0 缺失。
+- **孤儿页**：修复后全站 0（唯一孤儿 th/disclaimer 已随 19.10 回归 sitemap）。
+- **遗留路由**：`/blog/`、`/factory/`、`/de/blog/` 生产 404 —— 2026-10 boat-content 清理的既定设计（不重引入 LEGACY_REDIRECTS），内部链接 0 断链，维持现状。
+- **安全响应头**：`public/_headers` `/*` 块新增 `Strict-Transport-Security: max-age=31536000; includeSubDomains`（刻意**不带 preload**，需全子域 HTTPS 审计后再加；CSP 刻意缺席——Astro 内联 islands + Turnstile + CF beacon 需 nonce/hash 改造，记录为延后项）。生产已验证响应头生效。原有 nosniff/XFO/referrer-policy/permissions-policy 齐全。
+- **CI 教训**：`72653e3` Build & Deploy 因 TECH.md 未过 prettier 失败（`Add-Content` 追加后必须 `npx prettier --write TECH.md` 再提交）；下一个提交已修复。另：docs-only 提交也会跑完整 deploy 流程。
