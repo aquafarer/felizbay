@@ -2215,4 +2215,6 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **分类页框架（§2）**：products/index.astro 尾部新增 B2B framing 条（Full Factory Collection → /products/specs/、Customizable → /oem-odm/、Commercial → /commercial-pools/）。
 - **llms.txt 手动同步**（铁律）：12 条新条目 + Markdown Endpoint Index 计数 17→27 / 6→8。
 - **验证**：build 675 页 0 断链/断资产/hreflang；gate PASS；check 全绿；CI 三工作流 ALL_GREEN；生产 8 页 + llms.txt 全部验证 200 + 标记命中（compare "Est. volume"、finder "data-models"、products "Full Factory Collection"）。
+- **后置验证（`df71e80`）**：内链图 BFS 复核——558 sitemap 页 550 可达，孤儿仍为已知 8 条（7 个 XML sitemap 机器文件 + ai-answer-center），13 个新页全部有内链入链，爬深 3；hot-tub-round dist 页确认含 §8 要求的零售/批发双渠道价格澄清（"Online price for the fixed retail set (SKU FZ-SPA-RND) — single-piece purchase. FOB Qingdao wholesale pricing ... listed separately"）。
 - **遗留**：蓝/灰零售 SKU 尺寸 12 字段（dimsKnown=false）、灰款 +$100 说明、RS2018 实拍、加热器兼容清单、D1 新闻内容、B2B 产能数据——均业务侧阻塞，不编造。
+- **fast-follow（docx §4 P1）**：对比页"勾选 2-4 款并排比较"交互升级未做——现有 48 SKU 筛选表已覆盖核心选型场景，若实施建议在 compare.astro 工厂表上增加 checkbox 选择 + 侧边对比栏（数据源同 `pool-catalog.ts`，无新数据债）。
