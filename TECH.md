@@ -2217,4 +2217,14 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **验证**：build 675 页 0 断链/断资产/hreflang；gate PASS；check 全绿；CI 三工作流 ALL_GREEN；生产 8 页 + llms.txt 全部验证 200 + 标记命中（compare "Est. volume"、finder "data-models"、products "Full Factory Collection"）。
 - **后置验证（`df71e80`）**：内链图 BFS 复核——558 sitemap 页 550 可达，孤儿仍为已知 8 条（7 个 XML sitemap 机器文件 + ai-answer-center），13 个新页全部有内链入链，爬深 3；hot-tub-round dist 页确认含 §8 要求的零售/批发双渠道价格澄清（"Online price for the fixed retail set (SKU FZ-SPA-RND) — single-piece purchase. FOB Qingdao wholesale pricing ... listed separately"）。
 - **遗留**：蓝/灰零售 SKU 尺寸 12 字段（dimsKnown=false）、灰款 +$100 说明、RS2018 实拍、加热器兼容清单、D1 新闻内容、B2B 产能数据——均业务侧阻塞，不编造。
-- **fast-follow（docx §4 P1）**：对比页"勾选 2-4 款并排比较"交互升级未做——现有 48 SKU 筛选表已覆盖核心选型场景，若实施建议在 compare.astro 工厂表上增加 checkbox 选择 + 侧边对比栏（数据源同 `pool-catalog.ts`，无新数据债）。
+- **fast-follow（docx §4 P1）**：对比页"勾选 2-4 款并排比较"交互升级未做——现有 48 SKU 筛选表已覆盖核心选型场景，若实施建议在 compare.astro 工厂表上增加 checkbox 选择 + 侧边对比栏（数据源同 `pool-catalog.ts`，无新数据债）。（已于 19.17 实施）
+
+### 19.17 对比页勾选比较工具（docx §4 P1 fast-follow 落地）
+
+`compare.astro` 工厂 48 SKU 交互表新增"勾选 2-4 款并排比较"（19.16 记录的 fast-follow，无新数据债——属性直接从行单元格读取）：
+
+- **表格**：新增首列 "Pick" checkbox（48 个，`aria-label="Compare {item}"`）。
+- **浮动选择条**：`data-compare-bar` 固定底部，实时显示 "n of max 4 sizes selected"；勾 1 款提示 "pick at least 2" 并禁用比较按钮；尝试勾第 5 款自动回退并提示 "Maximum 4 sizes"。
+- **并排比较面板**：`data-compare-panel` 按 7 个属性行（Item/Series/Size/Wall/Est. volume/Packed weight/FOB USD）× 所选 SKU 列渲染，DOM 逐元素构建（无 innerHTML 注入面），末行 CTA → /request-quotation/；"Close"/"Clear" 均可收起。
+- **实现要点**：全部逻辑在既有 IIFE `<script>` 内（无顶层 return）；属性单元格用索引读取（checkbox 列占 index 0，ATTRS 常量表驱动）；系列筛选与勾选状态互不干扰。
+- **验证**：dist 49 处 `data-compare-check` 标记（48 checkbox + script）；build 0 断链；gate PASS；prettier/eslint/astro check 全绿。
