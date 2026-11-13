@@ -74,8 +74,8 @@ const CHECKS = [
   },
   {
     path: '/de/products/round-blue-drop-stitch-pool/',
-    markers: ['FAQPage', 'cost to run'],
-    desc: 'localized PDP renders FAQPage JSON-LD + FAQ content (ai_faq empty-array fallback regression)',
+    markers: ['FAQPage', 'Was kostet der Betrieb?'],
+    desc: 'localized PDP renders FAQPage JSON-LD + localized FAQ content (ai_faq empty-array fallback + faq.l10n Round 3 regression)',
   },
   {
     path: '/products/round-grey-drop-stitch-pool/',
