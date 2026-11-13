@@ -2203,3 +2203,16 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **结果**：链接孤儿 45→8；**537/537 真实 HTML sitemap 页全部经内链可达**，最大爬深 3 层。余 8 = 7 个 sitemap XML 机器文件（robots.txt 引用，非 HTML 链接对象）+ `/ai-answer-center/`（AI 面向端点，经 llms.txt + sitemap + geo-intent 发现，刻意不入人类导航——若未来要人类入口，建议从 /faq/ 或 /support/ 接线）。
 - **附带核查**：canonical 链 607 页 0 链/0 死目标；/en/ 镜像内链 40 条全部来自 /en/ 页自身导航（无害）；404 页/keystatic 相对 canonical/search 镜像 4 条良性残留维持不变。
 - **方法论**：链接图 BFS 用 dist 静态 HTML 抽取（`<a href>` 全量），内链含 noindex 页作爬取路径；sitemap 页集来自 dist 7 个 sitemap `<loc>`。
+
+### 19.16 pool.docx 优化轮：Finder Engine 2 / 对比页容量 / Compliance 页 / 12 篇新内容 (`57710ce`)
+
+外部优化审计文档（`pool.docx` 12 节）实施轮。前序会话已完成 Finder v2 骨架、retailSets dimsKnown 诚实降级、business candidates 等项；本轮补齐剩余缺口：
+
+- **Pool Finder Engine 2（§5）**：`find-your-pool.astro` 接入 `pool-catalog.ts` SSOT——`parseCatalogFit`（"Ø 2 × 0.5"/"3 × 2 × 0.8" 解析）+ `modelById` Map；全部 14 个 setup 填入真实目录型号 ID（对 48 SKU 逐一校验）；业务卡片渲染 per-model 表（Item/Size/Wall/FOB\*）+ `data-models` JSON；`renderWhy` 命名精确适配型号含 FOB；CTA prefill 携带 items 列表；个人路径 banner 指向工厂全尺寸范围（Ø 2–10 m）。
+- **对比页数据补齐（§4）**：Setup Time getter 断裂修复（`specGetter('setup')`→`specGetter('inflation')`——spec label 为 "Inflation time" 接线断裂而非数据缺失）；新增 Dimensions（size range）、Water Capacity（hot-tub-round ≈2,500 L）、Heater 行；`estimateVolumeLiters()` 几何容量估算；工厂 48 SKU 交互表新增 "Est. volume (L)" 列。
+- **Compliance 页（§8）**：新建 `/compliance/`——四类声明严格分离（产品符合性 CE/EN 16582-1、设计参考标准 ASTM F2666、材料合规 REACH/RoHS/Prop 65、工厂管理认证 ISO 9001:2015 SGS + BSCI amfori），每类含 "Not a claim that" 反向声明；证书有效期不编造（按需提供现行版本）。quality-control 页 Related B2B 加入口。
+- **12 篇新内容（§6）**：guides.ts +10 篇消费级（小院选型/3-4-5m 对比/圆方对比/4m 容量/地上池对比/冷水浴选型/SPA vs 硬质浴桶/加热成本/过滤泵选型/壁厚解析）+ procurement-guides.ts +2 篇 B2B（glamping 度假村采购、泳池品牌创业）——全部引用真实目录数据（48 SKU 尺寸/FOB/壁厚/1 t/m³）。
+- **分类页框架（§2）**：products/index.astro 尾部新增 B2B framing 条（Full Factory Collection → /products/specs/、Customizable → /oem-odm/、Commercial → /commercial-pools/）。
+- **llms.txt 手动同步**（铁律）：12 条新条目 + Markdown Endpoint Index 计数 17→27 / 6→8。
+- **验证**：build 675 页 0 断链/断资产/hreflang；gate PASS；check 全绿；CI 三工作流 ALL_GREEN；生产 8 页 + llms.txt 全部验证 200 + 标记命中（compare "Est. volume"、finder "data-models"、products "Full Factory Collection"）。
+- **遗留**：蓝/灰零售 SKU 尺寸 12 字段（dimsKnown=false）、灰款 +$100 说明、RS2018 实拍、加热器兼容清单、D1 新闻内容、B2B 产能数据——均业务侧阻塞，不编造。
