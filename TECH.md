@@ -2228,3 +2228,11 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **并排比较面板**：`data-compare-panel` 按 7 个属性行（Item/Series/Size/Wall/Est. volume/Packed weight/FOB USD）× 所选 SKU 列渲染，DOM 逐元素构建（无 innerHTML 注入面），末行 CTA → /request-quotation/；"Close"/"Clear" 均可收起。
 - **实现要点**：全部逻辑在既有 IIFE `<script>` 内（无顶层 return）；属性单元格用索引读取（checkbox 列占 index 0，ATTRS 常量表驱动）；系列筛选与勾选状态互不干扰。
 - **验证**：dist 49 处 `data-compare-check` 标记（48 checkbox + script）；build 0 断链；gate PASS；prettier/eslint/astro check 全绿。
+
+### 19.18 prod-smoke 全量回归 + de PDP 标记本地化修正 + 瞬时部署故障处置 (`a3dce73`)
+
+对比页工具落地后对生产环境跑完整 `scripts/prod-smoke.mjs`（60 项发布门禁），发现并处置两项：
+
+- **59/60 → 标记过时（非内容回归）**：`/de/products/round-blue-drop-stitch-pool/` 检查断言英文 FAQ 标记 "cost to run"，但 faq.l10n Round 3（2026-11）已把 ai_faq 问题本地化为 "Was kostet der Betrieb?"——本地化页正确渲染德语 FAQ + FAQPage JSON-LD，英文标记自然消失。修正：检查标记改为德语译文，回归描述扩展为 "empty-array fallback + faq.l10n coverage"。修正后 60/60 全过。教训：**prod-smoke 对本地化页断言英文内容属时间炸弹**——l10n 字典更新后必须同步检查标记（其余 /de/ 检查用属性/JSON-LD 标记，安全）。
+- **CI Build & Deploy 瞬时故障**：`a3dce73`（仅改 scripts/prod-smoke.mjs，不影响产物）部署步骤报 "Received a malformed response from the API"（wrangler 收到 Cloudflare Pages API 异常响应）——确认基础设施瞬时故障而非代码问题。处置：下载 CI 日志定位失败步骤 → API `rerun-failed-jobs` 重跑 → 绿。AI Index (Vectorize) 对该 SHA 显示 skipped 属路径过滤设计行为（scripts-only 变更）。
+- **CI 重跑操作记录**：GitHub token 可经 `git credential fill`（Windows Credential Manager，`manager` helper）取得用于 Actions API（日志下载/rerun）；重跑后轮询 run conclusion 而非重新推送。
