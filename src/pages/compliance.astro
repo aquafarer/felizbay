@@ -1,0 +1,267 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import { getProductCompliance } from '~/data/product-compliance';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Compliance & Documentation | ${SITE.name}`,
+    description: `Felizbay compliance documentation, clearly separated: product conformity (CE / EN 16582-1), design reference standards (ASTM F2666), material compliance (REACH, RoHS, Prop 65), factory certifications (ISO 9001:2015, BSCI) and how to request current certificates and test reports.`,
+    canonical: getCanonical('/compliance'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+const compliance = getProductCompliance('pool');
+
+/**
+ * Docx §8: never blend product conformity, design references, material
+ * compliance and management-system certification. Each block below states
+ * what the item IS, what it is NOT, and which products it applies to.
+ */
+const complianceCategories = [
+  {
+    icon: 'tabler:certificate',
+    title: 'Product Conformity',
+    what: 'Certification of the finished product against a safety standard.',
+    items: [
+      'CE marking per EN 16582-1 — safety requirements for residential in-ground and above-ground swimming pools.',
+    ],
+    applies: 'Residential pool products shipped into markets where CE marking applies.',
+    notClaim:
+      'Product conformity applies to the residential pool products as manufactured. It does not extend to public-use pools, commercial installations, or site work done by others.',
+  },
+  {
+    icon: 'tabler:blueprint',
+    title: 'Design Reference Standards',
+    what: 'Standards referenced during product design and documentation — not product certifications.',
+    items: ['ASTM F2666 — Standard Consumer Safety Specification for Portable Pool Safety (design reference).'],
+    applies: 'Residential pool and SPA tub designs.',
+    notClaim:
+      'A design reference documents which clauses informed the design. Referencing a residential standard never certifies the product for public or commercial pool use.',
+  },
+  {
+    icon: 'tabler:flask',
+    title: 'Material Compliance & Testing',
+    what: 'Chemical compliance of materials and laboratory material tests.',
+    items: [
+      'REACH (EU) — PVC material compliance per production batch.',
+      'RoHS (EU) — restricted substances in material components.',
+      'California Prop 65 — warning obligations for the US market.',
+      'ASTM D751 — tensile and seam strength testing of coated fabrics.',
+      'ASTM G154 — UV aging (weathering) performance of the fabric.',
+    ],
+    applies: 'All pool and SPA tub collections (double-layer drop-stitch PVC).',
+    notClaim:
+      'Material compliance demonstrates the material meets chemical and physical test requirements — it is not a product safety certification.',
+  },
+  {
+    icon: 'tabler:building-factory',
+    title: 'Factory Management Certifications',
+    what: 'Certifications of the manufacturing organization, not of individual products.',
+    items: [
+      'ISO 9001:2015 — quality management system (certified via SGS).',
+      'BSCI — social compliance audit (amfori membership).',
+    ],
+    applies: 'The manufacturing facility and its management systems.',
+    notClaim:
+      'A management-system certificate says the factory operates under audited processes — every product still passes its own QC and conformity checks.',
+  },
+];
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Compliance & Documentation' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Compliance &amp; Documentation
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Standards, Certificates &amp; Test Documentation
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Compliance claims are only useful when they are precise. This page separates what is certified, what is a design
+        reference, what is material testing, and what is a factory management certificate — and states plainly which
+        products each one applies to.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/quality-control/"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:shield-check" class="w-4 h-4" /> Quality Control
+        </a>
+        <a
+          href="/contact/?topic=compliance"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:file-certificate" class="w-4 h-4" /> Request Documents
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-14">
+      <div class="grid md:grid-cols-2 gap-4">
+        {complianceCategories.map((c) => (
+          <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+              <Icon name={c.icon} class="w-5 h-5" />
+            </span>
+            <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-1">{c.title}</h2>
+            <p class="text-sm font-medium text-gray-700 dark:text-slate-300 mb-3">{c.what}</p>
+            <ul class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed space-y-1.5 list-disc pl-5">
+              {c.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <p class="mt-3 text-xs text-gray-500 dark:text-slate-500">
+              <span class="font-semibold text-gray-700 dark:text-slate-300">Applies to:</span> {c.applies}
+            </p>
+            <p class="mt-1.5 text-xs text-amber-700 dark:text-amber-400 leading-relaxed">
+              <span class="font-semibold">Not a claim that:</span> {c.notClaim}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">
+        Certificates &amp; Third-Party Test Reports
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-5 max-w-3xl leading-relaxed">
+        Current copies of certificates and test reports — including their scope, covered product models and validity
+        periods — are provided on request, per document. We do not publish validity dates on this page because a
+        certificate is only as current as its latest audit cycle: request the document you need and you receive the
+        version in force today.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          {
+            icon: 'tabler:certificate',
+            title: 'CE / EN 16582-1',
+            text: 'Product conformity declaration and supporting documentation for residential pool products.',
+          },
+          {
+            icon: 'tabler:file-report',
+            title: 'Material test reports',
+            text: 'Batch material testing: REACH, RoHS, Prop 65, plus ASTM D751 tensile/seam and ASTM G154 UV aging results.',
+          },
+          {
+            icon: 'tabler:award',
+            title: 'ISO 9001:2015 certificate',
+            text: 'Factory quality management system certificate issued via SGS, with current scope and validity.',
+          },
+          {
+            icon: 'tabler:users-group',
+            title: 'BSCI audit report',
+            text: 'Social compliance audit summary under amfori BSCI, covering the manufacturing facility.',
+          },
+          {
+            icon: 'tabler:file-description',
+            title: 'Model documentation',
+            text: 'Model-level safety information and use documentation shipped with each product.',
+          },
+          {
+            icon: 'tabler:shield-check',
+            title: 'Warranty policy',
+            text: compliance.warranty + ' — full terms in the returns & warranty policy.',
+          },
+        ].map((d) => (
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800">
+            <span class="mb-3 flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+              <Icon name={d.icon} class="w-5 h-5" />
+            </span>
+            <h3 class="text-sm font-bold text-gray-900 dark:text-slate-100 mb-1.5">{d.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">{d.text}</p>
+          </div>
+        ))}
+      </div>
+      <p class="mt-5 text-sm text-gray-500 dark:text-slate-400">
+        Request any document via{' '}
+        <a href="/contact/?topic=compliance" class="text-primary dark:text-sky-400 hover:underline">
+          the contact form
+        </a>{' '}
+        or info@felizbay.com — state the product model and destination market so we send the correct scope.
+      </p>
+    </section>
+
+    <section class="mb-14 p-6 rounded-2xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30">
+      <h2 class="text-lg font-bold text-amber-900 dark:text-amber-200 mb-3">Scope Boundaries — What We Do Not Claim</h2>
+      <ul class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed space-y-2 list-disc pl-5">
+        <li>
+          Residential product standards (EN 16582-1, ASTM F2666) are referenced for residential models. They do not
+          certify any product for public swimming pools, commercial installations, or public-use SPA facilities.
+        </li>
+        <li>
+          A commercial or public installation requires project-specific confirmation of the applicable local standards,
+          permits and inspection regime — cite your requirements in your project review and we confirm what we can and
+          cannot support.
+        </li>
+        <li>
+          Material compliance (REACH/RoHS/Prop 65) and material tests (ASTM D751/G154) are not product safety
+          certifications.
+        </li>
+        <li>Factory certificates (ISO 9001, BSCI) cover the management system, not individual product conformity.</li>
+        <li>
+          No claim on this site may be read as certification of products we do not manufacture, or of installations
+          performed by others.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/quality-control/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          Quality Control &amp; Testing
+        </a>
+        <a
+          href="/manufacturing/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          Manufacturing Process
+        </a>
+        <a
+          href="/returns-and-warranty/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          Returns &amp; Warranty
+        </a>
+        <a
+          href="/oem-odm/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          OEM / ODM
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="compliance" aria-hidden="true">
+    <p>
+      Felizbay compliance and documentation, separated by claim type: product conformity — CE marking per EN 16582-1 for
+      residential pool products; design reference standards — ASTM F2666 portable pool safety referenced for residential
+      pool and SPA tub designs, a design reference is not a product certification; material compliance and testing —
+      REACH (EU), RoHS (EU), California Prop 65, ASTM D751 tensile/seam and ASTM G154 UV aging on double-layer
+      drop-stitch PVC; factory management certifications — ISO 9001:2015 quality management via SGS and BSCI social
+      compliance audit under amfori, covering the facility not individual products. Certificates and third-party test
+      reports with current scope, covered models and validity are provided on request via info@felizbay.com. Scope
+      boundaries: residential standards do not certify public or commercial pool installations; commercial projects
+      require project-specific confirmation of local standards and permits; warranty {compliance.warranty}.
+    </p>
+  </section>
+</Layout>

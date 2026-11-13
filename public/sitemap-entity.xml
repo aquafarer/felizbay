@@ -1829,6 +1829,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/compliance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/compliance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/compliance/"/>
+    <x:entity>compliance</x:entity>
+    <x:type>page</x:type>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/contact/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/contact/"/>
@@ -7133,10 +7141,34 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/3m-vs-4m-vs-5m-inflatable-pool/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/3m-vs-4m-vs-5m-inflatable-pool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/3m-vs-4m-vs-5m-inflatable-pool/"/>
+    <x:entity>3m-vs-4m-vs-5m-inflatable-pool</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/best-inflatable-pools-for-small-backyards/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/best-inflatable-pools-for-small-backyards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/best-inflatable-pools-for-small-backyards/"/>
+    <x:entity>best-inflatable-pools-for-small-backyards</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/drop-stitch-vs-traditional-inflatable-pools/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/drop-stitch-vs-traditional-inflatable-pools/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/drop-stitch-vs-traditional-inflatable-pools/"/>
     <x:entity>drop-stitch-vs-traditional-inflatable-pools</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/drop-stitch-wall-thickness-explained/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/drop-stitch-wall-thickness-explained/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/drop-stitch-wall-thickness-explained/"/>
+    <x:entity>drop-stitch-wall-thickness-explained</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
   </url>
@@ -7165,6 +7197,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/how-much-water-does-a-4m-pool-hold/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-much-water-does-a-4m-pool-hold/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-much-water-does-a-4m-pool-hold/"/>
+    <x:entity>how-much-water-does-a-4m-pool-hold</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/how-strong-is-a-drop-stitch-inflatable-pool/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-strong-is-a-drop-stitch-inflatable-pool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-strong-is-a-drop-stitch-inflatable-pool/"/>
@@ -7173,10 +7213,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/how-to-choose-a-cold-plunge-tub/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-to-choose-a-cold-plunge-tub/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-to-choose-a-cold-plunge-tub/"/>
+    <x:entity>how-to-choose-a-cold-plunge-tub</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/how-to-choose-a-drop-stitch-pool-manufacturer/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-to-choose-a-drop-stitch-pool-manufacturer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-to-choose-a-drop-stitch-pool-manufacturer/"/>
     <x:entity>how-to-choose-a-drop-stitch-pool-manufacturer</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/how-to-choose-a-pool-filter-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-to-choose-a-pool-filter-pump/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-to-choose-a-pool-filter-pump/"/>
+    <x:entity>how-to-choose-a-pool-filter-pump</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
   </url>
@@ -7209,6 +7265,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-to-prevent-pool-leaks/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-to-prevent-pool-leaks/"/>
     <x:entity>how-to-prevent-pool-leaks</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/how-to-start-an-inflatable-pool-brand/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/how-to-start-an-inflatable-pool-brand/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/how-to-start-an-inflatable-pool-brand/"/>
+    <x:entity>how-to-start-an-inflatable-pool-brand</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
   </url>
@@ -7269,10 +7333,34 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/inflatable-pool-vs-above-ground-pool/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/inflatable-pool-vs-above-ground-pool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/inflatable-pool-vs-above-ground-pool/"/>
+    <x:entity>inflatable-pool-vs-above-ground-pool</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/inflatable-pools-for-glamping-resorts/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/inflatable-pools-for-glamping-resorts/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/inflatable-pools-for-glamping-resorts/"/>
+    <x:entity>inflatable-pools-for-glamping-resorts</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/inflatable-pools-for-vacation-rentals/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/inflatable-pools-for-vacation-rentals/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/inflatable-pools-for-vacation-rentals/"/>
     <x:entity>inflatable-pools-for-vacation-rentals</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/inflatable-spa-vs-rigid-hot-tub/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/inflatable-spa-vs-rigid-hot-tub/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/inflatable-spa-vs-rigid-hot-tub/"/>
+    <x:entity>inflatable-spa-vs-rigid-hot-tub</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
   </url>
@@ -7293,10 +7381,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://felizbay.com/guides/pool-heating-cost-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/pool-heating-cost-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/pool-heating-cost-guide/"/>
+    <x:entity>pool-heating-cost-guide</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://felizbay.com/guides/private-label-inflatable-pool-buyers-guide/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/private-label-inflatable-pool-buyers-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/private-label-inflatable-pool-buyers-guide/"/>
     <x:entity>private-label-inflatable-pool-buyers-guide</x:entity>
+    <x:type>guide</x:type>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://felizbay.com/guides/round-vs-rectangular-inflatable-pools/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://felizbay.com/guides/round-vs-rectangular-inflatable-pools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://felizbay.com/guides/round-vs-rectangular-inflatable-pools/"/>
+    <x:entity>round-vs-rectangular-inflatable-pools</x:entity>
     <x:type>guide</x:type>
     <priority>0.7</priority>
   </url>

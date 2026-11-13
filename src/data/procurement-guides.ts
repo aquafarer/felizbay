@@ -576,4 +576,186 @@ export const procurementGuides: ProcurementGuide[] = [
       { label: 'Request a Quote', href: '/request-quotation/' },
     ],
   },
+  {
+    slug: 'inflatable-pools-for-glamping-resorts',
+    cluster: 'factory-oem',
+    title: 'Inflatable Pools for Glamping Resorts and Hospitality',
+    seoTitle: 'Inflatable Pools for Glamping Resorts: Sourcing Guide for Hospitality Operators',
+    description:
+      'How glamping resorts, vacation rentals and hospitality operators source commercial-grade drop stitch pools and soaking tubs — product selection, guest safety, seasonal logistics and supplier evaluation.',
+    publishDate: '2026-11-13',
+    updateDate: '2026-11-13',
+    readMinutes: 7,
+    audience: 'Glamping resort owners, boutique hotel operators, experience-economy businesses and hospitality procurement managers.',
+    tldr: 'Drop stitch pools and soaking tubs let glamping resorts deploy water experiences in days instead of excavating permanent pools: pick from Ø 2–10 m swim pools (FOB $137.96–$1,600.58) and insulated soaking tubs (FOB $381.36–$667.06), anchor them to compliant flat pads, and hold your supplier to pressure-test QC and material compliance documentation. Verify local commercial water-amenity requirements before ordering — residential standards do not automatically transfer to paying-guest use.',
+    sections: [
+      {
+        heading: 'Why Glamping Operators Choose Inflatable Over Permanent',
+        paragraphs: [
+          'A poured-concrete pool is a six-figure civil project with permits, excavation and a permanent footprint. A drop stitch pool is a pallet of cartons that becomes a full-size water amenity in an afternoon, and folds back into storage at season end. For glamping sites that lease land, rotate layouts, or run seasonal calendars, that difference is the entire business case.',
+          'Inflatable does not mean flimsy. Drop stitch construction — two PVC walls joined by thousands of internal polyester threads — runs at 4–6 PSI and holds its rim rigid under thousands of liters of water. A Ø 4 m pool with 1.2 m walls carries roughly 13,000 L at capacity. These are structural fabric vessels, not vinyl kiddie pools.',
+        ],
+      },
+      {
+        heading: 'Matching Product Types to Guest Experiences',
+        paragraphs: [
+          'Map each water feature to the experience it sells before looking at price lists. Swim and play experiences call for the classic round pool line: 23 sizes from Ø 2 m plunge circles to Ø 10 m event pools, FOB $137.96 to $1,600.58 at the 20-pc price basis. Rectangular and square models (15 sizes, FOB $285.70–$1,753.74) suit lap-swim lanes and deck-adjacent layouts where a circle wastes edge space.',
+          'Wellness experiences call for the soaking lines. Square and rectangular drop stitch soaking pools (7 models, FOB $381.36–$667.06) and round soaking pools (3 models, FOB $390.29–$487.22) give you hot-tub seating depth in a fabric vessel — cold plunge in summer, heated soak with an external heater in cooler months. Several glamping operators run the same unit as cold-plunge by day and warm-soak by night.',
+        ],
+        bullets: [
+          'Family glamping pitches: Ø 3–4 m round pools, 0.6–0.75 m walls — safe depth, easy supervision.',
+          'Adult wellness tents: round or square soaking tubs paired with wood-fired or electric external heaters.',
+          'Event lawns and group sites: Ø 6–10 m round pools with reinforced 0.9–1.2 m walls.',
+          'Lap or lane swimming: rectangular 5–6 m models set parallel to decking.',
+        ],
+      },
+      {
+        heading: 'Site Preparation Is Cheaper Than You Think — But Not Optional',
+        paragraphs: [
+          'A drop stitch pool needs a flat, debris-free, load-bearing pad: packed gravel, concrete, or a commercial ground cloth over levelled soil. Water weighs one metric ton per cubic meter, so a Ø 4 × 1.2 m pool puts roughly 13 t on the ground under it. Slopes cause uneven wall loading; sharp objects cause punctures; both are preventable at the pad stage.',
+          'Budget drainage before the first fill. Resorts empty and refill on a schedule, and where that water goes decides whether your lawn survives the season. A simple gravel soakaway or a pump hose to a drainage ditch is usually enough at these volumes.',
+        ],
+      },
+      {
+        heading: 'Guest Safety and the Commercial-Use Question',
+        paragraphs: [
+          'Be precise about what your products are certified for. Recreational inflatable pools like these are built and tested to residential-family standards (design reference ASTM F2666 in the US; EN 16582-1 for residential pools in Europe). Operating them in a paid-guest commercial context can trigger local requirements — fencing, water treatment, depth signage, occupancy limits or commercial pool codes — that vary by jurisdiction and property zoning.',
+          'This is a checkable item, not a guess: ask your insurer and municipal authority what applies to temporary fabric pools at your site before ordering. Many glamping operators run these pools successfully inside supervised, signed-off layouts; the ones who get into trouble are the ones who assumed residential certification transfers automatically.',
+        ],
+      },
+      {
+        heading: 'Durability and Housekeeping at Hospitality Turnover',
+        paragraphs: [
+          'Hospitality use is harder on equipment than home use: more entries, more sunscreen, more debris. Plan housekeeping around it. Rinse and dry the liner at every turnover, keep the included repair kit stocked, run filtration on the same cadence a residential owner would, and store units fully dry at season end to prevent mildew.',
+          'UV is the long-term enemy of any PVC fabric. Sites at altitude or in intense-sun climates should budget for shade structures or scheduled mid-season rotation, and should expect realistic multi-season lifespans rather than permanent-pool horizons. Ask your supplier for the UV and hydrolysis test basis (e.g. ASTM G154 accelerated weathering) so expectations are set on data.',
+        ],
+      },
+      {
+        heading: 'Logistics: From Factory Gate to Resort Lawn',
+        paragraphs: [
+          'Order by carton math, not by hope. Packed weights in this category run from 18.4 kg for a Ø 2 m pool to 250 kg for a Ø 10 m event pool, which means a season-opening order for a 10-tent resort typically fits in a fraction of one 40 ft container — often sharing space with other resort equipment. Get a loading plan with your quotation and confirm last-mile delivery to a rural site, which is where real freight cost usually hides.',
+          'Lead with deployment planning: identify who inflates, fills, tests and signs off each unit, and how many staff-hours that takes with electric pumps. A resort that choreographs commissioning turns delivery week into an operational non-event.',
+        ],
+      },
+      {
+        heading: 'Choosing the Supplier: hospitality-Specific Red Flags',
+        paragraphs: [
+          'Beyond the standard manufacturer checks (own factory, pressure-test QC on every unit, ISO 9001:2015, BSCI amfori social compliance), hospitality buyers should probe two extras: consistency between orders — guests photograph the same pool two seasons in a row, so colour and trim consistency matters — and documentation speed, because your insurer and inspector will ask for material compliance (REACH, RoHS, Prop 65) and construction-standard documents on your schedule, not the factory\'s.',
+          'Ask for one reference customer in hospitality or experience-economy retail. A factory that already ships to resorts has already solved the problems you are about to meet.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Are inflatable pools viable for paying guests?',
+        a: 'Yes, within limits. The vessels themselves are structural (4–6 PSI drop stitch, thousands of liters of capacity), but they are built to residential-family standards (ASTM F2666 / EN 16582-1). Commercial use legality is a local question — confirm requirements with your insurer and municipal authority before ordering.',
+      },
+      {
+        q: 'What is the minimum order for a resort setup?',
+        a: 'Wholesale pricing uses a 20-pc-per-item price basis, but mixed orders across sizes and models are normal for hospitality — discuss your site plan with the supplier. A typical 10-tent glamping order (one pool per 2–3 pitches plus soaking tubs) is a routine first order, not a threshold event.',
+      },
+      {
+        q: 'Can the soaking tubs run hot water for winter glamping?',
+        a: 'Yes — the soaking lines are designed for use with external heaters (wood-fired or electric heat pump). Winter operation adds insulation and heating-cost considerations, so size the heater to the tub volume and confirm compatibility with the supplier before purchase.',
+      },
+      {
+        q: 'How long do these pools last in commercial use?',
+        a: 'With dry storage, UV management and turnover housekeeping, plan on multiple seasons; exact lifespan depends on sun exposure and guest volume more than anything else. Treat UV data (e.g. ASTM G154 test basis) and a mid-season inspection routine as your planning tools.',
+      },
+    ],
+    related: [
+      { label: 'Pool Specs & FOB Price List', href: '/products/specs/' },
+      { label: 'Compliance & Documentation', href: '/compliance/' },
+      { label: 'How to Choose a Drop Stitch Pool Manufacturer', href: '/guides/how-to-choose-a-drop-stitch-pool-manufacturer/' },
+      { label: 'Request a Quote', href: '/request-quotation/' },
+    ],
+  },
+  {
+    slug: 'how-to-start-an-inflatable-pool-brand',
+    cluster: 'factory-oem',
+    title: 'How to Start an Inflatable Pool Brand',
+    seoTitle: 'How to Start an Inflatable Pool Brand: OEM Sourcing, Compliance and Launch Playbook',
+    description:
+      'A step-by-step playbook for launching a private-label inflatable pool brand — positioning, OEM sourcing, sampling, certification, pricing and channel strategy, with real FOB cost anchors.',
+    publishDate: '2026-11-13',
+    updateDate: '2026-11-13',
+    readMinutes: 9,
+    audience: 'Entrepreneurs, e-commerce sellers and private-label brand founders entering the pool and spa category.',
+    tldr: 'Launching a pool brand means renting manufacturing competence, not owning it: position against a specific customer, source from a real drop stitch factory (round pools FOB $137.96–$1,600.58, soaking tubs FOB $381.36–$667.06), validate with pre-production samples and pressure-test reports, secure CE/EN and material-compliance documentation, then build margin math from FOB to landed cost to retail before you spend on marketing. The brands that fail skip the sampling and certification steps; the brands that last treat compliance as a launch asset.',
+    sections: [
+      {
+        heading: 'Step 1: Position Before You Product',
+        paragraphs: [
+          '"Inflatable pool" is not a market; it is a material. The durable brands pick a customer first: apartment families who cannot install rigid pools, wellness buyers who want a cold plunge under $500, hospitality operators who need seasonal water amenities, or parents upgrading from $30 vinyl rings. Each customer implies a different hero product, price band and channel.',
+          'Write the positioning sentence before contacting any factory: "For [customer], [brand] is the [category] that [difference]." If the difference is "cheaper," stop — someone with deeper pockets will always be cheaper. Durable differences in this category are trust signals: certified materials, honest capacity data, multi-season warranty terms, or service depth.',
+        ],
+      },
+      {
+        heading: 'Step 2: Understand What a Pool Factory Actually Sells You',
+        paragraphs: [
+          'An OEM drop stitch factory sells you manufacturing competence: drop stitch welding at wall thicknesses of 10–50 cm, pressure-tested construction rated for 4–6 PSI operating pressure, and an export line that documents what it builds. You bring the brand: name, colours, packaging, copy, channel and customer promise.',
+          'Know the boundary early. The factory provides construction, materials and compliance test bases (REACH, RoHS, Prop 65 screening; design reference to standards like ASTM F2666 and EN 16582-1); you own market claims, retail listings and regulatory responsibility in your sales market. Brands that blur this boundary end up making promises the product file cannot support.',
+        ],
+      },
+      {
+        heading: 'Step 3: Build the Line From Real Cost Anchors',
+        paragraphs: [
+          'Price the line from the factory list, not from guesses. At the 20-pc FOB Qingdao basis, round pools span $137.96 (Ø 2 m) to $1,600.58 (Ø 10 m), rectangular and square models span $285.70–$1,753.74, square/rectangular soaking pools run $381.36–$667.06, and round soaking pools $390.29–$487.22. Most launch brands start with two to four SKUs: one hero, one entry price point, one premium.',
+          'A workable margin frame for DTC: landed cost (FOB + freight + duty) multiplied by three approximates sustainable retail once warehousing, returns and paid acquisition are counted. Marketplace-only brands can survive on thinner multiples but inherit price wars. Sketch both before choosing SKUs, because the SKUs you pick decide the channel war you fight.',
+        ],
+      },
+      {
+        heading: 'Step 4: Sample, Test, Then Trust',
+        paragraphs: [
+          'Order a pre-production sample of every SKU before mass production, and pay for a 24–48 hour pressure-drop test report with it. Inflate the sample to rated pressure yourself, leave it, measure the drop. Every credible drop stitch factory performs this test as standard QC — a supplier who treats your request as exotic is telling you something.',
+          'Use the sample for photography before you approve it. Launch assets shot on your actual product beat catalog renders, and sample-stage photography catches colour and finish problems while they are still free to fix.',
+        ],
+      },
+      {
+        heading: 'Step 5: Make Compliance Your Launch Asset',
+        paragraphs: [
+          'Compliance documentation is not paperwork; it is marketing ammunition and insurance. European market: CE marking under the Toy Safety Directive applies to pool-with-toy-classification products, while residential pool standard EN 16582-1 is the reference buyers and regulators look for. US market: design reference to ASTM F2666, plus material compliance (REACH, RoHS, California Prop 65 screening) that retailers and marketplaces increasingly demand at listing time.',
+          'Ask the factory for its ISO 9001:2015 certificate and material test reports early, and file them per SKU. When a marketplace challenges your listing or a retailer asks for the product file, brands with a compliance folder reopen in days; brands without one often never reopen the listing.',
+        ],
+      },
+      {
+        heading: 'Step 6: Brand Assets That Survive Translation',
+        paragraphs: [
+          'Your factory can print your logo and custom colour schemes — confirm per-SKU customisation minimums at quotation. Specify packaging for e-commerce reality: single-unit cartons that survive parcel networks, with brand printing, since the carton is the first physical brand touch in DTC.',
+          'Write honest capacity and dimension data into your listings from day one. This category is full of inflated-literage claims and photos taken at flattering angles; a brand that publishes geometric capacity math and real fill-line volumes builds a review base that says "exactly as described" — which is the highest-converting phrase in outdoor product reviews.',
+        ],
+      },
+      {
+        heading: 'Step 7: Launch Small, Learn Fast, Then Scale the Order',
+        paragraphs: [
+          'The classic failure mode is a first order sized for a hockey-stick forecast. Order near the pricing break you can actually sell through in one season, watch the data (return reasons, review themes, support tickets), then scale the reorder with evidence. Drop stitch pools store well dry and folded, so a conservative first order costs you a season of upside but nothing structural; an oversized one costs cash and garage space.',
+          'Keep one channel disciplined before adding a second. Brands that open DTC, three marketplaces and retail simultaneously learn nothing from any of them.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'What is the realistic startup budget for a pool brand?',
+        a: 'Budget around four blocks: sampling (a few hundred USD per SKU), first production order (a few thousand USD for a 2–4 SKU line at wholesale MOQs), compliance documentation (mostly factory-provided, with possible third-party verification), and launch marketing. Founders who under-fund marketing relative to inventory are the most common casualty — a warehouse of pools with no audience is not a brand yet.',
+      },
+      {
+        q: 'Do I need my own designs to start?',
+        a: 'No. Most brands launch on the factory\'s proven platform (existing sizes and construction) with custom colours, logo printing and packaging, then move to custom shapes or features in season two once sales data justifies tooling. Leading with unproven custom engineering adds risk and lead time without market evidence.',
+      },
+      {
+        q: 'Can I sell under more than one brand or price tier?',
+        a: 'Yes — mixed orders with different packaging runs are routine at OEM factories, but multi-brand operations multiply listing, compliance and customer-service workload. Launch one brand well before introducing a second tier.',
+      },
+      {
+        q: 'How do I verify a factory before wiring money?',
+        a: 'Ask for the business licence, ISO 9001:2015 certificate, BSCI or comparable social-compliance audit, and a live video walkthrough of the production line. Order a paid sample with a pressure-drop test report, and keep first payments on terms the factory itself proposes for new customers — genuine export factories have exactly this onboarding path.',
+      },
+    ],
+    related: [
+      { label: 'OEM / ODM Services', href: '/oem-odm/' },
+      { label: 'How to Choose a Drop Stitch Pool Manufacturer', href: '/guides/how-to-choose-a-drop-stitch-pool-manufacturer/' },
+      { label: 'Wholesale Pool Cost Guide', href: '/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/' },
+      { label: 'Pool Specs & FOB Price List', href: '/products/specs/' },
+    ],
+  },
 ];

@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Icon from '~/components/ui/Icon.astro';
 import { SITE } from 'astrowind:config';
 import type { MetaData } from '~/types';
+import { poolSeries } from '~/data/pool-catalog';
 
 interface FitOption {
   /** Round diameter in meters */
@@ -13,6 +14,49 @@ interface FitOption {
   /** Rectangular width in meters */
   w?: number;
 }
+
+/**
+ * Engine 2 (docx §5): factory / project recommendations read the full 48-SKU
+ * catalog (pool-catalog.ts SSOT) — every model listed on a business card is a
+ * real catalog item with size, wall, packed weight and FOB reference pulled
+ * at build time, so the finder, the wholesale price list and the compare
+ * tables can never drift apart.
+ */
+interface CatalogModel {
+  id: string;
+  seriesId: string;
+  size: string;
+  wall: string;
+  weightKg: number | null;
+  fobUsd: number;
+  fit: FitOption;
+}
+
+function parseCatalogFit(size: string): FitOption {
+  const nums = size
+    .replace('Ø', '')
+    .split('×')
+    .map((p) => parseFloat(p.trim()))
+    .filter((n) => !Number.isNaN(n));
+  if (size.includes('Ø') && nums.length >= 2) return { d: nums[0] };
+  if (nums.length >= 3) return { l: nums[0], w: nums[1] };
+  if (nums.length === 2) return { d: nums[0] };
+  return {};
+}
+
+const catalogModels: CatalogModel[] = poolSeries.flatMap((s) =>
+  s.items.map((it) => ({
+    id: it.item,
+    seriesId: s.id,
+    size: it.size,
+    wall: it.wall,
+    weightKg: it.weightKg,
+    fobUsd: it.fobUsd,
+    fit: parseCatalogFit(it.size),
+  }))
+);
+
+const modelById = new Map(catalogModels.map((m) => [m.id, m]));
 
 interface RetailSet {
   title: string;
@@ -40,6 +84,8 @@ interface PoolSetup {
   shopHref: string;
   ideaHref?: string;
   tags: string[];
+  /** Catalog item numbers rendered as the per-model FOB table (Engine 2) */
+  models?: string[];
   /** Candidate for heated soaking via an external heater (confirmed per order) */
   heat?: boolean;
   opts: FitOption[];
@@ -122,12 +168,14 @@ const retailCaveats = [
 ];
 
 /**
- * Business / project planner (docx P0-1): factory series candidates straight
- * from the Felizbay catalog (pool-catalog.ts SSOT), quoted FOB Qingdao. These
- * are NOT retail recommendations — the section is framed as
- * "Potential Product Family for Review" and every CTA requests a project
- * review. Model numbers in parentheses are real catalog items; sizes in opts
- * mirror them for the exact-area fit check (rect 90° rotation included).
+ * Business / project planner — Engine 2 (docx §5): factory / project
+ * recommendations query the full 48-SKU catalog (pool-catalog.ts SSOT),
+ * quoted FOB Qingdao. These are NOT retail recommendations — the section is
+ * framed as "Potential Product Family for Review" and every CTA requests a
+ * project review. `models` lists real catalog items rendered as a per-model
+ * size/wall/FOB table; sizes in `opts` mirror them for the exact-area fit
+ * check (rect 90° rotation included) and the why-line names the exact
+ * fitting items with their FOB reference price.
  */
 const setups: PoolSetup[] = [
   {
@@ -138,6 +186,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/backyard-pools-for-families/',
     tags: ['use-play', 'space-medium'],
+    models: ['S3012', 'S4012'],
     opts: [{ d: 3 }, { d: 4 }],
   },
   {
@@ -149,6 +198,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-small-backyards/',
     tags: ['use-play', 'space-compact', 'space-medium'],
+    models: ['S2005'],
     opts: [{ d: 2 }],
   },
   {
@@ -160,6 +210,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/backyard-pools-for-families/',
     tags: ['use-play', 'space-large'],
+    models: ['S5012', 'S6012', 'SR341220'],
     opts: [{ d: 5 }, { d: 6 }, { l: 4, w: 3 }],
   },
   {
@@ -172,6 +223,7 @@ const setups: PoolSetup[] = [
     ideaHref: '/pool-ideas/outdoor-soaking-pools/',
     tags: ['use-soak', 'space-compact', 'space-medium'],
     heat: true,
+    models: ['SS151508', 'RS1808'],
     opts: [{ l: 1.5, w: 1.5 }, { d: 1.8 }],
   },
   {
@@ -183,6 +235,7 @@ const setups: PoolSetup[] = [
     ideaHref: '/pool-ideas/outdoor-soaking-pools/',
     tags: ['use-soak', 'space-medium'],
     heat: true,
+    models: ['RS2018', 'RS2308', 'SS302010'],
     opts: [{ d: 2 }, { d: 2.3 }, { l: 3, w: 2 }],
   },
   {
@@ -194,6 +247,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/large-pools-for-family-gatherings/',
     tags: ['use-entertain', 'space-large'],
+    models: ['S6012', 'S7012', 'S10012', 'SR561250'],
     opts: [{ d: 6 }, { d: 7 }, { d: 10 }, { l: 6, w: 5 }],
   },
   {
@@ -205,6 +259,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-vacation-rentals/',
     tags: ['use-entertain', 'space-medium'],
+    models: ['S4012', 'S5012'],
     opts: [{ d: 4 }, { d: 5 }],
   },
   {
@@ -217,6 +272,7 @@ const setups: PoolSetup[] = [
     ideaHref: '/pool-ideas/pools-for-glamping-and-hospitality/',
     tags: ['use-soak', 'space-compact', 'space-medium'],
     heat: true,
+    models: ['RS1808', 'RS2018', 'RS2308'],
     opts: [{ d: 1.8 }, { d: 2 }, { d: 2.3 }],
   },
   {
@@ -228,6 +284,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/hot-tub-round/',
     ideaHref: '/pool-ideas/cold-plunge-and-recovery-pools/',
     tags: ['use-cold', 'space-compact', 'space-medium'],
+    models: ['RS1808', 'RS2018', 'RS2308', 'SS202008'],
     opts: [{ d: 1.8 }, { d: 2 }, { d: 2.3 }, { l: 2, w: 2 }],
   },
   {
@@ -240,6 +297,7 @@ const setups: PoolSetup[] = [
     ideaHref: '/pool-ideas/pools-for-dink-households/',
     tags: ['use-soak', 'space-compact', 'space-medium'],
     heat: true,
+    models: ['SS211608', 'RS1808', 'RS2018'],
     opts: [{ l: 2.1, w: 1.6 }, { d: 1.8 }, { d: 2 }],
   },
   {
@@ -251,6 +309,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/rectangular-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-water-fitness-and-recreation/',
     tags: ['use-fitness', 'space-medium'],
+    models: ['S4012', 'S5012', 'SS302010'],
     opts: [{ d: 4 }, { d: 5 }, { l: 3, w: 2 }],
   },
   {
@@ -262,6 +321,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-pet-families/',
     tags: ['use-pets', 'space-compact', 'space-medium'],
+    models: ['S2005', 'S3010'],
     opts: [{ d: 2 }, { d: 3 }],
   },
   {
@@ -273,6 +333,7 @@ const setups: PoolSetup[] = [
     shopHref: '/products/round-blue-drop-stitch-pool/',
     ideaHref: '/pool-ideas/pools-for-rental-and-event-operators/',
     tags: ['use-entertain', 'space-medium', 'space-large'],
+    models: ['S4012', 'S5012', 'S6012'],
     opts: [{ d: 4 }, { d: 5 }, { d: 6 }],
   },
   {
@@ -285,6 +346,7 @@ const setups: PoolSetup[] = [
     ideaHref: '/pool-ideas/pools-for-boutique-hotels-and-luxury-estates/',
     tags: ['use-entertain', 'space-compact', 'space-medium'],
     heat: true,
+    models: ['SS181808', 'SS302010'],
     opts: [
       { l: 1.8, w: 1.8 },
       { l: 3, w: 2 },
@@ -606,9 +668,19 @@ const metadata = merge(
           Factory series from the Felizbay catalog (quoted FOB Qingdao, price basis 20 pcs per item) — for vacation
           rentals, glamping sites, hotels, resellers, and events. These are candidate product families, not confirmed
           recommendations: answer the questions to narrow the list, then request a project review — we confirm model,
-          equipment and suitability per project. Model numbers in parentheses are real catalog items.
+          equipment and suitability per project.
         </p>
       </div>
+
+      <!-- Engine 2 model table note -->
+      <p class="mb-4 text-xs text-gray-400 dark:text-slate-500">
+        Each family lists its exact factory items with size, wall and FOB reference price (FOB Qingdao, USD per unit,
+        price basis 20 pcs per item). Packed weight is shown on the
+        <a href="/products/specs/" class="text-primary dark:text-blue-400 underline underline-offset-2">
+          wholesale price list
+        </a>
+        where published.
+      </p>
 
       <!-- Result cards -->
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-setup-grid>
@@ -617,6 +689,12 @@ const metadata = merge(
             class="card-premium flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow p-6"
             data-tags={s.tags.join(' ')}
             data-opts={JSON.stringify(s.opts)}
+            data-models={JSON.stringify(
+              (s.models ?? [])
+                .map((id) => modelById.get(id))
+                .filter((m): m is CatalogModel => Boolean(m))
+                .map((m) => ({ id: m.id, size: m.size, fob: m.fobUsd, fit: m.fit }))
+            )}
             data-heat={s.heat ? 'candidate' : ''}
           >
             <h3 class="text-lg font-semibold font-heading dark:text-slate-100 mb-2">{s.title}</h3>
@@ -639,9 +717,45 @@ const metadata = merge(
                 <dd class="text-gray-700 dark:text-slate-300">{s.products}</dd>
               </div>
             </dl>
+            {s.models && s.models.length > 0 && (
+              <div class="mt-3 overflow-x-auto rounded-xl border border-gray-100 dark:border-slate-800">
+                <table class="w-full text-xs">
+                  <thead>
+                    <tr class="bg-gray-50 dark:bg-slate-800/60 text-left text-[10px] uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                      <th class="px-2.5 py-2 font-semibold">Item</th>
+                      <th class="px-2.5 py-2 font-semibold">Size (m)</th>
+                      <th class="px-2.5 py-2 font-semibold">Wall</th>
+                      <th class="px-2.5 py-2 font-semibold text-right">FOB*</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100 dark:divide-slate-800">
+                    {s.models.map((id) => {
+                      const m = modelById.get(id);
+                      if (!m) return null;
+                      return (
+                        <tr>
+                          <td class="px-2.5 py-1.5 font-mono font-medium text-gray-700 dark:text-slate-300">{m.id}</td>
+                          <td class="px-2.5 py-1.5 text-gray-600 dark:text-slate-400 whitespace-nowrap">{m.size}</td>
+                          <td class="px-2.5 py-1.5 text-gray-600 dark:text-slate-400 whitespace-nowrap">{m.wall}</td>
+                          <td class="px-2.5 py-1.5 text-right font-medium text-primary dark:text-blue-400 whitespace-nowrap">
+                            ${m.fobUsd.toFixed(2)}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {s.models && s.models.length > 0 && (
+              <p class="mt-1.5 text-[10px] leading-relaxed text-gray-400 dark:text-slate-500">
+                *FOB Qingdao, USD per unit — price basis 20 pcs per item. Final pricing and MOQ are confirmed with your
+                project review.
+              </p>
+            )}
             <div class="mt-5 flex items-center gap-3">
               <a
-                href={`/contact/?project=${encodeURIComponent(`${s.title} — ${s.products}`)}`}
+                href={`/contact/?project=${encodeURIComponent(`${s.title} — ${s.products}${s.models && s.models.length > 0 ? ` (items: ${s.models.join(', ')})` : ''}`)}`}
                 class="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
               >
                 Request a Project Review
@@ -739,6 +853,14 @@ const metadata = merge(
         d?: number;
         l?: number;
         w?: number;
+      }
+
+      /** Engine 2 model info serialized from the build-time catalog SSOT */
+      interface ModelInfo {
+        id: string;
+        size: string;
+        fob: number;
+        fit: FitOption;
       }
 
       const root = document.getElementById('finder-root');
@@ -939,7 +1061,8 @@ const metadata = merge(
           notices.appendChild(
             makeBanner(
               'sky',
-              'Personal path: showing the retail sets sold online as single pieces. Business and wholesale buyers can switch the first answer to review factory families instead.'
+              'Personal path: showing the retail sets sold online as single pieces. If you need a size the retail sets do not cover (the factory range spans Ø 2–10 m rounds and up to 6 × 5 m rectangles), switch the first answer to review factory families — those are quoted FOB per 20 pcs, so they suit projects and group buying rather than single-piece purchase.',
+              { href: '#project-planner', label: 'See the full factory range →' }
             )
           );
         }
@@ -972,16 +1095,35 @@ const metadata = merge(
         'install-raised': 'raised install — engineer sign-off required',
       };
 
+      function parseModels(card: HTMLElement): ModelInfo[] {
+        try {
+          return JSON.parse(card.getAttribute('data-models') || '[]') as ModelInfo[];
+        } catch {
+          return [];
+        }
+      }
+
       function renderWhy(card: HTMLElement, show: boolean, dimsValid: boolean, L: number, W: number): void {
         const why = card.querySelector<HTMLElement>('[data-why]');
         if (!why) return;
         const parts: string[] = [];
         if (show && dimsValid) {
-          const fits = parseOpts(card)
-            .filter((o) => optFits(o, L, W))
-            .map(optLabel)
-            .filter(Boolean);
-          if (fits.length > 0) parts.push(`${fits.slice(0, 2).join(' or ')} fits your ${L} × ${W} m clear area`);
+          // Engine 2: business cards name the exact fitting catalog items with FOB
+          const models = parseModels(card);
+          const fitting = models.filter((m) => optFits(m.fit, L, W));
+          if (fitting.length > 0) {
+            const modelText = fitting
+              .slice(0, 2)
+              .map((m) => `${m.id} — ${m.size} m, FOB $${Math.round(m.fob)}/pc @ 20 pcs`)
+              .join(' or ');
+            parts.push(`${modelText} fits your ${L} × ${W} m clear area`);
+          } else {
+            const fits = parseOpts(card)
+              .filter((o) => optFits(o, L, W))
+              .map(optLabel)
+              .filter(Boolean);
+            if (fits.length > 0) parts.push(`${fits.slice(0, 2).join(' or ')} fits your ${L} × ${W} m clear area`);
+          }
         }
         const useT = TAG_TEXT[sel['use'] || ''];
         if (useT) parts.push(useT);

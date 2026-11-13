@@ -29,10 +29,29 @@ const comparisonRows = [
   { label: 'Category', key: 'categoryLabel' as const, transform: (v: string) => v },
   { label: 'Shape', key: 'shape' as const, getter: specGetter('shape') },
   { label: 'Color', key: 'color' as const, getter: specGetter('color') },
+  { label: 'Dimensions', key: 'dimensions' as const, getter: specGetter('size range') },
   { label: 'Wall Material', key: 'material' as const, getter: specGetter('material') },
   { label: 'Recommended Pressure', key: 'pressure' as const, getter: specGetter('pressure') },
   { label: 'Wall Thickness', key: 'thickness' as const, getter: specGetter('thickness') },
-  { label: 'Setup Time', key: 'setup' as const, getter: specGetter('setup') },
+  { label: 'Setup Time', key: 'setup' as const, getter: specGetter('inflation') },
+  {
+    label: 'Water Capacity (approx.)',
+    key: 'capacity' as const,
+    getter: (p: (typeof products)[number]) =>
+      (
+        ({
+          'hot-tub-round': '≈2,500 L at full fill (Ø 2 × 0.8 m; seats displace some volume)',
+        }) as Record<string, string>
+      )[p.slug] ?? '—',
+  },
+  {
+    label: 'Heater (optional)',
+    key: 'heater' as const,
+    getter: (p: (typeof products)[number]) =>
+      p.slug === 'hot-tub-round'
+        ? 'External heater sold separately — compatibility confirmed per order'
+        : 'Not applicable (swim pool)',
+  },
   { label: 'Included', key: 'included' as const, getter: specGetter('included') },
   {
     label: 'Retail Price',
@@ -45,6 +64,22 @@ const comparisonRows = [
     },
   },
 ];
+
+/** Approximate geometric full-fill volume in liters, computed from catalog sizes */
+function estimateVolumeLiters(size: string): number | null {
+  const nums = size
+    .replace('Ø', '')
+    .split('×')
+    .map((p) => parseFloat(p.trim()))
+    .filter((n) => !Number.isNaN(n));
+  if (size.includes('Ø') && nums.length >= 2) {
+    return Math.round(Math.PI * Math.pow(nums[0] / 2, 2) * nums[1] * 1000);
+  }
+  if (nums.length >= 3) {
+    return Math.round(nums[0] * nums[1] * nums[2] * 1000);
+  }
+  return null;
+}
 ---
 
 <Layout metadata={metadata}>
@@ -93,6 +128,12 @@ const comparisonRows = [
         </tbody>
       </table>
     </div>
+    <p class="mt-3 text-xs text-gray-400 max-w-3xl">
+      “—” = not published yet: the blue and grey sets are fixed single-size SKUs whose exact external dimensions, wall
+      thickness and capacity are pending publication — request them before ordering. Water capacity is the approximate
+      geometric volume at full fill; actual fill follows the marked fill line. Retail prices are single-piece online
+      prices; FOB wholesale pricing is listed separately below.
+    </p>
 
     <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
       {retailProducts.map((p) => (
@@ -132,8 +173,10 @@ const comparisonRows = [
         <!-- Interactive size comparison: filter factory sizes by series (client-side) -->
         <h3 class="mt-12 text-xl md:text-2xl font-semibold text-gray-900">Compare Factory Sizes Interactively</h3>
         <p class="mt-2 text-sm text-gray-500 max-w-3xl leading-relaxed">
-          Every catalog size in one filterable table — pick a series to compare sizes, wall thickness, packed weights,
-          and wholesale FOB unit prices side by side. {PRICE_BASIS_NOTE.split(' — ')[0]}, MOQ 20 pcs per item.
+          Every catalog size in one filterable table — pick a series to compare sizes, wall thickness, estimated
+          full-fill volume, packed weights, and wholesale FOB unit prices side by side.
+          {PRICE_BASIS_NOTE.split(' — ')[0]}, MOQ 20 pcs per item. Volume is the approximate geometric capacity at full
+          fill — actual fill follows the marked fill line, and “—” marks figures pending publication.
         </p>
         <div class="mt-5 flex flex-wrap gap-2" data-size-filter>
           <button
@@ -165,6 +208,9 @@ const comparisonRows = [
                 <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">Size (m)</th>
                 <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">Wall</th>
                 <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">
+                  Est. volume (L)
+                </th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">
                   Packed weight
                 </th>
                 <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b-2 border-gray-200">FOB USD/unit</th>
@@ -178,6 +224,9 @@ const comparisonRows = [
                     <td class="px-4 py-2.5 text-gray-600">{s.name}</td>
                     <td class="px-4 py-2.5 text-gray-600">{it.size}</td>
                     <td class="px-4 py-2.5 text-gray-600">{it.wall}</td>
+                    <td class="px-4 py-2.5 text-gray-600">
+                      {estimateVolumeLiters(it.size)?.toLocaleString('en-US') ?? '—'}
+                    </td>
                     <td class="px-4 py-2.5 text-gray-600">{it.weightKg != null ? `${it.weightKg} kg` : '—'}</td>
                     <td class="px-4 py-2.5 text-gray-800">${it.fobUsd}</td>
                   </tr>
