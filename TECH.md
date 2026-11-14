@@ -2236,3 +2236,126 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **59/60 → 标记过时（非内容回归）**：`/de/products/round-blue-drop-stitch-pool/` 检查断言英文 FAQ 标记 "cost to run"，但 faq.l10n Round 3（2026-11）已把 ai_faq 问题本地化为 "Was kostet der Betrieb?"——本地化页正确渲染德语 FAQ + FAQPage JSON-LD，英文标记自然消失。修正：检查标记改为德语译文，回归描述扩展为 "empty-array fallback + faq.l10n coverage"。修正后 60/60 全过。教训：**prod-smoke 对本地化页断言英文内容属时间炸弹**——l10n 字典更新后必须同步检查标记（其余 /de/ 检查用属性/JSON-LD 标记，安全）。
 - **CI Build & Deploy 瞬时故障**：`a3dce73`（仅改 scripts/prod-smoke.mjs，不影响产物）部署步骤报 "Received a malformed response from the API"（wrangler 收到 Cloudflare Pages API 异常响应）——确认基础设施瞬时故障而非代码问题。处置：下载 CI 日志定位失败步骤 → API `rerun-failed-jobs` 重跑 → 绿。AI Index (Vectorize) 对该 SHA 显示 skipped 属路径过滤设计行为（scripts-only 变更）。
 - **CI 重跑操作记录**：GitHub token 可经 `git credential fill`（Windows Credential Manager，`manager` helper）取得用于 Actions API（日志下载/rerun）；重跑后轮询 run conclusion 而非重新推送。
+
+---
+
+## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)
+
+本章为业务侧（销售/管理员）提供两份可直接使用的材料：**询盘回访邮件模板**（配合 `/keystatic/contact-submissions` 使用）与**待解锁数据项的实施方案映射**。技术侧红线：所有未发布数据（蓝/灰零售 SKU 尺寸、灰款溢价原因、加热器兼容清单、B2B 产能）**一律不得在回访中口头补造**，按模板的边界话术处理。
+
+### 20.1 询盘回访邮件模板（EN，三场景）
+
+回访邮件统一规则：Reply-To 指向询盘提交者（contact-worker 已自动设置通知邮件 Reply-To）；24 小时内首次回复；落款含官网与 specs 表链接；对未发布数据使用固定边界话术 "confirmed at order"（下单时确认），不得报任何未公开数字。
+
+#### A. 零售询盘（个人购买，Subject 含 pool/price/single）
+
+```text
+Subject: Re: Your Felizbay pool inquiry — {客户姓名}
+
+Hi {First Name},
+
+Thanks for reaching out about our pools.
+
+For single-piece online purchases we currently offer three retail sets:
+- Round Blue Pool (SKU FZ-POOL-RND-BLUE) — $299
+- Round Grey Pool (SKU FZ-POOL-RND-GREY) — $399
+- Round SPA Tub (SKU FZ-SPA-RND, Ø 2 × 0.8 m with seats) — $499
+
+Each set includes a 1000W electric air pump, repair kit and storage bag;
+setup takes about 10 minutes.
+
+Two resources that answer most questions before you buy:
+- Find Your Pool advisor: https://felizbay.com/find-your-pool/
+- Buying guides (sizes, costs, heating, filters): https://felizbay.com/guides/
+
+{如客户询问具体未发布规格，插入：}
+The exact specs for that set are confirmed at order time — I will send
+the full datasheet together with your order confirmation.
+
+Happy to help you pick the right size for your space — just reply with
+your available area and who will be using the pool.
+
+Best regards,
+{署名}
+Felizbay — https://felizbay.com
+```
+
+#### B. 批发 / OEM 询盘（含 Company、MOQ、wholesale、private label、logo）
+
+```text
+Subject: Re: Your wholesale inquiry — {公司名}
+
+Hi {First Name},
+
+Thanks for your interest in working with Felizbay.
+
+Our wholesale terms at a glance:
+- FOB Qingdao, USD, price basis 20 pcs per item, MOQ 20 pcs per item
+- Full 48-SKU factory specs and price list: https://felizbay.com/products/specs/
+- OEM/ODM: custom sizes, colors, logo printing and packaging
+
+Useful reading for your evaluation:
+- How to choose a drop stitch manufacturer: https://felizbay.com/guides/how-to-choose-a-drop-stitch-pool-manufacturer/
+- How much does a wholesale pool cost: https://felizbay.com/guides/how-much-does-a-wholesale-drop-stitch-pool-cost/
+- Compliance & documentation (CE/EN 16582-1, ASTM F2666 design reference,
+  REACH/RoHS/Prop 65, ISO 9001:2015 + BSCI): https://felizbay.com/compliance/
+
+Next steps: let me know your target sizes, estimated annual volume and
+destination market, and I will send a quotation with a container loading
+plan. Pre-production samples with 24-48h pressure-drop test reports are
+available before you commit.
+
+Best regards,
+{署名}
+Felizbay — https://felizbay.com
+```
+
+#### C. Glamping / 度假村 / 商用场景询盘（含 resort, glamping, rental, hotel, commercial）
+
+```text
+Subject: Re: Your {resort/glamping} pool inquiry
+
+Hi {First Name},
+
+Thanks for reaching out — hospitality deployments are one of our main
+B2B use cases.
+
+We published a dedicated sourcing guide for operators:
+https://felizbay.com/guides/inflatable-pools-for-glamping-resorts/
+It covers product selection (Ø 2–10 m swim pools plus insulated soaking
+tubs), site preparation, seasonal logistics and supplier evaluation.
+
+One important boundary to plan around: our pools are built and tested to
+residential-family standards (design reference ASTM F2666; EN 16582-1 in
+Europe). For paid-guest commercial use, please verify local requirements
+(insurance, fencing, water treatment, occupancy rules) for temporary
+fabric pools at your site before ordering — your insurer and municipal
+authority are the right first calls.
+
+If you share your site plan (number of pitches, water feature ideas,
+deployment calendar), I will match models from the 48-SKU factory list
+and quote FOB with a loading plan.
+
+Best regards,
+{署名}
+Felizbay — https://felizbay.com
+```
+
+### 20.2 待解锁数据项 → 实施方案映射
+
+| 待解锁项                   | 业务提供物                                                     | 接线位置                                                                              | 实施动作                                                                                                                                                                                                                                               |
+| -------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 蓝/灰零售 SKU 尺寸 12 字段 | 外径/内径/高度/壁厚/容量/装运毛净重/箱规                       | `src/content/products/round-{blue,grey}-drop-stitch-pool.mdx` specs 数组              | 补 specs 条目（label 遵循现有命名：Size range/Wall thickness/Water capacity…）；compare.astro 的 dimsKnown 分支自动消失；find-your-pool retailSets dimsKnown 置 true 并填 dims；generate-merchant-feed 门槛（price×100==unitAmount）需同步 Stripe 后台 |
+| 灰款 +$100 溢价原因        | 一句业务口径（材料/工艺/定位）                                 | `src/data/products.ts` 灰款 "difference between the grey and blue" FAQ + PDP 文案     | 用业务口径替换/扩写现有 FAQ 答案（当前仅 "premium finish + optional cover"）；compare 页如新增价格说明行需同步                                                                                                                                         |
+| RS2018 零售实拍            | 实物照片（多角度+盖子）                                        | `public/images/pools/`（WebP 1600px q82）+ `src/data/site/image-dimensions.json` 重建 | 新图命名建议 `hot-tub-round-retail-{1..n}.webp`；build 自动重建尺寸注册表；替换 hot-tub-round.mdx gallery                                                                                                                                              |
+| 加热器兼容清单             | 兼容加热器型号/功率档位                                        | `src/content/products/hot-tub-round.mdx` 新增 spec + compare.astro Heater 行文案      | 替换当前 "compatibility confirmed per order" 边界话术；glamping 指南 FAQ 同步                                                                                                                                                                          |
+| 配送数据                   | 零售发货时效/运费/覆盖范围                                     | 新增 shipping spec 或 support 页 FAQ                                                  | Contact.astro/PurchaseAssurance 相应行同步                                                                                                                                                                                                             |
+| B2B 产能数据               | 月产能/日产能/旺季排产                                         | `src/config/facts.json` + B2B 页                                                      | 走 facts.json SSOT 渲染，禁止页内硬编码                                                                                                                                                                                                                |
+| D1 新闻                    | 管理员审核 `docs/news-drafts/*.md` 后经 `/keystatic` News 发布 | news-worker D1                                                                        | 草稿已按 D1 schema 字段备好（title/slug/category/tags/excerpt/body/metadata）                                                                                                                                                                          |
+| Stripe 开通                | 账户激活 + 后台 SKU 与零售价一致                               | CI secrets + `CHECKOUT_ENABLED` flag                                                  | 开通后跑 generate-merchant-feed 校验（price×100==checkout unitAmount 门槛）+ prod-smoke merchant-feed 检查                                                                                                                                             |
+| Aquafarer 法律核实         | 商标/实体状态结论                                              | `src/config/facts.json` 相应字段                                                      | 按结论修正或删除引用                                                                                                                                                                                                                                   |
+| 原版说明书 PDF 修订        | 修订版 PDF 源文件                                              | `public/files/` + `/user-manual/` 页链接                                              | 保持文件名与页面链接一致（loadContent/链接三处同名铁律适用于文件同理）                                                                                                                                                                                 |
+
+### 20.3 新闻稿草稿位置
+
+`docs/news-drafts/2026-11-14-*.md`（3 篇：12 篇新指南、Compliance 页、对比工具升级）——均为真实站点更新，字段对齐 D1 news schema，管理员审核后经 `/keystatic` → News → New Post 粘贴发布，发布后 rss.xml 由 news-worker 自动生效。
