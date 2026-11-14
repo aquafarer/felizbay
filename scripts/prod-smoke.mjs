@@ -181,6 +181,37 @@ const CHECKS = [
   { path: '/oem-odm/', marker: 'Custom Inflatable Pools', desc: 'OEM/ODM page (nav-linked, was 404 in GEO review)' },
   { path: '/quality-control/', marker: 'Quality Control', desc: 'QC page (nav-linked, was 404 in GEO review)' },
   {
+    path: '/destructive-testing/',
+    markers: [
+      'Destructive',
+      '25.4 PSI',
+      '10,810 L',
+      'RPT-FB-QC-20261113',
+      '/files/felizbay-destructive-test-final-report.pdf',
+    ],
+    desc: 'destructive testing page: 4-stage report data + PDF download links',
+  },
+  {
+    path: '/files/felizbay-destructive-test-stage1-raw-material.pdf',
+    contentType: 'application/pdf',
+    desc: 'hosted destructive test stage 1 report PDF',
+  },
+  {
+    path: '/files/felizbay-destructive-test-stage2-welding-burst.pdf',
+    contentType: 'application/pdf',
+    desc: 'hosted destructive test stage 2 report PDF',
+  },
+  {
+    path: '/files/felizbay-destructive-test-stage3-full-load.pdf',
+    contentType: 'application/pdf',
+    desc: 'hosted destructive test stage 3 report PDF',
+  },
+  {
+    path: '/files/felizbay-destructive-test-final-report.pdf',
+    contentType: 'application/pdf',
+    desc: 'hosted destructive test final conclusion report PDF',
+  },
+  {
     path: '/manufacturing/',
     marker: 'How Every Felizbay Drop-Stitch Pool Is Built',
     desc: 'manufacturing process page',

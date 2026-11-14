@@ -1,0 +1,332 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import Icon from '~/components/ui/Icon.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+const metadata = merge(
+  {
+    title: `Destructive Testing Reports | ${SITE.name}`,
+    description: `Felizbay full-process destructive test reports: raw-material peel and puncture testing, weld-limit overpressure burst at 25.4 PSI (3.18× working pressure), a 10,810 L full-load 72-hour hold with 500 pendulum impacts, and the final mass-production release conclusion — all four PDF reports downloadable.`,
+    canonical: getCanonical('/destructive-testing'),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+
+/**
+ * Factory destructive type-test on the 400 × 300 × 120 cm reference pool
+ * (20 cm drop-stitch walls, HF/hot-air welding + two-component PU cold
+ * adhesive composite bonding). Reports RPT-FB-QC-20261113-S1/S2/S3/FINAL.
+ * All figures come from the factory test reports — do not edit without the
+ * matching revised report.
+ */
+const specimen = {
+  size: '400 × 300 × 120 cm',
+  wall: '20 cm drop-stitch',
+  bonding: 'HF / hot-air welding + two-component PU cold adhesive',
+  reportDate: '2026-11-13',
+};
+
+const keyStats = [
+  { value: '25.4 PSI', label: 'Ultimate burst pressure' },
+  { value: '3.18×', label: 'Safety factor over 8 PSI max working pressure' },
+  { value: '10,810 L', label: '110% overload fill volume' },
+  { value: '72 h', label: 'Full-load hold time' },
+  { value: '500', label: 'Pendulum impacts' },
+  { value: '5.6°', label: 'Max outward wall lean under overload' },
+];
+
+const stages = [
+  {
+    icon: 'tabler:flask',
+    stage: 'Stage 1',
+    reportId: 'RPT-FB-QC-20261113-S1',
+    title: 'Raw Material & Fabric Destructive Test',
+    intro:
+      'The fabric itself is tested to destruction before any structure is built from it: 1000D drop-stitch space fabric is sampled from production material and peeled, pulled and punctured under pressure.',
+    items: [
+      '1000D drop-stitch space fabric sampling from production material',
+      '120 °C hot-air pre-peel preparation',
+      '180° peel tensile testing',
+      'Interface fuzz cohesive-failure review of the separated faces',
+      '8.0 PSI pressurized single-point puncture (top-break) test',
+    ],
+    photos: '4 on-site photos with full test data',
+    pdf: '/files/felizbay-destructive-test-stage1-raw-material.pdf',
+    pdfName: 'felizbay-destructive-test-stage1-raw-material.pdf',
+    pages: 3,
+  },
+  {
+    icon: 'tabler:bolt',
+    stage: 'Stage 2',
+    reportId: 'RPT-FB-QC-20261113-S2',
+    title: 'Welding & Adhesive Process Limit and Overpressure Burst',
+    intro:
+      'The joints are pushed past every operating limit: composite welded-and-glued edges are held at high temperature for two days, then the complete structure is inflated to burst inside a blast cage.',
+    items: [
+      'W.A.L. (weld alignment line) misalignment-line 48-hour high-temperature creep measurement on the composite welded and glued edge',
+      'Step-by-step overpressure burst inside a blast cage',
+      'Ultimate burst pressure 25.4 PSI — 3.18× the 8 PSI maximum working pressure',
+      'Stage-by-stage pressure data recorded up to failure',
+    ],
+    photos: 'Creep measurement and blast-cage burst photos with step data',
+    pdf: '/files/felizbay-destructive-test-stage2-welding-burst.pdf',
+    pdfName: 'felizbay-destructive-test-stage2-welding-burst.pdf',
+    pages: 3,
+  },
+  {
+    icon: 'tabler:target-arrow',
+    stage: 'Stage 3',
+    reportId: 'RPT-FB-QC-20261113-S3',
+    title: 'Full-Load Hydrostatic Pressure & Dynamic Impact Validation',
+    intro:
+      'The assembled pool is overloaded with water, loaded with weight and struck repeatedly — the structure is validated as a whole, not as separate material samples.',
+    items: [
+      '110% overload fill: 10,810 L of water held for 72 hours',
+      '20 cm wall side-lean deformation monitoring — maximum outward lean 5.6°',
+      '150 kg seat compression on the wall',
+      '500 pendulum impacts against the structure',
+      'Valve flange torque test on the 20 cm wall',
+    ],
+    photos: 'Water-and-sandbag structural test zone, pendulum rig and valve torque photos',
+    pdf: '/files/felizbay-destructive-test-stage3-full-load.pdf',
+    pdfName: 'felizbay-destructive-test-stage3-full-load.pdf',
+    pages: 3,
+  },
+];
+
+const finalReport = {
+  icon: 'tabler:award',
+  reportId: 'RPT-FB-QC-20261113-FINAL',
+  title: 'Full-Process Destructive Test Summary — Final Conclusion Report',
+  items: [
+    'All 8 destructive verification metrics from the three stages consolidated',
+    'Safety-margin technical assessment across design, material and process',
+    'Mass-production release approval opinion',
+  ],
+  pdf: '/files/felizbay-destructive-test-final-report.pdf',
+  pdfName: 'felizbay-destructive-test-final-report.pdf',
+  pages: 2,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Destructive Testing Reports' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 pt-12 md:pt-16 pb-10 mx-auto max-w-6xl">
+    <header class="mb-10 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Destructive Testing
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Full-Process Destructive Test Reports
+      </h1>
+      <p class="mt-4 text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Every Felizbay pool is pressure-tested before it ships — that is routine QC. These reports go further: a
+        complete pool was deliberately tested to destruction, stage by stage, to measure how much margin sits between
+        normal operation and failure. All four reports are published here in full.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/files/felizbay-destructive-test-final-report.pdf"
+          download
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 transition-all text-sm"
+        >
+          <Icon name="tabler:file-download" class="w-4 h-4" /> Final Conclusion Report (PDF)
+        </a>
+        <a
+          href="/quality-control/"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-slate-600 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-sm"
+        >
+          <Icon name="tabler:shield-check" class="w-4 h-4" /> Routine Quality Control
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-10">
+      <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+            <Icon name="tabler:ruler-measure" class="w-5 h-5" />
+          </span>
+          <div>
+            <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">Test Specimen</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
+              One representative pool specification was tested end to end: a {specimen.size} drop-stitch pool with{' '}
+              {specimen.wall} walls, joined by {specimen.bonding}. Reports carry the IDs
+              RPT-FB-QC-20261113-S1/S2/S3/FINAL (test date {specimen.reportDate}) and were issued as one staged program:
+              material first, joints second, the complete structure last.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        {keyStats.map((s) => (
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800">
+            <div class="text-xl font-bold text-gray-900 dark:text-slate-100">{s.value}</div>
+            <div class="text-xs text-gray-500 dark:text-slate-400 mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-1">The Three Test Stages</h2>
+      <p class="text-sm text-gray-500 dark:text-slate-400 mb-6 max-w-3xl leading-relaxed">
+        The program escalates from material samples to the full structure: fabric tested to failure, joints held past
+        their creep and burst limits, then the assembled pool overloaded with water, weight and repeated impact.
+      </p>
+      <div class="grid md:grid-cols-2 gap-4">
+        {stages.map((s) => (
+          <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+            <div class="flex items-center justify-between mb-3">
+              <span class="flex w-10 h-10 items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-900/50 text-primary dark:text-sky-300">
+                <Icon name={s.icon} class="w-5 h-5" />
+              </span>
+              <span class="text-[10px] font-mono font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                {s.reportId}
+              </span>
+            </div>
+            <p class="text-xs font-bold uppercase tracking-wider text-primary dark:text-sky-400 mb-1">{s.stage}</p>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">{s.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-4">{s.intro}</p>
+            <ul class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed space-y-1.5 list-disc pl-5 mb-4">
+              {s.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <p class="text-xs text-gray-500 dark:text-slate-500 mb-4">{s.photos}.</p>
+            <a
+              href={s.pdf}
+              download
+              class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-full text-sm font-semibold hover:bg-white dark:hover:bg-slate-700 transition-all"
+            >
+              <Icon name="tabler:file-download" class="w-4 h-4" />
+              Download {s.stage} report (PDF, {s.pages} pages)
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <div class="p-6 rounded-2xl border border-sky-200 dark:border-sky-900/50 bg-sky-50 dark:bg-sky-950/30">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-slate-900 text-primary dark:text-sky-300">
+            <Icon name={finalReport.icon} class="w-5 h-5" />
+          </span>
+          <div class="flex-1">
+            <div class="flex flex-wrap items-baseline gap-3 mb-2">
+              <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100">{finalReport.title}</h2>
+              <span class="text-[10px] font-mono font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
+                {finalReport.reportId}
+              </span>
+            </div>
+            <ul class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed space-y-1.5 list-disc pl-5 mb-4">
+              {finalReport.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <a
+              href={finalReport.pdf}
+              download
+              class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-slate-700 text-white rounded-full text-sm font-semibold hover:bg-gray-800 dark:hover:bg-slate-600 transition-all"
+            >
+              <Icon name="tabler:file-download" class="w-4 h-4" />
+              Download final conclusion report (PDF, {finalReport.pages} pages)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-14 p-6 rounded-2xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30">
+      <h2 class="text-lg font-bold text-amber-900 dark:text-amber-200 mb-3">How to Read These Results</h2>
+      <ul class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed space-y-2 list-disc pl-5">
+        <li>
+          These are factory destructive type-tests on one representative specification ({specimen.size}, {specimen.wall}{' '}
+          walls). They measure safety margins under controlled overload — they are not a product certification;
+          conformity documentation is listed separately on the
+          <a href="/compliance/" class="underline">
+            compliance page
+          </a>
+          .
+        </li>
+        <li>
+          The 25.4 PSI burst limit and 3.18× margin are headroom, not an operating target. Daily use stays at the
+          recommended 4–6 PSI, and the pressure-relief valve keeps working pressure in range automatically.
+        </li>
+        <li>
+          The 110% overload fill, 150 kg seat load and 500 pendulum impacts were one-time destructive events on a test
+          unit. Production units are not shipped after such loads — every shipped pool passes the routine 24–48 hour
+          pressure-drop QC test instead.
+        </li>
+        <li>
+          Walls are not designed for sitting, standing or jumping in normal use, and no destructive result changes the
+          use limitations in the product documentation.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-3">Related Pages</h2>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a
+          href="/quality-control/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          Quality Control &amp; Testing
+        </a>
+        <a
+          href="/compliance/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          Compliance &amp; Documentation
+        </a>
+        <a
+          href="/manufacturing/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          Manufacturing Process
+        </a>
+        <a
+          href="/wholesale/"
+          class="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 font-medium"
+        >
+          Wholesale Program
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="destructive-testing" aria-hidden="true">
+    <p>
+      Felizbay full-process destructive test reports: a complete 400 × 300 × 120 cm drop-stitch inflatable pool with 20
+      cm walls, joined by high-frequency/hot-air welding plus two-component polyurethane cold adhesive composite
+      bonding, was tested to destruction in three stages (reports RPT-FB-QC-20261113-S1/S2/S3/FINAL, test date
+      2026-11-13). Stage 1 raw material and fabric: 1000D drop-stitch space fabric sampling, 120 °C hot-air pre-peel,
+      180° peel tensile testing, interface fuzz cohesive-failure review, 8.0 PSI pressurized single-point puncture
+      top-break test. Stage 2 welding and adhesive process limit: W.A.L. weld alignment line 48-hour high-temperature
+      creep measurement on the composite welded and glued edge, step overpressure burst inside a blast cage with
+      ultimate burst pressure 25.4 PSI — 3.18× the 8 PSI maximum working pressure. Stage 3 full-load hydrostatic and
+      dynamic impact: 110% overload fill of 10,810 L held 72 hours with maximum outward wall lean 5.6°, 150 kg seat
+      compression, 500 pendulum impacts, valve flange torque test on the 20 cm wall. Final conclusion report: all 8
+      destructive verification metrics consolidated, safety-margin technical assessment across design, material and
+      process, mass-production release approval. All four PDF reports are downloadable from this page. Reading guide:
+      factory destructive type-tests on one representative specification measuring safety margins under controlled
+      overload, not a product certification (compliance documentation listed separately); the burst margin is headroom,
+      not an operating target — daily use stays at the recommended 4–6 PSI with pressure-relief valve auto-release;
+      overload, seat-load and pendulum events were one-time destructive events on a test unit, while production units
+      pass the routine 24–48 hour pressure-drop QC test.
+    </p>
+  </section>
+</Layout>
