@@ -1,14 +1,14 @@
 ---
 # D1 news draft — for admin review. Paste into /keystatic → News → New Post.
 # All facts verified against the live site (2026-11-13 deploy, commit 57710ce).
-title: "New Compliance & Documentation Page"
-slug: "new-compliance-documentation-page"
-category: "Company News"
-tags: ["compliance", "certifications", "transparency"]
+title: 'New Compliance & Documentation Page'
+slug: 'new-compliance-documentation-page'
+category: 'Company News'
+tags: ['compliance', 'certifications', 'transparency']
 publish_date: 2026-11-14
 draft: true
-metadata_title: "Felizbay Launches Compliance & Documentation Page"
-metadata_description: "A new Felizbay page separates product conformity, design-reference standards, material compliance and factory certifications into clear, verifiable claim categories."
+metadata_title: 'Felizbay Launches Compliance & Documentation Page'
+metadata_description: 'A new Felizbay page separates product conformity, design-reference standards, material compliance and factory certifications into clear, verifiable claim categories.'
 ---
 
 # New Compliance & Documentation Page

@@ -1,14 +1,14 @@
 ---
 # D1 news draft — for admin review. Paste into /keystatic → News → New Post.
 # All facts verified against the live site (2026-11-13 deploy, commit 57710ce).
-title: "12 New Pool Buying Guides — Consumer and B2B"
-slug: "12-new-pool-buying-guides"
-category: "Product News"
-tags: ["buying guides", "resources", "B2B"]
+title: '12 New Pool Buying Guides — Consumer and B2B'
+slug: '12-new-pool-buying-guides'
+category: 'Product News'
+tags: ['buying guides', 'resources', 'B2B']
 publish_date: 2026-11-14
 draft: true
-metadata_title: "12 New Pool Buying Guides from Felizbay — Consumer and B2B"
-metadata_description: "Felizbay publishes 10 new consumer pool guides and 2 new B2B procurement guides covering sizes, heating costs, cold plunge, wall thickness and more."
+metadata_title: '12 New Pool Buying Guides from Felizbay — Consumer and B2B'
+metadata_description: 'Felizbay publishes 10 new consumer pool guides and 2 new B2B procurement guides covering sizes, heating costs, cold plunge, wall thickness and more.'
 ---
 
 # 12 New Pool Buying Guides — Consumer and B2B

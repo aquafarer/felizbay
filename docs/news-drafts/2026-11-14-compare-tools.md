@@ -1,14 +1,14 @@
 ---
 # D1 news draft — for admin review. Paste into /keystatic → News → New Post.
 # All facts verified against the live site (commits 57710ce + 03b58fa, 2026-11-13/14).
-title: "Smarter Pool Comparison: Volume Data and a Pick-and-Compare Tool"
-slug: "smarter-pool-comparison-tools"
-category: "Product News"
-tags: ["compare", "tools", "Pool Finder"]
+title: 'Smarter Pool Comparison: Volume Data and a Pick-and-Compare Tool'
+slug: 'smarter-pool-comparison-tools'
+category: 'Product News'
+tags: ['compare', 'tools', 'Pool Finder']
 publish_date: 2026-11-14
 draft: true
-metadata_title: "Felizbay Upgrades Pool Comparison — Volume Column and Pick-2-4 Tool"
-metadata_description: "The Felizbay compare page now shows estimated water volume for all 48 factory sizes and lets buyers tick 2-4 models for a side-by-side comparison panel."
+metadata_title: 'Felizbay Upgrades Pool Comparison — Volume Column and Pick-2-4 Tool'
+metadata_description: 'The Felizbay compare page now shows estimated water volume for all 48 factory sizes and lets buyers tick 2-4 models for a side-by-side comparison panel.'
 ---
 
 # Smarter Pool Comparison: Volume Data and a Pick-and-Compare Tool
