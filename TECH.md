@@ -2076,6 +2076,14 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 - 推送后 dependabot 自动关闭全部 10 个 PR (open PRs 归零)
 - **npm update 挂起注意**: 直接 `npm update` 曾超时 10 分钟无进展, 加 `--no-audit --no-fund` 后秒级完成 — audit/fund 网络端点在代理环境下可能挂死
 
+**事故 (328d227 首推即红, 2026-11-14)**: Windows 下 `npm update` 产出的 lockfile **缺少 esbuild@0.25.12 的全部 26 个 `@esbuild/*` 平台条目** — Linux CI `npm ci` 需要 `@esbuild/linux-x64@0.25.12` → EUSAGE "lock file's esbuild@0.25.12 does not satisfy esbuild@0.28.2 / Missing ... from lock file", Build & Deploy + SEO gate 双红。本地 Windows `npm ci --dry-run` 检不出 (npm 只校验当前平台需要的条目)。修复: `npm install` 原地重解析补齐 26 条 (vite 顺带 8.3.6→8.3.8, 范围内), 重跑构建 675 页全过。
+
+**预防**:
+
+- Windows 上执行 `npm update`/`npm install` 后, 核对 lockfile 中平台可选依赖的**非 Windows** 条目齐全: `@esbuild/linux-x64`、`@tailwindcss/oxide-linux-x64-gnu`、`lightningcss-linux-x64-gnu`、`@img/sharp-linux-x64` (CI 报错清单即核对清单 — EUSAGE Missing 行逐条对照)
+- 本地 dry-run 通过 ≠ Linux CI 通过; 平台缺口只能在 CI 或逐条核对中发现
+- CI 轮询脚本必须**按 workflow 名过滤并要求三个工作流全部出现** — dependabot 的 rebase runs 与主提交同 head_sha, 会挤占 `per_page=10` 首页, 曾造成 328d227 "ALL_GREEN" 误判 (实际 Build & Deploy 已红)
+
 ## 19. GEO 第三轮审查落地 (2026-11-03)
 
 外部 AI 第三轮 GEO 深度审查的可实施项全部落地, 提交链 `25c19b5` → `0354fa6`, prod-smoke 50 → 54 项全绿。
