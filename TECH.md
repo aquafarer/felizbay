@@ -1281,6 +1281,27 @@ git push origin main
 - 构建日志中 `skipped N broken` **非零即需排查** — 排除 `seo.astro` 动态拼接产生的 `tabler:brand-` 伪条目后，任何 broken 都意味着线上有静默缺失的图标
 - 部署后抽查：目标栏目标题前 700 字符内应存在 `<svg`（参见 prod-check 脚本的图标断言模式）
 
+### 11.27 代理不稳时 git push 走 HTTP/2 连续被重置，强制 `http.version=HTTP/1.1` 一次通过
+
+**现象 (2026-11-14)**: 推送含 4 份 PDF（约 3.7 MB）的提交 `2463990` 时，经 `http://127.0.0.1:10810` 代理连续 18 次失败，两类报错交替：`Recv failure: Connection was reset` / `Failed to connect to github.com:443 after 21s`，以及大包上传阶段 `error: RPC failed; curl 55 Send failure: Connection was reset` + `send-pack: unexpected disconnect while reading sideband packet`。同一时段 `ls-remote` 等小请求正常，`curl` 经代理访问 github.com 能拿到 200（30 秒、慢）。
+
+**陷阱 1（误导性输出）**: 一次 RPC 失败后 push 输出末尾出现 `Everything up-to-date`——并非推送成功；`git ls-remote origin refs/heads/main` 确认远端 ref 未动。RPC 阶段失败一律以 ls-remote 复核为准。
+
+**修复**: 强制 HTTP/1.1（规避代理链路上的 HTTP/2 多路复用重置），首推即成功：
+
+```powershell
+git -c http.proxy=http://127.0.0.1:10810 -c http.version=HTTP/1.1 `
+  -c http.postBuffer=15728640 -C <repo> push origin main
+```
+
+**陷阱 2（本地验证假阴性）**: PowerShell 捕获 `curl.exe` 输出得到的是**行数组**（`string[]`），对其调用 `.Contains('marker')` 是整行精确匹配而非子串查找——页面明明含 "25.4 PSI" 却报 False。验证前必须先 `-join "`n"` 拼回字符串；`-match`对数组是逐元素正则，行为与`.Contains()` 不一致，混用会得出矛盾结论。
+
+**预防**:
+
+- 大文件提交（PDF/图片批次）推送失败且报 `curl 55`/`Recv failure` 时，直接加 `http.version=HTTP/1.1` + 大 `http.postBuffer` 重试，不要空转重试同一命令
+- push 报 RPC 失败后用 `ls-remote` 复核远端 ref，不要相信输出中的 `Everything up-to-date`
+- PowerShell 验证 HTTP 响应内容：`(curl.exe ...) -join "`n"` 后再做子串断言
+
 ---
 
 ## 12. 编辑指南与红线
@@ -2280,6 +2301,18 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **59/60 → 标记过时（非内容回归）**：`/de/products/round-blue-drop-stitch-pool/` 检查断言英文 FAQ 标记 "cost to run"，但 faq.l10n Round 3（2026-11）已把 ai_faq 问题本地化为 "Was kostet der Betrieb?"——本地化页正确渲染德语 FAQ + FAQPage JSON-LD，英文标记自然消失。修正：检查标记改为德语译文，回归描述扩展为 "empty-array fallback + faq.l10n coverage"。修正后 60/60 全过。教训：**prod-smoke 对本地化页断言英文内容属时间炸弹**——l10n 字典更新后必须同步检查标记（其余 /de/ 检查用属性/JSON-LD 标记，安全）。
 - **CI Build & Deploy 瞬时故障**：`a3dce73`（仅改 scripts/prod-smoke.mjs，不影响产物）部署步骤报 "Received a malformed response from the API"（wrangler 收到 Cloudflare Pages API 异常响应）——确认基础设施瞬时故障而非代码问题。处置：下载 CI 日志定位失败步骤 → API `rerun-failed-jobs` 重跑 → 绿。AI Index (Vectorize) 对该 SHA 显示 skipped 属路径过滤设计行为（scripts-only 变更）。
 - **CI 重跑操作记录**：GitHub token 可经 `git credential fill`（Windows Credential Manager，`manager` helper）取得用于 Actions API（日志下载/rerun）；重跑后轮询 run conclusion 而非重新推送。
+
+### 19.19 破坏性试验报告发布：/destructive-testing/ 页 + 4 份 PDF (`2463990`)
+
+业务侧交付 `充气泳池破坏性试验` 文件夹（4 份分阶段试验报告 PDF + 1 份中英对照 SOP + "Felizbay 零售价.xlsx" + 说明 txt）的落地轮：
+
+- **价格表核实（不改动）**：'零售价.xlsx' 实为工厂 FOB 报价单（内嵌标题 "Quotation sheet of Felizbay / Price based on: 20pcs"）。解包比对确认与已发布的 `public/files/felizbay-wholesale-price-list.xlsx` **内容一致**——53 个数值价格单元格全同，唯一差异是表头 "USD"→"Price/USD"；48 SKU + 5 配件数据本已全量收录（/products/specs/ 渲染 + /wholesale/ 可下载）。业务确认后不改动。注意 xlsx 原始单元格价格与产品行存在错位（S3010=137.96 即 3.4$/kg 物理不合理），站内 `pool-catalog.ts` 才是 SSOT。
+- **新页 `/destructive-testing/`**：根级 EN-only（与 compliance/quality-control 同模式，不进 [lang]）。内容全部来自报告说明 txt，零编造：样品 400×300×120 cm / 20 cm 壁厚 / 高频热合·热风焊接 + 双组分聚氨酯冷粘；关键数据带（25.4 PSI 爆破极限 / 3.18× 8 PSI 最大工作压力 / 10,810 L 110% 超载 / 72 h / 500 次摆锤 / 最大外倾 5.6°）；三阶段卡片（RPT-FB-QC-20261113-S1 原材料、S2 热合超压爆破、S3 满载静水压+动态冲击）+ 最终结论报告卡（FINAL：8 项指标汇总 / 安全裕度评估 / 量产放行），每卡 PDF 下载；"How to Read These Results" 边界框（破坏裕度≠操作目标、日常仍 4–6 PSI、非产品认证、超载事件是一次性破坏性事件）；sr-only `data-ai-block="destructive-testing"` 进 AI 语料。
+- **PDF 命名**（public/files/ 小写连字符）：`felizbay-destructive-test-{stage1-raw-material, stage2-welding-burst, stage3-full-load, final-report}.pdf`；SOP（14 页工厂实操规程）按业务决策**不发布**。
+- **互链**：compliance Related Pages、quality-control Related B2B、products/specs #pressure 区块（"measured the structure to burst at 25.4 PSI — 3.18× ..."）。
+- **llms.txt**：B2B & Manufacturing 区块新增条目（quality-control 行后）；无 markdown 端点（与 compliance/quality-control 同级模式），Markdown Endpoint Index 计数行不变（"2 standalone tech pages" 指 standalone-pages.ts，未动）。
+- **prod-smoke +5 → 65 项**：页面断言（25.4 PSI / 10,810 L / RPT-FB-QC-20261113 / final-report.pdf 链接）+ 4 份 PDF `application/pdf` 断言；本地回归 65/65 全过。
+- **验证**：build 676 页 0 断链/断资产/hreflang；`npm run check` 全绿（astro check 642 文件 0 错误）；CI 三工作流 ALL_GREEN；生产验证页面标记 + 4 PDF（经 assets.felizbay.com R2 301 重定向，200/application/pdf，字节数与源一致）+ 三处互链 + llms.txt 条目全部命中。推送过程见 §11.27（HTTP/1.1 修复）。
 
 ---
 
