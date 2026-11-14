@@ -43,6 +43,7 @@ export const VALID_ICON_NAMES = new Set([
   "tabler:droplet",
   "tabler:droplets",
   "tabler:file-certificate",
+  "tabler:file-check",
   "tabler:file-description",
   "tabler:file-invoice",
   "tabler:file-report",
@@ -106,6 +107,5 @@ export const VALID_ICON_NAMES = new Set([
 ]);
 
 export const BROKEN_ICON_NAMES = [
-  "tabler:blueprint",
   "tabler:brand-",
 ];
