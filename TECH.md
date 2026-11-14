@@ -1267,6 +1267,20 @@ git push origin main
 - CI 的 prettier 门禁作用于整个仓库（`docs/` 也在扫描范围内），"只改文档不碰代码" 的提交同样会被拦下
 - 一次性提交多个新文件时，格式化命令要覆盖**整批**文件，不要只处理记得的那一个
 
+### 11.26 图标名不在 tabler 集合中 → 页面图标静默缺失（无构建报错）
+
+**现象 (2026-11-14 发现)**: `compliance.astro` 使用 `icon: 'tabler:blueprint'`，但 tabler 图标集没有 `blueprint` 图标 — `gen-icon-svgs.cjs` 生成器把不可解析的名字计入 "skipped N broken" 警告并跳过（构建不失败），页面该栏目图标**从未渲染**（自 57710ce 部署起线上缺失约 1 天）。
+
+**根因**: 图标名是自由字符串，无编译期校验；生成器的 broken 列表只进构建日志（`Generated 100 icon SVGs; skipped 2 broken: ...`），不阻断构建。
+
+**修复**: 换用真实存在的图标（本例 `tabler:blueprint` → `tabler:file-check`），重新构建后生成器自动清理 `icon-valid-names.ts` 中的死条目。
+
+**预防**:
+
+- 写图标名前先验证存在：`node -e "const t=require('@iconify-json/tabler/icons.json');console.log(!!t.icons['<name>']||!!t.aliases?.['<name>'])"`
+- 构建日志中 `skipped N broken` **非零即需排查** — 排除 `seo.astro` 动态拼接产生的 `tabler:brand-` 伪条目后，任何 broken 都意味着线上有静默缺失的图标
+- 部署后抽查：目标栏目标题前 700 字符内应存在 `<svg`（参见 prod-check 脚本的图标断言模式）
+
 ---
 
 ## 12. 编辑指南与红线
@@ -2051,6 +2065,16 @@ astro-icon 1.2.0 依赖的 `@iconify/utils` ≥3 为纯 ESM (`"type": "module"`,
 ### 18.3 prettier-plugin-astro 1.x 重排
 
 0.14.1 → 1.1.1 (major): `.astro` 模板新增多行 label/input 内容换行规则, 全仓 241 文件一次性重排 (纯空白/换行, 零内容变更, 乱码扫描 660 文件 0 匹配)。新建/修改 `.astro` 文件后必须 `npm run fix`, 否则 CI prettier gate 拦截。
+
+### 18.4 npm update 全范围轮 (2026-11-14, `328d227`)
+
+10 个 dependabot PR (#22–#31, 全部 patch/minor, 无 TS 7 红线 PR) 触发 lockfile 纪律核查: 20 个包落后于 in-range 最新版。按 AGENTS.md 纪律执行 `npm update` (非逐个合并 PR — 10 个 PR 均改 package-lock.json, 顺序合并必然冲突), 覆盖并超越全部 PR 目标: astro 7.4.5→7.4.12 · better-auth 1.7.17→1.7.23 · wrangler 4.157.0→4.162.0 · tailwindcss 4.3.4→4.3.5 · glob 14.0.3→14.0.6 · eslint 10.14.0→10.15.0 · @astrojs/mdx 8.1.2→8.1.6 · markdown-remark 7.3.5→7.3.9 · sitemap 3.7.4→3.7.5 · @typescript-eslint 8.72.1→8.72.2 · prettier 3.9.10→3.10.1 · jose/marked/workers-types/@iconify-json/tabler 1.2.43→1.2.45 等。typescript 保持 6.0.3 (TS 7 红线)。
+
+- **prettier 3.10.1 副作用**: 新格式规则标记 6 个既有文件 (5 个 legal 组件 + product-l10n.ts), `npm run fix` 重排后过 gate — 升级 prettier 版本后必须全仓跑一次 fix/check, 否则 CI 拦截 (§11.25 同型)
+- **tabler 1.2.45 副作用**: calendar 图标 path 数据微调 (icon-svgs.ts 1 行), 无图标丢失
+- **audit**: 17 moderate (2026-11-05 为 18, 一条 advisory 收敛), 0 critical/high/low, 三条根因与降级陷阱不变
+- 推送后 dependabot 自动关闭全部 10 个 PR (open PRs 归零)
+- **npm update 挂起注意**: 直接 `npm update` 曾超时 10 分钟无进展, 加 `--no-audit --no-fund` 后秒级完成 — audit/fund 网络端点在代理环境下可能挂死
 
 ## 19. GEO 第三轮审查落地 (2026-11-03)
 
