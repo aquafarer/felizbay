@@ -2313,6 +2313,7 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 - **llms.txt**：B2B & Manufacturing 区块新增条目（quality-control 行后）；无 markdown 端点（与 compliance/quality-control 同级模式），Markdown Endpoint Index 计数行不变（"2 standalone tech pages" 指 standalone-pages.ts，未动）。
 - **prod-smoke +5 → 65 项**：页面断言（25.4 PSI / 10,810 L / RPT-FB-QC-20261113 / final-report.pdf 链接）+ 4 份 PDF `application/pdf` 断言；本地回归 65/65 全过。
 - **验证**：build 676 页 0 断链/断资产/hreflang；`npm run check` 全绿（astro check 642 文件 0 错误）；CI 三工作流 ALL_GREEN；生产验证页面标记 + 4 PDF（经 assets.felizbay.com R2 301 重定向，200/application/pdf，字节数与源一致）+ 三处互链 + llms.txt 条目全部命中。推送过程见 §11.27（HTTP/1.1 修复）。
+- **配套新闻稿**：`docs/news-drafts/2026-11-14-destructive-testing-reports.md`（第 4 篇，D1 schema 对齐，draft: true，待管理员经 `/keystatic` 发布）。
 
 ---
 
@@ -2435,4 +2436,4 @@ Felizbay — https://felizbay.com
 
 ### 20.3 新闻稿草稿位置
 
-`docs/news-drafts/2026-11-14-*.md`（3 篇：12 篇新指南、Compliance 页、对比工具升级）——均为真实站点更新，字段对齐 D1 news schema，管理员审核后经 `/keystatic` → News → New Post 粘贴发布，发布后 rss.xml 由 news-worker 自动生效。
+`docs/news-drafts/2026-11-14-*.md`（4 篇：12 篇新指南、Compliance 页、对比工具升级、破坏性试验报告发布）——均为真实站点更新，字段对齐 D1 news schema，管理员审核后经 `/keystatic` → News → New Post 粘贴发布，发布后 rss.xml 由 news-worker 自动生效。
