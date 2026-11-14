@@ -1255,6 +1255,18 @@ git push origin main
 
 **预防**: 本仓库所有需要出网的命令 (npm / curl.exe / git) 统一走环境变量代理；git 场景不要依赖 `-c http.proxy`（本机 git/libcurl 组合下不稳定，且失败报错具有误导性）。
 
+### 11.25 新增 .md 文件未过全仓 prettier 检查 → CI Lint 步骤失败
+
+**现象 (2026-11-14)**: 提交 `docs/news-drafts/*.md`（3 篇新闻稿草稿）后 CI "Lint + typecheck + prettier + i18n" 步骤失败；日志中 prettier 输出 `[warn] docs/news-drafts/2026-11-14-*.md`。此前本地只对 `TECH.md` 单独跑过 `npx prettier --write`，漏掉了同批提交的新文件。
+
+**修复**: `npx prettier --write "docs/news-drafts/*.md"` 后追加提交，CI 恢复绿。
+
+**预防**:
+
+- 提交任何新增/修改的 `.md` 文件（TECH.md、docs/ 草稿、TROUBLESHOOTING 等）前，跑**全仓**检查而非逐文件：`npx prettier --check .`（或直接 `npm run check`，它包含 prettier 检查 + astro check + ESLint）
+- CI 的 prettier 门禁作用于整个仓库（`docs/` 也在扫描范围内），"只改文档不碰代码" 的提交同样会被拦下
+- 一次性提交多个新文件时，格式化命令要覆盖**整批**文件，不要只处理记得的那一个
+
 ---
 
 ## 12. 编辑指南与红线
