@@ -51,7 +51,7 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
   'hot-tub-round': {
     bestFor: ['families', 'retailers', 'oem'],
     recommendation:
-      'The entry model of the hot tub line. The compact 1.8 m footprint opens sales to urban courtyards and load-rated balconies, and the tub is used for cold-water immersion by the athletic recovery market.',
+      'The entry model of the hot tub line. The compact Ø 2 m footprint opens sales to urban courtyards and load-rated balconies, and the tub is used for cold-water immersion by the athletic recovery market.',
     useCase: 'Balcony and courtyard wellness, cold plunge recovery, compact year-round spa, glamping amenity',
     operatingCost: 'Low to moderate — the small water volume keeps heating modest; insulated bottom retains heat between sessions',
     whyBusinessesChooseIt:

@@ -85,8 +85,8 @@ const CHECKS = [
   },
   {
     path: '/products/rectangular-drop-stitch-pool/',
-    markers: ['fitg-size', '"sku":"SR220815"', '"@type":"Offer"'],
-    desc: 'wholesale PDP keeps FitGuide size checker + per-variant FOB offers in ProductGroup hasVariant',
+    markers: ['fitg-size', '"sku":"SR220815"', '"@type":"Offer"', 'Not sold as single-unit retail'],
+    desc: 'wholesale PDP keeps FitGuide size checker + per-variant FOB offers + unified MOQ/commercial-sample wording (Perplexity review 2026-11-15)',
   },
   {
     path: '/products/compare/',
@@ -128,9 +128,9 @@ const CHECKS = [
   },
   {
     path: '/products/hot-tub-round/',
-    markers: ['RS2018', 'Ø 2 × 0.8 m', 'fixed-size retail set'],
-    notMarkers: ['Diameter 1.8 m', '8 cm / 10 cm / 15 cm', 'fitg-size'],
-    desc: 'hot-tub retail PDP bound to the fixed RS2018 set — no series-level specs, no factory size checker',
+    markers: ['RS2018', 'Ø 2 × 0.8 m', 'fixed-size retail set', '2 m footprint'],
+    notMarkers: ['Diameter 1.8 m', '8 cm / 10 cm / 15 cm', 'fitg-size', '1.8 m footprint'],
+    desc: 'hot-tub retail PDP bound to the fixed RS2018 set — no series-level specs, no factory size checker, footprint figure matches the Ø 2 m retail set (Perplexity review 2026-11-15)',
   },
   {
     path: '/find-your-pool/',
