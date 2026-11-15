@@ -1296,11 +1296,15 @@ git -c http.proxy=http://127.0.0.1:10810 -c http.version=HTTP/1.1 `
 
 **陷阱 2（本地验证假阴性）**: PowerShell 捕获 `curl.exe` 输出得到的是**行数组**（`string[]`），对其调用 `.Contains('marker')` 是整行精确匹配而非子串查找——页面明明含 "25.4 PSI" 却报 False。验证前必须先 `-join "`n"` 拼回字符串；`-match`对数组是逐元素正则，行为与`.Contains()` 不一致，混用会得出矛盾结论。
 
+**陷阱 3（curl.exe JSON 体损坏 → 假"0 结果"）**: PowerShell 5.1 向原生 exe 传参时对含空格参数重新加引号，但**不转义参数内部的双引号**——`curl.exe -d '{"query":"..."}'` 到达 curl 时 JSON 已损坏，服务端 `request.json()` 静默失败返回 `{}`，接口回 `400 {"error":"Query required"}`。若调用方只取 `parsed.results.Count`，PowerShell 对 `$null.Count` 返回 0，于是 400 被误读成"检索 0 结果"。2026-11-15 实测：`/api/search` 明明已收录 destructive-testing（首_hit 0.677），curl 方式连测三次全"0 结果"。**POST JSON 一律用 `Invoke-RestMethod -ContentType 'application/json' -Body '...'`（.NET 调用，不经命令行重组）；`curl.exe` 仅用于 GET/无体请求或 `-d @file` 文件方式。**
+
 **预防**:
 
 - 大文件提交（PDF/图片批次）推送失败且报 `curl 55`/`Recv failure` 时，直接加 `http.version=HTTP/1.1` + 大 `http.postBuffer` 重试，不要空转重试同一命令
 - push 报 RPC 失败后用 `ls-remote` 复核远端 ref，不要相信输出中的 `Everything up-to-date`
 - PowerShell 验证 HTTP 响应内容：`(curl.exe ...) -join "`n"` 后再做子串断言
+- PowerShell 调 JSON API：`Invoke-RestMethod` 直传，或 curl `-d '@file.json'`；禁止 `-d '{...}'` 内联双引号 JSON
+- 断言 API 响应前先判 `error` 字段/HTTP 状态码，再取业务字段（防 4xx 被当"空结果"）
 
 ---
 

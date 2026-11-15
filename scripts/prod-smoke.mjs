@@ -361,6 +361,28 @@ const CHECKS = [
     },
   },
   {
+    path: '/api/search',
+    method: 'POST',
+    body: { query: 'destructive testing burst pressure pool' },
+    desc: 'Vectorize search surfaces the destructive-testing reports page',
+    validate: (res) => {
+      let parsed;
+      try {
+        parsed = JSON.parse(res.body);
+      } catch {
+        return { ok: false, reason: 'response is not JSON' };
+      }
+      const results = Array.isArray(parsed.results) ? parsed.results : [];
+      const hit = results.find(
+        (r) => typeof r.url === 'string' && r.url.replace(/^\/+/, '').startsWith('destructive-testing') && r.score > 0.6
+      );
+      if (!hit) {
+        return { ok: false, reason: `no destructive-testing hit above 0.6: ${JSON.stringify(results.slice(0, 3))}` };
+      }
+      return { ok: true };
+    },
+  },
+  {
     path: '/llms/pages/drop-stitch-technology',
     desc: 'Standalone tech page markdown endpoint (Source self-link, no dead HTML route)',
     validate: (res) => {
