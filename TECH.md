@@ -2387,6 +2387,25 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 
 结论：**5 个 .txt 审查全部为旧站快照核对，现网零 live 问题，本轮无代码改动**。有价值的确认：水量计算（墙厚扣除）、本地化 PDP 键、盖子/保修/过滤泵口径分离、JSON-LD 结构均与审查建议的终态一致——即 §19.7/§19.16–§19.18 各轮已把这些问题修完。业务阻塞项不变（蓝/灰 SKU 尺寸、灰款溢价、配送数据、实拍素材、真实案例，见 §20.2）。
 
+### 19.23 noindex 误标全站审计 + validate-dist 反向守卫 (2026-11-16)
+
+**任务**：检查并修复被错误标记为 noindex 而不被 Google 编入索引的网页。
+
+**审计方法与结论（本地 dist 全量 676 页 + 生产逻辑复核）**：逐页提取 robots meta → 与 sitemap、hreflang alternates（sitemap 18,420 条 + HTML 页头）、robots.txt、`_headers`（无 X-Robots-Tag）交叉验证。**零误标**：
+
+- 552 页 `index, follow`（全部 37 语言内容页）→ 100% 进入 sitemap-entity.xml，0 孤儿、0 掉图
+- 124 页 noindex 全部为有意设计：keystatic CMS（81）/ internal 工具（10）/ 38 语言 search（39）/ login/register/404/admin / zh·ja·ko + en/zh·ja·ko 重定向壳（263 字节 meta-refresh→`/`，canonical→根页）/ **`/en/*` 镜像 34 页**（noindex + canonical→对应根页，mirror-root-en.mjs 镜像的标准重复内容处理）
+- sitemap→noindex 泄漏 0；hreflang alternates 指向 noindex 页 0（搜索页自身的 alternates 指向其它搜索页，但搜索页本身 noindex，无索引影响）
+
+**修复的真正缺口（构建闸门盲区）**：`generate-sitemaps.mjs` 生成时过滤 noindex 页，因此**内容页一旦被误标 noindex 会静默掉图、构建零报错**——旧 `validate-dist.mjs` 只查 "sitemap URL → dist 存在性"（正向），不查反向。本轮在 `scripts/validate-dist.mjs` 新增第 5 项守卫：
+
+1. **意外 noindex 检测**：dist 中任何 noindex 页若不匹配已知白名单类（keystatic/internal/login/register/admin、404、`*/search/`、zh/ja/ko 及 en/zh|ja|ko 壳、`/en/*` 镜像）→ **硬违规，构建失败**
+2. **可索引页掉图检测**：非 noindex、非白名单页必须出现在 sitemap-entity.xml → 否则硬违规
+3. **泄漏检测**：noindex 页被 sitemap-entity.xml 收录 → 硬违规
+4. **en 镜像 canonical 校验**：`/en/<path>` 的 canonical 必须等于 `https://felizbay.com/<path>`（防自引用 canonical + noindex 把页面困死在两个索引之外）
+
+负向测试已验证（临时注入 noindex 到 `/about/` → 2 项硬违规 exit 1；还原 → PASS exit 0）。现网 dist 跑新版闸门 PASS（634 sitemap URL + 676 页）。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)

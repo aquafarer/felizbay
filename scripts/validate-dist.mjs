@@ -4,6 +4,13 @@
 //   2. Sitemap URLs must use trailing slashes consistently.
 //   3. Forbidden paths (/brand/, /v2/) must not appear in sitemaps.
 //   4. <title>/meta description length checks + mojibake scan on built HTML.
+//   5. Noindex regression guard (2026-11-16): generate-sitemaps.mjs excludes
+//      noindex pages at generation time, so a content page accidentally marked
+//      noindex would silently drop out of the sitemap with no error. This gate
+//      reverses the check — every dist page that is NOT in a known-intentional
+//      noindex class MUST be indexable AND listed in sitemap-entity.xml; any
+//      unexpected noindex page fails the build (and vice versa: a noindex page
+//      listed in any sitemap is a leak).
 // Exit code 1 on any hard violation (build fails → deploy blocked).
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
@@ -102,6 +109,55 @@ function main() {
       .replace(/<[^>]+>/g, ' ');
     const keyMatch = RAW_KEY_RE.exec(visibleText);
     if (keyMatch) errors.push(`raw i18n key leak: ${rel} — ${keyMatch[1]}`);
+  }
+
+  // 5. Noindex regression guard — see header comment. Classify every built
+  // page by robots meta; anything noindex outside the intentional classes is
+  // an accidental deindexing (the exact failure mode this gate exists for).
+  const SITE = 'https://felizbay.com';
+  const entityXml = readFileSync(path.join(DIST, 'sitemap-entity.xml'), 'utf8');
+  const entityLocs = new Set([...entityXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname));
+  const intentionalNoindex = (p) =>
+    p === '/404.html' ||
+    /^\/(keystatic|internal|login|register|admin)\//.test(p) ||
+    /^\/en\/(keystatic|internal|login|register|admin)\//.test(p) ||
+    p === '/zh/' ||
+    p === '/ja/' ||
+    p === '/ko/' ||
+    p === '/en/zh/' ||
+    p === '/en/ja/' ||
+    p === '/en/ko/' ||
+    /\/search\/$/.test(p);
+  const isEnMirror = (p) => p === '/en/' || p.startsWith('/en/');
+  for (const file of htmlFiles) {
+    const rel = file.slice(DIST.length).replace(/\\/g, '/');
+    const urlPath = rel === '/index.html' ? '/' : rel.replace(/index\.html$/, '');
+    const html = readFileSync(file, 'utf8');
+    const robots = /<meta\s+name="robots"\s+content="([^"]*)"/i.exec(html)?.[1] ?? '';
+    const canonical = /<link\s+rel="canonical"\s+href="([^"]*)"/i.exec(html)?.[1] ?? '';
+    const listed = entityLocs.has(urlPath);
+    if (robots.includes('noindex')) {
+      // Listed despite noindex → sitemap leak.
+      if (listed) errors.push(`noindex page listed in sitemap-entity.xml: ${rel}`);
+      if (
+        isEnMirror(rel) &&
+        !/^\/en\/(zh|ja|ko)\/$/.test(urlPath) &&
+        !/^\/en\/(keystatic|internal|login|register|admin)\//.test(urlPath)
+      ) {
+        // EN mirror must stay canonical → root counterpart, never self-referencing
+        // (self-canonical + noindex would strand the page out of both indexes).
+        const expected = SITE + urlPath.replace(/^\/en/, '');
+        if (canonical !== expected)
+          errors.push(`en-mirror canonical mismatch: ${rel} — expected ${expected}, got ${canonical || '(none)'}`);
+      } else if (!isEnMirror(rel) && !intentionalNoindex(urlPath)) {
+        errors.push(`unexpected noindex page (accidental deindexing?): ${rel} — robots="${robots}"`);
+      }
+    } else {
+      // Indexable content page: must be present in the entity sitemap, or it
+      // would never be discovered/crawled (silent drop-out failure mode).
+      if (!listed && !intentionalNoindex(urlPath) && !isEnMirror(rel))
+        errors.push(`indexable page missing from sitemap-entity.xml: ${rel}`);
+    }
   }
 
   console.log(`[validate-dist] checked ${locCount} sitemap URLs (${SITEMAPS.length} sitemaps) + ${checked} pages`);
