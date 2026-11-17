@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Kasutusjuhud'
+  title: 'Loodud tõeliseks ujumiseks aias'
+  subtitle: 'Neli tõelist viisi, kuidas omanikud Felizbay basseini kasutavad – pere nädalalõppudest taastavate vannideni.'
+  scenario_label: 'Stsenaarium'
+  solution_label: 'Lahendus'
+  cards:
+    - title: 'Pereline ujumine aias'
+      description: 'Täismõõdus bassein suvepuhkusteks, sünnipäevadeks ja igapäevaseks mängimiseks pärast kooli.'
+      alt: 'Pere lõõgastumas suures ümara Felizbay Drop-Stitch basseinis suvisel aiapeol.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Perekogunemistele ja basseinipeoile tuleb kogu pere ning väike mängubassein ei piisa – samas on maasse ehitatud bassein võimatu, keelatud või liiga kallis.'
+      solution: 'Suured Drop-Stitch basseinid kuni Ø 10 m ümarad ja 6 × 5 m ristkülikulised, kõvade seintega kuni 1,5 m, mis täituvad minutitega kaasasoleva 1000W elektrilise pumbaga.'
+      pills:
+        - 'Ümar bassein'
+        - 'Ristkülikukujuline bassein'
+        - '1000W elektriline pump'
+    - title: 'Väikesed aiad ja ridaelamud'
+      description: 'Tõeline bassein, mis mahub ridaelamu terrassile, küljaiale või väikesesse sisehoovi.'
+      alt: 'Ümar puhutav Felizbay bassein kaasaegse ridaelamu väikesel terrassil.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Ruum algab umbes 2 × 2 m ja kaevata ega ehitada ei saa – bassein peab hooaja lõpul ruumi vabastama.'
+      solution: 'Kompaktsed mõõdud alates Ø 2 m ümar ja 2 × 2 m ristkülik, kõvade 4-6 PSI seintega, mis näevad ikkagi välja nagu tõeline bassein ja mahuva hoiukotti talveks.'
+      pills:
+        - 'Ümar bassein'
+        - 'Ristkülikukujuline bassein'
+        - 'Paranduskomplekt'
+    - title: 'Veefitness ja vesivõimlemine'
+      description: 'Vesiaeroobika, takistusega kõndimine ja peremängud laial ja stabiilsel platvormil.'
+      alt: 'Pere tegemas veetegevusi ja mänge avaras ümaras Felizbay basseinis.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Väikese koormusega liikumine vajab kasutatavat pinda ja vertikaalseid seinu – pehmed rõngasbasseinid kaotavad sisepinda kaldu seinte tõttu ning vesi pritsib mängides üle ääre.'
+      solution: 'Sirged 90-kraadised Drop-Stitch seinad ja lame, stabiilne põhi 4-6 PSI juures; Ø 3-5 m ümarad basseinid annavad ruutmeetri kohta kõige takistusteta liikumisruumi.'
+      pills:
+        - 'Ümar bassein'
+        - 'Liivafiltriga pump'
+        - '4-astmeline redel'
+    - title: 'Kuum vann ja külmasukeldumine'
+      description: 'Kompaktne kuuma vanni ja külmasukeldumise jaoks terrassidel ja garaažijõusaalides.'
+      alt: 'Mees teeb taastavat külmasukeldumist ümara halli Felizbay vannitas garaažijõusaalis.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sportlased ja fitnessihuvilised vajavad kõvasid seinu, soojenemist aeglustavat isolatsiooni ning varjulist tasast kohta alates umbes 1,5 × 1,5 m.'
+      solution: 'Isolatsiooniga SPA vannid alates Ø 1,8 m sisseehitatud istmete ja 5 mm soojuspõhjaga; soojendid ja veejahutusseadmed on välised ja müüakse eraldi.'
+      pills:
+        - 'Ümar SPA-vann'
+        - 'Ruudukujuline SPA-vann'
+        - 'Isolatsiooniga põhi'
+
 compare_collections:
   tagline: 'Võrdle kogusid'
   title: 'Kaks kollektsiooni, üks selge valik'

@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Cazuri de utilizare'
+  title: 'Creat pentru înot adevărat în curte'
+  subtitle: 'Patru moduri reale în care proprietarii folosesc o piscină Felizbay – de la weekenduri în familie la băi de recuperare.'
+  scenario_label: 'Scenariu'
+  solution_label: 'Soluție'
+  cards:
+    - title: 'Înot în familie în curte'
+      description: 'O piscină de dimensiune completă pentru vacanțele de vară, zilele de naștere și joaca zilnică după școală.'
+      alt: 'O familie se relaxează într-o piscină rotundă mare Felizbay cu pereți drop-stitch la o adunare de vară în curte.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'La întâlnirile de familie și petrecerile la piscină apare toată familia, iar o mică piscină de joacă nu este suficientă – în timp ce o piscină fixă este imposibilă, nepermisă sau prea scumpă.'
+      solution: 'Piscine mari drop-stitch de până la Ø 10 m rotunde și 6 × 5 m dreptunghiulare, cu pereți rigizi de până la 1,5 m care se umflă în câteva minute cu pompa electrică de 1000W inclusă.'
+      pills:
+        - 'Piscină rotundă'
+        - 'Piscină dreptunghiulară'
+        - 'Pompă electrică 1000W'
+    - title: 'Curți mici și case înșiruite'
+      description: 'O piscină adevărată care încape pe terasa unei case înșiruite, pe un culoar lateral sau într-o curte mică.'
+      alt: 'O piscină gonflabilă rotundă Felizbay pe mica terasă a unei case înșiruite moderne.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Spațiul începe de la aproximativ 2 × 2 m și nu se poate săpa sau construi – piscina trebuie să elibereze locul la finalul sezonului.'
+      solution: 'Amprente compacte de la Ø 2 m rotundă și 2 × 2 m dreptunghiulară, cu pereți rigizi de 4-6 PSI care arată tot ca o piscină adevărată și se împăturesc într-o geantă de depozitare pentru iarnă.'
+      pills:
+        - 'Piscină rotundă'
+        - 'Piscină dreptunghiulară'
+        - 'Set de reparații'
+    - title: 'Fitness acvatic și exerciții în apă'
+      description: 'Aerobic în apă, mers cu rezistență și jocuri în familie pe o platformă largă și stabilă.'
+      alt: 'O familie face exerciții în apă și se joacă într-o piscină rotundă spațioasă Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Mișcarea cu impact redus cere suprafață utilizabilă și pereți verticali – piscinile moi inelare pierd spațiu interior din cauza pereților înclinați, iar apa se revarsă peste margine în timpul jocului activ.'
+      solution: 'Pereți drop-stitch drepți la 90 de grade și un fund plat și stabil la 4-6 PSI; rotundele de Ø 3-5 m oferă cea mai mare suprafață de mișcare liberă pe metru pătrat.'
+      pills:
+        - 'Piscină rotundă'
+        - 'Pompă cu filtru de nisip'
+        - 'Scară cu 4 trepte'
+    - title: 'Baie caldă și recuperare în apă rece'
+      description: 'O stație compactă de baie și imersiune rece pentru terase și săli de sport din garaj.'
+      alt: 'Un bărbat face o sesiune de recuperare cu imersiune rece într-o cadă rotundă gri Felizbay într-o sală de sport din garaj.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sportivii și entuziaștii fitnessului au nevoie de pereți rigizi, izolație care să încetinească încălzirea și un loc umbrit și nivelat de la aproximativ 1,5 × 1,5 m.'
+      solution: 'Căzi SPA izolate de la Ø 1,8 m cu scaune integrate și fund termic de 5 mm; încălzitoarele și echipamentele de răcire a apei sunt exterioare și se vând separat.'
+      pills:
+        - 'Cadă SPA rotundă'
+        - 'Cadă SPA pătrată'
+        - 'Fund izolat'
+
 compare_collections:
   tagline: 'Comparați colecții'
   title: 'Două colecții, o alegere clară'

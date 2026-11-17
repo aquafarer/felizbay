@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Käyttötapaukset'
+  title: 'Rakennettu oikeaan uimiseen pihalla'
+  subtitle: 'Neljä todellista tapaa, joilla omistajat käyttävät Felizbay-allasta – perheviikoista palautuviin kylpyihin.'
+  scenario_label: 'Skenaario'
+  solution_label: 'Ratkaisu'
+  cards:
+    - title: 'Perheen uiminen pihalla'
+      description: 'Täysikokoinen allas kesälomille, syntymäpäiville ja koulun jälkeiselle arkipäivän leikille.'
+      alt: 'Perhe rentoutuu suuressa pyöreässä Felizbay Drop-Stitch-altaassa kesäisessä pihatapahtumassa.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Sukukokouksiin ja allasjuhliin koko perhe saapuu, eikä pieni leikkiallas riitä – kun taas pysyvä allas on mahdoton, kielletty tai liian kallis.'
+      solution: 'Suuret Drop-Stitch-altaat jopa Ø 10 m pyöreinä ja 6 × 5 m suorakulmioina, jäykillä seinillä jopa 1,5 m, jotka täyttyvät minuuteissa mukana toimitetulla 1000W sähköpumpulla.'
+      pills:
+        - 'Pyöreä allas'
+        - 'Suorakulmainen allas'
+        - '1000W sähköpumppu'
+    - title: 'Pienet pihat ja rivitalot'
+      description: 'Oikea allas, joka mahtuu rivitalon terassille, sivupihalle tai pieneen sisäpihaan.'
+      alt: 'Pyöreä Felizbay-puhallettava allas modernin rivitalon pienellä terassilla.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Tila alkaa noin 2 × 2 m:stä, eikä kaivamista tai rakentamista ole mahdollista – allas on vapautettava tila kauden lopussa.'
+      solution: 'Kompaktit mitat alkaen Ø 2 m pyöreä ja 2 × 2 m suorakulmio, jäykillä 4-6 PSI seinillä, jotka näyttävät silti oikealta allasta ja taittuvat talveksi säilytyssäkkiin.'
+      pills:
+        - 'Pyöreä allas'
+        - 'Suorakulmainen allas'
+        - 'Korjaussarja'
+    - title: 'Vesikunto ja vesiliikunta'
+      description: 'Vesijumppa, vastuskävely ja perheen leikit leveällä ja vakaalla alustalla.'
+      alt: 'Perhe tekee vesiliikuntaa ja leikkii tilavassa pyöreässä Felizbay-altaassa.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Pienikuormainen liike tarvitsee käytettävää lattiapinta-alaa ja pystyseiniä – pehmeät rengasaltaat menettävät sisätilaa viistoihin seiniin ja vesi roiskuu reunan yli vilkkaassa leikissä.'
+      solution: 'Suorat 90 asteen Drop-Stitch-seinät ja litteä, vakaa pohja 4-6 PSI:ssa; Ø 3-5 m pyöreät altaat antavat eniten esteetöntä liikkumatilaa neliömetriä kohti.'
+      pills:
+        - 'Pyöreä allas'
+        - 'Hiekkasuodatinpumppu'
+        - '4-askelinen tikas'
+    - title: 'Kuuma kylpy ja kylmä palautuminen'
+      description: 'Kompakti kylpy- ja kylmäpulahdusasema pihoille ja autotalin kuntosalille.'
+      alt: 'Mies tekee palauttavan kylmän pulahduksen pyöreässä harmaassa Felizbay-ammassa autotalin kuntosalissa.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Urheilijat ja kuntoliikunnan harrastajat tarvitsevat jäykät seinät, lämpöä hidastavan eristyksen ja varjoisan tasaisen paikan noin 1,5 × 1,5 m alkaen.'
+      solution: 'Eristetyt SPA-ammeet alkaen Ø 1,8 m sisäänrakennetuilla istuimilla ja 5 mm lämpöpohjalla; lämmittimet ja vedenjäähdytyslaitteet ovat ulkoisia ja myydään erikseen.'
+      pills:
+        - 'Pyöreä SPA-allas'
+        - 'Neliö SPA-allas'
+        - 'Eristetty pohja'
+
 compare_collections:
   tagline: 'Vertaa kokoelmia'
   title: 'Kaksi kokoelmaa, yksi selkeä valinta'

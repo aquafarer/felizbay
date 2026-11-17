@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Mga gamit'
+  title: 'Ginawa para sa totoong paglangoy sa bakuran'
+  subtitle: 'Apat na totoong paraan ng paggamit ng mga may-ari sa Felizbay pool – mula sa family weekend hanggang sa recovery bath.'
+  scenario_label: 'Sitwasyon'
+  solution_label: 'Solusyon'
+  cards:
+    - title: 'Pamilyang paglangoy sa bakuran'
+      description: 'Isang full-size na pool para sa summer vacation, kaarawan, at pang-araw-araw na ligo pagkatapos ng klase.'
+      alt: 'Nagpapahinga ang isang pamilya sa malaking bilog na Felizbay pool na may Drop-Stitch na pader sa isang summer na tagpo sa bakuran.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Sa family reunion at pool party dumadagsa ang buong pamilya at ang maliit na kiddy pool ay kulang – habang ang built-in na pool ay imposible, ipinagbabawal, o napakamahal.'
+      solution: 'Malalaking Drop-Stitch pool hanggang Ø 10 m bilog at 6 × 5 m parisukat, na may matibay na pader hanggang 1.5 m na umaangat sa loob lang ng ilang minuto gamit ang kasamang 1000W electric pump.'
+      pills:
+        - 'Bilog na pool'
+        - 'Parihaba na pool'
+        - '1000W electric pump'
+    - title: 'Maliit na bakuran at townhouse'
+      description: 'Isang tunay na pool na kasya sa patio ng townhouse, sa gilid ng daanan, o sa compact na looban.'
+      alt: 'Isang bilog na inflatable na Felizbay pool sa maliit na patio ng isang modernong townhouse.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Nagsisimula ang espasyo sa humigit-kumulang 2 × 2 m at hindi maaaring maghukay o magtayo – kailangang maibalik ng pool ang espasyo sa katapusan ng season.'
+      solution: 'Mga compact na sukat mula Ø 2 m bilog at 2 × 2 m parisukat, na may matibay na 4-6 PSI na pader na parehong itsura ng tunay na pool at natitiklop sa storage bag para sa taglamig.'
+      pills:
+        - 'Bilog na pool'
+        - 'Parihaba na pool'
+        - 'Repair kit'
+    - title: 'Water fitness at ehersisyo sa tubig'
+      description: 'Water aerobics, paglalakad na may resistance, at mga larong pampamilya sa malawak at matatag na platform.'
+      alt: 'Nag-eehersisyo sa tubig at naglalaro ang isang pamilya sa maluwag na bilog na Felizbay pool.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Ang low-impact na galaw ay nangangailangan ng magagamit na sahig at patayong pader – ang malambot na ring pool ay nawawalan ng panloob na espasyo dahil sa nakahilig na pader, at umaapaw ang tubig sa gilid habang aktibong naglalaro.'
+      solution: 'Tuwid na 90-degree na Drop-Stitch pader at patag, matatag na sahig sa 4-6 PSI; ang mga bilog na Ø 3-5 m ang nagbibigay ng pinakamalaking libreng espasyo sa paggalaw kada metro kuwadrado.'
+      pills:
+        - 'Bilog na pool'
+        - 'Sand filter pump'
+        - 'Hagdan na 4 na baitang'
+    - title: 'Mainit na paligo at recovery sa malamig na tubig'
+      description: 'Isang compact na paligo at cold-plunge station para sa mga patio at garage gym.'
+      alt: 'Gumagawa ang isang lalaki ng recovery session na may cold plunge sa bilog na abong Felizbay tub sa isang garage gym.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Kailangan ng mga atleta at fitness enthusiast ng matibay na pader, insulation na pumipigil sa pag-init ng tubig, at isang nakaaninaw at antas na lugar mula sa humigit-kumulang 1.5 × 1.5 m.'
+      solution: 'Mga naka-insulate na SPA tub mula Ø 1.8 m na may kasamang upuan at 5 mm thermal na ilalim; ang mga water heater at cooling equipment ay panlabas at ibinenta nang hiwalay.'
+      pills:
+        - 'Bilog na SPA tub'
+        - 'Parisukat na SPA tub'
+        - 'Naka-insulate na ilalim'
+
 compare_collections:
   tagline: 'Ihambing ang Mga Koleksyon'
   title: 'Dalawang Koleksyon, Isang Malinaw na Pagpipilian'

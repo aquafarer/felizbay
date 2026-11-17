@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Casos de uso'
+  title: 'Pensado para el baño real en el jardín'
+  subtitle: 'Cuatro formas reales en que los propietarios aprovechan una piscina Felizbay – de los fines de semana familiares a los baños de recuperación.'
+  scenario_label: 'Escenario'
+  solution_label: 'Solución'
+  cards:
+    - title: 'Natación familiar en el jardín'
+      description: 'Una piscina de tamaño completo para las vacaciones de verano, los cumpleaños y el chapoteo diario después del colegio.'
+      alt: 'Una familia relajándose en una gran piscina redonda Felizbay de drop-stitch durante una reunión de verano en el jardín.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'A las reuniones y fiestas de piscina se presenta toda la familia y una piscina pequeña de chapoteo no basta – mientras que una piscina fija es imposible, no está permitida o resulta demasiado cara.'
+      solution: 'Piscinas grandes de drop-stitch de hasta Ø 10 m redondas y 6 × 5 m rectangulares, con paredes rígidas de hasta 1,5 m que se inflan en minutos con la bomba eléctrica de 1000W incluida.'
+      pills:
+        - 'Piscina redonda'
+        - 'Piscina rectangular'
+        - 'Bomba eléctrica de 1000W'
+    - title: 'Patios pequeños y casas adosadas'
+      description: 'Una piscina de verdad que cabe en el patio de una casa adosada, un pasillo lateral o un patio compacto.'
+      alt: 'Una piscina hinchable redonda Felizbay en el pequeño patio de una casa adosada moderna.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'El espacio empieza en unos 2 × 2 m y no hay forma de excavar ni construir – la piscina debe liberar el espacio al terminar la temporada.'
+      solution: 'Huellas compactas desde Ø 2 m redonda y 2 × 2 m rectangular, con paredes rígidas de 4-6 PSI que aun así parecen una piscina de verdad y se pliegan en una bolsa de almacenaje para el invierno.'
+      pills:
+        - 'Piscina redonda'
+        - 'Piscina rectangular'
+        - 'Kit de reparación'
+    - title: 'Fitness acuático y ejercicio en el agua'
+      description: 'Aerobic acuático, caminata con resistencia y juegos familiares en una plataforma amplia y estable.'
+      alt: 'Una familia haciendo ejercicios y juegos en el agua en una espaciosa piscina redonda Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'El movimiento de bajo impacto necesita superficie útil y paredes verticales – las piscinas blandas de anillo pierden espacio interior por los lados inclinados y el agua se salta el borde con el juego activo.'
+      solution: 'Paredes rectas de drop-stitch a 90 grados y un suelo plano y estable a 4-6 PSI; las redondas de Ø 3-5 m ofrecen la mayor superficie de movimiento sin obstáculos por metro cuadrado.'
+      pills:
+        - 'Piscina redonda'
+        - 'Bomba de filtro de arena'
+        - 'Escalera de 4 peldaños'
+    - title: 'Baño caliente y recuperación con agua fría'
+      description: 'Una estación compacta de baño e inmersión fría para patios y gimnasios de garaje.'
+      alt: 'Un hombre haciendo una sesión de recuperación con inmersión fría en una bañera redonda gris Felizbay en un gimnasio de garaje.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Los deportistas y aficionados al fitness necesitan paredes rígidas, aislamiento que frene el calentamiento y un lugar nivelado a la sombra desde unos 1,5 × 1,5 m.'
+      solution: 'Bañeras SPA aisladas desde Ø 1,8 m con asientos integrados y fondo térmico de 5 mm; los calentadores y los equipos de enfriamiento de agua son externos y se venden por separado.'
+      pills:
+        - 'Bañera SPA redonda'
+        - 'Bañera SPA cuadrada'
+        - 'Fondo aislado'
+
 compare_collections:
   tagline: 'Comparar colecciones'
   title: 'Dos colecciones, una elección clara'

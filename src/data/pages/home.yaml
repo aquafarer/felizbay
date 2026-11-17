@@ -15,6 +15,58 @@ hero:
     src: /images/pools/rectangular-pool-2.webp
     alt: Felizbay rectangular drop stitch inflatable swimming pool in a backyard
 
+use_cases:
+  tagline: 'Use Cases'
+  title: 'Built for Real Backyard Swimming'
+  subtitle: 'Four real ways owners put a Felizbay pool to work — from family weekends to recovery soaks.'
+  scenario_label: 'Scenario'
+  solution_label: 'Solution'
+  cards:
+    - title: 'Family Backyard Swimming'
+      description: 'A full-size pool for summer holidays, birthday parties, and daily after-school splashing.'
+      alt: 'A family relaxing in a large round Felizbay drop-stitch pool at a summer backyard gathering.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'The whole family shows up for reunions and pool parties, and a small splash pool is not enough — while a built-in pool is impossible, not allowed, or too expensive.'
+      solution: 'Large drop-stitch pools up to Ø 10 m round and 6 × 5 m rectangular, with rigid walls up to 1.5 m high that inflate in minutes using the included 1000W electric pump.'
+      pills:
+        - 'Round Pool'
+        - 'Rectangular Pool'
+        - '1000W Electric Pump'
+    - title: 'Small Yards & Townhomes'
+      description: 'A real pool that fits a townhome patio, side yard, or compact courtyard.'
+      alt: 'A round Felizbay inflatable pool on the small patio of a modern townhome.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Space starts at about 2 × 2 m and there is no way to excavate or build — the pool has to give the space back when the season ends.'
+      solution: 'Compact footprints from Ø 2 m round and 2 × 2 m rectangular, with rigid 4-6 PSI walls that still read as a real pool and fold into a storage bag for winter.'
+      pills:
+        - 'Round Pool'
+        - 'Rectangular Pool'
+        - 'Repair Kit'
+    - title: 'Water Fitness & Aquatic Exercise'
+      description: 'Water aerobics, resistance walking, and family splash games on a wide, stable platform.'
+      alt: 'A family doing water exercises and splash games in a spacious round Felizbay pool.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Low-impact movement needs usable floor area and vertical walls — soft ring pools lose interior space to sloped sides and slosh over the rim during active play.'
+      solution: 'Straight 90-degree drop-stitch walls and a flat, stable floor at 4-6 PSI; Ø 3-5 m rounds give the most unobstructed movement area per square meter.'
+      pills:
+        - 'Round Pool'
+        - 'Sand Filter Pump'
+        - '4-Step Ladder'
+    - title: 'Hot Soak & Cold Plunge Recovery'
+      description: 'A compact soaking and cold-plunge station for patios and garage gyms.'
+      alt: 'A man doing a cold plunge recovery session in a round grey Felizbay tub in a garage gym.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Athletes and fitness enthusiasts need rigid walls, insulation to slow warming, and a shaded level spot from about 1.5 × 1.5 m.'
+      solution: 'Insulated SPA tubs from Ø 1.8 m with built-in seats and a 5 mm thermal bottom; heaters and water-chilling equipment are external and sold separately.'
+      pills:
+        - 'Round SPA Tub'
+        - 'Square SPA Tub'
+        - 'Insulated Bottom'
+
 compare_collections:
   tagline: Compare Collections
   title: 'Two Collections,<br />One Clear Choice'

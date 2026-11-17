@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Anvendelsestilfælde'
+  title: 'Bygget til ægte bad i haven'
+  subtitle: 'Fire ægte måder, ejere bruger deres Felizbay-pool på – fra familieweekender til gendannende bade.'
+  scenario_label: 'Scenarie'
+  solution_label: 'Løsning'
+  cards:
+    - title: 'Familiebad i haven'
+      description: 'En pool i fuld størrelse til sommerferier, fødselsdage og dagligt plasken efter skole.'
+      alt: 'En familie, der slapper af i en stor rund Felizbay Drop-Stitch-pool ved et sommerarrangement i haven.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Hele familien møder op til familiefester og pool-fester, og en lille plaskepool er ikke nok – mens en indbygget pool er umulig, ikke tilladt eller for dyr.'
+      solution: 'Store Drop-Stitch-pools på op til Ø 10 m runde og 6 × 5 m rektangulære med stive vægge på op til 1,5 m, der blæses op på minutter med den medfølgende 1000W-elektriske pumpe.'
+      pills:
+        - 'Rund pool'
+        - 'Rektangulær pool'
+        - 'Elektrisk pumpe 1000W'
+    - title: 'Små haver og rækkehuse'
+      description: 'En rigtig pool, der passer på en rækkehus-terrasse, en sidegård eller en lille gårdsplads.'
+      alt: 'En rund Felizbay-pool på den lille terrasse ved et moderne rækkehus.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Pladsen starter ved ca. 2 × 2 m, og hverken udgravning eller byggeri er muligt – poolen skal frigive pladsen igen efter sæsonen.'
+      solution: 'Kompakte mål fra Ø 2 m rund og 2 × 2 m rektangulær med stive 4-6 PSI-vægge, der stadig ligner en rigtig pool, og som foldes sammen i en opbevaringspose til vinteren.'
+      pills:
+        - 'Rund pool'
+        - 'Rektangulær pool'
+        - 'Reparationssæt'
+    - title: 'Vandmotion og vandaerobics'
+      description: 'Vandaerobics, modstandsgang og familielege på en bred og stabil platform.'
+      alt: 'En familie, der laver vandøvelser og lege i en rummelig rund Felizbay-pool.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Bevægelse med lav belastning kræver brugbar gulvplads og lodrette vægge – bløde ringpools mister indre plads til skrå sider, og vandet skvulper over kanten ved leg.'
+      solution: 'Lige 90-graders Drop-Stitch-vægge og en flad, stabil bund ved 4-6 PSI; runde pools på Ø 3-5 m giver den mest uhindrede bevægelsesplads pr. kvadratmeter.'
+      pills:
+        - 'Rund pool'
+        - 'Sandfilterpumpe'
+        - 'Stige med 4 trin'
+    - title: 'Varmt bad og restitution i koldt vand'
+      description: 'En kompakt station til varme bade og kolde dyk til terrasser og garager med hjemmegym.'
+      alt: 'En mand, der laver et koldt gendannelsesdyk i en rund grå Felizbay-tub i et hjemmegym i garagen.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Atleter og fitnessentusiaster har brug for stive vægge, isolering, der forsinker opvarmning, og et skyggefuldt, plant sted fra ca. 1,5 × 1,5 m.'
+      solution: 'Isolerede SPA-tubs fra Ø 1,8 m med indbyggede sæder og en 5 mm termobund; varmeapparater og vandkølingsudstyr er eksternt og sælges separat.'
+      pills:
+        - 'Rund SPA-tub'
+        - 'Firkantet SPA-tub'
+        - 'Isoleret bund'
+
 compare_collections:
   tagline: 'Sammenlign samlinger'
   title: 'To samlinger, ét klart valg'

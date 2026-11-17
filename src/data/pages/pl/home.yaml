@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Przypadki użycia'
+  title: 'Stworzony do prawdziwego pływania w ogrodzie'
+  subtitle: 'Cztery realne sposoby, w jakie właściciele wykorzystują basen Felizbay – od rodzinnych weekendów po kąpiele regeneracyjne.'
+  scenario_label: 'Scenariusz'
+  solution_label: 'Rozwiązanie'
+  cards:
+    - title: 'Rodzinne pływanie w ogrodzie'
+      description: 'Basen w pełnym rozmiarze na wakacje, urodziny i codzienne pluskanie po szkole.'
+      alt: 'Rodzina odpoczywa w dużym okrągłym basenie Felizbay ze ścianami Drop-Stitch podczas letniego spotkania w ogrodzie.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Na spotkania rodzinne i imprezy basenowe zjeżdża cała rodzina, a mały basenik nie wystarcza – podczas gdy basen murowany jest niemożliwy, niedozwolony lub zbyt drogi.'
+      solution: 'Duże baseny Drop-Stitch do Ø 10 m okrągłe i 6 × 5 m prostokątne, o sztywnych ścianach do 1,5 m wysokości, które napompują się w kilka minut dołączoną pompą elektryczną 1000W.'
+      pills:
+        - 'Okrągły basen'
+        - 'Prostokątny basen'
+        - 'Pompa elektryczna 1000W'
+    - title: 'Małe ogrody i domy szeregowe'
+      description: 'Prawdziwy basen, który mieści się na tarasie domu szeregowego, w bocznej części działki lub małym podwórku.'
+      alt: 'Okrągły dmuchany basen Felizbay na małym tarasie nowoczesnego domu szeregowego.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Miejsce zaczyna się od około 2 × 2 m i nie ma możliwości kopania ani budowania – basen musi oddać przestrzeń pod koniec sezonu.'
+      solution: 'Kompaktowe wymiary od Ø 2 m okrągły i 2 × 2 m prostokątny, o sztywnych ścianach 4-6 PSI, które nadal wyglądają jak prawdziwy basen i składają się do torby na zimę.'
+      pills:
+        - 'Okrągły basen'
+        - 'Prostokątny basen'
+        - 'Zestaw naprawczy'
+    - title: 'Fitness w wodzie i ćwiczenia w wodzie'
+      description: 'Aqua aerobik, chód oporowy i rodzinne zabawy na szerokiej, stabilnej platformie.'
+      alt: 'Rodzina ćwiczy w wodzie i bawi się w przestronnym okrągłym basenie Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Ruch o niskim obciążeniu wymaga użytecznej powierzchni i pionowych ścian – miękkie baseny ringowe tracą przestrzeń wewnętrzną przez skośne ściany, a woda przelewa się przez krawędź przy aktywnej zabawie.'
+      solution: 'Proste, 90-stopniowe ściany Drop-Stitch i płaskie, stabilne dno przy 4-6 PSI; okrągłe baseny Ø 3-5 m dają najwięcej nieograniczonej przestrzeni do ruchu na metr kwadratowy.'
+      pills:
+        - 'Okrągły basen'
+        - 'Pompa z filtrem piaskowym'
+        - 'Drabina 4-stopniowa'
+    - title: 'Gorąca kąpiel i regeneracja w zimnej wodzie'
+      description: 'Kompaktowa stacja kąpielowa i zimnych zanurzeń na tarasy i garażowe siłownie.'
+      alt: 'Mężczyzna robi regeneracyjne zanurzenie w zimnej wodzie w okrągłej szarej wannie Felizbay w garażowej siłowni.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sportowcy i entuzjaści fitnessu potrzebują sztywnych ścian, izolacji spowalniającej nagrzewanie i ocienionego, równego miejsca od około 1,5 × 1,5 m.'
+      solution: 'Izolowane wanny SPA od Ø 1,8 m z wbudowanymi siedzeniami i 5 mm termicznym dnem; grzałki i urządzenia do chłodzenia wody są zewnętrzne i sprzedawane osobno.'
+      pills:
+        - 'Okrągła wanna SPA'
+        - 'Kwadratowa wanna SPA'
+        - 'Izolowane dno'
+
 compare_collections:
   tagline: 'Porównaj kolekcje'
   title: 'Dwie kolekcje, jeden oczywisty wybór'

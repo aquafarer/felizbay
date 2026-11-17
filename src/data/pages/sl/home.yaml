@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Primeri uporabe'
+  title: 'Narejeno za pravo kopanje na vrtu'
+  subtitle: 'Štirje resnični načini, kako lastniki uporabljajo bazen Felizbay – od družinskih vikendov do sproščujočih kopeli.'
+  scenario_label: 'Scenarij'
+  solution_label: 'Rešitev'
+  cards:
+    - title: 'Družinsko kopanje na vrtu'
+      description: 'Bazen v polni velikosti za poletne počitnice, rojstne dneve in vsakodnevno brcajanje po šoli.'
+      alt: 'Družina se sprošča v velikem okroglem bazenu Felizbay s stenami Drop-Stitch na poletnem srečanju na vrtu.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Na družinska srečanja in bazenske zabave pride cela družina in majen bazen za brcajanje ni dovolj – medtem ko je vgrajen bazen nemogoč, prepovedan ali predrag.'
+      solution: 'Veliki Drop-Stitch bazeni do Ø 10 m okrogli in 6 × 5 m pravokotni, s trdnimi stenami do 1,5 m, ki se napihnejo v nekaj minutah s priloženo 1000W električno črpalko.'
+      pills:
+        - 'Okrogel bazen'
+        - 'Pravokoten bazen'
+        - '1000W električna črpalka'
+    - title: 'Majhni vrtovi in vrstne hiše'
+      description: 'Pravi bazen, ki gre na teraso vrstne hiše, stransko dvorišče ali majhno notranje dvorišče.'
+      alt: 'Okrogel napihljiv bazen Felizbay na majhni terasi moderne vrstne hiše.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Prostor se začne pri približno 2 × 2 m, kopanje ali gradnja pa nista možna – bazen mora prostor sprostiti ob koncu sezone.'
+      solution: 'Kompaktni mere od Ø 2 m okrogli in 2 × 2 m pravokotni, s trdnimi 4-6 PSI stenami, ki kljub temu izgledajo kot pravi bazen, pozimi pa se zložijo v torbo za shranjevanje.'
+      pills:
+        - 'Okrogel bazen'
+        - 'Pravokoten bazen'
+        - 'Set za popravilo'
+    - title: 'Vodni fitnes in vaje v vodi'
+      description: 'Vodna aerobika, hoja z uporom in družinske igre na široki in stabilni platformi.'
+      alt: 'Družina dela vaje v vodi in se igra v prostornem okroglem bazenu Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Gibanje z majhnim vplivom potrebuje uporabno površino in navpične stene – mehki obročasti bazeni izgubljajo notranji prostor zaradi nagnjenih sten, voda pa se pri aktivni igri prelije čez rob.'
+      solution: 'Ravne 90-stopinjske Drop-Stitch stene in ravno, stabilno dno pri 4-6 PSI; okrogli bazeni Ø 3-5 m dajo največ neoviranega prostora za gibanje na kvadratni meter.'
+      pills:
+        - 'Okrogel bazen'
+        - 'Črpalka s peščenim filtrom'
+        - 'Lestev s 4 stopnicami'
+    - title: 'Topla kopel in okrevanje v hladni vodi'
+      description: 'Kompaktna postaja za kopanje in hladne odlive za terase in domače telovadnice v garaži.'
+      alt: 'Mož dela seanso okrevanja s hladno potopitvijo v okrogli sivi kadini Felizbay v garažni telovadnici.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Športniki in navdušenci nad fitnesom potrebujejo trdne stene, izolacijo, ki upočasnjuje segrevanje, in senčeno, ravno mesto od približno 1,5 × 1,5 m.'
+      solution: 'Izolirane SPA kadi od Ø 1,8 m z vgrajenimi sedišči in 5 mm toplotnim dnom; grelniki in oprema za hlajenje vode so zunanji in se prodajajo ločeno.'
+      pills:
+        - 'Okrogla SPA kad'
+        - 'Kvadratna SPA kad'
+        - 'Izolirano dno'
+
 compare_collections:
   tagline: 'Primerjaj zbirke'
   title: 'Dve zbirki, ena jasna izbira'

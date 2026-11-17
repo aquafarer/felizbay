@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Casi d''uso'
+  title: 'Pensato per il nuoto vero in giardino'
+  subtitle: 'Quattro modi reali in cui i proprietari usano una piscina Felizbay – dai weekend in famiglia ai bagni di recupero.'
+  scenario_label: 'Scenario'
+  solution_label: 'Soluzione'
+  cards:
+    - title: 'Nuoto in famiglia in giardino'
+      description: 'Una piscina di dimensioni piene per le vacanze estive, i compleanni e i tuffi quotidiani dopo la scuola.'
+      alt: 'Una famiglia si rilassa in una grande piscina rotonda Felizbay a pareti drop-stitch durante una riunione estiva in giardino.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'A riunioni e feste in piscina si presenta tutta la famiglia e una piccola vasca non basta – mentre una piscina fissa è impossibile, non consentita o troppo costosa.'
+      solution: 'Grandi piscine drop-stitch fino a Ø 10 m rotonde e 6 × 5 m rettangolari, con pareti rigide alte fino a 1,5 m che si gonfiano in pochi minuti con la pompa elettrica 1000W inclusa.'
+      pills:
+        - 'Piscina rotonda'
+        - 'Piscina rettangolare'
+        - 'Pompa elettrica 1000W'
+    - title: 'Giardini piccoli e case a schiera'
+      description: 'Una vera piscina che entra nella terrazza di una casa a schiera, in un passaggio laterale o in un piccolo cortile.'
+      alt: 'Una piscina gonfiabile rotonda Felizbay sul piccolo patio di una moderna casa a schiera.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Lo spazio parte da circa 2 × 2 m e non c''è modo di scavare o costruire – la piscina deve liberare lo spazio a fine stagione.'
+      solution: 'Ingombri compatti da Ø 2 m rotonda e 2 × 2 m rettangolare, con pareti rigide 4-6 PSI che sembrano comunque una vera piscina e si ripiegano in una borsa per lo stoccaggio invernale.'
+      pills:
+        - 'Piscina rotonda'
+        - 'Piscina rettangolare'
+        - 'Kit di riparazione'
+    - title: 'Fitness in acqua e ginnastica acquatica'
+      description: 'Aerobica in acqua, camminata contro resistenza e giochi di famiglia su una piattaforma ampia e stabile.'
+      alt: 'Una famiglia fa esercizi in acqua e gioca in una spaziosa piscina rotonda Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Il movimento a basso impatto richiede superficie utilizzabile e pareti verticali – le piscine ad anello morbide perdono spazio interno per i lati inclinati e l''acqua trabocca durante il gioco attivo.'
+      solution: 'Pareti drop-stitch dritte a 90 gradi e un fondo piatto e stabile a 4-6 PSI; le rotonde da Ø 3-5 m offrono la maggiore area di movimento libera per metro quadrato.'
+      pills:
+        - 'Piscina rotonda'
+        - 'Pompa a filtro sabbia'
+        - 'Scala a 4 gradini'
+    - title: 'Bagno caldo e recupero in acqua fredda'
+      description: 'Una stazione compatta per bagni e immersioni fredde per patii e palestre in garage.'
+      alt: 'Un uomo fa una seduta di recupero con immersione fredda in una vasca rotonda grigia Felizbay in una palestra di garage.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Atleti e appassionati di fitness servono pareti rigide, isolamento che rallenti il riscaldamento e uno spazio ombreggiato e livellato da circa 1,5 × 1,5 m.'
+      solution: 'Vasche SPA isolate da Ø 1,8 m con sedute integrate e fondo termico da 5 mm; riscaldatori e impianti di raffreddamento dell''acqua sono esterni e venduti separatamente.'
+      pills:
+        - 'Vasca SPA rotonda'
+        - 'Vasca SPA quadrata'
+        - 'Fondo isolato'
+
 compare_collections:
   tagline: 'Confronta collezioni'
   title: 'Due collezioni, una scelta chiara'

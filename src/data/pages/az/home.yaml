@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'İstifadə halları'
+  title: 'Həyətdə həqiqi üzmək üçün yaradılıb'
+  subtitle: 'Sahiblərin Felizbay hovuzundan istifadə etdiyi dörd real yol – ailəvi həftə sonlarından sağaldıcı vannalara qədər.'
+  scenario_label: 'Ssenari'
+  solution_label: 'Həll'
+  cards:
+    - title: 'Ailəvi həyət üzgüçülüyü'
+      description: 'Yay tətilləri, ad günləri və məktəbdən sonrakı gündəlik su oyunları üçün tam ölçülü hovuz.'
+      alt: 'Yay həyət toplaşmasında böyük dairəvi Felizbay Drop-Stitch hovuzunda dinclənən bir ailə.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Bütün ailə görüşlərə və hovuz şənliklərinə gəlir, kiçik çimmə hovuzu kifayət etmir – stasionar hovuz isə mümkün olmayan, icazə verilməyən və ya çox bahalıdır.'
+      solution: 'Ø 10 m-ə qədər dairəvi və 6 × 5 m düzbucaqlı böyük Drop-Stitch hovuzları, daxil olan 1000W elektrik nasosu ilə dəqiqələr ərzində şişən 1,5 m-ə qədər hündürlükdə sərt divarlarla.'
+      pills:
+        - 'Dairəvi hovuz'
+        - 'Düzbucaqlı hovuz'
+        - '1000W elektrik nasosu'
+    - title: 'Kiçik həyətlər və sıra evlər'
+      description: 'Sıra evin terrasına, yan həyətə və ya kiçik həyətə sığan gerçek hovuz.'
+      alt: 'Müasir sıra evin kiçik terrasında dairəvi Felizbay şişirilən hovuzu.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Sahə təxminən 2 × 2 m-dən başlayır və qazma və ya tikmə mümkün deyil – hovuz mövsüm sonunda yeri boşaltmalıdır.'
+      solution: 'Ø 2 m dairəvi və 2 × 2 m düzbucaqlıdan başlayan kompakt ölçülər, yenə də gerçek hovuz kimi görünən 4-6 PSI sərt divarlarla və qış üçün saxlama çantasına qatlanan.'
+      pills:
+        - 'Dairəvi hovuz'
+        - 'Düzbucaqlı hovuz'
+        - 'Təmir dəsti'
+    - title: 'Su fitnessı və su məşqləri'
+      description: 'Geniş və stabil platformada su aerobikası, müqavimət yeriməsi və ailəvi su oyunları.'
+      alt: 'Geniş dairəvi Felizbay hovuzunda su məşqləri və oyunlar edən ailə.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Aşağı təsirli hərəkət istifadə edilə bilən səth sahəsi və şaquli divarlar tələb edir – yumşaq halqalı hovuzlar daxili sahəni maili tərəflərə itirir və aktiv oyunda kənara daşır.'
+      solution: '90 dərəcə düz Drop-Stitch divarlar və 4-6 PSI-də düz, stabil dib; Ø 3-5 m dairəvi hovuzlar hər kvadrat metrə ən maneəsiz hərəkət sahəsi verir.'
+      pills:
+        - 'Dairəvi hovuz'
+        - 'Qum filtri nasosu'
+        - '4 pilləli nərdivan'
+    - title: 'İsti vanna və soyuq su sağalması'
+      description: 'Terraslar və qaraj trenajor zalları üçün kompakt çimmə və soyuq su stansiyası.'
+      alt: 'Qaraj trenajor zalında dairəvi boz Felizbay vannasında soyuq su sağalma seansı keçirən kişi.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'İdmançılar və fitness həvəskarları sərt divarlar, istilənməni ləngidən izolyasiya və təxminən 1,5 × 1,5 m-dən başlayan kölgəli, düz bir yerə ehtiyac duyur.'
+      solution: 'Ø 1,8 m-dən başlayan, daxili oturacaqları və 5 mm istilik izolyasiyalı dibli SPA vannaları; istilik və su soyutma avadanlığı xaricidir və ayrıca satılır.'
+      pills:
+        - 'Dairəvi SPA vanna'
+        - 'Kvadrat SPA vanna'
+        - 'İzolyasiya edilmiş dib'
+
 compare_collections:
   tagline: 'Kolleksiyaları müqayisə edin'
   title: 'İki Kolleksiya, Bir Aydın Seçim'

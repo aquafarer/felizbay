@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Cas d''usage'
+  title: 'Conçu pour la vraie baignade dans le jardin'
+  subtitle: 'Quatre façons réelles dont les propriétaires utilisent leur piscine Felizbay – des week-ends en famille aux bains de récupération.'
+  scenario_label: 'Scénario'
+  solution_label: 'Solution'
+  cards:
+    - title: 'Baignade familiale dans le jardin'
+      description: 'Une piscine pleine grandeur pour les vacances d''été, les anniversaires et les éclaboussures quotidiennes après l''école.'
+      alt: 'Une famille se détend dans une grande piscine ronde Felizbay à parois drop-stitch lors d''une réunion d''été au jardin.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Aux retrouvailles et aux fêtes de piscine, toute la famille est là et une petite pataugeoire ne suffit pas – tandis qu''une piscine enterrée est impossible, interdite ou trop chère.'
+      solution: 'De grandes piscines drop-stitch jusqu''à Ø 10 m rondes et 6 × 5 m rectangulaires, aux parois rigides jusqu''à 1,5 m qui se gonflent en quelques minutes avec la pompe électrique 1000W incluse.'
+      pills:
+        - 'Piscine ronde'
+        - 'Piscine rectangulaire'
+        - 'Pompe électrique 1000W'
+    - title: 'Petits jardins et maisons de ville'
+      description: 'Une vraie piscine qui tient sur la terrasse d''une maison de ville, un passage latéral ou une petite cour.'
+      alt: 'Une piscine gonflable ronde Felizbay sur la petite terrasse d''une maison de ville moderne.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'L''espace commence à environ 2 × 2 m et ni terrassement ni construction ne sont possibles – la piscine doit libérer la place à la fin de la saison.'
+      solution: 'Des encombrements compacts dès Ø 2 m rond et 2 × 2 m rectangulaire, avec des parois rigides 4-6 PSI qui ressemblent quand même à une vraie piscine et se replient dans un sac de rangement pour l''hiver.'
+      pills:
+        - 'Piscine ronde'
+        - 'Piscine rectangulaire'
+        - 'Kit de réparation'
+    - title: 'Fitness aquatique et exercices dans l''eau'
+      description: 'Aqua gym, marche de résistance et jeux en famille sur une plateforme large et stable.'
+      alt: 'Une famille fait des exercices dans l''eau et joue dans une grande piscine ronde Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Le mouvement à faible impact demande une surface utilisable et des parois verticales – les piscines souples à boudin perdent de l''espace intérieur à cause des parois inclinées et l''eau déborde pendant les jeux actifs.'
+      solution: 'Des parois drop-stitch droites à 90 degrés et un fond plat et stable à 4-6 PSI ; les rondes de Ø 3 à 5 m offrent la plus grande surface de mouvement dégagée au mètre carré.'
+      pills:
+        - 'Piscine ronde'
+        - 'Pompe à filtre à sable'
+        - 'Échelle 4 marches'
+    - title: 'Bain chaud et récupération en eau froide'
+      description: 'Une station compacte de bain et de plongeon froid pour les terrasses et les salles de sport de garage.'
+      alt: 'Un homme fait une séance de récupération en eau froide dans une baignoire ronde grise Felizbay dans un garage-salle de sport.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Les sportifs et les passionnés de fitness ont besoin de parois rigides, d''une isolation qui ralentit le réchauffement et d''un endroit ombragé et plat dès environ 1,5 × 1,5 m.'
+      solution: 'Des baignoires SPA isolées dès Ø 1,8 m avec sièges intégrés et fond thermique de 5 mm ; les chauffages et les systèmes de refroidissement de l''eau sont externes et vendus séparément.'
+      pills:
+        - 'Spa rond'
+        - 'Spa carré'
+        - 'Fond isolé'
+
 compare_collections:
   tagline: 'Comparer les collections'
   title: 'Deux collections, un choix clair'

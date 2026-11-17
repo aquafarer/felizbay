@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Kasus Penggunaan'
+  title: 'Dibuat untuk Berenang Sungguhan di Halaman Belakang'
+  subtitle: 'Empat cara nyata pemilik memanfaatkan kolam Felizbay – dari akhir pekan keluarga hingga berendam pemulihan.'
+  scenario_label: 'Skenario'
+  solution_label: 'Solusi'
+  cards:
+    - title: 'Berenang Keluarga di Halaman Belakang'
+      description: 'Kolam ukuran penuh untuk liburan musim panas, ulang tahun, dan bermain air harian setelah sekolah.'
+      alt: 'Sebuah keluarga bersantai di kolam bulat besar Felizbay Drop-Stitch saat pertemuan musim panas di halaman.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Seluruh keluarga hadir di acara pertemuan dan pesta kolam, dan kolam kecil tidak cukup – sementara kolam permanen mustahil, tidak diizinkan, atau terlalu mahal.'
+      solution: 'Kolam Drop-Stitch besar hingga Ø 10 m bulat dan 6 × 5 m persegi panjang, dengan dinding kaku setinggi hingga 1.5 m yang mengembang dalam hitungan menit memakai pompa listrik 1000W bawaan.'
+      pills:
+        - 'Kolam bulat'
+        - 'Kolam persegi panjang'
+        - 'Pompa listrik 1000W'
+    - title: 'Halaman Kecil & Rumah Townhouse'
+      description: 'Kolam sungguhan yang muat di teras townhouse, jalur samping, atau halaman kecil.'
+      alt: 'Kolam bulat tiup Felizbay di teras kecil sebuah townhouse modern.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Ruang mulai dari sekitar 2 × 2 m dan tidak mungkin menggali atau membangun – kolam harus mengosongkan ruang itu di akhir musim.'
+      solution: 'Ukuran kompak dari Ø 2 m bulat dan 2 × 2 m persegi panjang, dengan dinding kaku 4-6 PSI yang tetap terlihat seperti kolam sungguhan dan melipat menjadi tas penyimpanan untuk musim dingin.'
+      pills:
+        - 'Kolam bulat'
+        - 'Kolam persegi panjang'
+        - 'Kit perbaikan'
+    - title: 'Kebugaran Air & Latihan di Air'
+      description: 'Aerobik air, jalan menahan gaya, dan permainan keluarga di platform yang lebar dan stabil.'
+      alt: 'Sebuah keluarga melakukan latihan dan permainan air di kolam bulat luas Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Gerakan berdampak rendah membutuhkan luas lantai yang bisa dipakai dan dinding tegak – kolam cincin lunak kehilangan ruang dalam karena sisi miring dan air meluber saat bermain aktif.'
+      solution: 'Dinding Drop-Stitch lurus 90 derajat dan lantai datar yang stabil pada 4-6 PSI; kolam bulat Ø 3-5 m memberi area gerak paling bebas hambatan per meter persegi.'
+      pills:
+        - 'Kolam bulat'
+        - 'Pompa filter pasir'
+        - 'Tangga 4 anak tangga'
+    - title: 'Berendam Hangat & Pemulihan Air Dingin'
+      description: 'Stasiun berendam dan celup dingin yang kompak untuk teras dan gym garasi.'
+      alt: 'Seorang pria melakukan sesi pemulihan celup dingin di bak bulat abu-abu Felizbay di gym garasi.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Atlet dan penggemar kebugaran membutuhkan dinding kaku, isolasi yang memperlambat pemanasan, dan tempat rata yang teduh mulai dari sekitar 1.5 × 1.5 m.'
+      solution: 'Bak SPA berinsulasi dari Ø 1.8 m dengan tempat duduk terpasang dan dasar termal 5 mm; pemanas dan peralatan pendingin air eksternal dan dijual terpisah.'
+      pills:
+        - 'Bak SPA bulat'
+        - 'Bak SPA persegi'
+        - 'Dasar berinsulasi'
+
 compare_collections:
   tagline: 'Bandingkan Koleksi'
   title: 'Dua Koleksi, Satu Pilihan Jelas'

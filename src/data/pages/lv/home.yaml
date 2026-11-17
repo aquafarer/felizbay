@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Lietošanas gadījumi'
+  title: 'Radīts īstai peldēšanai dārzā'
+  subtitle: 'Četri reāli veidi, kā īpašnieki izmanto Felizbay baseinu – no ģimenes brīvdienām līdz atjaunojošām vannām.'
+  scenario_label: 'Scenārijs'
+  solution_label: 'Risinājums'
+  cards:
+    - title: 'Ģimenes peldēšana dārzā'
+      description: 'Pilna izmēra baseins vasaras brīvdienām, dzimšanas dienām un ikdienas rotaļām pēc skolas.'
+      alt: 'Ģimene atpūšas lielā apaļā Felizbay Drop-Stitch baseinā vasaras sanāksmē dārzā.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Uz ģimenes salidojumiem un baseinu ballītēm ierodas visa ģimene, un mazs šļakatu baseins nepietiek – kamēr iebūvēts baseins ir neiespējams, aizliegts vai pārāk dārgs.'
+      solution: 'Lieli Drop-Stitch baseini līdz Ø 10 m apaļi un 6 × 5 m taisnstūrveida, ar stingrām sienām līdz 1,5 m, kas uzpūšas dažu minūšu laikā ar iekļauto 1000W elektrisko sūkni.'
+      pills:
+        - 'Apaļš baseins'
+        - 'Taisnstūra baseins'
+        - '1000W elektriskais sūknis'
+    - title: 'Mazi dārzi un rindu mājas'
+      description: 'Īsts baseins, kas iederas rindu mājas terasē, sētas pusē vai mazā pagalmā.'
+      alt: 'Apaļš piepūšams Felizbay baseins uz mūsdienīgas rindu mājas mazās terases.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Telpa sākas no aptuveni 2 × 2 m, un rakšana vai celtniecība nav iespējama – baseinam jāatbrīvo vieta sezonas beigās.'
+      solution: 'Kompakti izmēri no Ø 2 m apaļa un 2 × 2 m taisnstūra, ar stingrām 4-6 PSI sienām, kas joprojām izskatās kā īsts baseins un ziemā salokās glabāšanas somā.'
+      pills:
+        - 'Apaļš baseins'
+        - 'Taisnstūra baseins'
+        - 'Remonta komplekts'
+    - title: 'Ūdens fitness un vingrošana ūdenī'
+      description: 'Ūdens aerobika, gājiens pret pretestību un ģimenes spēles uz plašas un stabilas platformas.'
+      alt: 'Ģimene veic ūdens vingrinājumus un spēlējas plašā apaļā Felizbay baseinā.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Zemas slodzes kustībai vajadzīga izmantojama grīdas platība un vertikālas sienas – mīkstie gredzenu baseini zaudē iekšējo telpu slīpajām sānu malām, un aktīvās spēlēs ūdens pāršļāc pāri malai.'
+      solution: 'Taisnas 90 grādu Drop-Stitch sienas un plakans, stabils dibens pie 4-6 PSI; Ø 3-5 m apaļie baseini dod visvairāk neaizēnotas kustības telpas uz kvadrātmetru.'
+      pills:
+        - 'Apaļš baseins'
+        - 'Smilšu filtra sūknis'
+        - 'Kāpnes ar 4 pakāpieniem'
+    - title: 'Karsta vanna un atveseļošanās aukstā ūdenī'
+      description: 'Kompakta peldēšanās un auksto iegremdējumu stacija terasēm un garāža sporta zālēm.'
+      alt: 'Vīrietis veic atveseļošanās seansu aukstā ūdenī apaļā pelēkā Felizbay vannā garāža sporta zālē.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sportistiem un fitnesa entuziastiem vajag stingras sienas, sasilšanu palēlinošu izolāciju un noēnotu, līdzenu vietu no aptuveni 1,5 × 1,5 m.'
+      solution: 'Izolētas SPA vannas no Ø 1,8 m ar iebūvētām sēdām un 5 mm termisko dibenu; sildītāji un ūdens dzesēšanas iekārtas ir ārējas un tiek pārdotas atsevišķi.'
+      pills:
+        - 'Apaļa SPA vanna'
+        - 'Kvadrātveida SPA vanna'
+        - 'Izolēts dibens'
+
 compare_collections:
   tagline: 'Salīdziniet kolekcijas'
   title: 'Divas kolekcijas, viena skaidra izvēle'

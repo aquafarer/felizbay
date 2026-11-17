@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Naudojimo atvejai'
+  title: 'Sukurtas tikram plaukiojimui sode'
+  subtitle: 'Keturi realūs būdai, kaip savininkai naudoja Felizbay baseiną – nuo šeimos savaitgalių iki atsigavimo vonių.'
+  scenario_label: 'Scenarijus'
+  solution_label: 'Sprendimas'
+  cards:
+    - title: 'Šeimos plaukiojimas sode'
+      description: 'Pilno dydžio baseinas vasaros atostogoms, gimtadieniams ir kasdieniam pliuškenimuisi po mokyklos.'
+      alt: 'Šeima atsipalaiduoja dideliame apvaliame Felizbay Drop-Stitch baseine vasaros susibūime sode.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Į šeimos susitikimus ir baseino vakarėlius susirenka visa šeima, o mažas pliuškenimosi baseinas nebeužtenka – o įrengtas baseinas neįmanomas, draudžiamas arba per brangus.'
+      solution: 'Dideli Drop-Stitch baseinai iki Ø 10 m apvalūs ir 6 × 5 m stačiakampiai, su standžiomis sienomis iki 1,5 m aukščio, kurios išsipučia per minutes su pridėta 1000W elektrine pompa.'
+      pills:
+        - 'Apvalus baseinas'
+        - 'Stačiakampis baseinas'
+        - '1000W elektrinis siurblys'
+    - title: 'Maži kiemai ir kotedžai'
+      description: 'Tikras baseinas, tinkantis kotedžo terasai, šoniniam takui ar mažam vidiniam kiemui.'
+      alt: 'Apvalus pripučiamas Felizbay baseinas ant modernaus kotedžo mažos terasos.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Vieta prasideda nuo maždaug 2 × 2 m, o kasti ar statyti negalima – baseinas turi atlaisvinti vietą sezono pabaigoje.'
+      solution: 'Kompaktiški matmenys nuo Ø 2 m apvalaus ir 2 × 2 m stačiakampio, su standžiomis 4-6 PSI sienomis, kurios vis tiek atrodo kaip tikras baseinas, o žiemai susilanksto į laikymo maišą.'
+      pills:
+        - 'Apvalus baseinas'
+        - 'Stačiakampis baseinas'
+        - 'Remonto rinkinys'
+    - title: 'Vandens fitnesas ir pratimai vandenyje'
+      description: 'Vandens aerobika, ėjimas prieš pasipriešinimą ir šeimos žaidimai plačioje ir stabilioje platformoje.'
+      alt: 'Šeima daro pratimus vandenyje ir žaidžia erdviame apvaliame Felizbay baseine.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Mažai apkraunantis judėjimas reikalauja naudotino grindų ploto ir vertikalių sienų – minkšti žiediniai baseinai praranda vidinę erdvę dėl nuožulnių šonų, o aktyvaus žaidimo metu vanduo perlieja per kraštą.'
+      solution: 'Tiesios 90 laipsnių Drop-Stitch sienos ir plokščias, stabilus dugnas esant 4-6 PSI; Ø 3-5 m apvalūs baseinai suteikia daugiausiai netrukdomos judėjimo erdvės kvadratiniam metrui.'
+      pills:
+        - 'Apvalus baseinas'
+        - 'Smėlio filtro siurblys'
+        - 'Kopėčios su 4 pakopomis'
+    - title: 'Karšta vonia ir atsigavimas šaltame vandenyje'
+      description: 'Kompaktiška maudymosi ir šalto panirimo stotis terasoms ir garažo sporto salėms.'
+      alt: 'Vyras atlieka atsigavimo seansą šaltame vandenyje apvalioje pilkoje Felizbay vanioje garažo sporto salėje.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sportininkai ir fitneso entuziastai reikalauja standžių sienų, izoliacijos, lėtinančios šiltimą, ir pavėsingos, lygios vietos nuo maždaug 1,5 × 1,5 m.'
+      solution: 'Izoliuotos SPA vonios nuo Ø 1,8 m su įmontuotomis sėdynėmis ir 5 mm terminiu dugnu; šildytuvai ir vandens aušinimo įranga yra išoriniai ir parduodami atskirai.'
+      pills:
+        - 'Apvalus SPA baseinas'
+        - 'Kvadratinis SPA baseinas'
+        - 'Izoliuotas dugnas'
+
 compare_collections:
   tagline: 'Palyginkite kolekcijas'
   title: 'Dvi kolekcijos, vienas aiškus pasirinkimas'

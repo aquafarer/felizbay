@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Anwendungsfälle'
+  title: 'Gemacht für echtes Schwimmen im Garten'
+  subtitle: 'Vier echte Arten, wie Besitzer ihren Felizbay-Pool nutzen – von Familienwochenenden bis zu Erholungsbädern.'
+  scenario_label: 'Szenario'
+  solution_label: 'Lösung'
+  cards:
+    - title: 'Schwimmen in Familiengärten'
+      description: 'Ein Pool in voller Größe für Sommerferien, Geburtstagspartys und das tägliche Planschen nach der Schule.'
+      alt: 'Eine Familie, die sich in einem großen runden Felizbay-Drop-Stitch-Pool bei einem Sommerfest im Garten entspannt.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Zum Familientreffen und zur Poolparty kommt die ganze Familie – ein kleiner Planschpool reicht dann nicht, während ein fest eingebauter Pool unmöglich, nicht erlaubt oder zu teuer ist.'
+      solution: 'Große Drop-Stitch-Pools bis Ø 10 m rund und 6 × 5 m rechteckig mit starren Wänden bis 1,5 m Höhe, die sich in Minuten mit der mitgelieferten 1000W-Elektropumpe aufblasen lassen.'
+      pills:
+        - 'Rundpool'
+        - 'Rechteckiger Pool'
+        - '1000W-Elektropumpe'
+    - title: 'Kleine Gärten & Reihenhäuser'
+      description: 'Ein echter Pool, der auf eine Reihenhaus-Terrasse, einen Seitenhof oder einen kleinen Innenhof passt.'
+      alt: 'Ein runder Felizbay-Pool auf der kleinen Terrasse eines modernen Reihenhauses.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Der Platz beginnt bei etwa 2 × 2 m, und ein Aushub oder Bau kommt nicht infrage – der Pool muss den Platz am Ende der Saison wieder freigeben.'
+      solution: 'Kompakte Grundflächen ab Ø 2 m rund und 2 × 2 m rechteckig mit starren 4-6 PSI-Wänden, die trotzdem wie ein echter Pool wirken und sich für den Winter in die Aufbewahrungstasche zusammenfalten lassen.'
+      pills:
+        - 'Rundpool'
+        - 'Rechteckiger Pool'
+        - 'Reparaturset'
+    - title: 'Wasserfitness & Aquatraining'
+      description: 'Wassergymnastik, Gehen im Wasser und Familienspiele auf einer breiten, stabilen Plattform.'
+      alt: 'Eine Familie, die Wassergymnastik und Spiele in einem geräumigen runden Felizbay-Pool macht.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Bewegung mit geringer Belastung braucht nutzbare Bodenfläche und senkrechte Wände – weiche Ringpools verlieren Innenraum an schräge Seiten, und das Wasser schwappt bei aktivem Spiel über den Rand.'
+      solution: 'Gerade 90-Grad-Drop-Stitch-Wände und ein flacher, stabiler Boden bei 4-6 PSI; Ø 3-5 m runde Pools bieten die meisten freien Bewegungsflächen pro Quadratmeter.'
+      pills:
+        - 'Rundpool'
+        - 'Sandfilterpumpe'
+        - 'Leiter mit 4 Stufen'
+    - title: 'Heißes Baden & Kaltbad-Erholung'
+      description: 'Eine kompakte Bade- und Kaltbadstation für Terrassen und Garagen-Fitnessräume.'
+      alt: 'Ein Mann bei einer Kaltbad-Einheit in einer runden grauen Felizbay-Wanne im Garagen-Fitnessraum.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sportler und Fitnessbegeisterte brauchen starre Wände, Isolierung gegen Erwärmung und einen schattigen, ebenen Platz ab etwa 1,5 × 1,5 m.'
+      solution: 'Isolierte SPA-Wannen ab Ø 1,8 m mit eingebauten Sitzen und 5 mm Thermoboden; Heizungen und Wasserkühlgeräte sind extern und separat erhältlich.'
+      pills:
+        - 'Runde SPA-Wanne'
+        - 'Quadratische SPA-Wanne'
+        - 'Isolierter Boden'
+
 compare_collections:
   tagline: 'Sammlungen vergleichen'
   title: 'Zwei Kollektionen, eine klare Wahl'

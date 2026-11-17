@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Foydalanish holatlari'
+  title: 'Hovlida haqiqiy suzish uchun yaratilgan'
+  subtitle: 'Egalarining Felizbay hovuzidan foydalanishning to''rtta real usuli – oilaviy dam olish kunlaridan tiklanish vannalarigacha.'
+  scenario_label: 'Senariy'
+  solution_label: 'Yechim'
+  cards:
+    - title: 'Hovlida oilaviy suzish'
+      description: 'Yoz ta''tillari, tug''ilgan kunlar va maktabdan keyingi kunlik o''yinlar uchun to''liq o''lchamdagi hovuz.'
+      alt: 'Bir oila hovlidagi yoz uchrashuvida Drop-Stitch devorli katta dumaloq Felizbay hovuzida dam olmoqda.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Oilaviy uchrashuvlar va hovuz bazmlariga butun oila yig''iladi va kichik bolalar hovuzi yetmaydi – qurilgan hovuz esa imkonsiz, taqiqlangan yoki juda qimmat.'
+      solution: 'Ø 10 m gacha dumaloq va 6 × 5 m to''rtburchak katta Drop-Stitch hovuzlar; 1,5 m gacha qattiq devorlar to''plamdagi 1000W elektr nasosi bilan bir necha daqiqada shishadi.'
+      pills:
+        - 'Dumaloq hovuz'
+        - 'To''rtburchak hovuz'
+        - '1000W elektr nasos'
+    - title: 'Kichik hovlilar va qator uylar'
+      description: 'Qator uyning verandasiga, yon yo''lakka yoki ixcham hovliga sig''adigan haqiqiy hovuz.'
+      alt: 'Zamonaviy qator uyning kichik verandasida dumaloq shishiriladigan Felizbay hovuzi.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Joy taxminan 2 × 2 m dan boshlanadi va qazish yoki qurish mumkin emas – hovuz mavsum oxirida joyni bo''shatib berishi kerak.'
+      solution: 'Ø 2 m dumaloq va 2 × 2 m to''rtburchakdan boshlanadigan ixcham o''lchamlar; baribir haqiqiy hovuzdek ko''rinadigan 4-6 PSI qattiq devorlar va qishga saqlash sumkasiga yig''iladigan ko''rinish.'
+      pills:
+        - 'Dumaloq hovuz'
+        - 'To''rtburchak hovuz'
+        - 'Tiklash to''plami'
+    - title: 'Suv fitnesi va suvda mashq'
+      description: 'Keng va barqaror platformada suv aerobikasi, qarshilik bilan yurish va oilaviy o''yinlar.'
+      alt: 'Bir oila keng dumaloq Felizbay hovuzida suvda mashq qilmoqda va o''ynamoqda.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Past zarbali harakatlar foydalaniladigan maydon va tik devorlarni talab qiladi – yumshoq halqali hovuzlar qiyshaygan devorlar tufayli ichki joyni yo''qotadi va faol o''yinda suv chetdan oshib ketadi.'
+      solution: 'To''g''ri 90 darajali Drop-Stitch devorlar va 4-6 PSI dagi tekis, barqaror tub; Ø 3-5 m dumaloq modellar kvadrat metrga eng ko''p erkin harakat maydonini beradi.'
+      pills:
+        - 'Dumaloq hovuz'
+        - 'Qum filtrli nasos'
+        - '4 pog''onali narvon'
+    - title: 'Issiq vanna va sovuq suvda tiklanish'
+      description: 'Verandalar va garaj sport zallari uchun ixcham yuvinish va sovuqga cho''milish stansiyasi.'
+      alt: 'Bir kishi garaj sport zalida dumaloq kulrang Felizbay vannasida sovuq suvga cho''milib tiklanish seansini o''tkazmoqda.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sportchilar va fitnes ixlosmandlari qattiq devorlar, isinishni sekinlashtiradigan izolyatsiya va taxminan 1,5 × 1,5 m dan boshlanadigan soyali, tekis joyga muhtoj.'
+      solution: 'Ø 1,8 m dan boshlanadigan, o''rindiqlari integral va 5 mm issiqlik tubi izolyatsiyalangan SPA vannalari; suv isitgichlar va sovutish uskunalari tashqi va alohida sotiladi.'
+      pills:
+        - 'Dumaloq SPA vanna'
+        - 'Kvadrat SPA vanna'
+        - 'Izolyatsiyalangan tub'
+
 compare_collections:
   tagline: 'To''plamlarni solishtiring'
   title: 'Ikki to''plam, bitta aniq tanlov'

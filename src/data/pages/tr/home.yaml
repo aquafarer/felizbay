@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Kullanım alanları'
+  title: 'Arka bahçede gerçek yüzme için üretildi'
+  subtitle: 'Sahiplerin bir Felizbay havuzunu kullandığı dört gerçek senaryo – aile hafta sonlarından dinlenme banyolarına kadar.'
+  scenario_label: 'Senaryo'
+  solution_label: 'Çözüm'
+  cards:
+    - title: 'Arka bahçede aile yüzmesi'
+      description: 'Yaz tatilleri, doğum günleri ve okul sonrası günlük su oyunları için tam boy bir havuz.'
+      alt: 'Bir aile, arka bahçedeki bir yaz buluşmasında Drop-Stitch duvarlı büyük yuvarlak Felizbay havuzunda dinleniyor.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Aile buluşmalarında ve havuz partilerinde tüm aile bir araya gelir ve küçük bir çocuk havuzu yetmez – sabit havuz ise imkânsız, izinli değil ya da çok pahalıdır.'
+      solution: 'Ø 10 m''ye kadar yuvarlak ve 6 × 5 m dikdörtgen büyük Drop-Stitch havuzlar; 1,5 m''ye kadar rijit duvarlar, kutudan çıkan 1000W elektrikli pompayla dakikalar içinde şişer.'
+      pills:
+        - 'Yuvarlak havuz'
+        - 'Dikdörtgen havuz'
+        - '1000W elektrikli pompa'
+    - title: 'Küçük bahçeler ve sıra evler'
+      description: 'Bir sıra evin terasına, yan geçidine veya kompakt bir avluya sığan gerçek bir havuz.'
+      alt: 'Modern bir sıra evin küçük terasında yuvarlak şişme Felizbay havuzu.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Alan yaklaşık 2 × 2 m''den başlar ve kazma ya da inşaat mümkün değildir – havuzun sezon sonunda alanı geri vermesi gerekir.'
+      solution: 'Ø 2 m yuvarlak ve 2 × 2 m dikdörtgenden başlayan kompakt ölçüler; yine de gerçek bir havuz gibi görünen 4-6 PSI rijit duvarlar ve kışın saklama çantasına katlanabilen gövde.'
+      pills:
+        - 'Yuvarlak havuz'
+        - 'Dikdörtgen havuz'
+        - 'Tamir kiti'
+    - title: 'Su fitnessı ve suda egzersiz'
+      description: 'Geniş ve stabil bir platformda su aerobiği, dirençli yürüyüş ve aile oyunları.'
+      alt: 'Bir aile, geniş yuvarlak Felizbay havuzunda suda egzersiz yapıyor ve oyun oynuyor.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Düşük etkili hareket kullanılabilir taban alanı ve dik duvarlar ister – yumuşak halkalı havuzlar eğik yanlar nedeniyle iç alan kaybeder ve aktif oyunda su kenardan taşar.'
+      solution: 'Dik 90 derece Drop-Stitch duvarlar ve 4-6 PSI''de düz, stabil bir taban; Ø 3-5 m yuvarlak modeller metrekare başına en çok serbest hareket alanını sunar.'
+      pills:
+        - 'Yuvarlak havuz'
+        - 'Kum filtreli pompa'
+        - '4 basamaklı merdiven'
+    - title: 'Sıcak banyo ve soğuk su iyileşmesi'
+      description: 'Teraslar ve garaj spor salonları için kompakt bir banyo ve soğuk daldırma istasyonu.'
+      alt: 'Bir adam, garaj spor salonunda yuvarlak gri Felizbay küvetinde soğuk daldırmalı bir iyileşme seansı yapıyor.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sporcular ve fitness meraklıları rijit duvarlar, ısınmayı yavaşlatan yalıtım ve yaklaşık 1,5 × 1,5 m''den başlayan gölgeli, düz bir yer ister.'
+      solution: 'Ø 1,8 m''den başlayan, gömlekli koltuklu ve 5 mm termal tabanlı yalıtımlı SPA küvetleri; su ısıtıcıları ve soğutma ekipmanları haricidir ve ayrı satılır.'
+      pills:
+        - 'Yuvarlak SPA küveti'
+        - 'Kare SPA küveti'
+        - 'Yalıtımlı taban'
+
 compare_collections:
   tagline: 'Koleksiyonları Karşılaştır'
   title: 'İki Koleksiyon, Tek Net Seçim'

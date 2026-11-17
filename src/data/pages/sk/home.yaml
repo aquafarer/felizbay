@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Prípady použitia'
+  title: 'Stvorené pre skutočné kúpanie na záhrade'
+  subtitle: 'Štyri reálne spôsoby, akými majitelia využívajú bazén Felizbay – od rodinných víkendov po regeneračné kúpele.'
+  scenario_label: 'Scenár'
+  solution_label: 'Riešenie'
+  cards:
+    - title: 'Rodinné kúpanie na záhrade'
+      description: 'Bazén v plnej veľkosti na letné prázdniny, narodeniny a každodenné hranie po škole.'
+      alt: 'Rodina oddychuje vo veľkom okrúhlom bazéne Felizbay so stenami Drop-Stitch počas letného stretnutia na záhrade.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Na rodinné stretnutia a bazénové párty sa zijde celá rodina a malé detské bazénik nestačí – zabudovaný bazén je nemožný, zakázaný alebo príliš drahý.'
+      solution: 'Veľké Drop-Stitch bazény až Ø 10 m okrúhle a 6 × 5 m obdĺžnikové s pevnými stenami do výšky 1,5 m, ktoré sa nafúknu v priebehu niekoľkých minút pomocou priloženej 1000W elektrickej pumpy.'
+      pills:
+        - 'Okrúhly bazén'
+        - 'Obdĺžnikový bazén'
+        - 'Elektrické čerpadlo 1000W'
+    - title: 'Malé záhrady a radové domy'
+      description: 'Skutočný bazén, ktorý sa zmestí na terasu radového domu, do bočného dvora alebo malého nádvoria.'
+      alt: 'Okrúhly nafukovací bazén Felizbay na malej terase moderného radového domu.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Priestor začína na asi 2 × 2 m a hĺbenie ani stavba nepripadajú do úvahy – bazén musí na konci sezóny miesto uvoľniť.'
+      solution: 'Kompaktné rozmery od Ø 2 m okrúhleho a 2 × 2 m obdĺžnikového, s pevnými 4-6 PSI stenami, ktoré pôsobia ako skutočný bazén a na zimu sa zložia do úložnej tašky.'
+      pills:
+        - 'Okrúhly bazén'
+        - 'Obdĺžnikový bazén'
+        - 'Opravná sada'
+    - title: 'Aqua fitness a cvičenie vo vode'
+      description: 'Vodná aerobik, chôdza proti odporu a rodinné hry na širokej a stabilnej platforme.'
+      alt: 'Rodina cvičí vo vode a hrá sa v priestrannom okrúhlom bazéne Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Pohyb s nízkym zaťažením vyžaduje využiteľnú plochu a zvislé steny – mäkké okrúhle bazény strácajú vnútorný priestor kvôli šikmým stenám a pri aktívnej hre voda preteká cez okraj.'
+      solution: 'Rovné 90-stupňové Drop-Stitch steny a rovné, stabilné dno pri 4-6 PSI; okrúhle bazény Ø 3-5 m poskytujú najviac voľného priestoru na pohyb na meter štvorcový.'
+      pills:
+        - 'Okrúhly bazén'
+        - 'Piesková filtračná pumpa'
+        - 'Rebrík so 4 stupňami'
+    - title: 'Teplé kúpele a studená regenerácia'
+      description: 'Kompaktná stanica na kúpanie a studené ponory pre terasy a domáce posilňovne v garáži.'
+      alt: 'Muž robí regeneračný studený ponor v okrúhlej šedej vani Felizbay v garážovej posilňovni.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Športovci a nadšenci fitness potrebujú pevné steny, izoláciu spomaľujúcu ohrev a zatienené rovné miesto od cca 1,5 × 1,5 m.'
+      solution: 'Izolované SPA vane od Ø 1,8 m so zabudovanými sedadlami a 5 mm tepelným dnom; ohrievače a chladiace zariadenia sú externé a predávajú sa samostatne.'
+      pills:
+        - 'Okrúhla SPA vaňa'
+        - 'Štvorcová SPA vaňa'
+        - 'Izolované dno'
+
 compare_collections:
   tagline: 'Porovnajte zbierky'
   title: 'Dve kolekcie, jedna jasná voľba'

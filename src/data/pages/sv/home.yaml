@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Användningsområden'
+  title: 'Byggd för riktig bad i trädgården'
+  subtitle: 'Fyra verkliga sätt ägare använder en Felizbay-pool – från familjehelger till återhämtningsbad.'
+  scenario_label: 'Scenario'
+  solution_label: 'Lösning'
+  cards:
+    - title: 'Familjebad i trädgården'
+      description: 'En pool i full storlek för sommarlovet, födelsedagar och dagligt plask efter skolan.'
+      alt: 'En familj kopplar av i en stor rund Felizbay-pool med Drop-Stitch-väggar under en sommarträff i trädgården.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'På familjesammankomster och poolfester dyker hela släkten upp och en liten plaskpool räcker inte – medan en fast pool är omöjlig, förbjuden eller för dyr.'
+      solution: 'Stora Drop-Stitch-pooler upp till Ø 10 m runda och 6 × 5 m rektangulära, med styva väggar upp till 1,5 m som blåses upp på minuter med den medföljande 1000W elektriska pumpen.'
+      pills:
+        - 'Rund pool'
+        - 'Rektangulär pool'
+        - 'Elektrisk pump 1000W'
+    - title: 'Små trädgårdar och radhus'
+      description: 'En riktig pool som ryms på en radhusterass, en sidogång eller en kompakt innegård.'
+      alt: 'En rund uppblåsbar Felizbay-pool på den lilla terrassen hos ett modernt radhus.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Ytan börjar vid cirka 2 × 2 m och varken grävning eller bygge är möjligt – poolen måste lämna tillbaka platsen i slutet av säsongen.'
+      solution: 'Kompakta mått från Ø 2 m rund och 2 × 2 m rektangulär, med styva 4-6 PSI väggar som ändå ser ut som en riktig pool och viks ihop i en förvaringsväska för vintern.'
+      pills:
+        - 'Rund pool'
+        - 'Rektangulär pool'
+        - 'Reparationskit'
+    - title: 'Vattengymnastik och träning i vattnet'
+      description: 'Vattenaerobics, gång med motstånd och familjelekar på en bred och stabil plattform.'
+      alt: 'En familj tränar i vattnet och leker i en rymlig rund Felizbay-pool.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Rörelse med låg belastning kräver användbar golvyta och vertikala väggar – mjuka ringpooler förlorar inre utrymme genom sluttande sidor och vattnet skvalpar över kanten vid lek.'
+      solution: 'Raka 90-graders Drop-Stitch-väggar och ett plant, stabilt golv vid 4-6 PSI; runda pooler Ø 3-5 m ger störst fri röelseyta per kvadratmeter.'
+      pills:
+        - 'Rund pool'
+        - 'Sandfilterpump'
+        - 'Stege med 4 steg'
+    - title: 'Varmt bad och kall återhämtning'
+      description: 'En kompakt bad- och kallbadstation för terrasser och garagegym.'
+      alt: 'En man gör en återhämtningsession med kallt bad i ett runt grått Felizbay-kar i ett garagegym.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Atleter och träningsentusiaster behöver styva väggar, isolering som fördröjer uppvärmningen samt en skuggad, plan plats från cirka 1,5 × 1,5 m.'
+      solution: 'Isolerade SPA-kar från Ø 1,8 m med inbyggda säten och 5 mm termobotten; vattenvärmare och kylutrustning är externa och säljs separat.'
+      pills:
+        - 'Runt SPA-kar'
+        - 'Fyrkantigt SPA-kar'
+        - 'Isolerad botten'
+
 compare_collections:
   tagline: 'Jämför samlingar'
   title: 'Två samlingar, ett tydligt val'

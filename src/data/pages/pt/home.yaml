@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Casos de uso'
+  title: 'Feito para nadar de verdade no quintal'
+  subtitle: 'Quatro formas reais como os proprietários usam uma piscina Felizbay – de fins de semana em família a banhos de recuperação.'
+  scenario_label: 'Cenário'
+  solution_label: 'Solução'
+  cards:
+    - title: 'Natação em família no quintal'
+      description: 'Uma piscina de tamanho completo para as férias de verão, aniversários e a brincadeira diária depois da escola.'
+      alt: 'Uma família relaxa em uma grande piscina redonda Felizbay de drop-stitch durante um encontro de verão no quintal.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Nos reencontros e festas de piscina aparece a família toda, e uma pequena piscina de brincar não basta – enquanto uma piscina fixa é impossível, não permitida ou cara demais.'
+      solution: 'Piscinas grandes de drop-stitch de até Ø 10 m redondas e 6 × 5 m retangulares, com paredes rígidas de até 1,5 m que inflam em minutos com a bomba elétrica de 1000W incluída.'
+      pills:
+        - 'Piscina redonda'
+        - 'Piscina retangular'
+        - 'Bomba elétrica de 1000W'
+    - title: 'Quintais pequenos e casas geminadas'
+      description: 'Uma piscina de verdade que cabe no terraço de uma casa geminada, numa passagem lateral ou num pátio compacto.'
+      alt: 'Uma piscina inflável redonda Felizbay no pequeno terraço de uma casa geminada moderna.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'O espaço começa em cerca de 2 × 2 m e não há como escavar ou construir – a piscina precisa devolver o espaço no fim da temporada.'
+      solution: 'Dimensões compactas a partir de Ø 2 m redonda e 2 × 2 m retangular, com paredes rígidas de 4-6 PSI que ainda parecem uma piscina de verdade e dobram-se num saco de armazenagem para o inverno.'
+      pills:
+        - 'Piscina redonda'
+        - 'Piscina retangular'
+        - 'Kit de reparação'
+    - title: 'Fitness aquático e exercícios na água'
+      description: 'Hidroginástica, caminhada com resistência e brincadeiras em família numa plataforma larga e estável.'
+      alt: 'Uma família faz exercícios na água e brinca numa piscina redonda espaçosa Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'O movimento de baixo impacto precisa de área utilizável e paredes verticais – piscinas de anel macias perdem espaço interno com as laterais inclinadas e a água transborda na brincadeira ativa.'
+      solution: 'Paredes retas de drop-stitch a 90 graus e um piso plano e estável a 4-6 PSI; as redondas de Ø 3-5 m oferecem a maior área de movimento livre por metro quadrado.'
+      pills:
+        - 'Piscina redonda'
+        - 'Bomba de filtro de areia'
+        - 'Escada de 4 degraus'
+    - title: 'Banho quente e recuperação em água fria'
+      description: 'Uma estação compacta de banho e imersão fria para terraços e academias de garagem.'
+      alt: 'Um homem faz uma sessão de recuperação com imersão fria numa banheira redonda cinza Felizbay numa academia de garagem.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Atletas e entusiastas do fitness precisam de paredes rígidas, isolamento que retarde o aquecimento e um local sombreado e nivelado a partir de cerca de 1,5 × 1,5 m.'
+      solution: 'Banheiras SPA isoladas a partir de Ø 1,8 m com assentos integrados e fundo térmico de 5 mm; aquecedores e equipamentos de resfriamento da água são externos e vendidos separadamente.'
+      pills:
+        - 'Banheira SPA redonda'
+        - 'Banheira SPA quadrada'
+        - 'Fundo isolado'
+
 compare_collections:
   tagline: 'Comparar coleções'
   title: 'Duas coleções, uma escolha clara'

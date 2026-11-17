@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Gebruiksscenario''s'
+  title: 'Gemaakt voor echt zwemmen in de tuin'
+  subtitle: 'Vier echte manieren waarop eigenaren hun Felizbay-zwembad gebruiken – van familieweekends tot herstellende baden.'
+  scenario_label: 'Scenario'
+  solution_label: 'Oplossing'
+  cards:
+    - title: 'Familiezwemmen in de achtertuin'
+      description: 'Een zwembad op volle grootte voor zomervakanties, verjaardagen en het dagelijkse plonzen na school.'
+      alt: 'Een gezin ontspant in een grote ronde Felizbay Drop-Stitch-zwembad tijdens een zomerse bijeenkomst in de tuin.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Bij familiereünies en zwemparty''s komt de hele familie opdagen en is een kleine plonzbak niet genoeg – terwijl een vast zwembad onmogelijk, niet toegestaan of te duur is.'
+      solution: 'Grote Drop-Stitch-zwembaden tot Ø 10 m rond en 6 × 5 m rechthoekig, met stijve wanden tot 1,5 m hoog die binnen enkele minuten worden opgeblazen met de meegeleverde 1000W elektrische pomp.'
+      pills:
+        - 'Rond zwembad'
+        - 'Rechthoekig zwembad'
+        - 'Elektrische pomp 1000W'
+    - title: 'Kleine tuinen en rijtjeshuizen'
+      description: 'Een echt zwembad dat past op het terras van een rijtjeshuis, een zijingang of een kleine binnenplaats.'
+      alt: 'Een rond opblaasbaar Felizbay-zwembad op het kleine terras van een modern rijtjeshuis.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'De ruimte begint bij ongeveer 2 × 2 m en graven of bouwen is niet mogelijk – het zwembad moet de plek aan het einde van het seizoen weer vrijmaken.'
+      solution: 'Compacte afmetingen vanaf Ø 2 m rond en 2 × 2 m rechthoekig, met stijve 4-6 PSI-wanden die er nog steeds uitzien als een echt zwembad en voor de winter opvouwbaar zijn in een opbergzak.'
+      pills:
+        - 'Rond zwembad'
+        - 'Rechthoekig zwembad'
+        - 'Reparatieset'
+    - title: 'Waterfitness en aquagym'
+      description: 'Aquarobics, weerstandswandelen en familyspellen op een breed en stabiel platform.'
+      alt: 'Een gezin doet wateroefeningen en spelletjes in een ruime ronde Felizbay-zwembad.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Beweging met lage impact vraagt bruikbare vloeroppervlakte en verticale wanden – zachte ringzwembaden verliezen binnenruimte door schuine zijkanten en het water klapt bij actief spel over de rand.'
+      solution: 'Rechte 90-graden Drop-Stitch-wanden en een vlakke, stabiele bodem bij 4-6 PSI; ronde zwembaden van Ø 3-5 m geven de meeste onbelemmerde bewegingsruimte per vierkante meter.'
+      pills:
+        - 'Rond zwembad'
+        - 'Zandfilterpomp'
+        - 'Trap met 4 treden'
+    - title: 'Warm bad en herstel in koud water'
+      description: 'Een compact station voor warme baden en koude duiken voor terrassen en sportscholen in de garage.'
+      alt: 'Een man doet een herstelsessie met een koude duik in een ronde grijze Felizbay-tub in een garagesportschool.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Sporters en fitnessliefhebbers hebben stijve wanden nodig, isolatie die opwarming vertraagt en een beschaduwde, vlakke plek vanaf ongeveer 1,5 × 1,5 m.'
+      solution: 'Geïsoleerde SPA-baden vanaf Ø 1,8 m met ingebouwde zitplaatsen en een 5 mm thermische bodem; verwarmers en waterkoelingsapparatuur zijn extern en worden apart verkocht.'
+      pills:
+        - 'Ronde SPA-kuip'
+        - 'Vierkante SPA-kuip'
+        - 'Geïsoleerde bodem'
+
 compare_collections:
   tagline: 'Vergelijk collecties'
   title: 'Twee collecties, één duidelijke keuze'

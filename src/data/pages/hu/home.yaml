@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Felhasználási esetek'
+  title: 'Valódi kerti úszásra tervezve'
+  subtitle: 'Négy valós mód, ahogyan a tulajdonosok használják a Felizbay medencét – családi hétvégéktől a regeneráló fürdőkig.'
+  scenario_label: 'Forgatókönyv'
+  solution_label: 'Megoldás'
+  cards:
+    - title: 'Családi úszás a kertben'
+      description: 'Teljes méretű medence nyári szabadságokhoz, születésnapokhoz és a mindennapi lubickoláshoz iskola után.'
+      alt: 'Egy család pihen egy nagy kerek Felizbay Drop-Stitch medencében egy nyári kerti összejövetelen.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Családi találkozókra és medencés partikra az egész család eljön, és egy kis lubickoló medence kevés – miközben egy beépített medence lehetetlen, tiltott vagy túl drága.'
+      solution: 'Nagy Drop-Stitch medencék Ø 10 m-ig kerekek és 6 × 5 m téglalap alakúak, legfeljebb 1,5 m magas merev falakkal, amelyek percek alatt felfújhatók a mellékelt 1000W elektromos pumpával.'
+      pills:
+        - 'Kerek medence'
+        - 'Téglalap alakú medence'
+        - '1000W elektromos pumpa'
+    - title: 'Kis kertek és sorházak'
+      description: 'Igazi medence, amely elfér egy sorház teraszán, oldalkertben vagy kis belső udvarban.'
+      alt: 'Kerek felfújható Felizbay medence egy modern sorház kis teraszán.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'A hely körülbelül 2 × 2 m-től indul, és ásás vagy építés nem jöhet szóba – a medencének a szezon végén vissza kell adnia a helyet.'
+      solution: 'Kompakt méretek Ø 2 m kerektől és 2 × 2 m téglalaptól, merev 4-6 PSI falakkal, amelyek így is igazi medencének tűnnek, és télen összehajthatók egy tárolótáskába.'
+      pills:
+        - 'Kerek medence'
+        - 'Téglalap alakú medence'
+        - 'Javítókészlet'
+    - title: 'Vízi fitness és vízi torna'
+      description: 'Vízi aerobik, ellenállásos séta és családi játékok széles, stabil platformon.'
+      alt: 'Egy család vízi gyakorlatokat végez és játszik egy tágas kerek Felizbay medencében.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Az alacsony terhelésű mozgásnak használható alapterület és függőleges falak kellenek – a puha gyűrűs medencék belső teret vesztenek a ferde oldalak miatt, és aktív játék közben a víz átbukik a peremen.'
+      solution: 'Egyenes, 90 fokos Drop-Stitch falak és lapos, stabil fenék 4-6 PSI-nél; a Ø 3-5 m kerek medencék adnak legtöbb akadálytlan mozgásteret négyzetméterenként.'
+      pills:
+        - 'Kerek medence'
+        - 'Homokszűrős szivattyú'
+        - '4 fokozatú létra'
+    - title: 'Meleg fürdő és hideg merüléses regeneráció'
+      description: 'Kompakt fürdő- és hideg merülésállomás teraszokra és garázs-tornatermekbe.'
+      alt: 'Egy férfi hideg merüléses regenerációs foglalkozást végez egy kerek szürke Felizbay kádban egy garázs-tornateremben.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'A sportolóknak és fitnesz-rajongóknak merev falak, a melegedést lassító hőszigetelés és körülbelül 1,5 × 1,5 m-től kezdve egy árnyékos, vízszintes hely kell.'
+      solution: 'Hőszigetelt SPA kádak Ø 1,8 m-től beépített ülésekkel és 5 mm hőszigetelt fenékkel; a melegítők és a vízhűtő berendezések külsőek és külön vásárolhatók.'
+      pills:
+        - 'Kerek SPA-kád'
+        - 'Négyzet alakú SPA-kád'
+        - 'Szigetelt fenék'
+
 compare_collections:
   tagline: 'Gyűjtemények összehasonlítása'
   title: 'Két kollekció, egy egyértelmű választás'

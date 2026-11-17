@@ -144,6 +144,58 @@ cta:
       icon: tabler:compass
 
 
+use_cases:
+  tagline: 'Kes Penggunaan'
+  title: 'Dibina untuk Berenang Sebenar di Halaman Belakang'
+  subtitle: 'Empat cara sebenar pemilik menggunakan kolam Felizbay – daripada hujung minggu keluarga hingga mandi pemulihan.'
+  scenario_label: 'Senario'
+  solution_label: 'Penyelesaian'
+  cards:
+    - title: 'Berenang Keluarga di Halaman Belakang'
+      description: 'Kolam saiz penuh untuk cuti musim panas, hari jadi dan bermain air harian selepas sekolah.'
+      alt: 'Sebuah keluarga sedang berehat dalam kolam bulat besar Felizbay Drop-Stitch semasa perjumpaan musim panas di halaman.'
+      image: /images/pool-ideas/large-pools-for-family-gatherings.webp
+      href: /pool-ideas/backyard-pools-for-families/
+      scenario: 'Seluruh keluarga hadir ke perjumpaan dan parti kolam, dan kolam kecil tidak memadai – manakala kolam tetap mustahil, tidak dibenarkan atau terlalu mahal.'
+      solution: 'Kolam Drop-Stitch besar sehingga Ø 10 m bulat dan 6 × 5 m segi empat tepat, dengan dinding tegar setinggi 1.5 m yang mengembang dalam beberapa minit menggunakan pam elektrik 1000W yang disertakan.'
+      pills:
+        - 'Kolam bulat'
+        - 'Kolam segi empat tepat'
+        - 'Pam elektrik 1000W'
+    - title: 'Halaman Kecil & Rumah Berkembar'
+      description: 'Kolam sebenar yang muat di teres rumah berkembar, laluan tepi atau halaman kecil.'
+      alt: 'Kolam tiup bulat Felizbay di teres kecil rumah berkembar moden.'
+      image: /images/pool-ideas/townhome-and-compact-yard-pools.webp
+      href: /pool-ideas/townhome-and-compact-yard-pools/
+      scenario: 'Ruang bermula dari kira-kira 2 × 2 m dan tiada cara untuk menggali atau membina – kolam mesti membebaskan ruang itu pada akhir musim.'
+      solution: 'Saiz padat dari Ø 2 m bulat dan 2 × 2 m segi empat tepat, dengan dinding tegar 4-6 PSI yang tetap kelihatan seperti kolam sebenar dan dilipat ke dalam beg simpanan untuk musim sejuk.'
+      pills:
+        - 'Kolam bulat'
+        - 'Kolam segi empat tepat'
+        - 'Kit pembaikan'
+    - title: 'Kecergasan Air & Senaman Akua'
+      description: 'Aerobik air, berjalan dengan rintangan dan permainan keluarga di atas platform yang luas dan stabil.'
+      alt: 'Sebuah keluarga melakukan senaman air dan bermain dalam kolam bulat luas Felizbay.'
+      image: /images/pool-ideas/pools-for-water-fitness-and-recreation.webp
+      href: /pool-ideas/pools-for-water-fitness-and-recreation/
+      scenario: 'Pergerakan impak rendah memerlukan ruang lantai yang boleh digunakan dan dinding menegak – kolam cincin lembut kehilangan ruang dalaman kerana sisi condong dan air melimpah semasa permainan aktif.'
+      solution: 'Dinding Drop-Stitch lurus 90 darjah dan lantai rata yang stabil pada 4-6 PSI; kolam bulat Ø 3-5 m memberikan kawasan pergerakan paling bebas setiap meter persegi.'
+      pills:
+        - 'Kolam bulat'
+        - 'Pam penuras pasir'
+        - 'Tangga 4 anak tangga'
+    - title: 'Mandi Hangat & Pemulihan Air Sejuk'
+      description: 'Stesen mandi dan rendaman sejuk yang padat untuk teres dan gim rumah garaj.'
+      alt: 'Seorang lelaki melakukan sesi pemulihan rendaman sejuk dalam tab bulat kelabu Felizbay di gim garaj.'
+      image: /images/pool-ideas/cold-plunge-and-recovery-pools.webp
+      href: /pool-ideas/cold-plunge-and-recovery-pools/
+      scenario: 'Atlet dan peminat kecergasan memerlukan dinding tegar, penebat yang melambatkan pemanasan, dan tempat rata berlorek dari kira-kira 1.5 × 1.5 m.'
+      solution: 'Tab SPA berpenebat dari Ø 1.8 m dengan tempat duduk terbina dalam dan dasar haba 5 mm; pemanas dan kelengkapan penyejukan air adalah luaran dan dijual secara berasingan.'
+      pills:
+        - 'Tab SPA bulat'
+        - 'Tab SPA persegi'
+        - 'Dasar berpenebat'
+
 compare_collections:
   tagline: 'Bandingkan Koleksi'
   title: 'Dua Koleksi, Satu Pilihan Jelas'
