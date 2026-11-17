@@ -2406,6 +2406,8 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 
 负向测试已验证（临时注入 noindex 到 `/about/` → 2 项硬违规 exit 1；还原 → PASS exit 0）。现网 dist 跑新版闸门 PASS（634 sitemap URL + 676 页）。
 
+**同轮收尾：空 sitemap 分片不再进 sitemap-index**（`scripts/generate-sitemaps.mjs`）。审计发现 community/media/learning 三个分片对应内容区（/community/、/media/、/learn/）尚不存在，为永久空壳（各 154 字节、0 URL），但被 sitemap-index 引用 → Google Search Console 产生 "0 discovered URLs" 噪音。修复：分片文件仍无条件写盘（validate-dist 要求存在；内容区上线后自动生效），sitemap-index 只收录 URL 数 > 0 的分片——现引用从 7 个降为 4 个（entity 552 / ai 21 / knowledge 53 / products 8）。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)

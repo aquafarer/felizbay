@@ -302,20 +302,25 @@ function main() {
   writeFileSync(path.join(DIST, 'sitemap-learning.xml'), learningXml);
   writeFileSync(path.join(PUBLIC, 'sitemap-learning.xml'), learningXml);
 
-  // 单一 sitemap 入口（robots.txt 指向 sitemap-index.xml；gate 汇总时跳过 sitemapindex）
+  // 单一 sitemap 入口（robots.txt 指向 sitemap-index.xml；gate 汇总时跳过 sitemapindex）。
+  // 空分片仍写盘（validate-dist 要求存在，内容区上线后自动生效），但 sitemap-index
+  // 只收录有 URL 的分片——空分片被索引引用会在 Google Search Console 产生
+  // "0 discovered URLs" 噪音（2026-11-16 审计发现 community/media/learning 永久空壳）。
   const INDEX_FILES = [
-    'sitemap-entity.xml',
-    'ai-sitemap.xml',
-    'knowledge-sitemap.xml',
-    'sitemap-products.xml',
-    'sitemap-community.xml',
-    'sitemap-media.xml',
-    'sitemap-learning.xml',
+    ['sitemap-entity.xml', pages.length],
+    ['ai-sitemap.xml', ai.length],
+    ['knowledge-sitemap.xml', knowledge.length],
+    ['sitemap-products.xml', products.length],
+    ['sitemap-community.xml', community.length],
+    ['sitemap-media.xml', media.length],
+    ['sitemap-learning.xml', learning.length],
   ];
   const indexXml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    INDEX_FILES.map((f) => `  <sitemap><loc>${BASE}/${f}</loc></sitemap>`).join('\n') +
+    INDEX_FILES.filter(([, n]) => n > 0)
+      .map(([f]) => `  <sitemap><loc>${BASE}/${f}</loc></sitemap>`)
+      .join('\n') +
     `\n</sitemapindex>\n`;
   writeFileSync(path.join(DIST, 'sitemap-index.xml'), indexXml);
   writeFileSync(path.join(PUBLIC, 'sitemap-index.xml'), indexXml);
