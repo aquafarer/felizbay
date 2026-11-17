@@ -2,8 +2,7 @@
 export const prerender = true;
 
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import HeroCarousel from '~/components/widgets/HeroCarousel.astro';
+import HeroHome from '~/components/widgets/HeroHome.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -105,21 +104,15 @@ const metadata = {
 <Layout metadata={metadata} disableGlobalLd>
   <JsonLd graph={buildGraph(homeExtras)} />
   {hero.image || hero.title ? (
-    <Hero
+    <HeroHome
       tagline={hero.tagline}
       title={hero.title}
       subtitle={hero.subtitle}
       actions={hero.actions}
-      image={heroSlides.length === 0 ? hero.image : undefined}
-    >
-      {heroSlides.length > 0 && (
-        <HeroCarousel
-          slot="visual"
-          slides={heroSlides}
-          ctaLabel={customerTypes.explore_label || 'Explore this setup'}
-        />
-      )}
-    </Hero>
+      slides={heroSlides}
+      ctaLabel={customerTypes.explore_label || 'Explore this setup'}
+      fallbackImage={heroSlides.length === 0 ? hero.image : undefined}
+    />
   ) : null}
 
   <Features2
