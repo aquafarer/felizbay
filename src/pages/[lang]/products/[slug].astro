@@ -32,6 +32,7 @@ import { localizeHref } from '~/i18n/routing';
 import { getUiForLang } from '~/i18n/generated/ui-all';
 import { PRODUCT_PAGE_DETAILS } from '~/data/product-page-content';
 import { localizeFaqEntries } from '~/lib/faq-l10n';
+import { localizeProductString as trStr } from '~/lib/product-strings-l10n';
 import PurchaseAssurance from '~/components/product/PurchaseAssurance.astro';
 import FitGuide from '~/components/product/FitGuide.astro';
 import PackageContents from '~/components/product/PackageContents.astro';
@@ -80,7 +81,7 @@ const image = await findImage(product.image);
 const gallery = await Promise.all(
   (product.gallery ?? []).map(async (g: any) => ({
     raw: await findImage(g.url),
-    alt: g.alt || product.title,
+    alt: (g.alt ? trStr(g.alt, lang || defaultLang) : undefined) || product.title,
   }))
 );
 // Related products come back as raw EN records — localize them so the cards
@@ -247,6 +248,14 @@ const setupLinksL10n = detailV2
   : [];
 
 const pickSpecs = (labels: string[]) => specRows.filter((s: any) => labels.includes(s.label || ''));
+// specRows stays EN so pickSpecs/SPEC_GROUP_DEFS keep matching EN labels;
+// localized label/value pairs are produced at render time via trSpecRow.
+const trSpecRow = (s: { label: string; value: string }) => ({
+  ...s,
+  label: trStr(s.label, lang || defaultLang) ?? s.label,
+  value: trStr(s.value, lang || defaultLang) ?? s.value,
+});
+const specRowsL10n = specRows.map(trSpecRow);
 const SPEC_GROUP_DEFS: { title: string; labels: string[] }[] = [
   {
     title: 'Structure',
@@ -256,8 +265,44 @@ const SPEC_GROUP_DEFS: { title: string; labels: string[] }[] = [
   { title: 'Setup', labels: ['Inflation time', 'Included', 'Compatibility'] },
 ];
 const specGroups = detailV2
-  ? SPEC_GROUP_DEFS.map((g) => ({ title: g.title, rows: pickSpecs(g.labels) })).filter((g) => g.rows.length > 0)
+  ? SPEC_GROUP_DEFS.map((g) => ({
+      title: trStr(g.title, lang || defaultLang) ?? g.title,
+      rows: pickSpecs(g.labels).map(trSpecRow),
+    })).filter((g) => g.rows.length > 0)
   : [];
+// ai_specs cards (Materials & Construction section): raw EN snake_case keys from
+// src/data/products.ts. Keys are capitalized before lookup so the shared
+// Title-Case label dictionary ("Shape", "Model", ...) applies; EN fallback keeps
+// the previous lowercase rendering when a translation is missing.
+const AI_SPECS_SKIP_KEYS = ['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'];
+const aiSpecsSource: Record<string, string> = product.ai_specs || rec?.ai_specs || {};
+const aiSpecsEntries = Object.entries(aiSpecsSource)
+  .filter(([k]) => !AI_SPECS_SKIP_KEYS.includes(k))
+  .slice(0, 6)
+  .map(([k, v]: [string, string]) => {
+    const labelEn = k.replace(/_/g, ' ');
+    const labelCased = labelEn.replace(/^./, (c) => c.toUpperCase());
+    return {
+      label: trStr(labelCased, lang || defaultLang) ?? labelEn,
+      value: trStr(v, lang || defaultLang) ?? v,
+    };
+  });
+// Wholesale FOB note: translated as one sentence with a {{link}} placeholder
+// for the in-paragraph link so no fragment translation is needed.
+const FOB_NOTE_EN =
+  'FOB Qingdao, USD — price basis 20 pcs per item (MOQ). Below-MOQ quantities are available as commercial sample orders for business buyers (see the {{link}} for pricing and ordering rules). Not sold as single-unit retail.';
+const fobNoteParts = (trStr(FOB_NOTE_EN, lang || defaultLang) ?? FOB_NOTE_EN).split('{{link}}');
+const wholesalePriceListLabel = trStr('wholesale price list', lang || defaultLang) ?? 'wholesale price list';
+// Accessory add-ons (poolAccessories) and guide cards render via the same
+// dictionary; both keep EN when a language entry is not filled yet.
+const accessoriesL10n = poolAccessories.map((a) => ({
+  ...a,
+  name: trStr(a.name, lang || defaultLang) ?? a.name,
+  spec: trStr(a.spec, lang || defaultLang) ?? a.spec,
+}));
+const fromLabel = trStr('from', lang || defaultLang) ?? 'from';
+const imageLabel = trStr('Image', lang || defaultLang) ?? 'Image';
+const viewLabel = trStr('View', lang || defaultLang) ?? 'View';
 ---
 
 ---
@@ -420,7 +465,7 @@ const specGroups = detailV2
                 )
               ) : (
                 <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-slate-600 text-sm">
-                  No image available
+                  {trStr('No image available', lang || defaultLang) ?? 'No image available'}
                 </div>
               )
             ) : image ? (
@@ -460,21 +505,21 @@ const specGroups = detailV2
               {gallery.map((g, i) => (
                 <button
                   data-gallery-thumb={typeof g.raw === 'string' ? g.raw : String(g.raw?.src || '')}
-                  data-gallery-alt={g.alt || `Image ${i + 1}`}
+                  data-gallery-alt={g.alt || `${imageLabel} ${i + 1}`}
                   class={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-colors bg-gray-100 dark:bg-slate-800 ${i === 0 ? 'border-sky-500' : 'border-transparent hover:border-sky-400'}`}
-                  aria-label={`View ${g.alt || `image ${i + 1}`}`}
+                  aria-label={`${viewLabel} ${g.alt || `${imageLabel} ${i + 1}`}`}
                 >
                   {typeof g.raw === 'string' ? (
                     <img
                       src={g.raw}
-                      alt={g.alt || `Image ${i + 1}`}
+                      alt={g.alt || `${imageLabel} ${i + 1}`}
                       class="w-full h-full object-cover"
                       loading="lazy"
                     />
                   ) : g.raw ? (
                     <Image
                       src={g.raw as ImageMetadata}
-                      alt={g.alt || `Image ${i + 1}`}
+                      alt={g.alt || `${imageLabel} ${i + 1}`}
                       class="w-full h-full object-cover"
                       widths={[80]}
                       width={80}
@@ -522,7 +567,7 @@ const specGroups = detailV2
                   <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
                     {product.sku
                       ? `${t('product.retailPrice') || 'Retail price'} — SKU ${product.sku}`
-                      : 'Wholesale FOB price'}
+                      : (trStr('Wholesale FOB price', lang || defaultLang) ?? 'Wholesale FOB price')}
                   </span>
                   {product.inStock && (
                     <span class="text-sm font-medium text-green-600">
@@ -539,15 +584,14 @@ const specGroups = detailV2
             )}
             {!product.sku && product.price?.amount && (
               <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">
-                FOB Qingdao, USD — price basis 20 pcs per item (MOQ). Below-MOQ quantities are available as commercial
-                sample orders for business buyers (see the{' '}
+                {fobNoteParts[0]}
                 <a
                   href="/products/specs/"
                   class="underline decoration-dotted hover:text-gray-700 dark:hover:text-slate-300"
                 >
-                  wholesale price list
-                </a>{' '}
-                for pricing and ordering rules). Not sold as single-unit retail.
+                  {wholesalePriceListLabel}
+                </a>
+                {fobNoteParts[1]}
               </p>
             )}
           </div>
@@ -555,7 +599,7 @@ const specGroups = detailV2
           {/* Key Specs Grid */}
           {specRows.length > 0 && (
             <div class="grid grid-cols-2 gap-2">
-              {specRows.slice(0, 6).map((s: any) => (
+              {specRowsL10n.slice(0, 6).map((s: any) => (
                 <div class="flex flex-col gap-0.5 p-3 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
                   <span class="text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">
                     {s.label}
@@ -574,7 +618,7 @@ const specGroups = detailV2
                 <span class="text-[10px] group-open:rotate-180 transition-transform">&#9660;</span>
               </summary>
               <div class="mt-3 grid grid-cols-2 gap-2">
-                {specRows.slice(6).map((s: any) => (
+                {specRowsL10n.slice(6).map((s: any) => (
                   <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
                     <span class="text-xs font-medium text-gray-600 dark:text-slate-400 capitalize">{s.label}</span>
                     <span class="text-xs text-gray-500 dark:text-slate-500 ml-2 text-right">{s.value}</span>
@@ -726,8 +770,9 @@ const specGroups = detailV2
       optionalTitle={detailUi['product.optionalAddOns']}
       included={detailV2.packageIncluded}
       requiredSeparately={detailV2.packageRequired}
-      optionalAddOns={poolAccessories}
+      optionalAddOns={accessoriesL10n}
       showFob={!product.sku}
+      fromLabel={fromLabel}
       currencyNote={
         product.sku
           ? localizeText(
@@ -787,7 +832,7 @@ const specGroups = detailV2
             {(product.safety_rules || rec?.safety_rules || []).map((rule: string) => (
               <li class="flex items-start gap-3 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
                 <span class="w-1.5 h-1.5 mt-2 rounded-full bg-amber-500 flex-shrink-0" />
-                <span class="capitalize">{rule}</span>
+                <span class="capitalize">{trStr(rule, lang || defaultLang) ?? rule}</span>
               </li>
             ))}
           </ul>
@@ -807,17 +852,14 @@ const specGroups = detailV2
           {t('product.specifications')}
         </h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {Object.entries(product.ai_specs || rec?.ai_specs || {})
-            .filter(([k]) => !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k))
-            .slice(0, 6)
-            .map(([k, v]) => (
-              <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
-                <div class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
-                  {k.replace(/_/g, ' ')}
-                </div>
-                <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{v}</div>
+          {aiSpecsEntries.map((s) => (
+            <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
+              <div class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">
+                {s.label}
               </div>
-            ))}
+              <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{s.value}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -847,7 +889,12 @@ const specGroups = detailV2
                 <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
                 <div>
                   <span class="text-sm font-medium text-gray-900 dark:text-slate-200">{c.label}</span>
-                  {c.standard && <span class="text-xs text-gray-500 dark:text-slate-400"> ({c.standard})</span>}
+                  {c.standard && (
+                    <span class="text-xs text-gray-500 dark:text-slate-400">
+                      {' '}
+                      ({trStr(c.standard, lang || defaultLang) ?? c.standard})
+                    </span>
+                  )}
                   {c.body && (
                     <span class="text-xs text-gray-400 dark:text-slate-500 block">
                       {t('product.certifiedBy') || 'Certified by'} {c.body}
@@ -869,7 +916,7 @@ const specGroups = detailV2
             {productCompliance.materialCompliance.map((m: string) => (
               <div class="flex items-start gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                <span class="text-sm text-gray-600 dark:text-slate-400">{m}</span>
+                <span class="text-sm text-gray-600 dark:text-slate-400">{trStr(m, lang || defaultLang) ?? m}</span>
               </div>
             ))}
           </div>
@@ -882,10 +929,10 @@ const specGroups = detailV2
             </h3>
           </div>
           <div class="space-y-2 mb-4">
-            {productCompliance.testStandards.map((t: string) => (
+            {productCompliance.testStandards.map((std: string) => (
               <div class="flex items-start gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                <span class="text-sm text-gray-600 dark:text-slate-400">{t}</span>
+                <span class="text-sm text-gray-600 dark:text-slate-400">{trStr(std, lang || defaultLang) ?? std}</span>
               </div>
             ))}
           </div>
@@ -894,7 +941,7 @@ const specGroups = detailV2
               {t('product.warranty') || 'Warranty'}
             </span>
             <p class="text-sm text-gray-700 dark:text-slate-300 mt-1">
-              {productCompliance.warranty}{' '}
+              {trStr(productCompliance.warranty, lang || defaultLang) ?? productCompliance.warranty}{' '}
               <a href={`${langPrefix}/terms/`} class="text-sky-600 dark:text-sky-400 hover:underline">
                 ({t('nav.terms')})
               </a>
@@ -944,8 +991,12 @@ const specGroups = detailV2
               href={localizeHref(`/guides/${g.slug}/`, lang)}
               class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow"
             >
-              <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">{g.title}</h3>
-              <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 line-clamp-2">{g.description}</p>
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-slate-200">
+                {trStr(g.title, lang || defaultLang) ?? g.title}
+              </h3>
+              <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 line-clamp-2">
+                {trStr(g.description, lang || defaultLang) ?? g.description}
+              </p>
               <span class="mt-2 inline-flex items-center gap-1 text-xs font-medium text-sky-600 dark:text-sky-400">
                 {t('product.readGuide')}
               </span>
