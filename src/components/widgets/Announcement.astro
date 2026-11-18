@@ -1,7 +1,13 @@
 ---
+import { getLangFromUrl } from '~/i18n/utils';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
 const { messages = [] } = Astro.props;
-const defaultMessages = [{ tag: 'NEW', text: 'Welcome to Felizbay', href: '/' }];
+const lang = getLangFromUrl(Astro.url);
+const ui = getUiForLang(lang || 'en');
+const defaultMessages = [{ tag: 'NEW', text: ui['header.announcement'] || 'Welcome to Felizbay', href: '/' }];
 const items = messages.length ? messages : defaultMessages;
+const signInLabel = ui['nav.signIn'] || 'Sign In';
 ---
 
 <div class="text-sm bg-sky-700 text-slate-300 flex items-center px-3 md:px-6 py-1">
@@ -17,7 +23,7 @@ const items = messages.length ? messages : defaultMessages;
   </div>
   <div class="flex items-center gap-3 text-[11px]">
     <a href="/login/" class="hover:text-white transition-colors">
-      Sign In
+      {signInLabel}
     </a>
   </div>
 </div>

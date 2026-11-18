@@ -119,6 +119,12 @@ const metadata = {
             ft.file_upload_hint,
             'Spec sheet, drawing or catalog — PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP, up to 20 MB.'
           )}
+          sendingLabel={t(ft.sending_label, 'Sending…')}
+          fileTypeError={t(
+            ft.file_type_error,
+            'Unsupported file type. Please attach PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP.'
+          )}
+          fileSizeError={t(ft.file_size_error, 'File too large. Maximum size is {MB} MB.')}
         />
       </div>
       <div class="md:col-span-2 space-y-8">

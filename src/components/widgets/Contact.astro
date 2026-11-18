@@ -2,6 +2,11 @@
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Button from '~/components/ui/Button.astro';
+import { getLangFromUrl } from '~/i18n/utils';
+import { getUiForLang } from '~/i18n/generated/ui-all';
+
+const contactLang = getLangFromUrl(Astro.url);
+const doNotFillLabel = getUiForLang(contactLang || 'en')?.['contact.doNotFill'] || 'Do not fill this';
 
 interface FieldOption {
   value: string;
@@ -49,6 +54,9 @@ interface Props {
   fileLabel?: string;
   fileHint?: string;
   fileMaxMB?: number;
+  sendingLabel?: string;
+  fileTypeError?: string;
+  fileSizeError?: string;
 }
 
 const {
@@ -72,6 +80,9 @@ const {
   fileLabel = 'Attachment (optional)',
   fileHint = 'Spec sheet, drawing or catalog — PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP, up to 20 MB.',
   fileMaxMB = 20,
+  sendingLabel = 'Sending…',
+  fileTypeError = 'Unsupported file type. Please attach PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP.',
+  fileSizeError = 'File too large. Maximum size is {MB} MB.',
 } = Astro.props;
 
 const consentRequired = consent?.required === true;
@@ -109,13 +120,16 @@ const rows = Object.keys(grouped)
       data-contact-form
       data-success-message={successMessage}
       data-error-message={errorMessage}
+      data-sending-label={sendingLabel}
+      data-file-type-error={fileTypeError}
+      data-file-size-error={fileSizeError}
     >
       <input type="hidden" name="email_to" value={emailTo} />
       <div
         aria-hidden="true"
         style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"
       >
-        <label for={`${id}-email-confirm`}>Do not fill this</label>
+        <label for={`${id}-email-confirm`}>{doNotFillLabel}</label>
         <input id={`${id}-email-confirm`} type="text" name="email_confirm" tabindex="-1" autocomplete="off" />
       </div>
       {turnstileSiteKey && (
@@ -375,7 +389,7 @@ const rows = Object.keys(grouped)
         const submitLabel = submitBtn ? submitBtn.textContent || 'Send message' : 'Send message';
         if (submitBtn instanceof HTMLButtonElement) {
           submitBtn.disabled = true;
-          submitBtn.textContent = 'Sending…';
+          submitBtn.textContent = formEl.dataset.sendingLabel || 'Sending…';
         }
 
         const fd = new FormData(formEl);
@@ -419,8 +433,7 @@ const rows = Object.keys(grouped)
           const maxMB = Number(fileInput.dataset.maxMb || '20');
           if (!allowed.includes(ext)) {
             if (fileErrorEl) {
-              fileErrorEl.textContent =
-                'Unsupported file type. Please attach PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP.';
+              fileErrorEl.textContent = formEl.dataset.fileTypeError || 'Unsupported file type.';
               fileErrorEl.classList.remove('hidden');
             }
             if (submitBtn instanceof HTMLButtonElement) {
@@ -431,7 +444,9 @@ const rows = Object.keys(grouped)
           }
           if (file.size > maxMB * 1024 * 1024) {
             if (fileErrorEl) {
-              fileErrorEl.textContent = `File too large. Maximum size is ${maxMB} MB.`;
+              fileErrorEl.textContent = (
+                formEl.dataset.fileSizeError || 'File too large. Maximum size is {MB} MB.'
+              ).replaceAll('{MB}', String(maxMB));
               fileErrorEl.classList.remove('hidden');
             }
             if (submitBtn instanceof HTMLButtonElement) {

@@ -244,7 +244,15 @@
     "product.retailCardConfirmNote": "— the exact dimensions of this set are confirmed with your order, so ask us before you buy if you need them upfront.",
     "product.retailCardOtherSizes": "If you need a different size, other factory sizes from this series are available through our commercial program on the",
     "product.retailCardWholesaleList": "wholesale price list",
-    "product.useCasesLabel": "Use cases"
+    "product.useCasesLabel": "Use cases",
+    "header.announcement": "Welcome to Felizbay",
+    "nav.toggleMenu": "Toggle Menu",
+    "footer.designedOperated": "Designed & operated by Aquafarer LLC (USA)",
+    "product.badgeRetail": "Retail · Single-piece purchase",
+    "product.badgeWholesale": "Wholesale · project orders",
+    "product.priceFrom": "From",
+    "product.wholesaleOnlyNote": "Currently available for wholesale and project orders.",
+    "contact.doNotFill": "Do not fill this"
   },
   "de": {
     "v2.problem": "Das Problem",
@@ -491,7 +499,15 @@
     "product.retailCardConfirmNote": "— Die genauen Abmessungen dieses Sets werden bei Ihrer Bestellung bestätigt. Fragen Sie uns daher vor dem Kauf, ob Sie diese im Voraus benötigen.",
     "product.retailCardOtherSizes": "Wenn Sie eine andere Größe benötigen, sind andere Werksgrößen dieser Serie über unser kommerzielles Programm auf der erhältlich",
     "product.retailCardWholesaleList": "Großhandelspreisliste",
-    "product.useCasesLabel": "Anwendungsfälle"
+    "product.useCasesLabel": "Anwendungsfälle",
+    "header.announcement": "Willkommen bei Felizbay",
+    "nav.toggleMenu": "Menü umschalten",
+    "footer.designedOperated": "Entworfen und betrieben von Aquafarer LLC (USA)",
+    "product.badgeRetail": "Einzelhandel · Einzelkauf",
+    "product.badgeWholesale": "Großhandel · Projektaufträge",
+    "product.priceFrom": "Ab",
+    "product.wholesaleOnlyNote": "Derzeit für Großhandels- und Projektaufträge erhältlich.",
+    "contact.doNotFill": "Bitte nicht ausfüllen"
   },
   "pt": {
     "nav.products": "Produtos",
@@ -738,7 +754,15 @@
     "product.retailCardConfirmNote": "- as dimensões exatas deste conjunto são confirmadas com o seu pedido, então pergunte-nos antes de comprar se precisar deles com antecedência.",
     "product.retailCardOtherSizes": "Caso necessite de um tamanho diferente, outros tamanhos de fábrica desta série estão disponíveis através do nosso programa comercial no",
     "product.retailCardWholesaleList": "lista de preços no atacado",
-    "product.useCasesLabel": "Casos de uso"
+    "product.useCasesLabel": "Casos de uso",
+    "header.announcement": "Bem-vindo ao Felizbay",
+    "nav.toggleMenu": "Alternar menu",
+    "footer.designedOperated": "Projetado e operado pela Aquafarer LLC (EUA)",
+    "product.badgeRetail": "Varejo · Compra unitária",
+    "product.badgeWholesale": "Atacado · pedidos de projetos",
+    "product.priceFrom": "A partir de",
+    "product.wholesaleOnlyNote": "Atualmente disponível para pedidos de atacado e projetos.",
+    "contact.doNotFill": "Não preencha este campo"
   },
   "fr": {
     "v2.problem": "Le problème",
@@ -985,7 +1009,15 @@
     "product.retailCardConfirmNote": "— les dimensions exactes de cet ensemble sont confirmées lors de votre commande, alors demandez-nous avant d'acheter si vous en avez besoin à l'avance.",
     "product.retailCardOtherSizes": "Si vous avez besoin d'une taille différente, d'autres tailles d'usine de cette série sont disponibles via notre programme commercial sur le",
     "product.retailCardWholesaleList": "liste de prix de gros",
-    "product.useCasesLabel": "Cas d'utilisation"
+    "product.useCasesLabel": "Cas d'utilisation",
+    "header.announcement": "Bienvenue sur Felizbay",
+    "nav.toggleMenu": "Basculer le menu",
+    "footer.designedOperated": "Conçu et exploité par Aquafarer LLC (USA)",
+    "product.badgeRetail": "Détail · Achat à l’unité",
+    "product.badgeWholesale": "Gros · commandes de projets",
+    "product.priceFrom": "À partir de",
+    "product.wholesaleOnlyNote": "Actuellement disponible pour les commandes de gros et de projets.",
+    "contact.doNotFill": "Ne pas remplir ce champ"
   },
   "es": {
     "nav.products": "Productos",
@@ -1232,7 +1264,15 @@
     "product.retailCardConfirmNote": "— las dimensiones exactas de este juego se confirman con su pedido, así que pregúntenos antes de comprar si las necesita por adelantado.",
     "product.retailCardOtherSizes": "Si necesita un tamaño diferente, otros tamaños de fábrica de esta serie están disponibles a través de nuestro programa comercial en la página",
     "product.retailCardWholesaleList": "lista de precios al por mayor",
-    "product.useCasesLabel": "Casos de uso"
+    "product.useCasesLabel": "Casos de uso",
+    "header.announcement": "Bienvenido a Felizbay",
+    "nav.toggleMenu": "Alternar menú",
+    "footer.designedOperated": "Diseñado y operado por Aquafarer LLC (USA)",
+    "product.badgeRetail": "Minorista · Compra de una pieza",
+    "product.badgeWholesale": "Mayorista · pedidos de proyectos",
+    "product.priceFrom": "Desde",
+    "product.wholesaleOnlyNote": "Actualmente disponible para pedidos mayoristas y de proyectos.",
+    "contact.doNotFill": "No rellene este campo"
   },
   "it": {
     "nav.products": "Prodotti",
@@ -1479,7 +1519,15 @@
     "product.retailCardConfirmNote": "— le dimensioni esatte di questo set sono confermate con il tuo ordine, quindi chiedici prima di acquistare se ne hai bisogno in anticipo.",
     "product.retailCardOtherSizes": "Se hai bisogno di una dimensione diversa, sono disponibili altre dimensioni di fabbrica di questa serie tramite il nostro programma commerciale su",
     "product.retailCardWholesaleList": "listino prezzi all'ingrosso",
-    "product.useCasesLabel": "Casi d'uso"
+    "product.useCasesLabel": "Casi d'uso",
+    "header.announcement": "Benvenuti su Felizbay",
+    "nav.toggleMenu": "Attiva/disattiva menu",
+    "footer.designedOperated": "Progettato e gestito da Aquafarer LLC (USA)",
+    "product.badgeRetail": "Dettaglio · Acquisto singolo",
+    "product.badgeWholesale": "Ingrosso · ordini per progetti",
+    "product.priceFrom": "Da",
+    "product.wholesaleOnlyNote": "Attualmente disponibile per ordini all’ingrosso e per progetti.",
+    "contact.doNotFill": "Non compilare questo campo"
   },
   "ru": {
     "nav.products": "Товары",
@@ -1726,7 +1774,15 @@
     "product.retailCardConfirmNote": "— точные размеры этого набора подтверждены при вашем заказе, поэтому перед покупкой спросите нас, нужны ли они вам заранее.",
     "product.retailCardOtherSizes": "Если вам нужен другой размер, другие заводские размеры из этой серии доступны через нашу коммерческую программу на сайте",
     "product.retailCardWholesaleList": "оптовый прайс-лист",
-    "product.useCasesLabel": "Варианты использования"
+    "product.useCasesLabel": "Варианты использования",
+    "header.announcement": "Добро пожаловать в Felizbay",
+    "nav.toggleMenu": "Открыть/закрыть меню",
+    "footer.designedOperated": "Разработано и управляется Aquafarer LLC (США)",
+    "product.badgeRetail": "Розница · Покупка одного изделия",
+    "product.badgeWholesale": "Опт · заказы для проектов",
+    "product.priceFrom": "От",
+    "product.wholesaleOnlyNote": "В настоящее время доступно для оптовых заказов и заказов для проектов.",
+    "contact.doNotFill": "Не заполняйте это поле"
   },
   "pl": {
     "nav.products": "Produkty",
@@ -1973,7 +2029,15 @@
     "product.retailCardConfirmNote": "— dokładne wymiary tego zestawu są potwierdzone w zamówieniu, dlatego przed zakupem zapytaj nas, czy potrzebujesz ich od razu.",
     "product.retailCardOtherSizes": "Jeśli potrzebujesz innego rozmiaru, inne rozmiary fabryczne z tej serii są dostępne w naszym programie handlowym na stronie",
     "product.retailCardWholesaleList": "cennik hurtowy",
-    "product.useCasesLabel": "Przypadki użycia"
+    "product.useCasesLabel": "Przypadki użycia",
+    "header.announcement": "Witamy w Felizbay",
+    "nav.toggleMenu": "Przełącz menu",
+    "footer.designedOperated": "Zaprojektowane i zarządzane przez Aquafarer LLC (USA)",
+    "product.badgeRetail": "Detal · Zakup jednej sztuki",
+    "product.badgeWholesale": "Hurt · zamówienia projektowe",
+    "product.priceFrom": "Od",
+    "product.wholesaleOnlyNote": "Obecnie dostępne dla zamówień hurtowych i projektowych.",
+    "contact.doNotFill": "Nie wypełniaj tego"
   },
   "ar": {
     "nav.products": "المنتجات",
@@ -2220,7 +2284,15 @@
     "product.retailCardConfirmNote": "- تم تأكيد الأبعاد الدقيقة لهذه المجموعة من خلال طلبك، لذا اسألنا قبل الشراء إذا كنت في حاجة إليها مقدمًا.",
     "product.retailCardOtherSizes": "إذا كنت بحاجة إلى حجم مختلف، تتوفر أحجام المصنع الأخرى من هذه السلسلة من خلال برنامجنا التجاري على",
     "product.retailCardWholesaleList": "قائمة أسعار الجملة",
-    "product.useCasesLabel": "حالات الاستخدام"
+    "product.useCasesLabel": "حالات الاستخدام",
+    "header.announcement": "مرحبًا بك في Felizbay",
+    "nav.toggleMenu": "تبديل القائمة",
+    "footer.designedOperated": "تصميم وتشغيل من Aquafarer LLC (USA)",
+    "product.badgeRetail": "تجزئة · شراء قطعة واحدة",
+    "product.badgeWholesale": "بيع بالجملة · طلبات المشاريع",
+    "product.priceFrom": "ابتداءً من",
+    "product.wholesaleOnlyNote": "متوفر حاليًا لطلبات الجملة والمشاريع.",
+    "contact.doNotFill": "لا تملأ هذا الحقل"
   },
   "nl": {
     "nav.products": "Producten",
@@ -2467,7 +2539,15 @@
     "product.retailCardConfirmNote": "— de exacte afmetingen van deze set worden bevestigd bij uw bestelling, dus vraag ons voordat u koopt of u ze van tevoren nodig heeft.",
     "product.retailCardOtherSizes": "Als u een andere maat nodig heeft, zijn andere fabrieksmaten uit deze serie verkrijgbaar via ons commerciële programma op de website",
     "product.retailCardWholesaleList": "groothandelsprijslijst",
-    "product.useCasesLabel": "Gebruiksgevallen"
+    "product.useCasesLabel": "Gebruiksgevallen",
+    "header.announcement": "Welkom bij Felizbay",
+    "nav.toggleMenu": "Menu in-/uitschakelen",
+    "footer.designedOperated": "Ontworpen en beheerd door Aquafarer LLC (USA)",
+    "product.badgeRetail": "Detailhandel · Losse aankoop",
+    "product.badgeWholesale": "Groothandel · projectorders",
+    "product.priceFrom": "Vanaf",
+    "product.wholesaleOnlyNote": "Momenteel beschikbaar voor groothandels- en projectorders.",
+    "contact.doNotFill": "Vul dit niet in"
   },
   "sv": {
     "nav.products": "Produkter",
@@ -2714,7 +2794,15 @@
     "product.retailCardConfirmNote": "— de exakta måtten på denna uppsättning bekräftas med din beställning, så fråga oss innan du köper om du behöver dem i förväg.",
     "product.retailCardOtherSizes": "Om du behöver en annan storlek finns andra fabriksstorlekar från denna serie tillgängliga via vårt kommersiella program på",
     "product.retailCardWholesaleList": "grossistprislista",
-    "product.useCasesLabel": "Användningsfall"
+    "product.useCasesLabel": "Användningsfall",
+    "header.announcement": "Välkommen till Felizbay",
+    "nav.toggleMenu": "Växla meny",
+    "footer.designedOperated": "Designad och driven av Aquafarer LLC (USA)",
+    "product.badgeRetail": "Detalj · Enstaka köp",
+    "product.badgeWholesale": "Gross · projektorder",
+    "product.priceFrom": "Från",
+    "product.wholesaleOnlyNote": "För närvarande tillgängligt för grossist- och projektorder.",
+    "contact.doNotFill": "Fyll inte i detta"
   },
   "no": {
     "nav.products": "Produkter",
@@ -2961,7 +3049,15 @@
     "product.retailCardConfirmNote": "— de nøyaktige dimensjonene til dette settet bekreftes med bestillingen din, så spør oss før du kjøper hvis du trenger dem på forhånd.",
     "product.retailCardOtherSizes": "Hvis du trenger en annen størrelse, er andre fabrikkstørrelser fra denne serien tilgjengelige gjennom vårt kommersielle program på",
     "product.retailCardWholesaleList": "engrosprisliste",
-    "product.useCasesLabel": "Brukssaker"
+    "product.useCasesLabel": "Brukssaker",
+    "header.announcement": "Velkommen til Felizbay",
+    "nav.toggleMenu": "Veksle meny",
+    "footer.designedOperated": "Designet og drevet av Aquafarer LLC (USA)",
+    "product.badgeRetail": "Detalj · Kjøp av én stk.",
+    "product.badgeWholesale": "Engros · prosjektbestillinger",
+    "product.priceFrom": "Fra",
+    "product.wholesaleOnlyNote": "Foreløpig tilgjengelig for engros- og prosjektbestillinger.",
+    "contact.doNotFill": "Ikke fyll ut dette"
   },
   "el": {
     "nav.products": "Προϊόντα",
@@ -3208,7 +3304,15 @@
     "product.retailCardConfirmNote": "— οι ακριβείς διαστάσεις αυτού του σετ επιβεβαιώνονται με την παραγγελία σας, γι' αυτό ρωτήστε μας πριν αγοράσετε εάν τις χρειάζεστε εκ των προτέρων.",
     "product.retailCardOtherSizes": "Εάν χρειάζεστε διαφορετικό μέγεθος, άλλα εργοστασιακά μεγέθη αυτής της σειράς είναι διαθέσιμα μέσω του εμπορικού μας προγράμματος στο",
     "product.retailCardWholesaleList": "τιμοκατάλογος χονδρικής",
-    "product.useCasesLabel": "Θήκες χρήσης"
+    "product.useCasesLabel": "Θήκες χρήσης",
+    "header.announcement": "Καλώς ήρθατε στο Felizbay",
+    "nav.toggleMenu": "Εναλλαγή μενού",
+    "footer.designedOperated": "Σχεδιασμένο και διαχειριζόμενο από την Aquafarer LLC (USA)",
+    "product.badgeRetail": "Λιανική · Αγορά ενός τεμαχίου",
+    "product.badgeWholesale": "Χονδρική · παραγγελίες έργων",
+    "product.priceFrom": "Από",
+    "product.wholesaleOnlyNote": "Προς το παρόν διαθέσιμο για χονδρικές παραγγελίες και παραγγελίες έργων.",
+    "contact.doNotFill": "Μη συμπληρώσετε αυτό"
   },
   "fi": {
     "nav.products": "Tuotteet",
@@ -3455,7 +3559,15 @@
     "product.retailCardConfirmNote": "— Tämän sarjan tarkat mitat vahvistetaan tilauksesi yhteydessä, joten kysy meiltä ennen ostamista, tarvitsetko niitä etukäteen.",
     "product.retailCardOtherSizes": "Jos tarvitset eri kokoa, muita tämän sarjan tehdaskokoja on saatavana kaupallisen ohjelmamme kautta osoitteessa",
     "product.retailCardWholesaleList": "tukkuhinnasto",
-    "product.useCasesLabel": "Käyttötapaukset"
+    "product.useCasesLabel": "Käyttötapaukset",
+    "header.announcement": "Tervetuloa Felizbayhin",
+    "nav.toggleMenu": "Avaa/sulje valikko",
+    "footer.designedOperated": "Suunnitellut ja ylläpitää Aquafarer LLC (USA)",
+    "product.badgeRetail": "Vähittäismyynti · Yhden kappaleen ostos",
+    "product.badgeWholesale": "Tukkukauppa · projektitilaukset",
+    "product.priceFrom": "Alkaen",
+    "product.wholesaleOnlyNote": "Tällä hetkellä saatavilla tukku- ja projektitilauksiin.",
+    "contact.doNotFill": "Älä täytä tätä"
   },
   "da": {
     "nav.products": "Produkter",
@@ -3702,7 +3814,15 @@
     "product.retailCardConfirmNote": "— de nøjagtige dimensioner af dette sæt er bekræftet med din ordre, så spørg os, før du køber, hvis du har brug for dem på forhånd.",
     "product.retailCardOtherSizes": "Hvis du har brug for en anden størrelse, er andre fabriksstørrelser fra denne serie tilgængelige via vores kommercielle program på",
     "product.retailCardWholesaleList": "engrosprisliste",
-    "product.useCasesLabel": "Brug cases"
+    "product.useCasesLabel": "Brug cases",
+    "header.announcement": "Velkommen til Felizbay",
+    "nav.toggleMenu": "Skift menu",
+    "footer.designedOperated": "Designet og drevet af Aquafarer LLC (USA)",
+    "product.badgeRetail": "Detail · Køb af én stk.",
+    "product.badgeWholesale": "Engros · projektordrer",
+    "product.priceFrom": "Fra",
+    "product.wholesaleOnlyNote": "I øjeblikket tilgængelig for engros- og projektordrer.",
+    "contact.doNotFill": "Udfyld ikke dette"
   },
   "th": {
     "nav.signIn": "เข้าสู่ระบบ",
@@ -3949,7 +4069,15 @@
     "product.retailCardConfirmNote": "— ขนาดที่แน่นอนของชุดนี้ได้รับการยืนยันจากคำสั่งซื้อของคุณ ดังนั้น โปรดสอบถามเราก่อนตัดสินใจซื้อหากคุณต้องการล่วงหน้า",
     "product.retailCardOtherSizes": "หากคุณต้องการขนาดอื่น ขนาดโรงงานอื่นๆ จากซีรีส์นี้มีจำหน่ายผ่านโปรแกรมเชิงพาณิชย์ของเราที่",
     "product.retailCardWholesaleList": "รายการราคาขายส่ง",
-    "product.useCasesLabel": "กรณีการใช้งาน"
+    "product.useCasesLabel": "กรณีการใช้งาน",
+    "header.announcement": "ยินดีต้อนรับสู่ Felizbay",
+    "nav.toggleMenu": "สลับเมนู",
+    "footer.designedOperated": "ออกแบบและดำเนินการโดย Aquafarer LLC (สหรัฐอเมริกา)",
+    "product.badgeRetail": "ขายปลีก · ซื้อชิ้นเดียว",
+    "product.badgeWholesale": "ขายส่ง · คำสั่งซื้อโครงการ",
+    "product.priceFrom": "เริ่มต้นจาก",
+    "product.wholesaleOnlyNote": "ปัจจุบันมีจำหน่ายสำหรับคำสั่งซื้อขายส่งและโครงการ",
+    "contact.doNotFill": "ไม่ต้องกรอกช่องนี้"
   },
   "tr": {
     "nav.signIn": "Giriş Yap",
@@ -4196,7 +4324,15 @@
     "product.retailCardConfirmNote": "— Bu setin tam boyutları siparişinizle birlikte onaylanır, bu nedenle satın almadan önce bunlara ihtiyacınız olup olmadığını bize sorun.",
     "product.retailCardOtherSizes": "Farklı bir boyuta ihtiyacınız varsa, bu serideki diğer fabrika boyutları ticari programımız aracılığıyla mevcuttur.",
     "product.retailCardWholesaleList": "toptan fiyat listesi",
-    "product.useCasesLabel": "Kullanım durumları"
+    "product.useCasesLabel": "Kullanım durumları",
+    "header.announcement": "Felizbay'a hoş geldiniz",
+    "nav.toggleMenu": "Menüyü aç/kapat",
+    "footer.designedOperated": "Aquafarer LLC (ABD) tarafından tasarlandı ve işletiliyor",
+    "product.badgeRetail": "Perakende · Tek adet satın alma",
+    "product.badgeWholesale": "Toptan · proje siparişleri",
+    "product.priceFrom": "itibaren",
+    "product.wholesaleOnlyNote": "Şu anda toptan ve proje siparişleri için mevcuttur.",
+    "contact.doNotFill": "Bunu doldurmayın"
   },
   "id": {
     "nav.signIn": "Masuk",
@@ -4443,7 +4579,15 @@
     "product.retailCardConfirmNote": "— dimensi pasti dari set ini dikonfirmasikan dengan pesanan Anda, jadi tanyakan kepada kami sebelum membeli apakah Anda membutuhkannya terlebih dahulu.",
     "product.retailCardOtherSizes": "Jika Anda memerlukan ukuran yang berbeda, ukuran pabrik lain dari seri ini tersedia melalui program komersial kami di",
     "product.retailCardWholesaleList": "daftar harga grosir",
-    "product.useCasesLabel": "Kasus penggunaan"
+    "product.useCasesLabel": "Kasus penggunaan",
+    "header.announcement": "Selamat datang di Felizbay",
+    "nav.toggleMenu": "Buka/tutup menu",
+    "footer.designedOperated": "Dirancang dan dioperasikan oleh Aquafarer LLC (USA)",
+    "product.badgeRetail": "Eceran · Pembelian satuan",
+    "product.badgeWholesale": "Grosir · pesanan proyek",
+    "product.priceFrom": "Mulai",
+    "product.wholesaleOnlyNote": "Saat ini tersedia untuk pesanan grosir dan proyek.",
+    "contact.doNotFill": "Jangan isi kolom ini"
   },
   "cs": {
     "nav.signIn": "Přihlásit se",
@@ -4690,7 +4834,15 @@
     "product.retailCardConfirmNote": "— přesné rozměry této sady jsou potvrzeny vaší objednávkou, proto se nás před nákupem zeptejte, zda je potřebujete.",
     "product.retailCardOtherSizes": "Pokud potřebujete jinou velikost, další tovární velikosti z této řady jsou k dispozici prostřednictvím našeho obchodního programu na",
     "product.retailCardWholesaleList": "velkoobchodní ceník",
-    "product.useCasesLabel": "Případy použití"
+    "product.useCasesLabel": "Případy použití",
+    "header.announcement": "Vítejte ve Felizbay",
+    "nav.toggleMenu": "Přepnout nabídku",
+    "footer.designedOperated": "Navrženo a provozováno společností Aquafarer LLC (USA)",
+    "product.badgeRetail": "Maloobchod · Nákup jednoho kusu",
+    "product.badgeWholesale": "Velkoobchod · zakázkové objednávky",
+    "product.priceFrom": "Od",
+    "product.wholesaleOnlyNote": "V současnosti k dispozici pro velkoobchodní a zakázkové objednávky.",
+    "contact.doNotFill": "Nevyplňujte toto pole"
   },
   "hr": {
     "nav.signIn": "Prijava",
@@ -4937,7 +5089,15 @@
     "product.retailCardConfirmNote": "— točne dimenzije ovog seta potvrđene su vašom narudžbom, pa nas prije kupnje pitajte trebaju li vam unaprijed.",
     "product.retailCardOtherSizes": "Ako trebate drugu veličinu, druge tvorničke veličine iz ove serije dostupne su putem našeg komercijalnog programa na",
     "product.retailCardWholesaleList": "veleprodajni cjenik",
-    "product.useCasesLabel": "Slučajevi upotrebe"
+    "product.useCasesLabel": "Slučajevi upotrebe",
+    "header.announcement": "Dobro došli u Felizbay",
+    "nav.toggleMenu": "Uključi/isključi izbornik",
+    "footer.designedOperated": "Dizajnirano i u pogonu Aquafarer LLC (SAD)",
+    "product.badgeRetail": "Maloprodaja · Kupnja jednog komada",
+    "product.badgeWholesale": "Veleprodaja · narudžbe za projekte",
+    "product.priceFrom": "Od",
+    "product.wholesaleOnlyNote": "Trenutno dostupno za veleprodajne narudžbe i narudžbe za projekte.",
+    "contact.doNotFill": "Ne ispunjavajte ovo"
   },
   "hu": {
     "nav.signIn": "Bejelentkezés",
@@ -5184,7 +5344,15 @@
     "product.retailCardConfirmNote": "— ennek a készletnek a pontos méreteit megrendelésénél visszaigazoljuk, ezért vásárlás előtt kérdezze meg, hogy szüksége van-e rájuk.",
     "product.retailCardOtherSizes": "Ha más méretre van szüksége, a sorozat további gyári méretei is elérhetők kereskedelmi programunkon keresztül",
     "product.retailCardWholesaleList": "nagykereskedelmi árlista",
-    "product.useCasesLabel": "Használati esetek"
+    "product.useCasesLabel": "Használati esetek",
+    "header.announcement": "Üdvözli a Felizbay",
+    "nav.toggleMenu": "Menü be/ki",
+    "footer.designedOperated": "Az Aquafarer LLC (USA) tervezte és üzemelteti",
+    "product.badgeRetail": "Kiskereskedelem · Darabonkénti vásárlás",
+    "product.badgeWholesale": "Nagykereskedelem · projektmegrendelések",
+    "product.priceFrom": "-tól",
+    "product.wholesaleOnlyNote": "Jelenleg nagykereskedelmi és projektmegrendelésekhez érhető el.",
+    "contact.doNotFill": "Ne töltse ki ezt"
   },
   "ro": {
     "nav.signIn": "Autentificare",
@@ -5431,7 +5599,15 @@
     "product.retailCardConfirmNote": "— dimensiunile exacte ale acestui set sunt confirmate odată cu comanda dumneavoastră, așa că întrebați-ne înainte de a cumpăra dacă aveți nevoie de ele în avans.",
     "product.retailCardOtherSizes": "Dacă aveți nevoie de o dimensiune diferită, alte dimensiuni din fabrică din această serie sunt disponibile prin programul nostru comercial de pe",
     "product.retailCardWholesaleList": "lista de preturi cu ridicata",
-    "product.useCasesLabel": "Cazuri de utilizare"
+    "product.useCasesLabel": "Cazuri de utilizare",
+    "header.announcement": "Bine ați venit la Felizbay",
+    "nav.toggleMenu": "Comută meniul",
+    "footer.designedOperated": "Proiectat și operat de Aquafarer LLC (USA)",
+    "product.badgeRetail": "Cu amănuntul · Cumpărare la bucată",
+    "product.badgeWholesale": "En-gros · comenzi pentru proiecte",
+    "product.priceFrom": "De la",
+    "product.wholesaleOnlyNote": "Momentan disponibil pentru comenzi en-gros și pentru proiecte.",
+    "contact.doNotFill": "Nu completați acest câmp"
   },
   "sk": {
     "nav.signIn": "Prihlásiť sa",
@@ -5678,7 +5854,15 @@
     "product.retailCardConfirmNote": "— presné rozmery tejto sady sú potvrdené vašou objednávkou, preto sa nás pred kúpou opýtajte, či ich potrebujete.",
     "product.retailCardOtherSizes": "Ak potrebujete inú veľkosť, iné výrobné veľkosti z tejto série sú dostupné prostredníctvom nášho obchodného programu na stránke",
     "product.retailCardWholesaleList": "Veľkoobchodná cena",
-    "product.useCasesLabel": "Prípady použitia"
+    "product.useCasesLabel": "Prípady použitia",
+    "header.announcement": "Vitajte v Felizbay",
+    "nav.toggleMenu": "Prepnúť ponuku",
+    "footer.designedOperated": "Navrhnuté a prevádzkované spoločnosťou Aquafarer LLC (USA)",
+    "product.badgeRetail": "Maloobchod · Kúpa jedného kusu",
+    "product.badgeWholesale": "Veľkoobchod · objednávky na projekty",
+    "product.priceFrom": "Od",
+    "product.wholesaleOnlyNote": "V súčasnosti dostupné pre veľkoobchodné objednávky a zákazky.",
+    "contact.doNotFill": "Nevypĺňajte toto"
   },
   "bg": {
     "nav.signIn": "Вход",
@@ -5925,7 +6109,15 @@
     "product.retailCardConfirmNote": "— точните размери на този комплект се потвърждават с вашата поръчка, така че попитайте ни преди да купите дали имате нужда от тях предварително.",
     "product.retailCardOtherSizes": "Ако имате нужда от различен размер, други фабрични размери от тази серия са налични чрез нашата търговска програма на",
     "product.retailCardWholesaleList": "ценова листа на едро",
-    "product.useCasesLabel": "Случаи на употреба"
+    "product.useCasesLabel": "Случаи на употреба",
+    "header.announcement": "Добре дошли във Felizbay",
+    "nav.toggleMenu": "Превключване на менюто",
+    "footer.designedOperated": "Проектирано и управлявано от Aquafarer LLC (USA)",
+    "product.badgeRetail": "Дребно · Покупка на един брой",
+    "product.badgeWholesale": "Едро · поръчки за проекти",
+    "product.priceFrom": "От",
+    "product.wholesaleOnlyNote": "В момента е налично само за поръчки на едро и за проекти.",
+    "contact.doNotFill": "Не попълвайте това"
   },
   "sl": {
     "nav.signIn": "Prijava",
@@ -6172,7 +6364,15 @@
     "product.retailCardConfirmNote": "— točne dimenzije tega kompleta so potrjene z vašim naročilom, zato nas pred nakupom vprašajte, ali jih potrebujete vnaprej.",
     "product.retailCardOtherSizes": "Če potrebujete drugo velikost, so druge tovarniške velikosti iz te serije na voljo v našem komercialnem programu na",
     "product.retailCardWholesaleList": "veleprodajni cenik",
-    "product.useCasesLabel": "Primeri uporabe"
+    "product.useCasesLabel": "Primeri uporabe",
+    "header.announcement": "Dobrodošli v Felizbay",
+    "nav.toggleMenu": "Preklopi meni",
+    "footer.designedOperated": "Oblikovano in upravlja Aquafarer LLC (ZDA)",
+    "product.badgeRetail": "Maloprodaja · Nakup enega kosa",
+    "product.badgeWholesale": "Veleprodaja · naročila za projekte",
+    "product.priceFrom": "Od",
+    "product.wholesaleOnlyNote": "Trenutno na voljo za veleprodajna naročila in naročila za projekte.",
+    "contact.doNotFill": "Tega ne izpolnite"
   },
   "sr": {
     "nav.signIn": "Prijava",
@@ -6419,7 +6619,15 @@
     "product.retailCardConfirmNote": "— тачне димензије овог сета су потврђене уз вашу наруџбу, па нас пре куповине питајте да ли су вам потребне унапред.",
     "product.retailCardOtherSizes": "Ако вам је потребна друга величина, друге фабричке величине из ове серије доступне су преко нашег комерцијалног програма на",
     "product.retailCardWholesaleList": "велепродајни ценовник",
-    "product.useCasesLabel": "Случајеви употребе"
+    "product.useCasesLabel": "Случајеви употребе",
+    "header.announcement": "Dobrodošli u Felizbay",
+    "nav.toggleMenu": "Otvaranje menija",
+    "footer.designedOperated": "Dizajnirano i vodi Aquafarer LLC (SAD)",
+    "product.badgeRetail": "Maloprodaja · Kupovina jednog komada",
+    "product.badgeWholesale": "Veleprodaja · porudžbine za projekte",
+    "product.priceFrom": "Od",
+    "product.wholesaleOnlyNote": "Trenutno dostupno za veleprodajne porudžbine i porudžbine za projekte.",
+    "contact.doNotFill": "Ne popunjavajte ovo"
   },
   "lt": {
     "nav.signIn": "Prisijungti",
@@ -6666,7 +6874,15 @@
     "product.retailCardConfirmNote": "— tikslūs šio rinkinio matmenys patvirtinami kartu su užsakymu, todėl prieš pirkdami paklauskite mūsų, ar jų reikia iš anksto.",
     "product.retailCardOtherSizes": "Jei jums reikia kitokio dydžio, kitus gamyklinius šios serijos dydžius rasite mūsų komercinėje programoje adresu",
     "product.retailCardWholesaleList": "didmeninis kainoraštis",
-    "product.useCasesLabel": "Naudojimo atvejai"
+    "product.useCasesLabel": "Naudojimo atvejai",
+    "header.announcement": "Sveiki atvykę į Felizbay",
+    "nav.toggleMenu": "Perjungti meniu",
+    "footer.designedOperated": "Sukūrė ir valdo Aquafarer LLC (JAV)",
+    "product.badgeRetail": "Mažmena · Vienetinis pirkimas",
+    "product.badgeWholesale": "Didmena · projektų užsakymai",
+    "product.priceFrom": "Nuo",
+    "product.wholesaleOnlyNote": "Šiuo metu prieinama didmenos ir projektų užsakymams.",
+    "contact.doNotFill": "Neužpildykite šito"
   },
   "lv": {
     "nav.signIn": "Pieteikties",
@@ -6913,7 +7129,15 @@
     "product.retailCardConfirmNote": "— Precīzi šī komplekta izmēri ir apstiprināti ar jūsu pasūtījumu, tāpēc pirms pirkšanas jautājiet mums, vai jums tie ir nepieciešami jau iepriekš.",
     "product.retailCardOtherSizes": "Ja jums ir nepieciešams cits izmērs, citi rūpnīcas izmēri no šīs sērijas ir pieejami mūsu komerciālajā programmā vietnē",
     "product.retailCardWholesaleList": "vairumtirdzniecības cenrādis",
-    "product.useCasesLabel": "Lietošanas gadījumi"
+    "product.useCasesLabel": "Lietošanas gadījumi",
+    "header.announcement": "Laipni lūdzam Felizbay",
+    "nav.toggleMenu": "Pārslēgt izvēlni",
+    "footer.designedOperated": "Izstrādājis un pārvalda Aquafarer LLC (ASV)",
+    "product.badgeRetail": "Mazumtirdzniecība · Viena gabala pirkums",
+    "product.badgeWholesale": "Vairumtirdzniecība · projekta pasūtījumi",
+    "product.priceFrom": "No",
+    "product.wholesaleOnlyNote": "Pašlaik pieejams vairumtirdzniecības un projekta pasūtījumiem.",
+    "contact.doNotFill": "Šo aizpildīt nevajag"
   },
   "et": {
     "nav.signIn": "Logi sisse",
@@ -7160,7 +7384,15 @@
     "product.retailCardConfirmNote": "— selle komplekti täpsed mõõdud kinnitatakse teie tellimusega, seega küsige meilt enne ostmist, kas vajate neid juba ette.",
     "product.retailCardOtherSizes": "Kui vajate teist suurust, on selle seeria teised tehasesuurused saadaval meie kommertsprogrammi kaudu aadressil",
     "product.retailCardWholesaleList": "hulgimüügi hinnakiri",
-    "product.useCasesLabel": "Kasutusjuhtumid"
+    "product.useCasesLabel": "Kasutusjuhtumid",
+    "header.announcement": "Tere tulemast Felizbay-sse",
+    "nav.toggleMenu": "Menüü lüliti",
+    "footer.designedOperated": "Disaininud ja haldab Aquafarer LLC (USA)",
+    "product.badgeRetail": "Jaemüük · Ühe eksemplari ost",
+    "product.badgeWholesale": "Hulgimüük · projektitellimused",
+    "product.priceFrom": "Alates",
+    "product.wholesaleOnlyNote": "Praegu saadaval hulgi- ja projektitellimusteks.",
+    "contact.doNotFill": "Ära seda täida"
   },
   "he": {
     "nav.signIn": "התחברות",
@@ -7407,7 +7639,15 @@
     "product.retailCardConfirmNote": "- המידות המדויקות של סט זה מאושרות עם ההזמנה שלך, אז שאל אותנו לפני שאתה קונה אם אתה צריך אותם מראש.",
     "product.retailCardOtherSizes": "אם אתה צריך גודל אחר, גדלים אחרים במפעל מסדרה זו זמינים דרך התוכנית המסחרית שלנו ב-",
     "product.retailCardWholesaleList": "מחירון סיטונאי",
-    "product.useCasesLabel": "מקרי שימוש"
+    "product.useCasesLabel": "מקרי שימוש",
+    "header.announcement": "ברוכים הבאים ל-Felizbay",
+    "nav.toggleMenu": "החלף תפריט",
+    "footer.designedOperated": "עוצב ומנוהל על ידי Aquafarer LLC (USA)",
+    "product.badgeRetail": "קמעונאות · רכישת יחידה",
+    "product.badgeWholesale": "סיטונאות · הזמנות פרויקטים",
+    "product.priceFrom": "החל מ-",
+    "product.wholesaleOnlyNote": "כרגע זמין להזמנות סיטונאיות ולפרויקטים.",
+    "contact.doNotFill": "אל תמלא שדה זה"
   },
   "ms": {
     "nav.signIn": "Log Masuk",
@@ -7654,7 +7894,15 @@
     "product.retailCardConfirmNote": "— dimensi tepat set ini disahkan dengan pesanan anda, jadi tanya kami sebelum anda membeli jika anda memerlukannya terlebih dahulu.",
     "product.retailCardOtherSizes": "Jika anda memerlukan saiz yang berbeza, saiz kilang lain daripada siri ini boleh didapati melalui program komersial kami di",
     "product.retailCardWholesaleList": "senarai harga borong",
-    "product.useCasesLabel": "Kes guna"
+    "product.useCasesLabel": "Kes guna",
+    "header.announcement": "Selamat datang ke Felizbay",
+    "nav.toggleMenu": "Buka/tutup menu",
+    "footer.designedOperated": "Direka dan dikendalikan oleh Aquafarer LLC (USA)",
+    "product.badgeRetail": "Runcit · Pembelian seunit",
+    "product.badgeWholesale": "Borong · pesanan projek",
+    "product.priceFrom": "Daripada",
+    "product.wholesaleOnlyNote": "Buat masa ini tersedia untuk pesanan borong dan projek.",
+    "contact.doNotFill": "Jangan isi ruang ini"
   },
   "tl": {
     "nav.signIn": "Mag-sign In",
@@ -7901,7 +8149,15 @@
     "product.retailCardConfirmNote": "— ang eksaktong mga sukat ng set na ito ay nakumpirma sa iyong order, kaya tanungin kami bago ka bumili kung kailangan mo ang mga ito nang maaga.",
     "product.retailCardOtherSizes": "Kung kailangan mo ng ibang laki, ang iba pang laki ng pabrika mula sa seryeng ito ay makukuha sa pamamagitan ng aming komersyal na programa sa",
     "product.retailCardWholesaleList": "listahan ng presyo ng pakyawan",
-    "product.useCasesLabel": "Mga kaso ng paggamit"
+    "product.useCasesLabel": "Mga kaso ng paggamit",
+    "header.announcement": "Maligayang pagdating sa Felizbay",
+    "nav.toggleMenu": "I-toggle ang menu",
+    "footer.designedOperated": "Idinisenyo at pinatatakbo ng Aquafarer LLC (USA)",
+    "product.badgeRetail": "Retail · Pagbili ng isang piraso",
+    "product.badgeWholesale": "Wholesale · mga order para sa proyekto",
+    "product.priceFrom": "Mula sa",
+    "product.wholesaleOnlyNote": "Kasalukuyang available para sa mga wholesale at project order.",
+    "contact.doNotFill": "Huwag punan ito"
   },
   "kk": {
     "nav.products": "Өнімдер",
@@ -8148,7 +8404,15 @@
     "product.retailCardConfirmNote": "— бұл жиынтықтың нақты өлшемдері тапсырысыңызбен расталады, сондықтан сатып алмас бұрын бізден олардың сізге қажет екенін сұраңыз.",
     "product.retailCardOtherSizes": "Егер сізге басқа өлшем қажет болса, осы сериядағы басқа зауыт өлшемдері біздің коммерциялық бағдарламамыз арқылы қол жетімді",
     "product.retailCardWholesaleList": "көтерме бағалар тізімі",
-    "product.useCasesLabel": "Қолдану жағдайлары"
+    "product.useCasesLabel": "Қолдану жағдайлары",
+    "header.announcement": "Felizbay-ға қош келдіңіз",
+    "nav.toggleMenu": "Мәзірді ауыстыру",
+    "footer.designedOperated": "Aquafarer LLC (USA) жобалаған және басқарады",
+    "product.badgeRetail": "Бөлшек · Бір дана сатып алу",
+    "product.badgeWholesale": "Көтерме · жоба тапсырыстары",
+    "product.priceFrom": "Бастап",
+    "product.wholesaleOnlyNote": "Қазіргі уақытта көтерме және жоба тапсырыстарына қолжетімді.",
+    "contact.doNotFill": "Мұны толтырмаңыз"
   },
   "uz": {
     "nav.products": "Mahsulotlar",
@@ -8395,7 +8659,15 @@
     "product.retailCardConfirmNote": "— ushbu toʻplamning aniq oʻlchamlari buyurtmangiz bilan tasdiqlangan, shuning uchun sotib olishdan oldin bizga kerakmi yoki yoʻqligini soʻrang.",
     "product.retailCardOtherSizes": "Agar sizga boshqa o'lcham kerak bo'lsa, ushbu seriyadagi boshqa zavod o'lchamlari bizning tijorat dasturimiz orqali mavjud",
     "product.retailCardWholesaleList": "ulgurji narxlar ro'yxati",
-    "product.useCasesLabel": "Foydalanish holatlari"
+    "product.useCasesLabel": "Foydalanish holatlari",
+    "header.announcement": "Felizbay-ga xush kelibsiz",
+    "nav.toggleMenu": "Menyuni ochish/yopish",
+    "footer.designedOperated": "Aquafarer LLC (AQSh) tomonidan loyihalangan va boshqariladi",
+    "product.badgeRetail": "Chakana · Bitta dona xarid",
+    "product.badgeWholesale": "Ulgurji · loyiha buyurtmalari",
+    "product.priceFrom": "dan",
+    "product.wholesaleOnlyNote": "Hozirda ulgurji va loyiha buyurtmalari uchun mavjud.",
+    "contact.doNotFill": "Buni to'ldirmang"
   },
   "uk": {
     "nav.products": "Продукти",
@@ -8642,7 +8914,15 @@
     "product.retailCardConfirmNote": "— точні розміри цього набору підтверджуються вашим замовленням, тому перед покупкою запитайте нас, чи потрібні вони вам.",
     "product.retailCardOtherSizes": "Якщо вам потрібен інший розмір, інші заводські розміри з цієї серії доступні через нашу комерційну програму на сайті",
     "product.retailCardWholesaleList": "оптовий прайс лист",
-    "product.useCasesLabel": "Випадки використання"
+    "product.useCasesLabel": "Випадки використання",
+    "header.announcement": "Ласкаво просимо до Felizbay",
+    "nav.toggleMenu": "Відкрити/закрити меню",
+    "footer.designedOperated": "Розроблено та керується Aquafarer LLC (США)",
+    "product.badgeRetail": "Роздріб · Купівля одного виробу",
+    "product.badgeWholesale": "Гурт · замовлення для проєктів",
+    "product.priceFrom": "Від",
+    "product.wholesaleOnlyNote": "Наразі доступно для гуртових замовлень та замовлень для проєктів.",
+    "contact.doNotFill": "Не заповнюйте це поле"
   },
   "az": {
     "nav.products": "Məhsullar",
@@ -8889,7 +9169,15 @@
     "product.retailCardConfirmNote": "— bu dəstin dəqiq ölçüləri sifarişinizlə təsdiqlənir, ona görə də əvvəlcədən ehtiyacınız olub-olmadığını satın almadan əvvəl bizdən soruşun.",
     "product.retailCardOtherSizes": "Fərqli ölçüyə ehtiyacınız varsa, bu seriyadan olan digər zavod ölçüləri bizim kommersiya proqramımız vasitəsilə əldə edilə bilər",
     "product.retailCardWholesaleList": "topdansatış qiymət siyahısı",
-    "product.useCasesLabel": "İstifadə halları"
+    "product.useCasesLabel": "İstifadə halları",
+    "header.announcement": "Felizbay-a xoş gəlmisiniz",
+    "nav.toggleMenu": "Menyunu aç/bağla",
+    "footer.designedOperated": "Aquafarer LLC (USA) tərəfindən dizayn və idarə olunur",
+    "product.badgeRetail": "Pərakəndə · Tək ədəd satınalma",
+    "product.badgeWholesale": "Topdan · layihə sifarişləri",
+    "product.priceFrom": "Başlayaraq",
+    "product.wholesaleOnlyNote": "Hazırda yalnız topdan və layihə sifarişləri üçün mövcuddur.",
+    "contact.doNotFill": "Bunu doldurmayın"
   },
   "fa": {
     "nav.products": "محصولات",
@@ -9136,6 +9424,14 @@
     "product.retailCardConfirmNote": "- ابعاد دقیق این مجموعه با سفارش شما تایید می شود، بنابراین قبل از خرید اگر به آن نیاز دارید از ما بپرسید.",
     "product.retailCardOtherSizes": "اگر به اندازه دیگری نیاز دارید، سایزهای کارخانه دیگر از این سری از طریق برنامه تجاری ما در دسترس هستند",
     "product.retailCardWholesaleList": "لیست قیمت عمده فروشی",
-    "product.useCasesLabel": "موارد استفاده کنید"
+    "product.useCasesLabel": "موارد استفاده کنید",
+    "header.announcement": "به Felizbay خوش آمدید",
+    "nav.toggleMenu": "تغییر منو",
+    "footer.designedOperated": "طراحی و راه‌اندازی توسط Aquafarer LLC (USA)",
+    "product.badgeRetail": "خرده‌فروشی · خرید یک عدد",
+    "product.badgeWholesale": "عمده‌فروشی · سفارش‌های پروژه",
+    "product.priceFrom": "از",
+    "product.wholesaleOnlyNote": "در حال حاضر برای سفارش‌های عمده و پروژه‌ای موجود است.",
+    "contact.doNotFill": "این را پر نکنید"
   }
 }

@@ -67,7 +67,7 @@ steps2_values:
       description: Mga tanong, ekstrang bahagi, o warranty — makipag-ugnayan sa amin anumang oras sa info@felizbay.com.
       icon: tabler:headset
 steps2_milestones:
-  title: Milestones
+  title: Mga Milestone
   subtitle: Isang maikling bersyon ng kwentong Felizbay.
   isReversed: true
   items:
@@ -99,7 +99,7 @@ brand_hub_cards:
     desc: Family-size rectangular drop stitch pool na may matibay na pader at maximum na lugar ng paglangoy.
     link: /products/
     link_label: Tingnan ang mga pool →
-  - title: Round Blue Pools
+  - title: Mga Bilog na Asul na Pool
     desc: Ang klasikong bilog na pool sa makulay na asul — mabilis na pag-setup, matibay na konstruksyon, tibay ng panahon.
     link: /products/
     link_label: Tingnan ang mga pool →

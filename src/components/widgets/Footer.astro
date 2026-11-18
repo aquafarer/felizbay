@@ -174,7 +174,10 @@ const copyrightHtml = String(t(rawCopyright, currentLocale))
 
       <div class="text-sm mr-4 text-white/70">
         <Fragment set:html={copyrightHtml} />
-        <div class="mt-1 text-xs text-white/50">Designed &amp; operated by Aquafarer LLC (USA)</div>
+        <div class="mt-1 text-xs text-white/50">
+          {getUiForLang(currentLocale || 'en')?.['footer.designedOperated'] ||
+            'Designed & operated by Aquafarer LLC (USA)'}
+        </div>
       </div>
     </div>
   </div>

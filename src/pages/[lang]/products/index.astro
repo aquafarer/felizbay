@@ -124,7 +124,7 @@ const cardData = await Promise.all(
         ? p.price?.currency === 'USD'
           ? p.sku
             ? `$${p.price.amount}`
-            : `From $${p.price.amount}`
+            : `${t('product.priceFrom') || 'From'} $${p.price.amount}`
           : `${p.price?.currency} ${p.price.amount}`
         : '',
       isRetail: Boolean(p.sku),
