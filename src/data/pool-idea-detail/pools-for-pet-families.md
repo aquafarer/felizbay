@@ -21,6 +21,8 @@ For dogs, easy entry and exit matter more than depth:
 | Medium to large breeds | Ø 3 × 1 m (S3010) or Ø 3 × 1.2 m (S3012) | Room to wade and actually swim a few strokes |
 | Multi-pet households | 3 × 2 × 0.8 m (SR230815) | Defined rectangular play lane along a fence |
 
+A dedicated product now covers this use case directly: the [Premium Drop Stitch Dog Pool](/products/drop-stitch-dog-pool/) — a Ø 3.0 m round basin with a 0.5 m low rim and a firm 10 cm specified wall, purpose-built for dogs in villa gardens and private backyards, with private-label options for pet brands.
+
 Plan for muddy paws: position the pool on lawn or paving you can rinse, away from the back door.
 
 ## 3. Hair, Water Quality, and Cleaning

@@ -2567,4 +2567,4 @@ Felizbay — https://felizbay.com
 
 ### 20.3 新闻稿草稿位置
 
-`docs/news-drafts/2026-11-14-*.md`（4 篇：12 篇新指南、Compliance 页、对比工具升级、破坏性试验报告发布）——均为真实站点更新，字段对齐 D1 news schema，管理员审核后经 `/keystatic` → News → New Post 粘贴发布，发布后 rss.xml 由 news-worker 自动生效。
+`docs/news-drafts/2026-11-14-*.md`（4 篇：12 篇新指南、Compliance 页、对比工具升级、破坏性试验报告发布）+ `docs/news-drafts/2026-11-19-dog-pool-product.md`（第 5 篇：Drop Stitch 狗池新品发布，2026-11-19，commit 322fba8）——均为真实站点更新，字段对齐 D1 news schema，管理员审核后经 `/keystatic` → News → New Post 粘贴发布，发布后 rss.xml 由 news-worker 自动生效。
