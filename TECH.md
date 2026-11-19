@@ -176,7 +176,7 @@ node scripts/geo-build.mjs              # 1. 构建地理数据 + llms.txt (37 �
 - npm 安装**无需** `--legacy-peer-deps` (astro-auto-import 0.5.2 起 peer 可干净解析)
 - **lockfile 纪律**: CI 的 `npm ci` 要求 lock 与 registry 上 range 内**最新版本**一致 — 依赖发布新版本 (eslint/@typescript-eslint 等) 时 CI 会报 `EUSAGE: lock file's X does not satisfy X`, 需运行 `npm update` 后提交 lock (普通 `npm install` 不会 bump range 内版本)
 - `package.json` overrides 锁定 `"vite": "^8"` + `"yaml": ">=2.8.3"`
-- `scripts/patch-worker.mjs` (server 模式子域路由注入) 是**历史遗留**, 在 `output: 'static'` 下不执行, 不属构建管线
+- `scripts/patch-worker.mjs` (server 模式子域路由注入) 是**历史遗留**, 已于 2026-11-19 仓库清理中删除 (在 `output: 'static'` 下从不执行), 禁止重新引入
 
 ---
 
@@ -905,8 +905,7 @@ const t = (key: string) => getUiForLang(locale)?.[key] || key;
 **修复方法**:
 
 - 确保所有 `.astro`, `.ts`, `.json` 文件使用 **UTF-8 without BOM** 编码
-- 检查脚本: `python scripts/find-garbled.py` 或 `python scripts/check-encoding.py`
-- 修复脚本: `python scripts/fix-garbled.py`
+- 检查方法: `rg '\uFFFD' src/` 或 PowerShell `Get-ChildItem -Recurse src -Include *.yaml,*.yml,*.astro,*.ts,*.json | ForEach-Object { if ((Get-Content -Raw $_.FullName) -match '\uFFFD') { $_ } }` (原 find-garbled.py/check-encoding.py/fix-garbled.py 已于 2026-11-19 清理)
 - 避免在源文件中使用非标准 Unicode 字符
 
 ### 11.4 缺失翻译键导致页面显示键名
@@ -1345,8 +1344,7 @@ git -c http.proxy=http://127.0.0.1:10810 -c http.version=HTTP/1.1 `
 ### 12.4 文件编码
 
 - 所有源文件必须使用 **UTF-8 without BOM**
-- 修改包含中文/非 ASCII 字符的文件后, 运行 `python scripts/check-encoding.py`
-- 如果发现乱码, 运行 `python scripts/fix-garbled.py`
+- 修改包含中文/非 ASCII 字符的文件后, 用 `rg '\uFFFD' src/` (或等价 PowerShell) 扫描乱码, 零匹配才可提交
 
 ### 12.4 Worker 限制
 
@@ -1435,7 +1433,6 @@ npm run check:i18n     # 仅 i18n 翻译检查
 | `src/i18n/generated/site-data.ts`        | `site-*` 键构建产物 (2.2 MiB, [lang]/ 页面直接 import)                 |
 | `src/i18n/generated/pages/*.ts`          | 每页一个 TS 模块 (~110 个, 构建期生成)                                 |
 | `scripts/generate-data-json.mjs`         | i18n 构建数据生成 (page-content.json + site-data.ts, content-v2* 排除) |
-| `scripts/patch-worker.mjs`               | ⚠️ 历史遗留 (server 模式子域路由), static 下不执行, 勿改勿用           |
 | `src/data/products.ts`                   | 产品结构化数据                                                         |
 | `src/data/product-texts.ts`              | 产品多语言文本                                                         |
 | `src/layouts/Layout.astro`               | 主布局 (调用 setLang)                                                  |
@@ -1865,9 +1862,10 @@ generate-data-json.mjs
   │    └─ src/data/site/{name}.{locale}.yaml      → {lang}/site-{name}
   └─ writeSiteDataTs()        → site-data.ts (仅 site-* 键)
          ↓
-_gen-pages.cjs → generated/pages/{name}.ts (每页一个分片)
-_patch-pages.cjs → 自动注入 import/setter 到 [lang]/ 页面
+ _gen-pages.cjs → generated/pages/{name}.ts (每页一个分片)
 ```
+
+(注: 曾用于自动注入 import/setter 的一次性脚本 `_patch-pages.cjs` 已于 2026-11-19 清理 — 注入结果已固化在 `[lang]/` 页面源码中)
 
 **回退行为：** 当 `{lang}/site-about` 在 page-content.json 中不存在时：
 
@@ -2444,6 +2442,21 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 | prod-smoke                                                                    | 新增 EN PDP 检查（+marker `Premium Drop Stitch Inflatable Dog Pool`/`Ø 3.0 m`/`10 cm specified thickness`/`Product Conformity`/`private-label customization options`，−notMarker `fitg-size`/`aggregateRating`/`"sku"`/`"@type":"Offer"`/`$`）+ `/de/` PDP 合规模块德语检查 |
 
 **边界**：不进 `/products/specs/` FOB 表、不进 compare、不进 merchant feed（无价格门禁自然排除）；relatedProducts 靠 shared `drop-stitch` tag 打分自动关联。
+
+**后续补强（同日 commit `c0b574d`）**：① 第 5 篇新闻草稿 `docs/news-drafts/2026-11-19-dog-pool-product.md`（D1 schema，待管理员 keystatic 发布）；② 双向交叉链接——`pool-idea-detail/pools-for-pet-families.md` 尺寸表后链产品页、PDP MDX "Where the Dog Pool Fits" 链回 idea 页（`/llms/ideas/*` markdown 端点渲染 `pool-ideas.ts` 摘要而非 detail MD，属既有设计）。
+
+### 19.26 仓库清理：死脚本与一次性工具移除 (2026-11-19)
+
+删除 16 个零引用脚本（pkg/CI/活跃代码全扫描零命中；`05_ci_gate.py` 与其依赖 `langdetect_lite.py` 为 seo-gate.yml 活闸门，**保留**）：
+
+| 类别                                                  | 删除文件                                                                                                                                                                                                                      |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 历史遗留                                              | `patch-worker.mjs`（server 模式子域路由，static 下从不执行；README/TECH/AGENTS 三处引用同步改写为"已删除、禁止重新引入"）                                                                                                     |
+| 乱码检查/修复（功能被 `rg '\uFFFD'`/PowerShell 替代） | `check-encoding.py`、`find-garbled.py`、`fix-garbled.py`、`find-u8133.py`                                                                                                                                                     |
+| 一次性修复/注入                                       | `fix-favicons.ps1`、`copy-academy-sections.ps1`、`copy-i18n-fields.ps1`、`update-team-placeholders.py`、`_check-yaml-images.cjs`、`_find-yaml-context.cjs`、`_fix-import.cjs`、`_patch-pages.cjs`（注入结果已固化在页面源码） |
+| 一次性迁移/统计                                       | `migrate-domain.mjs`、`count-cats.py`、`check-asset-refs.py`                                                                                                                                                                  |
+
+同步更新：README.md "Legacy leftovers" 行删除、AGENTS.md Astro 7 注意事项、TECH.md §3/§11.3/§12.4/§13 附录表/§15 生成链示意图；本地 `scripts/__pycache__/`（未跟踪）一并清除。历史日志行（§16.6/§19.5 等提及已删脚本的记录）按"历史记录不回改"原则保留原文。
 
 ---
 

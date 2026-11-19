@@ -50,7 +50,6 @@ Read in this order to grasp the whole system fastest (≈10 minutes):
 | D1 migrations                        | `migrations/` (0000–0005: init, news, rate_limit, inquiry_ip, inquiry_routing, advisor_event), applied by CI / `wrangler d1 migrations apply`                        |
 | CI/CD                                | `.github/workflows/{ci,deploy,seo-gate}.yml`                                                                                                                         |
 | Static quality gates                 | `scripts/validate-dist.mjs`, `scripts/fold-untranslated-canonical.mjs`, `scripts/05_ci_gate.py`                                                                      |
-| Legacy leftovers (do not touch)      | `scripts/patch-worker.mjs` (subdomain routing for `output: 'server'` — dead under `static`), `scripts/_patch-pages.cjs` (manual tool)                                |
 | Image dimension SSOT                 | `src/data/site/image-dimensions.json` (36 entries, rebuilt by `scripts/generate-image-dimensions.mjs`; injected at build via `vendor/integration/img-dimensions.ts`) |
 | R2 asset upload + auto-prune         | `scripts/fast-upload-r2.mjs` (uploads `public/` assets, prunes stale R2 objects each deploy)                                                                         |
 | Technical audit & test records       | `docs/technical-audit-2026-10.md` (audit + inquiry T1–T5 + post-mortems), `docs/ai-visibility-baseline.md` (AI visibility protocol)                                  |
