@@ -116,7 +116,17 @@
     "15 / 20 cm drop stitch": "15 / 20 سم Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1.5 × 1.5 × 0.8 م – 3 × 2 × 1 م (7 أحجام من المصنع)",
     "Optional fitted cover, sold separately": "غطاء مُطابق اختياري، يُباع منفصلًا",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "وحدات تسخين، مضخات فلتر رملي، تعقيم، مساج بالفقاعات الهوائية"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "وحدات تسخين، مضخات فلتر رملي، تعقيم، مساج بالفقاعات الهوائية",
+    "Product Conformity": "مطابقة المنتج",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "تنطبق على منتجات المسابح المنزلية كما هي عند التصنيع — لا على المسابح ذات الاستخدام العام أو التركيبات التجارية.",
+    "Design References": "مراجع التصميم",
+    "Referenced during design of residential models — a design reference is not a product certification.": "استُرشد بها عند تصميم الطرازات المنزلية — مرجع التصميم ليس شهادة منتج.",
+    "Factory Certifications": "شهادات المصنع",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "تغطي منشأة التصنيع وأنظمة الإدارة لديها — لا مطابقة المنتج الفردي.",
+    "Material Compliance & Testing": "مطابقة المواد والاختبارات",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "اختبارات مواد على PVC drop-stitch مزدوج الطبقة — وليست شهادة سلامة منتج.",
+    "Residential standards do not certify public or commercial pool installations.": "معايير المسابح المنزلية لا تعتمد تركيبات المسابح العامة أو التجارية.",
+    "Compliance documentation": "وثائق المطابقة"
   },
   "az": {
     "adult supervision required for children at all times": "uşaqlar hər zaman böyüklərin nəzarəti altında olmalıdır",
@@ -235,7 +245,17 @@
     "No image available": "Şəkil mövcud deyil",
     "View": "Baxış",
     "Image": "Şəkil",
-    "from": "-dan"
+    "from": "-dan",
+    "Product Conformity": "Məhsul uyğunluğu",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Zavod vəziyyətindəki yaşayış hovuzları üçün keçərlidir — ictimai istifadə hovuzları və ya kommersiya qurğuları üçün deyil.",
+    "Design References": "Dizayn istinadları",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Yaşayış modellərinin dizaynında istinad edilmişdir — dizayn istinadı məhsul sertifikatı deyil.",
+    "Factory Certifications": "Zavod sertifikatları",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "İstehsal müəssisəsini və onun idarəetmə sistemlərini əhatə edir — ayrı-ayrı məhsulların uyğunluğunu yox.",
+    "Material Compliance & Testing": "Material uyğunluğu və sınaqlar",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "İkiqat təbəqəli drop-stitch PVC üzərində material sınaqları — məhsul təhlükəsizliyi sertifikatı deyil.",
+    "Residential standards do not certify public or commercial pool installations.": "Yaşayış standartları ictimai və ya kommersiya hovuz qurğularını sertifikatlaşdırmır.",
+    "Compliance documentation": "Uyğunluq sənədləri"
   },
   "bg": {
     "adult supervision required for children at all times": "децата трябва да бъдат под постоянно наблюдение от възрастен",
@@ -354,7 +374,17 @@
     "No image available": "Няма налично изображение",
     "View": "Преглед",
     "Image": "Изображение",
-    "from": "от"
+    "from": "от",
+    "Product Conformity": "Съответствие на продукта",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Прилага се за басейнови продукти за домашна употреба в заводско състояние — не за басейни за обществено ползване или търговски инсталации.",
+    "Design References": "Проектни референции",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Използвани при проектирането на жилищните модели — проектната референция не е сертифициране на продукта.",
+    "Factory Certifications": "Фабрични сертификати",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Обхващат производственото предприятие и неговите системи за управление — не съответствието на отделния продукт.",
+    "Material Compliance & Testing": "Съответствие на материалите и изпитвания",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Изпитвания на материала на двуслоения drop-stitch PVC — не сертифициране на безопасността на продукта.",
+    "Residential standards do not certify public or commercial pool installations.": "Жилищните стандарти не сертифицират обществени или търговски басейнови инсталации.",
+    "Compliance documentation": "Документация за съответствие"
   },
   "cs": {
     "adult supervision required for children at all times": "děti musí být neustále pod dohledem dospělého",
@@ -473,7 +503,17 @@
     "No image available": "Obrázek není k dispozici",
     "View": "Zobrazit",
     "Image": "Obrázek",
-    "from": "od"
+    "from": "od",
+    "Product Conformity": "Shoda produktu",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Platí pro rezidenční bazénové produkty ve stavu výroby — ne pro veřejné bazény ani komerční instalace.",
+    "Design References": "Projektové reference",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Zohledněny při návrhu rezidenčních modelů — projektová reference není certifikací produktu.",
+    "Factory Certifications": "Certifikace továrny",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Zahrnují výrobní závod a jeho systémy managementu — nikoli shodu konkrétního produktu.",
+    "Material Compliance & Testing": "Shoda materiálu a testování",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materiálové testy dvouvrstvého drop-stitch PVC — ne certifikace bezpečnosti produktu.",
+    "Residential standards do not certify public or commercial pool installations.": "Rezidenční normy necertifikují veřejné ani komerční bazénové instalace.",
+    "Compliance documentation": "Dokumentace shody"
   },
   "da": {
     "adult supervision required for children at all times": "børn skal til enhver tid være under voksen opsyn",
@@ -592,7 +632,17 @@
     "No image available": "Intet billede tilgængeligt",
     "View": "Vis",
     "Image": "Billede",
-    "from": "fra"
+    "from": "fra",
+    "Product Conformity": "Produktoverensstemmelse",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Gælder for private poolprodukter som fremstillet — ikke pooler til offentlig brug eller kommercielle anlæg.",
+    "Design References": "Designreferencer",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Anvendt ved design af boligmodellerne — en designreference er ikke en produktcertificering.",
+    "Factory Certifications": "Fabrikscertificeringer",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Dækker produktionsanlægget og dets ledelsessystemer — ikke det enkelte produkts overensstemmelse.",
+    "Material Compliance & Testing": "Materialeoverensstemmelse & test",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materialetests af det dobbeltlagte drop-stitch PVC — ikke en produktsikkerhedscertificering.",
+    "Residential standards do not certify public or commercial pool installations.": "Standarder for private pooler certificerer ikke offentlige eller kommercielle poolanlæg.",
+    "Compliance documentation": "Overensstemmelsesdokumentation"
   },
   "de": {
     "adult supervision required for children at all times": "Kinder müssen jederzeit unter Aufsicht erwachsener Personen stehen",
@@ -711,7 +761,17 @@
     "15 / 20 cm drop stitch": "15 / 20 cm Drop-Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m (7 Werksgrößen)",
     "Optional fitted cover, sold separately": "Optionale passgenaue Abdeckung, separat erhältlich",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "Heizgeräte, Sandfilterpumpen, Desinfektion, Luftblasen-Massage"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "Heizgeräte, Sandfilterpumpen, Desinfektion, Luftblasen-Massage",
+    "Product Conformity": "Produktkonformität",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Gilt für Privatpool-Produkte im Auslieferungszustand — nicht für öffentlich zugängliche Pools oder gewerbliche Anlagen.",
+    "Design References": "Auslegungsreferenzen",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Bei der Konstruktion der Wohnmodelle herangezogen — eine Auslegungsreferenz ist keine Produktzertifizierung.",
+    "Factory Certifications": "Werkszertifizierungen",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Betreffen die Fertigungsstätte und ihre Managementsysteme — nicht die Konformität des einzelnen Produkts.",
+    "Material Compliance & Testing": "Materialkonformität & Prüfung",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materialprüfungen am doppellagigen drop-stitch PVC — keine Produktsicherheitszertifizierung.",
+    "Residential standards do not certify public or commercial pool installations.": "Normen für den Privatbereich zertifizieren keine öffentlichen oder gewerblichen Poolanlagen.",
+    "Compliance documentation": "Compliance-Dokumentation"
   },
   "el": {
     "adult supervision required for children at all times": "απαιτείται διαρκής επίβλεψη από ενήλικα για τα παιδιά",
@@ -830,7 +890,17 @@
     "15 / 20 cm drop stitch": "15 / 20 εκ Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1,5 × 1,5 × 0,8 μ – 3 × 2 × 1 μ (7 εργοστασιακά μεγέθη)",
     "Optional fitted cover, sold separately": "Καλύπτρα εφαρμοστή προαιρετική, πωλείται ξεχωριστά",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "Μονάδες θέρμανσης, αντλίες φίλτρου άμμου, απολύμανση, μασάζ με φυσαλίδες αέρα"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "Μονάδες θέρμανσης, αντλίες φίλτρου άμμου, απολύμανση, μασάζ με φυσαλίδες αέρα",
+    "Product Conformity": "Συμμόρφωση προϊόντος",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Ισχύει για προϊόντα πισίνας οικιακής χρήσης όπως κατασκευάζονται — όχι για δημόσιες πισίνες ή εμπορικές εγκαταστάσεις.",
+    "Design References": "Σχεδιαστικές αναφορές",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Λήφθηκαν υπόψη στο σχεδιασμό των οικιακών μοντέλων — μια σχεδιαστική αναφορά δεν αποτελεί πιστοποίηση προϊόντος.",
+    "Factory Certifications": "Πιστοποιήσεις εργοστασίου",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Καλύπτουν την μονάδα παραγωγής και τα συστήματα διαχείρισής της — όχι τη συμμόρφωση του μεμονωμένου προϊόντος.",
+    "Material Compliance & Testing": "Συμμόρφωση υλικών & δοκιμές",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Δοκιμές υλικών στο διπλοστρωματικό drop-stitch PVC — όχι πιστοποίηση ασφάλειας προϊόντος.",
+    "Residential standards do not certify public or commercial pool installations.": "Οι οικιακοί κανονισμοί δεν πιστοποιούν δημόσιες ή εμπορικές εγκαταστάσεις πισίνας.",
+    "Compliance documentation": "Τεκμηρίωση συμμόρφωσης"
   },
   "es": {
     "adult supervision required for children at all times": "los niños deben estar supervisados por un adulto en todo momento",
@@ -949,7 +1019,17 @@
     "15 / 20 cm drop stitch": "15 / 20 cm Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m (7 tamaños de fábrica)",
     "Optional fitted cover, sold separately": "Cubierta ajustada opcional, se vende por separado",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "Unidades de calefacción, bombas de filtro de arena, desinfección, masaje de burbujas de aire"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "Unidades de calefacción, bombas de filtro de arena, desinfección, masaje de burbujas de aire",
+    "Product Conformity": "Conformidad del producto",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Se aplica a productos de piscina residenciales tal como se fabrican — no a piscinas de uso público ni instalaciones comerciales.",
+    "Design References": "Referencias de diseño",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Consultadas durante el diseño de los modelos residenciales — una referencia de diseño no es una certificación de producto.",
+    "Factory Certifications": "Certificaciones de fábrica",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Cubren la planta de fabricación y sus sistemas de gestión — no la conformidad del producto individual.",
+    "Material Compliance & Testing": "Conformidad de material y ensayos",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Ensayos de material sobre el PVC drop-stitch de doble capa — no una certificación de seguridad del producto.",
+    "Residential standards do not certify public or commercial pool installations.": "Las normas residenciales no certifican instalaciones de piscina públicas o comerciales.",
+    "Compliance documentation": "Documentación de conformidad"
   },
   "et": {
     "adult supervision required for children at all times": "lapsed peavad kogu aeg olema täiskasvanu järelevalve all",
@@ -1068,7 +1148,17 @@
     "No image available": "Pilt pole saadaval",
     "View": "Vaata",
     "Image": "Pilt",
-    "from": "alates"
+    "from": "alates",
+    "Product Conformity": "Toote vastavus",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Kehtib elamute basseinitoodetele nii, nagu need on valmistatud — mitte avaliku kasutusega basseinidele või kommertsobjektidele.",
+    "Design References": "Disainiviited",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Arvestatud elamumudelite projekteerimisel — disainiviide ei ole toote sertifitseerimine.",
+    "Factory Certifications": "Tehase sertifikaadid",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Hõlmavad tootmistehast ja selle juhtimissüsteeme — mitte üksiku toote vastavust.",
+    "Material Compliance & Testing": "Materjali vastavus ja testimine",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materjalikatsed kahekihilisel drop-stitch PVC-l — mitte toote ohutuse sertifitseerimine.",
+    "Residential standards do not certify public or commercial pool installations.": "Elamubasseinide standardid ei sertifitseeri avalikke ega kommertsbasseine.",
+    "Compliance documentation": "Vastavusdokumentatsioon"
   },
   "fa": {
     "adult supervision required for children at all times": "کودکان باید در همه حال تحت نظارت بزرگسالان باشند",
@@ -1187,7 +1277,17 @@
     "No image available": "تصویری موجود نیست",
     "View": "مشاهده",
     "Image": "تصویر",
-    "from": "از"
+    "from": "از",
+    "Product Conformity": "انطباق محصول",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "برای محصولات استخر خانگی به‌صورت کارخانه‌ای اعمال می‌شود — نه برای استخرهای عمومی یا نصب‌های تجاری.",
+    "Design References": "مراجع طراحی",
+    "Referenced during design of residential models — a design reference is not a product certification.": "در طراحی مدل‌های خانگی مبنا قرار گرفته — مرجع طراحی گواهی محصول نیست.",
+    "Factory Certifications": "گواهی‌های کارخانه",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "شامل کارخانه تولید و سیستم‌های مدیریتی آن است — نه انطباق محصول تکی.",
+    "Material Compliance & Testing": "انطباق مواد و آزمون‌ها",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "آزمون‌های مواد روی PVC drop-stitch دولایه — گواهی ایمنی محصول نیست.",
+    "Residential standards do not certify public or commercial pool installations.": "استانداردهای خانگی، استخرهای عمومی یا تجاری را گواهی نمی‌کنند.",
+    "Compliance documentation": "مستندات انطباق"
   },
   "fi": {
     "adult supervision required for children at all times": "lasten on oltava jatkuvasti aikuisen valvonnassa",
@@ -1306,7 +1406,17 @@
     "No image available": "Kuvaa ei saatavilla",
     "View": "Näytä",
     "Image": "Kuva",
-    "from": "alkaen"
+    "from": "alkaen",
+    "Product Conformity": "Tuotteen vaatimustenmukaisuus",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Koskee asuinkäytön allastuotteita sellaisinaan — ei yleisökäytön altaita tai kaupallisia asennuksia.",
+    "Design References": "Suunnittelureferenssit",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Käytetty asuinmallien suunnittelussa — suunnittelureferenssi ei ole tuotesertifikaatti.",
+    "Factory Certifications": "Tehdassertifikaatit",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Kattavat tuotantolaitoksen ja sen johtamisjärjestelmät — ei yksittäisen tuotteen vaatimustenmukaisuutta.",
+    "Material Compliance & Testing": "Materiaalin vaatimustenmukaisuus & testaus",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materiaalitestit kaksikerroksisella drop-stitch PVC:llä — ei tuoteturvallisuussertifikaatti.",
+    "Residential standards do not certify public or commercial pool installations.": "Asuinkäytön standardit eivät sertifioi julkisia tai kaupallisia allasasennuksia.",
+    "Compliance documentation": "Vaatimustenmukaisuusdokumentaatio"
   },
   "fr": {
     "adult supervision required for children at all times": "les enfants doivent être surveillés en permanence par un adulte",
@@ -1425,7 +1535,17 @@
     "15 / 20 cm drop stitch": "15 / 20 cm Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m (7 tailles d'usine)",
     "Optional fitted cover, sold separately": "Couverture ajustée en option, vendue séparément",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "Dispositifs de chauffage, pompes à filtre à sable, désinfection, massage à bulles d'air"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "Dispositifs de chauffage, pompes à filtre à sable, désinfection, massage à bulles d'air",
+    "Product Conformity": "Conformité du produit",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "S'applique aux produits de piscine résidentiels tels que fabriqués — pas aux piscines à usage public ni aux installations commerciales.",
+    "Design References": "Références de conception",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Mentionnées lors de la conception des modèles résidentiels — une référence de conception n'est pas une certification de produit.",
+    "Factory Certifications": "Certifications d'usine",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Couvrent l'usine et ses systèmes de management — pas la conformité du produit individuel.",
+    "Material Compliance & Testing": "Conformité matériau & essais",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Essais matériaux sur le PVC drop-stitch à double couche — pas une certification de sécurité du produit.",
+    "Residential standards do not certify public or commercial pool installations.": "Les normes résidentielles ne certifient pas les piscines publiques ou commerciales.",
+    "Compliance documentation": "Documentation de conformité"
   },
   "he": {
     "adult supervision required for children at all times": "נדרש פיקוח של מבוגר על ילדים בכל עת",
@@ -1544,7 +1664,17 @@
     "15 / 20 cm drop stitch": "15 / 20 ס״מ Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1.5 × 1.5 × 0.8 מ׳ – 3 × 2 × 1 מ׳ (7 מידות מפעל)",
     "Optional fitted cover, sold separately": "כיסוי מותאם אופציונלי, נמכר בנפרד",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "יחידות חימום, משאבות פילטר חול, חיטוי, עיסוי בבועות אוויר"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "יחידות חימום, משאבות פילטר חול, חיטוי, עיסוי בבועות אוויר",
+    "Product Conformity": "התאמת מוצר",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "חל על מוצרי בריכות ביתיים כפי שיוצרו — לא על בריכות לשימוש ציבורי או התקנות מסחריות.",
+    "Design References": "הפניות עיצוב",
+    "Referenced during design of residential models — a design reference is not a product certification.": "שימשו התייחסות בעיצוב הדגמים הביתיים — הפניית עיצוב אינה הסמכת מוצר.",
+    "Factory Certifications": "הסמכות מפעל",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "מכסות את מפעל הייצור ומערכות הניהול שלו — לא את התאמת המוצר הבודד.",
+    "Material Compliance & Testing": "התאמת חומרים ובדיקות",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "בדיקות חומרים על drop-stitch PVC דו-שכבתי — אינן הסמכת בטיחות מוצר.",
+    "Residential standards do not certify public or commercial pool installations.": "תקנים לבריכות ביתיות אינם מסמיכים בריכות ציבוריות או מסחריות.",
+    "Compliance documentation": "תיעוד תאימות"
   },
   "hr": {
     "adult supervision required for children at all times": "djeca u svakom trenutku moraju biti pod nadzorom odrasle osobe",
@@ -1663,7 +1793,17 @@
     "No image available": "Slika nije dostupna",
     "View": "Pregled",
     "Image": "Slika",
-    "from": "od"
+    "from": "od",
+    "Product Conformity": "Usklađenost proizvoda",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Odnosi se na bazenske proizvode za kućnu upotrebu u tvorničkom stanju — ne na javne bazene ili komercijalne instalacije.",
+    "Design References": "Projektne reference",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Korištene pri projektiranju stambenih modela — projektna referenca nije certifikat proizvoda.",
+    "Factory Certifications": "Tvornički certifikati",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Obuhvaćaju proizvodni pogon i njegove sustave upravljanja — ne usklađenost pojedinačnog proizvoda.",
+    "Material Compliance & Testing": "Usklađenost materijala i ispitivanja",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Ispitivanja materijala dvoslojnog drop-stitch PVC-a — ne certifikat sigurnosti proizvoda.",
+    "Residential standards do not certify public or commercial pool installations.": "Stambeni standardi ne certificiraju javne ili komercijalne bazenske instalacije.",
+    "Compliance documentation": "Dokumentacija o usklađenosti"
   },
   "hu": {
     "adult supervision required for children at all times": "a gyerekeknek mindig felnőtt felügyeletére van szükségük",
@@ -1782,7 +1922,17 @@
     "No image available": "Nincs elérhető kép",
     "View": "Megtekintés",
     "Image": "Kép",
-    "from": "-tól"
+    "from": "-tól",
+    "Product Conformity": "Termékmegfelelőség",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "A lakossági medence termékekre vonatkozik gyártott állapotukban — nem nyilvános használatú medencékre vagy kereskedelmi létesítményekre.",
+    "Design References": "Tervezési referenciák",
+    "Referenced during design of residential models — a design reference is not a product certification.": "A lakossági modellek tervezése során felhasznált referencia — a tervezési referencia nem terméktanúsítás.",
+    "Factory Certifications": "Gyári tanúsítványok",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "A gyártóüzemre és irányítási rendszerére vonatkoznak — nem az egyes termék megfelelőségére.",
+    "Material Compliance & Testing": "Anyagmegfelelőség és vizsgálat",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Anyagvizsgálatok a kétrétegű drop-stitch PVC-n — nem termékbiztonsági tanúsítás.",
+    "Residential standards do not certify public or commercial pool installations.": "A lakossági szabványok nem tanúsítják a nyilvános vagy kereskedelmi medencelétesítményeket.",
+    "Compliance documentation": "Megfelelőségi dokumentáció"
   },
   "id": {
     "adult supervision required for children at all times": "anak-anak harus selalu dalam pengawasan orang dewasa",
@@ -1901,7 +2051,17 @@
     "No image available": "Tidak ada gambar",
     "View": "Lihat",
     "Image": "Gambar",
-    "from": "mulai dari"
+    "from": "mulai dari",
+    "Product Conformity": "Kesesuaian Produk",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Berlaku untuk produk kolam hunian sebagaimana diproduksi — bukan untuk kolam penggunaan publik atau instalasi komersial.",
+    "Design References": "Referensi Desain",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Diacu saat merancang model hunian — referensi desain bukan sertifikasi produk.",
+    "Factory Certifications": "Sertifikasi Pabrik",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Mencakup fasilitas manufaktur dan sistem manajemennya — bukan kesesuaian produk individual.",
+    "Material Compliance & Testing": "Kesesuaian Material & Pengujian",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Pengujian material pada PVC drop-stitch dua lapis — bukan sertifikasi keamanan produk.",
+    "Residential standards do not certify public or commercial pool installations.": "Standar hunian tidak menyertifikasi instalasi kolam publik atau komersial.",
+    "Compliance documentation": "Dokumentasi kesesuaian"
   },
   "it": {
     "adult supervision required for children at all times": "i bambini devono essere sorvegliati da un adulto in ogni momento",
@@ -2020,7 +2180,17 @@
     "View": "Vedi",
     "Image": "Immagine",
     "from": "da",
-    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m"
+    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m",
+    "Product Conformity": "Conformità del prodotto",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Si applica ai prodotti per piscine residenziali così come fabbricati — non a piscine ad uso pubblico o installazioni commerciali.",
+    "Design References": "Riferimenti di progettazione",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Presi a riferimento nella progettazione dei modelli residenziali — un riferimento di progettazione non è una certificazione di prodotto.",
+    "Factory Certifications": "Certificazioni di stabilimento",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Riguardano lo stabilimento produttivo e i suoi sistemi di gestione — non la conformità del singolo prodotto.",
+    "Material Compliance & Testing": "Conformità materiali e prove",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Prove sui materiali del PVC drop-stitch a doppio strato — non una certificazione di sicurezza del prodotto.",
+    "Residential standards do not certify public or commercial pool installations.": "Le norme residenziali non certificano piscine pubbliche o commerciali.",
+    "Compliance documentation": "Documentazione di conformità"
   },
   "kk": {
     "adult supervision required for children at all times": "балалар үнемі ересектердің қадағалауында болуы тиіс",
@@ -2139,7 +2309,17 @@
     "15 / 20 cm drop stitch": "15 / 20 см Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1,5 × 1,5 × 0,8 м – 3 × 2 × 1 м (7 зауыттық өлшем)",
     "Optional fitted cover, sold separately": "Сәйкес жабын опция ретінде, бөлек сатылады",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "Жылыту құрылғылары, құм сүзгі сорғылары, дезинфекция, ауа көпіршігі массажы"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "Жылыту құрылғылары, құм сүзгі сорғылары, дезинфекция, ауа көпіршігі массажы",
+    "Product Conformity": "Өнімнің сәйкестігі",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Зауыттық күйіндегі тұрғын үй бассейні өнімдеріне қолданылады — жалпы пайдаланылатын бассейнілерге немесе коммерциялық нысандарға қатысты емес.",
+    "Design References": "Жобалау сілтемелері",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Тұрғын үй модельдерін жобалау кезінде ескерілген — жобалау сілтемесі өнім сертификаты емес.",
+    "Factory Certifications": "Зауыт сертификаттары",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Өндірістік нысанды және оның басқару жүйелерін қамтиды — жекелеген өнімнің сәйкестігін емес.",
+    "Material Compliance & Testing": "Материал сәйкестігі және сынақтар",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Екі қабатты drop-stitch PVC материалына сынақтар — өнім қауіпсіздігі сертификаты емес.",
+    "Residential standards do not certify public or commercial pool installations.": "Тұрғын үй стандарттары жалпы немесе коммерциялық бассейндерді сертификаттамайды.",
+    "Compliance documentation": "Сәйкестік құжаттамасы"
   },
   "lt": {
     "adult supervision required for children at all times": "vaikai visada turi būti suaugusiųjų priežiūroje",
@@ -2258,7 +2438,17 @@
     "No image available": "Nuotrauka neprieinama",
     "View": "Žiūrėti",
     "Image": "Nuotrauka",
-    "from": "nuo"
+    "from": "nuo",
+    "Product Conformity": "Produkto atitiktis",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Taikoma gyvenamosios paskirties baseinų produktams tokiems, kokie jie gaminami — ne viešo naudojimo baseinams ar komercinėms instaliacijoms.",
+    "Design References": "Projektinės nuorodos",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Atsižvelgta projektuojant gyvenamosios paskirties modelius — projektinė nuoroda nėra produkto sertifikavimas.",
+    "Factory Certifications": "Gamyklos sertifikatai",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Apima gamybos įmonę ir jos valdymo sistemas — ne atskiro produkto atitiktį.",
+    "Material Compliance & Testing": "Medžiagų atitiktis ir bandymai",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Medžiagų bandymai su dvisluoksniu drop-stitch PVC — ne produkto saugos sertifikavimas.",
+    "Residential standards do not certify public or commercial pool installations.": "Gyvenamosios paskirties standartai necertifikuoja viešųjų ar komercinių baseinų įrenginių.",
+    "Compliance documentation": "Atitikties dokumentacija"
   },
   "lv": {
     "adult supervision required for children at all times": "bērniem vienmēr jāatrodas pieaugušo uzraudzībā",
@@ -2377,7 +2567,17 @@
     "No image available": "Attēls nav pieejams",
     "View": "Skatīt",
     "Image": "Attēls",
-    "from": "no"
+    "from": "no",
+    "Product Conformity": "Produkta atbilstība",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Attiecas uz dzīvojamo baseinu produktiem ražotā veidā — ne publiskai lietošanai paredzētiem baseiniem vai komerciālām instalācijām.",
+    "Design References": "Projektēšanas atsauces",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Izmantotas dzīvojamo modeļu projektēšanā — projektēšanas atsauce nav produkta sertifikācija.",
+    "Factory Certifications": "Rūpnīcas sertifikāti",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Attiecas uz ražotni un tās vadības sistēmām — ne uz atsevišķa produkta atbilstību.",
+    "Material Compliance & Testing": "Materiālu atbilstība un testēšana",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materiālu testi ar divslāņu drop-stitch PVC — nav produkta drošības sertifikācija.",
+    "Residential standards do not certify public or commercial pool installations.": "Dzīvojamo baseinu standarti nesertificē publiskas vai komerciālas baseinu instalācijas.",
+    "Compliance documentation": "Atbilstības dokumentācija"
   },
   "ms": {
     "adult supervision required for children at all times": "kanak-kanak mesti sentiasa berada dalam pengawasan orang dewasa",
@@ -2496,7 +2696,17 @@
     "No image available": "Tiada imej tersedia",
     "View": "Lihat",
     "Image": "Imej",
-    "from": "daripada"
+    "from": "daripada",
+    "Product Conformity": "Pematuhan Produk",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Terpakai bagi produk kolam kediaman seperti yang dikeluarkan — bukan untuk kolam penggunaan awam atau pemasangan komersial.",
+    "Design References": "Rujukan Reka Bentuk",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Dirujuk semasa merekabentuk model kediaman — rujukan reka bentuk bukan pensijilan produk.",
+    "Factory Certifications": "Persijilan Kilang",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Meliputi premis pembuatan dan sistem pengurusannya — bukan pematuhan produk individu.",
+    "Material Compliance & Testing": "Pematuhan Material & Ujian",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Ujian material ke atas PVC drop-stitch dua lapis — bukan pensijilan keselamatan produk.",
+    "Residential standards do not certify public or commercial pool installations.": "Standard kediaman tidak mensijilkan pemasangan kolam awam atau komersial.",
+    "Compliance documentation": "Dokumentasi pematuhan"
   },
   "nl": {
     "adult supervision required for children at all times": "kinderen dienen te allen tijde onder toezicht van een volwassene te staan",
@@ -2615,7 +2825,17 @@
     "View": "Bekijken",
     "Image": "Afbeelding",
     "from": "vanaf",
-    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m"
+    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m",
+    "Product Conformity": "Productconformiteit",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Geldt voor residentiële zwembadproducten zoals geleverd — niet voor zwembaden voor openbaar gebruik of commerciële installaties.",
+    "Design References": "Ontwerpreferenties",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Geraadpleegd bij het ontwerp van de residentiële modellen — een ontwerpreferentie is geen productcertificering.",
+    "Factory Certifications": "Fabriekscertificeringen",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Betreffen de productielocatie en haar managementsystemen — niet de conformiteit van het individuele product.",
+    "Material Compliance & Testing": "Materiaalconformiteit & testen",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materiaaltesten op het dubbellagige drop-stitch PVC — geen productveiligheidscertificering.",
+    "Residential standards do not certify public or commercial pool installations.": "Residentiële normen certificeren geen openbare of commerciële zwembadinstallaties.",
+    "Compliance documentation": "Conformiteitsdocumentatie"
   },
   "no": {
     "adult supervision required for children at all times": "barn skal til enhver tid være under voksen oppsyn",
@@ -2734,7 +2954,17 @@
     "No image available": "Ikke noe bilde tilgjengelig",
     "View": "Vis",
     "Image": "Bilde",
-    "from": "fra"
+    "from": "fra",
+    "Product Conformity": "Produktssamsvar",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Gjelder bassengprodukter for privat bruk som fremstilt — ikke basseng til offentlig bruk eller kommersielle anlegg.",
+    "Design References": "Designreferanser",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Brukt ved design av boligmodellene — en designreferanse er ikke en produktsertifisering.",
+    "Factory Certifications": "Fabrikkssertifiseringer",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Dekker produksjonsanlegget og dets ledelsessystemer — ikke samsvar for det enkelte produktet.",
+    "Material Compliance & Testing": "Materialsamsvar & testing",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materialtester av dobbeltlaget drop-stitch PVC — ikke en produktsikkerhetssertifisering.",
+    "Residential standards do not certify public or commercial pool installations.": "Standarder for privatbasseng sertifiserer ikke offentlige eller kommersielle bassenganlegg.",
+    "Compliance documentation": "Samsvarsdokumentasjon"
   },
   "pl": {
     "adult supervision required for children at all times": "dzieci muszą przez cały czas pozostawać pod nadzorem osoby dorosłej",
@@ -2853,7 +3083,17 @@
     "View": "Zobacz",
     "Image": "Zdjęcie",
     "from": "od",
-    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m"
+    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m",
+    "Product Conformity": "Zgodność produktu",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Dotyczy basenów mieszkalnych w stanie fabrycznym — nie basenów do użytku publicznego ani instalacji komercyjnych.",
+    "Design References": "Referencje projektowe",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Uwzględniane przy projektowaniu modeli mieszkalnych — referencja projektowa nie jest certyfikacją produktu.",
+    "Factory Certifications": "Certyfikaty fabryczne",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Dotyczą zakładu produkcyjnego i jego systemów zarządzania — nie zgodności pojedynczego produktu.",
+    "Material Compliance & Testing": "Zgodność materiału i badania",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Badania materiału dwuwarstwowego PVC drop-stitch — nie certyfikat bezpieczeństwa produktu.",
+    "Residential standards do not certify public or commercial pool installations.": "Normy dla basenów mieszkalnych nie certyfikują publicznych ani komercyjnych instalacji basenowych.",
+    "Compliance documentation": "Dokumentacja zgodności"
   },
   "pt": {
     "adult supervision required for children at all times": "as crianças devem estar sempre sob supervisão de um adulto",
@@ -2972,7 +3212,17 @@
     "View": "Ver",
     "Image": "Imagem",
     "from": "a partir de",
-    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m"
+    "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m": "1,5 × 1,5 × 0,8 m – 3 × 2 × 1 m",
+    "Product Conformity": "Conformidade do produto",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Aplica-se a produtos de piscina residenciais tal como fabricados — não a piscinas de uso público ou instalações comerciais.",
+    "Design References": "Referências de projeto",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Usadas no projeto dos modelos residenciais — uma referência de projeto não é uma certificação de produto.",
+    "Factory Certifications": "Certificações de fábrica",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Abrangem a unidade fabril e seus sistemas de gestão — não a conformidade do produto individual.",
+    "Material Compliance & Testing": "Conformidade de material e ensaios",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Ensaios de material no PVC drop-stitch de dupla camada — não uma certificação de segurança do produto.",
+    "Residential standards do not certify public or commercial pool installations.": "As normas residenciais não certificam piscinas públicas ou comerciais.",
+    "Compliance documentation": "Documentação de conformidade"
   },
   "ro": {
     "adult supervision required for children at all times": "copiii trebuie supravegheați permanent de un adult",
@@ -3091,7 +3341,17 @@
     "No image available": "Nicio imagine disponibilă",
     "View": "Vezi",
     "Image": "Imagine",
-    "from": "de la"
+    "from": "de la",
+    "Product Conformity": "Conformitatea produsului",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Se aplică produselor de piscină rezidențiale așa cum sunt fabricate — nu piscinelor de uz public sau instalațiilor comerciale.",
+    "Design References": "Referințe de proiectare",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Folosite la proiectarea modelelor rezidențiale — o referință de proiectare nu este o certificare a produsului.",
+    "Factory Certifications": "Certificări de fabrică",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Acoperă uzina de producție și sistemele sale de management — nu conformitatea produsului individual.",
+    "Material Compliance & Testing": "Conformitatea materialelor și testare",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Teste de material pe PVC-ul drop-stitch cu dublu strat — nu o certificare a siguranței produsului.",
+    "Residential standards do not certify public or commercial pool installations.": "Standardele rezidențiale nu certifică piscine publice sau comerciale.",
+    "Compliance documentation": "Documentația de conformitate"
   },
   "ru": {
     "adult supervision required for children at all times": "дети должны находиться под присмотром взрослых всё время",
@@ -3210,7 +3470,17 @@
     "15 / 20 cm drop stitch": "15 / 20 см Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1,5 × 1,5 × 0,8 м – 3 × 2 × 1 м (7 заводских размеров)",
     "Optional fitted cover, sold separately": "Подходящая крышка как опция, продаётся отдельно",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "Нагревательные устройства, песочные фильтр-насосы, дезинфекция, воздушно-пузырьковый массаж"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "Нагревательные устройства, песочные фильтр-насосы, дезинфекция, воздушно-пузырьковый массаж",
+    "Product Conformity": "Соответствие продукции",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Действует для бытовых бассейнов в заводской комплектации — не для общественных бассейнов или коммерческих объектов.",
+    "Design References": "Проектные референсы",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Учтены при проектировании бытовых моделей — проектный референс не является сертификацией продукции.",
+    "Factory Certifications": "Сертификаты завода",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Относятся к производственной площадке и её системам менеджмента — не к соответствию конкретного изделия.",
+    "Material Compliance & Testing": "Соответствие материалов и испытания",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Испытания материала двухслойного drop-stitch PVC — не сертификация безопасности продукции.",
+    "Residential standards do not certify public or commercial pool installations.": "Бытовые стандарты не сертифицируют общественные или коммерческие бассейновые объекты.",
+    "Compliance documentation": "Документация о соответствии"
   },
   "sk": {
     "adult supervision required for children at all times": "deti musia byť neustále pod dohľadom dospelého",
@@ -3329,7 +3599,17 @@
     "No image available": "Obrázok nie je k dispozícii",
     "View": "Zobraziť",
     "Image": "Obrázok",
-    "from": "od"
+    "from": "od",
+    "Product Conformity": "Zhoda produktu",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Platí pre rezidenčné bazénové produkty vo výrobnom stave — nie pre verejné bazény ani komerčné inštalácie.",
+    "Design References": "Projektové referencie",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Zohľadnené pri návrhu rezidenčných modelov — projektová referencia nie je certifikáciou produktu.",
+    "Factory Certifications": "Certifikácie fabriky",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Týkajú sa výrobného závodu a jeho systémov riadenia — nie zhody konkrétneho produktu.",
+    "Material Compliance & Testing": "Zhoda materiálu a testovanie",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materiálové testy dvojvrstvového drop-stitch PVC — nie certifikácia bezpečnosti produktu.",
+    "Residential standards do not certify public or commercial pool installations.": "Rezidenčné normy necertifikujú verejné ani komerčné bazénové inštalácie.",
+    "Compliance documentation": "Dokumentácia zhody"
   },
   "sl": {
     "adult supervision required for children at all times": "otroke mora ves čas nadzorovati odrasla oseba",
@@ -3448,7 +3728,17 @@
     "No image available": "Slika ni na voljo",
     "View": "Pogled",
     "Image": "Slika",
-    "from": "od"
+    "from": "od",
+    "Product Conformity": "Skladnost izdelka",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Velja za bazenske izdelke za domačo uporabo v tovarniškem stanju — ne za javne bazene ali komercialne namestitve.",
+    "Design References": "Projektne reference",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Upoštevane pri načrtovanju stanovanjskih modelov — projektna referenca ni certifikat izdelka.",
+    "Factory Certifications": "Tovarniški certifikati",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Zadevajo proizvodni obrat in njegove sisteme upravljanja — ne skladnost posameznega izdelka.",
+    "Material Compliance & Testing": "Skladnost materialov in preskušanje",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Preskusi materiala dvoslojnega drop-stitch PVC-ja — ne certifikat varnosti izdelka.",
+    "Residential standards do not certify public or commercial pool installations.": "Standardi za domače bazene ne certificirajo javnih ali komercialnih bazenskih namestitev.",
+    "Compliance documentation": "Dokumentacija o skladnosti"
   },
   "sr": {
     "adult supervision required for children at all times": "децу је у сваком тренутку потребан надзор одрасле особе",
@@ -3567,7 +3857,17 @@
     "No image available": "Слика није доступна",
     "View": "Преглед",
     "Image": "Слика",
-    "from": "од"
+    "from": "од",
+    "Product Conformity": "Усаглашеност производа",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Односи се на производе базена за кућну употребу у фабричком стању — не на јавне базене или комерцијалне инсталације.",
+    "Design References": "Пројектне референце",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Коришћене при пројектовању стамбених модела — пројектна референца није сертификат производа.",
+    "Factory Certifications": "Фабрички сертификати",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Обухватају производни погон и његове системе управљања — не усаглашеност појединачног производа.",
+    "Material Compliance & Testing": "Усаглашеност материјала и испитивања",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Испитивања материјала двослојног drop-stitch PVC-а — не сертификат безбедности производа.",
+    "Residential standards do not certify public or commercial pool installations.": "Стамбени стандарди не сертификују јавне или комерцијалне базене.",
+    "Compliance documentation": "Документација о усаглашености"
   },
   "sv": {
     "adult supervision required for children at all times": "barn ska alltid vara under vuxen uppsyn",
@@ -3686,7 +3986,17 @@
     "No image available": "Ingen bild tillgänglig",
     "View": "Visa",
     "Image": "Bild",
-    "from": "från"
+    "from": "från",
+    "Product Conformity": "Produktöverensstämmelse",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Gäller privatpoolprodukter som tillverkade — inte pooler för offentlig användning eller kommersiella anläggningar.",
+    "Design References": "Designreferenser",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Använts vid design av bostadsmodellerna — en designreferens är inte en produktcertifiering.",
+    "Factory Certifications": "Fabrikscertifieringar",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Täcker tillverkningsanläggningen och dess ledningssystem — inte det enskilda produktens överensstämmelse.",
+    "Material Compliance & Testing": "Materialöverensstämmelse & testning",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Materialtester av det dubbellagiga drop-stitch PVC — inte en produktsäkerhetscertifiering.",
+    "Residential standards do not certify public or commercial pool installations.": "Standarder för privatpooler certifierar inte offentliga eller kommersiella poolanläggningar.",
+    "Compliance documentation": "Överensstämmelsedokumentation"
   },
   "th": {
     "adult supervision required for children at all times": "เด็กต้องอยู่ภายใต้การดูแลของผู้ใหญ่ตลอดเวลา",
@@ -3805,7 +4115,17 @@
     "15 / 20 cm drop stitch": "15 / 20 ซม. Drop Stitch",
     "1.5 × 1.5 × 0.8 m – 3 × 2 × 1 m (7 factory sizes)": "1.5 × 1.5 × 0.8 ม. – 3 × 2 × 1 ม. (7 ขนาดจากโรงงาน)",
     "Optional fitted cover, sold separately": "ฝาครอบแบบพอดีเป็นออปชัน จำหน่ายแยกต่างหาก",
-    "Heating units, sand filter pumps, disinfection, air bubble massage": "ชุดทำความร้อน, ปั๊มกรองทราย, การฆ่าเชื้อ, การนวดฟองอากาศ"
+    "Heating units, sand filter pumps, disinfection, air bubble massage": "ชุดทำความร้อน, ปั๊มกรองทราย, การฆ่าเชื้อ, การนวดฟองอากาศ",
+    "Product Conformity": "ความสอดคล้องของผลิตภัณฑ์",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "ใช้กับผลิตภัณฑ์สระว่ายน้ำสำหรับที่อยู่อาศัยตามสภาพที่ผลิต — ไม่รวมถึงสระสำหรับใช้สาธารณะหรือการติดตั้งเชิงพาณิชย์",
+    "Design References": "ข้อมูลอ้างอิงการออกแบบ",
+    "Referenced during design of residential models — a design reference is not a product certification.": "ใช้อ้างอิงระหว่างการออกแบบรุ่นสำหรับที่อยู่อาศัย — ข้อมูลอ้างอิงการออกแบบไม่ใช่การรับรองผลิตภัณฑ์",
+    "Factory Certifications": "การรับรองของโรงงาน",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "ครอบคลุมสถานประกอบการผลิตและระบบการบริหารจัดการ — ไม่ใช่ความสอดคล้องของผลิตภัณฑ์แต่ละชิ้น",
+    "Material Compliance & Testing": "ความสอดคล้องของวัสดุและการทดสอบ",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "การทดสอบวัสดุบน PVC drop-stitch แบบสองชั้น — ไม่ใช่การรับรองความปลอดภัยของผลิตภัณฑ์",
+    "Residential standards do not certify public or commercial pool installations.": "มาตรฐานสำหรับที่อยู่อาศัยไม่รับรองการติดตั้งสระว่ายน้ำสาธารณะหรือเชิงพาณิชย์",
+    "Compliance documentation": "เอกสารความสอดคล้อง"
   },
   "tl": {
     "adult supervision required for children at all times": "kailangang nasa ilalim ng patuloy na pangangasiwa ng matanda ang mga bata sa lahat ng oras",
@@ -3924,7 +4244,17 @@
     "No image available": "Walang available na larawan",
     "View": "Tingnan",
     "Image": "Larawan",
-    "from": "mula sa"
+    "from": "mula sa",
+    "Product Conformity": "Pagsunod ng Produkto",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Naaangkop sa mga produkto ng pool para sa paninirahan tulad ng ginawa — hindi para sa mga pampublikong pool o komersyal na instalasyon.",
+    "Design References": "Mga Sanggunian sa Disenyo",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Ginamit na gabay sa pagdidisenyo ng mga modelong paninirahan — ang sanggunian sa disenyo ay hindi sertipikasyon ng produkto.",
+    "Factory Certifications": "Mga Sertipikasyon ng Pabrika",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Sakop ang pasilidad ng paggawa at mga sistema ng pamamahala nito — hindi ang pagsunod ng indibidwal na produkto.",
+    "Material Compliance & Testing": "Pagsunod ng Materyal at Pagsusuri",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Mga pagsusuri ng materyal sa dalawang-layer na drop-stitch PVC — hindi sertipikasyon ng kaligtasan ng produkto.",
+    "Residential standards do not certify public or commercial pool installations.": "Hindi sertipikado ng mga pamantayan sa paninirahan ang mga pampubliko o komersyal na instalasyon ng pool.",
+    "Compliance documentation": "Dokumentasyon ng pagsunod"
   },
   "tr": {
     "adult supervision required for children at all times": "çocuklar her zaman yetişkin gözetimi altında olmalıdır",
@@ -4043,7 +4373,17 @@
     "No image available": "Görsel mevcut değil",
     "View": "Görüntüle",
     "Image": "Görsel",
-    "from": "itibaren"
+    "from": "itibaren",
+    "Product Conformity": "Ürün Uygunluğu",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Fabrika çıkışı konut tipi havuz ürünleri için geçerlidir — kamu kullanımına açık havuzlar veya ticari tesisler için değildir.",
+    "Design References": "Tasarım Referansları",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Konut modellerinin tasarımında referans alınmıştır — bir tasarım referansı ürün sertifikası değildir.",
+    "Factory Certifications": "Fabrika Sertifikaları",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Üretim tesisini ve yönetim sistemlerini kapsar — tek tek ürünlerin uygunluğunu değil.",
+    "Material Compliance & Testing": "Malzeme Uygunluğu ve Testler",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Çift katmanlı drop-stitch PVC üzerinde malzeme testleri — bir ürün güvenlik sertifikası değildir.",
+    "Residential standards do not certify public or commercial pool installations.": "Konut standartları, kamu veya ticari havuz tesislerini sertifikalandırmaz.",
+    "Compliance documentation": "Uygunluk dokümantasyonu"
   },
   "uk": {
     "adult supervision required for children at all times": "діти мають бути під постійним наглядом дорослого",
@@ -4162,7 +4502,17 @@
     "No image available": "Зображення недоступне",
     "View": "Перегляд",
     "Image": "Зображення",
-    "from": "від"
+    "from": "від",
+    "Product Conformity": "Відповідність продукції",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Діє для побутових басейнів у заводській комплектації — не для громадських басейнів або комерційних об’єктів.",
+    "Design References": "Проектні референси",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Враховані під час проектування побутових моделей — проектний референс не є сертифікацією продукції.",
+    "Factory Certifications": "Сертифікати заводу",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Стосуються виробничого майданчика та його систем менеджменту — не відповідності окремого виробу.",
+    "Material Compliance & Testing": "Відповідність матеріалів і випробування",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Випробування матеріалу двошарового drop-stitch PVC — не сертифікація безпеки продукції.",
+    "Residential standards do not certify public or commercial pool installations.": "Побутові стандарти не сертифікують громадські або комерційні басейнові об’єкти.",
+    "Compliance documentation": "Документація щодо відповідності"
   },
   "uz": {
     "adult supervision required for children at all times": "bolalar har doim kattalar nazorati ostida boʻlishi kerak",
@@ -4281,6 +4631,16 @@
     "No image available": "Rasm mavjud emas",
     "View": "Koʻrinish",
     "Image": "Rasm",
-    "from": "dan"
+    "from": "dan",
+    "Product Conformity": "Mahsulot muvofiqligi",
+    "Applies to residential pool products as manufactured — not public-use pools or commercial installations.": "Zavod holatidagi turar-joy hovuz mahsulotlariga taalluqli — jamoat foydalanishidagi hovuzlar yoki tijorat inshootlari uchun emas.",
+    "Design References": "Dizayn havolalari",
+    "Referenced during design of residential models — a design reference is not a product certification.": "Turar-joy modellarini loyihalashda havola qilingan — dizayn havolasi mahsulot sertifikati emas.",
+    "Factory Certifications": "Zavod sertifikatlari",
+    "Covers the manufacturing facility and its management systems — not individual product conformity.": "Ishlab chiqarish korxonasini va uning boshqaruv tizimlarini qamrab oladi — alohida mahsulot muvofiqligini emas.",
+    "Material Compliance & Testing": "Material muvofiqligi va sinovlar",
+    "Material tests on the double-layer drop-stitch PVC — not a product safety certification.": "Iki qatlamli drop-stitch PVC ustida material sinovlari — mahsulot xavfsizligi sertifikati emas.",
+    "Residential standards do not certify public or commercial pool installations.": "Turar-joy standartlari jamoat yoki tijorat hovuz inshootlarini sertifikatlamaydi.",
+    "Compliance documentation": "Muvofiqlik hujjatlari"
   }
 }

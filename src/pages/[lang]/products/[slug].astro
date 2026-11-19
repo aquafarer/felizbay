@@ -21,6 +21,7 @@ import type { MetaData } from '~/types';
 import { products as productRecords } from '~/data/products';
 import { poolSeries, poolAccessories, PRICE_BASIS_NOTE } from '~/data/pool-catalog';
 import { getProductCompliance } from '~/data/product-compliance';
+import { COMPLIANCE_SCOPE_NOTES, COMPLIANCE_DOCS_LABEL } from '~/data/product-compliance';
 import { localizeProduct } from '~/utils/product-i18n';
 import { localizeProductData } from '~/lib/product-l10n';
 import { localizeProductDetail } from '~/lib/product-content-l10n';
@@ -868,8 +869,10 @@ const viewLabel = trStr('View', lang || defaultLang) ?? 'View';
   {/* Module 10 — Full Specifications (detail V2) */}
   {isDetailV2 && <SpecTable title={detailUi['product.specTitle']} groups={specGroups} />}
 
-  {/* Certifications & Compliance */}
-  <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+  {/* Certifications & Compliance — claim-type separated (competitor review 2026-11-19):
+      product conformity / design references / factory certs / material & testing.
+      Never blend claim types in one list; wording mirrors /compliance/. */}
+  <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="compliance">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
       <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">
         {t('product.compliance') || 'Compliance'}
@@ -877,14 +880,63 @@ const viewLabel = trStr('View', lang || defaultLang) ?? 'View';
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">
         {t('product.certifications') || 'Certifications & Compliance'}
       </h2>
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-green-600 text-lg">&#10003;</span>
-            <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('product.certs') || 'Certifications'}</h3>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">
+              {trStr('Product Conformity', lang || defaultLang) ?? 'Product Conformity'}
+            </h3>
           </div>
           <div class="space-y-2">
-            {productCompliance.certs.map((c: any) => (
+            {productCompliance.productConformity.map((c: any) => (
+              <div class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                <div>
+                  <span class="text-sm font-medium text-gray-900 dark:text-slate-200">{c.label}</span>
+                  {c.standard && (
+                    <span class="text-xs text-gray-500 dark:text-slate-400">
+                      {' '}
+                      ({trStr(c.standard, lang || defaultLang) ?? c.standard})
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p class="mt-3 text-xs text-gray-500 dark:text-slate-400 leading-snug">
+            {trStr(COMPLIANCE_SCOPE_NOTES.conformity, lang || defaultLang) ?? COMPLIANCE_SCOPE_NOTES.conformity}
+          </p>
+        </div>
+        <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-sky-600 dark:text-sky-400 text-lg">&#9878;</span>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">
+              {trStr('Design References', lang || defaultLang) ?? 'Design References'}
+            </h3>
+          </div>
+          <div class="space-y-2">
+            {productCompliance.designReferences.map((d: string) => (
+              <div class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
+                <span class="text-sm text-gray-600 dark:text-slate-400">{trStr(d, lang || defaultLang) ?? d}</span>
+              </div>
+            ))}
+          </div>
+          <p class="mt-3 text-xs text-gray-500 dark:text-slate-400 leading-snug">
+            {trStr(COMPLIANCE_SCOPE_NOTES.designReference, lang || defaultLang) ??
+              COMPLIANCE_SCOPE_NOTES.designReference}
+          </p>
+        </div>
+        <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-sky-600 dark:text-sky-400 text-lg">&#127970;</span>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">
+              {trStr('Factory Certifications', lang || defaultLang) ?? 'Factory Certifications'}
+            </h3>
+          </div>
+          <div class="space-y-2">
+            {productCompliance.factoryCerts.map((c: any) => (
               <div class="flex items-start gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
                 <div>
@@ -904,39 +956,29 @@ const viewLabel = trStr('View', lang || defaultLang) ?? 'View';
               </div>
             ))}
           </div>
+          <p class="mt-3 text-xs text-gray-500 dark:text-slate-400 leading-snug">
+            {trStr(COMPLIANCE_SCOPE_NOTES.factory, lang || defaultLang) ?? COMPLIANCE_SCOPE_NOTES.factory}
+          </p>
         </div>
         <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-green-600 text-lg">&#10003;</span>
             <h3 class="font-semibold text-gray-900 dark:text-slate-100">
-              {t('product.materialCompliance') || 'Material Compliance'}
+              {trStr('Material Compliance & Testing', lang || defaultLang) ?? 'Material Compliance & Testing'}
             </h3>
           </div>
           <div class="space-y-2">
-            {productCompliance.materialCompliance.map((m: string) => (
+            {[...productCompliance.materialCompliance, ...productCompliance.testStandards].map((m: string) => (
               <div class="flex items-start gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
                 <span class="text-sm text-gray-600 dark:text-slate-400">{trStr(m, lang || defaultLang) ?? m}</span>
               </div>
             ))}
           </div>
-        </div>
-        <div class="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-green-600 text-lg">&#10003;</span>
-            <h3 class="font-semibold text-gray-900 dark:text-slate-100">
-              {t('product.testingAndWarranty') || 'Testing & Warranty'}
-            </h3>
-          </div>
-          <div class="space-y-2 mb-4">
-            {productCompliance.testStandards.map((std: string) => (
-              <div class="flex items-start gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />
-                <span class="text-sm text-gray-600 dark:text-slate-400">{trStr(std, lang || defaultLang) ?? std}</span>
-              </div>
-            ))}
-          </div>
-          <div class="pt-3 border-t border-gray-200 dark:border-slate-700">
+          <p class="mt-3 text-xs text-gray-500 dark:text-slate-400 leading-snug">
+            {trStr(COMPLIANCE_SCOPE_NOTES.material, lang || defaultLang) ?? COMPLIANCE_SCOPE_NOTES.material}
+          </p>
+          <div class="pt-3 mt-3 border-t border-gray-200 dark:border-slate-700">
             <span class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">
               {t('product.warranty') || 'Warranty'}
             </span>
@@ -948,6 +990,17 @@ const viewLabel = trStr('View', lang || defaultLang) ?? 'View';
             </p>
           </div>
         </div>
+      </div>
+      <div class="mt-6 rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between">
+        <p class="text-sm text-amber-900 dark:text-amber-200 leading-snug">
+          {trStr(COMPLIANCE_SCOPE_NOTES.boundary, lang || defaultLang) ?? COMPLIANCE_SCOPE_NOTES.boundary}
+        </p>
+        <a
+          href={localizeHref('/compliance/', lang || defaultLang)}
+          class="text-sm font-semibold text-amber-900 dark:text-amber-200 hover:underline whitespace-nowrap shrink-0"
+        >
+          {trStr(COMPLIANCE_DOCS_LABEL, lang || defaultLang) ?? COMPLIANCE_DOCS_LABEL} &rarr;
+        </a>
       </div>
     </div>
   </section>

@@ -151,7 +151,7 @@ export const guides: GuideRecord[] = [
         a: 'With filtration and correct chemical levels, one fill stays swimmable for 3–6 weeks. Most owners budget for a full drain-and-refill about once a month of heavy use, plus small top-ups for splash-out and evaporation.',
       },
     ],
-    relatedProducts: ['round-blue-drop-stitch-pool', 'rectangular-drop-stitch-pool'],
+    relatedProducts: ['round-blue-drop-stitch-pool', 'round-grey-drop-stitch-pool', 'rectangular-drop-stitch-pool'],
     relatedGuides: ['inflatable-pool-maintenance'],
     difficulty: 'beginner',
     waterType: ['freshwater'],

@@ -68,9 +68,15 @@ const CHECKS = [
   },
   {
     path: '/products/round-blue-drop-stitch-pool/',
-    markers: ['Fixed-size retail set', 'cost to run'],
-    notMarkers: ['fitg-size', 'aggregateRating', '10.0 m'],
-    desc: 'retail PDP: fixed-set spec + total-cost FAQ present, no factory size checker, no fake aggregate rating',
+    markers: [
+      'Fixed-size retail set',
+      'cost to run',
+      'Product Conformity',
+      'Design References',
+      'design reference is not a product certification',
+    ],
+    notMarkers: ['fitg-size', 'aggregateRating', '10.0 m', '10 / 15 cm drop stitch'],
+    desc: 'retail PDP: fixed-set spec + total-cost FAQ + claim-separated compliance module present, no factory size checker, no fake aggregate rating, no unconfirmed wall-thickness range',
   },
   {
     path: '/de/products/round-blue-drop-stitch-pool/',
@@ -79,9 +85,14 @@ const CHECKS = [
   },
   {
     path: '/products/round-grey-drop-stitch-pool/',
-    markers: ['Fixed-size retail set'],
-    notMarkers: ['fitg-size', 'aggregateRating'],
-    desc: 'grey retail PDP: fixed-set spec present, no size checker, no fake rating',
+    markers: ['Fixed-size retail set', 'Product Conformity', 'Factory Certifications'],
+    notMarkers: ['fitg-size', 'aggregateRating', '10 / 15 cm drop stitch'],
+    desc: 'grey retail PDP: fixed-set spec + claim-separated compliance module present, no size checker, no fake rating, no unconfirmed wall-thickness range',
+  },
+  {
+    path: '/de/products/round-grey-drop-stitch-pool/',
+    markers: ['Produktkonformität', 'Compliance-Dokumentation'],
+    desc: 'localized grey PDP: claim-separated compliance module rendered in German (batch-C l10n regression)',
   },
   {
     path: '/products/rectangular-drop-stitch-pool/',
