@@ -2425,6 +2425,26 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 
 **实现要点（防回归）**：合规模块 4 卡 + 边界注 + 文档链接写入 prod-smoke——EN 蓝/灰 PDP +marker `Product Conformity`/`Design References`/`design reference is not a product certification`/`Factory Certifications`，−notMarker `10 / 15 cm drop stitch`；新增 `/de/products/round-grey-drop-stitch-pool/` 检查 +marker `Produktkonformität`/`Compliance-Dokumentation`（l10n 回归）。新增 10 条声明分类 EN 字符串（4 卡头 + 4 范围注 + 边界注 + 文档链接文字）× 36 语言精翻并入 `product-strings.l10n.json`（batch C，`round9/merge-lang-c.mjs`，TERM_RULES 校验 PVC/drop-stitch 保留；词典 36×127 键）；[lang] PDP 经 trStr 渲染，root PDP EN 硬编码同构。合规模块卡片结构两个模板必须同步维护（与 FOB_NOTE 同一惯例）。
 
+### 19.25 新产品接入：Premium Drop Stitch Dog Pool（dogpool 素材）(2026-11-19)
+
+素材源：`D:\Github\泳池产品介绍\dogpool\`（`case.txt` 营销文案 + `dogpool_felizbay.png` 产品图）。业务给定规格：Ø 3.0 m × H 0.5 m、壁厚 10 cm（specified thickness）、Drop Stitch 高压结构、Premium 定位、别墅花园/庭院养狗家庭、宠物酒店与专业宠物设施、B2B 私标/宠物品牌/批发商。**无价格/无 SKU/无 PSI/无配件清单**——PDP 为询价模式（不编造价格，不进 pool-catalog FOB 体系，PSI 不写数字只写 high-pressure，配件项写"confirm at quotation"）。
+
+接线面（6 个 SSOT 全接）：
+
+| 接入点                                                                        | 处置                                                                                                                                                                                                                                                                        |
+| ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `public/images/pools/dog-pool-1.webp`                                         | 源 PNG 1536×1024 → WebP q82（262 KB，P6 规范；宽<1600 不放大）；image-dimensions 注册表随构建重生成并提交                                                                                                                                                                   |
+| `src/content/products/drop-stitch-dog-pool.mdx`                               | 新 PDP（slug `drop-stitch-dog-pool`）：8 条 specs（Shape/Wall material/Diameter/Height/Wall thickness/Construction/Application/Recommended setting）、4 tags、无 price 字段；正文 5 节（产品定位/Why Drop Stitch for a Dog Pool/Where It Fits 5 场景/夏季照看/私标批发）    |
+| `src/data/products.ts` 新 ProductRecord                                       | definition/problem/howItWorks/audience/ai_specs/ai_comparison/7 条 ai_faq（尺寸/刚性/场地/宠物酒店/安全/收纳/私标）；safety_rules 含"supervise dogs around water"（宠物安全口径）                                                                                           |
+| `product-business-data.ts` + `product-page-content.ts`                        | business 条目（pet brands/distributors/retailers 切入点）；V2 13-module 模板条目（`DOG_POOL_SETUP_STEPS` 6 步、`DOG_POOL_FIT_NOTICE` 载重注、`WHOLESALE_SUPPORT_CARDS`、fixedSetSize `Ø 3.0 × 0.5 m`）——无 pool-catalog series，FitGuide 模块自动跳过（单尺寸产品预期行为） |
+| `product-texts.ts` ×8 语言（fr/de/es/pt/it/ru/pl/ar）                         | name+desc 精翻（Drop Stitch 术语保留）；其余语言 EN 回退（机制既有）                                                                                                                                                                                                        |
+| `src/data/site/i18n-config.json` collectionsNote 37 语言 5→6 product families | 行级脚本替换（`round10/bump-collections-note.mjs`，37/37 断言）；`_gen-uiall.cjs` 从 `public/data/i18n-config.json` 重新生成 ui/*.ts（构建自动）                                                                                                                            |
+| `[lang]/products/index.astro`                                                 | filterTags 新条目（shape-round/use-leisure/space-medium/space-large）；计数行改动态 `{retailCards.length} · {businessCards.length}` + 措辞 "quoted FOB or on request"（原硬编码 "3 retail sets · 2 wholesale collections quoted FOB" 已过时）                               |
+| `public/llms.txt`                                                             | ## Products 段新增 dog-pool 条目（手维护清单，AGENTS 铁律）；llms-full.txt/llms-index/sitemap/search-index/ai-corpus 均自动再生成                                                                                                                                           |
+| prod-smoke                                                                    | 新增 EN PDP 检查（+marker `Premium Drop Stitch Inflatable Dog Pool`/`Ø 3.0 m`/`10 cm specified thickness`/`Product Conformity`/`private-label customization options`，−notMarker `fitg-size`/`aggregateRating`/`"sku"`/`"@type":"Offer"`/`$`）+ `/de/` PDP 合规模块德语检查 |
+
+**边界**：不进 `/products/specs/` FOB 表、不进 compare、不进 merchant feed（无价格门禁自然排除）；relatedProducts 靠 shared `drop-stitch` tag 打分自动关联。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)

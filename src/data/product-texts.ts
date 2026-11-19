@@ -41,6 +41,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Piscine de trempage Drop Stitch ronde',
       desc: 'Piscine de trempage Drop Stitch ronde compacte avec sièges intégrés et fond isolant de 5 mm — se raccorde à un chauffage externe (non inclus).',
     },
+    'drop-stitch-dog-pool': {
+      name: 'Piscine pour chiens gonflable Drop Stitch premium',
+      desc: 'Piscine pour chiens gonflable Drop Stitch premium — bassin rond de Ø 3,0 m avec une paroi ferme de 10 cm pour jardins de villa et arrière-cours privés.',
+    },
   },
   de: {
     'rectangular-drop-stitch-pool': {
@@ -62,6 +66,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'hot-tub-round': {
       name: 'Rundes Drop-Stitch-Tauchbecken',
       desc: 'Kompaktes rundes Drop-Stitch-Tauchbecken mit integrierten Sitzen und 5 mm isoliertem Boden — Anschluss an ein externes Heizgerät (nicht im Lieferumfang).',
+    },
+    'drop-stitch-dog-pool': {
+      name: 'Premium Drop Stitch Aufblas-Hundepool',
+      desc: 'Premium Drop Stitch Aufblas-Hundepool — rundes Becken mit Ø 3,0 m und fester 10-cm-Wand für Villengärten und private Gärten.',
     },
   },
   es: {
@@ -85,6 +93,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Piscina de inmersión Drop Stitch redonda',
       desc: 'Piscina de inmersión Drop Stitch redonda compacta con asientos integrados y fondo aislado de 5 mm: se conecta a un calentador externo (no incluido).',
     },
+    'drop-stitch-dog-pool': {
+      name: 'Piscina para perros hinchable Drop Stitch premium',
+      desc: 'Piscina para perros hinchable Drop Stitch premium: baño redondo de Ø 3,0 m con una pared firme de 10 cm para jardines de villa y patios privados.',
+    },
   },
   pt: {
     'rectangular-drop-stitch-pool': {
@@ -106,6 +118,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'hot-tub-round': {
       name: 'Piscina de imersão Drop Stitch redonda',
       desc: 'Piscina de imersão Drop Stitch redonda compacta com assentos integrados e fundo isolado de 5 mm — liga-se a um aquecedor externo (não incluído).',
+    },
+    'drop-stitch-dog-pool': {
+      name: 'Piscina para cães insuflável Drop Stitch premium',
+      desc: 'Piscina para cães insuflável Drop Stitch premium — tanque redondo de Ø 3,0 m com parede firme de 10 cm para jardins de moradia e quintais privados.',
     },
   },
   it: {
@@ -129,6 +145,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Piscina di immersione Drop Stitch rotonda',
       desc: 'Piscina di immersione Drop Stitch rotonda compatta con sedili integrati e fondo isolato da 5 mm — si collega a un riscaldatore esterno (non incluso).',
     },
+    'drop-stitch-dog-pool': {
+      name: 'Piscina per cani gonfiabile Drop Stitch premium',
+      desc: 'Piscina per cani gonfiabile Drop Stitch premium — vasca rotonda da Ø 3,0 m con parete solida da 10 cm per giardini di ville e cortili privati.',
+    },
   },
   ru: {
     'rectangular-drop-stitch-pool': {
@@ -150,6 +170,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'hot-tub-round': {
       name: 'Круглая купель Drop Stitch',
       desc: 'Компактная круглая купель Drop Stitch со встроенными сиденьями и утеплённым дном 5 мм — подключается к внешнему нагревателю (нагреватель не входит в комплект).',
+    },
+    'drop-stitch-dog-pool': {
+      name: 'Премиальный надувной бассейн для собак Drop Stitch',
+      desc: 'Премиальный надувной бассейн для собак Drop Stitch — круглая чаша Ø 3,0 м с прочной стенкой 10 см для садов частных вилл и задних дворов.',
     },
   },
   pl: {
@@ -173,6 +197,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Okrągła wanna do zanurzania Drop Stitch',
       desc: 'Kompaktowa okrągła wanna do zanurzania Drop Stitch z wbudowanymi siedziskami i izolowanym dnem 5 mm — podłącza się do zewnętrznego podgrzewacza (nie w zestawie).',
     },
+    'drop-stitch-dog-pool': {
+      name: 'Premium dmuchany basen dla psów Drop Stitch',
+      desc: 'Premium dmuchany basen dla psów Drop Stitch — okrągły basen Ø 3,0 m ze sztywną ścianą 10 cm do ogrodów willowych i prywatnych podwórek.',
+    },
   },
   ar: {
     'rectangular-drop-stitch-pool': {
@@ -194,6 +222,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'hot-tub-round': {
       name: 'حوض نقع دائري Drop Stitch',
       desc: 'حوض نقع دائري مدمج Drop Stitch مع مقاعد مدمجة وقاع معزول بسماكة 5 مم — يتصل بمدفأة خارجية (غير مضمّنة).',
+    },
+    'drop-stitch-dog-pool': {
+      name: 'مسبح كلاب قابل للنفخ Drop Stitch فاخر',
+      desc: 'مسبح كلاب قابل للنفخ Drop Stitch فاخر — حوض دائري بقطر 3.0 م بجدار صلب بسماكة 10 سم لحدائق الفيلات والفناء الخلفية الخاصة.',
     },
   },
 };

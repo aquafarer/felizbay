@@ -100,6 +100,23 @@ const CHECKS = [
     desc: 'wholesale PDP keeps FitGuide size checker + per-variant FOB offers + unified MOQ/commercial-sample wording (Perplexity review 2026-11-15)',
   },
   {
+    path: '/products/drop-stitch-dog-pool/',
+    markers: [
+      'Premium Drop Stitch Inflatable Dog Pool',
+      'Ø 3.0 m',
+      '10 cm specified thickness',
+      'Product Conformity',
+      'private-label customization options',
+    ],
+    notMarkers: ['fitg-size', 'aggregateRating', '"sku"', '"@type":"Offer"'],
+    desc: 'dog pool PDP (new product 2026-11-19): inquiry-mode premium pet SKU — case.txt specs (Ø 3.0 m, 10 cm wall) rendered, claim-separated compliance module, private-label CTA, no retail SKU/Offer price, no factory size checker (accessory add-on prices excluded from price check)',
+  },
+  {
+    path: '/de/products/drop-stitch-dog-pool/',
+    markers: ['Produktkonformität', 'Compliance-Dokumentation'],
+    desc: 'localized dog-pool PDP: claim-separated compliance module rendered in German',
+  },
+  {
     path: '/products/compare/',
     markers: [
       'Compare Drop Stitch Inflatable Pools',

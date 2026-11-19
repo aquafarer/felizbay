@@ -58,4 +58,14 @@ export const productBusinessData: Record<string, BusinessProductInfo> = {
       'The lowest entry price in the wellness line with the smallest shipping footprint. Popular with glamping operators and fitness studios that add recovery baths without construction.',
     lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
   },
+  'drop-stitch-dog-pool': {
+    bestFor: ['families', 'retailers', 'oem'],
+    recommendation:
+      'A specialty premium SKU for pet brands, distributors, and retailers expanding beyond traditional pet accessories. The firm 10 cm drop stitch wall and Ø 3.0 m basin justify a high-ticket position, and private-label customization lets partners launch their own pet swimming pool collection.',
+    useCase: 'Villa-garden dog water play, pet summer cooling, multi-pet households, pet hotel water-play amenity, private-label pet collections',
+    operatingCost: 'Low — fresh water from a garden hose; no tools or permanent installation',
+    whyBusinessesChooseIt:
+      'A differentiated, high-margin pet product that ships flat and sets up in minutes. Pet hotels use it as an outdoor water-play amenity, and custom branding plus retail-ready packaging support private-label programs.',
+    lifespan: 'Seasons of reliable use with basic care — actual lifespan depends on climate, usage, and storage.',
+  },
 };

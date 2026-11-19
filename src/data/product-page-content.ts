@@ -225,6 +225,40 @@ const HOT_TUB_FIT_NOTICE = {
   text: 'A filled soaking pool weighs several hundred kilograms. Only install on a structure professionally confirmed to carry the full water load, and check local requirements before purchase.',
 };
 
+/** Dog-pool setup steps (pet water play — supervision-first workflow) */
+const DOG_POOL_SETUP_STEPS: SetupStep[] = [
+  {
+    title: 'Review the installation requirements',
+    description: 'Read the manual first: ground conditions, recommended operating pressure, and the fill limits for your model.',
+  },
+  {
+    title: 'Prepare the setup area',
+    description: 'Choose a flat, firm, level surface free of sharp objects, with room for the full Ø 3.0 m footprint and drainage away from the pool.',
+  },
+  {
+    title: 'Inflate with an electric air pump',
+    description: 'Inflate the 10 cm drop stitch wall until it is firm and structured. Stop at the recommended pressure stated in the manual.',
+  },
+  {
+    title: 'Fill to a suitable level for the dogs',
+    description: 'Fill with a garden hose to a water depth suited to the dogs\u2019 size, and let the water warm up before the first swim.',
+  },
+  {
+    title: 'Supervise water play',
+    description: 'Always supervise dogs around water. In hot weather, also provide fresh drinking water and shade next to the pool.',
+  },
+  {
+    title: 'Drain, dry, and store at season end',
+    description: 'Drain the pool, rinse off dirt and dog hair, let it dry fully, then deflate, fold, and pack it away until the next season.',
+  },
+];
+
+/** Weight-planning notice for the dog pool */
+const DOG_POOL_FIT_NOTICE = {
+  title: 'Planning an elevated deck installation?',
+  text: 'A filled pool of this size holds on the order of a tonne or more of water depending on the fill level. Only install on ground or a structure confirmed to carry the full water load, and check local requirements before purchase.',
+};
+
 export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
   'rectangular-drop-stitch-pool': {
     assurance: [
@@ -483,5 +517,56 @@ export const PRODUCT_PAGE_DETAILS: Record<string, ProductPageDetail> = {
     setupSteps: HOT_TUB_SETUP_STEPS,
     setupLinks: SETUP_LINKS_BASE,
     supportCards: SUPPORT_CARDS_BASE,
+  },
+
+  'drop-stitch-dog-pool': {
+    assurance: [
+      {
+        titleKey: 'product.assuranceIncluded',
+        text: 'Drop stitch dog pool body — Ø 3.0 m round basin with a firm 10 cm drop stitch wall. Confirm the accessory set for your order version at quotation.',
+      },
+      {
+        titleKey: 'product.assuranceDelivery',
+        text: 'Orders ship from the factory; availability and trade terms are confirmed per inquiry before you commit.',
+      },
+      {
+        titleKey: 'product.assuranceWarranty',
+        text: '2-year manufacturer warranty covering material and workmanship defects. Full terms are published in our Returns & Warranty policy.',
+      },
+      {
+        titleKey: 'product.assuranceSupport',
+        text: 'Setup guidance, care instructions, and direct support via info@felizbay.com.',
+      },
+    ],
+    fitIntro:
+      'This dog pool is intended for outdoor pet water play on flat, level ground in villa gardens and private backyards. Before ordering, review the footprint, the setup surface, and the supervision plan below.',
+    fitRows: [
+      {
+        recommended: 'You want a private water-play spot for your dogs at home',
+        check: 'A flat, level area with room for the full Ø 3.0 m footprint',
+      },
+      {
+        recommended: 'You have larger dog breeds or a multi-pet household',
+        check: 'Enough space for the dogs to enter, splash, and exit comfortably',
+      },
+      {
+        recommended: 'You want a firm drop stitch wall that looks at home in a villa garden',
+        check: 'A dry storage spot for the deflated pool in the off-season',
+      },
+      {
+        recommended: 'You run a pet hotel or a professional pet facility',
+        check: 'A supervision plan for water play and the local requirements for pet facilities',
+      },
+    ],
+    fitNotice: DOG_POOL_FIT_NOTICE,
+    fixedSetSize: 'Ø 3.0 × 0.5 m (10 cm drop stitch wall)',
+    packageIncluded: ['Drop stitch dog pool body (Ø 3.0 × 0.5 m, 10 cm wall)'],
+    packageRequired: [
+      'A flat, level setup area free of sharp objects',
+      'An electric air pump for inflation — confirm the accessories included in your order version at quotation',
+    ],
+    setupSteps: DOG_POOL_SETUP_STEPS,
+    setupLinks: SETUP_LINKS_BASE,
+    supportCards: WHOLESALE_SUPPORT_CARDS,
   },
 };

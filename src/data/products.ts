@@ -401,4 +401,74 @@ export const products: ProductRecord[] = [
       },
     ],
   },
+  {
+    id: 'drop-stitch-dog-pool',
+    name: 'Premium Drop Stitch Inflatable Dog Pool',
+    category: 'POOL',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'beginner',
+    environment: ['villa garden', 'private backyard', 'outdoor pet recreation area', 'pet hotel'],
+    water_condition: ['fresh water'],
+    safety_level: 'medium',
+    use_case: ['dog water play', 'pet summer cooling', 'outdoor pet recreation', 'multi-pet households'],
+    safety_rules: [
+      'supervise dogs around water at all times',
+      'ensure the pool stands on flat, level ground free of sharp objects',
+      'provide fresh drinking water and shade alongside the pool in hot weather',
+    ],
+    desc: 'Premium Ø 3.0 m round drop stitch dog pool with a firm 10 cm wall for villa gardens and private backyards.',
+    definition:
+      'A round inflatable dog pool built with high-pressure drop stitch construction: a 3.0 m diameter, 0.5 m high basin with a 10 cm specified wall thickness that inflates into a firm, structured pool for dogs.',
+    problem:
+      'Dog owners want to give their pets a way to cool off and play in water on hot summer days, but public swimming areas are crowded and impractical, and cheap ring-style pet pools sag, leak, and look out of place in a well-kept garden.',
+    howItWorks:
+      'Thousands of internal drop stitch threads lock the two wall fabric layers together, so the 10 cm wall inflates firm under high pressure into a structured, self-supporting pool. The 3-meter round basin gives larger breeds and multi-pet households room to splash, and the whole pool deflates and packs away at the end of the season.',
+    audience:
+      'Dog owners with villa gardens or spacious backyards, multi-pet households, premium pet-friendly homes, pet hotels, and professional pet facilities.',
+    best_for_business: ['resorts', 'entrepreneurs'],
+    business_recommendation:
+      'A high-margin specialty SKU for pet brands, distributors, and retailers looking to expand beyond traditional pet accessories — supported by private-label customization and custom packaging.',
+    ai_use_cases: ['Backyard dog water play', 'Pet summer cooling', 'Villa garden pet amenity', 'Pet hotel water-play facility'],
+    ai_specs: {
+      shape: 'Round',
+      material: 'PVC drop stitch fabric',
+      diameter: '3.0 m',
+      height: '0.5 m',
+      wall_thickness: '10 cm specified thickness',
+      application: 'Dogs and outdoor pet recreation',
+      recommended_setting: 'Villa gardens and private backyards',
+    },
+    ai_comparison:
+      'Compared to cheap ring-style pet pools, the drop stitch dog pool keeps a firm 10 cm wall with a structured, premium appearance that suits villa gardens; compared to permanent pet facilities it needs no construction, moves anywhere in the yard, and packs away for storage.',
+    ai_faq: [
+      {
+        q: 'What size is the dog pool?',
+        a: 'The pool is a round basin with a 3.0 m diameter and 0.5 m height — plenty of room for larger breeds and multi-pet households to splash and play, subject to the dogs\u2019 size and the available space.',
+      },
+      {
+        q: 'Is the wall really rigid?',
+        a: 'Yes. The wall uses high-pressure drop stitch construction with a 10 cm specified thickness, so it inflates into a firm, structured wall with a clean, modern appearance — unlike soft-sided ring pools.',
+      },
+      {
+        q: 'Where can the pool be set up?',
+        a: 'It is designed for villa gardens, private backyards, and outdoor pet recreation areas. The pool needs a flat, level surface free of sharp objects, with room for the full 3-meter diameter.',
+      },
+      {
+        q: 'Is it suitable for pet hotels and professional facilities?',
+        a: 'Yes. Pet hotels and professional pet facilities use it as an outdoor water-play amenity, and Felizbay supports private-label customization for pet brands, distributors, and retailers.',
+      },
+      {
+        q: 'How do dogs stay safe around the pool?',
+        a: 'Always supervise dogs around water. In hot weather, also provide fresh drinking water and shade — the pool is a way to stay cool, not a substitute for drinking water. Rinse and dry the pool before off-season storage.',
+      },
+      {
+        q: 'How is the pool stored in the off-season?',
+        a: 'Drain the water, deflate the pool, let it dry completely, then fold it up and store it compactly in a frost-free place until the next season.',
+      },
+      {
+        q: 'Can we order it with our own brand?',
+        a: 'Yes. Felizbay offers private-label customization options — customized branding and packaging — for pet brands, distributors, and retailers who want to develop their own pet swimming pool collection. Contact info@felizbay.com for a quotation.',
+      },
+    ],
+  },
 ];
