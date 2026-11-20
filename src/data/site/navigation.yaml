@@ -109,8 +109,6 @@ footer:
       href: /privacy/
     - text: Returns & Warranty
       href: /returns-and-warranty/
-    - text: Medical Disclaimer
-      href: /disclaimer/
   socialLinks:
     - ariaLabel: Facebook
       icon: tabler:brand-facebook
