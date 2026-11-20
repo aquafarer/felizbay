@@ -7,18 +7,6 @@ hero:
     Aby bylo plavání jednoduché, <br />
     stylem <span class="text-accent dark:text-white">Felizbay</span> 
   subtitle: Felizbay je prémiová značka nafukovacích bazénů Drop Stitch navržená a provozovaná společností Aquafarer LLC (USA). Věříme, že každá rodina si zaslouží skutečný bazén na dvorku – nadzemní instalace bez trvalé stavby bazénu. Naše bazény se nafouknou během několika minut, přežijí celá léta rodinné zábavy a na konci sezóny se sbalí. Požadavky na povolení, bariéry a instalaci se liší podle lokality.
-stats:
-  title: Podle čísel
-  columns: 4
-  stats:
-    - title: Bazénové sbírky
-      amount: '4'
-    - title: 'Čas nafouknutí'
-      amount: '5-15 min'
-    - title: Jmenovitý tlak
-      amount: 4-6 PSI
-    - title: Kontakt
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Co stavíme
   subtitle: Zaměřená produktová řada, kterou známe zevnitř – vysokotlaké nafukovací bazény Drop Stitch.

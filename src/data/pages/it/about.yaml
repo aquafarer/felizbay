@@ -7,18 +7,6 @@ hero:
     Rendere il nuoto semplice, <br />
     alla <span class="text-accent dark:text-white">Felizbay</span> 
   subtitle: Felizbay è un marchio premium di piscine gonfiabili Drop Stitch progettato e gestito da Aquafarer LLC (USA). Crediamo che ogni famiglia meriti una vera piscina nel cortile di casa, con un'installazione fuori terra che non richiede costruzioni permanenti. Le nostre piscine si gonfiano in pochi minuti, sopravvivono a estati piene di divertimento in famiglia e si ripongono in piccole dimensioni alla fine della stagione. I requisiti di permessi, recinzioni e installazione variano in base alla località.
-stats:
-  title: Dai numeri
-  columns: 4
-  stats:
-    - title: Collezioni di piscine
-      amount: '4'
-    - title: 'Tempo di gonfiaggio'
-      amount: '5-15 min'
-    - title: Pressione nominale
-      amount: 4-6 PSI
-    - title: Contatto
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Cosa costruiamo
   subtitle: 'Una linea di prodotti mirata che conosciamo a fondo: piscine gonfiabili Drop Stitch ad alta pressione.'

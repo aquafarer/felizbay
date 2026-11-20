@@ -7,18 +7,6 @@ hero:
     Gjør svømming enkelt, <br />
     på <span class="text-accent dark:text-white">Felizbay</span>-måten
   subtitle: Felizbay er et premium drop stitch oppblåsbart bassengmerke designet og drevet av Aquafarer LLC (USA). Vi mener at hver familie fortjener et ekte basseng i bakgården - overjordisk oppsett uten permanent bassengbygg. Bassengene våre blåses opp stive på få minutter, overlever hele somre med familiemoro, og pakker sammen små ved sesongslutt. Krav til tillatelser, gjerder og oppsett varierer etter sted.
-stats:
-  title: Etter tallene
-  columns: 4
-  stats:
-    - title: Bassengsamlinger
-      amount: '4'
-    - title: 'Oppblåsingstid'
-      amount: '5-15 min'
-    - title: Nominell trykk
-      amount: 4-6 PSI
-    - title: Kontakt
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Det vi bygger
   subtitle: En fokusert produktlinje vi kjenner ut og inn - høytrykks Drop Stitch oppblåsbare svømmebassenger.

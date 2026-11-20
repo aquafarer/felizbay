@@ -7,18 +7,6 @@ hero:
     Gør svømning enkel, <br />
     på <span class="text-accent dark:text-white">Felizbay</span>-vis
   subtitle: Felizbay er et premium drop stitch oppustelig poolmærke designet og drevet af Aquafarer LLC (USA). Vi mener, at enhver familie fortjener en rigtig pool i baghaven - overjordisk opsætning uden permanent poolbyggeri. Vores pools pustes op på få minutter, overlever hele somre med familiehygge og pakker småt sammen ved sæsonens afslutning. Krav til tilladelser, hegn og opsætning varierer fra sted til sted.
-stats:
-  title: Ved tallene
-  columns: 4
-  stats:
-    - title: Pool samlinger
-      amount: '4'
-    - title: 'Oppustningstid'
-      amount: '5-15 min'
-    - title: Nominelt tryk
-      amount: 4-6 PSI
-    - title: Kontakte
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Hvad vi bygger
   subtitle: En fokuseret produktlinje, vi kender ud og ind - højtryks Drop Stitch oppustelige svømmebassiner.

@@ -7,18 +7,6 @@ hero:
     Učinite plivanje jednostavnim, <br />
     na <span class="text-accent dark:text-white">Felizbay</span> način
   subtitle: Felizbay je vrhunski brend bazena na naduvavanje Drop Stitch koji je dizajnirao i kojim upravlja Aquafarer LLC (SAD). Verujemo da svaka porodica zaslužuje pravi bazen u dvorištu - nadzemna montaža bez trajne izgradnje bazena. Naši bazeni se čvrsto naduvaju za nekoliko minuta, preživljavaju puna leta porodične zabave i spakuju se malo na kraju sezone. Zahtevi za dozvole, ograde i montažu razlikuju se u zavisnosti od lokacije.
-stats:
-  title: Po brojevima
-  columns: 4
-  stats:
-    - title: Kolekcije bazena
-      amount: '4'
-    - title: 'Vreme naduvavanja'
-      amount: '5-15 min'
-    - title: Nazivni pritisak
-      amount: 4-6 PSI
-    - title: Kontakt
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Ono što gradimo
   subtitle: Fokusirana linija proizvoda koju poznajemo iznutra — bazeni na naduvavanje Drop Stitch pod visokim pritiskom.

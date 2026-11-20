@@ -7,18 +7,6 @@ hero:
     Uinti on helppoa, <br />
      <span class="text-accent dark:text-white">Felizbay</span>-tyyliin
   subtitle: Felizbay on Aquafarer LLC:n (USA) suunnittelema ja ylläpitämä korkealuokkainen Drop Stitch puhallettava uima-allasbrändi. Uskomme, että jokainen perhe ansaitsee todellisen uima-altaan takapihalle maan päälle asennettuna ilman pysyvää allasrakentamista. Altaamme täyttyvät jäykäksi muutamassa minuutissa, selviytyvät koko perheen kesistä ja pakataan pieniksi kauden lopussa. Lupa-, aita- ja asennusvaatimukset vaihtelevat sijainnin mukaan.
-stats:
-  title: Numeroiden mukaan
-  columns: 4
-  stats:
-    - title: Allas kokoelmat
-      amount: '4'
-    - title: 'Puhallusaika'
-      amount: '5-15 min'
-    - title: Nimellispaine
-      amount: 4-6 PSI
-    - title: Ota yhteyttä
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Mitä rakennamme
   subtitle: Keskittynyt tuotesarja, jonka tunnemme läpikotaisin – korkeapaineiset Drop Stitch puhallettavat uima-altaat.

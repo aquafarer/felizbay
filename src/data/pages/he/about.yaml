@@ -7,18 +7,6 @@ hero:
     הופכים את השחייה לפשוטה, <br />
     בסגנון <span class="text-accent dark:text-white">Felizbay</span> 
   subtitle: Felizbay הוא מותג פרימיום לבריכה מתנפחת Drop Stitch שתוכנן ומופעל על ידי Aquafarer LLC (ארה"ב). אנו מאמינים שלכל משפחה מגיעה בריכה אמיתית בחצר האחורית - התקנה על הקרקע ללא בנייה קבועה של בריכה. הבריכות שלנו מתנפחות תוך דקות, שורדות קיץ מלא של כיף משפחתי, ואורזות בקטנה בסוף העונה. דרישות היתר, גידור והתקנה משתנות בהתאם למיקום.
-stats:
-  title: לפי המספרים
-  columns: 4
-  stats:
-    - title: אוספי בריכות
-      amount: '4'
-    - title: 'זמן ניפוח'
-      amount: '5-15 min'
-    - title: לחץ מדורג
-      amount: 4-6 PSI
-    - title: מַגָע
-      amount: info@felizbay.com
 features3_what_we_build:
   title: מה אנחנו בונים
   subtitle: קו מוצרים ממוקד שאנו מכירים מבפנים החוצה - בריכות שחייה מתנפחות Drop Stitch בלחץ גבוה.

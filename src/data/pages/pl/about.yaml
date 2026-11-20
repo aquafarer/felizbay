@@ -7,18 +7,6 @@ hero:
     Ułatwienie pływania, <br />
     w stylu <span class="text-accent dark:text-white">Felizbay</span> 
   subtitle: Felizbay to marka premium nadmuchiwanych basenów Drop Stitch, zaprojektowana i obsługiwana przez Aquafarer LLC (USA). Wierzymy, że każda rodzina zasługuje na prawdziwy basen na podwórku – instalacja naziemna bez trwałej budowy basenu. Nasze baseny napompowują się do sztywności w ciągu kilku minut, przetrwają pełne rodzinnej zabawy lato i pakują się do niewielkich rozmiarów pod koniec sezonu. Wymogi dotyczące pozwoleń, ogrodzeń i instalacji różnią się w zależności od lokalizacji.
-stats:
-  title: Według liczb
-  columns: 4
-  stats:
-    - title: Kolekcje basenowe
-      amount: '4'
-    - title: 'Czas pompowania'
-      amount: '5-15 min'
-    - title: Ciśnienie znamionowe
-      amount: 4-6 PSI
-    - title: Kontakt
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Co budujemy
   subtitle: Skoncentrowana linia produktów, którą znamy na wylot — wysokociśnieniowe nadmuchiwane baseny Drop Stitch.

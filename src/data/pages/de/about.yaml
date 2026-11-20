@@ -7,18 +7,6 @@ hero:
     Schwimmen einfach machen, <br />
     auf <span class="text-accent dark:text-white">Felizbay</span>-Art
   subtitle: Felizbay ist eine Premium-Marke für aufblasbare Drop-Stitch-Pools, die von Aquafarer LLC (USA) entwickelt und betrieben wird. Wir glauben, dass jede Familie einen echten Pool im Hinterhof verdient – ​​aufstellbarer Pool ohne dauerhafte Beckenbauarbeiten. Unsere Pools sind in wenigen Minuten fest aufgeblasen, überstehen ganze Sommer voller Familienspaß und lassen sich am Ende der Saison klein zusammenpacken. Genehmigungs-, Absperr- und Installationsanforderungen variieren je nach Standort.
-stats:
-  title: Anhand der Zahlen
-  columns: 4
-  stats:
-    - title: Pool-Kollektionen
-      amount: '4'
-    - title: 'Aufblasdauer'
-      amount: '5-15 min'
-    - title: Nenndruck
-      amount: 4-6 PSI
-    - title: Kontakt
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Was wir bauen
   subtitle: Eine fokussierte Produktlinie, die wir in- und auswendig kennen – aufblasbare Hochdruck-Drop-Stitch-Schwimmbecken.

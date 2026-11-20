@@ -7,18 +7,6 @@ hero:
     Gör simningen enkel, <br />
     på <span class="text-accent dark:text-white">Felizbay</span>-vis
   subtitle: Felizbay är ett premium Drop Stitch uppblåsbar poolmärke designat och drivs av Aquafarer LLC (USA). Vi tror att varje familj förtjänar en riktig pool på bakgården - placering ovanför mark utan permanent poolbygge. Våra pooler blåser upp styvt på några minuter, överlever hela somrar av familjekul och packar ihop lite vid säsongens slut. Krav på tillstånd, stängsel och installation varierar beroende på plats.
-stats:
-  title: Med siffrorna
-  columns: 4
-  stats:
-    - title: Poolsamlingar
-      amount: '4'
-    - title: 'Uppblåsningstid'
-      amount: '5-15 min'
-    - title: Märktryck
-      amount: 4-6 PSI
-    - title: Kontakta
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Vad vi bygger
   subtitle: En fokuserad produktlinje som vi känner ut och in — högtrycks Drop Stitch uppblåsbara simbassänger.

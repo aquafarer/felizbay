@@ -7,18 +7,6 @@ hero:
     Yüzmeyi basitleştirmek, <br />
      <span class="text-accent dark:text-white">Felizbay</span> tarzı
   subtitle: Felizbay, Aquafarer LLC (ABD) tarafından tasarlanan ve işletilen birinci sınıf bir Drop Stitch şişme havuz markasıdır. Her ailenin arka bahçede kalıcı havuz inşası olmadan zemine monte edilen gerçek bir havuzu hak ettiğine inanıyoruz. Havuzlarımız birkaç dakika içinde sert bir şekilde şişer, yazları ailece eğlenerek geçirir ve sezon sonunda küçük küçük toplanıp toplanır. İzin, bariyer ve kurulum gereksinimleri konuma göre değişir.
-stats:
-  title: Sayılara göre
-  columns: 4
-  stats:
-    - title: Havuz koleksiyonları
-      amount: '4'
-    - title: 'Şişirme zamanı'
-      amount: '5-15 min'
-    - title: Nominal basınç
-      amount: 4-6 PSI
-    - title: Temas etmek
-      amount: info@felizbay.com
 features3_what_we_build:
   title: Ne inşa ediyoruz
   subtitle: 'İçini dışını bildiğimiz odaklanmış bir ürün grubu: yüksek basınçlı Drop Stitch şişme yüzme havuzları.'
