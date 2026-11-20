@@ -124,11 +124,3 @@ global_ops_section:
   tagline: טווח הגעה עולמי
   title_html: מותג אחד, <span class="text-white/90">משלוח לכל העולם</span>
   description_html: Felizbay משרתת משפחות ולקוחות עסקיים ברחבי העולם מ <strong class="text-white">felizbay.com</strong>. הזמנות קמעונאיות, סיטונאות וייצור OEM/ODM מטופלות כולם על ידי הצוות שלנו - הגע אלינו בכל עת בכתובת <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: אוספי בריכות
-    - value: '5-15 min'
-      label: 'זמן ניפוח'
-    - value: 4-6 PSI
-      label: לחץ מדורג
-

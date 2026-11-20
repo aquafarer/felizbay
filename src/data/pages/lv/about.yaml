@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Globālā sasniedzamība
   title_html: Viens zīmols, <span class="text-white/90">piegāde visā pasaulē</span>
   description_html: Felizbay apkalpo ģimenes un biznesa klientus visā pasaulē no plkst <strong class="text-white">felizbay.com</strong>. Mazumtirdzniecības pasūtījumus, vairumtirdzniecību un OEM/ODM ražošanu veic mūsu komanda — sazinieties ar mums jebkurā laikā pa <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Baseinu kolekcijas
-    - value: '5-15 min'
-      label: 'Uzpūšanas laiks'
-    - value: 4-6 PSI
-      label: Nominālais spiediens
-

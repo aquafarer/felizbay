@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Παγκόσμια Απήχηση
   title_html: Μία μάρκα, <span class="text-white/90">παγκόσμια αποστολή</span>
   description_html: Το Felizbay εξυπηρετεί οικογένειες και επιχειρηματικούς πελάτες σε όλο τον κόσμο από <strong class="text-white">felizbay.com</strong>. Οι παραγγελίες λιανικής, η χονδρική και η κατασκευή OEM/ODM διεκπεραιώνονται από την ομάδα μας — επικοινωνήστε μαζί μας ανά πάσα στιγμή στο <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Συλλογές πισίνας
-    - value: '5-15 min'
-      label: 'Χρόνος φουσκώματος'
-    - value: 4-6 PSI
-      label: Ονομαστική πίεση
-

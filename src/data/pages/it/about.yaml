@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Portata globale
   title_html: Un marchio, <span class="text-white/90">spedizione in tutto il mondo</span>
   description_html: 'Felizbay serve famiglie e clienti aziendali in tutto il mondo da <strong class="text-white">felizbay.com</strong>. Gli ordini al dettaglio, all''ingrosso e la produzione OEM/ODM sono tutti gestiti dal nostro team: raggiungici in qualsiasi momento <strong class="text-white">info@felizbay.com</strong>.'
-  stats:
-    - value: '4'
-      label: Collezioni di piscine
-    - value: '5-15 min'
-      label: 'Tempo di gonfiaggio'
-    - value: 4-6 PSI
-      label: Pressione nominale
-

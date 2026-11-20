@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Глобальный охват
   title_html: Один бренд, <span class="text-white/90">доставка по всему миру</span>
   description_html: Felizbay обслуживает семьи и бизнес-клиентов по всему миру из <strong class="text-white">felizbay.com</strong>. Розничные заказы, оптовая торговля и производство OEM/ODM выполняются нашей командой — свяжитесь с нами в любое время по телефону <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Коллекции для бассейнов
-    - value: '5-15 min'
-      label: 'Время надувания'
-    - value: 4-6 PSI
-      label: Номинальное давление
-

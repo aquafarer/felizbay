@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Acoperire globală
   title_html: Un singur brand, <span class="text-white/90">expediere în întreaga lume</span>
   description_html: Felizbay deservește familiile și clienții de afaceri din întreaga lume <strong class="text-white">felizbay.com</strong>. Comenzile cu amănuntul, cu ridicata și producția OEM/ODM sunt toate gestionate de echipa noastră - contactați-ne oricând la <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Colecții de piscină
-    - value: '5-15 min'
-      label: 'Timp de umflare'
-    - value: 4-6 PSI
-      label: Presiune nominală
-

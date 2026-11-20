@@ -2491,7 +2491,9 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 
 1. **Footer**：`navigation.yaml` secondaryLinks 删除 "Medical Disclaimer"（`/disclaimer/` 页面保留构建与 sitemap，但失去站内唯一导航入口，成 organic-only 页）；`Footer.astro` 社交图标行去掉 `md:ml-4` 缩进（左移 24px，桌面端与移动端一致 flush 对齐 footer 内容左缘）。
 2. **About 页 "By the numbers" 区块**（Hero 下数字带：4 collections / 5-15 min / 4-6 PSI / info@felizbay.com）：37 个语言的 `about.yaml` 顶层 `stats:` 块全删 + `about.astro`/`[lang]/about.astro` 的 `<Stats>` 组件调用、`page.stats` 解构、import 一并移除（`Stats.astro` 无数据守卫，空数据仍渲染空 section 壳，组件调用必须删）。39 文件 453 行纯删除。
-3. **保留未动**：`[lang]` 版 about 的 `global_ops_section.stats`（"Global Reach" 深色横幅）复用了相同的 4 / 5-15 min / 4-6 PSI 三项数值，但属另一区块（用户引用的 "By the numbers" 标题与 Contact 项仅存在于已删区块）——是否同删待用户决策。
+3. **保留未动**：`[lang]` 版 about 的 `global_ops_section.stats`（"Global Reach" 深色横幅）后续按用户决策同删（见下）。
+
+**后续（同日）**：用户确认后删除 "Global Reach" 横幅内的三组数字卡片（4 / 5-15 min / 4-6 PSI）——37 个语言 about.yaml 的 `global_ops_section.stats` 子块 + `[lang]/about.astro` 的 stats grid 渲染块与 `globalOpsStats` 变量；横幅本体（tagline/title_html/description_html/info@felizbay.com）保留。EN 页正文生产质检清单中的 "rated 4-6 PSI working range" 为合理内容，未动。Logo 四处人工目检通过（用户确认满意）。
 
 ---
 

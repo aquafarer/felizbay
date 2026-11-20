@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Jangkauan Global
   title_html: Satu jenama, <span class="text-white/90">penghantaran ke seluruh dunia</span>
   description_html: Felizbay melayani keluarga dan pelanggan perniagaan di seluruh dunia dari <strong class="text-white">felizbay.com</strong>. Pesanan runcit, borong dan pembuatan OEM/ODM semuanya dikendalikan oleh pasukan kami — hubungi kami pada bila-bila masa <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Koleksi kolam
-    - value: '5-15 min'
-      label: 'Masa pengembungan'
-    - value: 4-6 PSI
-      label: Tekanan terkadar
-

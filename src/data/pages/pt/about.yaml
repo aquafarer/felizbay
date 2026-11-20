@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Alcance global
   title_html: Uma marca, <span class="text-white/90">envio mundial</span>
   description_html: Felizbay atende famílias e clientes empresariais em todo o mundo, desde <strong class="text-white">felizbay.com</strong>. Pedidos de varejo, atacado e fabricação OEM/ODM são todos atendidos por nossa equipe - entre em contato conosco a qualquer momento em <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Coleções de piscina
-    - value: '5-15 min'
-      label: 'Tempo de inflar'
-    - value: 4-6 PSI
-      label: Pressão nominal
-

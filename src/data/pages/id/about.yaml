@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Jangkauan Global
   title_html: Satu merek, <span class="text-white/90">pengiriman ke seluruh dunia</span>
   description_html: Felizbay melayani keluarga dan pelanggan bisnis di seluruh dunia <strong class="text-white">felizbay.com</strong>. Pesanan eceran, grosir, dan manufaktur OEM/ODM semuanya ditangani oleh tim kami — hubungi kami kapan saja di <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Koleksi kolam renang
-    - value: '5-15 min'
-      label: 'Waktu pengembungan'
-    - value: 4-6 PSI
-      label: Nilai tekanan
-

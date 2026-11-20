@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Global rekkevidde
   title_html: Ett merke, <span class="text-white/90">verdensomspennende frakt</span>
   description_html: Felizbay betjener familier og bedriftskunder over hele verden fra <strong class="text-white">felizbay.com</strong>. Detaljhandelsordrer, engros- og OEM/ODM-produksjon håndteres av teamet vårt – nå oss når som helst på <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Bassengsamlinger
-    - value: '5-15 min'
-      label: 'Oppblåsingstid'
-    - value: 4-6 PSI
-      label: Nominell trykk
-

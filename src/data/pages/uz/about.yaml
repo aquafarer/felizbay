@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Global kirish
   title_html: Bitta brend, <span class="text-white/90">butun dunyo bo'ylab yuk tashish</span>
   description_html: Felizbay butun dunyo bo'ylab oilalar va biznes mijozlarga xizmat ko'rsatadi <strong class="text-white">felizbay.com</strong>. Chakana buyurtmalar, ulgurji va OEM/ODM ishlab chiqarish bizning jamoamiz tomonidan amalga oshiriladi - biz bilan istalgan vaqtda bog'laning. <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Hovuz kolleksiyalari
-    - value: '5-15 min'
-      label: 'Shishirish vaqti'
-    - value: 4-6 PSI
-      label: Nominal bosim
-

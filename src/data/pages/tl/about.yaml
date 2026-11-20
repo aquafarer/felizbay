@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Global na Abot
   title_html: Isang tatak, <span class="text-white/90">pandaigdigang pagpapadala</span>
   description_html: Naglilingkod ang Felizbay sa mga pamilya at customer ng negosyo sa buong mundo mula sa <strong class="text-white">felizbay.com</strong>. Ang mga retail order, wholesale, at OEM/ODM na pagmamanupaktura ay pinangangasiwaan ng aming team — maabot kami anumang oras sa <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Mga koleksyon ng pool
-    - value: '5-15 min'
-      label: 'Oras para i-inflate'
-    - value: 4-6 PSI
-      label: Na-rate na presyon
-

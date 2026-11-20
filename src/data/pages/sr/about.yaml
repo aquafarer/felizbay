@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Global Reach
   title_html: Jedan brend, <span class="text-white/90">slanje širom sveta</span>
   description_html: Фелизбаи опслужује породице и пословне клијенте широм света <strong class="text-white">felizbay.com</strong>. Малопродајне поруџбине, велепродаја и ОЕМ/ОДМ производњу обавља наш тим — контактирајте нас у било ком тренутку <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Kolekcije bazena
-    - value: '5-15 min'
-      label: 'Vreme naduvavanja'
-    - value: 4-6 PSI
-      label: Nazivni pritisak
-

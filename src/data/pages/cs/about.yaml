@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Globální dosah
   title_html: Jedna značka, <span class="text-white/90">celosvětovou přepravu</span>
   description_html: Felizbay slouží rodinám a firemním zákazníkům po celém světě <strong class="text-white">felizbay.com</strong>. Maloobchodní objednávky, velkoobchod a výrobu OEM/ODM – to vše vyřizuje náš tým – kdykoli nás kontaktujte na adrese <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Bazénové sbírky
-    - value: '5-15 min'
-      label: 'Čas nafouknutí'
-    - value: 4-6 PSI
-      label: Jmenovitý tlak
-

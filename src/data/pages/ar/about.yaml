@@ -124,11 +124,3 @@ global_ops_section:
   tagline: الوصول العالمي
   title_html: علامة تجارية واحدة، <span class="text-white/90">الشحن في جميع أنحاء العالم</span>
   description_html: يخدم Felizbay العائلات والعملاء التجاريين في جميع أنحاء العالم من <strong class="text-white">felizbay.com</strong>. يتم التعامل مع طلبات البيع بالتجزئة والبيع بالجملة وتصنيع المعدات الأصلية/تصنيع التصميم الشخصي من قبل فريقنا - يمكنك الوصول إلينا في أي وقت <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: مجموعات حمامات السباحة
-    - value: '5-15 min'
-      label: 'وقت النفخ'
-    - value: 4-6 PSI
-      label: الضغط المقدر
-

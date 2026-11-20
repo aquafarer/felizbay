@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Globalni doseg
   title_html: Ena znamka, <span class="text-white/90">dostava po vsem svetu</span>
   description_html: Felizbay služi družinam in poslovnim strankam po vsem svetu <strong class="text-white">felizbay.com</strong>. Naročila na drobno, veleprodajo in proizvodnjo OEM/ODM skrbi naša ekipa – dosegite nas kadar koli na <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Zbirke bazenov
-    - value: '5-15 min'
-      label: 'Čas za napihovanje'
-    - value: 4-6 PSI
-      label: Nazivni tlak
-

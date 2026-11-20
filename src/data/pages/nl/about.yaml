@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Mondiaal bereik
   title_html: Eén merk, <span class="text-white/90">wereldwijde verzending</span>
   description_html: Felizbay bedient gezinnen en zakelijke klanten wereldwijd <strong class="text-white">felizbay.com</strong>. Detailhandelsbestellingen, groothandel en OEM/ODM-productie worden allemaal door ons team afgehandeld. U kunt ons op elk gewenst moment bereiken <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Zwembadcollecties
-    - value: '5-15 min'
-      label: 'Opblaastijd'
-    - value: 4-6 PSI
-      label: Nominale druk
-

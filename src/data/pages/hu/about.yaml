@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Global Reach
   title_html: Egy márka, <span class="text-white/90">világméretű szállítás</span>
   description_html: 'A Felizbay családokat és üzleti ügyfeleket szolgál ki világszerte <strong class="text-white">felizbay.com</strong>. A kiskereskedelmi rendeléseket, a nagykereskedelmet és az OEM/ODM gyártást csapatunk kezeli – bármikor elérhet minket a következő címen: <strong class="text-white">info@felizbay.com</strong>.'
-  stats:
-    - value: '4'
-      label: Medence kollekciók
-    - value: '5-15 min'
-      label: 'Felfújási idő'
-    - value: 4-6 PSI
-      label: Névleges nyomás
-

@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Maailmanlaajuinen kattavuus
   title_html: Yksi merkki, <span class="text-white/90">maailmanlaajuinen toimitus</span>
   description_html: Felizbay palvelee perheitä ja yritysasiakkaita maailmanlaajuisesti <strong class="text-white">felizbay.com</strong>. Tiimimme hoitaa vähittäismyyntitilaukset, tukkukaupan ja OEM/ODM-valmistuksen – ota meihin yhteyttä milloin tahansa osoitteessa <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Allas kokoelmat
-    - value: '5-15 min'
-      label: 'Puhallusaika'
-    - value: 4-6 PSI
-      label: Nimellispaine
-

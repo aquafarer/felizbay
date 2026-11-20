@@ -124,11 +124,3 @@ global_ops_section:
   tagline: การเข้าถึงทั่วโลก
   title_html: แบรนด์หนึ่ง, <span class="text-white/90">จัดส่งทั่วโลก</span>
   description_html: Felizbay ให้บริการครอบครัวและลูกค้าธุรกิจทั่วโลกจาก <strong class="text-white">felizbay.com</strong>. ทีมงานของเราจัดการคำสั่งซื้อปลีก การขายส่ง และการผลิต OEM/ODM ติดต่อเราได้ตลอดเวลาที่ <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: คอลเลกชันสระว่ายน้ำ
-    - value: '5-15 min'
-      label: 'เวลาสูบลม'
-    - value: 4-6 PSI
-      label: จัดอันดับความดัน
-

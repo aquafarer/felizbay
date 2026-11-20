@@ -133,10 +133,3 @@ global_ops_section:
   tagline: 'Global Reach'
   title_html: 'One brand, <span class="text-white/90">worldwide shipping</span>'
   description_html: 'Felizbay serves families and business customers worldwide from <strong class="text-white">felizbay.com</strong>. Retail orders, wholesale, and OEM/ODM manufacturing are all handled by our team — reach us any time at <strong class="text-white">info@felizbay.com</strong>.'
-  stats:
-    - value: '4'
-      label: 'Pool collections'
-    - value: '5-15 min'
-      label: 'Time to inflate'
-    - value: '4-6 PSI'
-      label: 'Rated pressure'

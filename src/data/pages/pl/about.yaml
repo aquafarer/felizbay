@@ -124,11 +124,3 @@ global_ops_section:
   tagline: Globalny zasięg
   title_html: Jedna marka, <span class="text-white/90">wysyłka na cały świat</span>
   description_html: Felizbay obsługuje rodziny i klientów biznesowych na całym świecie <strong class="text-white">felizbay.com</strong>. Zamówienia detaliczne, hurtowe i produkcja OEM/ODM są obsługiwane przez nasz zespół — skontaktuj się z nami w dowolnym momencie pod adresem <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: Kolekcje basenowe
-    - value: '5-15 min'
-      label: 'Czas pompowania'
-    - value: 4-6 PSI
-      label: Ciśnienie znamionowe
-

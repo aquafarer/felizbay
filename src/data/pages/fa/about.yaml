@@ -124,11 +124,3 @@ global_ops_section:
   tagline: دسترسی جهانی
   title_html: یک برند، <span class="text-white/90">حمل و نقل در سراسر جهان</span>
   description_html: Felizbay به خانواده ها و مشتریان تجاری در سراسر جهان خدمات ارائه می دهد <strong class="text-white">felizbay.com</strong>. سفارشات خرده فروشی، عمده فروشی و ساخت OEM/ODM همه توسط تیم ما انجام می شود - هر زمان که بخواهید با ما تماس بگیرید <strong class="text-white">info@felizbay.com</strong>.
-  stats:
-    - value: '4'
-      label: مجموعه های استخر
-    - value: '5-15 min'
-      label: 'زمان باد کردن است'
-    - value: 4-6 PSI
-      label: فشار نامی
-
