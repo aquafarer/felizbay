@@ -129,13 +129,13 @@ siteSettings:
     language: ${code}${isRtl ? '\n    textDirection: rtl' : ''}
   socialLinks:
     - platform: youtube
-      url: 'https://www.youtube.com/@felizbay'
+      url: 'https://www.youtube.com/@Felizbay'
     - platform: x
       url: 'https://x.com/Felizbay'
     - platform: instagram
       url: 'https://www.instagram.com/Felizbay'
     - platform: facebook
-      url: 'https://www.facebook.com/Felizbay'
+      url: 'https://www.facebook.com/thefelizbay/'
     - platform: rss
       url: /rss.xml
 `;

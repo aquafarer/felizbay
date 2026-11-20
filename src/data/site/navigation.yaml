@@ -111,5 +111,14 @@ footer:
       href: /returns-and-warranty/
     - text: Medical Disclaimer
       href: /disclaimer/
-  socialLinks: []
+  socialLinks:
+    - ariaLabel: Facebook
+      icon: tabler:brand-facebook
+      href: https://www.facebook.com/thefelizbay/
+    - ariaLabel: YouTube
+      icon: tabler:brand-youtube
+      href: https://www.youtube.com/@Felizbay
+    - ariaLabel: LinkedIn
+      icon: tabler:brand-linkedin
+      href: https://www.linkedin.com/company/felizbay
   footNote: 'Premium drop stitch inflatable pools by Felizbay. Designed and operated by Aquafarer LLC, USA.'

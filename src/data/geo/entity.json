@@ -27,9 +27,10 @@
     }
   ],
   "sameAs": [
-    "https://www.youtube.com/@felizbay",
+    "https://www.facebook.com/thefelizbay/",
+    "https://www.youtube.com/@Felizbay",
     "https://x.com/Felizbay",
-    "https://www.linkedin.com/company/Felizbay"
+    "https://www.linkedin.com/company/felizbay"
   ],
   "makesOffer": [
     { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Drop Stitch Inflatable Swimming Pools" } },
