@@ -5,6 +5,12 @@ site:
   trailingSlash: true
   googleSiteVerificationId: ''
 
+# Branding — consumed by Logo.astro (header logo) and Footer.astro
+branding:
+  site_name: Felizbay
+  logo_image: '/images/logo-head.webp'
+  logo_alt: 'Felizbay logo'
+
 # Default SEO metadata
 metadata:
   title:
@@ -16,7 +22,7 @@ metadata:
       # Site-wide default og:image — inherited by every page without its own
       # image (home/contact/guides/...). Absolute URL -> remote branch in
       # adaptOpenGraphImages (used as-is, same as the 228 page-level og images).
-      - url: 'https://felizbay.com/images/pools/round-grey-pool-1.webp'
+      - url: 'https://felizbay.com/images/og-default.png'
   robots:
     index: true
     follow: true

@@ -2471,6 +2471,20 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 
 Footer 合并逻辑：keystatic `seo.socialLinks`（`astrowind:config` 的 `SITE_SETTINGS.socialLinks`，当前为空）优先，prop socialLinks（navigation.yaml）按 ariaLabel 去重兜底。
 
+### 19.28 品牌 Logo 全站接入 (2026-11-20)
+
+素材：项目根 `Felizbay_logohead.jpeg`（1024×1024 JPEG，米白底 rgb(248,248,232)）。程序化处理链（sharp）：背景色采样 → 非background 像素 bbox 检测（内容 926×761）→ 3% padding 方形裁剪（982×982）→ 多尺寸输出。**未做视觉审查（工具无图像输入能力），上线后需人工目检四处渲染效果。**
+
+| 接入面                             | 产物                                                                                                                                                           | 接线                                                                                                                                               |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 页头 Logo                          | `public/images/logo-head.webp`（512×512 q92）                                                                                                                  | `config.yaml` 新增 `branding` 块（site_name/logo_image/logo_alt）→ `Logo.astro` 从纯 config.yaml 直读（非 astrowind:config），img 替代渐变字母色块 |
+| 浏览器图标                         | `src/assets/favicons/favicon.ico`（PNG-in-ICO 16/32/48）+ `favicon.svg`（内嵌 64px base64 raster 的 SVG——光栅 logo 无法矢量化）+ `apple-touch-icon.png`（180） | `Favicons.astro` 移除 `mask-icon` 行（模板遗留紫色 #8D46E7，光栅 SVG 非 monochrome 不适用）                                                        |
+| manifest 图标（**既有 404 修复**） | `public/favicon-192x192.png` + `public/favicon-512x512.png` + `public/favicon.svg`                                                                             | `manifest.json.ts` 三个 icon src 此前在 public/ 根不存在（404），本次补齐                                                                          |
+| JSON-LD Organization.logo          | `public/logo-512.png`（512×512 替换，facts.json logo.url 不变）                                                                                                | 尺寸/路径不变，facts.json 零改动                                                                                                                   |
+| og:image 默认分享图                | `public/images/og-default.png`（1200×630，米白底 + 居中 logo 560px 合成）                                                                                      | `config.yaml` metadata.openGraph.images[0] 由 pool 照片改为 og-default.png（无自备图页面继承：guides/contact 等；228 个页级 og 图不受影响）        |
+
+image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-default.png）。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)
