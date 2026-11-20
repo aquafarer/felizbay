@@ -2460,14 +2460,14 @@ gate 报告中 25 条 `[X]` "内容仍是英文"（12 个拉丁语言 × 3 个 P
 
 ### 19.27 社交链接统一 + Footer 社交图标 (2026-11-20)
 
-业务给定三个官方主页 URL（facebook `thefelizbay` 页、YouTube `@Felizbay`、LinkedIn `/company/felizbay`），全站五处接线：
+业务给定官方主页 URL（facebook `thefelizbay` 页、YouTube `@Felizbay`、LinkedIn `/company/felizbay`、X `@Felizbay`），全站五处接线：
 
-| 位置                                                          | 处置                                                                                                                                                                          |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/config/facts.json` social 块                             | SSOT 更新（facebook 换 `thefelizbay` 页、youtube/linkedin 大小写对齐）；`schema-graph.ts` `buildGraph()` 与 `Layout.astro` 全局 Organization sameAs 均从 facts 渲染，自动生效 |
-| `src/data/site/navigation.yaml` footer.socialLinks            | `[]` → 3 条（ariaLabel/icon/href，tabler:brand-* 图标已在 icon registry）——Footer 此前不渲染任何社交图标                                                                      |
-| `src/data/geo/entity.json` + `public/.well-known/entity.json` | sameAs 同步（+facebook，youtube/linkedin 对齐）；两文件内容互为镜像                                                                                                           |
-| `scripts/batch-translate.mjs` 社交模板                        | facebook/youtube URL 对齐                                                                                                                                                     |
+| 位置                                                          | 处置                                                                                                                                                                                      |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/config/facts.json` social 块                             | SSOT 更新（facebook 换 `thefelizbay` 页、youtube/linkedin 大小写对齐；x 原已正确）；`schema-graph.ts` `buildGraph()` 与 `Layout.astro` 全局 Organization sameAs 均从 facts 渲染，自动生效 |
+| `src/data/site/navigation.yaml` footer.socialLinks            | `[]` → 4 条（ariaLabel/icon/href，tabler:brand-{facebook,youtube,linkedin,x}）——Footer 此前不渲染任何社交图标                                                                             |
+| `src/data/geo/entity.json` + `public/.well-known/entity.json` | sameAs 同步（+facebook，youtube/linkedin 对齐）；两文件内容互为镜像                                                                                                                       |
+| `scripts/batch-translate.mjs` 社交模板                        | facebook/youtube URL 对齐                                                                                                                                                                 |
 
 Footer 合并逻辑：keystatic `seo.socialLinks`（`astrowind:config` 的 `SITE_SETTINGS.socialLinks`，当前为空）优先，prop socialLinks（navigation.yaml）按 ariaLabel 去重兜底。
 

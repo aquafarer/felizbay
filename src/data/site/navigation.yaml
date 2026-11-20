@@ -121,4 +121,7 @@ footer:
     - ariaLabel: LinkedIn
       icon: tabler:brand-linkedin
       href: https://www.linkedin.com/company/felizbay
+    - ariaLabel: X
+      icon: tabler:brand-x
+      href: https://x.com/Felizbay
   footNote: 'Premium drop stitch inflatable pools by Felizbay. Designed and operated by Aquafarer LLC, USA.'
