@@ -2473,7 +2473,7 @@ Footer 合并逻辑：keystatic `seo.socialLinks`（`astrowind:config` 的 `SITE
 
 ### 19.28 品牌 Logo 全站接入 (2026-11-20)
 
-素材：项目根 `Felizbay_logohead.jpeg`（1024×1024 JPEG，米白底 rgb(248,248,232)）。程序化处理链（sharp）：背景色采样 → 非background 像素 bbox 检测（内容 926×761）→ 3% padding 方形裁剪（982×982）→ 多尺寸输出。**未做视觉审查（工具无图像输入能力），上线后需人工目检四处渲染效果。**
+素材：`docs/brand/Felizbay_logohead.jpeg`（1024×1024 JPEG，米白底 rgb(248,248,232)，2026-11-20 入库为品牌 SSOT——9 个衍生资产的唯一生成源）。程序化处理链（sharp）：背景色采样 → 非background 像素 bbox 检测（内容 926×761）→ 3% padding 方形裁剪（982×982）→ 多尺寸输出。**未做视觉审查（工具无图像输入能力），上线后需人工目检四处渲染效果。**（后续：用户目检确认满意。）
 
 | 接入面                             | 产物                                                                                                                                                           | 接线                                                                                                                                               |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2494,6 +2494,25 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 3. **保留未动**：`[lang]` 版 about 的 `global_ops_section.stats`（"Global Reach" 深色横幅）后续按用户决策同删（见下）。
 
 **后续（同日）**：用户确认后删除 "Global Reach" 横幅内的三组数字卡片（4 / 5-15 min / 4-6 PSI）——37 个语言 about.yaml 的 `global_ops_section.stats` 子块 + `[lang]/about.astro` 的 stats grid 渲染块与 `globalOpsStats` 变量；横幅本体（tagline/title_html/description_html/info@felizbay.com）保留。EN 页正文生产质检清单中的 "rated 4-6 PSI working range" 为合理内容，未动。Logo 四处人工目检通过（用户确认满意）。
+
+### 19.30 联系表单 Turnstile 永远验证失败修复 (2026-11-20)
+
+**症状**：/contact 提交始终报 "Captcha verification failed"（服务端 400），表单完全不可用。
+
+**根因链**（三层叠加）：
+
+1. Turnstile 隐式渲染在 `<form>` 内会自动注入隐藏 input `cf-turnstile-response`（官方文档明确：这是隐式渲染的 token 交付通道）——客户端 FormData 确实收到；
+2. 服务端只读 `turnstileToken` 字段名，自动注入的 token 因字段名不匹配被丢弃；
+3. 代码中唯一的 `turnstileToken` 来源是 `window.turnstile.getResponse(DOM元素)`——官方签名只接受 `render()` 返回的 widgetId 字符串，传元素未定义、返回 undefined。
+
+结果：无论挑战成功与否 `turnstileToken` 恒为空 → 400。
+
+**修复**（客户端为主、服务端防御）：
+
+- `Contact.astro`：token 主源改为读隐藏 input `input[name="cf-turnstile-response"]`；`getResponse()`（无参）作兜底；删除 `data['cf-turnstile-response']` 冗余字段；新增客户端守卫——widget 存在但无 token 时直接显示 `data-captcha-error`（新 prop `captchaErrorMessage`，EN 默认文案）并还原提交按钮，省一次注定失败的往返；
+- `contact-worker/index.ts`：`parseSubmission` 接受 `cf-turnstile-response` 作为 `turnstileToken` 的备用字段名（防御任何只带自动注入字段的客户端）。
+
+**验证**：dist 3 语言页面含新属性/新逻辑、worker 兜底生效、`npm run check` 通过；prod-smoke 联系表单走 honeypot 路径（turnstile 检查之前返回），不受影响。真实挑战的端到端通过需上线后人工提交验证。
 
 ---
 

@@ -245,7 +245,16 @@ async function parseSubmission(request: Request): Promise<ParsedSubmission | nul
       message: s(raw.message, 4000),
     },
     locale: typeof raw.locale === 'string' ? raw.locale.slice(0, 10) : 'en',
-    turnstileToken: typeof raw.turnstileToken === 'string' ? raw.turnstileToken.slice(0, 4096) : '',
+    // Primary field is turnstileToken; cf-turnstile-response is the name of
+    // the hidden input Turnstile auto-injects into forms with implicit
+    // rendering — accept it as a fallback so any client that ships the
+    // auto-injected field still passes verification.
+    turnstileToken:
+      typeof raw.turnstileToken === 'string' && raw.turnstileToken.length > 0
+        ? raw.turnstileToken.slice(0, 4096)
+        : typeof raw['cf-turnstile-response'] === 'string'
+          ? raw['cf-turnstile-response'].slice(0, 4096)
+          : '',
     honeypotFilled: typeof raw.email_confirm === 'string' && raw.email_confirm.trim() !== '',
     file,
     fileError: null,

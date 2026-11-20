@@ -57,6 +57,7 @@ interface Props {
   sendingLabel?: string;
   fileTypeError?: string;
   fileSizeError?: string;
+  captchaErrorMessage?: string;
 }
 
 const {
@@ -83,6 +84,7 @@ const {
   sendingLabel = 'Sending…',
   fileTypeError = 'Unsupported file type. Please attach PNG, JPG, SVG, WebP, PDF, AI, PSD, DWG, DXF or ZIP.',
   fileSizeError = 'File too large. Maximum size is {MB} MB.',
+  captchaErrorMessage = 'Verification is not complete yet. Please wait a moment for the security check, then try again.',
 } = Astro.props;
 
 const consentRequired = consent?.required === true;
@@ -123,6 +125,7 @@ const rows = Object.keys(grouped)
       data-sending-label={sendingLabel}
       data-file-type-error={fileTypeError}
       data-file-size-error={fileSizeError}
+      data-captcha-error={captchaErrorMessage}
     >
       <input type="hidden" name="email_to" value={emailTo} />
       <div
@@ -407,12 +410,44 @@ const rows = Object.keys(grouped)
         if (data.tel) data.tel = `${cc} ${data.tel}`.trim();
         delete data.tel_countryCode;
         if (consentEl instanceof HTMLInputElement) data.consent = consentEl.checked ? 'true' : 'false';
+        // Turnstile token: with implicit rendering inside a <form>, Turnstile
+        // injects a hidden input named cf-turnstile-response — the documented
+        // delivery channel. getResponse() accepts a widgetId string only
+        // (never a DOM element), so the hidden input is the primary source
+        // and getResponse() is a last-resort fallback.
         const turnstileWidget = formEl.querySelector('.cf-turnstile');
         let tw = '';
-        if (typeof window !== 'undefined' && typeof window.turnstile !== 'undefined' && window.turnstile.getResponse) {
-          tw = window.turnstile.getResponse(turnstileWidget instanceof HTMLElement ? turnstileWidget : undefined);
+        const tsInput = formEl.querySelector('input[name="cf-turnstile-response"]');
+        if (tsInput instanceof HTMLInputElement) tw = tsInput.value.trim();
+        if (
+          !tw &&
+          typeof window !== 'undefined' &&
+          typeof window.turnstile !== 'undefined' &&
+          window.turnstile.getResponse
+        ) {
+          try {
+            tw = window.turnstile.getResponse() || '';
+          } catch {
+            tw = '';
+          }
         }
-        if (tw) data.turnstileToken = tw;
+        delete data['cf-turnstile-response'];
+        if (tw) {
+          data.turnstileToken = tw;
+        } else if (turnstileWidget) {
+          // Widget present but no token yet: fail fast with a clear message
+          // instead of a round-trip that ends in a generic server 400.
+          showStatus(
+            statusEl,
+            formEl.dataset.captchaError || 'Verification is not complete yet. Please try again.',
+            'error'
+          );
+          if (submitBtn instanceof HTMLButtonElement) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = submitLabel;
+          }
+          return;
+        }
         const langMeta = document.querySelector('meta[name="x-locale"]');
         if (langMeta) data.locale = langMeta.getAttribute('content') || 'en';
 
