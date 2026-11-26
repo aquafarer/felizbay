@@ -86,7 +86,7 @@
     "eslint": "^10.10.0",
     "eslint-plugin-astro": "^3.1.0",
     "globals": "^17.12.0",
-    "jose": "^6.2.12",
+    "jose": "^6.2.18",
     "mdast-util-to-string": "^4.0.0",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^1.1.1",
