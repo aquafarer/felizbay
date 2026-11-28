@@ -2561,6 +2561,12 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 
 **遗留**：SPA 泵（LQ177/LQ177WIFI）无 FOB 价格未入 `poolAccessories`（接口要求 `fobUsd`，禁止编造）；规格图存于管理员素材目录，业务供价后可入目录。`QuickViewModal` slug 错配仍待修（见 §19.32 遗留）。
 
+### 19.34 QuickViewModal 死组件移除：§19.32/19.33 遗留消解 (2026-11-28)
+
+**结论**：§19.32 记录的 `QuickViewModal.astro` "p.slug 映射空数据"经排查**不是数据形状错配，而是死代码**——组件无任何页面导入，`data-quick-view-btn` 触发按钮全站不存在，`git grep quick-view` 仅命中 TECH.md 记录本身。组件脚本确实三处皆坏（`modalMap[p.slug]` 用的 `slug` 字段索引里没有、期望的 `categoryLabel`/`summary`/`specs` 字段不存在、详情链接 `/products/${slug}` 缺尾斜杠），但因其从未渲染，线上无任何用户可见影响。
+
+**动作**：直接删除 `src/components/widgets/QuickViewModal.astro`（与 2026-10 清理 patch-worker、§19.32 删壳页同口径：死代码即债，不修不养）。若未来产品列表需要快速预览弹层，应从 `getCollection('product')` 服务端内联 JSON 重建（search-index 是最小化载荷，不含 specs/categoryLabel，不适合作弹层数据源）。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)
