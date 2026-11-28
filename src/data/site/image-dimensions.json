@@ -23,13 +23,37 @@
     "w": 2002,
     "h": 1210
   },
+  "/images/pools/square-rect-spa-tub.webp": {
+    "w": 1600,
+    "h": 1193
+  },
+  "/images/pools/square-pool-white.webp": {
+    "w": 1600,
+    "h": 893
+  },
   "/images/pools/sand-filter-fs12c.webp": {
     "w": 424,
     "h": 501
   },
+  "/images/pools/round-spa-tub.webp": {
+    "w": 1600,
+    "h": 1195
+  },
   "/images/pools/round-pool-s2005.webp": {
     "w": 762,
     "h": 425
+  },
+  "/images/pools/round-pool-application-2.webp": {
+    "w": 1600,
+    "h": 855
+  },
+  "/images/pools/round-pool-application-1.webp": {
+    "w": 1600,
+    "h": 894
+  },
+  "/images/pools/round-grey-pool-studio.webp": {
+    "w": 1600,
+    "h": 921
   },
   "/images/pools/round-grey-pool-cover-1.webp": {
     "w": 1600,
@@ -50,6 +74,18 @@
   "/images/pools/round-blue-pool-1.webp": {
     "w": 1600,
     "h": 1600
+  },
+  "/images/pools/repair-kit.webp": {
+    "w": 467,
+    "h": 286
+  },
+  "/images/pools/rectangular-square-pool.webp": {
+    "w": 1600,
+    "h": 892
+  },
+  "/images/pools/rectangular-pool-yard.webp": {
+    "w": 1600,
+    "h": 1195
   },
   "/images/pools/rectangular-pool-sr220815.webp": {
     "w": 711,
@@ -75,6 +111,14 @@
     "w": 630,
     "h": 460
   },
+  "/images/pools/pool-cover.webp": {
+    "w": 600,
+    "h": 450
+  },
+  "/images/pools/pool-cover-storage-bag.webp": {
+    "w": 746,
+    "h": 317
+  },
   "/images/pools/ladder-4-step-3.png": {
     "w": 453,
     "h": 327
@@ -90,14 +134,6 @@
   "/images/pools/inflatable-stairs.png": {
     "w": 101,
     "h": 104
-  },
-  "/images/pools/hot-tub-square.webp": {
-    "w": 305,
-    "h": 302
-  },
-  "/images/pools/hot-tub-round.png": {
-    "w": 125,
-    "h": 135
   },
   "/images/pools/dog-pool-1.webp": {
     "w": 1536,

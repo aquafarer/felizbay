@@ -2541,6 +2541,26 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 
 **遗留（本任务未动，记录备查）**：`QuickViewModal.astro` 以 `p.slug` 建映射但 search-index 无 `slug` 字段（快速预览弹层静默空数据，先于本次改动存在，属数据形状错配非重定向问题）。
 
+### 19.33 产品图册升级：工厂实拍替换占位主图 + 标准附件区块 (2026-11-28)
+
+**背景**：管理员投放 `D:\Github\泳池产品介绍\泳池产品简介和Price List`（5 个产品目录 + 12 页 PPTX 价格表 + 生产工艺 txt + 20 张照片）。盘点结论：**文字与价格数据零增量**——PPTX 与站上 `src/data/pool-catalog.ts` 完全同源（FOB 价格精确到分一致，如 S3012=$377.64≈PPTX 377.6；23 圆池/15 矩形/7 方矩 SPA/3 圆 SPA 全对齐），生产工艺 5 步已入库（`POOL_PRODUCTION_STEPS`），Round Pool txt 规格（4–6 PSI/0–40°C/6 PSI 上限）已入库（`POOL_PRESSURE_SPECS`）。**唯一实质增量是照片**，并暴露两处硬伤：`hot-tub-round.png` 主图仅 **125×135**、`hot-tub-square.webp` 仅 **305×302**——缩略图级占位图充当 $499/$381 零售页主图。
+
+**照片核验**（多模态模型逐张识别，防文件名误导）：
+
+- 8 张产品图为 Felizbay 品牌高清工厂/场景照（2400–2816px）。关键发现：**"Round Pool" 目录三张实为灰色池**（蓝内衬影棚图 + 2 张带梯子/砂缸泵的户外应用图）→ 接入 round-grey 页而非 round-blue；矩形三张（后院遮阳伞场景、灰矩形出水图、白色方池木平台家庭场景）→ rectangular 页；两张 SPA 桶出水工厂照 → 替换两个占位主图。
+- 附件图中 `Electric SPA Pump.jpg`（LQ177/LQ177WIFI 加热/波浪/过滤三合一）、`Electric Air Pump.jpg`、`Sand Filter Pump.jpg`（2300 GAL）、`Lithium … Spec.jpg` 实为**规格说明图**（参数表 + CE/RoHS 标识的营销合成图，非干净产品照）——全部不采用（缩略尺寸下文字不可读）；锂电充气泵实拍仅 422×720 低于站上现有图，不替换。
+
+**实施**：
+
+- sharp 转 **11 张 WebP** 入 `public/images/pools/`（大图 resize 1600px q82 `withoutEnlargement`，小图原尺寸）：`round-spa-tub.webp`（1600×1195）、`square-rect-spa-tub.webp`（1600×1193）替换两个占位主图——四处引用同步（两个 MDX 的 image+gallery[0]、`product-visuals.yaml`、`functions/api/checkout.ts` FZ-SPA-RND 条目）；round-grey 图库追加 3 张（studio/application-1/application-2）；rectangular 图库追加 3 张（yard/square/white）；`repair-kit`/`pool-cover`/`pool-cover-storage-bag`（标准附件三件套，PPTX slides 6–7 镜像）。
+- `specs.astro` 新增 **Standard Accessories** 实拍区块（三卡片 + toc 链接），文案注明"每系列精确清单见上方价格表"——不覆盖 per-series `included` 差异（圆池不含盖子、灰款盖子另售等既有口径不受影响）。
+- `pool-catalog.ts` 4-Step Ladder 规格用 PPTX slide 9 实测数据充实（1620mm 高 × 1022mm 底座、633mm 内跨、ø25mm 管材、每侧 4 级防滑踏步、护池法兰脚+胶帽、KD 平板包装）——**本轮唯一新增文字数据**。
+- 删除旧占位图 2 张（R2 部署时 `fast-upload-r2.mjs` 自动剪枝 `images/` 前缀陈旧对象）；`image-dimensions.json` 重建（63 条：+11 −2）。
+
+**验收**：build 全绿（709 页，`_redirects` 88 条）；validate-dist PASS；audit-dist-links 0 broken/0 assets/0 hreflang；`npm run check` 四链全 0；乱码铁律扫描 880 文件 0 命中；注册表新条目 w/h 正确、旧条目已移除。
+
+**遗留**：SPA 泵（LQ177/LQ177WIFI）无 FOB 价格未入 `poolAccessories`（接口要求 `fobUsd`，禁止编造）；规格图存于管理员素材目录，业务供价后可入目录。`QuickViewModal` slug 错配仍待修（见 §19.32 遗留）。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)

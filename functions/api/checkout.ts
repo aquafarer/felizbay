@@ -30,7 +30,7 @@ const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
     slug: 'hot-tub-round',
     unitAmount: 49900,
     currency: 'usd',
-    image: '/images/pools/hot-tub-round.png',
+    image: '/images/pools/round-spa-tub.webp',
   },
 };
 

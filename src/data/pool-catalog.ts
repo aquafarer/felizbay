@@ -272,7 +272,7 @@ export const poolAccessories: PoolAccessory[] = [
   },
   {
     name: '4-Step Ladder',
-    spec: 'Safety ladder, 1.62 m',
+    spec: 'Above-ground pool ladder for 10–15 cm walls — 1620 mm high × 1022 mm base, 633 mm inner span, ø25 mm tubing, 4 non-slip steps per side, liner-safe flared feet with rubber caps, KD flat packing',
     image: '/images/pools/ladder-4-step-1.png',
     fobUsd: 49.74,
   },

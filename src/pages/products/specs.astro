@@ -25,6 +25,7 @@ const tocLinks = [
   { href: '#rect-square', label: 'Rectangular / Square' },
   { href: '#hot-tub-square-rect', label: 'Square / Rect SPA' },
   { href: '#hot-tub-round', label: 'Round SPA' },
+  { href: '#standard-accessories', label: 'Standard Accessories' },
   { href: '#accessories', label: 'Accessories' },
   { href: '#pricing-rules', label: 'Pricing Rules' },
   { href: '#pressure', label: 'Pressure & Safety' },
@@ -207,6 +208,56 @@ const formatUsd = (n: number) =>
           </div>
         </section>
       ))}
+
+      <!-- Standard Accessories -->
+      <section id="standard-accessories" class="scroll-mt-24">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">Standard Accessories</h2>
+          <span class="text-sm font-medium text-gray-400 dark:text-slate-500">Factory photos</span>
+        </div>
+        <p class="text-sm text-gray-500 dark:text-slate-400 mb-4">
+          The standard accessory set from the Felizbay quotation sheet — repair kit, pool cover, and storage bag. Exact
+          inclusions per series are listed with each price table above.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <figure class="rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden bg-white dark:bg-slate-900">
+            <div class="bg-gray-50 dark:bg-slate-800/60 p-4 flex items-center justify-center h-40">
+              <img
+                src="/images/pools/repair-kit.webp"
+                alt="Drop-stitch pool repair kit — patches and valve tools"
+                class="max-h-full w-auto rounded"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="px-3 py-2 text-sm font-medium text-gray-700 dark:text-slate-300">Repair Kit</figcaption>
+          </figure>
+          <figure class="rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden bg-white dark:bg-slate-900">
+            <div class="bg-gray-50 dark:bg-slate-800/60 p-4 flex items-center justify-center h-40">
+              <img
+                src="/images/pools/pool-cover.webp"
+                alt="Drop-stitch pool dust cover"
+                class="max-h-full w-auto rounded"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="px-3 py-2 text-sm font-medium text-gray-700 dark:text-slate-300">Pool Cover</figcaption>
+          </figure>
+          <figure class="rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden bg-white dark:bg-slate-900">
+            <div class="bg-gray-50 dark:bg-slate-800/60 p-4 flex items-center justify-center h-40">
+              <img
+                src="/images/pools/pool-cover-storage-bag.webp"
+                alt="Pool cover and storage bag set"
+                class="max-h-full w-auto rounded"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="px-3 py-2 text-sm font-medium text-gray-700 dark:text-slate-300">Storage Bag</figcaption>
+          </figure>
+        </div>
+      </section>
 
       <!-- Optional Accessories -->
       <section id="accessories" class="scroll-mt-24">

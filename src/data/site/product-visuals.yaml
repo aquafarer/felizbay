@@ -6,6 +6,6 @@ visuals:
   - id: round-grey-drop-stitch-pool
     image: /images/pools/round-grey-pool-1.webp
   - id: hot-tub-square-rect
-    image: /images/pools/hot-tub-square.webp
+    image: /images/pools/square-rect-spa-tub.webp
   - id: hot-tub-round
-    image: /images/pools/hot-tub-round.png
+    image: /images/pools/round-spa-tub.webp
