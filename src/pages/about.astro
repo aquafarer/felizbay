@@ -50,9 +50,44 @@ const metadata = {
 };
 
 const crumbs = [{ name: t('nav.home') || 'Home', href: '/' }, { name: 'About' }];
+
+// FAQPage schema: /about/ is the canonical EN about page (in sitemap;
+// /en/about/ canonicals to it), so the rich-result payload must live here
+// too — not only on the [lang] variants.
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Who is Felizbay?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Aquafarer LLC (New Mexico, USA) designs and supplies premium drop stitch inflatable swimming pools for families, retailers, and OEM partners worldwide.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does Felizbay make?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Drop stitch inflatable swimming pools — rectangular and round models with rigid, rock-solid walls that set up in minutes and fold away for winter storage.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where are Felizbay pools sold?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Worldwide through our online store, retail partners, and OEM supply chains. Contact info@felizbay.com for wholesale and OEM inquiries.',
+      },
+    },
+  ],
+});
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
+  <script is:inline type="application/ld+json" set:html={faqSchema} />
   <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
 
   <!-- Origin Story -->

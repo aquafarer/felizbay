@@ -2514,6 +2514,12 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 
 **验证**：dist 3 语言页面含新属性/新逻辑、worker 兜底生效、`npm run check` 通过；prod-smoke 联系表单走 honeypot 路径（turnstile 检查之前返回），不受影响。真实挑战的端到端通过需上线后人工提交验证。
 
+### 19.31 About 权威页 FAQ schema 补齐 + 品牌素材入库 (2026-11-21)
+
+**分叉调查结论**：根 `/about/` 是唯一入 sitemap 的 EN about 页（`/en/about/` 为镜像、canonical 指向 `/about/`、不入 sitemap），但 FAQPage JSON-LD 只在 `[lang]` 版页面存在——权威页缺 schema，EN 搜索结果拿不到 FAQ 富摘要，`/en/about/` 上的 schema 又因 canonical 合并被忽略。修复：根 `about.astro` 补同款 faqSchema（3 问，与 [lang] 版一致）；sitemap/canonical/hreflang 结构本就正确，未动。两个页面实现的章节布局差异（root 版无 production/global_ops 渲染）为既有设计，保留。
+
+**品牌素材入库**：`docs/brand/Felizbay_logohead.jpeg`（logo 生成源）正式提交（§19.28 曾引用但文件此前未入库——发现并修复悬空引用）。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)
