@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Felizbay pravougaoni bazen na naduvavanje Drop Stitch u dvorištu
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Kada se sezona završi, ocedite, osušite, umotajte i čuvajte bazen u torbi do sledećeg leta.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Felizbay okrugli Drop Stitch bazen na naduvavanje
 blog_latest:
   title: Vodiči i uvid u bazen

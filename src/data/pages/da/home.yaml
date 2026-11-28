@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Felizbay rektangulær drop stitch oppustelig swimmingpool i en baghave
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Når sæsonen slutter, skal du dræne, tørre, rulle op og opbevare poolen i posen indtil næste sommer.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Felizbay oppustelig swimmingpool med rund drop stitch
 blog_latest:
   title: Poolguider og -indsigter

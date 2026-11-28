@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Felizbayn suorakulmainen Drop Stitch puhallettava uima-allas takapihalla
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Kun kausi päättyy, valuta, kuivaa, rullaa ja säilytä allas pussissaan ensi kesään asti.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Felizbay pyöreä Drop Stitch puhallettava uima-allas
 blog_latest:
   title: Allasoppaat ja näkemykset

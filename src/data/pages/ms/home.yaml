@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Kolam renang kembung Drop Stitch segi empat tepat Felizbay di belakang rumah
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Apabila musim berakhir, toskan, keringkan, gulung dan simpan kolam di dalam begnya sehingga musim panas akan datang.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Kolam renang kembung Drop Stitch bulat Felizbay
 blog_latest:
   title: Panduan & Cerapan Kolam

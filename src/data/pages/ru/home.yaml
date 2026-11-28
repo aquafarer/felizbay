@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Прямоугольный надувной бассейн Felizbay Drop Stitch на заднем дворе
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Когда сезон закончится, слейте воду, высушите, закатайте и храните бассейн в сумке до следующего лета.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Felizbay круглый надувной бассейн Drop Stitch
 blog_latest:
   title: Путеводители по бассейнам и аналитика

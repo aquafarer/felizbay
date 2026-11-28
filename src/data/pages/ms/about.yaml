@@ -1,7 +1,7 @@
 hero:
   tagline: Tentang kami
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Kolam renang kembung Felizbay
   title: |
     Menjadikan berenang mudah, <br />
@@ -39,7 +39,7 @@ features3_more:
       description: Pembuatan label peribadi dengan percetakan logo dan pembungkusan sedia runcit.
       icon: tabler:palette
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Kolam renang kembung Felizbay segi empat tepat Drop Stitch
 steps2_values:
   title: Nilai kita

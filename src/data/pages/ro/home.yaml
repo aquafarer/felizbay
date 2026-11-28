@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Piscina gonflabilă dreptunghiulară Felizbay Drop Stitch într-o curte
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Când se termină sezonul, scurgeți, uscați, rulați și depozitați piscina în geantă până vara viitoare.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Piscina gonflabilă rotundă Felizbay Drop Stitch
 blog_latest:
   title: Ghiduri și informații despre piscină

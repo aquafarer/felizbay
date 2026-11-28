@@ -23,7 +23,7 @@ const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
     slug: 'round-grey-drop-stitch-pool',
     unitAmount: 39900,
     currency: 'usd',
-    image: '/images/pools/round-grey-pool-1.webp',
+    image: '/images/pools/round-grey-pool-studio.webp',
   },
   'FZ-SPA-RND': {
     name: 'Round Drop-Stitch Soaking Pool with Built-In Seats',

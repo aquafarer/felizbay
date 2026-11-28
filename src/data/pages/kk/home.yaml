@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Ауладағы Felizbay тікбұрышты Drop Stitch үрлемелі бассейні
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Маусым аяқталғаннан кейін бассейнді ағызып, кептіріп, орап, келесі жазға дейін сөмкесінде сақтаңыз.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Felizbay дөңгелек Drop Stitch үрлемелі бассейн
 blog_latest:
   title: Бассейнге арналған гидтер және түсініктемелер

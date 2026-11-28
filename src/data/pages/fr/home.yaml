@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Piscine gonflable rectangulaire Drop Stitch Felizbay dans une cour
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: À la fin de la saison, égouttez, séchez, enroulez et rangez la piscine dans son sac jusqu'à l'été prochain.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Piscine gonflable ronde Drop Stitch Felizbay
 blog_latest:
   title: Guides et informations sur la piscine

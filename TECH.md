@@ -2569,6 +2569,34 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 
 ---
 
+### 19.35 旧产品照片全站退役：新工厂照全量替换 + 旧文件删除 (2026-11-28)
+
+**决策**：应用户要求"把现在连接中的照片用新的照片替换，并把旧照片删除"，确认口径为**全站替换并删除旧文件**；蓝池（round-blue-pool-1）、狗池（dog-pool-1）、S2005 工厂照（round-pool-s2005，FitGuide + prod-smoke 断言依赖）及全部配件图无新对应照，**保留**。
+
+**替换映射**（旧 → 新，语义对位经多模态逐张核验）：
+
+| 旧文件                         | 引用量 | 新文件                                                             |
+| ------------------------------ | ------ | ------------------------------------------------------------------ |
+| round-grey-pool-1.webp         | 126    | round-grey-pool-studio.webp                                        |
+| round-grey-pool-2.webp         | 5      | round-pool-application-1.webp                                      |
+| round-grey-pool-cover-1.webp   | 7      | pool-cover.webp（灰色 SPA 工作室照，带盖/内衬细节）                |
+| rectangular-pool-1.jpg         | 46     | rectangular-pool-yard.webp                                         |
+| rectangular-pool-2.webp        | 86     | rectangular-square-pool.webp                                       |
+| rectangular-pool-sr220815.webp | 3      | square-pool-white.webp（2×2 方形款对应，alt 去掉 "factory photo"） |
+
+**仅图库引用、无映射直接删除**：round-grey-pool-3.webp、rectangular-pool-3.webp、rectangular-pool-4.webp；另删零引用死文件 ladder-4-step-2.png、ladder-4-step-3.png。共删除 11 个文件（63→52 注册表条目）。
+
+**动作**：
+
+1. 4 个 MDX 图库改写为纯新照（grey: studio+app1+app2+cover；rect: rect-square+yard+white；hot-tub-round: round-spa-tub+pool-cover，移除借用的灰池照；hot-tub-square-rect: 仅 square-rect-spa-tub，移除借用的矩形池照），updateDate 同步 2026-11-28。
+2. 全站字符串替换脚本（Node .mjs，`git ls-files` 遍历）覆盖 125 文件 246 处：37 语言 about/home YAML、evidence/hero-images/learning-center/product-visuals/tech-cards/use-cases、specs.astro videoSchema 缩略图、checkout.ts、keystatic 页面、`[slug].astro` FitGuide。**踩坑**：首轮脚本 SKIP 列表误含 `'.astro'`（本意排除根 `.astro` 构建缓存）导致全部 `.astro` 源文件漏替换，第二轮修正后补齐 7 文件——验证必须 `git grep` 全量兜底而非只看脚本输出。
+3. `cloudflare-setup.yml` R2 端到端抽查对象 `rectangular-pool-2.webp` → `rectangular-square-pool.webp`（原引用无前导斜杠，脚本模式未命中，手动修复）。
+4. 旧文件删除；R2 陈旧对象由部署时 `fast-upload-r2.mjs` 自动剪除（images/ 前缀）。
+
+**验证**：`git grep` 旧文件名零命中（TECH.md/docs 历史叙述与注册表除外，注册表构建时再生）；build 全绿（52 images dims、BROKEN LINKS/ASSETS/HREFLANG 0、_redirects 88 条）；`npm run check` 通过。
+
+---
+
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)
 
 本章为业务侧（销售/管理员）提供两份可直接使用的材料：**询盘回访邮件模板**（配合 `/keystatic/contact-submissions` 使用）与**待解锁数据项的实施方案映射**。技术侧红线：所有未发布数据（蓝/灰零售 SKU 尺寸、灰款溢价原因、加热器兼容清单、B2B 产能）**一律不得在回访中口头补造**，按模板的边界话术处理。

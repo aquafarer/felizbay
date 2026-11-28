@@ -26,7 +26,7 @@ cases:
     products:
       - Rectangular Drop Stitch Pool
       - Cartridge Filter Pump
-    image: /images/pools/rectangular-pool-1.jpg
+    image: /images/pools/rectangular-pool-yard.webp
 
   - id: retailers-wholesale
     title: Retail & Wholesale Supply
@@ -40,4 +40,4 @@ cases:
     products:
       - Full Pool Catalog
       - OEM / ODM Services
-    image: /images/pools/round-grey-pool-1.webp
+    image: /images/pools/round-grey-pool-studio.webp

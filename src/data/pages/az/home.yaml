@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Həyətdə Felizbay düzbucaqlı Drop Stitch şişmə hovuzu
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Mövsüm başa çatdıqda, hovuzu süzün, qurutun, yuvarlayın və gələn yaya qədər çantasında saxlayın.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Felizbay dəyirmi Drop Stitch şişmə hovuzu
 blog_latest:
   title: Hovuz Bələdçiləri və İnsights

@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Felizbay rechthoekig drop stitch opblaasbaar zwembad in een achtertuin
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Wanneer het seizoen voorbij is, laat u het zwembad leeglopen, drogen, oprollen en in de zak bewaren tot de volgende zomer.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Felizbay rond drop stitch opblaasbaar zwembad
 blog_latest:
   title: Zwembadgidsen en -inzichten

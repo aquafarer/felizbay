@@ -12,7 +12,7 @@ hero:
       href: /find-your-pool/
       icon: tabler:compass
   image:
-    src: /images/pools/rectangular-pool-2.webp
+    src: /images/pools/rectangular-square-pool.webp
     alt: Obdélníkový nafukovací bazén Felizbay Drop Stitch na dvorku
 features:
   id: features
@@ -86,7 +86,7 @@ steps:
       description: Když sezóna skončí, vypusťte, vysušte, srolujte a uložte bazén v tašce do příštího léta.
       icon: tabler:package
   image:
-    src: /images/pools/round-grey-pool-1.webp
+    src: /images/pools/round-grey-pool-studio.webp
     alt: Kulatý nafukovací bazén Felizbay Drop Stitch
 blog_latest:
   title: Pool Guides & Insights
