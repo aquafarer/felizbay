@@ -13,6 +13,7 @@ import { getLangFromUrl, removeLang, localizeUseCasePath } from '~/i18n/utils';
 import { localizeHref, entityForHref } from '~/i18n/routing';
 import langData from '~/data/site/languages.yaml';
 import { getUiForLang } from '~/i18n/generated/ui-all';
+import { NEWS_LOCALES } from '~/i18n/news-locales';
 
 interface Link {
   text?: string;
@@ -351,6 +352,7 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
 </div>
 
 <meta name="x-locale" content={currentLocale} />
+<script type="application/json" id="search-news-locales" set:html={JSON.stringify(NEWS_LOCALES)} />
 <script is:inline data-astro-rerun>
   (function () {
     const dialog = document.getElementById('lang-dialog');
@@ -460,6 +462,17 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
     const emptyNone = empty ? empty.getAttribute('data-empty-none') || 'No matches found' : '';
     if (triggers.length === 0 || !dialog || !input || !list) return;
 
+    const lang = document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en';
+    // News is worker-routed for a fixed locale set: a non-worker locale must
+    // link to the EN root instead of building a 404 /xx/news/ prefix.
+    const NEWS_LOCALES_SET = JSON.parse(document.getElementById('search-news-locales')?.textContent || '[]');
+    // Index urls are locale-neutral canonical paths ("/about/"): prefix the
+    // page locale so the first hop is the canonical page (no 308).
+    function localizedHref(m) {
+      if (m.type === 'article' && NEWS_LOCALES_SET.indexOf(lang) === -1) return m.url;
+      return lang === 'en' ? m.url : '/' + lang + m.url;
+    }
+
     let index = null;
     let indexLoading = null;
 
@@ -531,16 +544,30 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
         return;
       }
       const data = index || [];
-      const matches = data
-        .filter(function (it) {
-          return (
-            (it.title || '').toLowerCase().includes(q) ||
-            (it.excerpt || '').toLowerCase().includes(q) ||
-            (it.tags || []).some(function (t) {
-              return String(t).toLowerCase().includes(q);
-            })
-          );
-        })
+      const matches0 = data.filter(function (it) {
+        return (
+          (it.title || '').toLowerCase().includes(q) ||
+          (it.excerpt || '').toLowerCase().includes(q) ||
+          (it.tags || []).some(function (t) {
+            return String(t).toLowerCase().includes(q);
+          })
+        );
+      });
+      // Prefer the page-language entry per url, fall back to EN entries not
+      // already covered — no duplicates, canonical first hop.
+      const localeMatches = matches0.filter(function (m) {
+        return (m.lang || 'en') === lang;
+      });
+      const localeUrls = {};
+      localeMatches.forEach(function (m) {
+        localeUrls[m.url] = 1;
+      });
+      const matches = localeMatches
+        .concat(
+          matches0.filter(function (m) {
+            return (m.lang || 'en') === 'en' && !localeUrls[m.url];
+          })
+        )
         .slice(0, 20);
       if (matches.length === 0) {
         list.classList.add('hidden');
@@ -561,7 +588,7 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
             : '';
           return (
             '<li><a href="' +
-            escapeAttr((document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en') + m.url) +
+            escapeAttr(localizedHref(m)) +
             '" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">' +
             img +
             '<div class="flex items-center gap-1.5 min-w-0 flex-1">' +
@@ -611,7 +638,9 @@ const languageDialogTitle = headerUi?.['header.language'] || 'Language';
         if (q) {
           close();
           const loc = document.querySelector('meta[name="x-locale"]')?.getAttribute('content') || 'en';
-          window.location.href = '/' + loc + '/search?q=' + encodeURIComponent(q);
+          // Canonical path with trailing slash: no 308, and root EN stays on
+          // /search/ instead of hopping to the /en/ mirror.
+          window.location.href = (loc === 'en' ? '' : '/' + loc) + '/search/?q=' + encodeURIComponent(q);
         }
       }
     });

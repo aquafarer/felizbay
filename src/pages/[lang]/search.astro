@@ -4,6 +4,7 @@ export const prerender = true;
 import Layout from '~/layouts/PageLayout.astro';
 import { languages, defaultLang } from '~/i18n/config';
 import { getUiForLang } from '~/i18n/generated/ui-all';
+import { NEWS_LOCALES } from '~/i18n/news-locales';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -43,6 +44,7 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
     </div>
 
     <div id="search-filters" class="hidden mb-6 flex flex-wrap gap-2" data-search-filters></div>
+    <script type="application/json" id="search-news-locales" set:html={JSON.stringify(NEWS_LOCALES)} />
     <div id="search-results" class="space-y-4">
       {q && (
         <p class="text-gray-500 dark:text-gray-400" id="loading">
@@ -94,7 +96,7 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
         );
       }
 
-      const matches = index.filter(function (it) {
+      const matches0 = index.filter(function (it) {
         return (
           (it.title || '').toLowerCase().includes(lower) ||
           (it.excerpt || '').toLowerCase().includes(lower) ||
@@ -103,6 +105,31 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
           })
         );
       });
+
+      // Index urls are locale-neutral canonical paths ("/about/"): prefer the
+      // entry in the page language, fall back to EN entries whose url is not
+      // already covered (products/news), so results never duplicate and the
+      // built href is canonical on the first hop (no 308 / no dead prefix).
+      const localeMatches = matches0.filter(function (m) {
+        return (m.lang || 'en') === lang;
+      });
+      const localeUrls = {};
+      localeMatches.forEach(function (m) {
+        localeUrls[m.url] = 1;
+      });
+      const matches = localeMatches.concat(
+        matches0.filter(function (m) {
+          return (m.lang || 'en') === 'en' && !localeUrls[m.url];
+        })
+      );
+
+      // Locale-prefix only trees that exist; news is worker-routed, so a
+      // non-worker locale links to the EN root instead of a 404 prefix.
+      const NEWS_LOCALES_SET = JSON.parse(document.getElementById('search-news-locales')?.textContent || '[]');
+      function localizedHref(m) {
+        if (m.type === 'article' && NEWS_LOCALES_SET.indexOf(lang) === -1) return m.url;
+        return lang === 'en' ? m.url : '/' + lang + m.url;
+      }
 
       const types = {};
       matches.forEach(function (m) {
@@ -121,9 +148,9 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
           escapeHtml(q) +
           '</strong>.</p><p class="text-gray-400 dark:text-gray-500 text-sm mt-2">Try a different keyword or browse <a href="/' +
           lang +
-          '/faq" class="text-sky-600 hover:underline">FAQ</a> or <a href="/' +
+          '/faq/" class="text-sky-600 hover:underline">FAQ</a> or <a href="/' +
           lang +
-          '/products" class="text-sky-600 hover:underline">products</a>.</p></div>';
+          '/products/" class="text-sky-600 hover:underline">products</a>.</p></div>';
         filterBar.classList.add('hidden');
         return;
       }
@@ -174,7 +201,7 @@ const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';
                   escapeAttr(m.title) +
                   '" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display=\'none\'"></div>'
                 : '';
-              const localizedUrl = '/' + lang + m.url;
+              const localizedUrl = localizedHref(m);
               return (
                 '<a href="' +
                 escapeAttr(localizedUrl) +

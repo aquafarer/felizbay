@@ -11,12 +11,47 @@
 //      noindex class MUST be indexable AND listed in sitemap-entity.xml; any
 //      unexpected noindex page fails the build (and vice versa: a noindex page
 //      listed in any sitemap is a leak).
+//   6. Trailing-slash gate (2026-11-28, internal request hygiene): every
+//      site-internal href/src/content in built HTML must already be in
+//      canonical form (trailing slash, or a file-like extension). A link
+//      Cloudflare Pages would answer with a 308 doubles the reads per click —
+//      the build must never emit one. Hard failure with examples.
+//   7. dist/_redirects must exist (scripts/generate-fallback-redirects.mjs
+//      generates it after astro build — its absence means the pipeline is
+//      miswired or the generator was skipped).
 // Exit code 1 on any hard violation (build fails → deploy blocked).
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
+const SITE = 'https://felizbay.com';
+const FILE_EXT = new Set([
+  'xml',
+  'txt',
+  'json',
+  'png',
+  'jpg',
+  'jpeg',
+  'webp',
+  'svg',
+  'ico',
+  'css',
+  'js',
+  'pdf',
+  'webmanifest',
+  'woff',
+  'woff2',
+  'ttf',
+  'gif',
+  'avif',
+  'csv',
+  'zip',
+  'mp4',
+  'md',
+  'xlsx',
+  'ics',
+]);
 const SITEMAPS = [
   'sitemap-entity.xml',
   'ai-sitemap.xml',
@@ -109,24 +144,44 @@ function main() {
       .replace(/<[^>]+>/g, ' ');
     const keyMatch = RAW_KEY_RE.exec(visibleText);
     if (keyMatch) errors.push(`raw i18n key leak: ${rel} — ${keyMatch[1]}`);
+
+    // 6. Trailing-slash gate: any site-internal link that Cloudflare Pages
+    // would answer with a 308 is a hard failure (doubles reads per click).
+    const linkRe = /(?:href|src|content)="([^"]+)"/g;
+    let lm;
+    while ((lm = linkRe.exec(html)) !== null) {
+      let u = lm[1];
+      if (u.startsWith(SITE)) u = u.slice(SITE.length);
+      if (!u.startsWith('/') || u.startsWith('//')) continue;
+      if (u.startsWith('/api/')) continue;
+      const clean = u.split('#')[0].split('?')[0];
+      if (clean === '' || clean === '/') continue;
+      const last = clean.split('/').pop();
+      if (last.includes('.') && FILE_EXT.has(last.split('.').pop().toLowerCase())) continue;
+      if (!clean.endsWith('/')) errors.push(`non-canonical internal link (308 source): ${rel} — ${lm[1]}`);
+    }
+  }
+
+  // 7. dist/_redirects must exist (news/rss fallback for non-worker locales).
+  const redirectsFile = path.join(DIST, '_redirects');
+  if (!existsSync(redirectsFile)) {
+    errors.push('dist/_redirects missing — run scripts/generate-fallback-redirects.mjs after astro build');
+  } else {
+    const ruleCount = readFileSync(redirectsFile, 'utf8')
+      .split('\n')
+      .filter((l) => /^[^#\s]/.test(l)).length;
+    if (ruleCount === 0) errors.push('dist/_redirects exists but contains zero rules');
   }
 
   // 5. Noindex regression guard — see header comment. Classify every built
   // page by robots meta; anything noindex outside the intentional classes is
   // an accidental deindexing (the exact failure mode this gate exists for).
-  const SITE = 'https://felizbay.com';
   const entityXml = readFileSync(path.join(DIST, 'sitemap-entity.xml'), 'utf8');
   const entityLocs = new Set([...entityXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname));
   const intentionalNoindex = (p) =>
     p === '/404.html' ||
     /^\/(keystatic|internal|login|register|admin)\//.test(p) ||
     /^\/en\/(keystatic|internal|login|register|admin)\//.test(p) ||
-    p === '/zh/' ||
-    p === '/ja/' ||
-    p === '/ko/' ||
-    p === '/en/zh/' ||
-    p === '/en/ja/' ||
-    p === '/en/ko/' ||
     /\/search\/$/.test(p);
   const isEnMirror = (p) => p === '/en/' || p.startsWith('/en/');
   for (const file of htmlFiles) {
@@ -139,11 +194,7 @@ function main() {
     if (robots.includes('noindex')) {
       // Listed despite noindex → sitemap leak.
       if (listed) errors.push(`noindex page listed in sitemap-entity.xml: ${rel}`);
-      if (
-        isEnMirror(rel) &&
-        !/^\/en\/(zh|ja|ko)\/$/.test(urlPath) &&
-        !/^\/en\/(keystatic|internal|login|register|admin)\//.test(urlPath)
-      ) {
+      if (isEnMirror(rel) && !/^\/en\/(keystatic|internal|login|register|admin)\//.test(urlPath)) {
         // EN mirror must stay canonical → root counterpart, never self-referencing
         // (self-canonical + noindex would strand the page out of both indexes).
         const expected = SITE + urlPath.replace(/^\/en/, '');

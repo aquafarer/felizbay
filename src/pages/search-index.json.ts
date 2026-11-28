@@ -141,7 +141,10 @@ export const GET: APIRoute = async () => {
       const price = fm.price || {};
       items.push({
         title: fm.title || 'Untitled',
-        url: `${SITE}/products/${product.id.replace(/\.(md|mdx)$/i, '')}`,
+        // Locale-neutral canonical path (trailing slash): consumers prefix the
+        // current page locale, so one entry serves every language tree and the
+        // built link never pays a 308.
+        url: `/products/${product.id.replace(/\.(md|mdx)$/i, '')}/`,
         excerpt: excerpt(fm.excerpt || fm.summary || fm.description || stripHtml(body)),
         type: 'product',
         image: fm.image || '',
@@ -183,14 +186,10 @@ export const GET: APIRoute = async () => {
         if (typeof t === 'string') sectionTitles.push(t);
       }
 
-      const url =
-        slug === 'home'
-          ? lang === 'en'
-            ? `${SITE}/`
-            : `${SITE}/${lang}/`
-          : lang === 'en'
-            ? `${SITE}/${slug}`
-            : `${SITE}/${lang}/${slug}`;
+      // Locale-neutral canonical url (trailing slash, no lang prefix): the
+      // consumer prepends the page locale, keeping a single canonical form at
+      // the source (no 308, no /xx/yy/ double-prefix 404s).
+      const url = slug === 'home' ? `${SITE}/` : `${SITE}/${slug}/`;
 
       const title =
         typeof hero?.title === 'string' ? stripHtml(hero.title) : slug.charAt(0).toUpperCase() + slug.slice(1);

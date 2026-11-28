@@ -2520,6 +2520,27 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 
 **品牌素材入库**：`docs/brand/Felizbay_logohead.jpeg`（logo 生成源）正式提交（§19.28 曾引用但文件此前未入库——发现并修复悬空引用）。
 
+### 19.32 内部请求治理：搜索链接规范 + 回退重定向 + 尾斜杠闸门 (2026-11-28)
+
+**背景与审计**：参照同架构站点（Aquafarer，见 `D:\Github\泳池优化方案\linshi`）2026-11 流量审计暴露的"308 尾斜杠风暴 + 404 无回退"模式，对 Felizbay dist 做同口径扫描（约 10 万条内链）。结果：HTML 静态内链与 sitemap 本就 0 违规（AstroWind 模板源头规范），但**搜索子系统是重灾区**，另有两处架构死重：
+
+1. **`search-index.json`（66 条中 51 条无尾斜杠 + 语言前缀语义混乱）**：页面条目 URL 形如 `/about`（EN）/`/fr/about`（FR），四个消费端（root search、[lang] search、Header 搜索弹层、news 索引）各自拼接，产生三种坏链接：缺斜杠 308（每次搜索结果点击双重读取）、`/en/fr/about` 双前缀 404、`de/about` 相对路径漂移 404。
+2. **news-worker `searchIndexJson` 返回绝对 URL**（`https://felizbay.com/news/…`），消费端再拼 `'/'+lang+url` → `href="/enhttps://…"` 全坏。
+3. **[lang] search 无结果模板** `'/' + lang + '/faq'`、`'/products'` 缺尾斜杠（37 页 × 2 = 74 个 308 源）。
+4. **22 个非 worker 语种 `/xx/news`、`/xx/rss.xml` 全 404**（news-worker 区级路由只覆盖 15 语种；`/tr/news`、`/tr/rss.xml` 实测 404）。
+5. **astro.config `redirects` 的 3 个 meta-refresh 壳页（/zh/ /ja/ /ko/）是死重**：`functions/_middleware.ts` 的 REMOVED_LOCALES 301 先于静态资产拦截（线上实测 /zh/、/zh/news 均 301），壳页永不送达，纯误导。
+
+**修复（源头规范 → 兜底 → 闸门，三层）**：
+
+- **源头**：`search-index.json.ts` 改为**语种中立规范 URL**（`/about/`、`/products/xxx/`，尾斜杠、无语言前缀、无域）；news-worker `searchIndexJson` 同口径（`/news/${slug}/` 相对路径，随下次 worker 部署生效）。消费端三处（`search.astro`、`[lang]/search.astro`、`Header.astro`）统一：页面语种条目优先、EN 条目按 URL 去重兜底（消灭 15 语种重复结果），href 构建走 `localizedHref()`；news 条目仅在 worker 语种加前缀（`NEWS_LOCALES` 由 `src/i18n/news-locales.ts` **构建期从 wrangler.toml 区级路由派生**，经 `<script type="application/json" id="search-news-locales">` 注入内联脚本——单一来源零漂移；注意派生不能走 `import.meta.url` 相对路径，prerender 打包会把模块搬进 `dist/.prerender/`，须用 `process.cwd()` 锚定）。Header 弹层回车跳转 `/xx/search` → 规范 `/xx/search/`（root 保持 `/search/` 不再跳 /en/ 镜像）；[lang] 无结果模板补尾斜杠。
+- **兜底**：新增 `scripts/generate-fallback-redirects.mjs` 生成 `dist/_redirects`（Pages 原生、边缘评估、不占动态规则额度）。两侧推导不手写：worker 侧解析 wrangler.toml 路由，语种侧枚举 dist 树 − worker 语种 − REMOVED_LOCALES − en → 22 回退语种 × 4 条规则（`/xx/news`、`/xx/news/`、`/xx/rss.xml` 静态 + `/xx/news/*` splat，共 66 静态 + 22 splat = 88 条），301 到 EN 根端点。自校验硬失败：根路由存在、四形态齐备、源唯一、静态先于 splat、不遮蔽 worker 端点、REMOVED_LOCALES 不出现（中间件是唯一 owner）、限额（≤2100 静态/≤100 动态）。REMOVED_LOCALES 仍由中间件前缀剥离 301 处理（全路径恢复，非仅根路径）。
+- **闸门**：`validate-dist.mjs` 新增两条硬失败——(a) 任何 dist HTML 内的站内 `href/src/content` 缺尾斜杠（308 源）即失败（含 `https://felizbay.com` 绝对形式；文件扩展名与 `/api/` 豁免）；(b) `dist/_redirects` 缺失或零规则即失败（防管线脱线）。同时清理陈旧的 /zh|ja|ko、/en/zh|ja|ko noindex 例外（壳页已删）。`astro.config.ts` 删除 `redirects` 死对象；`package.json` build 管线在 `astro build` 后接入生成器。
+- **prod-smoke**：修正过时注释（壳页→中间件 301），新增 3 条线上断言：`/tr/news`→`/news/`、`/tr/news/`→`/news/`、`/tr/rss.xml`→`/rss.xml`（守护 `_redirects` 生产生效）。
+
+**验收**：build 全绿（709 页，比前少 6 页=壳页×3+镜像×3）；validate-dist PASS（672 sitemap URL、尾斜杠 0 违规、`_redirects` 88 条）；audit-dist-links 0 broken；`npm run check` 全 0；搜索索引 66 条 URL 100% 规范。线上待部署后跑 prod-smoke 验证 301 生效。
+
+**遗留（本任务未动，记录备查）**：`QuickViewModal.astro` 以 `p.slug` 建映射但 search-index 无 `slug` 字段（快速预览弹层静默空数据，先于本次改动存在，属数据形状错配非重定向问题）。
+
 ---
 
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)

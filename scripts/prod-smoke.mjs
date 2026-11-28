@@ -3,8 +3,9 @@
 //
 // Checks the DEPLOYED site (not dist/): key routes return the expected status
 // with the expected content marker, machine files (robots/sitemaps/feeds) are
-// live, localized routes render, removed locales serve the meta-refresh shell,
-// and a garbage path 404s. Zero dependencies (node:https only).
+// live, localized routes render, removed locales 301 via the Pages middleware
+// (REMOVED_LOCALES prefix strip), fallback-locale news/rss 301 via
+// dist/_redirects, and a garbage path 404s. Zero dependencies (node:https only).
 //
 // Usage:
 //   node scripts/prod-smoke.mjs
@@ -48,6 +49,21 @@ const CHECKS = [
     path: '/zh/',
     redirectsTo: '/',
     desc: 'removed locale server-redirects to EN root',
+  },
+  {
+    path: '/tr/news',
+    redirectsTo: '/news/',
+    desc: 'fallback-locale news (no slash) 301s to EN root via dist/_redirects',
+  },
+  {
+    path: '/tr/news/',
+    redirectsTo: '/news/',
+    desc: 'fallback-locale news (slash form) 301s to EN root via dist/_redirects',
+  },
+  {
+    path: '/tr/rss.xml',
+    redirectsTo: '/rss.xml',
+    desc: 'fallback-locale rss 301s to the EN root feed via dist/_redirects',
   },
   {
     path: '/products/',

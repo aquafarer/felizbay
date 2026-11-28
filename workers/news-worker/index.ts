@@ -355,7 +355,10 @@ ${urls}
 function searchIndexJson(posts: News[]) {
   return posts.map((p) => ({
     title: p.title,
-    url: publicUrl(`/news/${p.slug}/`),
+    // Locale-neutral canonical path (trailing slash, no origin): search
+    // consumers prepend the page locale — an absolute URL here produced
+    // garbage hrefs like "/dehttps://felizbay.com/...".
+    url: `/news/${p.slug}/`,
     excerpt: p.excerpt || excerptFromBody(p.body),
     type: 'article',
     tags: parseTags(p.tags),

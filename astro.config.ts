@@ -27,13 +27,13 @@ export default defineConfig({
   // 显式固定为 true 以保持 v6 的 HTML 感知压缩行为。
   compressHTML: true,
 
-  redirects: {
-    // P0-5：/zh/ 无页面（仓库无 zh 路由），防线上残留软 200
-    '/zh/': '/',
-    // 语言下架（63a1b18）：ja/ko 已删除，旧 URL 用 meta-refresh + noindex + canonical 壳页回收权重
-    '/ja/': '/',
-    '/ko/': '/',
-  },
+  // Removed-locale recovery (/zh|ja|ko|vi|hi/*) lives in functions/_middleware.ts
+  // (REMOVED_LOCALES prefix-stripping 301). The former astro `redirects` object
+  // generated meta-refresh shells that were NEVER served — the middleware 301
+  // intercepts before static assets — so it was deleted as dead weight.
+  // Non-worker news/rss fallbacks live in dist/_redirects (see
+  // scripts/generate-fallback-redirects.mjs).
+
   integrations: [
     mdx(),
 
