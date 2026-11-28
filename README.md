@@ -29,30 +29,30 @@ Read in this order to grasp the whole system fastest (≈10 minutes):
 
 **Where each piece of architecture lives (file map):**
 
-| Topic                                | Location                                                                                                                                                             |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Routing & redirects                  | `astro.config.ts` (routes + zh/ja/ko locale-removal redirects in the `redirects` object)                                                                             |
-| Locale detection / middleware        | `functions/_middleware.ts` (Pages Functions), `src/i18n/utils.ts`                                                                                                    |
-| Languages (37) & degraded set        | `src/i18n/config.ts`, `src/i18n/root-only.ts`, `src/i18n/v2-converged.ts`                                                                                            |
-| Navigation (YAML-driven, 37 langs)   | `src/navigation.ts`, `src/config.yaml`, per-lang overrides; editor at `src/pages/keystatic/navigation.astro`                                                         |
-| Site configuration                   | `src/config.yaml` (SITE/I18N/METADATA/APP_BLOG/UI/ANALYTICS) via `vendor/integration/`                                                                               |
-| Content collections                  | `src/content.config.ts` (glob loader), posts in `src/data/post/`                                                                                                     |
-| Page content per language            | `src/data/pages/{lang}/` (translation YAML) → build-time `src/i18n/generated/pages/*.ts` → `src/i18n/page-content.ts` (`getPageContent`)                             |
-| Site-level YAML (`site-*` keys)      | `src/data/site/*.yaml` → build-time `src/i18n/generated/site-data.ts` (2.2 MiB; `content-v2*` excluded — see `src/data/content-v2.ts`)                               |
-| Full build payload (JSON)            | `src/i18n/generated/page-content.json` (~6.8 MiB, gitignored; **never** emitted into `public/` — Pages 25 MiB limit)                                                 |
-| UI translations                      | `src/i18n/generated/ui-all.ts` + `src/i18n/generated/ui/{lang}.ts` (auto-generated); runtime copy at `public/data/i18n-config.json`                                  |
-| Product data (SSOT)                  | `src/data/products.ts` (63 products), translations in `product-texts.ts`                                                                                             |
-| JSON-LD entity hub (single `@graph`) | `src/utils/schema-graph.ts` + `src/config/facts.json` (global blocks in `Layout.astro`)                                                                              |
-| Shared page content components       | `src/components/randdcenter/*.en.astro` (EN fallback shared across languages)                                                                                        |
-| Tailwind theme & utilities           | `src/assets/styles/tailwind.css` (@theme/@variant/@plugin), colors/fonts in `src/components/CustomStyles.astro`                                                      |
-| SEO/GEO files                        | `src/pages/search-index.json.ts` (static search), `scripts/generate-sitemaps.mjs`, `scripts/geo-build.mjs`                                                           |
-| Workers (5)                          | `workers/{contact,ai,admin,news,automation}-worker/` (+ `workers/shared/`); routes in each `wrangler.toml`                                                           |
-| D1 migrations                        | `migrations/` (0000–0005: init, news, rate_limit, inquiry_ip, inquiry_routing, advisor_event), applied by CI / `wrangler d1 migrations apply`                        |
-| CI/CD                                | `.github/workflows/{ci,deploy,seo-gate}.yml`                                                                                                                         |
-| Static quality gates                 | `scripts/validate-dist.mjs`, `scripts/fold-untranslated-canonical.mjs`, `scripts/05_ci_gate.py`                                                                      |
-| Image dimension SSOT                 | `src/data/site/image-dimensions.json` (36 entries, rebuilt by `scripts/generate-image-dimensions.mjs`; injected at build via `vendor/integration/img-dimensions.ts`) |
-| R2 asset upload + auto-prune         | `scripts/fast-upload-r2.mjs` (uploads `public/` assets, prunes stale R2 objects each deploy)                                                                         |
-| Technical audit & test records       | `docs/technical-audit-2026-10.md` (audit + inquiry T1–T5 + post-mortems), `docs/ai-visibility-baseline.md` (AI visibility protocol)                                  |
+| Topic                                | Location                                                                                                                                                 |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Routing & redirects                  | `astro.config.ts` (routes + zh/ja/ko locale-removal redirects in the `redirects` object)                                                                 |
+| Locale detection / middleware        | `functions/_middleware.ts` (Pages Functions), `src/i18n/utils.ts`                                                                                        |
+| Languages (37) & degraded set        | `src/i18n/config.ts`, `src/i18n/root-only.ts`, `src/i18n/v2-converged.ts`                                                                                |
+| Navigation (YAML-driven, 37 langs)   | `src/navigation.ts`, `src/config.yaml`, per-lang overrides; editor at `src/pages/keystatic/navigation.astro`                                             |
+| Site configuration                   | `src/config.yaml` (SITE/I18N/METADATA/APP_BLOG/UI/ANALYTICS) via `vendor/integration/`                                                                   |
+| Content collections                  | `src/content.config.ts` (glob loader), posts in `src/data/post/`                                                                                         |
+| Page content per language            | `src/data/pages/{lang}/` (translation YAML) → build-time `src/i18n/generated/pages/*.ts` → `src/i18n/page-content.ts` (`getPageContent`)                 |
+| Site-level YAML (`site-*` keys)      | `src/data/site/*.yaml` → build-time `src/i18n/generated/site-data.ts` (2.2 MiB; `content-v2*` excluded — see `src/data/content-v2.ts`)                   |
+| Full build payload (JSON)            | `src/i18n/generated/page-content.json` (~6.8 MiB, gitignored; **never** emitted into `public/` — Pages 25 MiB limit)                                     |
+| UI translations                      | `src/i18n/generated/ui-all.ts` + `src/i18n/generated/ui/{lang}.ts` (auto-generated); runtime copy at `public/data/i18n-config.json`                      |
+| Product data (SSOT)                  | `src/data/products.ts` (63 products), translations in `product-texts.ts`                                                                                 |
+| JSON-LD entity hub (single `@graph`) | `src/utils/schema-graph.ts` + `src/config/facts.json` (global blocks in `Layout.astro`)                                                                  |
+| Shared page content components       | `src/components/randdcenter/*.en.astro` (EN fallback shared across languages)                                                                            |
+| Tailwind theme & utilities           | `src/assets/styles/tailwind.css` (@theme/@variant/@plugin), colors/fonts in `src/components/CustomStyles.astro`                                          |
+| SEO/GEO files                        | `src/pages/search-index.json.ts` (static search), `scripts/generate-sitemaps.mjs`, `scripts/geo-build.mjs`                                               |
+| Workers (5)                          | `workers/{contact,ai,admin,news,automation}-worker/` (+ `workers/shared/`); routes in each `wrangler.toml`                                               |
+| D1 migrations                        | `migrations/` (0000–0005: init, news, rate_limit, inquiry_ip, inquiry_routing, advisor_event), applied by CI / `wrangler d1 migrations apply`            |
+| CI/CD                                | `.github/workflows/{ci,deploy,seo-gate}.yml`                                                                                                             |
+| Static quality gates                 | `scripts/validate-dist.mjs`, `scripts/fold-untranslated-canonical.mjs`, `scripts/05_ci_gate.py`                                                          |
+| Image dimension SSOT                 | `src/data/site/image-dimensions.json` (rebuilt by `scripts/generate-image-dimensions.mjs`; injected at build via `vendor/integration/img-dimensions.ts`) |
+| R2 asset upload + auto-prune         | `scripts/fast-upload-r2.mjs` (uploads `public/` assets, prunes stale R2 objects each deploy)                                                             |
+| Technical audit & test records       | `docs/technical-audit-2026-10.md` (audit + inquiry T1–T5 + post-mortems), `docs/ai-visibility-baseline.md` (AI visibility protocol)                      |
 
 > **For AI agents:** always run `npm run check` + `npm run build` after changes and re-verify the gates listed in `AGENTS.md` (hreflang/canonical/link/translation-gap scans, zero U+FFFD).
 
@@ -190,7 +190,7 @@ All locale URLs use **path-based** format: `felizbay.com/fr/products`, `felizbay
 │  │  ├── standalone-pages.ts       # Standalone page records
 │  │  ├── content-v2.ts             # V2 content records (incl. business-guide articles)
 │  │  ├── knowledge-graph.ts        # AI knowledge graph + business entity relationships
-│  │  ├── site/image-dimensions.json # Image dimension SSOT (36 entries, rebuilt each build)
+│  │  ├── site/image-dimensions.json # Image dimension SSOT (rebuilt each build)
 │  │  ├── geo/                      # GEO source data
 │  │  │  └── entity.json            # Schema.org Organization entity
 │  │  └── pages/                    # Page YAML content (root = EN, subdir = per locale)

@@ -153,8 +153,8 @@ Hero images use `loading="eager"` and `fetchpriority="high"`.
 
 **Image rules (2026-10, P6 WebP migration):**
 
-- Product images in `public/images/pools/` are WebP (1600px, q82) — 15 images migrated from PNG/JPG (18.5MB → 0.85MB, -97%); new product images must be WebP
-- `scripts/generate-image-dimensions.mjs` rebuilds `src/data/site/image-dimensions.json` (36-entry SSOT) on every build; `vendor/integration/img-dimensions.ts` injects width/height at build time (CLS fix). After adding/renaming images, run a build and commit the regenerated registry
+- Product images in `public/images/pools/` are WebP (1600px, q82) — 2026-10 P6 migration moved 15 legacy PNG/JPG files (18.5MB → 0.85MB, -97%); new product images must be WebP
+- `scripts/generate-image-dimensions.mjs` rebuilds `src/data/site/image-dimensions.json` (SSOT, count tracks `public/images/` tree) on every build; `vendor/integration/img-dimensions.ts` injects width/height at build time (CLS fix). After adding/renaming/deleting images, run a build and commit the regenerated registry
 - Stale R2 objects left by image replacement are auto-pruned on the next deploy (see Deploy Extras)
 
 ## Link Refactor (URL / name rename across the site)
