@@ -2597,6 +2597,22 @@ image-dimensions 注册表随构建重生成（52→54：+logo-head.webp/+og-def
 
 ---
 
+### 19.36 蓝池新图补漏：充气拉丝泳池白底图文件夹接入 (2026-11-29)
+
+**起因**：用户指出 `products/round-blue-drop-stitch-pool/` 未用新照片。排查发现 §19.33/19.35 盘点时**遗漏了 `充气拉丝泳池白底图\` 文件夹**（与"泳池产品简介和Price List"平级），内含 9 张白底棚拍图：蓝池 1 张、灰池 4 张（含带盖版）、矩形池 4 张，均为 2048×2048 或同级大图。
+
+**动作**（同 §19.35 口径）：
+
+1. `Round Drop stich Blue inflatable swimming pool.png`（2048×2048，多模态核验：蓝色圆形拉丝泳池、白底棚拍、带水与提手）→ sharp 转 `round-blue-pool-studio.webp`（1600×1600 q82，56KB）。
+2. 全站替换 `round-blue-pool-1.webp` → `round-blue-pool-studio.webp`（15 处 / 14 文件：categories、evidence ×2、hero-images、learning-center、product-visuals、tech-cards、use-cases、checkout.ts、keystatic 编辑页 ×6）；蓝池 MDX 图库改写（studio + s2005 工厂照保留），updateDate 2026-11-29。
+3. 删除 `round-blue-pool-1.webp`；注册表 52 条不变（+1−1）。
+
+**遗留**：白底图文件夹剩余 8 张（灰池 ×4、矩形 ×4）未接入——灰池/矩形图库 §19.35 刚换新照，是否改用白底棚拍版待业主定夺。
+
+**验证**：`git grep` 零命中；build 全绿（BROKEN LINKS/ASSETS/HREFLANG 0）；`npm run check` 通过。
+
+---
+
 ## 20. 业务交接：询盘回访模板与待解锁清单 (2026-11-14)
 
 本章为业务侧（销售/管理员）提供两份可直接使用的材料：**询盘回访邮件模板**（配合 `/keystatic/contact-submissions` 使用）与**待解锁数据项的实施方案映射**。技术侧红线：所有未发布数据（蓝/灰零售 SKU 尺寸、灰款溢价原因、加热器兼容清单、B2B 产能）**一律不得在回访中口头补造**，按模板的边界话术处理。

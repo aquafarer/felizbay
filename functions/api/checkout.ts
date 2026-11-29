@@ -16,7 +16,7 @@ const PRODUCT_CATALOG: Record<string, CatalogEntry> = {
     slug: 'round-blue-drop-stitch-pool',
     unitAmount: 29900,
     currency: 'usd',
-    image: '/images/pools/round-blue-pool-1.webp',
+    image: '/images/pools/round-blue-pool-studio.webp',
   },
   'FZ-POOL-RND-GREY': {
     name: 'Round Grey Inflatable Drop Stitch Swimming Pool',

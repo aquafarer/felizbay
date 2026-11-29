@@ -27,7 +27,7 @@ case_studies:
     challenge: A 5-resort group needed guest pools for villa terraces with consistent branding, UV-resistant materials for tropical sun, and easy seasonal storage.
     solution: Designed a custom round pool package with UV-stabilized PVC, resort-branded graphics, and a phased delivery schedule with staff setup training.
     result: 180 units delivered across 5 resorts. Repeat order for 2 new properties. 40% reduction in per-unit cost versus previous suppliers.
-    image: /images/pools/round-blue-pool-1.webp
+    image: /images/pools/round-blue-pool-studio.webp
     tags: [OEM, Pool, Hospitality]
     outcome_metrics:
       - label: Units Delivered
@@ -106,7 +106,7 @@ deployment_photos:
   - image: /images/pools/rectangular-pool-yard.webp
     caption: Rectangular drop stitch pool set up on a backyard terrace
     context: Residential
-  - image: /images/pools/round-blue-pool-1.webp
+  - image: /images/pools/round-blue-pool-studio.webp
     caption: Round blue pool ready for a family weekend
     context: Residential
   - image: /images/pools/pool-cover.webp
